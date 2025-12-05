@@ -10,7 +10,8 @@ export default defineConfig({
     'rounded/regular/index': 'src/rounded/regular/index.ts',
     'rounded/thin/index': 'src/rounded/thin/index.ts',
     'rounded/bold/index': 'src/rounded/bold/index.ts',
-    'rounded/solid/index': 'src/rounded/solid/index.ts'
+    'rounded/solid/index': 'src/rounded/solid/index.ts',
+    'duotone/chubby/index': 'src/duotone/chubby/index.ts'
   },
   format: ['cjs', 'esm'],
   dts: false, // Disabled due to 37k components causing memory issues
