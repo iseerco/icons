@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const HoodCloak: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m23.974,11.339h-.018c-.106-2.019-.597-3.733-1.458-5.097-.337-.535-.515-1.087-.499-1.555.052-1.544.947-3.126.957-3.141l1.044-1.546-10.749.006c-.727.006-1.366.011-1.854.035C5.345.338.356,5.301.042,11.339c-.205,3.953.608,7.147,2.771,10.637H0v2h11.852l-.472-.373c-.261-.206-6.38-5.105-6.38-10.603,0-3.86,3.141-7,7-7s7,3.14,7,7c0,5.498-6.119,10.397-6.38,10.603l-.472.373h11.852v-2h-2.798c2.163-3.489,2.977-6.684,2.771-10.637Z"/><path d="m17,13c0-2.757-2.243-5-5-5s-5,2.243-5,5c0,3.609,3.538,7.178,5,8.499,1.462-1.321,5-4.89,5-8.499Z"/></svg>
+);
+
+HoodCloak.displayName = 'HoodCloak';

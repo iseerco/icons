@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Transporter5: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m24,16.519l-2.333,1.167-1.167,2.333-1.167-2.333-2.333-1.167,2.333-1.167,1.167-2.333,1.167,2.333,2.333,1.167ZM4.5,2.5l-1-2-1,2-2,1,2,1,1,2,1-2,2-1-2-1Zm15.5,19.52H4v2h16v-2Zm-3-10H7v2h10v-2Zm1-5H6v2h12v-2Zm-3-5h-6v2h6v-2Z"/></svg>
+);
+
+Transporter5.displayName = 'Transporter5';

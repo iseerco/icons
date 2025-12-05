@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Tty: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,13h-8v-4.244c-1.334-.496-2.679-.75-4.005-.756-1.371,.01-2.694,.244-3.995,.745v4.255H0v-3.75c0-1.414,.564-2.76,1.593-3.788C3.741,3.314,7.629,2.021,11.996,2c4.372,.013,8.191,1.242,10.412,3.462,1.028,1.028,1.594,2.374,1.593,3.789v3.749Zm-9,3h-2v2h2v-2Zm4,0h-2v2h2v-2Zm4,0h-2v2h2v-2Zm0,4h-2v2h2v-2ZM3,16H1v2H3v-2Zm0,4H1v2H3v-2Zm8-4h-2v2h2v-2Zm-4,0h-2v2h2v-2Zm12,4H5v2h14v-2Z"/></svg>
+);
+
+Tty.displayName = 'Tty';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Form: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16 .3a4.968 4.968 0 0 1 1.879 1.164l1.656 1.658a4.954 4.954 0 0 1 1.165 1.878h-4.7zm-2 11.7h-4a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2zm2-5a2 2 0 0 1 -2-2v-5h-6a5.006 5.006 0 0 0 -5 5v14a5.006 5.006 0 0 0 5 5h8a5.006 5.006 0 0 0 5-5v-12zm0 13h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2zm-2-4h-4a3 3 0 0 1 0-6h4a3 3 0 0 1 0 6z"/></svg>
+);
+
+Form.displayName = 'Form';

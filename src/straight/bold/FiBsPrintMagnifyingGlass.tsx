@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsPrintMagnifyingGlass: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22,17c0-2.76-2.24-5-5-5s-5,2.24-5,5,2.24,5,5,5c.83,0,1.62-.21,2.31-.57l2.47,2.47,2.12-2.12-2.47-2.47c.36-.69,.57-1.48,.57-2.31Zm-5,2c-1.1,0-2-.9-2-2s.9-2,2-2,2,.9,2,2-.9,2-2,2Zm3.5-13h-1.5V0H5V6h-1.5c-1.93,0-3.5,1.57-3.5,3.5v11.5H5v3h7v-3h-4v-5h2v-3H5v5H3V9.5c0-.28,.22-.5,.5-.5H20.5c.28,0,.5,.22,.5,.5v1.5h3v-1.5c0-1.93-1.57-3.5-3.5-3.5ZM8,3h8v3H8V3Z"/></svg>
+);
+
+FiBsPrintMagnifyingGlass.displayName = 'FiBsPrintMagnifyingGlass';

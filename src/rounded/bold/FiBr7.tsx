@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBr7: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7.499,24c-.252,0-.508-.064-.743-.198-.719-.411-.969-1.327-.558-2.046L16.918,3H5.5c-.829,0-1.5-.671-1.5-1.5s.671-1.5,1.5-1.5h11.605c1.01,0,1.93,.513,2.461,1.373s.578,1.912,.126,2.814L8.802,23.244c-.277,.485-.783,.756-1.304,.756Z"/></svg>
+);
+
+FiBr7.displayName = 'FiBr7';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTrSterlingSign: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22,23.5c0,.28-.22,.5-.5,.5H2.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5c1.38,0,2.5-1.12,2.5-2.5v-6.5H2.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h2.5v-5C5,3.21,8.21,0,13,0c4.06,0,7.26,4.02,7.39,4.19,.17,.22,.13,.53-.08,.7-.22,.17-.53,.13-.7-.08-.03-.04-3.03-3.81-6.61-3.81-4.25,0-7,2.75-7,7v5h10.5c.28,0,.5,.22,.5,.5s-.22,.5-.5,.5H6v6.5c0,.98-.4,1.86-1.05,2.5H21.5c.28,0,.5,.22,.5,.5Z"/></svg>
+);
+
+FiTrSterlingSign.displayName = 'FiTrSterlingSign';

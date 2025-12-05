@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Dart: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21 0h-4.414l-5.586 5.586v5.119c-3.266 2.415-7.581 5.633-8.121 6.174a2.993 2.993 0 0 0 -.577 3.4l-2.302 2.307 1.414 1.414 2.3-2.3a2.965 2.965 0 0 0 3.407-.579c.541-.541 3.759-4.855 6.179-8.121h5.119l5.581-5.586v-4.414a3 3 0 0 0 -3-3zm-15.293 19.707a1.021 1.021 0 0 1 -1.414 0 1 1 0 0 1 0-1.414c.339-.336 3-2.343 5.948-4.534-2.192 2.947-4.199 5.61-4.534 5.948zm16.293-13.121-4.414 4.414h-2.815l.991-1.348 4.945-4.945-1.414-1.414-4.944 4.944-1.349.992v-2.815l4.414-4.414h3.586a1 1 0 0 1 1 1z"/></svg>
+);
+
+Dart.displayName = 'Dart';

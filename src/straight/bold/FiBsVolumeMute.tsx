@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsVolumeMute: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m2.123,5.5c-1.171,0-2.123.952-2.123,2.123v8.754c0,1.171.952,2.123,2.123,2.123h3.144l7.733,5.109V.391l-7.733,5.109h-3.144Zm7.877.469v12.062l-3.832-2.531h-3.168v-7h3.168l3.832-2.531Zm11.146,6.031l2.453,2.453-2.121,2.121-2.453-2.453-2.453,2.453-2.121-2.121,2.453-2.453-2.453-2.453,2.121-2.121,2.453,2.453,2.453-2.453,2.121,2.121-2.453,2.453Z"/></svg>
+);
+
+FiBsVolumeMute.displayName = 'FiBsVolumeMute';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Italic: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><polygon points="21 2 21 0 6 0 6 2 12.354 2 9.627 22 3 22 3 24 18 24 18 22 11.646 22 14.373 2 21 2"/></g></svg>
+);
+
+Italic.displayName = 'Italic';

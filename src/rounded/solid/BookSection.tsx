@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const BookSection: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M5,18H22v1c0,2.76-2.24,5-5,5H5c-1.66,0-3-1.34-3-3s1.34-3,3-3Zm0-2h1V.1C3.67,.58,2,2.62,2,5v12.02c.7-.53,1.53-.86,2.4-.96,.2-.04,.4-.06,.6-.06Zm11-7c.55,0,1-.45,1-1s-.45-1-1-1h-2c-.55,0-1,.45-1,1s.45,1,1,1h2Zm6-4v11H8V0h9c2.76,0,5,2.24,5,5Zm-3,3c0-1.65-1.35-3-3-3h-1.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h1.5c.55,0,1-.45,1-1s-.45-1-1-1h-1.5c-1.38,0-2.5,1.12-2.5,2.5,0,.39,.09,.75,.25,1.07-.75,.55-1.25,1.43-1.25,2.43,0,1.65,1.35,3,3,3h1.5c.28,0,.5,.22,.5,.5s-.22,.5-.5,.5h-1.5c-.55,0-1,.45-1,1s.45,1,1,1h1.5c1.38,0,2.5-1.12,2.5-2.5,0-.39-.09-.75-.25-1.07,.75-.55,1.25-1.43,1.25-2.43Z"/></svg>
+);
+
+BookSection.displayName = 'BookSection';

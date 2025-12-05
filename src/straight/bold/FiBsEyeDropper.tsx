@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsEyeDropper: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.9 1.1a3.754 3.754 0 0 0 -5.3 0l-2.488 2.484a3.452 3.452 0 0 1 -4.836.071l-2.09 2.152 2.175 2.175-8.189 8.189a4 4 0 0 0 -.854 4.39l-1.318 1.318 2.121 2.121 1.318-1.318a4 4 0 0 0 4.389-.854l8.19-8.189 2.175 2.175 2.152-2.09a3.453 3.453 0 0 1 .071-4.837l2.484-2.487a3.754 3.754 0 0 0 0-5.3zm-17.193 18.607a1.023 1.023 0 0 1 -1.414 0 1 1 0 0 1 0-1.414l8.189-8.19 1.418 1.415zm15.074-15.427-2.487 2.486a6.487 6.487 0 0 0 -1.75 3.157l-2.467-2.467a6.487 6.487 0 0 0 3.157-1.75l2.486-2.487a.75.75 0 0 1 1.061 1.061z"/></svg>
+);
+
+FiBsEyeDropper.displayName = 'FiBsEyeDropper';

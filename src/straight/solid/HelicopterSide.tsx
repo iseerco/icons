@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const HelicopterSide: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16,4V6H14V4H6V2h8V1h2V2h8V4Zm0,9h7.931A8.008,8.008,0,0,0,16,6ZM2,6H14v9H24a4,4,0,0,1-4,4H19v2h2a1,1,0,0,0,1-1h2a3,3,0,0,1-3,3H7V21h4V18.65A6,6,0,0,1,7,13V11.754l-7-2V4H2ZM13,19v2h4V19Z"/></svg>
+);
+
+HelicopterSide.displayName = 'HelicopterSide';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FaceSmirking: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm5.155-7.535l1.695,1.061c-.062,.101-1.57,2.474-4.85,2.474h-6v-2h6c2.138,0,3.114-1.472,3.155-1.535Zm-2.069-3.465h-2.086v-2h3.5c.828,0,1.5,.672,1.5,1.5s-.672,1.5-1.5,1.5c-.653,0-1.208-.417-1.414-1Zm-8,0h-2.086v-2h3.5c.828,0,1.5,.672,1.5,1.5s-.672,1.5-1.5,1.5c-.653,0-1.208-.417-1.414-1Z"/></svg>
+);
+
+FaceSmirking.displayName = 'FaceSmirking';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const AddFolder: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.863 6.88-23.863.111v-.991a5.006 5.006 0 0 1 5-5h2.528a3.014 3.014 0 0 1 1.341.316l3.156 1.584a1.019 1.019 0 0 0 .447.1h6.528a5 5 0 0 1 4.863 3.88zm.137 2v9.12a5.006 5.006 0 0 1 -5 5h-14a5.006 5.006 0 0 1 -5-5v-9.009zm-8 7.12a1 1 0 0 0 -1-1h-2v-2a1 1 0 0 0 -2 0v2h-2a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0v-2h2a1 1 0 0 0 1-1z"/></svg>
+);
+
+AddFolder.displayName = 'AddFolder';

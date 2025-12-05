@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Brush: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19 0h-14a5.006 5.006 0 0 0 -5 5v5a7.009 7.009 0 0 0 7 7h2v4a3 3 0 0 0 6 0v-4h2a7.009 7.009 0 0 0 7-7v-5a5.006 5.006 0 0 0 -5-5zm-17 5a3 3 0 0 1 3-3h5v1a1 1 0 0 0 2 0v-1h2v3a1 1 0 0 0 2 0v-3h2v5a1 1 0 0 0 2 0v-4.816a3 3 0 0 1 2 2.816v5h-20zm15 10h-3a1 1 0 0 0 -1 1v5a1 1 0 0 1 -2 0v-5a1 1 0 0 0 -1-1h-3a5 5 0 0 1 -4.576-3h19.152a5 5 0 0 1 -4.576 3z"/></svg>
+);
+
+Brush.displayName = 'Brush';

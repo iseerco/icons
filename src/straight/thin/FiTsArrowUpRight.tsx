@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsArrowUpRight: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.5,0H10V1h12.293L.006,23.287l.707,.707L23,1.707V14h1V1.5c0-.827-.673-1.5-1.5-1.5Z"/></svg>
+);
+
+FiTsArrowUpRight.displayName = 'FiTsArrowUpRight';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const LayerMinus: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,9.367v2.332l-12,7.2L0,11.7v-2.332l12,7.2,12-7.2Zm-12,5.029L.056,7.23,12,.064l11.944,7.166-11.944,7.166ZM3.944,7.23l8.056,4.834,8.056-4.834L12,2.396,3.944,7.23ZM0,13.699v2.332l12,7.2,2-1.2v-2.332l-2,1.2L0,13.699Zm16,7.301h8v-2h-8v2Z"/></svg>
+);
+
+LayerMinus.displayName = 'LayerMinus';

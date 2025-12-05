@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ChartTreeMap: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,9h-5c-1.65,0-3,1.35-3,3s1.35,3,3,3h5c1.65,0,3-1.35,3-3s-1.35-3-3-3Zm-5-3h5c1.65,0,3-1.35,3-3s-1.35-3-3-3h-5c-1.65,0-3,1.35-3,3s1.35,3,3,3Zm5,12h-5c-1.65,0-3,1.35-3,3s1.35,3,3,3h5c1.65,0,3-1.35,3-3s-1.35-3-3-3ZM7,13h-3c-2.21,0-4,1.79-4,4v3c0,2.21,1.79,4,4,4h3c2.21,0,4-1.79,4-4v-3c0-2.21-1.79-4-4-4ZM7,0h-3C1.79,0,0,1.79,0,4v3c0,2.21,1.79,4,4,4h3c2.21,0,4-1.79,4-4v-3C11,1.79,9.21,0,7,0Z"/></svg>
+);
+
+ChartTreeMap.displayName = 'ChartTreeMap';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Resize: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 3a3 3 0 0 0 -3-3h-12a3 3 0 0 0 -3 3v8h-3a3 3 0 0 0 -3 3v10h13v-6h11zm-13 19h-9v-8a1 1 0 0 1 1-1h3v5h5zm0-8v2h-3v-3h2a1 1 0 0 1 1 1zm11 2h-9v-2a2.951 2.951 0 0 0 -.3-1.285l5.3-5.3v3.585h2v-7h-7v2h3.586l-5.3 5.3a2.951 2.951 0 0 0 -1.286-.3h-2v-8a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/></svg>
+);
+
+Resize.displayName = 'Resize';

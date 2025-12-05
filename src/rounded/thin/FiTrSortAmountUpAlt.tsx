@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTrSortAmountUpAlt: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,8.5c0,.276-.224,.5-.5,.5H9.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h14c.276,0,.5,.224,.5,.5Zm-3.5,4.5H9.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h11c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-3,5H9.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h8c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-3,5h-5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h5c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5ZM9.146,4.439c.098,.098,.226,.146,.354,.146s.256-.049,.354-.146c.195-.195,.195-.512,0-.707L6.561,.439c-.585-.584-1.536-.584-2.121,0L1.146,3.732c-.195,.195-.195,.512,0,.707s.512,.195,.707,0L5,1.293V23.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5V1.293l3.146,3.146Z"/></svg>
+);
+
+FiTrSortAmountUpAlt.displayName = 'FiTrSortAmountUpAlt';

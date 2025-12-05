@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsTable: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20.5,2H3.5c-1.93,0-3.5,1.57-3.5,3.5v16.5h24V5.5c0-1.93-1.57-3.5-3.5-3.5Zm-10,5v4.5H3v-4.5h7.5Zm3,0h7.5v4.5h-7.5v-4.5ZM3,14.5h7.5v4.5H3v-4.5Zm10.5,4.5v-4.5h7.5v4.5h-7.5Z"/></svg>
+);
+
+FiBsTable.displayName = 'FiBsTable';

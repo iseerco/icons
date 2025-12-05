@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Protractor: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21.977 11.27a11.191 11.191 0 0 0 -10.977-10.27v-1h-5a3 3 0 0 0 -3 3v2h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v2a3 3 0 0 0 3 3h5v-1a11.041 11.041 0 0 0 8.027-3.479 10.915 10.915 0 0 0 2.95-8.251zm-10.977 4.73h-1v-8h1a4 4 0 0 1 0 8z"/></svg>
+);
+
+Protractor.displayName = 'Protractor';

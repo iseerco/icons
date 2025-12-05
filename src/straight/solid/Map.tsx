@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Map: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15,22.281l-6,1.5V1.924l6-1.61ZM7,1.417,4.155.233A3,3,0,0,0,0,3V21.754l7,2Zm14.867.2L17.515.155A3.022,3.022,0,0,0,17,.036V22.273l7,1.705V4.483A3,3,0,0,0,21.867,1.612Z"/></svg>
+);
+
+Map.displayName = 'Map';

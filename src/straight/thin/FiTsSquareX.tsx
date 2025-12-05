@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsSquareX: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21.5,0H2.5C1.121,0,0,1.121,0,2.5v21.5h24V2.5c0-1.379-1.121-2.5-2.5-2.5Zm1.5,23H1V2.5c0-.827.673-1.5,1.5-1.5h19c.827,0,1.5.673,1.5,1.5v20.5Zm-10.379-10.997l5.933,7.997h-1.24l-5.317-7.154-5.198,7.154h-1.242l5.822-8L5.527,4h1.242l5.234,7.16,5.167-7.16h1.247l-5.796,8.003Z"/></svg>
+);
+
+FiTsSquareX.displayName = 'FiTsSquareX';

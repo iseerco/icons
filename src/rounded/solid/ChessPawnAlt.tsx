@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ChessPawnAlt: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7,7A1,1,0,0,1,8,6h.537a4,4,0,1,1,6.926,0H16a1,1,0,0,1,0,2H8A1,1,0,0,1,7,7ZM20,20H4a2,2,0,0,0,0,4H20a2,2,0,0,0,0-4ZM15.067,10H8.933C8.569,15.261,6.775,18,5,18H19C17.225,18,15.431,15.261,15.067,10Z"/></svg>
+);
+
+ChessPawnAlt.displayName = 'ChessPawnAlt';

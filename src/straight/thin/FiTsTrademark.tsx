@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsTrademark: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,5H11v1H6v13h-1V6H0v-1Zm23.11,.04c-.51-.14-1.05,.1-1.36,.6l-3.75,6.69-3.76-6.71c-.3-.49-.84-.73-1.35-.59-.54,.15-.89,.67-.89,1.32v12.63h1V6.37c0-.23,.09-.34,.16-.36,.08-.02,.16,.03,.22,.13l4.62,8.25,4.61-8.24c.06-.11,.15-.16,.23-.14,.07,.02,.16,.13,.16,.36v12.63h1V6.37c0-.65-.35-1.17-.89-1.32Z"/></svg>
+);
+
+FiTsTrademark.displayName = 'FiTsTrademark';

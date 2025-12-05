@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrDatabase: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.562 8.5a4.994 4.994 0 0 0 -3.562-8.5h-14a4.994 4.994 0 0 0 -3.562 8.5 4.978 4.978 0 0 0 0 7 4.994 4.994 0 0 0 3.562 8.5h14a4.994 4.994 0 0 0 3.562-8.5 4.978 4.978 0 0 0 0-7zm-17.562 5.5a2 2 0 0 1 0-4v.5a1.5 1.5 0 0 0 3 0v-.5h2v.5a1.5 1.5 0 0 0 3 0v-.5h6a2 2 0 0 1 0 4zm0-11v.5a1.5 1.5 0 0 0 3 0v-.5h2v.5a1.5 1.5 0 0 0 3 0v-.5h6a2 2 0 0 1 0 4h-14a2 2 0 0 1 0-4zm14 18h-14a2 2 0 0 1 0-4v.5a1.5 1.5 0 0 0 3 0v-.5h2v.5a1.5 1.5 0 0 0 3 0v-.5h6a2 2 0 0 1 0 4z"/></svg>
+);
+
+FiBrDatabase.displayName = 'FiBrDatabase';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const PicpeopleFilled: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,2H3C1.35,2,0,3.35,0,5v14c0,1.65,1.35,3,3,3H21c1.65,0,3-1.35,3-3V5c0-1.65-1.35-3-3-3Zm1,17c0,.55-.45,1-1,1h-3v-1c0-1.65-1.35-3-3-3h-6c-1.65,0-3,1.35-3,3v1H3c-.55,0-1-.45-1-1V5c0-.55,.45-1,1-1H21c.55,0,1,.45,1,1v14Zm-6-9c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Z"/></svg>
+);
+
+PicpeopleFilled.displayName = 'PicpeopleFilled';

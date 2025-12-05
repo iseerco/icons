@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrCircleQuarter: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M11.5,13H3.36c-1.03,0-1.98-.46-2.62-1.26-.64-.81-.88-1.85-.65-2.86H.09C1.08,4.53,4.53,1.08,8.87,.09c1.01-.23,2.05,0,2.86,.65,.8,.64,1.26,1.6,1.26,2.62V11.5c0,.83-.67,1.5-1.5,1.5ZM3.01,9.54c-.04,.16,.03,.27,.07,.32,.05,.06,.14,.13,.28,.13h6.64V3.36c0-.14-.07-.23-.13-.28-.05-.04-.17-.11-.32-.07-3.23,.74-5.79,3.31-6.53,6.53h0Z"/></svg>
+);
+
+FiBrCircleQuarter.displayName = 'FiBrCircleQuarter';

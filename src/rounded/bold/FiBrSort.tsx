@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrSort: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.443,11H5.557A2.549,2.549,0,0,1,3.2,9.459a2.432,2.432,0,0,1,.5-2.676L9.8.911A3.069,3.069,0,0,1,12,0a3.113,3.113,0,0,1,2.253.961l6.009,5.783A2.451,2.451,0,0,1,20.8,9.459,2.549,2.549,0,0,1,18.443,11Zm-.3-2.133h0ZM6.76,8H17.242L12,3c-.016.017-.106.057-.123.073ZM12,24a3.113,3.113,0,0,1-2.253-.961L3.738,17.256A2.451,2.451,0,0,1,3.2,14.541,2.549,2.549,0,0,1,5.557,13H18.443a2.549,2.549,0,0,1,2.36,1.541,2.432,2.432,0,0,1-.5,2.676l-6.1,5.872A3.069,3.069,0,0,1,12,24ZM6.758,16,12,21c.016-.017.106-.057.123-.073L17.24,16Zm11.685,0h0Z"/></svg>
+);
+
+FiBrSort.displayName = 'FiBrSort';

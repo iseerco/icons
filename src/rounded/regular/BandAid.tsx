@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const BandAid: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m9 10a1 1 0 1 1 1 1 1 1 0 0 1 -1-1zm5 1a1 1 0 1 0 -1-1 1 1 0 0 0 1 1zm-4 2a1 1 0 1 0 1 1 1 1 0 0 0 -1-1zm4 2a1 1 0 1 0 -1-1 1 1 0 0 0 1 1zm10-5v4a5.006 5.006 0 0 1 -5 5h-14a5.006 5.006 0 0 1 -5-5v-4a5.006 5.006 0 0 1 5-5h14a5.006 5.006 0 0 1 5 5zm-17-3v10h10v-10zm-2 10v-10a3 3 0 0 0 -3 3v4a3 3 0 0 0 3 3zm17-7a3 3 0 0 0 -3-3v10a3 3 0 0 0 3-3z"/></svg>
+);
+
+BandAid.displayName = 'BandAid';

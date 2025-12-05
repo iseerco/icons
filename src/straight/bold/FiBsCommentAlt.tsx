@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsCommentAlt: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21.546,0H2.454A2.457,2.457,0,0,0,0,2.454V20H6.938l4.049,3.387A1.591,1.591,0,0,0,12,23.744a1.629,1.629,0,0,0,1.032-.369L17.062,20H24V2.454A2.457,2.457,0,0,0,21.546,0ZM21,17H15.972L12,20.322,8.028,17H3V3H21Z"/><rect x="6" y="6" width={size} height={size}/><rect x="6" y="11" width={size} height={size}/></svg>
+);
+
+FiBsCommentAlt.displayName = 'FiBsCommentAlt';

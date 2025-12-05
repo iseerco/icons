@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Branching: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="M13,13h4.163c.434,1.441,1.757,2.5,3.337,2.5,1.93,0,3.5-1.57,3.5-3.5s-1.57-3.5-3.5-3.5c-1.58,0-2.903,1.059-3.337,2.5h-4.163V4.5h4.163c.434,1.441,1.757,2.5,3.337,2.5,1.93,0,3.5-1.57,3.5-3.5s-1.57-3.5-3.5-3.5c-1.58,0-2.903,1.059-3.337,2.5h-6.163V11H6.837c-.434-1.441-1.757-2.5-3.337-2.5-1.93,0-3.5,1.57-3.5,3.5s1.57,3.5,3.5,3.5c1.58,0,2.903-1.059,3.337-2.5h4.163v8.5h6.163c.434,1.441,1.757,2.5,3.337,2.5,1.93,0,3.5-1.57,3.5-3.5s-1.57-3.5-3.5-3.5c-1.58,0-2.903,1.059-3.337,2.5h-4.163v-6.5Z"/>
+</svg>
+);
+
+Branching.displayName = 'Branching';

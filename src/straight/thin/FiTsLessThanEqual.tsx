@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsLessThanEqual: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m3,23h18v1H3v-1ZM21,0L2.5,9.5l18.5,9.5v-1.121L4.736,9.5,21,1.092V0Z"/>
+</svg>
+);
+
+FiTsLessThanEqual.displayName = 'FiTsLessThanEqual';

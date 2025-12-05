@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTrCircleQuarters: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12.5,13H2.73c-.83,0-1.61-.37-2.13-1.03C.07,11.31-.12,10.46,.07,9.64,1.15,4.91,4.91,1.15,9.64,.07c.82-.19,1.67,0,2.33,.53,.65,.52,1.03,1.3,1.03,2.13V12.5c0,.28-.22,.5-.5,.5ZM10.26,1c-.13,0-.27,.02-.4,.05C5.51,2.04,2.04,5.51,1.05,9.86h0c-.12,.52,0,1.07,.34,1.49,.33,.41,.82,.65,1.35,.65H12V2.73c0-.53-.24-1.02-.65-1.35-.31-.25-.7-.38-1.09-.38ZM.56,9.75H.56Z"/></svg>
+);
+
+FiTrCircleQuarters.displayName = 'FiTrCircleQuarters';

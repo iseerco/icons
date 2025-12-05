@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsTruckRamp: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width={size} height={size} viewBox="0 0 24 24" {...props}><path d="M21.5,1h2.5V0h-2.5c-1.379,0-2.5,1.122-2.5,2.5v14.632L.044,23.022l.297,.955,17.201-5.345c-.343,.541-.542,1.182-.542,1.868,0,1.93,1.57,3.5,3.5,3.5s3.5-1.57,3.5-3.5-1.57-3.5-3.5-3.5c-.17,0-.337,.012-.5,.036V2.5c0-.827,.673-1.5,1.5-1.5Zm1.5,19.5c0,1.378-1.121,2.5-2.5,2.5s-2.5-1.122-2.5-2.5,1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5Z"/></svg>
+);
+
+FiTsTruckRamp.displayName = 'FiTsTruckRamp';

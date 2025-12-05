@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const HandMiddleFinger: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m18.5,9.538l-2.462-.626V2.5c0-1.381-1.119-2.5-2.5-2.5s-2.5,1.119-2.5,2.5v5.226c-1.58-.263-3.046.955-3.046,2.586v6.689c0,.552-.448,1-1,1s-1-.448-1-1v-5.795l-2.788,2.954c-1.696,1.985-1.588,4.079.249,5.935l2.4,2.425c.942.945,2.22,1.478,3.554,1.481h7.586c2.761,0,5-2.239,5-5v-5.605c0-2.22-1.465-3.233-3.492-3.857Z"/>
+</svg>
+);
+
+HandMiddleFinger.displayName = 'HandMiddleFinger';

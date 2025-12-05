@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Elevator: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m11,4h-7L7.5,0l3.5,4ZM20,0h-7l3.5,4,3.5-4Zm4,9v15H0v-15c0-1.654,1.346-3,3-3h18c1.654,0,3,1.346,3,3Zm-10,3.5c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5Zm-9,0c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5Zm6,6.5c0-1.654-1.346-3-3-3h-1c-1.654,0-3,1.346-3,3v3h7v-3Zm9,0c0-1.654-1.346-3-3-3h-1c-1.654,0-3,1.346-3,3v3h7v-3Z"/></svg>
+);
+
+Elevator.displayName = 'Elevator';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FolderDownload: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.899,7H0v-1C0,3.243,2.243,1,5,1h2.528c.463,0,.927,.109,1.341,.316l3.156,1.578c.138,.069,.293,.105,.447,.105h6.528c2.414,0,4.434,1.721,4.899,4Zm.101,2v9c0,2.757-2.243,5-5,5H5c-2.757,0-5-2.243-5-5V9H24Zm-8.293,8.107c-.391-.391-1.023-.391-1.414,0l-1.293,1.293v-6.4c-.006-1.308-1.995-1.307-2,0v6.4l-1.293-1.293c-.929-.921-2.335,.486-1.414,1.414l1.614,1.613c1.154,1.154,3.033,1.154,4.187,0l1.613-1.613c.391-.391,.391-1.023,0-1.414Z"/></svg>
+);
+
+FolderDownload.displayName = 'FolderDownload';

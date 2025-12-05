@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const BagSeedling: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m22,21l2.013,3.024H-.013l2.013-3.024h20Zm0-18l2.017-3H-.017l2.017,3h20Zm0,2v14H2V5h20Zm-4,3c-4.5,0-5.639,3.318-6,5-.357-1.685-1.5-5-5.969-5-.023,4.819,3.265,5.784,4.969,5.961v2.039h2v-2.043c1.705-.176,5-1.136,5-5.957Z"/>
+</svg>
+);
+
+BagSeedling.displayName = 'BagSeedling';

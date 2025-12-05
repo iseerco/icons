@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsChairOffice: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.5,7h-1.5V3.5c0-1.93-1.57-3.5-3.5-3.5h-7c-1.93,0-3.5,1.57-3.5,3.5v3.5h-1.5c-1.93,0-3.5,1.57-3.5,3.5v8.5H10.5v2H6v3h12v-3h-4.5v-2h10.5V10.5c0-1.93-1.57-3.5-3.5-3.5Zm0,3c.276,0,.5,.225,.5,.5v3.768c-.294-.17-.636-.268-1-.268h-1v-4h1.5ZM8.5,3h7c.276,0,.5,.225,.5,.5V14H8V3.5c0-.275,.224-.5,.5-.5ZM3.5,10h1.5v4h-1c-.364,0-.706,.098-1,.268v-3.768c0-.275,.224-.5,.5-.5Z"/></svg>
+);
+
+FiBsChairOffice.displayName = 'FiBsChairOffice';

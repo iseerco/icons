@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const SignalAlt2: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M13,6H11A2,2,0,0,0,9,8V24h6V8A2,2,0,0,0,13,6Z"/><path d="M22,0H20a2,2,0,0,0-2,2V24h6V2A2,2,0,0,0,22,0Z"/><path d="M4,12H2a2,2,0,0,0-2,2V24H6V14A2,2,0,0,0,4,12Z"/></g></svg>
+);
+
+SignalAlt2.displayName = 'SignalAlt2';

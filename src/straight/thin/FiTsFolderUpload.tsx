@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsFolderUpload: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12.687,13.278c-.057-.057-.12-.106-.187-.146v9.867h-1V13.133c-.066,.04-.129,.088-.187,.146l-3.203,3.202-.707-.707,3.203-3.202c.769-.768,2.019-.77,2.787,0l3.203,3.202-.707,.707-3.203-3.202Zm11.313-7.778V23H15v-1h8V8H1v14H9v1H0V3.5C0,2.121,1.122,1,2.5,1h5.618l4,2h9.382c1.378,0,2.5,1.121,2.5,2.5Zm-1,1.5v-1.5c0-.827-.673-1.5-1.5-1.5H11.882L7.882,2H2.5c-.827,0-1.5,.673-1.5,1.5v3.5H23Z"/></svg>
+);
+
+FiTsFolderUpload.displayName = 'FiTsFolderUpload';

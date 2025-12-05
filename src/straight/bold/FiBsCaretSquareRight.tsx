@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsCaretSquareRight: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_16" data-name="Layer 16" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15.65,11.18a1.115,1.115,0,0,1,0,1.66L10,18.01v-12ZM24,3.5A3.5,3.5,0,0,0,20.5,0H3.5A3.5,3.5,0,0,0,0,3.5V24H24ZM3,3.5A.5.5,0,0,1,3.5,3h17a.5.5,0,0,1,.5.5V21H3Z"/></svg>
+);
+
+FiBsCaretSquareRight.displayName = 'FiBsCaretSquareRight';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrSack: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13.747,5.202c1.155-.794,2.563-2.014,3.17-3.539,.318-.799-.32-1.663-1.179-1.663h-7.475c-.86,0-1.497,.864-1.179,1.663,.607,1.525,2.015,2.745,3.17,3.539C5.112,6.39,1,12.585,1,17.75c0,3.446,2.804,6.25,6.25,6.25h9.5c3.446,0,6.25-2.804,6.25-6.25,0-5.165-4.112-11.36-9.253-12.548Zm3.003,15.798H7.25c-1.792,0-3.25-1.458-3.25-3.25,0-4.556,4.262-9.75,8-9.75s8,5.194,8,9.75c0,1.792-1.458,3.25-3.25,3.25Z"/></svg>
+);
+
+FiBrSack.displayName = 'FiBrSack';

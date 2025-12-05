@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Label: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M19,24H5a3,3,0,0,1-3-2.982V5.522L12,0,22,5.522v15.5A3,3,0,0,1,19,24ZM4,6.692V21.018a1,1,0,0,0,1,.994H19a1,1,0,0,0,1-.994V6.692L12,2.274Z"/><circle cx="12" cy="7.072" r="1.5"/></g></svg>
+);
+
+Label.displayName = 'Label';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsChartLineUp: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M2.5,23H24v1H2.5c-1.378,0-2.5-1.122-2.5-2.5V0H1V21.5c0,.827,.673,1.5,1.5,1.5ZM17,5v1h5.293l-7.293,7.293-4-4-6.854,6.854,.707,.707,6.146-6.146,4,4L23,6.707v5.293h1V5h-7Z"/></svg>
+);
+
+FiTsChartLineUp.displayName = 'FiTsChartLineUp';

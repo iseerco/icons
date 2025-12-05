@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const NotesMedical: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m0,7v17s20,0,20,0v-2s-18,0-18,0V4.184C.806,4.606.005,5.733,0,7ZM21,0H7c-1.657,0-3,1.343-3,3v17h13v-7h7V3c0-1.657-1.343-3-3-3Zm-3,11h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2Zm1,8.414v-4.414h4.414l-4.414,4.414Z"/></svg>
+);
+
+NotesMedical.displayName = 'NotesMedical';

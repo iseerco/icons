@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const M: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,24c-.553,0-1-.447-1-1V3.486c0-.861-.587-1.306-1.137-1.436-.548-.13-1.273,.006-1.658,.776l-6.311,12.621c-.339,.678-1.45,.678-1.789,0L4.795,2.827c-.385-.771-1.109-.906-1.659-.776-.549,.13-1.136,.575-1.136,1.436V23c0,.553-.448,1-1,1s-1-.447-1-1V3.486C0,1.841,1.076,.482,2.677,.104c1.601-.379,3.171,.357,3.907,1.828l5.416,10.832L17.416,1.932c.735-1.472,2.307-2.209,3.907-1.828,1.601,.378,2.677,1.737,2.677,3.382V23c0,.553-.447,1-1,1Z"/></svg>
+);
+
+M.displayName = 'M';

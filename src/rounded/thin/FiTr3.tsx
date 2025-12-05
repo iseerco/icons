@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTr3: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15.127,10.331c1.71-.934,2.873-2.749,2.873-4.831,0-3.033-2.468-5.5-5.5-5.5H4.461c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5H12.5c2.481,0,4.5,2.019,4.5,4.5s-2.019,4.5-4.5,4.5H6.461c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h6.539c3.309,0,6,2.691,6,6s-2.691,6-6,6H4.461c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5H13c3.859,0,7-3.14,7-7,0-3.118-2.05-5.767-4.873-6.669Z"/></svg>
+);
+
+FiTr3.displayName = 'FiTr3';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ArrowDownLeft: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.71,.29c-.39-.39-1.02-.39-1.41,0L2.07,20.51c-.04-.16-.07-.33-.07-.51V11c0-.55-.45-1-1-1s-1,.45-1,1v9c0,2.21,1.79,4,4,4H13c.55,0,1-.45,1-1s-.45-1-1-1H4c-.18,0-.35-.03-.51-.07L23.71,1.71c.39-.39,.39-1.02,0-1.41Z"/></svg>
+);
+
+ArrowDownLeft.displayName = 'ArrowDownLeft';

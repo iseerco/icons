@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsQuoteRight: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,8v6H7a5.006,5.006,0,0,1-5,5v3a8.009,8.009,0,0,0,8-8V4H4A4,4,0,0,0,0,8Z"/><path d="M18,4a4,4,0,0,0-4,4v6h7a5.006,5.006,0,0,1-5,5v3a8.009,8.009,0,0,0,8-8V4Z"/></svg>
+);
+
+FiBsQuoteRight.displayName = 'FiBsQuoteRight';

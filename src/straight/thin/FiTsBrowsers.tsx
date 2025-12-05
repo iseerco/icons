@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsBrowsers: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21.5,2H7.5c-1.38,0-2.5,1.12-2.5,2.5v13.5H24V4.5c0-1.38-1.12-2.5-2.5-2.5ZM7.5,3h14c.83,0,1.5,.67,1.5,1.5v1.5H6v-1.5c0-.83,.67-1.5,1.5-1.5Zm-1.5,14V7H23v10H6ZM1,21H19v1H0V8.5c0-1.38,1.12-2.5,2.5-2.5h.5v1h-.5c-.83,0-1.5,.67-1.5,1.5v12.5Z"/></svg>
+);
+
+FiTsBrowsers.displayName = 'FiTsBrowsers';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const TemperatureHigh: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,14.184V5H10v9.184a3,3,0,1,0,2,0ZM11,18a1,1,0,1,1,1-1A1,1,0,0,1,11,18ZM16,5A5,5,0,0,0,6,5v7.111a7,7,0,1,0,10,0ZM11,22a4.994,4.994,0,0,1-3.332-8.719l.332-.3V5a3,3,0,0,1,6,0v7.983l.332.3A4.994,4.994,0,0,1,11,22ZM21,0a3,3,0,1,0,3,3A3,3,0,0,0,21,0Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,21,4Z"/></svg>
+);
+
+TemperatureHigh.displayName = 'TemperatureHigh';

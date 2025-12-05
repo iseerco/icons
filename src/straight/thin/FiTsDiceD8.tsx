@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsDiceD8: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13.821,.748c-.977-.965-2.646-.985-3.663,.021L.047,12l10.132,11.251c.487,.483,1.135,.749,1.821,.749s1.334-.266,1.841-.77l10.147-11.23L13.821,.748Zm8.58,10.987l-9.901,2.745V1.106c.224,.071,.436,.176,.608,.344l9.293,10.285ZM10.882,1.459c.175-.172,.39-.279,.618-.351V14.479L1.631,11.735,10.882,1.459ZM2.24,12.941l9.26,2.575v7.385c-.225-.068-.434-.179-.599-.341L2.24,12.941Zm10.878,9.599c-.175,.173-.39,.288-.618,.358v-7.382l9.29-2.576-8.672,9.599Z"/></svg>
+);
+
+FiTsDiceD8.displayName = 'FiTsDiceD8';
