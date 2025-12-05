@@ -7,6 +7,7 @@ const ICONS_PER_PAGE = 100;
 let currentStyle = 'all';
 let currentWeight = 'all';
 let searchQuery = '';
+let currentIcon = null;
 
 // ===== DOM Elements =====
 const searchInput = document.getElementById('searchInput');
@@ -87,25 +88,16 @@ function initKeyboardShortcuts() {
 // ===== Filter Logic =====
 function applyFilters() {
     filteredIcons = allIcons.filter(icon => {
-        // Style filter
-        if (currentStyle !== 'all' && icon.style !== currentStyle) {
-            return false;
-        }
+        if (currentStyle !== 'all' && icon.style !== currentStyle) return false;
+        if (currentWeight !== 'all' && icon.weight !== currentWeight) return false;
         
-        // Weight filter
-        if (currentWeight !== 'all' && icon.weight !== currentWeight) {
-            return false;
-        }
-        
-        // Search filter
         if (searchQuery) {
-            const searchTerms = searchQuery.split(/\s+/);
-            return searchTerms.every(term => 
+            const terms = searchQuery.split(/\s+/);
+            return terms.every(term => 
                 icon.name.toLowerCase().includes(term) ||
                 icon.component.toLowerCase().includes(term)
             );
         }
-        
         return true;
     });
     
@@ -129,12 +121,7 @@ function renderIcons() {
     iconsGrid.appendChild(fragment);
     displayedCount = endIndex;
     
-    // Show/hide load more button
-    if (displayedCount < filteredIcons.length) {
-        loadMoreContainer.style.display = 'flex';
-    } else {
-        loadMoreContainer.style.display = 'none';
-    }
+    loadMoreContainer.style.display = displayedCount < filteredIcons.length ? 'flex' : 'none';
 }
 
 function createIconCard(icon) {
@@ -158,14 +145,7 @@ function createIconCard(icon) {
 }
 
 function updateResultCount() {
-    const total = filteredIcons.length;
-    const showing = displayedCount;
-    
-    if (searchQuery || currentStyle !== 'all' || currentWeight !== 'all') {
-        resultCount.textContent = `Showing ${showing.toLocaleString()} of ${total.toLocaleString()} icons`;
-    } else {
-        resultCount.textContent = `Showing ${showing.toLocaleString()} of ${total.toLocaleString()} icons`;
-    }
+    resultCount.textContent = `Showing ${displayedCount.toLocaleString()} of ${filteredIcons.length.toLocaleString()} icons`;
 }
 
 // ===== Load More =====
@@ -176,43 +156,91 @@ loadMoreBtn.addEventListener('click', () => {
 
 // ===== Modal =====
 function openModal(icon) {
-    const modalPreview = document.getElementById('modalPreview');
-    const modalIconName = document.getElementById('modalIconName');
-    const modalStyle = document.getElementById('modalStyle');
-    const modalWeight = document.getElementById('modalWeight');
-    const modalImport = document.getElementById('modalImport');
-    const modalUsage = document.getElementById('modalUsage');
-    const modalCdn = document.getElementById('modalCdn');
-    const modalFilename = document.getElementById('modalFilename');
-    const modalDownload = document.getElementById('modalDownload');
+    currentIcon = icon;
     
-    // Preview
-    modalPreview.innerHTML = `<img src="${icon.cdn}" alt="${icon.component}">`;
+    // Icon display
+    const modalIconImg = document.getElementById('modalIconImg');
+    modalIconImg.src = icon.cdn;
+    modalIconImg.alt = icon.component;
+    
+    // Variants - show all 8 (both styles, all weights)
+    const modalVariants = document.getElementById('modalVariants');
+    modalVariants.innerHTML = '';
+    
+    const styles = ['rounded', 'straight'];
+    const weights = ['thin', 'regular', 'bold', 'solid'];
+    
+    styles.forEach(style => {
+        weights.forEach(weight => {
+            const variantIcon = allIcons.find(i => 
+                i.name === icon.name && 
+                i.style === style && 
+                i.weight === weight
+            );
+            
+            if (variantIcon) {
+                const btn = document.createElement('button');
+                btn.className = `variant-btn ${style === icon.style && weight === icon.weight ? 'active' : ''}`;
+                btn.title = `${style} ${weight}`;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    switchVariant(variantIcon);
+                };
+                
+                const img = document.createElement('img');
+                img.src = variantIcon.cdn;
+                img.alt = `${style} ${weight}`;
+                
+                btn.appendChild(img);
+                modalVariants.appendChild(btn);
+            }
+        });
+    });
     
     // Info
-    modalIconName.textContent = icon.component;
-    modalStyle.textContent = icon.style;
-    modalWeight.textContent = icon.weight;
+    document.getElementById('modalIconName').textContent = icon.component;
+    document.getElementById('modalStyle').textContent = icon.style;
+    document.getElementById('modalWeight').textContent = icon.weight;
     
     // Code
     const importPath = `@iseer/icons/${icon.style}/${icon.weight}`;
-    modalImport.textContent = `import { ${icon.component} } from '${importPath}';`;
-    modalUsage.textContent = `<${icon.component} size={24} />`;
-    modalCdn.textContent = icon.cdn;
-    modalFilename.textContent = icon.filename;
+    document.getElementById('modalImport').textContent = `import { ${icon.component} } from '${importPath}';`;
+    document.getElementById('modalUsage').textContent = `<${icon.component} size={24} />`;
+    document.getElementById('modalCdn').textContent = icon.cdn;
     
     // Download
-    modalDownload.href = icon.cdn;
-    modalDownload.download = icon.filename;
+    const downloadBtn = document.getElementById('modalDownload');
+    downloadBtn.href = icon.cdn;
+    downloadBtn.download = icon.filename;
     
     // Show modal
     iconModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
+function switchVariant(icon) {
+    currentIcon = icon;
+    
+    document.getElementById('modalIconImg').src = icon.cdn;
+    document.getElementById('modalStyle').textContent = icon.style;
+    document.getElementById('modalWeight').textContent = icon.weight;
+    
+    const importPath = `@iseer/icons/${icon.style}/${icon.weight}`;
+    document.getElementById('modalImport').textContent = `import { ${icon.component} } from '${importPath}';`;
+    document.getElementById('modalCdn').textContent = icon.cdn;
+    document.getElementById('modalDownload').href = icon.cdn;
+    
+    // Update active variant button
+    document.querySelectorAll('.variant-btn').forEach(btn => {
+        const isActive = btn.title === `${icon.style} ${icon.weight}`;
+        btn.classList.toggle('active', isActive);
+    });
+}
+
 function closeModal() {
     iconModal.classList.remove('active');
     document.body.style.overflow = '';
+    currentIcon = null;
 }
 
 // ===== Copy to Clipboard =====
@@ -224,7 +252,6 @@ async function copyCode(elementId) {
         await navigator.clipboard.writeText(text);
         showToast();
     } catch (err) {
-        // Fallback for older browsers
         const textarea = document.createElement('textarea');
         textarea.value = text;
         document.body.appendChild(textarea);
@@ -238,8 +265,5 @@ async function copyCode(elementId) {
 function showToast() {
     const toast = document.getElementById('toast');
     toast.classList.add('show');
-    
-    setTimeout(() => {
-        toast.classList.remove('show');
-    }, 2000);
+    setTimeout(() => toast.classList.remove('show'), 2000);
 }
