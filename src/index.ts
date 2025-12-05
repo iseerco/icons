@@ -7,6 +7,7 @@ export * from './rounded/regular';
 export * from './rounded/thin';
 export * from './rounded/bold';
 export * from './rounded/solid';
+export * from './duotone/chubby';
 
 // Export types
 export type { IconProps, IconComponent } from './types';

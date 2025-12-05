@@ -7,7 +7,7 @@ const path = require('path');
 function toComponentName(filename) {
     let name = filename
         .replace(/\.svg$/, '')
-        .replace(/^fi-[rs][srbt]-/, '');
+        .replace(/^fi-[rsd][srbtc]-/, ''); // Updated: r=rounded, s=straight, d=duotone; s/r/b/t/c weights
     
     const numberMap = {
         '0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three', '4': 'Four',
@@ -39,7 +39,8 @@ function generateManifest() {
         { style: 'straight', weight: 'regular' },
         { style: 'straight', weight: 'thin' },
         { style: 'straight', weight: 'bold' },
-        { style: 'straight', weight: 'solid' }
+        { style: 'straight', weight: 'solid' },
+        { style: 'duotone', weight: 'chubby' }
     ];
     
     const icons = [];
@@ -58,7 +59,7 @@ function generateManifest() {
         files.forEach(file => {
             const componentName = toComponentName(file);
             icons.push({
-                name: file.replace('.svg', '').replace(/^fi-[rs][srbt]-/, ''),
+                name: file.replace('.svg', '').replace(/^fi-[rsd][srbtc]-/, ''),
                 component: componentName,
                 filename: file,
                 style: style,

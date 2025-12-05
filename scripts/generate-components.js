@@ -12,7 +12,7 @@ function toComponentName(filename) {
   // Remove file extension and icon prefix
   let name = filename
     .replace(/\.svg$/, '')
-    .replace(/^fi-[rs][srbt]-/, '');
+    .replace(/^fi-[rsd][srbtc]-/, ''); // r=rounded, s=straight, d=duotone; weights: s/r/b/t/c
   
   // Handle numbers at start
   const numberMap = {
@@ -151,7 +151,8 @@ function main() {
   
   const allExports = {
     straight: {},
-    rounded: {}
+    rounded: {},
+    duotone: {}
   };
   
   // Generate all variants
@@ -164,7 +165,12 @@ function main() {
     });
   });
   
-  // Generate main index.ts
+  // Generate duotone/chubby separately
+  const duotoneExports = generateVariant('duotone', 'chubby');
+  if (duotoneExports) {
+    allExports.duotone.chubby = duotoneExports;
+  }
+  
   console.log('\n📝 Generating main index file...');
   const mainIndexContent = `// Export all icon variants
 export * from './straight/regular';
@@ -175,6 +181,7 @@ export * from './rounded/regular';
 export * from './rounded/thin';
 export * from './rounded/bold';
 export * from './rounded/solid';
+export * from './duotone/chubby';
 
 // Export types
 export type { IconProps, IconComponent } from './types';
@@ -184,13 +191,17 @@ export type { IconProps, IconComponent } from './types';
   
   // Calculate totals
   let totalIcons = 0;
-  variants.forEach(variant => {
+  ['straight', 'rounded'].forEach(variant => {
     weights.forEach(weight => {
       if (allExports[variant][weight]) {
         totalIcons += allExports[variant][weight].length;
       }
     });
   });
+  // Add duotone/chubby count
+  if (allExports.duotone.chubby) {
+    totalIcons += allExports.duotone.chubby.length;
+  }
   
   console.log('\n' + '='.repeat(60));
   console.log('✨ Component generation complete!');

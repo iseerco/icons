@@ -1,7 +1,7 @@
 {
   "name": "@iseer/icons",
-  "version": "0.1.0",
-  "description": "Iseer's custom icon library with 8 variants (straight/rounded × regular/thin/bold/solid)",
+  "version": "0.2.0",
+  "description": "Iseer's custom icon library with 9 variants (straight/rounded × regular/thin/bold/solid + duotone chubby)",
   "author": "Iseer",
   "license": "Apache-2.0",
   "repository": {
@@ -48,6 +48,10 @@
     "./rounded/solid": {
       "import": "./dist/rounded/solid/index.mjs",
       "require": "./dist/rounded/solid/index.js"
+    },
+    "./duotone/chubby": {
+      "import": "./dist/duotone/chubby/index.mjs",
+      "require": "./dist/duotone/chubby/index.js"
     }
   },
   "files": [
