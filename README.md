@@ -32,7 +32,7 @@ function App() {
 
 ### Visual Examples
 
-<img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-home.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-search.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-settings.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-user.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-heart.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-star.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-bell.svg" width="48" height="48"> <img src="https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-shopping-cart.svg" width="48" height="48">
+<img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-home.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-search.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-settings.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-user.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-heart.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-star.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-bell.svg" width="48" height="48"> <img src="https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-shopping-cart.svg" width="48" height="48">
 
 ### Available Variants
 
@@ -155,12 +155,12 @@ const CustomIcon: React.FC<IconProps> = (props) => {
 
 Browse all icons in the CDN:
 ```
-https://edge.iseer.co/icons/{variant}/{weight}/svg/{icon-name}.svg
+https://edge.iseer.co/assets/icons/{variant}/{weight}/svg/{icon-name}.svg
 ```
 
 Example:
 ```
-https://edge.iseer.co/icons/rounded/regular/svg/fi-rr-home.svg
+https://edge.iseer.co/assets/icons/rounded/regular/svg/fi-rr-home.svg
 ```
 
 ## 📚 Common Icons Reference
@@ -218,7 +218,7 @@ This project is released under the [Apache License 2.0](LICENSE).
 
 ## 🔗 Resources
 
-- **CDN Base**: `https://edge.iseer.co/icons/`
+- **CDN Base**: `https://edge.iseer.co/assets/icons/`
 - **Total Icons**: 37,007 across 8 variants
 - **File Format**: SVG (24x24 viewBox)
 
