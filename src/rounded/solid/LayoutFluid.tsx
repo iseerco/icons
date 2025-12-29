@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LayoutFluid: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LayoutFluid = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M42.667,234.667h234.667C300.897,234.667,320,215.564,320,192V42.667C320,19.103,300.897,0,277.333,0H42.667   C19.103,0,0,19.103,0,42.667V192C0,215.564,19.103,234.667,42.667,234.667z"/>
 	<path d="M504.704,18.816C496.775,7.054,483.518,0.002,469.333,0h-64c-23.564,0-42.667,19.103-42.667,42.667V192   c0,23.564,19.102,42.667,42.667,42.667h64C492.898,234.667,512,215.564,512,192V42.667   C512.014,34.165,509.472,25.855,504.704,18.816z"/>
@@ -30,6 +32,5 @@ export const LayoutFluid: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-LayoutFluid.displayName = 'LayoutFluid';
+);

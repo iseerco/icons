@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrLariSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,22.5c0,.83-.67,1.5-1.5,1.5H2.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5h1.96c-2.13-2.01-3.46-4.85-3.46-8C1,8.35,3.91,4.36,8,2.75V1.5c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5v.55c.33-.03,.66-.05,1-.05s.67,.02,1,.05v-.55c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5v1.25c4.09,1.6,7,5.59,7,10.25,0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5c0-2.95-1.61-5.54-4-6.93v4.43c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5V5.06c-.33-.04-.66-.06-1-.06s-.67,.02-1,.06v5.44c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5V6.07c-2.39,1.39-4,3.97-4,6.93,0,4.41,3.59,8,8,8h9.5c.83,0,1.5,.67,1.5,1.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrLariSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,22.5c0,.83-.67,1.5-1.5,1.5H2.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5h1.96c-2.13-2.01-3.46-4.85-3.46-8C1,8.35,3.91,4.36,8,2.75V1.5c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5v.55c.33-.03,.66-.05,1-.05s.67,.02,1,.05v-.55c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5v1.25c4.09,1.6,7,5.59,7,10.25,0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5c0-2.95-1.61-5.54-4-6.93v4.43c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5V5.06c-.33-.04-.66-.06-1-.06s-.67,.02-1,.06v5.44c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5V6.07c-2.39,1.39-4,3.97-4,6.93,0,4.41,3.59,8,8,8h9.5c.83,0,1.5,.67,1.5,1.5Z"/></svg>
+
 );
-
-FiBrLariSign.displayName = 'FiBrLariSign';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCarBattery: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M11,12.5A1.5,1.5,0,0,1,9.5,14h-4a1.5,1.5,0,0,1,0-3h4A1.5,1.5,0,0,1,11,12.5ZM18.5,11H18v-.5a1.5,1.5,0,0,0-3,0V11h-.5a1.5,1.5,0,0,0,0,3H15v.5a1.5,1.5,0,0,0,3,0V14h.5A1.5,1.5,0,0,0,18.5,11ZM24,9.5v7A5.506,5.506,0,0,1,18.5,22H5.5C2.313,22,0,19.9,0,17V9.5A4.508,4.508,0,0,1,3,5.257V4.5A2.5,2.5,0,0,1,5.5,2h3A2.5,2.5,0,0,1,11,4.5V5h2V4.5A2.5,2.5,0,0,1,15.5,2h3A2.5,2.5,0,0,1,21,4.5v.757A4.508,4.508,0,0,1,24,9.5Zm-3,0A1.5,1.5,0,0,0,19.5,8,1.5,1.5,0,0,1,18,6.5V5H16V6.5A1.5,1.5,0,0,1,14.5,8h-5A1.5,1.5,0,0,1,8,6.5V5H6V6.5A1.5,1.5,0,0,1,4.5,8,1.5,1.5,0,0,0,3,9.5V17c0,1.9,2.083,2,2.5,2h13A2.5,2.5,0,0,0,21,16.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCarBattery = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M11,12.5A1.5,1.5,0,0,1,9.5,14h-4a1.5,1.5,0,0,1,0-3h4A1.5,1.5,0,0,1,11,12.5ZM18.5,11H18v-.5a1.5,1.5,0,0,0-3,0V11h-.5a1.5,1.5,0,0,0,0,3H15v.5a1.5,1.5,0,0,0,3,0V14h.5A1.5,1.5,0,0,0,18.5,11ZM24,9.5v7A5.506,5.506,0,0,1,18.5,22H5.5C2.313,22,0,19.9,0,17V9.5A4.508,4.508,0,0,1,3,5.257V4.5A2.5,2.5,0,0,1,5.5,2h3A2.5,2.5,0,0,1,11,4.5V5h2V4.5A2.5,2.5,0,0,1,15.5,2h3A2.5,2.5,0,0,1,21,4.5v.757A4.508,4.508,0,0,1,24,9.5Zm-3,0A1.5,1.5,0,0,0,19.5,8,1.5,1.5,0,0,1,18,6.5V5H16V6.5A1.5,1.5,0,0,1,14.5,8h-5A1.5,1.5,0,0,1,8,6.5V5H6V6.5A1.5,1.5,0,0,1,4.5,8,1.5,1.5,0,0,0,3,9.5V17c0,1.9,2.083,2,2.5,2h13A2.5,2.5,0,0,0,21,16.5Z"/></svg>
+
 );
-
-FiBrCarBattery.displayName = 'FiBrCarBattery';

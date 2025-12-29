@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SandwichAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SandwichAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.772,11.588c.354.27.778.412,1.228.412v2c-.892,0-1.735-.284-2.439-.82-.314-.239-.807-.238-1.123,0-1.407,1.072-3.469,1.073-4.877,0-.314-.239-.807-.238-1.123,0-1.407,1.072-3.469,1.073-4.877,0-.314-.239-.807-.238-1.123,0-1.407,1.072-3.469,1.073-4.877,0-.314-.239-.807-.238-1.123,0-.704.536-1.547.82-2.438.82v-2c.45,0,.874-.142,1.227-.411,1.027-.783,2.518-.782,3.545,0,.707.539,1.749.539,2.455,0,1.027-.783,2.518-.782,3.545,0,.707.539,1.749.539,2.455,0,1.027-.783,2.518-.782,3.545,0,.707.539,1.749.539,2.455,0,1.027-.783,2.518-.782,3.545,0ZM0,16h24v4c0,1.654-1.346,3-3,3H3c-1.654,0-3-1.346-3-3v-4Zm2,4c0,.551.449,1,1,1h18c.551,0,1-.449,1-1v-2H2v2ZM24,5v4H0v-4c0-1.654,1.346-3,3-3h18c1.654,0,3,1.346,3,3Zm-2,0c0-.551-.449-1-1-1H3c-.551,0-1,.449-1,1v2h20v-2Z"/>
 </svg>
-);
 
-SandwichAlt.displayName = 'SandwichAlt';
+);

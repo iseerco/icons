@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsFusilli: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsFusilli = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20,3V0h-1.5c-1.379,0-2.5,1.122-2.5,2.5v.5h-.5c-1.379,0-2.5,1.122-2.5,2.5v1.5h-.5c-1.379,0-2.5,1.122-2.5,2.5v.5h-.5c-1.379,0-2.5,1.122-2.5,2.5v.5h-.5c-1.379,0-2.5,1.121-2.5,2.5v1.5h-.5c-1.379,0-2.5,1.121-2.5,2.5v1.5h3v3h1.5c1.379,0,2.5-1.121,2.5-2.5v-.5h.5c1.379,0,2.5-1.121,2.5-2.5v-.5h.5c1.379,0,2.5-1.121,2.5-2.5v-1.5h.5c1.379,0,2.5-1.122,2.5-2.5v-.5h.5c1.379,0,2.5-1.122,2.5-2.5v-1.5h.5c1.379,0,2.5-1.122,2.5-2.5v-1.5h-3ZM2,20v-.5c0-.827,.673-1.5,1.5-1.5h.5v2H2Zm5,1.5c0,.827-.673,1.5-1.5,1.5h-.5v-7.5c0-.827,.673-1.5,1.5-1.5h.5v7.5Zm1.5-1.5h-.5v-7.5c0-.827,.673-1.5,1.5-1.5h.5v7.5c0,.827-.673,1.5-1.5,1.5Zm3-3h-.5v-7.5c0-.827,.673-1.5,1.5-1.5h.5v7.5c0,.827-.673,1.5-1.5,1.5Zm4.5-5.5c0,.827-.673,1.5-1.5,1.5h-.5V5.5c0-.827,.673-1.5,1.5-1.5h.5v7.5Zm3-3c0,.827-.673,1.5-1.5,1.5h-.5V2.5c0-.827,.673-1.5,1.5-1.5h.5v7.5Zm3-4c0,.827-.673,1.5-1.5,1.5h-.5v-2h2v.5Z"/>
 </svg>
-);
 
-FiTsFusilli.displayName = 'FiTsFusilli';
+);

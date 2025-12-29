@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DraftingCompassPaper: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 8c1.654 0 3-1.346 3-3 0-1.302-.839-2.402-2-2.816v-2.184h-2v2.184c-1.161.414-2 1.514-2 2.816 0 1.654 1.346 3 3 3zm0-4c.552 0 1 .449 1 1s-.448 1-1 1-1-.449-1-1 .448-1 1-1zm1.14 5.857.989 2.143h-4.258l.989-2.143c.368.086.746.143 1.14.143s.773-.057 1.14-.143zm10.86-6.857v17c0 2.206-1.794 4-4 4h-16c-2.206 0-4-1.794-4-4v-17h2c0 1.103.897 2 2 2h3c0 1.652.811 3.104 2.046 4.015l-1.378 2.985h-2.668v2h1.745l-1.653 3.581 1.816.838 2.04-4.419h6.104l2.04 4.419 1.816-.838-1.653-3.581h1.745v-2h-2.668l-1.378-2.985c1.235-.91 2.046-2.363 2.046-4.015h3c1.103 0 2-.897 2-2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DraftingCompassPaper = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 8c1.654 0 3-1.346 3-3 0-1.302-.839-2.402-2-2.816v-2.184h-2v2.184c-1.161.414-2 1.514-2 2.816 0 1.654 1.346 3 3 3zm0-4c.552 0 1 .449 1 1s-.448 1-1 1-1-.449-1-1 .448-1 1-1zm1.14 5.857.989 2.143h-4.258l.989-2.143c.368.086.746.143 1.14.143s.773-.057 1.14-.143zm10.86-6.857v17c0 2.206-1.794 4-4 4h-16c-2.206 0-4-1.794-4-4v-17h2c0 1.103.897 2 2 2h3c0 1.652.811 3.104 2.046 4.015l-1.378 2.985h-2.668v2h1.745l-1.653 3.581 1.816.838 2.04-4.419h6.104l2.04 4.419 1.816-.838-1.653-3.581h1.745v-2h-2.668l-1.378-2.985c1.235-.91 2.046-2.363 2.046-4.015h3c1.103 0 2-.897 2-2z"/></svg>
 );
-
-DraftingCompassPaper.displayName = 'DraftingCompassPaper';

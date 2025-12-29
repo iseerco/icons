@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTruckContainerEmpty: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTruckContainerEmpty = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,13.149c0-.592-.095-1.177-.282-1.74l-1.339-4.017c-.478-1.432-1.812-2.393-3.32-2.393h-4.059v12H0v3.5c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5c0-.171-.018-.338-.05-.5h1.101c-.033.162-.05.329-.05.5,0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5c0-.171-.018-.338-.05-.5h6.101c-.033.162-.05.329-.05.5,0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5c0-.171-.018-.338-.05-.5h2.05v-6.851Zm-4.941-5.149c.216,0,.406.138.475.342l1.338,4.016c.085.256.128.522.128.792v.351h-3v-5.5h1.059Z"/>
 </svg>
-);
 
-FiBsTruckContainerEmpty.displayName = 'FiBsTruckContainerEmpty';
+);

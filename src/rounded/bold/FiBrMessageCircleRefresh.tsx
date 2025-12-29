@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrMessageCircleRefresh: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 0c-6.617 0-12 5.383-12 12v6.5c0 3.033 2.467 5.5 5.5 5.5h6.5c6.617 0 12-5.383 12-12s-5.383-12-12-12zm0 21h-6.5c-1.378 0-2.5-1.122-2.5-2.5v-6.5c0-4.962 4.038-9 9-9s9 4.038 9 9-4.038 9-9 9zm4.989-5.666c-1.117 1.669-2.982 2.666-4.989 2.666-3.309 0-6-2.691-6-6s2.691-6 6-6c1.021 0 2.013.266 2.89.749l.465-.465c.607-.607 1.645-.177 1.645.681v3.056c0 .54-.438.979-.979.979h-3.056c-.859 0-1.288-1.038-.681-1.645l.294-.294c-.189-.037-.382-.061-.578-.061-1.654 0-3 1.346-3 3s1.346 3 3 3c1.003 0 1.937-.499 2.496-1.334.46-.688 1.391-.873 2.081-.412.688.461.873 1.393.412 2.081z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrMessageCircleRefresh = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 0c-6.617 0-12 5.383-12 12v6.5c0 3.033 2.467 5.5 5.5 5.5h6.5c6.617 0 12-5.383 12-12s-5.383-12-12-12zm0 21h-6.5c-1.378 0-2.5-1.122-2.5-2.5v-6.5c0-4.962 4.038-9 9-9s9 4.038 9 9-4.038 9-9 9zm4.989-5.666c-1.117 1.669-2.982 2.666-4.989 2.666-3.309 0-6-2.691-6-6s2.691-6 6-6c1.021 0 2.013.266 2.89.749l.465-.465c.607-.607 1.645-.177 1.645.681v3.056c0 .54-.438.979-.979.979h-3.056c-.859 0-1.288-1.038-.681-1.645l.294-.294c-.189-.037-.382-.061-.578-.061-1.654 0-3 1.346-3 3s1.346 3 3 3c1.003 0 1.937-.499 2.496-1.334.46-.688 1.391-.873 2.081-.412.688.461.873 1.393.412 2.081z"/></svg>
 );
-
-FiBrMessageCircleRefresh.displayName = 'FiBrMessageCircleRefresh';

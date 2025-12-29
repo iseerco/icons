@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrashCanList: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrashCanList = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,11c0,.553-.448,1-1,1h-6c-.552,0-1-.447-1-1s.448-1,1-1h6c.552,0,1,.447,1,1Zm-3,4h-4c-.552,0-1,.447-1,1s.448,1,1,1h4c.552,0,1-.447,1-1s-.448-1-1-1Zm-2,5h-2c-.552,0-1,.447-1,1s.448,1,1,1h2c.552,0,1-.447,1-1s-.448-1-1-1ZM4,6v13c0,1.654,1.346,3,3,3h6c.552,0,1,.447,1,1s-.448,1-1,1h-6c-2.757,0-5-2.243-5-5V6h-1c-.552,0-1-.447-1-1s.448-1,1-1h3.101C4.565,1.721,6.586,0,9,0h2c2.414,0,4.435,1.721,4.899,4h3.101c.552,0,1,.447,1,1s-.448,1-1,1h-1v1c0,.553-.448,1-1,1s-1-.447-1-1v-1H4Zm2.172-2h7.656c-.413-1.164-1.524-2-2.828-2h-2c-1.304,0-2.415.836-2.828,2Z"/>
 </svg>
-);
 
-TrashCanList.displayName = 'TrashCanList';
+);

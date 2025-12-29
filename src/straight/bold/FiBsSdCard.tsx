@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsSdCard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsSdCard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.5,0h-8.758c-1.185,0-2.345.48-3.182,1.318l-3.243,3.243c-.85.851-1.317,1.98-1.317,3.182v16.257h20V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,21H5V7.743c0-.4.156-.777.439-1.061l3.243-3.243c.278-.279.665-.439,1.06-.439h8.758c.275,0,.5.224.5.5v17.5ZM14,5h3v4h-3v-4Zm-4,0h3v4h-3v-4Z"/>
 </svg>
-);
 
-FiBsSdCard.displayName = 'FiBsSdCard';
+);

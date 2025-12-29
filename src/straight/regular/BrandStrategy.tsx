@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BrandStrategy: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m8.753 8.753-1.753-1.753h3.75c.69 0 1.25.56 1.25 1.25v3.75l-1.83-1.83c-.185.163-.371.327-.552.483-2.101 1.813-3.618 3.123-3.618 8.347h-2c0-6.14 2.095-7.948 4.312-9.861.145-.125.294-.257.441-.386zm2.838 5.242-1.091 1.091-1.091-1.091-1.414 1.414 1.091 1.091-1.091 1.091 1.414 1.414 1.091-1.091 1.091 1.091 1.414-1.414-1.091-1.091 1.091-1.091zm-7.091-3.995c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm19.5-7v17.914l-3 3-3-3v-17.914c0-1.654 1.346-3 3-3s3 1.346 3 3zm-2 0c0-.551-.448-1-1-1s-1 .449-1 1v17.086l1 1 1-1zm-9-1h3v19c0 1.654-1.346 3-3 3h-10c-1.654 0-3-1.346-3-3v-19h3v-2h2v2h2v-2h2v2h2v-2h2zm1 2h-12v17c0 .551.448 1 1 1h10c.552 0 1-.449 1-1z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BrandStrategy = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m8.753 8.753-1.753-1.753h3.75c.69 0 1.25.56 1.25 1.25v3.75l-1.83-1.83c-.185.163-.371.327-.552.483-2.101 1.813-3.618 3.123-3.618 8.347h-2c0-6.14 2.095-7.948 4.312-9.861.145-.125.294-.257.441-.386zm2.838 5.242-1.091 1.091-1.091-1.091-1.414 1.414 1.091 1.091-1.091 1.091 1.414 1.414 1.091-1.091 1.091 1.091 1.414-1.414-1.091-1.091 1.091-1.091zm-7.091-3.995c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm19.5-7v17.914l-3 3-3-3v-17.914c0-1.654 1.346-3 3-3s3 1.346 3 3zm-2 0c0-.551-.448-1-1-1s-1 .449-1 1v17.086l1 1 1-1zm-9-1h3v19c0 1.654-1.346 3-3 3h-10c-1.654 0-3-1.346-3-3v-19h3v-2h2v2h2v-2h2v2h2v-2h2zm1 2h-12v17c0 .551.448 1 1 1h10c.552 0 1-.449 1-1z"/></svg>
 );
-
-BrandStrategy.displayName = 'BrandStrategy';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ScoreBoard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m11 9h-11v10c0 2.757 2.243 5 5 5h6zm-3 9.5c0 1.378-1.121 2.5-2.5 2.5-1.091 0-2.096-.685-2.442-1.667-.185-.521.088-1.092.608-1.276.522-.185 1.094.089 1.276.609.056.157.307.333.558.333.275 0 .5-.224.5-.5v-1c0-.276-.225-.5-.5-.5h-1c-.827 0-1.5-.673-1.5-1.5v-2c0-.827.673-1.5 1.5-1.5h2.5c.553 0 1 .448 1 1s-.447 1-1 1h-2v1h.5c1.379 0 2.5 1.122 2.5 2.5v1zm-8-11.5c0-2.757 2.243-5 5-5v-1c0-.552.447-1 1-1s1 .448 1 1v1h10v-1c0-.552.447-1 1-1s1 .448 1 1v1c2.757 0 5 2.243 5 5zm19 7.5v4c0 .276-.225.5-.5.5s-.5-.224-.5-.5v-4c0-.276.225-.5.5-.5s.5.224.5.5zm-6-5.5v15h6c2.757 0 5-2.243 5-5v-10zm8 9.5c0 1.378-1.121 2.5-2.5 2.5s-2.5-1.122-2.5-2.5v-4c0-1.378 1.121-2.5 2.5-2.5s2.5 1.122 2.5 2.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ScoreBoard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m11 9h-11v10c0 2.757 2.243 5 5 5h6zm-3 9.5c0 1.378-1.121 2.5-2.5 2.5-1.091 0-2.096-.685-2.442-1.667-.185-.521.088-1.092.608-1.276.522-.185 1.094.089 1.276.609.056.157.307.333.558.333.275 0 .5-.224.5-.5v-1c0-.276-.225-.5-.5-.5h-1c-.827 0-1.5-.673-1.5-1.5v-2c0-.827.673-1.5 1.5-1.5h2.5c.553 0 1 .448 1 1s-.447 1-1 1h-2v1h.5c1.379 0 2.5 1.122 2.5 2.5v1zm-8-11.5c0-2.757 2.243-5 5-5v-1c0-.552.447-1 1-1s1 .448 1 1v1h10v-1c0-.552.447-1 1-1s1 .448 1 1v1c2.757 0 5 2.243 5 5zm19 7.5v4c0 .276-.225.5-.5.5s-.5-.224-.5-.5v-4c0-.276.225-.5.5-.5s.5.224.5.5zm-6-5.5v15h6c2.757 0 5-2.243 5-5v-10zm8 9.5c0 1.378-1.121 2.5-2.5 2.5s-2.5-1.122-2.5-2.5v-4c0-1.378 1.121-2.5 2.5-2.5s2.5 1.122 2.5 2.5z"/></svg>
 );
-
-ScoreBoard.displayName = 'ScoreBoard';

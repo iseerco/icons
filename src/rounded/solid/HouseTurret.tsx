@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HouseTurret: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,0c-.552,0-1,.447-1,1v1h-2V1c0-.553-.448-1-1-1s-1,.447-1,1v1h-2V1c0-.553-.448-1-1-1s-1,.447-1,1v1h-2V1c0-.553-.448-1-1-1s-1,.447-1,1v3c0,1.657,1.343,3,3,3h8c1.657,0,3-1.343,3-3V1c0-.553-.448-1-1-1ZM14.082,11.41l-3-2.349c-1.814-1.418-4.349-1.42-6.163,0l-3,2.348c-1.219,.955-1.918,2.39-1.918,3.938v4.152c0,2.481,2.019,4.5,4.5,4.5h7c2.481,0,4.5-2.019,4.5-4.5v-4.152c0-1.548-.699-2.982-1.918-3.938Zm-4.082,6.59c0,.552-.448,1-1,1h-2c-.552,0-1-.448-1-1v-2c0-.552,.448-1,1-1h2c.552,0,1,.448,1,1v2Zm12-9v11c0,2.304-1.957,4.158-4.295,3.989l-1.519,.003c1.12-1.168,1.813-2.75,1.813-4.492v-4.152c0-2.166-.979-4.175-2.685-5.512l-1.068-.836h7.753Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HouseTurret = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,0c-.552,0-1,.447-1,1v1h-2V1c0-.553-.448-1-1-1s-1,.447-1,1v1h-2V1c0-.553-.448-1-1-1s-1,.447-1,1v1h-2V1c0-.553-.448-1-1-1s-1,.447-1,1v3c0,1.657,1.343,3,3,3h8c1.657,0,3-1.343,3-3V1c0-.553-.448-1-1-1ZM14.082,11.41l-3-2.349c-1.814-1.418-4.349-1.42-6.163,0l-3,2.348c-1.219,.955-1.918,2.39-1.918,3.938v4.152c0,2.481,2.019,4.5,4.5,4.5h7c2.481,0,4.5-2.019,4.5-4.5v-4.152c0-1.548-.699-2.982-1.918-3.938Zm-4.082,6.59c0,.552-.448,1-1,1h-2c-.552,0-1-.448-1-1v-2c0-.552,.448-1,1-1h2c.552,0,1,.448,1,1v2Zm12-9v11c0,2.304-1.957,4.158-4.295,3.989l-1.519,.003c1.12-1.168,1.813-2.75,1.813-4.492v-4.152c0-2.166-.979-4.175-2.685-5.512l-1.068-.836h7.753Z"/></svg>
+
 );
-
-HouseTurret.displayName = 'HouseTurret';

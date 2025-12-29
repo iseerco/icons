@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChatArrowGrow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><title>01-Diagram</title><path d="M2,20.976v-21H0v21a3,3,0,0,0,3,3H24v-2H3A1,1,0,0,1,2,20.976Z"/><path d="M22.5,3.976H17l2.793,2.793L15.5,11.062l-2-2L6.281,16.281,7.7,17.7l5.805-5.8,2,2,5.707-5.707L24,10.976v-5.5A1.5,1.5,0,0,0,22.5,3.976Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChatArrowGrow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><title>01-Diagram</title><path d="M2,20.976v-21H0v21a3,3,0,0,0,3,3H24v-2H3A1,1,0,0,1,2,20.976Z"/><path d="M22.5,3.976H17l2.793,2.793L15.5,11.062l-2-2L6.281,16.281,7.7,17.7l5.805-5.8,2,2,5.707-5.707L24,10.976v-5.5A1.5,1.5,0,0,0,22.5,3.976Z"/></svg>
+
 );
-
-ChatArrowGrow.displayName = 'ChatArrowGrow';

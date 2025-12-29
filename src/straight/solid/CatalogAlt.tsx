@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CatalogAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CatalogAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m4,21.927l-3,2.073H.043l-.043-21.647L3.202.266c.257-.127.525-.217.798-.285v21.946Zm2,.073l4,1.898V1.469L6.744.266c-.24-.118-.491-.199-.744-.266v22ZM24,2.909v19.017l-12,2.074V1.544L20.57.047c.85-.151,1.721.075,2.385.63.664.554,1.045,1.368,1.045,2.232Zm-4,13.522l-6,1.095v2.037l6-1.095v-2.037Zm2-4.383l-8,1.478v2.037l8-1.478v-2.037Zm0-4l-8,1.478v2.037l8-1.478v-2.037Zm0-4.048l-8,1.478v2.037l8-1.478v-2.037Z"/>
 </svg>
-);
 
-CatalogAlt.displayName = 'CatalogAlt';
+);

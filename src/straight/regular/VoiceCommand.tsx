@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VoiceCommand: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22 13h2c0 6.039-4.913 11-10.952 11h-2.096c-6.039 0-10.952-4.961-10.952-11h2c0 4.937 4.016 9 8.952 9h2.096c4.936 0 8.952-4.063 8.952-9zm-5.44-3.44c.586-.585.586-1.536 0-2.121s-1.536-.585-2.121 0c-.585.586-.585 1.536 0 2.121s1.536.586 2.121 0zm5.44-.56h2c0-4.963-4.038-9-9-9v2c3.86 0 7 3.141 7 7zm-3.5 0h2c0-3.032-2.467-5.5-5.5-5.5v2c1.93 0 3.5 1.57 3.5 3.5zm-6.5 11c4.411 0 8-3.589 8-8v-1h-2v1c0 3.309-2.691 6-6 6-2.967 0-5.431-2.167-5.91-5h3.91v-2h-4v-2h4v-2h-3.91c.478-2.833 2.942-5 5.91-5 .341 0 .674.035 1 .09v-2.021c-.328-.041-.661-.069-1-.069-4.411 0-8 3.589-8 8v4c0 4.411 3.589 8 8 8z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VoiceCommand = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22 13h2c0 6.039-4.913 11-10.952 11h-2.096c-6.039 0-10.952-4.961-10.952-11h2c0 4.937 4.016 9 8.952 9h2.096c4.936 0 8.952-4.063 8.952-9zm-5.44-3.44c.586-.585.586-1.536 0-2.121s-1.536-.585-2.121 0c-.585.586-.585 1.536 0 2.121s1.536.586 2.121 0zm5.44-.56h2c0-4.963-4.038-9-9-9v2c3.86 0 7 3.141 7 7zm-3.5 0h2c0-3.032-2.467-5.5-5.5-5.5v2c1.93 0 3.5 1.57 3.5 3.5zm-6.5 11c4.411 0 8-3.589 8-8v-1h-2v1c0 3.309-2.691 6-6 6-2.967 0-5.431-2.167-5.91-5h3.91v-2h-4v-2h4v-2h-3.91c.478-2.833 2.942-5 5.91-5 .341 0 .674.035 1 .09v-2.021c-.328-.041-.661-.069-1-.069-4.411 0-8 3.589-8 8v4c0 4.411 3.589 8 8 8z"/></svg>
 );
-
-VoiceCommand.displayName = 'VoiceCommand';

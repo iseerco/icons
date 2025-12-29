@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrQrScan: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrQrScan = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,11.5c0,.829-.671,1.5-1.5,1.5H1.5c-.829,0-1.5-.671-1.5-1.5s.671-1.5,1.5-1.5h21c.829,0,1.5.671,1.5,1.5ZM1.5,8c.829,0,1.5-.671,1.5-1.5v-1c0-1.378,1.122-2.5,2.5-2.5h1c.829,0,1.5-.671,1.5-1.5s-.671-1.5-1.5-1.5h-1C2.467,0,0,2.467,0,5.5v1c0,.829.671,1.5,1.5,1.5Zm5,13h-1c-1.378,0-2.5-1.122-2.5-2.5v-1c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5,1.5v1c0,3.033,2.467,5.5,5.5,5.5h1c.829,0,1.5-.671,1.5-1.5s-.671-1.5-1.5-1.5Zm16-5c-.829,0-1.5.671-1.5,1.5v1c0,1.378-1.122,2.5-2.5,2.5h-1c-.829,0-1.5.671-1.5,1.5s.671,1.5,1.5,1.5h1c3.033,0,5.5-2.467,5.5-5.5v-1c0-.829-.671-1.5-1.5-1.5ZM18.5,0h-1c-.829,0-1.5.671-1.5,1.5s.671,1.5,1.5,1.5h1c1.378,0,2.5,1.122,2.5,2.5v1c0,.829.671,1.5,1.5,1.5s1.5-.671,1.5-1.5v-1c0-3.033-2.467-5.5-5.5-5.5Z"/>
 </svg>
-);
 
-FiBrQrScan.displayName = 'FiBrQrScan';
+);

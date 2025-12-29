@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsUserPizzaDelivery: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16.5 13.016h-9c-3.033 0-5.5 2.468-5.5 5.5v5.484h3v-1.5c0-.828.672-1.5 1.5-1.5h3.5s0 1 1 1h2s1 .105 1-1h3.5c.828 0 1.5.672 1.5 1.5v1.5h3v-5.484c0-3.032-2.467-5.5-5.5-5.5zm2.5 5.984h-14v-1.5c0-.828.672-1.5 1.5-1.5h3.5s0 1 1 1h2s1 .105 1-1h3.5c.828 0 1.5.672 1.5 1.5zm-7-7c3.309 0 6-2.691 6-6s-2.691-6-6-6c-2.215 0-4.149 1.21-5.188 3h-2.812v3h2c0 3.309 2.691 6 6 6zm0-3c-1.654 0-3-1.346-3-3h6c0 1.654-1.346 3-3 3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsUserPizzaDelivery = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m16.5 13.016h-9c-3.033 0-5.5 2.468-5.5 5.5v5.484h3v-1.5c0-.828.672-1.5 1.5-1.5h3.5s0 1 1 1h2s1 .105 1-1h3.5c.828 0 1.5.672 1.5 1.5v1.5h3v-5.484c0-3.032-2.467-5.5-5.5-5.5zm2.5 5.984h-14v-1.5c0-.828.672-1.5 1.5-1.5h3.5s0 1 1 1h2s1 .105 1-1h3.5c.828 0 1.5.672 1.5 1.5zm-7-7c3.309 0 6-2.691 6-6s-2.691-6-6-6c-2.215 0-4.149 1.21-5.188 3h-2.812v3h2c0 3.309 2.691 6 6 6zm0-3c-1.654 0-3-1.346-3-3h6c0 1.654-1.346 3-3 3z"/></svg>
 );
-
-FiBsUserPizzaDelivery.displayName = 'FiBsUserPizzaDelivery';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCursorFingerClick: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 5h-1v-5h1zm-4.036 1.257-3.536-3.536-.707.707 3.536 3.536zm9.038 4.743h4.998v-1h-5.002l.005 1zm-11-1h-5.002v1h4.998l.005-1zm7.996 5.658.002-5.051c0-1.273-.896-2.379-2.084-2.573-.731-.115-1.475.085-2.035.562-.56.476-.881 1.17-.881 1.905v9.609l-1.826-1.454v.002c-1.009-.912-2.57-.854-3.5.143-.941 1.007-.894 2.588.106 3.524l1.783 1.684h1.44l-2.535-2.407c-.599-.562-.629-1.514-.064-2.118.562-.603 1.509-.635 2.115-.072.01.01 3.479 2.773 3.479 2.773v-11.685c0-.44.193-.857.529-1.143.341-.29.778-.409 1.227-.336.709.115 1.245.797 1.245 1.586l-.002 5.735 9.002 3.5v4.205h1v-4.889l-9.002-3.5zm5.28-12.229-.707-.707-3.536 3.536.707.707z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCursorFingerClick = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 5h-1v-5h1zm-4.036 1.257-3.536-3.536-.707.707 3.536 3.536zm9.038 4.743h4.998v-1h-5.002l.005 1zm-11-1h-5.002v1h4.998l.005-1zm7.996 5.658.002-5.051c0-1.273-.896-2.379-2.084-2.573-.731-.115-1.475.085-2.035.562-.56.476-.881 1.17-.881 1.905v9.609l-1.826-1.454v.002c-1.009-.912-2.57-.854-3.5.143-.941 1.007-.894 2.588.106 3.524l1.783 1.684h1.44l-2.535-2.407c-.599-.562-.629-1.514-.064-2.118.562-.603 1.509-.635 2.115-.072.01.01 3.479 2.773 3.479 2.773v-11.685c0-.44.193-.857.529-1.143.341-.29.778-.409 1.227-.336.709.115 1.245.797 1.245 1.586l-.002 5.735 9.002 3.5v4.205h1v-4.889l-9.002-3.5zm5.28-12.229-.707-.707-3.536 3.536.707.707z"/></svg>
 );
-
-FiTsCursorFingerClick.displayName = 'FiTsCursorFingerClick';

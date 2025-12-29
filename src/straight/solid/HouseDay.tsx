@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HouseDay: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HouseDay = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.849,12.747l-5.448-4.264c-.824-.646-1.977-.646-2.801,0l-5.448,4.263c-.731.573-1.151,1.435-1.151,2.363v8.891h16v-8.891c0-.929-.42-1.79-1.151-2.362Zm-4.849,6.253h-4v-4h4v4Zm-10.083-7.828c-1.014.794-1.667,1.921-1.858,3.169l-2.562,2.57-1.414-1.414,2.169-2.168c-.6-.82-1.013-1.785-1.175-2.831H0v-2h3.078c.163-1.046.576-2.01,1.176-2.829l-2.179-2.179,1.414-1.414,2.179,2.179c.819-.6,1.783-1.013,2.829-1.176V0h2v3.077c1.047.162,2.011.574,2.831,1.174l2.177-2.177,1.414,1.414-2.176,2.176-.95.95-5.875,4.557Z"/>
 </svg>
-);
 
-HouseDay.displayName = 'HouseDay';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VacuumRobot: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VacuumRobot = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.155,4.26l2.745-2.745-1.414-1.414-2.745,2.745c-2.092-1.771-4.792-2.845-7.741-2.845-2.998,0-5.736,1.113-7.841,2.937L1.515.293.101,1.707l2.653,2.653C1.035,6.437,0,9.1,0,12c0,6.617,5.383,12,12,12s12-5.383,12-12c0-2.949-1.074-5.649-2.845-7.74Zm-6.155-1.798v3.564c-.838-.635-1.87-1.026-3-1.026s-2.162.391-3,1.026v-3.564c.948-.299,1.955-.461,3-.461s2.052.163,3,.461Zm0,7.539c0,1.654-1.346,3-3,3s-3-1.346-3-3,1.346-3,3-3,3,1.346,3,3Zm-3,12c-5.514,0-10-4.486-10-10,0-3.692,2.016-6.915,5-8.647v6.647c0,2.757,2.243,5,5,5s5-2.243,5-5V3.353c2.984,1.732,5,4.955,5,8.647,0,5.514-4.486,10-10,10Z"/>
 </svg>
-);
 
-VacuumRobot.displayName = 'VacuumRobot';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DiaryBookmarkDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DiaryBookmarkDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13,20v4l-2.5-2.5-2.5,2.5v-4h5Zm-7-2V0h-1c-1.657,0-3,1.343-3,3v15.765c.549-.494,1.262-.766,2-.765h2Zm0,2h-2c-1.105,0-2,.895-2,2s.895,2,2,2h2v-4Zm9,4h7v-4h-7v4ZM20,0h-12v18h14V2c0-1.105-.895-2-2-2Z"/>
 </svg>
-);
 
-DiaryBookmarkDown.displayName = 'DiaryBookmarkDown';
+);

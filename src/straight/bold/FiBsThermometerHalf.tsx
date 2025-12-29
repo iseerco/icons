@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsThermometerHalf: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15,16a3,3,0,1,1-4.5-2.6V8h3v5.4A3,3,0,0,1,15,16Zm5-.037a8.009,8.009,0,0,1-8,8c-6.772.089-10.563-8.26-6-13.271V6c.253-7.932,11.75-7.926,12,0v4.692A7.907,7.907,0,0,1,20,15.963Zm-3,0a4.946,4.946,0,0,0-1.541-3.589L15,11.932V6A3,3,0,0,0,9,6v5.932l-.459.442A4.994,4.994,0,1,0,17,15.963Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsThermometerHalf = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15,16a3,3,0,1,1-4.5-2.6V8h3v5.4A3,3,0,0,1,15,16Zm5-.037a8.009,8.009,0,0,1-8,8c-6.772.089-10.563-8.26-6-13.271V6c.253-7.932,11.75-7.926,12,0v4.692A7.907,7.907,0,0,1,20,15.963Zm-3,0a4.946,4.946,0,0,0-1.541-3.589L15,11.932V6A3,3,0,0,0,9,6v5.932l-.459.442A4.994,4.994,0,1,0,17,15.963Z"/></svg>
+
 );
-
-FiBsThermometerHalf.displayName = 'FiBsThermometerHalf';

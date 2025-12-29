@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Transporter4: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m2.333,15.353l1.167-2.333,1.167,2.333,2.333,1.167-2.333,1.167-1.167,2.333-1.167-2.333-2.333-1.167,2.333-1.167ZM17.5,3.5l2,1,1,2,1-2,2-1-2-1-1-2-1,2-2,1Zm2.5,18.5H4v2h16v-2Zm-4-5h-8v2h8v-2Zm1-5H7v2h10v-2Zm1-5H6v2h12v-2Zm-3-5h-6v2h6v-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Transporter4 = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m2.333,15.353l1.167-2.333,1.167,2.333,2.333,1.167-2.333,1.167-1.167,2.333-1.167-2.333-2.333-1.167,2.333-1.167ZM17.5,3.5l2,1,1,2,1-2,2-1-2-1-1-2-1,2-2,1Zm2.5,18.5H4v2h16v-2Zm-4-5h-8v2h8v-2Zm1-5H7v2h10v-2Zm1-5H6v2h12v-2Zm-3-5h-6v2h6v-2Z"/></svg>
+
 );
-
-Transporter4.displayName = 'Transporter4';

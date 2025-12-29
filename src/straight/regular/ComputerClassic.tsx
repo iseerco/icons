@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ComputerClassic: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ComputerClassic = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20,0H4C2.346,0,1,1.346,1,3v14c0,1.304.836,2.415,2,2.828v4.172h18v-4.172c1.164-.413,2-1.524,2-2.828V3c0-1.654-1.346-3-3-3ZM5,22v-2h14v2H5Zm16-5c0,.552-.449,1-1,1H4c-.551,0-1-.448-1-1V3c0-.551.449-1,1-1h16c.551,0,1,.449,1,1v14ZM5,12h14V4H5v8Zm2-6h10v4H7v-4Zm1,9c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm2-1h9v2h-9v-2Z"/>
 </svg>
-);
 
-ComputerClassic.displayName = 'ComputerClassic';
+);

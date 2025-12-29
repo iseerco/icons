@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HandPaper: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HandPaper = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.5,3c-.828,0-1.5.672-1.5,1.5v7.5h-2V2.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5v9.5h-2V1.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5v10.5h-2V3.58c0-.747-.511-1.44-1.248-1.56-.94-.153-1.752.568-1.752,1.479v12.654l-2.605-2.65c-.088-.088-.24-.201-.441-.333-.843-.47-1.954-.284-2.584.561-.604.81-.437,1.965.276,2.68l3.599,3.713c2.4,2.477,5.702,3.875,9.151,3.875h1.822c4.85,0,8.782-3.932,8.782-8.782V4.5c0-.828-.672-1.5-1.5-1.5Z"/>
 </svg>
-);
 
-HandPaper.displayName = 'HandPaper';
+);

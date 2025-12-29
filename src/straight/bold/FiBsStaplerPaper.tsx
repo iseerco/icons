@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsStaplerPaper: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m9.994 6h7.997v2h-4.498l1.999 2h8.508l-.011-4.998c0-1.016-.693-1.902-1.679-2.146l-10.393-2.779c-1.294-.334-2.611.454-2.929 1.752l-.424 1.731 1.43.37zm10.996 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-16.301 1.99-3.901 3.902c-1.051 1.054-1.051 2.769 0 3.823l8.282 8.285 8.92-8.923-7.085-7.087zm4.382 11.768-5.952-5.955 2.812-2.813h.054l2.01 2.01 1.839-1.84 3.916 3.917z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsStaplerPaper = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m9.994 6h7.997v2h-4.498l1.999 2h8.508l-.011-4.998c0-1.016-.693-1.902-1.679-2.146l-10.393-2.779c-1.294-.334-2.611.454-2.929 1.752l-.424 1.731 1.43.37zm10.996 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-16.301 1.99-3.901 3.902c-1.051 1.054-1.051 2.769 0 3.823l8.282 8.285 8.92-8.923-7.085-7.087zm4.382 11.768-5.952-5.955 2.812-2.813h.054l2.01 2.01 1.839-1.84 3.916 3.917z"/></svg>
 );
-
-FiBsStaplerPaper.displayName = 'FiBsStaplerPaper';

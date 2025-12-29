@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CommentArrowUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12.836,.029C9.365-.205,5.962,1.065,3.509,3.521,1.057,5.976-.211,9.378,.029,12.854c.441,6.354,6.053,11.146,13.054,11.146h5.917c2.757,0,5-2.243,5-5v-6.66C24,5.862,19.097,.454,12.836,.029Zm3.871,10.797c-.391,.391-1.023,.391-1.414,0l-2.293-2.293v8.467c0,.552-.447,1-1,1s-1-.448-1-1V8.634l-2.293,2.293c-.195,.195-.451,.293-.707,.293s-.512-.098-.707-.293c-.391-.391-.391-1.023,0-1.414l2.636-2.636c.556-.555,1.277-.846,2.007-.874,.021-.001,.043-.002,.064-.002h.014c.78-.009,1.563,.282,2.157,.876l2.535,2.536c.391,.391,.391,1.024,0,1.414Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CommentArrowUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12.836,.029C9.365-.205,5.962,1.065,3.509,3.521,1.057,5.976-.211,9.378,.029,12.854c.441,6.354,6.053,11.146,13.054,11.146h5.917c2.757,0,5-2.243,5-5v-6.66C24,5.862,19.097,.454,12.836,.029Zm3.871,10.797c-.391,.391-1.023,.391-1.414,0l-2.293-2.293v8.467c0,.552-.447,1-1,1s-1-.448-1-1V8.634l-2.293,2.293c-.195,.195-.451,.293-.707,.293s-.512-.098-.707-.293c-.391-.391-.391-1.023,0-1.414l2.636-2.636c.556-.555,1.277-.846,2.007-.874,.021-.001,.043-.002,.064-.002h.014c.78-.009,1.563,.282,2.157,.876l2.535,2.536c.391,.391,.391,1.024,0,1.414Z"/></svg>
+
 );
-
-CommentArrowUp.displayName = 'CommentArrowUp';

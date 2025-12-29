@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Rss: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20.905,0H3.095C1.389,0,0,1.389,0,3.096v20.904h24V3.096c0-1.707-1.389-3.096-3.095-3.096ZM6.5,19c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm5,0c0-3.584-2.916-6.5-6.5-6.5v-2c4.687,0,8.5,3.813,8.5,8.5h-2Zm5,0c0-6.341-5.159-11.5-11.5-11.5v-2c7.444,0,13.5,6.056,13.5,13.5h-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Rss = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.905,0H3.095C1.389,0,0,1.389,0,3.096v20.904h24V3.096c0-1.707-1.389-3.096-3.095-3.096ZM6.5,19c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm5,0c0-3.584-2.916-6.5-6.5-6.5v-2c4.687,0,8.5,3.813,8.5,8.5h-2Zm5,0c0-6.341-5.159-11.5-11.5-11.5v-2c7.444,0,13.5,6.056,13.5,13.5h-2Z"/></svg>
+
 );
-
-Rss.displayName = 'Rss';

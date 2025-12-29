@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RoundCctv: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21 5h-18c-1.654 0-3-1.346-3-3v-2h24v2c0 1.654-1.346 3-3 3zm0 2h-18c-.712 0-1.386-.154-2-.424v6.424c0 6.065 4.935 11 11 11s11-4.935 11-11v-6.424c-.614.269-1.288.424-2 .424zm-9 14c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm0-10c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RoundCctv = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21 5h-18c-1.654 0-3-1.346-3-3v-2h24v2c0 1.654-1.346 3-3 3zm0 2h-18c-.712 0-1.386-.154-2-.424v6.424c0 6.065 4.935 11 11 11s11-4.935 11-11v-6.424c-.614.269-1.288.424-2 .424zm-9 14c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm0-10c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"/></svg>
 );
-
-RoundCctv.displayName = 'RoundCctv';

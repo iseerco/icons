@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrPesoSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.5,10h-1.56c.04-.33,.06-.66,.06-1s-.02-.67-.06-1h1.56c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5h-2.44C18.59,2.04,15.53,0,12,0h-3.5C5.64,0,3.28,2.2,3.02,5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5h1.5v2H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5h1.5v9.5c0,.83,.67,1.5,1.5,1.5s1.5-.67,1.5-1.5v-4.5h6c3.53,0,6.59-2.04,8.06-5h2.44c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5ZM8.5,3h3.5c1.77,0,3.37,.77,4.47,2H6.05c.23-1.14,1.24-2,2.45-2Zm-2.5,5h11.92c.05,.33,.08,.66,.08,1s-.03,.67-.08,1H6v-2Zm6,7H6v-2h10.47c-1.1,1.23-2.7,2-4.47,2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrPesoSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.5,10h-1.56c.04-.33,.06-.66,.06-1s-.02-.67-.06-1h1.56c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5h-2.44C18.59,2.04,15.53,0,12,0h-3.5C5.64,0,3.28,2.2,3.02,5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5h1.5v2H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5h1.5v9.5c0,.83,.67,1.5,1.5,1.5s1.5-.67,1.5-1.5v-4.5h6c3.53,0,6.59-2.04,8.06-5h2.44c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5ZM8.5,3h3.5c1.77,0,3.37,.77,4.47,2H6.05c.23-1.14,1.24-2,2.45-2Zm-2.5,5h11.92c.05,.33,.08,.66,.08,1s-.03,.67-.08,1H6v-2Zm6,7H6v-2h10.47c-1.1,1.23-2.7,2-4.47,2Z"/></svg>
+
 );
-
-FiBrPesoSign.displayName = 'FiBrPesoSign';

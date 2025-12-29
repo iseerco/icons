@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrDollar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrDollar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15.158,12.216l-2.658-.614V3h1c2.481,0,4.5,2.019,4.5,4.5,0,.276.224.5.5.5s.5-.224.5-.5c0-3.032-2.468-5.5-5.5-5.5h-1V.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v1.5h-1.545c-2.732,0-4.955,2.223-4.955,4.955,0,2.321,1.58,4.307,3.842,4.829l2.658.614v8.602h-1c-2.481,0-4.5-2.019-4.5-4.5,0-.276-.224-.5-.5-.5s-.5.224-.5.5c0,3.032,2.468,5.5,5.5,5.5h1v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h1.545c2.732,0,4.955-2.223,4.955-4.955,0-2.321-1.58-4.307-3.842-4.829Zm-6.092-1.406c-1.806-.417-3.066-2.002-3.066-3.854,0-2.181,1.774-3.955,3.955-3.955h1.545v8.371l-2.434-.562Zm4.979,10.19h-1.545v-8.371l2.434.562c1.806.417,3.066,2.002,3.066,3.854,0,2.181-1.774,3.955-3.955,3.955Z"/>
 </svg>
-);
 
-FiTrDollar.displayName = 'FiTrDollar';
+);

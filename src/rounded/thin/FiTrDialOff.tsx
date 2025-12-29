@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrDialOff: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrDialOff = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m11,2c0-.552.448-1,1-1s1,.448,1,1-.448,1-1,1-1-.448-1-1Zm8,11c0,3.86-3.14,7-7,7s-7-3.14-7-7,3.14-7,7-7,7,3.14,7,7Zm-1,0c0-3.309-2.691-6-6-6s-6,2.691-6,6c0,3.14,2.425,5.724,5.5,5.979v-5.979c0-.276.224-.5.5-.5s.5.224.5.5v5.979c3.075-.255,5.5-2.839,5.5-5.979ZM1,12c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm22,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1ZM4,6c.552,0,1-.448,1-1s-.448-1-1-1-1,.448-1,1,.448,1,1,1Zm16,14c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm-16,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1ZM20,4c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Z"/>
 </svg>
-);
 
-FiTrDialOff.displayName = 'FiTrDialOff';
+);

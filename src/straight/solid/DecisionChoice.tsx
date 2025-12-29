@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DecisionChoice: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DecisionChoice = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M13,11h5.915l4.499-4.499-4.501-4.501h-5.913V0h-2V2H2V11H11v2H5.087L.586,17.501l4.499,4.499h5.915v2h2v-2h9V13H13v-2Zm-2.543-1.543l-1.414-1.414,1.543-1.543-1.543-1.543,1.414-1.414,1.543,1.543,1.543-1.543,1.414,1.414-1.543,1.543,1.543,1.543-1.414,1.414-1.543-1.543-1.543,1.543Zm3.812,5.575l1.398,1.43-2.809,2.973h0l-.004,.004c-.744,.744-2.058,.746-2.823-.019l-1.572-1.696,1.387-1.441,1.606,1.729,2.816-2.98Z"/>
 </svg>
-);
 
-DecisionChoice.displayName = 'DecisionChoice';
+);

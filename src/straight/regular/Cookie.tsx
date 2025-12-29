@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Cookie: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><circle cx="9.5" cy="9.5" r="1.5"/><circle cx="18.5" cy="1.5" r="1.5"/><circle cx="21.5" cy="6.5" r="1.5"/><circle cx="9.5" cy="14.5" r="1.5"/><circle cx="14.5" cy="14.5" r="1.5"/><path d="M12,24A12,12,0,0,1,12,0c.387,0,.769.021,1.146.057l.824.077.078.824a10,10,0,0,0,8.994,8.994l.824.078.077.824c.036.377.057.759.057,1.146A12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12c0-.057,0-.113,0-.17A12.006,12.006,0,0,1,12.17,2Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Cookie = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><circle cx="9.5" cy="9.5" r="1.5"/><circle cx="18.5" cy="1.5" r="1.5"/><circle cx="21.5" cy="6.5" r="1.5"/><circle cx="9.5" cy="14.5" r="1.5"/><circle cx="14.5" cy="14.5" r="1.5"/><path d="M12,24A12,12,0,0,1,12,0c.387,0,.769.021,1.146.057l.824.077.078.824a10,10,0,0,0,8.994,8.994l.824.078.077.824c.036.377.057.759.057,1.146A12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12c0-.057,0-.113,0-.17A12.006,12.006,0,0,1,12.17,2Z"/></g></svg>
+
 );
-
-Cookie.displayName = 'Cookie';

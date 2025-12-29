@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HeadSide: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.28,11.14c-1.18-2.71-2.29-5.26-3.48-6.72C17.36,1.16,13.49-.45,9.45,.11,4.46,.79,.5,4.95,.05,9.98c-.26,2.94,.62,5.79,2.5,8.05,.29,.35,.46,.8,.46,1.26v4.71h13v-3h2.25c1.5,0,2.78-1.12,2.97-2.61l.45-3.39h2.33v-2.21l-.72-1.65Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HeadSide = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.28,11.14c-1.18-2.71-2.29-5.26-3.48-6.72C17.36,1.16,13.49-.45,9.45,.11,4.46,.79,.5,4.95,.05,9.98c-.26,2.94,.62,5.79,2.5,8.05,.29,.35,.46,.8,.46,1.26v4.71h13v-3h2.25c1.5,0,2.78-1.12,2.97-2.61l.45-3.39h2.33v-2.21l-.72-1.65Z"/></svg>
+
 );
-
-HeadSide.displayName = 'HeadSide';

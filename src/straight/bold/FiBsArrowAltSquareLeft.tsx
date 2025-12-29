@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsArrowAltSquareLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.462,0H3.461C1.532,0,0,1.57,0,3.5V24H23.962V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.538,21H2.961V3.5c0-.276,.224-.5,.5-.5H20.462c.275,0,.538,.224,.538,.5V21ZM11,10.5h7v3h-7v3.632l-4.629-4.236c-.494-.443-.494-1.217,0-1.66l4.629-4.236v3.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsArrowAltSquareLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.462,0H3.461C1.532,0,0,1.57,0,3.5V24H23.962V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.538,21H2.961V3.5c0-.276,.224-.5,.5-.5H20.462c.275,0,.538,.224,.538,.5V21ZM11,10.5h7v3h-7v3.632l-4.629-4.236c-.494-.443-.494-1.217,0-1.66l4.629-4.236v3.5Z"/></svg>
+
 );
-
-FiBsArrowAltSquareLeft.displayName = 'FiBsArrowAltSquareLeft';

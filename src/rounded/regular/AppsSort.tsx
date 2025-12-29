@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AppsSort: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7,0H4A4,4,0,0,0,0,4V7a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V4A4,4,0,0,0,7,0ZM9,7A2,2,0,0,1,7,9H4A2,2,0,0,1,2,7V4A2,2,0,0,1,4,2H7A2,2,0,0,1,9,4Z"/><path d="M7,13H4a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V17A4,4,0,0,0,7,13Zm2,7a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2H7a2,2,0,0,1,2,2Z"/><path d="M22.293,19.049,20,21.339V2.633l2.293,2.29a1,1,0,1,0,1.414-1.415L21.12.925a3,3,0,0,0-4.24,0L14.293,3.508a1,1,0,1,0,1.414,1.415L18,2.633V21.339l-2.293-2.29a1,1,0,1,0-1.414,1.415l2.587,2.583a3,3,0,0,0,4.24,0l2.587-2.583a1,1,0,1,0-1.414-1.415Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AppsSort = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M7,0H4A4,4,0,0,0,0,4V7a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V4A4,4,0,0,0,7,0ZM9,7A2,2,0,0,1,7,9H4A2,2,0,0,1,2,7V4A2,2,0,0,1,4,2H7A2,2,0,0,1,9,4Z"/><path d="M7,13H4a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V17A4,4,0,0,0,7,13Zm2,7a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2H7a2,2,0,0,1,2,2Z"/><path d="M22.293,19.049,20,21.339V2.633l2.293,2.29a1,1,0,1,0,1.414-1.415L21.12.925a3,3,0,0,0-4.24,0L14.293,3.508a1,1,0,1,0,1.414,1.415L18,2.633V21.339l-2.293-2.29a1,1,0,1,0-1.414,1.415l2.587,2.583a3,3,0,0,0,4.24,0l2.587-2.583a1,1,0,1,0-1.414-1.415Z"/></svg>
+
 );
-
-AppsSort.displayName = 'AppsSort';

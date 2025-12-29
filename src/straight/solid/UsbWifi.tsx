@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UsbWifi: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19.778 19.879c-1.134-1.134-3.109-1.132-4.243 0l-1.414-1.414c.944-.944 2.2-1.465 3.536-1.465s2.591.521 3.535 1.465zm4.242-4.243c-3.509-3.51-9.219-3.51-12.728 0l1.414 1.414c2.729-2.729 7.17-2.729 9.899 0l1.414-1.414zm-7.864 6.864c0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5 1.5zm-2.157-15.5h-11.999v-7h12v7zm-6.999-4h-2v2h2zm4 0h-2v2h2zm-2.535 12.636 1.414-1.414c1.679-1.679 3.812-2.735 6.122-3.082v-.14c0-1.105-.895-2-2-2h-12.001c-1.105 0-2 .895-2 2v5c0 4.418 3.582 8 8 8 2.42 0 4.584-1.079 6.051-2.777z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UsbWifi = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19.778 19.879c-1.134-1.134-3.109-1.132-4.243 0l-1.414-1.414c.944-.944 2.2-1.465 3.536-1.465s2.591.521 3.535 1.465zm4.242-4.243c-3.509-3.51-9.219-3.51-12.728 0l1.414 1.414c2.729-2.729 7.17-2.729 9.899 0l1.414-1.414zm-7.864 6.864c0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5 1.5zm-2.157-15.5h-11.999v-7h12v7zm-6.999-4h-2v2h2zm4 0h-2v2h2zm-2.535 12.636 1.414-1.414c1.679-1.679 3.812-2.735 6.122-3.082v-.14c0-1.105-.895-2-2-2h-12.001c-1.105 0-2 .895-2 2v5c0 4.418 3.582 8 8 8 2.42 0 4.584-1.079 6.051-2.777z"/></svg>
 );
-
-UsbWifi.displayName = 'UsbWifi';

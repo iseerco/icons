@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsGrimace: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M6,9a2,2,0,0,1,4,0A2,2,0,0,1,6,9ZM16,7a2,2,0,0,0,0,4A2,2,0,0,0,16,7Zm8,5A12.013,12.013,0,0,1,12,24C-3.9,23.4-3.893.6,12,0A12.013,12.013,0,0,1,24,12Zm-3,0a9.01,9.01,0,0,0-9-9C.077,3.452.08,20.549,12,21A9.01,9.01,0,0,0,21,12Zm-5,0H8a3,3,0,0,0,0,6h8A3,3,0,0,0,16,12Zm-3,2v2H11V14ZM7,15a1,1,0,0,1,1-1H9v2H8A1,1,0,0,1,7,15Zm9,1H15V14h1A1,1,0,0,1,16,16Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsGrimace = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M6,9a2,2,0,0,1,4,0A2,2,0,0,1,6,9ZM16,7a2,2,0,0,0,0,4A2,2,0,0,0,16,7Zm8,5A12.013,12.013,0,0,1,12,24C-3.9,23.4-3.893.6,12,0A12.013,12.013,0,0,1,24,12Zm-3,0a9.01,9.01,0,0,0-9-9C.077,3.452.08,20.549,12,21A9.01,9.01,0,0,0,21,12Zm-5,0H8a3,3,0,0,0,0,6h8A3,3,0,0,0,16,12Zm-3,2v2H11V14ZM7,15a1,1,0,0,1,1-1H9v2H8A1,1,0,0,1,7,15Zm9,1H15V14h1A1,1,0,0,1,16,16Z"/></svg>
+
 );
-
-FiBsGrimace.displayName = 'FiBsGrimace';

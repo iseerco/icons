@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TransformationDesign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TransformationDesign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12.21,0l-5.183,21.769-.027,2.231h11.79L23.973,2.231l.027-2.231h-11.79Zm5,22h-8.182L13.79,2h8.182l-4.762,20Zm-15.21,0h3v2H0v-5h2v3ZM0,0h5v2h-3v3H0V0Zm2,11H0v-4h2v4Zm0,6H0v-4h2v4ZM9.842,2h-2.842V0h3.223l-.381,2Z"/>
 </svg>
-);
 
-TransformationDesign.displayName = 'TransformationDesign';
+);

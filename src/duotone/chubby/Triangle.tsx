@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Triangle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.993 17.384c-.016-.139-.429-3.465-4.165-8.957-3.726-5.479-6.124-6.769-6.385-6.898-.279-.138-.606-.138-.886 0-.261.129-2.659 1.419-6.385 6.897-3.736 5.493-4.15 8.819-4.166 8.958-.027.235.031.472.162.668.124.185 3.111 4.522 10.832 4.522 7.873 0 10.727-4.356 10.845-4.542.122-.193.175-.422.148-.648z" opacity=".5"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Triangle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22.993 17.384c-.016-.139-.429-3.465-4.165-8.957-3.726-5.479-6.124-6.769-6.385-6.898-.279-.138-.606-.138-.886 0-.261.129-2.659 1.419-6.385 6.897-3.736 5.493-4.15 8.819-4.166 8.958-.027.235.031.472.162.668.124.185 3.111 4.522 10.832 4.522 7.873 0 10.727-4.356 10.845-4.542.122-.193.175-.422.148-.648z" opacity=".5"/></svg>
 );
-
-Triangle.displayName = 'Triangle';

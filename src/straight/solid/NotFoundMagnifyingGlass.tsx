@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const NotFoundMagnifyingGlass: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const NotFoundMagnifyingGlass = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.744,16.33c1.412-1.725,2.262-3.927,2.262-6.324C20.006,4.492,15.52.006,10.006.006S.006,4.492.006,10.006s4.486,10,10,10c2.398,0,4.6-.85,6.324-2.262l6.223,6.223,1.414-1.414-6.223-6.223Zm-12.951-7.037l.98-.98-.98-.98,1.414-1.414.98.98.98-.98,1.414,1.414-.98.98.98.98-1.414,1.414-.98-.98-.98.98-1.414-1.414Zm8.051,5.57c-1.961-1.145-3.727-1.145-5.688,0l-1.009-1.727c2.58-1.508,5.124-1.509,7.705,0l-1.008,1.727Zm2.363-5.57l-1.414,1.414-.98-.98-.98.98-1.414-1.414.98-.98-.98-.98,1.414-1.414.98.98.98-.98,1.414,1.414-.98.98.98.98Z"/>
 </svg>
-);
 
-NotFoundMagnifyingGlass.displayName = 'NotFoundMagnifyingGlass';
+);

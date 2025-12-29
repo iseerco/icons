@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCameraSecurity: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m22,2.5c0-1.378-1.122-2.5-2.5-2.5H4.5c-1.378,0-2.5,1.122-2.5,2.5v17.5h6.008c-1.011.878-1.728,2.077-1.997,3.4l-.123.6h12.225l-.123-.6c-.269-1.324-.986-2.522-1.997-3.4h6.008V2.5Zm-5.152,20.5H7.152c.429-1.27,1.358-2.349,2.572-2.955l-.022-.045h4.598l-.022.045c1.214.606,2.143,1.685,2.572,2.955Zm4.152-4H3V2.5c0-.827.673-1.5,1.5-1.5h15c.827,0,1.5.673,1.5,1.5v16.5ZM12,4c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm0,11c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCameraSecurity = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22,2.5c0-1.378-1.122-2.5-2.5-2.5H4.5c-1.378,0-2.5,1.122-2.5,2.5v17.5h6.008c-1.011.878-1.728,2.077-1.997,3.4l-.123.6h12.225l-.123-.6c-.269-1.324-.986-2.522-1.997-3.4h6.008V2.5Zm-5.152,20.5H7.152c.429-1.27,1.358-2.349,2.572-2.955l-.022-.045h4.598l-.022.045c1.214.606,2.143,1.685,2.572,2.955Zm4.152-4H3V2.5c0-.827.673-1.5,1.5-1.5h15c.827,0,1.5.673,1.5,1.5v16.5ZM12,4c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm0,11c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Z"/></svg>
+
 );
-
-FiTsCameraSecurity.displayName = 'FiTsCameraSecurity';

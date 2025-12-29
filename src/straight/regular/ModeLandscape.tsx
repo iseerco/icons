@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ModeLandscape: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M21,24H16V22h5a1,1,0,0,0,1-1V16h2v5A3,3,0,0,1,21,24Z"/><path d="M2,8H0V3A3,3,0,0,1,3,0H8V2H3A1,1,0,0,0,2,3Z"/><path d="M8,24H3a3,3,0,0,1-3-3V16H2v5a1,1,0,0,0,1,1H8Z"/><path d="M24,8H22V3a1,1,0,0,0-1-1H16V0h5a3,3,0,0,1,3,3Z"/><path d="M18.293,19.707,9.707,11.121a1,1,0,0,0-1.414,0L4.707,14.707,3.293,13.293,6.879,9.707a3,3,0,0,1,4.242,0l8.586,8.586Z"/><path d="M16,10a3,3,0,1,1,3-3A3,3,0,0,1,16,10Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,16,6Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ModeLandscape = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><path d="M21,24H16V22h5a1,1,0,0,0,1-1V16h2v5A3,3,0,0,1,21,24Z"/><path d="M2,8H0V3A3,3,0,0,1,3,0H8V2H3A1,1,0,0,0,2,3Z"/><path d="M8,24H3a3,3,0,0,1-3-3V16H2v5a1,1,0,0,0,1,1H8Z"/><path d="M24,8H22V3a1,1,0,0,0-1-1H16V0h5a3,3,0,0,1,3,3Z"/><path d="M18.293,19.707,9.707,11.121a1,1,0,0,0-1.414,0L4.707,14.707,3.293,13.293,6.879,9.707a3,3,0,0,1,4.242,0l8.586,8.586Z"/><path d="M16,10a3,3,0,1,1,3-3A3,3,0,0,1,16,10Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,16,6Z"/></g></svg>
+
 );
-
-ModeLandscape.displayName = 'ModeLandscape';

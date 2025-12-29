@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBlanket: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBlanket = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m6.5,14h12.5c2.757,0,5-2.243,5-5v-4c0-2.757-2.243-5-5-5H6.5C2.916,0,0,2.916,0,6.5v11c0,3.584,2.916,6.5,6.5,6.5h13.5c2.206,0,4-1.794,4-4s-1.794-4-4-4H6.5c-.829,0-1.5.672-1.5,1.5s.671,1.5,1.5,1.5h13.5c.551,0,1,.448,1,1s-.449,1-1,1H6.5c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5Zm-3.5-7.5c0-1.93,1.57-3.5,3.5-3.5h12.5c1.103,0,2,.897,2,2v4c0,1.103-.897,2-2,2H6.5c-1.288,0-2.489.376-3.5,1.024v-5.524Z"/>
 </svg>
-);
 
-FiBrBlanket.displayName = 'FiBrBlanket';
+);

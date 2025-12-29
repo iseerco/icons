@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBook: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16.5,0h-8A6.508,6.508,0,0,0,2,6.5v13A4.505,4.505,0,0,0,6.5,24h10A5.507,5.507,0,0,0,22,18.5V5.5A5.507,5.507,0,0,0,16.5,0ZM8,3.051V15H6.5a4.445,4.445,0,0,0-1.5.276V6.5A3.494,3.494,0,0,1,8,3.051ZM19,18.5A2.5,2.5,0,0,1,16.5,21H6.5a1.5,1.5,0,0,1,0-3H19ZM11,15V3h5.5A2.5,2.5,0,0,1,19,5.5V15Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBook = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M16.5,0h-8A6.508,6.508,0,0,0,2,6.5v13A4.505,4.505,0,0,0,6.5,24h10A5.507,5.507,0,0,0,22,18.5V5.5A5.507,5.507,0,0,0,16.5,0ZM8,3.051V15H6.5a4.445,4.445,0,0,0-1.5.276V6.5A3.494,3.494,0,0,1,8,3.051ZM19,18.5A2.5,2.5,0,0,1,16.5,21H6.5a1.5,1.5,0,0,1,0-3H19ZM11,15V3h5.5A2.5,2.5,0,0,1,19,5.5V15Z"/></svg>
+
 );
-
-FiBrBook.displayName = 'FiBrBook';

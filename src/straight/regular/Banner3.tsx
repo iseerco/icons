@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Banner3: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Banner3 = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,.023L1.075,1.234,0,11l4.784,2.791-2.785,4.244v3.965l8,2-4.595-3.402,6.595-2.695v-6.417l12,.562V.023ZM4,19.011v-.379l2.515-3.832,3.209,1.872-5.724,2.339Zm6-4.494l-5.827-3.399,5.827.273v3.126Zm12-4.565l-19.762-.927.641-5.884,19.121-1.01v7.821Z"/>
 </svg>
-);
 
-Banner3.displayName = 'Banner3';
+);

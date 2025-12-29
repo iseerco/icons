@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrTextBoxEdit: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrTextBoxEdit = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.5,21H4.5c-2.481,0-4.5-2.019-4.5-4.5V7.5C0,5.019,2.019,3,4.5,3h9c.276,0,.5.224.5.5s-.224.5-.5.5H4.5c-1.93,0-3.5,1.57-3.5,3.5v9c0,1.93,1.57,3.5,3.5,3.5h9c.276,0,.5.224.5.5s-.224.5-.5.5ZM19.5,3c-.276,0-.5.224-.5.5s.224.5.5.5c1.93,0,3.5,1.57,3.5,3.5v9c0,1.93-1.57,3.5-3.5,3.5-.276,0-.5.224-.5.5s.224.5.5.5c2.481,0,4.5-2.019,4.5-4.5V7.5c0-2.481-2.019-4.5-4.5-4.5Zm-12,14c.276,0,.5-.224.5-.5v-8.5h3.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5H3.5c-.276,0-.5.224-.5.5s.224.5.5.5h3.5v8.5c0,.276.224.5.5.5Zm12,6h-1c-.827,0-1.5-.673-1.5-1.5V2.5c0-.827.673-1.5,1.5-1.5h1c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-1c-.817,0-1.544.394-2,1.002-.456-.608-1.183-1.002-2-1.002h-1c-.276,0-.5.224-.5.5s.224.5.5.5h1c.827,0,1.5.673,1.5,1.5v19c0,.827-.673,1.5-1.5,1.5h-1c-.276,0-.5.224-.5.5s.224.5.5.5h1c.817,0,1.544-.394,2-1.002.456.608,1.183,1.002,2,1.002h1c.276,0,.5-.224.5-.5s-.224-.5-.5-.5Z"/>
 </svg>
-);
 
-FiTrTextBoxEdit.displayName = 'FiTrTextBoxEdit';
+);

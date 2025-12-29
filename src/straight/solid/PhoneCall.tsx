@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PhoneCall: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.613,12.848l6.265,6.265-3.171,3.171A5.889,5.889,0,0,1,16.5,24C9.252,24,0,14.748,0,7.5A5.9,5.9,0,0,1,1.716,3.292L4.887.122l6.265,6.265L7.027,10.512A12.136,12.136,0,0,0,13.48,16.98ZM22,10h2A10.011,10.011,0,0,0,14,0V2A8.009,8.009,0,0,1,22,10Zm-4,0h2a6.006,6.006,0,0,0-6-6V6A4,4,0,0,1,18,10Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PhoneCall = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17.613,12.848l6.265,6.265-3.171,3.171A5.889,5.889,0,0,1,16.5,24C9.252,24,0,14.748,0,7.5A5.9,5.9,0,0,1,1.716,3.292L4.887.122l6.265,6.265L7.027,10.512A12.136,12.136,0,0,0,13.48,16.98ZM22,10h2A10.011,10.011,0,0,0,14,0V2A8.009,8.009,0,0,1,22,10Zm-4,0h2a6.006,6.006,0,0,0-6-6V6A4,4,0,0,1,18,10Z"/></svg>
+
 );
-
-PhoneCall.displayName = 'PhoneCall';

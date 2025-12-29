@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AustraliaFlag: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AustraliaFlag = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M21,2H3C1.346,2,0,3.346,0,5V22H24V5c0-1.654-1.346-3-3-3ZM4.413,7.2H2v-1.867l2.413,1.867Zm.021,1.6l-2.434,1.923v-1.923h2.434Zm3.116-4.8h3.109l-3.109,2.375v-2.375Zm-1.6,0v2.367l-3.036-2.35c.03-.003,.055-.017,.085-.017h2.95ZM22,20H2V12h1l2.95-2.349v2.349h1.6v-2.34l2.897,2.34h1.553v-.82l-2.954-2.381h2.954v-1.6h-2.894l2.894-2.2v-1h9c.552,0,1,.448,1,1v15Zm-7.5-9c-.552,0-1-.448-1-1s.448-1,1-1,1,.448,1,1-.448,1-1,1Zm3.5,2c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm-10,4c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm8,0c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm4.5-7c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm-2.5-3c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/>
 </svg>
-);
 
-AustraliaFlag.displayName = 'AustraliaFlag';
+);

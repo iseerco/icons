@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CaretCircleRight: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,12A12,12,0,1,0,12,0,12.013,12.013,0,0,0,0,12ZM11.6,6.269l5.154,5.087a.9.9,0,0,1,0,1.288L11.6,17.731a.924.924,0,0,1-1.575-.644V6.913A.924.924,0,0,1,11.6,6.269Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CaretCircleRight = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M0,12A12,12,0,1,0,12,0,12.013,12.013,0,0,0,0,12ZM11.6,6.269l5.154,5.087a.9.9,0,0,1,0,1.288L11.6,17.731a.924.924,0,0,1-1.575-.644V6.913A.924.924,0,0,1,11.6,6.269Z"/></svg>
+
 );
-
-CaretCircleRight.displayName = 'CaretCircleRight';

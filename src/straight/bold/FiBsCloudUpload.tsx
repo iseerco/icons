@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCloudUpload: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.419,10a8.268,8.268,0,0,0-4.443-3.063A8.243,8.243,0,0,0,15.015,2.56,8.177,8.177,0,0,0,2.6,12.375,5.783,5.783,0,0,0,.188,18.694,5.852,5.852,0,0,0,5.944,23H10V20H5.944A2.892,2.892,0,0,1,3.1,17.958a2.8,2.8,0,0,1,2-3.446l2.155-.557L5.93,12.166a5.171,5.171,0,0,1,3.381-8.2,5.506,5.506,0,0,1,.776-.056,5.14,5.14,0,0,1,3.118,1.042A5.215,5.215,0,0,1,15.22,8.4l.151,1.135,1.136.153A5.229,5.229,0,0,1,20,11.774a5.067,5.067,0,0,1-2,7.659v3.224A8.121,8.121,0,0,0,22.419,10Z"/><path d="M18,16l-3.293-3.293a1,1,0,0,0-1.414,0L10,16h2.5v8h3V16Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCloudUpload = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.419,10a8.268,8.268,0,0,0-4.443-3.063A8.243,8.243,0,0,0,15.015,2.56,8.177,8.177,0,0,0,2.6,12.375,5.783,5.783,0,0,0,.188,18.694,5.852,5.852,0,0,0,5.944,23H10V20H5.944A2.892,2.892,0,0,1,3.1,17.958a2.8,2.8,0,0,1,2-3.446l2.155-.557L5.93,12.166a5.171,5.171,0,0,1,3.381-8.2,5.506,5.506,0,0,1,.776-.056,5.14,5.14,0,0,1,3.118,1.042A5.215,5.215,0,0,1,15.22,8.4l.151,1.135,1.136.153A5.229,5.229,0,0,1,20,11.774a5.067,5.067,0,0,1-2,7.659v3.224A8.121,8.121,0,0,0,22.419,10Z"/><path d="M18,16l-3.293-3.293a1,1,0,0,0-1.414,0L10,16h2.5v8h3V16Z"/></svg>
+
 );
-
-FiBsCloudUpload.displayName = 'FiBsCloudUpload';

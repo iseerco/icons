@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BluetoothUsb: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16 8.184v-8.184h-14v8.184c-1.161.414-2 1.514-2 2.816v4c0 4.963 4.037 9 9 9 1.849 0 3.569-.562 5-1.522v-2.589c-1.272 1.3-3.042 2.111-5 2.111-3.859 0-7-3.141-7-7v-4c0-.552.448-1 1-1h12c.552 0 1 .448 1 1h2c0-1.302-.839-2.402-2-2.816zm-2-6.184v6h-10v-6zm-6 4h-2v-2h2zm4 0h-2v-2h2zm9 12.5 3 2.5-4 3h-1v-3.243l-1.414 1.329-1.336-1.488 2.251-2.082-2.268-2.083 1.328-1.494 1.438 1.345v-3.283h1l4 3-3 2.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BluetoothUsb = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m16 8.184v-8.184h-14v8.184c-1.161.414-2 1.514-2 2.816v4c0 4.963 4.037 9 9 9 1.849 0 3.569-.562 5-1.522v-2.589c-1.272 1.3-3.042 2.111-5 2.111-3.859 0-7-3.141-7-7v-4c0-.552.448-1 1-1h12c.552 0 1 .448 1 1h2c0-1.302-.839-2.402-2-2.816zm-2-6.184v6h-10v-6zm-6 4h-2v-2h2zm4 0h-2v-2h2zm9 12.5 3 2.5-4 3h-1v-3.243l-1.414 1.329-1.336-1.488 2.251-2.082-2.268-2.083 1.328-1.494 1.438 1.345v-3.283h1l4 3-3 2.5z"/></svg>
 );
-
-BluetoothUsb.displayName = 'BluetoothUsb';

@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FilePsd: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FilePsd = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M132.373,123.605h-17.877l0.128,36.779h17.749c10.133,0.005,18.351-8.205,18.356-18.338s-8.205-18.351-18.338-18.356   c-0.006,0-0.012,0-0.018,0V123.605z"/>
 	<path d="M363.051,125.269H345.6v82.197c6.528,0,13.845,0,18.005-0.192c20.715-0.341,29.973-20.779,29.973-40.875   S385.643,125.269,363.051,125.269z"/>
@@ -30,6 +32,5 @@ export const FilePsd: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FilePsd.displayName = 'FilePsd';
+);

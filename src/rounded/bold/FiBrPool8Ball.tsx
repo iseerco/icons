@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrPool8Ball: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrPool8Ball = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm3,6c0,.72-.266,1.373-.69,1.891.724.642,1.19,1.568,1.19,2.609,0,1.93-1.57,3.5-3.5,3.5s-3.5-1.57-3.5-3.5c0-1.041.466-1.967,1.19-2.609-.425-.518-.69-1.171-.69-1.891,0-1.654,1.346-3,3-3s3,1.346,3,3Zm-3,15c-4.962,0-9-4.037-9-9,0-2.724,1.216-5.168,3.134-6.82-.717,1.098-1.134,2.41-1.134,3.82,0,3.866,3.134,7,7,7s7-3.134,7-7c0-1.409-.417-2.721-1.134-3.82,1.917,1.652,3.134,4.096,3.134,6.82,0,4.963-4.038,9-9,9Zm-1-15c0-.552.449-1,1-1s1,.448,1,1-.449,1-1,1-1-.448-1-1Zm-.5,4.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5-.673,1.5-1.5,1.5-1.5-.673-1.5-1.5Z"/>
 </svg>
-);
 
-FiBrPool8Ball.displayName = 'FiBrPool8Ball';
+);

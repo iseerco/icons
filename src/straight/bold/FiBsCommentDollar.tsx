@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCommentDollar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12h12V12C24,5.383,18.617,0,12,0Zm9,21H12c-4.963,0-9-4.038-9-9S7.037,3,12,3s9,4.038,9,9v9Zm-5-11.5v.5h-3v-.5c0-.276-.225-.5-.5-.5h-1c-.275,0-.5,.224-.5,.5,0,.294,.177,.555,.45,.665l2.214,.886c1.419,.567,2.336,1.922,2.336,3.45,0,1.582-1.056,2.923-2.5,3.354v1.146h-3v-1.146c-1.444-.431-2.5-1.772-2.5-3.354v-.5h3v.5c0,.276,.225,.5,.5,.5h1c.275,0,.5-.224,.5-.5,0-.294-.177-.555-.45-.665l-2.214-.886c-1.419-.567-2.336-1.922-2.336-3.45,0-1.582,1.056-2.923,2.5-3.354v-1.146h3v1.146c1.444,.431,2.5,1.772,2.5,3.354Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCommentDollar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12h12V12C24,5.383,18.617,0,12,0Zm9,21H12c-4.963,0-9-4.038-9-9S7.037,3,12,3s9,4.038,9,9v9Zm-5-11.5v.5h-3v-.5c0-.276-.225-.5-.5-.5h-1c-.275,0-.5,.224-.5,.5,0,.294,.177,.555,.45,.665l2.214,.886c1.419,.567,2.336,1.922,2.336,3.45,0,1.582-1.056,2.923-2.5,3.354v1.146h-3v-1.146c-1.444-.431-2.5-1.772-2.5-3.354v-.5h3v.5c0,.276,.225,.5,.5,.5h1c.275,0,.5-.224,.5-.5,0-.294-.177-.555-.45-.665l-2.214-.886c-1.419-.567-2.336-1.922-2.336-3.45,0-1.582,1.056-2.923,2.5-3.354v-1.146h3v1.146c1.444,.431,2.5,1.772,2.5,3.354Z"/></svg>
+
 );
-
-FiBsCommentDollar.displayName = 'FiBsCommentDollar';

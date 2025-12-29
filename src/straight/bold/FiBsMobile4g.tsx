@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMobile4g: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMobile4g = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M7,3h10v3h3V0H4V21c0,1.657,1.343,3,3,3h10c1.657,0,3-1.343,3-3v-3H7V3Zm2.999,17.008h4v2h-4v-2Zm6.401-4.008v-2h-1.601c-.993,0-1.8-.807-1.8-1.8v-4.2h1.6v4.2c0,.11,.09,.2,.2,.2h1.601v-4.4h1.6v8h-1.6Zm5.1-4.5h2.5v2c0,1.381-1.119,2.5-2.5,2.5s-2.5-1.119-2.5-2.5v-3c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5h-1.6c0-.496-.404-.9-.9-.9s-.9,.404-.9,.9v3c0,.496,.404,.9,.9,.9s.9-.404,.9-.9v-.4h-.9v-1.6Z"/>
 </svg>
-);
 
-FiBsMobile4g.displayName = 'FiBsMobile4g';
+);

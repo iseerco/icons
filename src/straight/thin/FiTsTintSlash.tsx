@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTintSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTintSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.295,19.587c2.682-3.965,2.183-9.251-1.228-12.663L12,.014l-5.702,5.577L.753.047.046.754l23.2,23.199.707-.707-3.659-3.659ZM12,1.412l6.364,6.224c3.021,3.021,3.501,7.681,1.209,11.23L7.005,6.298,12,1.412Zm5.546,19.668l.714.714c-1.77,1.427-3.955,2.205-6.26,2.205-2.671,0-5.182-1.04-7.071-2.929-3.64-3.64-3.879-9.408-.724-13.331l.714.714c-2.767,3.525-2.533,8.66.717,11.91,1.7,1.699,3.96,2.636,6.364,2.636,2.037,0,3.968-.679,5.546-1.919Z"/>
 </svg>
-);
 
-FiTsTintSlash.displayName = 'FiTsTintSlash';
+);

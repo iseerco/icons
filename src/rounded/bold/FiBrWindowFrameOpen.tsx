@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrWindowFrameOpen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrWindowFrameOpen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,22.5c0,.829-.672,1.5-1.5,1.5H1.5c-.829,0-1.5-.671-1.5-1.5s.671-1.5,1.5-1.5h.5v-4.5c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5v4.5h14v-4.5c0-.829.672-1.5,1.5-1.5s1.5.671,1.5,1.5v4.5h.5c.828,0,1.5.671,1.5,1.5ZM2,11.5v-6C2,2.467,4.467,0,7.5,0h9c3.032,0,5.5,2.467,5.5,5.5v6c0,.829-.672,1.5-1.5,1.5H3.5c-.829,0-1.5-.671-1.5-1.5ZM16.5,3h-3v7h5.5v-4.5c0-1.378-1.121-2.5-2.5-2.5Zm-11.5,7h5.5V3h-3c-1.378,0-2.5,1.122-2.5,2.5v4.5Z"/>
 </svg>
-);
 
-FiBrWindowFrameOpen.displayName = 'FiBrWindowFrameOpen';
+);

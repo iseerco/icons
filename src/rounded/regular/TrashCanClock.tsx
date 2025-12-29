@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrashCanClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrashCanClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m9,22h-2c-1.654,0-3-1.346-3-3V6h12v1c0,.553.447,1,1,1s1-.447,1-1v-1h1c.553,0,1-.447,1-1s-.447-1-1-1h-3.101c-.465-2.279-2.485-4-4.899-4h-2c-2.414,0-4.435,1.721-4.899,4H1c-.553,0-1,.447-1,1s.447,1,1,1h1v13c0,2.757,2.243,5,5,5h2c.553,0,1-.447,1-1s-.447-1-1-1Zm0-20h2c1.304,0,2.415.836,2.828,2h-7.656c.413-1.164,1.524-2,2.828-2Zm8,8c-3.859,0-7,3.141-7,7s3.141,7,7,7,7-3.141,7-7-3.141-7-7-7Zm0,12c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Zm1.707-4.707c.391.391.391,1.023,0,1.414-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-1-1c-.188-.188-.293-.441-.293-.707v-2c0-.553.447-1,1-1s1,.447,1,1v1.586l.707.707Z"/>
 </svg>
-);
 
-TrashCanClock.displayName = 'TrashCanClock';
+);

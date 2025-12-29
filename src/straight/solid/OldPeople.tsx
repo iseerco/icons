@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const OldPeople: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const OldPeople = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M10,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm10,10.882v10.618h-2V14.599c-1.368-.779-2.816-1.94-4.017-3.195-.062,1.338-.042,2.96-.016,4.884,.022,1.416,.037,3.156,.033,4.712h-2v3h-2v-3h-2v3h-2v-3h-1.962l-.037-.961c-.014-.368-.308-9.05,3.044-12.534,.961-.999,2.124-1.505,3.455-1.505,1.751-.104,2.946,1.394,3.808,2.709,1.431,1.914,3.649,3.742,5.692,4.672Z"/>
 </svg>
-);
 
-OldPeople.displayName = 'OldPeople';
+);

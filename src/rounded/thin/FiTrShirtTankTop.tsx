@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrShirtTankTop: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrShirtTankTop = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.561,8.329c-.991-.796-1.561-2.062-1.561-3.474V.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v2.5c0,2.757-2.243,5-5,5s-5-2.243-5-5V.463c0-.276-.224-.5-.5-.5s-.5.224-.5.5v4.392c0,1.412-.569,2.678-1.562,3.474-.914.734-1.438,1.764-1.438,2.825v8.346c0,2.481,2.019,4.5,4.5,4.5h9c2.481,0,4.5-2.019,4.5-4.5v-8.346c0-1.061-.524-2.091-1.439-2.826Zm.439,11.171c0,1.93-1.57,3.5-3.5,3.5H7.5c-1.93,0-3.5-1.57-3.5-3.5v-8.346c0-.756.389-1.502,1.064-2.045.922-.74,1.549-1.795,1.805-3,1.053,1.732,2.959,2.891,5.13,2.891s4.077-1.159,5.13-2.891c.256,1.205.883,2.26,1.804,3,.677.544,1.065,1.29,1.065,2.046v8.346Z"/>
 </svg>
-);
 
-FiTrShirtTankTop.displayName = 'FiTrShirtTankTop';
+);

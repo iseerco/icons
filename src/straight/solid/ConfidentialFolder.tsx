@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ConfidentialFolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22 14v-1c0-2.206-1.794-4-4-4s-4 1.794-4 4v1h-2v7c0 1.654 1.346 3 3 3h6c1.654 0 3-1.346 3-3v-7zm-6-1c0-1.103.897-2 2-2s2 .897 2 2v1h-4zm3 7h-2v-2h2zm-1-15.903v2.903h-6.292l-4-2h-3.708v-2c0-1.682 1.374-3 3.128-3h6.925l3.946 4.097zm-6.974 19.903h-11.026v-14c0-1.654 1.346-3 3-3h4.236l4 2h2.317c-.746.828-1.276 1.854-1.47 3h-2.083v9c0 1.13.391 2.162 1.026 3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ConfidentialFolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22 14v-1c0-2.206-1.794-4-4-4s-4 1.794-4 4v1h-2v7c0 1.654 1.346 3 3 3h6c1.654 0 3-1.346 3-3v-7zm-6-1c0-1.103.897-2 2-2s2 .897 2 2v1h-4zm3 7h-2v-2h2zm-1-15.903v2.903h-6.292l-4-2h-3.708v-2c0-1.682 1.374-3 3.128-3h6.925l3.946 4.097zm-6.974 19.903h-11.026v-14c0-1.654 1.346-3 3-3h4.236l4 2h2.317c-.746.828-1.276 1.854-1.47 3h-2.083v9c0 1.13.391 2.162 1.026 3z"/></svg>
 );
-
-ConfidentialFolder.displayName = 'ConfidentialFolder';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VideoFolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m5 15h5v4h-5zm18.708-9.541-9.708-5.459v10.919l9.708-5.459zm-11.708-1.578-3.764-1.882h-5.236c-1.654.001-3 1.347-3 3.001v3h12v-4.118zm7.714 6.118-4.714 2.651v8.349l-3-2.217v2.217h-9v-7.999h9v-3h-12v14h24v-14h-4.286z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VideoFolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m5 15h5v4h-5zm18.708-9.541-9.708-5.459v10.919l9.708-5.459zm-11.708-1.578-3.764-1.882h-5.236c-1.654.001-3 1.347-3 3.001v3h12v-4.118zm7.714 6.118-4.714 2.651v8.349l-3-2.217v2.217h-9v-7.999h9v-3h-12v14h24v-14h-4.286z"/></svg>
 );
-
-VideoFolder.displayName = 'VideoFolder';

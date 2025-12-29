@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsShieldSecurityRisk: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsShieldSecurityRisk = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.41,20.515c.322.971.821,1.86,1.465,2.626-.357.168-.672.305-.918.404l-1.021.412-.985-.494C6.851,22.413,0,18.479,0,11.964v-6.162c0-1.46.933-2.751,2.321-3.212L10,.045l7.679,2.545c1.389.461,2.321,1.752,2.321,3.212v4.46c-.64-.165-1.308-.262-2-.262-.339,0-.672.028-1,.069v-4.267c0-.168-.104-.311-.266-.364l-6.734-2.232-6.734,2.232c-.159.053-.266.199-.266.364v6.162c0,4.603,5.142,7.703,7.068,8.702.104-.044.22-.096.341-.151Zm13.59-2.515c0,3.314-2.686,6-6,6s-6-2.686-6-6,2.686-6,6-6,6,2.686,6,6Zm-5,2h-2v2h2v-2Zm0-6h-2v5h2v-5Z"/>
 </svg>
-);
 
-FiBsShieldSecurityRisk.displayName = 'FiBsShieldSecurityRisk';
+);

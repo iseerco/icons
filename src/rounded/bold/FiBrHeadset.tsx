@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrHeadset: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,11.555V9.994a9,9,0,0,0-18,0v1.561a5.307,5.307,0,0,0-3,4.763v.364A5.324,5.324,0,0,0,5.318,22H5.5A2.5,2.5,0,0,0,8,19.5v-6a2.5,2.5,0,0,0-2-2.449V9.994a6,6,0,0,1,12,0v1.057A2.5,2.5,0,0,0,16,13.5V19H14.5a1.5,1.5,0,0,0,0,3h4.182A5.324,5.324,0,0,0,24,16.682v-.364A5.307,5.307,0,0,0,21,11.555ZM5,18.978a2.321,2.321,0,0,1-2-2.3v-.364a2.321,2.321,0,0,1,2-2.3Zm16-2.3a2.321,2.321,0,0,1-2,2.3V14.022a2.321,2.321,0,0,1,2,2.3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrHeadset = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,11.555V9.994a9,9,0,0,0-18,0v1.561a5.307,5.307,0,0,0-3,4.763v.364A5.324,5.324,0,0,0,5.318,22H5.5A2.5,2.5,0,0,0,8,19.5v-6a2.5,2.5,0,0,0-2-2.449V9.994a6,6,0,0,1,12,0v1.057A2.5,2.5,0,0,0,16,13.5V19H14.5a1.5,1.5,0,0,0,0,3h4.182A5.324,5.324,0,0,0,24,16.682v-.364A5.307,5.307,0,0,0,21,11.555ZM5,18.978a2.321,2.321,0,0,1-2-2.3v-.364a2.321,2.321,0,0,1,2-2.3Zm16-2.3a2.321,2.321,0,0,1-2,2.3V14.022a2.321,2.321,0,0,1,2,2.3Z"/></svg>
+
 );
-
-FiBrHeadset.displayName = 'FiBrHeadset';

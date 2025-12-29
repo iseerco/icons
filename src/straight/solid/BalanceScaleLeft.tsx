@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BalanceScaleLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.123,.299l-7.123,1.9V0h-2V2.732l-7.259,1.936L0,14.822v.678c0,2.481,2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5v-.678L5.817,6.184l5.183-1.382V22H4v2H20v-2h-7V4.268l4.896-1.305-2.896,7.859v.678c0,2.481,2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5v-.678L20.123,.299ZM6.566,14H2.434l2.066-5.607,2.066,5.607ZM19.5,4.393l2.066,5.607h-4.132l2.066-5.607Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BalanceScaleLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.123,.299l-7.123,1.9V0h-2V2.732l-7.259,1.936L0,14.822v.678c0,2.481,2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5v-.678L5.817,6.184l5.183-1.382V22H4v2H20v-2h-7V4.268l4.896-1.305-2.896,7.859v.678c0,2.481,2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5v-.678L20.123,.299ZM6.566,14H2.434l2.066-5.607,2.066,5.607ZM19.5,4.393l2.066,5.607h-4.132l2.066-5.607Z"/></svg>
+
 );
-
-BalanceScaleLeft.displayName = 'BalanceScaleLeft';

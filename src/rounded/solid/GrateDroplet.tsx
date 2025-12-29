@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GrateDroplet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GrateDroplet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10,0v10h-4V0h4Zm0,22v-10h-4v10h4ZM12,0v10h4V0h-4ZM4,.101C1.718.564,0,2.581,0,5v5h4V.101Zm0,11.899H0v5c0,2.419,1.718,4.436,4,4.899v-9.899ZM18,.101v9.899h4v-5c0-2.419-1.718-4.436-4-4.899Zm1,23.899c-1.336,0-2.592-.521-3.536-1.465s-1.464-2.199-1.464-3.535.521-2.592,1.465-3.535l2.205-2.965c.731-.716,1.928-.716,2.659,0l2.198,2.957c.952.951,1.473,2.207,1.473,3.543s-.521,2.591-1.465,3.535h0c-.944.944-2.2,1.465-3.535,1.465Zm-3.429-12h-3.571v7c0-1.817.687-3.529,1.94-4.837l1.63-2.163Z"/>
 </svg>
-);
 
-GrateDroplet.displayName = 'GrateDroplet';
+);

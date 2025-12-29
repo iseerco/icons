@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrAgeRestrictionSix: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrAgeRestrictionSix = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,21c-4.962,0-9-4.037-9-9S7.038,3,12,3s9,4.037,9,9-4.038,9-9,9Zm-3.5-10.75c-.532,0-1.032.129-1.484.342.082-1.028.935-1.842,1.984-1.842h1c.552,0,1-.447,1-1s-.448-1-1-1h-1c-2.206,0-4,1.794-4,4v3c0,1.93,1.57,3.5,3.5,3.5s3.5-1.57,3.5-3.5-1.57-3.5-3.5-3.5Zm0,5c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5.673,1.5,1.5-.673,1.5-1.5,1.5Zm10.5-3.25c0,.553-.448,1-1,1h-1v1c0,.553-.448,1-1,1s-1-.447-1-1v-1h-1c-.552,0-1-.447-1-1s.448-1,1-1h1v-1c0-.553.448-1,1-1s1,.447,1,1v1h1c.552,0,1,.447,1,1Z"/>
 </svg>
-);
 
-FiBrAgeRestrictionSix.displayName = 'FiBrAgeRestrictionSix';
+);

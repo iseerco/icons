@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPersonFalling: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPersonFalling = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22.987,16.871l-1.975,2.258-3.576-3.129h-3.845l3.54,8h-3.281L7.625,9.933l-4.267,6.399-2.496-1.664,4.341-6.511c.592-.889,1.425-1.582,2.409-2.004l5.539-2.374L15.91,.1l2.4,1.8-3.241,4.321-3.171,1.359,2.399,5.42h4.266l4.424,3.871ZM6.5,5c1.381,0,2.5-1.119,2.5-2.5S7.881,0,6.5,0s-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Z"/>
 </svg>
-);
 
-FiBsPersonFalling.displayName = 'FiBsPersonFalling';
+);

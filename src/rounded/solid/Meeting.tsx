@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Meeting: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Meeting = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m14.928,9h.072c1.654,0,3-1.346,3-3v-3c0-1.654-1.346-3-3-3h-6c-1.654,0-3,1.346-3,3v3c0,1.654,1.346,3,3,3h.202l1.834,1.617c.29.256.653.384,1.016.384.358,0,.716-.126.998-.376l1.878-1.624Zm-9.428,9c1.93,0,3.5-1.57,3.5-3.5s-1.57-3.5-3.5-3.5-3.5,1.57-3.5,3.5,1.57,3.5,3.5,3.5Zm9.5-3.5c0,1.93,1.57,3.5,3.5,3.5s3.5-1.57,3.5-3.5-1.57-3.5-3.5-3.5-3.5,1.57-3.5,3.5Zm-9.5,4.5c-2.434,0-4.618,1.466-5.437,3.649-.115.307-.072.651.114.921.188.27.494.43.822.43h9c.328,0,.635-.161.822-.43.187-.27.229-.614.114-.921-.818-2.183-3.003-3.649-5.437-3.649Zm18.437,3.649c-.818-2.183-3.003-3.649-5.437-3.649s-4.618,1.466-5.437,3.649c-.115.307-.072.651.114.921.188.27.494.43.822.43h9c.328,0,.635-.161.822-.43.187-.27.229-.614.114-.921Z"/>
 </svg>
-);
 
-Meeting.displayName = 'Meeting';
+);

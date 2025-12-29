@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBalanceScaleRight: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,13.743l-3.361-9.523-7.139-1.614V0h-3V1.927L3.286,.296,0,10.77v.73c0,2.485,2.014,4.5,4.5,4.5,2.316,0,4.223-1.75,4.472-4h.028v-1.26l-2.364-6.61,3.864,.874v15.997H4v3H20v-3h-6.5V5.681l4.024,.91-2.524,7.152v.757c0,2.485,2.014,4.5,4.5,4.5s4.5-2.015,4.5-4.5h0v-.757ZM3.072,11l1.325-4.221,1.51,4.221H3.072Zm15.018,3l1.409-3.993,1.409,3.993h-2.819Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBalanceScaleRight = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,13.743l-3.361-9.523-7.139-1.614V0h-3V1.927L3.286,.296,0,10.77v.73c0,2.485,2.014,4.5,4.5,4.5,2.316,0,4.223-1.75,4.472-4h.028v-1.26l-2.364-6.61,3.864,.874v15.997H4v3H20v-3h-6.5V5.681l4.024,.91-2.524,7.152v.757c0,2.485,2.014,4.5,4.5,4.5s4.5-2.015,4.5-4.5h0v-.757ZM3.072,11l1.325-4.221,1.51,4.221H3.072Zm15.018,3l1.409-3.993,1.409,3.993h-2.819Z"/></svg>
+
 );
-
-FiBsBalanceScaleRight.displayName = 'FiBsBalanceScaleRight';

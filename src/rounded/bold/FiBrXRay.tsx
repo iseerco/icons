@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrXRay: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m22.5,21h-.5V3h.5c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5H1.5C.672,0,0,.672,0,1.5s.672,1.5,1.5,1.5h.5v18h-.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h21c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5ZM5,3h14v18H5V3Zm12.387,14.547l-.72.72c-.469.469-1.105.732-1.768.732h-5.774c-.663,0-1.299-.263-1.768-.732l-.75-.75c-1.293-1.293-.387-3.503,1.44-3.518h.041s2.411,0,2.411,0v-2h-1c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5h1v-1h-3c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5h9c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5h-3v1h1c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5h-1v2h2.435c1.843.015,2.756,2.244,1.453,3.547Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrXRay = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22.5,21h-.5V3h.5c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5H1.5C.672,0,0,.672,0,1.5s.672,1.5,1.5,1.5h.5v18h-.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h21c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5ZM5,3h14v18H5V3Zm12.387,14.547l-.72.72c-.469.469-1.105.732-1.768.732h-5.774c-.663,0-1.299-.263-1.768-.732l-.75-.75c-1.293-1.293-.387-3.503,1.44-3.518h.041s2.411,0,2.411,0v-2h-1c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5h1v-1h-3c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5h9c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5h-3v1h1c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5h-1v2h2.435c1.843.015,2.756,2.244,1.453,3.547Z"/></svg>
+
 );
-
-FiBrXRay.displayName = 'FiBrXRay';

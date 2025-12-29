@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PunchingBag: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m18.225 7.007.02-.018-5.245-5.87v-1.119h-2v1.119l-5.246 5.869.02.018c-.476.531-.775 1.225-.775 1.993v2h10.001v2h-10v8c0 1.654 1.346 3 3 3h8c1.654 0 3-1.346 3-3v-11.999c0-.768-.298-1.462-.775-1.993zm-8.906-1.007 2.681-3 2.681 3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PunchingBag = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18.225 7.007.02-.018-5.245-5.87v-1.119h-2v1.119l-5.246 5.869.02.018c-.476.531-.775 1.225-.775 1.993v2h10.001v2h-10v8c0 1.654 1.346 3 3 3h8c1.654 0 3-1.346 3-3v-11.999c0-.768-.298-1.462-.775-1.993zm-8.906-1.007 2.681-3 2.681 3z"/></svg>
 );
-
-PunchingBag.displayName = 'PunchingBag';

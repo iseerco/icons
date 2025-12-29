@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsEnvelopeOpenText: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.946,9.222l-1.946-1.896V2.5c0-1.378-1.121-2.5-2.5-2.5H5.5c-1.378,0-2.5,1.122-2.5,2.5V7.328l-1.947,1.894c-.669,.655-1.053,1.567-1.053,2.503v12.275H24V11.724c0-.936-.384-1.848-1.054-2.502Zm-.698,.716c.045,.044,.087,.089,.128,.136l-1.376,1.376v-2.727l1.248,1.216ZM5.5,1h13c.827,0,1.5,.673,1.5,1.5V12.449l-5.525,5.526c-1.321,1.322-3.627,1.323-4.95,0l-5.525-5.526V2.5c0-.827,.673-1.5,1.5-1.5Zm-2.5,7.723v2.726l-1.376-1.376c.041-.047,.083-.092,.127-.135l1.249-1.215Zm20,14.277H1V11.725c0-.254,.04-.506,.115-.746l7.702,7.703c.85,.85,1.98,1.318,3.182,1.318s2.332-.468,3.182-1.318l7.703-7.704c.075,.24,.115,.491,.115,.746v11.276ZM17,6H7v-1h10v1Zm-2,4H7v-1H15v1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsEnvelopeOpenText = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.946,9.222l-1.946-1.896V2.5c0-1.378-1.121-2.5-2.5-2.5H5.5c-1.378,0-2.5,1.122-2.5,2.5V7.328l-1.947,1.894c-.669,.655-1.053,1.567-1.053,2.503v12.275H24V11.724c0-.936-.384-1.848-1.054-2.502Zm-.698,.716c.045,.044,.087,.089,.128,.136l-1.376,1.376v-2.727l1.248,1.216ZM5.5,1h13c.827,0,1.5,.673,1.5,1.5V12.449l-5.525,5.526c-1.321,1.322-3.627,1.323-4.95,0l-5.525-5.526V2.5c0-.827,.673-1.5,1.5-1.5Zm-2.5,7.723v2.726l-1.376-1.376c.041-.047,.083-.092,.127-.135l1.249-1.215Zm20,14.277H1V11.725c0-.254,.04-.506,.115-.746l7.702,7.703c.85,.85,1.98,1.318,3.182,1.318s2.332-.468,3.182-1.318l7.703-7.704c.075,.24,.115,.491,.115,.746v11.276ZM17,6H7v-1h10v1Zm-2,4H7v-1H15v1Z"/></svg>
+
 );
-
-FiTsEnvelopeOpenText.displayName = 'FiTsEnvelopeOpenText';

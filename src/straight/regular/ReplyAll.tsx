@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ReplyAll: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,11v13h-2V11c0-.552-.449-1-1-1H8.888l5.846,6.321-1.469,1.357-6.677-7.221c-.792-.791-.792-2.125,.027-2.944L13.266,.321l1.469,1.357-5.846,6.321h12.111c1.654,0,3,1.346,3,3ZM2.057,8.899L8.734,1.679,7.266,.321,.615,7.514c-.818,.819-.818,2.153-.027,2.944l6.677,7.221,1.469-1.357L2.03,9.072c-.04-.04-.04-.104,.027-.173Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ReplyAll = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,11v13h-2V11c0-.552-.449-1-1-1H8.888l5.846,6.321-1.469,1.357-6.677-7.221c-.792-.791-.792-2.125,.027-2.944L13.266,.321l1.469,1.357-5.846,6.321h12.111c1.654,0,3,1.346,3,3ZM2.057,8.899L8.734,1.679,7.266,.321,.615,7.514c-.818,.819-.818,2.153-.027,2.944l6.677,7.221,1.469-1.357L2.03,9.072c-.04-.04-.04-.104,.027-.173Z"/></svg>
+
 );
-
-ReplyAll.displayName = 'ReplyAll';

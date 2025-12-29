@@ -1,15 +1,16 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Clouds: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Clouds = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <path d="M404.413,511.84H212.951c-47.053-0.445-84.836-38.95-84.391-86.002c0.365-38.561,26.584-72.069,63.926-81.697  c-13.083-143.213,188.696-181.336,228.669-43.717c58.017,9.222,97.572,63.731,88.35,121.747  C501.292,473.838,456.728,511.862,404.413,511.84z M85.31,426.746c-0.072-45.932,24.59-88.346,64.544-111.005  c15.274-160.658,236.732-198.227,303.552-51.056c21.669,7.467,41.309,19.862,57.375,36.208l0,0  c0.68-79.907-54.245-149.559-132.109-167.529C358.225,41.621,267.279-16.175,175.538,4.272S26,115.665,46.447,207.406  c3.27,14.672,8.469,28.846,15.462,42.152C5.186,280.757-15.506,352.032,15.692,408.756c16.016,29.12,43.64,50.072,76,57.644  C87.48,453.603,85.326,440.218,85.31,426.746z"/>
 </svg>
-);
 
-Clouds.displayName = 'Clouds';
+);

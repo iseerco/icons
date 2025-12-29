@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDigitalWallet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDigitalWallet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M8,22.5v.5h-3v-.5c0-1.93-1.57-3.5-3.5-3.5h-.5v-3h.5c3.584,0,6.5,2.916,6.5,6.5Zm-6.5-1.5c-.828,0-1.5,.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm0-10h-.5v3h.5c4.687,0,8.5,3.813,8.5,8.5v.5h3v-.5c0-6.341-5.159-11.5-11.5-11.5ZM5,3H24V0H5C2.794,0,1,1.794,1,4v5h.5c.855,0,1.689,.09,2.5,.244v-1.386c.322,.084,.653,.142,1,.142H21v11h-6.476c.259,.963,.413,1.966,.451,3h9.025V5H5c-.552,0-1-.449-1-1s.448-1,1-1Zm14,10.5c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5,.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Z"/>
 </svg>
-);
 
-FiBsDigitalWallet.displayName = 'FiBsDigitalWallet';
+);

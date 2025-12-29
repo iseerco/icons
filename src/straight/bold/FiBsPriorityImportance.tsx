@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPriorityImportance: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPriorityImportance = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,4H7V1h17v3Zm-13,6h-4v3h4v-3ZM0,5h5V0H0v5Zm0,9h5v-5H0v5Zm7,8.005h7v-3h-7v3ZM.005,23h4.995v-5H.005v5Zm24.034-12.539l-3.729-3.729c-.972-.973-2.559-.975-3.534,0l-3.771,3.771,2.121,2.121,1.918-1.918v13.293h3v-13.293l1.875,1.875,2.121-2.121Z"/>
 </svg>
-);
 
-FiBsPriorityImportance.displayName = 'FiBsPriorityImportance';
+);

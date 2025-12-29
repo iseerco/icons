@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsAlignLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><rect y="3" width={size} height={size}/><rect y="8" width={size} height={size}/><rect y="18" width={size} height={size}/><rect y="13" width={size} height={size}/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsAlignLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><rect y="3" width="24" height="3"/><rect y="8" width="16" height="3"/><rect y="18" width="16" height="3"/><rect y="13" width="24" height="3"/></svg>
+
 );
-
-FiBsAlignLeft.displayName = 'FiBsAlignLeft';

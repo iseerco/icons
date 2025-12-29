@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsDecemberCalendar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20 18.5v3c0 .827.673 1.5 1.5 1.5.651 0 1.201-.419 1.408-1h1.042c-.232 1.14-1.242 2-2.449 2-1.378 0-2.5-1.121-2.5-2.5v-3c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5h-1c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5 1.5zm-7 0v3c0 1.379-1.122 2.5-2.5 2.5h-2.5v-8h2.5c1.378 0 2.5 1.121 2.5 2.5zm-1 0c0-.827-.673-1.5-1.5-1.5h-1.5v6h1.5c.827 0 1.5-.673 1.5-1.5zm2 5.5h4v-1h-3v-2.5h3v-1h-3v-2.5h3v-1h-4zm10-19.5v10.474c-.304-.242-.641-.444-1-.602v-5.372h-22v14h5v1h-6v-19.5c0-1.379 1.122-2.5 2.5-2.5h3.5v-2h1v2h10v-2h1v2h3.5c1.379 0 2.5 1.121 2.5 2.5zm-1 3.5v-3.5c0-.827-.673-1.5-1.5-1.5h-19c-.827 0-1.5.673-1.5 1.5v3.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsDecemberCalendar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20 18.5v3c0 .827.673 1.5 1.5 1.5.651 0 1.201-.419 1.408-1h1.042c-.232 1.14-1.242 2-2.449 2-1.378 0-2.5-1.121-2.5-2.5v-3c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5h-1c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5 1.5zm-7 0v3c0 1.379-1.122 2.5-2.5 2.5h-2.5v-8h2.5c1.378 0 2.5 1.121 2.5 2.5zm-1 0c0-.827-.673-1.5-1.5-1.5h-1.5v6h1.5c.827 0 1.5-.673 1.5-1.5zm2 5.5h4v-1h-3v-2.5h3v-1h-3v-2.5h3v-1h-4zm10-19.5v10.474c-.304-.242-.641-.444-1-.602v-5.372h-22v14h5v1h-6v-19.5c0-1.379 1.122-2.5 2.5-2.5h3.5v-2h1v2h10v-2h1v2h3.5c1.379 0 2.5 1.121 2.5 2.5zm-1 3.5v-3.5c0-.827-.673-1.5-1.5-1.5h-19c-.827 0-1.5.673-1.5 1.5v3.5z"/></svg>
 );
-
-FiTsDecemberCalendar.displayName = 'FiTsDecemberCalendar';

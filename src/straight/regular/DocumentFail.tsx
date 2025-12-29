@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DocumentFail: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m3 2c-1.654 0-3 1.346-3 3v17h16v-14.914l-5.086-5.086zm8 2.914 2.086 2.086h-2.086zm-8-.914h6v5h5v3.28l-2.741 2.737-3.297-3.296-3.298 3.294-2.664-2.663v-7.352c0-.552.448-1 1-1zm-1 16v-4.82l2.664 2.663 3.298-3.294 3.297 3.294 2.741-2.737v4.893h-12zm19-17c-1.654 0-3 1.346-3 3v12.414l3 3 3-3v-12.414c0-1.654-1.346-3-3-3zm1 14.586-1 1-1-1v-11.586c0-.552.448-1 1-1s1 .448 1 1z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DocumentFail = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m3 2c-1.654 0-3 1.346-3 3v17h16v-14.914l-5.086-5.086zm8 2.914 2.086 2.086h-2.086zm-8-.914h6v5h5v3.28l-2.741 2.737-3.297-3.296-3.298 3.294-2.664-2.663v-7.352c0-.552.448-1 1-1zm-1 16v-4.82l2.664 2.663 3.298-3.294 3.297 3.294 2.741-2.737v4.893h-12zm19-17c-1.654 0-3 1.346-3 3v12.414l3 3 3-3v-12.414c0-1.654-1.346-3-3-3zm1 14.586-1 1-1-1v-11.586c0-.552.448-1 1-1s1 .448 1 1z"/></svg>
 );
-
-DocumentFail.displayName = 'DocumentFail';

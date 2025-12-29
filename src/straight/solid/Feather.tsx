@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Feather: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.974 2.94a29.725 29.725 0 0 1 -2.489 8.06h-7.071l3.543-3.543-1.414-1.414-6.543 6.543v-8.418a30.117 30.117 0 0 1 11.039-4.141 2.582 2.582 0 0 1 2.935 2.913zm-15.974 2.593a24.715 24.715 0 0 0 -2.744 2.336 7.754 7.754 0 0 0 -2.247 5.836 7.636 7.636 0 0 0 1.569 4.3l3.422-3.419zm2.586 15.461a8.2 8.2 0 0 0 5.914-2.553 26.623 26.623 0 0 0 3.962-5.441h-8.048l-6.423 6.423a7.436 7.436 0 0 0 4.595 1.571zm-6.008-2.986-4.535 4.535 1.414 1.414 4.534-4.534c-.054-.042-.115-.071-.169-.115a7.947 7.947 0 0 1 -1.244-1.3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Feather = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.974 2.94a29.725 29.725 0 0 1 -2.489 8.06h-7.071l3.543-3.543-1.414-1.414-6.543 6.543v-8.418a30.117 30.117 0 0 1 11.039-4.141 2.582 2.582 0 0 1 2.935 2.913zm-15.974 2.593a24.715 24.715 0 0 0 -2.744 2.336 7.754 7.754 0 0 0 -2.247 5.836 7.636 7.636 0 0 0 1.569 4.3l3.422-3.419zm2.586 15.461a8.2 8.2 0 0 0 5.914-2.553 26.623 26.623 0 0 0 3.962-5.441h-8.048l-6.423 6.423a7.436 7.436 0 0 0 4.595 1.571zm-6.008-2.986-4.535 4.535 1.414 1.414 4.534-4.534c-.054-.042-.115-.071-.169-.115a7.947 7.947 0 0 1 -1.244-1.3z"/></svg>
 );
-
-Feather.displayName = 'Feather';

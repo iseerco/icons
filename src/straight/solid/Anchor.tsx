@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Anchor: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Anchor = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,12v2h2.945c-.521,4.667-4.662,7.56-8.945,7.953v-7.953h3v-2h-3v-4.127c1.724-.445,3-2.013,3-3.873,0-2.206-1.794-4-4-4s-4,1.794-4,4c0,1.86,1.277,3.428,3,3.873v4.127h-3v2h3v7.953c-4.283-.393-8.424-3.286-8.945-7.953h2.945v-2H0v1c0,6.885,6.102,11,12,11s12-4.115,12-11v-1h-5ZM10,4c0-1.103.897-2,2-2s2,.897,2,2-.897,2-2,2-2-.897-2-2Z"/>
 </svg>
-);
 
-Anchor.displayName = 'Anchor';
+);

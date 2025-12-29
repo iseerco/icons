@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSocialNetwork: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSocialNetwork = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M14.13,7l.809-2.833c.13-.791-.094-1.594-.611-2.203-.779-.922-2.02-1.212-3.161-.745-.582,.24-1.081,.734-1.38,1.346l-2.801,4.435H2.5c-1.379,0-2.5,1.122-2.5,2.5v10c0,1.378,1.121,2.5,2.5,2.5H22.019l1.981-11.092v-3.908H14.13ZM1,19.5V9.5c0-.827,.673-1.5,1.5-1.5H7.012l-.011,13H2.5c-.827,0-1.5-.673-1.5-1.5Zm20.183,1.5H8l.012-13.755,2.645-4.191c.217-.44,.533-.763,.89-.91,.73-.301,1.521-.118,2.019,.467,.327,.386,.469,.894,.399,1.338l-1.161,4.051h10.197l.007,2.819-1.825,10.181Z"/>
 </svg>
-);
 
-FiTsSocialNetwork.displayName = 'FiTsSocialNetwork';
+);

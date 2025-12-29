@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrArrowUpLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.561,23.561c-.293,.293-.677,.439-1.061,.439s-.768-.146-1.061-.439L3,5.121V13.5c0,.829-.671,1.5-1.5,1.5s-1.5-.671-1.5-1.5V4.5C0,2.019,2.019,0,4.5,0H13.5c.829,0,1.5,.671,1.5,1.5s-.671,1.5-1.5,1.5H5.121L23.561,21.439c.586,.585,.586,1.536,0,2.121Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrArrowUpLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.561,23.561c-.293,.293-.677,.439-1.061,.439s-.768-.146-1.061-.439L3,5.121V13.5c0,.829-.671,1.5-1.5,1.5s-1.5-.671-1.5-1.5V4.5C0,2.019,2.019,0,4.5,0H13.5c.829,0,1.5,.671,1.5,1.5s-.671,1.5-1.5,1.5H5.121L23.561,21.439c.586,.585,.586,1.536,0,2.121Z"/></svg>
+
 );
-
-FiBrArrowUpLeft.displayName = 'FiBrArrowUpLeft';

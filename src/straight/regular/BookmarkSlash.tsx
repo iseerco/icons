@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BookmarkSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21,19.586V3c0-1.654-1.346-3-3-3H6.559c-1.393,0-2.566.954-2.903,2.242L1.457.043.043,1.457l22.5,22.5,1.414-1.414-2.957-2.957ZM5.559,3c0-.551.449-1,1-1h11.441c.552,0,1,.449,1,1v14.586L5.559,4.145v-1.145Zm3.929,11.496l1.429,1.429-7.917,8.075v-15.991l2,2v9.094l4.488-4.607Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BookmarkSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21,19.586V3c0-1.654-1.346-3-3-3H6.559c-1.393,0-2.566.954-2.903,2.242L1.457.043.043,1.457l22.5,22.5,1.414-1.414-2.957-2.957ZM5.559,3c0-.551.449-1,1-1h11.441c.552,0,1,.449,1,1v14.586L5.559,4.145v-1.145Zm3.929,11.496l1.429,1.429-7.917,8.075v-15.991l2,2v9.094l4.488-4.607Z"/></svg>
+
 );
-
-BookmarkSlash.displayName = 'BookmarkSlash';

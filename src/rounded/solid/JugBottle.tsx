@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const JugBottle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const JugBottle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.658,5.966l-5.658-.943v-3.023c.552,0,1-.448,1-1s-.448-1-1-1h-7c-.552,0-1,.448-1,1s.448,1,1,1v3.178l-.755.283c-1.941.728-3.245,2.609-3.245,4.682v8.857c0,2.757,2.243,5,5,5h10c2.757,0,5-2.243,5-5v-9.088c0-1.963-1.406-3.623-3.342-3.945Zm1.342,9.534c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-6.022c0-.816.684-1.478,1.5-1.478.816,0,1.5.662,1.5,1.478v6.022Z"/>
 </svg>
-);
 
-JugBottle.displayName = 'JugBottle';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BinaryLock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19.07,20h-2v-2h2v2ZM3.56,13L.05,16.6l1.43,1.4,1.58-1.63v7.63h2V13h-1.51Zm4.51-6c0,2.21-1.79,4-4,4S.07,9.21,.07,7v-3C.07,1.79,1.86,0,4.07,0s4,1.79,4,4v3Zm-2-3c0-1.1-.9-2-2-2s-2,.9-2,2v3c0,1.1,.9,2,2,2s2-.9,2-2v-3ZM24.07,14v7c0,1.65-1.35,3-3,3h-6c-1.65,0-3-1.35-3-3v-7h2v-1c0-2.21,1.79-4,4-4s4,1.79,4,4v1h2Zm-8,0h4v-1c0-1.1-.9-2-2-2s-2,.9-2,2v1Zm6,2H14.07v5c0,.55,.45,1,1,1h6c.55,0,1-.45,1-1v-5Zm-12-2.44c-1.19,.69-2,1.97-2,3.44v3c0,1.81,1.22,3.33,2.88,3.82-.55-.8-.88-1.77-.88-2.82v-7.44ZM13.56,0l-3.51,3.6,1.43,1.4,1.58-1.63v6.36c.51-.78,1.19-1.45,2-1.92V0h-1.51Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BinaryLock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19.07,20h-2v-2h2v2ZM3.56,13L.05,16.6l1.43,1.4,1.58-1.63v7.63h2V13h-1.51Zm4.51-6c0,2.21-1.79,4-4,4S.07,9.21,.07,7v-3C.07,1.79,1.86,0,4.07,0s4,1.79,4,4v3Zm-2-3c0-1.1-.9-2-2-2s-2,.9-2,2v3c0,1.1,.9,2,2,2s2-.9,2-2v-3ZM24.07,14v7c0,1.65-1.35,3-3,3h-6c-1.65,0-3-1.35-3-3v-7h2v-1c0-2.21,1.79-4,4-4s4,1.79,4,4v1h2Zm-8,0h4v-1c0-1.1-.9-2-2-2s-2,.9-2,2v1Zm6,2H14.07v5c0,.55,.45,1,1,1h6c.55,0,1-.45,1-1v-5Zm-12-2.44c-1.19,.69-2,1.97-2,3.44v3c0,1.81,1.22,3.33,2.88,3.82-.55-.8-.88-1.77-.88-2.82v-7.44ZM13.56,0l-3.51,3.6,1.43,1.4,1.58-1.63v6.36c.51-.78,1.19-1.45,2-1.92V0h-1.51Z"/></svg>
+
 );
-
-BinaryLock.displayName = 'BinaryLock';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsOctagon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.02,24H7.08L.05,16.97V7.03L7.08,0h9.94l7.03,7.03v9.94l-7.03,7.03Zm-9.53-1h9.11l6.44-6.44V7.44L16.61,1H7.49L1.05,7.44v9.11l6.44,6.44Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsOctagon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17.02,24H7.08L.05,16.97V7.03L7.08,0h9.94l7.03,7.03v9.94l-7.03,7.03Zm-9.53-1h9.11l6.44-6.44V7.44L16.61,1H7.49L1.05,7.44v9.11l6.44,6.44Z"/></svg>
+
 );
-
-FiTsOctagon.displayName = 'FiTsOctagon';

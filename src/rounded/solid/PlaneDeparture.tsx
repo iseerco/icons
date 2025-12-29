@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PlaneDeparture: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M6.202,18c-1.153,0-2.304-.353-3.278-1.046l-2.075-1.476c-.448-.318-.75-.812-.828-1.353-.074-.509,.054-1.004,.361-1.396,.518-.662,1.389-.915,2.169-.63l3.247,1.192,14.655-7.061c1.252-.579,2.737-.03,3.315,1.22,.578,1.248,.038,2.745-1.203,3.338l-13.949,6.667c-.765,.365-1.59,.545-2.415,.545Zm17.798,5c0-.553-.448-1-1-1H1c-.552,0-1,.447-1,1s.448,1,1,1H23c.552,0,1-.447,1-1ZM8.614,9.715l5.419-2.611-5.849-3.612c-.734-.545-1.707-.645-2.542-.26l-.781,.367c-.458,.215-.774,.643-.846,1.144-.072,.502,.111,1.001,.49,1.337l4.108,3.636Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PlaneDeparture = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M6.202,18c-1.153,0-2.304-.353-3.278-1.046l-2.075-1.476c-.448-.318-.75-.812-.828-1.353-.074-.509,.054-1.004,.361-1.396,.518-.662,1.389-.915,2.169-.63l3.247,1.192,14.655-7.061c1.252-.579,2.737-.03,3.315,1.22,.578,1.248,.038,2.745-1.203,3.338l-13.949,6.667c-.765,.365-1.59,.545-2.415,.545Zm17.798,5c0-.553-.448-1-1-1H1c-.552,0-1,.447-1,1s.448,1,1,1H23c.552,0,1-.447,1-1ZM8.614,9.715l5.419-2.611-5.849-3.612c-.734-.545-1.707-.645-2.542-.26l-.781,.367c-.458,.215-.774,.643-.846,1.144-.072,.502,.111,1.001,.49,1.337l4.108,3.636Z"/></svg>
+
 );
-
-PlaneDeparture.displayName = 'PlaneDeparture';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCivilLaw: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m0 5v3h2.38l-2.38 6.743v.757c0 2.485 2.015 4.5 4.5 4.5s4.5-2.015 4.5-4.5v-.757l-3.5-9.743zm3.091 10 1.41-3.993 1.409 3.993zm18.529-7h1.88v-3h-5l-3.5 9.743v.757c0 2.485 2.015 4.5 4.5 4.5s4.5-2.015 4.5-4.5v-.757zm-3.529 7 1.409-3.993 1.41 3.993zm-4.591-7.216v16.216h-3v-16.33c-.544-.231-1.038-.58-1.459-1l-2.748-2.67c-.391-.391-.391-1.024 0-1.414.391-.391 1.024-.391 1.414 0l1.009.93v-2.688c0-.457.371-.828.828-.828s.828.371.828.828v.672h1.418v-.672c0-.457.371-.828.828-.828s.828.371.828.828v.682h1.392v-.678c0-.459.372-.831.831-.831s.831.372.831.831v2.835c0 1.195-.486 2.278-1.271 3.063-.479.479-1.071.841-1.729 1.055z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCivilLaw = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m0 5v3h2.38l-2.38 6.743v.757c0 2.485 2.015 4.5 4.5 4.5s4.5-2.015 4.5-4.5v-.757l-3.5-9.743zm3.091 10 1.41-3.993 1.409 3.993zm18.529-7h1.88v-3h-5l-3.5 9.743v.757c0 2.485 2.015 4.5 4.5 4.5s4.5-2.015 4.5-4.5v-.757zm-3.529 7 1.409-3.993 1.41 3.993zm-4.591-7.216v16.216h-3v-16.33c-.544-.231-1.038-.58-1.459-1l-2.748-2.67c-.391-.391-.391-1.024 0-1.414.391-.391 1.024-.391 1.414 0l1.009.93v-2.688c0-.457.371-.828.828-.828s.828.371.828.828v.672h1.418v-.672c0-.457.371-.828.828-.828s.828.371.828.828v.682h1.392v-.678c0-.459.372-.831.831-.831s.831.372.831.831v2.835c0 1.195-.486 2.278-1.271 3.063-.479.479-1.071.841-1.729 1.055z"/></svg>
 );
-
-FiBsCivilLaw.displayName = 'FiBsCivilLaw';

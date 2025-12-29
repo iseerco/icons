@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AlarmClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m5.523 1.745-1.067-1.689a15.17 15.17 0 0 0 -4.439 3.955l1.663 1.109a13.144 13.144 0 0 1 3.843-3.375z"/><path d="m22.32 5.12 1.663-1.109a15.17 15.17 0 0 0 -4.439-3.955l-1.067 1.689a13.144 13.144 0 0 1 3.843 3.375z"/><path d="m13 2.051v-2.051h-2v2.051a10.977 10.977 0 0 0 -7.062 18.408l-1.928 2.118 1.48 1.346 1.934-2.123a10.916 10.916 0 0 0 13.152 0l1.934 2.126 1.48-1.346-1.928-2.118a10.977 10.977 0 0 0 -7.062-18.411zm1.293 13.656-3.293-3.293v-5.414h2v4.586l2.707 2.707z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AlarmClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m5.523 1.745-1.067-1.689a15.17 15.17 0 0 0 -4.439 3.955l1.663 1.109a13.144 13.144 0 0 1 3.843-3.375z"/><path d="m22.32 5.12 1.663-1.109a15.17 15.17 0 0 0 -4.439-3.955l-1.067 1.689a13.144 13.144 0 0 1 3.843 3.375z"/><path d="m13 2.051v-2.051h-2v2.051a10.977 10.977 0 0 0 -7.062 18.408l-1.928 2.118 1.48 1.346 1.934-2.123a10.916 10.916 0 0 0 13.152 0l1.934 2.126 1.48-1.346-1.928-2.118a10.977 10.977 0 0 0 -7.062-18.411zm1.293 13.656-3.293-3.293v-5.414h2v4.586l2.707 2.707z"/></svg>
 );
-
-AlarmClock.displayName = 'AlarmClock';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCommentAltCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20.5,0H3.5C1.57,0,0,1.57,0,3.5v16.5h6.741l3.598,3.031c.479.425,1.08.635,1.674.635.583,0,1.159-.202,1.607-.601l3.708-3.065h6.672V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,17h-4.752l-4.245,3.511-4.167-3.511H3V3.5c0-.276.224-.5.5-.5h17c.275,0,.5.224.5.5v13.5Zm-4.554-11.068l2.107,2.136-6.293,6.207c-.482.483-1.12.725-1.758.725s-1.282-.244-1.77-.732l-3.279-3.193,2.093-2.149,2.952,2.875,5.948-5.868Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCommentAltCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.5,0H3.5C1.57,0,0,1.57,0,3.5v16.5h6.741l3.598,3.031c.479.425,1.08.635,1.674.635.583,0,1.159-.202,1.607-.601l3.708-3.065h6.672V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,17h-4.752l-4.245,3.511-4.167-3.511H3V3.5c0-.276.224-.5.5-.5h17c.275,0,.5.224.5.5v13.5Zm-4.554-11.068l2.107,2.136-6.293,6.207c-.482.483-1.12.725-1.758.725s-1.282-.244-1.77-.732l-3.279-3.193,2.093-2.149,2.952,2.875,5.948-5.868Z"/></svg>
+
 );
-
-FiBsCommentAltCheck.displayName = 'FiBsCommentAltCheck';

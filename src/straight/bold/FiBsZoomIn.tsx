@@ -1,16 +1,17 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsZoomIn: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Isolation_Mode" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsZoomIn = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <polygon points="256,128 192,128 192,192 128,192 128,256 192,256 192,320 256,320 256,256 320,256 320,192 256,192 "/>
 <path d="M403.624,358.488c74.104-99.032,53.896-239.386-45.136-313.49S119.102-8.898,44.998,90.134S-8.898,329.52,90.134,403.624  c79.549,59.525,188.806,59.525,268.354,0L466.864,512L512,466.949L403.624,358.488z M225.121,384.498  c-88.021,0-159.377-71.356-159.377-159.377S137.1,65.744,225.121,65.744S384.498,137.1,384.498,225.121  C384.416,313.109,313.109,384.416,225.121,384.498z"/>
 </svg>
-);
 
-FiBsZoomIn.displayName = 'FiBsZoomIn';
+);

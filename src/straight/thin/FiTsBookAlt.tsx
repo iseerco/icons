@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsBookAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsBookAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.045,1.604c-.59-.493-1.354-.699-2.1-.562l-6.459,1.175c-1.074.195-1.965.849-2.486,1.736-.521-.888-1.413-1.541-2.486-1.736L3.054,1.042c-.758-.139-1.532.066-2.123.561-.592.493-.931,1.219-.931,1.989v17.234l12,2.182,12-2.182V3.637c0-.785-.348-1.525-.955-2.032Zm-11.545,20.297l-10.5-1.909V3.592c0-.474.208-.919.572-1.222.364-.304.838-.429,1.304-.344l6.46,1.175c1.254.228,2.165,1.318,2.165,2.594v16.106Zm11.5-1.909l-10.5,1.909V5.795c0-1.275.91-2.366,2.165-2.594l6.46-1.175c.448-.083.918.044,1.279.346.379.316.596.777.596,1.265v16.355Z"/>
 </svg>
-);
 
-FiTsBookAlt.displayName = 'FiTsBookAlt';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Road: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.924,18.134l-2.464-14A4.992,4.992,0,0,0,16.536,0H7.451A4.992,4.992,0,0,0,2.525,4.138l-2.449,14A5,5,0,0,0,5,24H19a5,5,0,0,0,4.925-5.866ZM13,20a1,1,0,0,1-2,0V18a1,1,0,0,1,2,0Zm0-7a1,1,0,0,1-2,0V11a1,1,0,0,1,2,0Zm0-7a1,1,0,0,1-2,0V4a1,1,0,0,1,2,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Road = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.924,18.134l-2.464-14A4.992,4.992,0,0,0,16.536,0H7.451A4.992,4.992,0,0,0,2.525,4.138l-2.449,14A5,5,0,0,0,5,24H19a5,5,0,0,0,4.925-5.866ZM13,20a1,1,0,0,1-2,0V18a1,1,0,0,1,2,0Zm0-7a1,1,0,0,1-2,0V11a1,1,0,0,1,2,0Zm0-7a1,1,0,0,1-2,0V4a1,1,0,0,1,2,0Z"/></svg>
+
 );
-
-Road.displayName = 'Road';

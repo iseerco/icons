@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MobileFriendly: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m8.991 15h3.009v2.999h-9c-1.657 0-3-1.342-3-2.999v-1h8.145zm3.564-6c-.344.59-.555 1.268-.555 2v2h-2.071l-.846-1h-7.083v-12h20v7.101c-.324-.066-.657-.101-1-.101h-15s0 2 0 2zm-6.555-4h12v-2h-12zm18 6v13h-10v-13c0-1.105.895-2 2-2h6c1.105 0 2 .895 2 2zm-2 5h-6v2h6zm0-4h-6v2h6z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MobileFriendly = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m8.991 15h3.009v2.999h-9c-1.657 0-3-1.342-3-2.999v-1h8.145zm3.564-6c-.344.59-.555 1.268-.555 2v2h-2.071l-.846-1h-7.083v-12h20v7.101c-.324-.066-.657-.101-1-.101h-15s0 2 0 2zm-6.555-4h12v-2h-12zm18 6v13h-10v-13c0-1.105.895-2 2-2h6c1.105 0 2 .895 2 2zm-2 5h-6v2h6zm0-4h-6v2h6z"/></svg>
 );
-
-MobileFriendly.displayName = 'MobileFriendly';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowToLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M2.015,18.015V13.5a2.5,2.5,0,0,0,.233.285l4.95,4.95a1,1,0,1,0,1.414-1.414l-4.3-4.3H22.985a1,1,0,0,0,0-2H4.308l4.3-4.3A1,1,0,0,0,7.2,5.3l-4.95,4.95a2.491,2.491,0,0,0-.233.284V6.015a1,1,0,0,0-2,0v12a1,1,0,0,0,2,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowToLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M2.015,18.015V13.5a2.5,2.5,0,0,0,.233.285l4.95,4.95a1,1,0,1,0,1.414-1.414l-4.3-4.3H22.985a1,1,0,0,0,0-2H4.308l4.3-4.3A1,1,0,0,0,7.2,5.3l-4.95,4.95a2.491,2.491,0,0,0-.233.284V6.015a1,1,0,0,0-2,0v12a1,1,0,0,0,2,0Z"/></svg>
+
 );
-
-ArrowToLeft.displayName = 'ArrowToLeft';

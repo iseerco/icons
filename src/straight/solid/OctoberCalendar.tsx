@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const OctoberCalendar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m14.6 18.5v3c0 .496.404.9.9.9s.9-.404.9-.9h1.6c0 1.381-1.119 2.5-2.5 2.5s-2.5-1.119-2.5-2.5v-3c0-1.381 1.119-2.5 2.5-2.5s2.5 1.119 2.5 2.5h-1.6c0-.496-.404-.9-.9-.9s-.9.404-.9.9zm9.418-2.5h-5v1.6h1.65v6.4h1.6v-6.4h1.75zm-12.218 2.3v3.4c0 1.269-1.031 2.3-2.3 2.3s-2.3-1.031-2.3-2.3v-3.4c0-1.269 1.031-2.3 2.3-2.3s2.3 1.031 2.3 2.3zm-1.6 0c0-.386-.314-.7-.7-.7s-.7.314-.7.7v3.4c0 .386.314.7.7.7s.7-.314.7-.7zm13.8-13.3c0-1.654-1.346-3-3-3h-3v-2h-2v2h-8v-2h-2v2h-3c-1.654 0-3 1.346-3 3v3h24zm-14.5 9h14.5v-4h-24v14h5.88c-.425-.667-.68-1.452-.68-2.3v-3.4c0-2.371 1.929-4.3 4.3-4.3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const OctoberCalendar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14.6 18.5v3c0 .496.404.9.9.9s.9-.404.9-.9h1.6c0 1.381-1.119 2.5-2.5 2.5s-2.5-1.119-2.5-2.5v-3c0-1.381 1.119-2.5 2.5-2.5s2.5 1.119 2.5 2.5h-1.6c0-.496-.404-.9-.9-.9s-.9.404-.9.9zm9.418-2.5h-5v1.6h1.65v6.4h1.6v-6.4h1.75zm-12.218 2.3v3.4c0 1.269-1.031 2.3-2.3 2.3s-2.3-1.031-2.3-2.3v-3.4c0-1.269 1.031-2.3 2.3-2.3s2.3 1.031 2.3 2.3zm-1.6 0c0-.386-.314-.7-.7-.7s-.7.314-.7.7v3.4c0 .386.314.7.7.7s.7-.314.7-.7zm13.8-13.3c0-1.654-1.346-3-3-3h-3v-2h-2v2h-8v-2h-2v2h-3c-1.654 0-3 1.346-3 3v3h24zm-14.5 9h14.5v-4h-24v14h5.88c-.425-.667-.68-1.452-.68-2.3v-3.4c0-2.371 1.929-4.3 4.3-4.3z"/></svg>
 );
-
-OctoberCalendar.displayName = 'OctoberCalendar';

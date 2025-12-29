@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMortgage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMortgage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.657,7.408l-.657-.514V1h-3v3.546L14.157.755c-1.271-.993-3.044-.994-4.313,0L1.343,7.407c-.854.668-1.343,1.673-1.343,2.757v13.824h24v-13.824c0-1.084-.49-2.089-1.343-2.756Zm-1.657,13.58H3v-10.824c0-.155.07-.298.192-.394L11.692,3.119c.182-.143.435-.142.616,0l8.5,6.652c.122.095.192.239.192.394v10.824Zm-5-10.982l-4.796,7.994h-3.198l4.796-7.994h3.198Zm-7.494,2.998c-.828,0-1.499-.671-1.499-1.499s.671-1.499,1.499-1.499,1.499.671,1.499,1.499-.671,1.499-1.499,1.499Zm8.494,3.497c0,.828-.671,1.499-1.499,1.499s-1.499-.671-1.499-1.499.671-1.499,1.499-1.499,1.499.671,1.499,1.499Z"/>
 </svg>
-);
 
-FiBsMortgage.displayName = 'FiBsMortgage';
+);

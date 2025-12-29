@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PencilSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PencilSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m11.183,15.183l1.414,1.414-7.404,7.403H0v-5.193l7.403-7.403,1.414,1.414-6,6,2.365,2.365,6-6Zm4.121-1.293l8.654,8.654-1.414,1.414L.043,1.457,1.457.043l8.653,8.653,7.621-7.621c1.431-1.432,3.761-1.432,5.193,0,1.431,1.432,1.431,3.762,0,5.193l-7.621,7.621Zm1.471-9.029l2.365,2.365,2.371-2.371c.651-.652.651-1.713,0-2.365-.652-.652-1.712-.651-2.365,0l-2.371,2.371Zm-5.25,5.25l2.365,2.365,3.836-3.836-2.365-2.365-3.836,3.836Z"/>
 </svg>
-);
 
-PencilSlash.displayName = 'PencilSlash';
+);

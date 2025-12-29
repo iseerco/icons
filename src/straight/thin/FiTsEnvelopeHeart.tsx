@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsEnvelopeHeart: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsEnvelopeHeart = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M18.727,8.919l.273,.178,.273-.178c.192-.126,4.727-3.113,4.727-5.944,0-1.641-1.233-2.975-2.75-2.975-.951,0-1.761,.475-2.25,1.23-.489-.756-1.299-1.23-2.25-1.23-1.517,0-2.75,1.334-2.75,2.975,0,2.831,4.534,5.818,4.727,5.944Zm-1.977-7.919c1.014,0,1.75,.841,1.75,2h1c0-1.159,.736-2,1.75-2,.965,0,1.75,.886,1.75,1.975,0,1.77-2.672,3.996-4,4.922-1.329-.924-4-3.149-4-4.922,0-1.089,.785-1.975,1.75-1.975Zm6.25,7.509c.34-.323,.678-.672,1-1.046V24H0V6.5c0-1.379,1.122-2.5,2.5-2.5H12.122c.073,.34,.171,.675,.304,1H2.5c-.534,0-1,.282-1.266,.703L9.506,13.975c1.321,1.321,3.628,1.322,4.95,0h0s3.269-3.321,3.269-3.321l.854,.555-3.416,3.473h0c-.85,.85-1.98,1.318-3.182,1.318s-2.333-.468-3.182-1.318L1,6.883V23H23V8.509Z"/>
 </svg>
-);
 
-FiTsEnvelopeHeart.displayName = 'FiTsEnvelopeHeart';
+);

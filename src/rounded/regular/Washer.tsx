@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Washer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Washer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17,0H7C4.243,0,2,2.243,2,5v14c0,2.757,2.243,5,5,5h10c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5Zm3,19c0,1.654-1.346,3-3,3H7c-1.654,0-3-1.346-3-3V5c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v14ZM6.5,6c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm2.5-1.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm3,3.5c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm0,2c2.06,0,3.741,1.571,3.957,3.574-.274.193-.708.426-1.229.426-.839,0-1.828-.583-2.136-.807-.167-.122-1.675-1.193-3.319-1.193-.271,0-.522.035-.762.084.681-1.235,1.981-2.084,3.489-2.084Zm0,8c-2.06,0-3.741-1.571-3.957-3.574.274-.193.708-.426,1.229-.426.839,0,1.828.583,2.136.807.167.122,1.675,1.193,3.319,1.193.271,0,.522-.035.762-.084-.681,1.235-1.981,2.084-3.489,2.084Z"/>
 </svg>
-);
 
-Washer.displayName = 'Washer';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GreaterThan: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GreaterThan = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m1.02,24c-.39,0-.76-.229-.921-.61-.215-.509.022-1.096.531-1.311l20.461-8.656c.662-.28.898-.919.898-1.423s-.236-1.143-.898-1.423L.63,1.921C.121,1.706-.116,1.119.099.61S.902-.137,1.409.079l20.461,8.656c1.308.553,2.119,1.804,2.119,3.265s-.812,2.711-2.119,3.265L1.409,23.921c-.127.054-.26.079-.39.079Z"/>
 </svg>
-);
 
-GreaterThan.displayName = 'GreaterThan';
+);

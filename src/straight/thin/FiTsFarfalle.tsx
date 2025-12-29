@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsFarfalle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsFarfalle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.989,16.702l-2.178-2.352,2.178-2.351-2.178-2.351,2.178-2.352-2.206-2.381,2.229-2.917h-1.012c-3.321,0-5.401,1.308-7.236,2.461-1.313,.826-2.447,1.539-3.764,1.539s-2.45-.713-3.764-1.539c-1.835-1.153-3.915-2.461-7.236-2.461H-.02l2.26,2.918L.036,7.298l2.178,2.352L.036,12l2.178,2.351L.036,16.702l2.204,2.38L-.02,22H1c3.321,0,5.401-1.308,7.236-2.461,1.313-.826,2.447-1.539,3.764-1.539s2.45,.713,3.764,1.539c1.835,1.153,3.915,2.461,7.236,2.461h1.012l-2.229-2.916,2.206-2.382Zm-2.04,4.247c-2.448-.242-4.14-1.306-5.653-2.257-1.384-.87-2.691-1.692-4.296-1.692s-2.912,.822-4.296,1.692c-1.512,.95-3.2,2.012-5.645,2.256l1.491-1.925-2.151-2.321,2.178-2.352-2.178-2.351,2.178-2.351L1.399,7.298l2.151-2.322-1.491-1.924c2.444,.244,4.133,1.306,5.645,2.256,1.384,.87,2.691,1.692,4.296,1.692s2.912-.822,4.296-1.692c1.514-.951,3.205-2.015,5.653-2.257l-1.473,1.927,2.149,2.32-2.178,2.352,2.178,2.351-2.178,2.351,2.178,2.352-2.149,2.319,1.473,1.928ZM8,11.5h8v1H8v-1Z"/>
 </svg>
-);
 
-FiTsFarfalle.displayName = 'FiTsFarfalle';
+);

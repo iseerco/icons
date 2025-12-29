@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrCalendarGavelLegal: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrCalendarGavelLegal = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.598,17.891l2.293-2.293.435.435c.098.098.226.146.354.146s.256-.049.354-.146c.195-.195.195-.512,0-.707l-4.68-4.68c-.195-.195-.512-.195-.707,0s-.195.512,0,.707l.409.409-5.293,5.293-.409-.409c-.195-.195-.512-.195-.707,0s-.195.512,0,.707l4.68,4.68c.098.098.226.146.354.146s.256-.049.354-.146c.195-.195.195-.512,0-.707l-.435-.435,2.293-2.293,5.255,5.255c.098.098.226.146.354.146s.256-.049.354-.146c.195-.195.195-.512,0-.707l-5.255-5.255Zm-6.128-.128l5.293-5.293,2.421,2.421-5.293,5.293-2.421-2.421Zm7.03-15.763h-1.5V.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v1.5H7V.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v1.5h-1.5C2.019,2,0,4.019,0,6.5v13c0,2.481,2.019,4.5,4.5,4.5h9c.276,0,.5-.224.5-.5s-.224-.5-.5-.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-10.5h22v4.5c0,.276.224.5.5.5s.5-.224.5-.5v-7c0-2.481-2.019-4.5-4.5-4.5ZM1,8v-1.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v1.5H1Z"/>
 </svg>
-);
 
-FiTrCalendarGavelLegal.displayName = 'FiTrCalendarGavelLegal';
+);

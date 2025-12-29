@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Alien: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m12,0C6.486,0,2,4.486,2,10c0,7.461,9.074,13.363,9.46,13.611l.54.346.54-.346c.386-.248,9.46-6.15,9.46-13.611C22,4.486,17.514,0,12,0Zm-1.02,12.98s-2.728.248-3.968-.992-.992-3.968-.992-3.968c0,0,2.728-.248,3.968.992s.992,3.968.992,3.968Zm6.008-.992c-1.24,1.24-3.968.992-3.968.992,0,0-.248-2.728.992-3.968s3.968-.992,3.968-.992c0,0,.248,2.728-.992,3.968Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Alien = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12,0C6.486,0,2,4.486,2,10c0,7.461,9.074,13.363,9.46,13.611l.54.346.54-.346c.386-.248,9.46-6.15,9.46-13.611C22,4.486,17.514,0,12,0Zm-1.02,12.98s-2.728.248-3.968-.992-.992-3.968-.992-3.968c0,0,2.728-.248,3.968.992s.992,3.968.992,3.968Zm6.008-.992c-1.24,1.24-3.968.992-3.968.992,0,0-.248-2.728.992-3.968s3.968-.992,3.968-.992c0,0,.248,2.728-.992,3.968Z"/></svg>
+
 );
-
-Alien.displayName = 'Alien';

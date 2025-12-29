@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTransporter3: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m8,20v-1h8v1h-8Zm9-6H7v1h10v-1Zm1-5H6v1h12v-1Zm-14-1.106l-1.301-2.601L.1,3.993l2.6-1.301L4,.094l1.301,2.599,2.6,1.301-2.6,1.3-1.301,2.601Zm-.555-3.347l.555,1.11.555-1.11,1.109-.554-1.109-.555-.555-1.11-.555,1.11-1.109.555,1.109.554Zm20.423,12.953l-2.245,1.123-1.123,2.245-1.123-2.245-2.245-1.123,2.245-1.123,1.123-2.245,1.123,2.245,2.245,1.123Zm-2.236,0l-.755-.377-.377-.755-.377.755-.755.377.755.377.377.755.377-.755.755-.377ZM9.5,2.5c0-1.379,1.121-2.5,2.5-2.5s2.5,1.121,2.5,2.5-1.121,2.5-2.5,2.5-2.5-1.121-2.5-2.5Zm1,0c0,.827.673,1.5,1.5,1.5s1.5-.673,1.5-1.5-.673-1.5-1.5-1.5-1.5.673-1.5,1.5Zm-6.5,21.5h16v-1H4v1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTransporter3 = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m8,20v-1h8v1h-8Zm9-6H7v1h10v-1Zm1-5H6v1h12v-1Zm-14-1.106l-1.301-2.601L.1,3.993l2.6-1.301L4,.094l1.301,2.599,2.6,1.301-2.6,1.3-1.301,2.601Zm-.555-3.347l.555,1.11.555-1.11,1.109-.554-1.109-.555-.555-1.11-.555,1.11-1.109.555,1.109.554Zm20.423,12.953l-2.245,1.123-1.123,2.245-1.123-2.245-2.245-1.123,2.245-1.123,1.123-2.245,1.123,2.245,2.245,1.123Zm-2.236,0l-.755-.377-.377-.755-.377.755-.755.377.755.377.377.755.377-.755.755-.377ZM9.5,2.5c0-1.379,1.121-2.5,2.5-2.5s2.5,1.121,2.5,2.5-1.121,2.5-2.5,2.5-2.5-1.121-2.5-2.5Zm1,0c0,.827.673,1.5,1.5,1.5s1.5-.673,1.5-1.5-.673-1.5-1.5-1.5-1.5.673-1.5,1.5Zm-6.5,21.5h16v-1H4v1Z"/></svg>
+
 );
-
-FiTsTransporter3.displayName = 'FiTsTransporter3';

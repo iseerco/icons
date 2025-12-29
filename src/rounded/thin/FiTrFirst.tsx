@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrFirst: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrFirst = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.5,10c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-2.5v-2.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v2.5h-4v-2.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v2.5h-2.5c-.276,0-.5.224-.5.5s.224.5.5.5h2.5v4h-2.5c-.276,0-.5.224-.5.5s.224.5.5.5h2.5v2.5c0,.276.224.5.5.5s.5-.224.5-.5v-2.5h4v2.5c0,.276.224.5.5.5s.5-.224.5-.5v-2.5h2.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-2.5v-4h2.5Zm-3.5,4h-4v-4h4v4ZM21,3.266v18.234c0,.276-.224.5-.5.5s-.5-.224-.5-.5V3.266c0-.159-.114-.224-.163-.244-.05-.02-.175-.056-.288.058l-2.69,2.77c-.191.199-.508.203-.707.01-.198-.192-.202-.509-.01-.707l2.695-2.774c.368-.368.907-.474,1.383-.279.474.196.78.655.78,1.168Z"/>
 </svg>
-);
 
-FiTrFirst.displayName = 'FiTrFirst';
+);

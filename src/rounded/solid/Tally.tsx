@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Tally: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.912,6.655c-.225-.504-.816-.73-1.321-.503l-.591,.265V1c0-.552-.447-1-1-1s-1,.448-1,1V7.314l-4,1.795V1c0-.552-.447-1-1-1s-1,.448-1,1V10.006l-4,1.795V1c0-.552-.448-1-1-1s-1,.448-1,1V12.698l-4,1.795V1c0-.552-.448-1-1-1s-1,.448-1,1V15.39l-1.409,.632c-.504,.226-.729,.817-.503,1.321,.166,.371,.531,.591,.913,.591,.137,0,.276-.028,.409-.088l.591-.265v5.418c0,.553,.448,1,1,1s1-.447,1-1v-6.316l4-1.794v8.11c0,.553,.448,1,1,1s1-.447,1-1V13.993l4-1.794v10.802c0,.553,.447,1,1,1s1-.447,1-1V11.301l4-1.794v13.494c0,.553,.447,1,1,1s1-.447,1-1V8.609l1.409-.632c.504-.226,.729-.818,.503-1.322Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Tally = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.912,6.655c-.225-.504-.816-.73-1.321-.503l-.591,.265V1c0-.552-.447-1-1-1s-1,.448-1,1V7.314l-4,1.795V1c0-.552-.447-1-1-1s-1,.448-1,1V10.006l-4,1.795V1c0-.552-.448-1-1-1s-1,.448-1,1V12.698l-4,1.795V1c0-.552-.448-1-1-1s-1,.448-1,1V15.39l-1.409,.632c-.504,.226-.729,.817-.503,1.321,.166,.371,.531,.591,.913,.591,.137,0,.276-.028,.409-.088l.591-.265v5.418c0,.553,.448,1,1,1s1-.447,1-1v-6.316l4-1.794v8.11c0,.553,.448,1,1,1s1-.447,1-1V13.993l4-1.794v10.802c0,.553,.447,1,1,1s1-.447,1-1V11.301l4-1.794v13.494c0,.553,.447,1,1,1s1-.447,1-1V8.609l1.409-.632c.504-.226,.729-.818,.503-1.322Z"/></svg>
+
 );
-
-Tally.displayName = 'Tally';

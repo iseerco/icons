@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Inbox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Inbox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M448,213.333h-64c-23.564,0-42.667,19.103-42.667,42.667s-19.103,42.667-42.667,42.667h-85.333   c-23.564,0-42.667-19.103-42.667-42.667S151.564,213.333,128,213.333H64c-35.346,0-64,28.654-64,64v85.333   c0.071,58.881,47.786,106.596,106.667,106.667h298.667C464.214,469.263,511.93,421.548,512,362.667v-85.333   C512,241.987,483.346,213.333,448,213.333z"/>
 	<path d="M64,170.667h384c11.782,0,21.333-9.551,21.333-21.333c0-11.782-9.551-21.333-21.333-21.333H64   c-11.782,0-21.333,9.551-21.333,21.333C42.667,161.115,52.218,170.667,64,170.667z"/>
@@ -29,6 +31,5 @@ export const Inbox: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-Inbox.displayName = 'Inbox';
+);

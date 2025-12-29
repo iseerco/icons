@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DocumentLink: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}><path d="m15 .6v4.4h4.4zm5 6.4v2c-1.5 0-3.1.6-4.3 1.8l-.2.2h-11.5v2h9.5l-2 2h-7.5v2h5.8c-1.3 2.2-1 5 .7 7h-10.5v-21c0-1.7 1.3-3 3-3h10v7zm-4.2 14.8c.8.4 1.6.6 2.4.6l-.4.4c-1.6 1.6-4.1 1.6-5.7 0-1.6-1.6-1.6-4.1 0-5.7l1.4-1.4c1.6-1.6 4.1-1.6 5.7 0l-1.4 1.4c-.8-.8-2.1-.8-2.8 0l-1.4 1.4c-.8.8-.8 2.1 0 2.8.6.6 1.5.7 2.2.4zm5.6-2.5c-.8.8-1.8 1.2-2.8 1.2s-2.1-.4-2.8-1.2l1.4-1.4c.8.8 2.1.8 2.8 0l1.4-1.4c.8-.8.8-2.1 0-2.8-.6-.6-1.5-.7-2.2-.4-.8-.4-1.6-.6-2.4-.6l.4-.4c1.6-1.6 4.1-1.6 5.7 0 1.5 1.6 1.4 4 0 5.6l-1.4 1.4z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DocumentLink = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15 .6v4.4h4.4zm5 6.4v2c-1.5 0-3.1.6-4.3 1.8l-.2.2h-11.5v2h9.5l-2 2h-7.5v2h5.8c-1.3 2.2-1 5 .7 7h-10.5v-21c0-1.7 1.3-3 3-3h10v7zm-4.2 14.8c.8.4 1.6.6 2.4.6l-.4.4c-1.6 1.6-4.1 1.6-5.7 0-1.6-1.6-1.6-4.1 0-5.7l1.4-1.4c1.6-1.6 4.1-1.6 5.7 0l-1.4 1.4c-.8-.8-2.1-.8-2.8 0l-1.4 1.4c-.8.8-.8 2.1 0 2.8.6.6 1.5.7 2.2.4zm5.6-2.5c-.8.8-1.8 1.2-2.8 1.2s-2.1-.4-2.8-1.2l1.4-1.4c.8.8 2.1.8 2.8 0l1.4-1.4c.8-.8.8-2.1 0-2.8-.6-.6-1.5-.7-2.2-.4-.8-.4-1.6-.6-2.4-.6l.4-.4c1.6-1.6 4.1-1.6 5.7 0 1.5 1.6 1.4 4 0 5.6l-1.4 1.4z"/></svg>
 );
-
-DocumentLink.displayName = 'DocumentLink';

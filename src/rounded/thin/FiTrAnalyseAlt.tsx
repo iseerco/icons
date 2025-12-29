@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrAnalyseAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrAnalyseAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.854,23.146l-6.443-6.443c1.607-1.775,2.596-4.12,2.596-6.697C20.006,4.492,15.52.006,10.006.006S.006,4.492.006,10.006s4.486,10,10,10c2.577,0,4.922-.989,6.697-2.596l6.443,6.443c.098.098.226.146.354.146s.256-.049.354-.146c.195-.195.195-.512,0-.707Zm-13.848-4.141c-4.962,0-9-4.037-9-9S5.043,1.006,10.006,1.006s9,4.037,9,9-4.038,9-9,9Zm4.494-12.006c-.827,0-1.5.673-1.5,1.5v4.5h-1.5v-6.5c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5,1.5v6.5h-1.5v-3.5c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5,1.5v3c0,.827.673,1.5,1.5,1.5h9c.827,0,1.5-.673,1.5-1.5v-4c0-.827-.673-1.5-1.5-1.5Zm-8.5,6h-.5c-.276,0-.5-.225-.5-.5v-3c0-.275.224-.5.5-.5s.5.225.5.5v3.5Zm3.5-6.5c0-.275.224-.5.5-.5s.5.225.5.5v6.5h-1v-6.5Zm5.5,6c0,.275-.224.5-.5.5h-.5v-4.5c0-.275.224-.5.5-.5s.5.225.5.5v4Z"/>
 </svg>
-);
 
-FiTrAnalyseAlt.displayName = 'FiTrAnalyseAlt';
+);

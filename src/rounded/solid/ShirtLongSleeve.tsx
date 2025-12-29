@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShirtLongSleeve: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShirtLongSleeve = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m9,0h6c0,1.654-1.346,3-3,3s-3-1.346-3-3Zm11.815,1.195c-1.226-.659-2.509-1.031-3.82-1.144-.028,2.733-2.255,4.949-4.995,4.949S7.033,2.784,7.005.051c-1.311.113-2.594.486-3.82,1.144C1.221,2.25,0,4.335,0,6.636v11.364c0,1.657,1.343,3,3,3h0v-12c0-.552.448-1,1-1h0c.552,0,1,.448,1,1v11c0,2.209,1.791,4,4,4h6c2.209,0,4-1.791,4-4v-11c0-.552.448-1,1-1h0c.552,0,1,.448,1,1v11.976h0c1.657,0,3-1.343,3-3V6.636c0-2.301-1.221-4.386-3.185-5.44Z"/>
 </svg>
-);
 
-ShirtLongSleeve.displayName = 'ShirtLongSleeve';
+);

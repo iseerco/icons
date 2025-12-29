@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTabFolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTabFolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.5,4h-1.145l-.993-1.894c-.339-.678-1.031-1.106-1.789-1.106h-2.528l.5,1h2.028c.379,0,.725.214.894.553l.759,1.447h-4.871l-.993-1.894c-.339-.678-1.031-1.106-1.789-1.106h-2.528l.5,1h2.028c.379,0,.725.214.894.553l.759,1.447h-4.917l-1.5-3H2.5C1.121,1,0,2.121,0,3.5v19.5h24V6.5c0-1.379-1.121-2.5-2.5-2.5ZM1,3.5c0-.827.673-1.5,1.5-1.5h3.691l1.5,3h13.81c.827,0,1.5.673,1.5,1.5v1.5H1V3.5Zm0,18.5v-13h22v13H1Z"/>
 </svg>
-);
 
-FiTsTabFolder.displayName = 'FiTsTabFolder';
+);

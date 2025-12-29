@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBooking: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBooking = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m6,18.5c0,.829-.671,1.5-1.5,1.5-2.481,0-4.5-2.019-4.5-4.5V6.5C0,4.019,2.019,2,4.5,2h.5v-.5c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5v.5h5v-.5c0-.829.672-1.5,1.5-1.5s1.5.671,1.5,1.5v.5h.5c2.481,0,4.5,2.019,4.5,4.5v7c0,.829-.672,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-5.5H3v7.5c0,.827.673,1.5,1.5,1.5s1.5.671,1.5,1.5Zm14.374-1.167l-5.374-1.535v-4.169c0-.704-.447-1.368-1.129-1.543-1.001-.256-1.884.492-1.884,1.449l.013,7.388-1.152-.835c-.866-.722-2.153-.604-2.874.261-.722.866-.605,2.153.261,2.874l3.227,2.477c.349.268.778.414,1.218.414h.321c1.105,0,2-.895,2-2v-3.198l4.55,1.3c.854.244,1.45,1.035,1.45,1.923v.36c0,.829.672,1.5,1.5,1.5s1.5-.671,1.5-1.5v-.36c0-2.221-1.491-4.197-3.626-4.808Z"/>
 </svg>
-);
 
-FiBrBooking.displayName = 'FiBrBooking';
+);

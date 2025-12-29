@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrWineBottle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m18.314,7.548l-2.347-1.397.032-4.641c.003-.399-.154-.784-.436-1.067-.281-.283-.665-.443-1.064-.443h-5c-.828,0-1.5.671-1.5,1.5v4.628l-2.348,1.421c-1.636.99-2.652,2.793-2.652,4.706v6.245c0,3.032,2.468,5.5,5.5,5.5h7c3.032,0,5.5-2.468,5.5-5.5v-6.226c0-1.928-1.029-3.739-2.686-4.726Zm-.314,10.952c0,1.379-1.121,2.5-2.5,2.5h-7c-1.379,0-2.5-1.121-2.5-2.5v-3.5h8.5c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5H6.034c.081-.771.503-1.479,1.172-1.884l3.071-1.858c.449-.271.724-.758.724-1.283v-1.974h1.976l-.014,1.99c-.004.532.275,1.027.732,1.299l3.085,1.836c.753.449,1.221,1.272,1.221,2.148v6.226Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrWineBottle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18.314,7.548l-2.347-1.397.032-4.641c.003-.399-.154-.784-.436-1.067-.281-.283-.665-.443-1.064-.443h-5c-.828,0-1.5.671-1.5,1.5v4.628l-2.348,1.421c-1.636.99-2.652,2.793-2.652,4.706v6.245c0,3.032,2.468,5.5,5.5,5.5h7c3.032,0,5.5-2.468,5.5-5.5v-6.226c0-1.928-1.029-3.739-2.686-4.726Zm-.314,10.952c0,1.379-1.121,2.5-2.5,2.5h-7c-1.379,0-2.5-1.121-2.5-2.5v-3.5h8.5c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5H6.034c.081-.771.503-1.479,1.172-1.884l3.071-1.858c.449-.271.724-.758.724-1.283v-1.974h1.976l-.014,1.99c-.004.532.275,1.027.732,1.299l3.085,1.836c.753.449,1.221,1.272,1.221,2.148v6.226Z"/></svg>
+
 );
-
-FiBrWineBottle.displayName = 'FiBrWineBottle';

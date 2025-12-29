@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LevelDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.713,18.233a1,1,0,0,0-1.414-.011l-2.885,2.834c-.108.108-.255.244-.414.389V5A5.006,5.006,0,0,0,8,0H1A1,1,0,0,0,1,2H8a3,3,0,0,1,3,3V21.445c-.16-.146-.308-.284-.42-.395L7.7,18.222a1,1,0,1,0-1.4,1.425L9.172,22.47c.2.2.513.487.84.777a3,3,0,0,0,3.977,0c.326-.289.636-.572.833-.769L17.7,19.647A1,1,0,0,0,17.713,18.233Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LevelDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17.713,18.233a1,1,0,0,0-1.414-.011l-2.885,2.834c-.108.108-.255.244-.414.389V5A5.006,5.006,0,0,0,8,0H1A1,1,0,0,0,1,2H8a3,3,0,0,1,3,3V21.445c-.16-.146-.308-.284-.42-.395L7.7,18.222a1,1,0,1,0-1.4,1.425L9.172,22.47c.2.2.513.487.84.777a3,3,0,0,0,3.977,0c.326-.289.636-.572.833-.769L17.7,19.647A1,1,0,0,0,17.713,18.233Z"/></svg>
+
 );
-
-LevelDown.displayName = 'LevelDown';

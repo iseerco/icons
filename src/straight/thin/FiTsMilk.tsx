@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsMilk: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsMilk = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,4.325V1.5c0-.827-.673-1.5-1.5-1.5H6.5c-.827,0-1.5.673-1.5,1.5v2.825L1,9.325v12.175c0,1.378,1.121,2.5,2.5,2.5h17c1.379,0,2.5-1.122,2.5-2.5v-12.175l-4-5Zm-4.74,4.675H2.54l3.2-4h11.719l-3.2,4ZM6.5,1h11c.275,0,.5.224.5.5v2.5H6V1.5c0-.276.225-.5.5-.5ZM2,21.5v-11.5h12v11.5c0,.565.195,1.081.513,1.5H3.5c-.827,0-1.5-.673-1.5-1.5Zm20,0c0,.827-.673,1.5-1.5,1.5h-4c-.827,0-1.5-.673-1.5-1.5v-11.825l3.5-4.375,3.5,4.375v11.825Z"/>
 </svg>
-);
 
-FiTsMilk.displayName = 'FiTsMilk';
+);

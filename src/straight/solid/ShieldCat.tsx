@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShieldCat: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShieldCat = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m14.031,9.737l-.496-.298c-.969-.583-2.102-.583-3.07,0l-.496.298-.974-.541c0,.752.005,2.803.005,2.803,0,1.654,1.346,3,3,3s3-1.346,3-3c0,0,.006-2.061.004-2.803l-.973.541Zm-1.031,3.263l-1,.5-1-.5v-1h2v1Zm6.945-10.403L12-.038l-7.945,2.635c-1.229.407-2.055,1.549-2.055,2.842v6.525c0,6.563,7.005,10.576,9.152,11.65l.805.402.836-.336c2.16-.869,9.207-4.281,9.207-11.716v-6.525c0-1.293-.825-2.435-2.055-2.842Zm-2.945,9.403c0,2.757-2.243,5-5,5s-5-2.243-5-5c0,0-.008-2.026,0-4.503l.006-1.693,2.958,1.643c1.293-.587,2.779-.587,4.072,0l2.959-1.643.005,1.693c.008,2.467,0,4.503,0,4.503Z"/>
 </svg>
-);
 
-ShieldCat.displayName = 'ShieldCat';
+);

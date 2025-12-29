@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrChessKingAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20,20h-.793a40.242,40.242,0,0,1-2.579-9.006,1.5,1.5,0,0,0,.348-2.916s.66-1.026.689-1.088A3.5,3.5,0,0,0,14.5,2h-1V1.5a1.5,1.5,0,0,0-3,0V2h-1A3.5,3.5,0,0,0,6.333,6.99c.029.062.69,1.088.69,1.088a1.5,1.5,0,0,0,.349,2.916A40.242,40.242,0,0,1,4.793,20H4a2,2,0,0,0,0,4H20a2,2,0,0,0,0-4ZM9.078,5.232A.488.488,0,0,1,9.5,5h5a.5.5,0,0,1,.479.647L13.45,8h-2.9L9.022,5.647A.485.485,0,0,1,9.078,5.232ZM10.391,11h3.218a39.5,39.5,0,0,0,2.371,9H8.02A39.5,39.5,0,0,0,10.391,11Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrChessKingAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20,20h-.793a40.242,40.242,0,0,1-2.579-9.006,1.5,1.5,0,0,0,.348-2.916s.66-1.026.689-1.088A3.5,3.5,0,0,0,14.5,2h-1V1.5a1.5,1.5,0,0,0-3,0V2h-1A3.5,3.5,0,0,0,6.333,6.99c.029.062.69,1.088.69,1.088a1.5,1.5,0,0,0,.349,2.916A40.242,40.242,0,0,1,4.793,20H4a2,2,0,0,0,0,4H20a2,2,0,0,0,0-4ZM9.078,5.232A.488.488,0,0,1,9.5,5h5a.5.5,0,0,1,.479.647L13.45,8h-2.9L9.022,5.647A.485.485,0,0,1,9.078,5.232ZM10.391,11h3.218a39.5,39.5,0,0,0,2.371,9H8.02A39.5,39.5,0,0,0,10.391,11Z"/></svg>
+
 );
-
-FiBrChessKingAlt.displayName = 'FiBrChessKingAlt';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBluetoothSpeaker: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m13 11-3 2.5 3 2.5-4 3h-1v-3.243l-1.414 1.329-1.336-1.488 2.251-2.082-2.268-2.083 1.328-1.494 1.438 1.345v-3.283h1l4 3zm5-7v16c0 1.825-1.562 4-9 4s-9-2.175-9-4v-16c0-1.825 1.562-4 9-4s9 2.175 9 4zm-3 15.914v-14.686c-1.21.472-3.175.772-6 .772s-4.79-.3-6-.772v14.686c.283.319 1.837 1.086 6 1.086s5.717-.767 6-1.086zm5-9.414v3h4v-3zm3.744-3.197-1.488-2.605-3.5 2 1.488 2.605zm-4.988 10 3.5 2 1.488-2.605-3.5-2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBluetoothSpeaker = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m13 11-3 2.5 3 2.5-4 3h-1v-3.243l-1.414 1.329-1.336-1.488 2.251-2.082-2.268-2.083 1.328-1.494 1.438 1.345v-3.283h1l4 3zm5-7v16c0 1.825-1.562 4-9 4s-9-2.175-9-4v-16c0-1.825 1.562-4 9-4s9 2.175 9 4zm-3 15.914v-14.686c-1.21.472-3.175.772-6 .772s-4.79-.3-6-.772v14.686c.283.319 1.837 1.086 6 1.086s5.717-.767 6-1.086zm5-9.414v3h4v-3zm3.744-3.197-1.488-2.605-3.5 2 1.488 2.605zm-4.988 10 3.5 2 1.488-2.605-3.5-2z"/></svg>
 );
-
-FiBsBluetoothSpeaker.displayName = 'FiBsBluetoothSpeaker';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CompassAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CompassAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M13,2.051h-2V0h2V2.051Zm7,11.949h2.949c-.478,5.268-4.681,9.472-9.949,9.949v-2.949h-2v2.949c-5.268-.478-9.472-4.681-9.949-9.949h2.949v-2H1.048C1.525,6.732,5.732,2.528,11,2.051v2.949h2V2.051c5.268,.478,9.475,4.682,9.952,9.949h-2.952v2Zm-2.539,4.46l-2.997-7.979-7.905-2.922,2.922,7.905,7.98,2.996Zm-7.52-7.519l1.098,2.972,3,1.127-1.126-3-2.972-1.098Z"/>
 </svg>
-);
 
-CompassAlt.displayName = 'CompassAlt';
+);

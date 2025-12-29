@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsUserSpeaking: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsUserSpeaking = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M15,12.683v2.817h-2.298l-.342,2.478c-.237,1.723-1.728,3.022-3.467,3.022h-.893v3H0v-3H5v-3h3.893c.249,0,.461-.186,.495-.432l.698-5.068h1.557c-.064-.147-.129-.296-.193-.444-.99-2.281-2.015-4.64-2.934-5.776C6.668,3.814,3.675,2.619,.671,3.114h0s0,0,0,0c-.227,.037-.45,.088-.67,.146V.196c.062-.012,.12-.032,.182-.042,0,0,0,0,.001,0h0c4.114-.673,8.213,.964,10.699,4.283,1.142,1.41,2.2,3.846,3.32,6.425,.223,.514,.798,1.821,.798,1.821Zm6.218-1.9l-2.121,2.121c2.533,2.534,2.533,6.659,0,9.193l2.121,2.121c3.703-3.704,3.703-9.731,0-13.436Zm-5.657,5.658c.283,.282,.439,.659,.439,1.06s-.156,.777-.439,1.06l2.121,2.123c.85-.85,1.318-1.98,1.318-3.183s-.469-2.333-1.318-3.183l-2.121,2.123Z"/>
 </svg>
-);
 
-FiBsUserSpeaking.displayName = 'FiBsUserSpeaking';
+);

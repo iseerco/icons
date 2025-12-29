@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Book: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17,0H8V16H22V5A5,5,0,0,0,17,0Z"/><path d="M4.395,16.061A3.013,3.013,0,0,1,5,16H6V.1A5,5,0,0,0,2,5V17.025A4.952,4.952,0,0,1,4.395,16.061Z"/><path d="M22,18H5a3,3,0,0,0,0,6H17a5,5,0,0,0,5-5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Book = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17,0H8V16H22V5A5,5,0,0,0,17,0Z"/><path d="M4.395,16.061A3.013,3.013,0,0,1,5,16H6V.1A5,5,0,0,0,2,5V17.025A4.952,4.952,0,0,1,4.395,16.061Z"/><path d="M22,18H5a3,3,0,0,0,0,6H17a5,5,0,0,0,5-5Z"/></svg>
+
 );
-
-Book.displayName = 'Book';

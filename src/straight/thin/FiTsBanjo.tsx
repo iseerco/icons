@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsBanjo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21.146,6l2.856-2.851L20.857-.002l-2.857,2.852v2.443l-5.565,5.565c-1.32-1.156-3.047-1.858-4.935-1.858-4.136,0-7.5,3.364-7.5,7.5s3.364,7.5,7.5,7.5,7.5-3.364,7.5-7.5c0-1.888-.702-3.616-1.858-4.935l5.565-5.565h2.438Zm-2.146-2.736l1.855-1.852,1.732,1.735-1.856,1.853h-1.731v-1.736ZM7.5,23c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5,6.5,2.916,6.5,6.5-2.916,6.5-6.5,6.5Zm-3.146-7.354l4,4-.707.707-4-4,.707-.707Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsBanjo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21.146,6l2.856-2.851L20.857-.002l-2.857,2.852v2.443l-5.565,5.565c-1.32-1.156-3.047-1.858-4.935-1.858-4.136,0-7.5,3.364-7.5,7.5s3.364,7.5,7.5,7.5,7.5-3.364,7.5-7.5c0-1.888-.702-3.616-1.858-4.935l5.565-5.565h2.438Zm-2.146-2.736l1.855-1.852,1.732,1.735-1.856,1.853h-1.731v-1.736ZM7.5,23c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5,6.5,2.916,6.5,6.5-2.916,6.5-6.5,6.5Zm-3.146-7.354l4,4-.707.707-4-4,.707-.707Z"/></svg>
+
 );
-
-FiTsBanjo.displayName = 'FiTsBanjo';

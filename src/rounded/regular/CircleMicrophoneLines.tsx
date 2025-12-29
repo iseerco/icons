@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CircleMicrophoneLines: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CircleMicrophoneLines = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm6-10c0,2.968-2.166,5.439-5,5.916v1.084c0,.552-.448,1-1,1s-1-.448-1-1v-1.084c-2.834-.477-5-2.948-5-5.916,0-.552.448-1,1-1s1,.448,1,1c0,2.206,1.794,4,4,4s4-1.794,4-4c0-.552.448-1,1-1s1,.448,1,1Zm-8-.107v-4.786c0-.996.681-1.92,1.664-2.08,1.253-.204,2.336.758,2.336,1.973h-1c-.552,0-1,.448-1,1s.448,1,1,1h1v1h-1c-.552,0-1,.448-1,1s.448,1,1,1h1c0,1.215-1.083,2.176-2.336,1.973-.983-.16-1.664-1.083-1.664-2.08Z"/>
 </svg>
-);
 
-CircleMicrophoneLines.displayName = 'CircleMicrophoneLines';
+);

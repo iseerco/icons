@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsChevronDoubleUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_16" data-name="Layer 16" viewBox="0 0 24 24" width={size} height={size} {...props}><g><path d="M12.351,3.533l9.528,9.528L24,10.94,14.472,1.413a3.492,3.492,0,0,0-4.934,0L.005,10.94l2.121,2.121,9.533-9.528a.489.489,0,0,1,.692,0Z"/><path d="M21.879,23,24,20.882,13.066,9.947a1.5,1.5,0,0,0-2.121,0h0L.005,20.882,2.126,23l9.879-9.874Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsChevronDoubleUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g><path d="M12.351,3.533l9.528,9.528L24,10.94,14.472,1.413a3.492,3.492,0,0,0-4.934,0L.005,10.94l2.121,2.121,9.533-9.528a.489.489,0,0,1,.692,0Z"/><path d="M21.879,23,24,20.882,13.066,9.947a1.5,1.5,0,0,0-2.121,0h0L.005,20.882,2.126,23l9.879-9.874Z"/></g></svg>
+
 );
-
-FiBsChevronDoubleUp.displayName = 'FiBsChevronDoubleUp';

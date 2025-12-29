@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBrakeWarning: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBrakeWarning = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M5.636,18.364l-2.121,2.121C-1.164,15.807-1.164,8.193,3.515,3.515l2.121,2.121c-3.509,3.51-3.509,9.219,0,12.729ZM20.485,3.515l-2.121,2.121c3.509,3.51,3.509,9.219,0,12.729l2.121,2.121c4.679-4.679,4.679-12.292,0-16.971Zm-1.485,8.485c0,3.859-3.14,7-7,7s-7-3.141-7-7,3.14-7,7-7,7,3.141,7,7Zm-8,0h2V7h-2v5Zm2.5,3c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5,.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Z"/>
 </svg>
-);
 
-FiBsBrakeWarning.displayName = 'FiBsBrakeWarning';
+);

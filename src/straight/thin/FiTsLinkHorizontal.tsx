@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsLinkHorizontal: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,15.5c0,3.584-2.916,6.5-6.5,6.5h-5c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5h2.449c-.051,.354-.151,.689-.301,1h-2.149c-3.033,0-5.5,2.468-5.5,5.5s2.467,5.5,5.5,5.5h5c3.032,0,5.5-2.468,5.5-5.5,0-2.228-1.335-4.147-3.245-5.011,.08-.33,.144-.666,.184-1.01,2.378,.967,4.061,3.3,4.061,6.021ZM1,8.5C1,5.468,3.467,3,6.5,3h5c3.032,0,5.5,2.468,5.5,5.5s-2.467,5.5-5.5,5.5h-2.149c-.149,.311-.249,.646-.301,1h2.449c3.584,0,6.5-2.916,6.5-6.5s-2.916-6.5-6.5-6.5H6.5C2.916,2,0,4.916,0,8.5c0,2.721,1.683,5.054,4.061,6.021,.04-.344,.104-.68,.184-1.01-1.91-.863-3.245-2.783-3.245-5.011Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsLinkHorizontal = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,15.5c0,3.584-2.916,6.5-6.5,6.5h-5c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5h2.449c-.051,.354-.151,.689-.301,1h-2.149c-3.033,0-5.5,2.468-5.5,5.5s2.467,5.5,5.5,5.5h5c3.032,0,5.5-2.468,5.5-5.5,0-2.228-1.335-4.147-3.245-5.011,.08-.33,.144-.666,.184-1.01,2.378,.967,4.061,3.3,4.061,6.021ZM1,8.5C1,5.468,3.467,3,6.5,3h5c3.032,0,5.5,2.468,5.5,5.5s-2.467,5.5-5.5,5.5h-2.149c-.149,.311-.249,.646-.301,1h2.449c3.584,0,6.5-2.916,6.5-6.5s-2.916-6.5-6.5-6.5H6.5C2.916,2,0,4.916,0,8.5c0,2.721,1.683,5.054,4.061,6.021,.04-.344,.104-.68,.184-1.01-1.91-.863-3.245-2.783-3.245-5.011Z"/></svg>
+
 );
-
-FiTsLinkHorizontal.displayName = 'FiTsLinkHorizontal';

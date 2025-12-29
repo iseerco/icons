@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BasketballHoop: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M3.867,12,5,21.062V24H7V22H9v2h2V22h2v2h2V22h2v2h2V21.274l.019-.153h0L20.129,12Zm13.76,4H15V14h2.871ZM13,16H11V14h2ZM9,14v2H6.383l-.25-2ZM6.883,20l-.25-2H9v2ZM11,20V18h2v2Zm4-2h2.384l-.244,2H15ZM16,7v3H8V7Zm8-3V18H21.413L22,13.181V10H18V5H6v5H2v3.188L2.6,18H0V4A4,4,0,0,1,4,0H20A4,4,0,0,1,24,4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BasketballHoop = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M3.867,12,5,21.062V24H7V22H9v2h2V22h2v2h2V22h2v2h2V21.274l.019-.153h0L20.129,12Zm13.76,4H15V14h2.871ZM13,16H11V14h2ZM9,14v2H6.383l-.25-2ZM6.883,20l-.25-2H9v2ZM11,20V18h2v2Zm4-2h2.384l-.244,2H15ZM16,7v3H8V7Zm8-3V18H21.413L22,13.181V10H18V5H6v5H2v3.188L2.6,18H0V4A4,4,0,0,1,4,0H20A4,4,0,0,1,24,4Z"/></svg>
+
 );
-
-BasketballHoop.displayName = 'BasketballHoop';

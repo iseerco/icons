@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TermsInfo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TermsInfo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M14,7H4v-2H14v2Zm-6,10v-2H4v2h4Zm16,0c0,3.86-3.14,7-7,7s-7-3.14-7-7,3.14-7,7-7,7,3.14,7,7Zm-2,0c0-2.757-2.243-5-5-5s-5,2.243-5,5,2.243,5,5,5,5-2.243,5-5Zm-6-1h2v-2h-2v2Zm0,4h2v-3h-2v3Zm-6.483,2H2S2,3,2,3c0-.551,.449-1,1-1H15c.551,0,1,.449,1,1v5.059c.328-.036,.661-.059,1-.059s.671,.022,1,.059V3c0-1.654-1.346-3-3-3H3C1.346,0,0,1.346,0,3V24H11.349c-.706-.571-1.325-1.244-1.831-2Zm1.831-12H4v2h5.518c.506-.756,1.125-1.429,1.831-2Z"/>
 </svg>
-);
 
-TermsInfo.displayName = 'TermsInfo';
+);

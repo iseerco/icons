@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsStageConcert: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsStageConcert = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.008,4.103L13.507.042c-.958-.455-2.057-.456-3.016,0L1.992,4.103c-1.21.578-1.992,1.817-1.992,3.158v16.739h3v-2h3.337l-.753,2h12.831l-.753-2h3.337v2h3V7.261c0-1.341-.782-2.58-1.992-3.158Zm-10.225-1.352c.136-.066.294-.066.432,0l4.711,2.25H7.074l4.71-2.249Zm1.216,16.249v-5.279l1.937-1.55-1.874-2.342-3.063,2.45v6.721H3v-11h2v2h3v-2h8v2h3v-2h2v11h-8Z"/>
 </svg>
-);
 
-FiBsStageConcert.displayName = 'FiBsStageConcert';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GameBoardAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM13,22V20.414L20.414,13H22v1.586L14.586,22Zm0-9h4.586L13,17.586Zm9-8v6H13V2h6A3,3,0,0,1,22,5ZM2,11V9.414L9.414,2H11V3.586L3.586,11Zm9-4.586V11H6.414ZM5,2H6.586L2,6.586V5A3,3,0,0,1,5,2ZM2,19V13h9v9H5A3,3,0,0,1,2,19Zm17,3H17.414L22,17.414V19A3,3,0,0,1,19,22Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GameBoardAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM13,22V20.414L20.414,13H22v1.586L14.586,22Zm0-9h4.586L13,17.586Zm9-8v6H13V2h6A3,3,0,0,1,22,5ZM2,11V9.414L9.414,2H11V3.586L3.586,11Zm9-4.586V11H6.414ZM5,2H6.586L2,6.586V5A3,3,0,0,1,5,2ZM2,19V13h9v9H5A3,3,0,0,1,2,19Zm17,3H17.414L22,17.414V19A3,3,0,0,1,19,22Z"/></svg>
+
 );
-
-GameBoardAlt.displayName = 'GameBoardAlt';

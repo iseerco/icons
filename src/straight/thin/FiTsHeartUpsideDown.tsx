@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsHeartUpsideDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsHeartUpsideDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M12.291,1.284l-.291-.208-.291,.208C9.754,2.681,0,9.991,0,16.75c0,3.446,2.804,6.25,6.25,6.25,2.504,0,4.777-1.851,5.75-4.354,.973,2.504,3.246,4.354,5.75,4.354,3.446,0,6.25-2.804,6.25-6.25,0-6.759-9.754-14.069-11.709-15.466Zm5.459,20.716c-2.748,0-5.25-2.86-5.25-6h-1c0,3.14-2.502,6-5.25,6-2.895,0-5.25-2.355-5.25-5.25C1,11.979,6.858,6.043,12,2.307c5.142,3.736,11,9.672,11,14.443,0,2.895-2.355,5.25-5.25,5.25Z"/>
 </svg>
-);
 
-FiTsHeartUpsideDown.displayName = 'FiTsHeartUpsideDown';
+);

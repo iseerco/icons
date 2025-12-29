@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCubesStacked: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCubesStacked = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.5,14h-.051c.024-.165.051-.329.051-.5v-3c0-1.93-1.57-3.5-3.5-3.5h-.051c.024-.165.051-.329.051-.5v-3c0-1.93-1.57-3.5-3.5-3.5h-3c-1.93,0-3.5,1.57-3.5,3.5v3c0,.171.027.335.051.5h-.051c-1.93,0-3.5,1.57-3.5,3.5v3c0,.171.027.335.051.5h-.051c-1.93,0-3.5,1.57-3.5,3.5v3c0,1.93,1.57,3.5,3.5,3.5h3c.744,0,1.432-.238,2-.635.568.398,1.256.635,2,.635h3c.744,0,1.432-.238,2-.635.568.398,1.256.635,2,.635h3c1.93,0,3.5-1.57,3.5-3.5v-3c0-1.93-1.57-3.5-3.5-3.5Zm-3-3.5v3c0,.275-.225.5-.5.5h-3c-.275,0-.5-.225-.5-.5v-3c0-.275.225-.5.5-.5h3c.275,0,.5.225.5.5Zm-7.5-7c0-.275.225-.5.5-.5h3c.275,0,.5.225.5.5v3c0,.275-.225.5-.5.5h-3c-.275,0-.5-.225-.5-.5v-3Zm-3.5,7c0-.275.225-.5.5-.5h3c.275,0,.5.225.5.5v3c0,.275-.225.5-.5.5h-3c-.275,0-.5-.225-.5-.5v-3Zm0,10.5h-3c-.275,0-.5-.225-.5-.5v-3c0-.275.225-.5.5-.5h3c.275,0,.5.225.5.5v3c0,.275-.225.5-.5.5Zm7,0h-3c-.275,0-.5-.225-.5-.5v-3c0-.275.225-.5.5-.5h3c.275,0,.5.225.5.5v3c0,.275-.225.5-.5.5Zm7.5-.5c0,.275-.225.5-.5.5h-3c-.275,0-.5-.225-.5-.5v-3c0-.275.225-.5.5-.5h3c.275,0,.5.225.5.5v3Z"/>
 </svg>
-);
 
-FiBrCubesStacked.displayName = 'FiBrCubesStacked';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Cloud: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M16,23H5.5A5.49,5.49,0,0,1,2.9,12.671,7.915,7.915,0,0,1,2,9,8,8,0,0,1,17.792,7.212,8,8,0,0,1,16,23ZM10,3A6.006,6.006,0,0,0,4,9a5.936,5.936,0,0,0,1.182,3.562l.882,1.193-1.436.371A3.491,3.491,0,0,0,5.5,21H16a6,6,0,0,0,.8-11.938l-.757-.1-.1-.758A6.01,6.01,0,0,0,10,3Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Cloud = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><path d="M16,23H5.5A5.49,5.49,0,0,1,2.9,12.671,7.915,7.915,0,0,1,2,9,8,8,0,0,1,17.792,7.212,8,8,0,0,1,16,23ZM10,3A6.006,6.006,0,0,0,4,9a5.936,5.936,0,0,0,1.182,3.562l.882,1.193-1.436.371A3.491,3.491,0,0,0,5.5,21H16a6,6,0,0,0,.8-11.938l-.757-.1-.1-.758A6.01,6.01,0,0,0,10,3Z"/></g></svg>
+
 );
-
-Cloud.displayName = 'Cloud';

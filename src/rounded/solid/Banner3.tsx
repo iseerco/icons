@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Banner3: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Banner3 = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,2.619v4.212c0,1.807-1.507,3.249-3.312,3.169L.42,9.41C.105,8.873-.049,8.246.014,7.602l.365-3.705c.176-1.542,1.443-2.731,2.993-2.808L21.25.003c1.496-.075,2.75,1.118,2.75,2.616Zm-14.427,16.258l-5.938-3.464-.733,1.181c-.538.867-.896,1.692-.901,2.885h-.002v.295c0,1.322.826,2.488,2.091,2.871l4.386,1.329c.793.198,1.285-.836.631-1.326l-3.339-2.172-.025-.018,3.769-1.54c.023-.01.038-.031.06-.042ZM1.458,11.488c.147.122.289.252.45.35l8.369,5.259c.162.102.346.153.532.153.108,0,.218-.018.323-.054.286-.097.512-.318.616-.601.168-.457.253-.922.253-1.38v-3.447l-10.542-.281Z"/>
 </svg>
-);
 
-Banner3.displayName = 'Banner3';
+);

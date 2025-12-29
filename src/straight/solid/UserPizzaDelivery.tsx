@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UserPizzaDelivery: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m17 13h-10c-2.757 0-5 2.243-5 5v6h4v-1.5c0-.828.672-1.5 1.5-1.5h2.5s0 1 1 1h2s1 .105 1-1h2.5c.828 0 1.5.672 1.5 1.5v1.5h4v-6c0-2.757-2.243-5-5-5zm1 6h-12v-1.5c0-.828.672-1.5 1.5-1.5h2.5s0 1 1 1h2s1 .105 1-1h2.5c.828 0 1.5.672 1.5 1.5zm-14-14v-2h2.815c1.037-1.791 2.97-3 5.185-3 2.967 0 5.431 2.167 5.91 5zm2.09 2h11.819c-.478 2.833-2.942 5-5.91 5s-5.431-2.167-5.91-5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UserPizzaDelivery = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17 13h-10c-2.757 0-5 2.243-5 5v6h4v-1.5c0-.828.672-1.5 1.5-1.5h2.5s0 1 1 1h2s1 .105 1-1h2.5c.828 0 1.5.672 1.5 1.5v1.5h4v-6c0-2.757-2.243-5-5-5zm1 6h-12v-1.5c0-.828.672-1.5 1.5-1.5h2.5s0 1 1 1h2s1 .105 1-1h2.5c.828 0 1.5.672 1.5 1.5zm-14-14v-2h2.815c1.037-1.791 2.97-3 5.185-3 2.967 0 5.431 2.167 5.91 5zm2.09 2h11.819c-.478 2.833-2.942 5-5.91 5s-5.431-2.167-5.91-5z"/></svg>
 );
-
-UserPizzaDelivery.displayName = 'UserPizzaDelivery';

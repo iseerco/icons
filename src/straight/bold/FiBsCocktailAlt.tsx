@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCocktailAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,0V1.5A6.033,6.033,0,0,0,1.954,5.94l8.546,8.2V21H6v3H18V21H13.5V14.139l8.529-8.184A6.033,6.033,0,0,0,24,1.5V0ZM19.982,3.763,12,11.421,8.434,8h4.243L15.8,5H5.307L3.988,3.735A3.038,3.038,0,0,1,3.4,3H20.6A3.212,3.212,0,0,1,19.982,3.763Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCocktailAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M0,0V1.5A6.033,6.033,0,0,0,1.954,5.94l8.546,8.2V21H6v3H18V21H13.5V14.139l8.529-8.184A6.033,6.033,0,0,0,24,1.5V0ZM19.982,3.763,12,11.421,8.434,8h4.243L15.8,5H5.307L3.988,3.735A3.038,3.038,0,0,1,3.4,3H20.6A3.212,3.212,0,0,1,19.982,3.763Z"/></svg>
+
 );
-
-FiBsCocktailAlt.displayName = 'FiBsCocktailAlt';

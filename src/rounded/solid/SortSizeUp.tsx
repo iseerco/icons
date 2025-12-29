@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SortSizeUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,18v2c0,1.65-1.35,3-3,3h-2c-1.65,0-3-1.35-3-3v-2c0-1.65,1.35-3,3-3h2c1.65,0,3,1.35,3,3ZM21,1h-4c-1.65,0-3,1.35-3,3v4c0,1.65,1.35,3,3,3h4c1.65,0,3-1.35,3-3V4c0-1.65-1.35-3-3-3Zm-12.88-.12c-1.17-1.17-3.07-1.17-4.22-.02L.31,4.28c-.4,.38-.42,1.01-.04,1.41,.38,.4,1.01,.42,1.41,.03l3.31-3.15V23c0,.55,.45,1,1,1s1-.45,1-1V2.57l3.31,3.15c.19,.18,.44,.28,.69,.28,.26,0,.53-.1,.72-.31,.38-.4,.37-1.03-.04-1.41L8.12,.88Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SortSizeUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,18v2c0,1.65-1.35,3-3,3h-2c-1.65,0-3-1.35-3-3v-2c0-1.65,1.35-3,3-3h2c1.65,0,3,1.35,3,3ZM21,1h-4c-1.65,0-3,1.35-3,3v4c0,1.65,1.35,3,3,3h4c1.65,0,3-1.35,3-3V4c0-1.65-1.35-3-3-3Zm-12.88-.12c-1.17-1.17-3.07-1.17-4.22-.02L.31,4.28c-.4,.38-.42,1.01-.04,1.41,.38,.4,1.01,.42,1.41,.03l3.31-3.15V23c0,.55,.45,1,1,1s1-.45,1-1V2.57l3.31,3.15c.19,.18,.44,.28,.69,.28,.26,0,.53-.1,.72-.31,.38-.4,.37-1.03-.04-1.41L8.12,.88Z"/></svg>
+
 );
-
-SortSizeUp.displayName = 'SortSizeUp';

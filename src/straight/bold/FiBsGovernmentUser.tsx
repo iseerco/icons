@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsGovernmentUser: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsGovernmentUser = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,16.5c0-3.032-2.467-5.5-5.5-5.5h-5c-3.033,0-5.5,2.468-5.5,5.5v1.5H0v3h1v3h3v-3h12v3h3v-3h1v-3h-2v-1.5Zm-3,0v1.5h-3.534l-.607-2.272,1.152-1.728h.49c1.378,0,2.5,1.121,2.5,2.5Zm-10,0c0-1.379,1.122-2.5,2.5-2.5h.49l1.152,1.728-.607,2.272h-3.534v-1.5Zm5-6.5c2.757,0,5-2.243,5-5S12.757,0,10,0s-5,2.243-5,5,2.243,5,5,5Zm0-7c1.103,0,2,.897,2,2s-.897,2-2,2-2-.897-2-2,.897-2,2-2Zm14,0h-1v6l-2.5-2.5-2.5,2.5V3h-1V0h7v3Z"/>
 </svg>
-);
 
-FiBsGovernmentUser.displayName = 'FiBsGovernmentUser';
+);

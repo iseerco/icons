@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Forward: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M3.787,20.656A3.789,3.789,0,0,1,0,16.87V7.13A3.783,3.783,0,0,1,6.021,4.079L9.8,6.853a3.783,3.783,0,0,1,6.01-2.774l6.641,4.87a3.784,3.784,0,0,1,0,6.1l-6.641,4.87A3.783,3.783,0,0,1,9.8,17.147L6.021,19.921A3.775,3.775,0,0,1,3.787,20.656Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Forward = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M3.787,20.656A3.789,3.789,0,0,1,0,16.87V7.13A3.783,3.783,0,0,1,6.021,4.079L9.8,6.853a3.783,3.783,0,0,1,6.01-2.774l6.641,4.87a3.784,3.784,0,0,1,0,6.1l-6.641,4.87A3.783,3.783,0,0,1,9.8,17.147L6.021,19.921A3.775,3.775,0,0,1,3.787,20.656Z"/></svg>
+
 );
-
-Forward.displayName = 'Forward';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Monument: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,23c0,.552-.448,1-1,1H1c-.552,0-1-.448-1-1s.448-1,1-1H23c.552,0,1,.448,1,1ZM2,19c0-.552,.448-1,1-1h2.065l1.494-12.694c.131-1.112,.639-2.16,1.43-2.952l1.183-1.182c1.511-1.512,4.146-1.512,5.656,0l1.183,1.182c.792,.792,1.299,1.84,1.43,2.952l1.494,12.694h2.065c.552,0,1,.448,1,1s-.448,1-1,1H3c-.552,0-1-.448-1-1Zm14.921-1l-1.294-11h-2.626v11h3.921ZM8.661,5h6.678c-.144-.462-.398-.888-.742-1.232l-1.183-1.182c-.756-.756-2.072-.756-2.828,0l-1.183,1.182c-.344,.344-.598,.77-.742,1.232Zm-1.582,13h3.921V7h-2.626l-1.294,11Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Monument = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,23c0,.552-.448,1-1,1H1c-.552,0-1-.448-1-1s.448-1,1-1H23c.552,0,1,.448,1,1ZM2,19c0-.552,.448-1,1-1h2.065l1.494-12.694c.131-1.112,.639-2.16,1.43-2.952l1.183-1.182c1.511-1.512,4.146-1.512,5.656,0l1.183,1.182c.792,.792,1.299,1.84,1.43,2.952l1.494,12.694h2.065c.552,0,1,.448,1,1s-.448,1-1,1H3c-.552,0-1-.448-1-1Zm14.921-1l-1.294-11h-2.626v11h3.921ZM8.661,5h6.678c-.144-.462-.398-.888-.742-1.232l-1.183-1.182c-.756-.756-2.072-.756-2.828,0l-1.183,1.182c-.344,.344-.598,.77-.742,1.232Zm-1.582,13h3.921V7h-2.626l-1.294,11Z"/></svg>
+
 );
-
-Monument.displayName = 'Monument';

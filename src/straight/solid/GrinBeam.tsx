@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GrinBeam: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0A12.013,12.013,0,0,0,0,12c.6,15.9,23.4,15.893,24,0A12.013,12.013,0,0,0,12,0ZM8,7c1.768,0,3,2.108,3,4H9c0-1.054-.679-2-1-2s-1,.946-1,2H5C5,9.108,6.232,7,8,7Zm4.007,12C8.671,19,6.615,16.28,6,14a21.841,21.841,0,0,0,6,1,21.923,21.923,0,0,0,6.007-1C17.392,16.28,15.343,19,12.007,19ZM17,11c0-1.054-.679-2-1-2s-1,.946-1,2H13c.248-5.287,5.754-5.281,6,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GrinBeam = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,0A12.013,12.013,0,0,0,0,12c.6,15.9,23.4,15.893,24,0A12.013,12.013,0,0,0,12,0ZM8,7c1.768,0,3,2.108,3,4H9c0-1.054-.679-2-1-2s-1,.946-1,2H5C5,9.108,6.232,7,8,7Zm4.007,12C8.671,19,6.615,16.28,6,14a21.841,21.841,0,0,0,6,1,21.923,21.923,0,0,0,6.007-1C17.392,16.28,15.343,19,12.007,19ZM17,11c0-1.054-.679-2-1-2s-1,.946-1,2H13c.248-5.287,5.754-5.281,6,0Z"/></svg>
+
 );
-
-GrinBeam.displayName = 'GrinBeam';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UserTrust: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UserTrust = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M3,6C3,2.691,5.692,0,9,0s6,2.691,6,6-2.691,6-6,6S3,9.309,3,6Zm21,12c0,3.314-2.686,6-6,6s-6-2.686-6-6,2.686-6,6-6,6,2.686,6,6Zm-2.288-1.702c-.383-.399-1.017-.41-1.414-.029l-2.713,2.624c-.143,.141-.379,.144-.522,.002l-1.354-1.331c-.396-.388-1.028-.381-1.414,.014-.387,.395-.381,1.027,.014,1.414l1.354,1.332c.46,.449,1.062,.674,1.663,.674s1.201-.225,1.653-.671l2.703-2.614c.398-.383,.411-1.016,.029-1.414Zm-11.712,1.702c0-1.368,.345-2.655,.95-3.781-.629-.14-1.28-.219-1.95-.219h0C4.044,14,.01,18.028,0,22.983c-.001,.557,.443,1.017,1,1.017H12.721c-1.665-1.466-2.721-3.607-2.721-6Z"/>
 </svg>
-);
 
-UserTrust.displayName = 'UserTrust';
+);

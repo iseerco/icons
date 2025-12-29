@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SmartGlasses: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m.146 8c.159-.613.446-1.192.878-1.672.758-.844 1.843-1.328 2.977-1.328h3v2c0 .551-.449 1-1 1zm22.831-1.672c-.758-.844-1.843-1.328-2.977-1.328h-11v2c0 1.654-1.346 3-3 3h-5.915l.587 5.43c.22 2.035 1.93 3.57 3.977 3.57h2.042c1.487 0 2.842-.816 3.537-2.131l1.01-1.913c.219-.414.605-.459.761-.459s.543.045.762.459l1.01 1.912c.695 1.314 2.05 2.131 3.537 2.131h2.043c2.047 0 3.757-1.535 3.977-3.57l.649-6c.122-1.127-.243-2.258-1-3.102z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SmartGlasses = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m.146 8c.159-.613.446-1.192.878-1.672.758-.844 1.843-1.328 2.977-1.328h3v2c0 .551-.449 1-1 1zm22.831-1.672c-.758-.844-1.843-1.328-2.977-1.328h-11v2c0 1.654-1.346 3-3 3h-5.915l.587 5.43c.22 2.035 1.93 3.57 3.977 3.57h2.042c1.487 0 2.842-.816 3.537-2.131l1.01-1.913c.219-.414.605-.459.761-.459s.543.045.762.459l1.01 1.912c.695 1.314 2.05 2.131 3.537 2.131h2.043c2.047 0 3.757-1.535 3.977-3.57l.649-6c.122-1.127-.243-2.258-1-3.102z"/></svg>
 );
-
-SmartGlasses.displayName = 'SmartGlasses';

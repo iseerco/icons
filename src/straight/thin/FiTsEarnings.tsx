@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsEarnings: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsEarnings = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,1.5v9h-1V1.707L.743,23.965l-.707-.707L22.293,1h-8.793V0h9c.231,0,.447.057.643.15l.004-.004.013.013c.296.146.535.385.681.681l.013.013-.004.004c.094.196.15.412.15.643ZM2,5.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5-1.57,3.5-3.5,3.5-3.5-1.57-3.5-3.5Zm1,0c0,1.379,1.122,2.5,2.5,2.5s2.5-1.121,2.5-2.5-1.122-2.5-2.5-2.5-2.5,1.121-2.5,2.5Zm19,13c0,1.93-1.57,3.5-3.5,3.5s-3.5-1.57-3.5-3.5,1.57-3.5,3.5-3.5,3.5,1.57,3.5,3.5Zm-1,0c0-1.379-1.122-2.5-2.5-2.5s-2.5,1.121-2.5,2.5,1.122,2.5,2.5,2.5,2.5-1.121,2.5-2.5Z"/>
 </svg>
-);
 
-FiTsEarnings.displayName = 'FiTsEarnings';
+);

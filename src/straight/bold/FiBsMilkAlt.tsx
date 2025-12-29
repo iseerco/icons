@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMilkAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMilkAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.989,9.334l-1.463-3.415c-.349-.814-.526-1.676-.526-2.561v-.358h1V0H6v3h1v.358c0,.885-.177,1.746-.526,2.561l-1.463,3.415c-.67,1.564-1.011,3.222-1.011,4.924v9.742h16v-9.742c0-1.702-.34-3.359-1.011-4.924Zm-1.989,11.666H7v-3h8v-5h-7.907c.113-.852.332-1.685.675-2.484l1.463-3.415c.51-1.189.768-2.449.768-3.742v-.358h4v.358c0,1.293.258,2.553.768,3.742l1.463,3.415c.51,1.189.769,2.448.769,3.742v6.742Z"/>
 </svg>
-);
 
-FiBsMilkAlt.displayName = 'FiBsMilkAlt';
+);

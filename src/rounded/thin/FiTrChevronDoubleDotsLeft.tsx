@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrChevronDoubleDotsLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16 12c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1zm-6 0c0 .552.448 1 1 1s1-.448 1-1-.448-1-1-1-1 .448-1 1zm9-1c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zm4 0c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zm-21.268 2.768c-.472-.473-.732-1.1-.732-1.768s.26-1.295.732-1.768l8.379-8.378c.195-.195.195-.512 0-.707s-.512-.195-.707 0l-8.379 8.378c-.661.661-1.025 1.54-1.025 2.475s.364 1.813 1.025 2.475l8.378 8.379c.195.195.512.195.707 0s.195-.512 0-.707zm11.25-9.993c-.195-.195-.512-.195-.707 0l-6.596 6.596c-.898.898-.898 2.36 0 3.258l6.596 6.596c.195.195.512.195.707 0s.195-.512 0-.707l-6.596-6.596c-.508-.508-.508-1.335 0-1.844l6.596-6.596c.195-.195.195-.512 0-.707z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrChevronDoubleDotsLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m16 12c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1zm-6 0c0 .552.448 1 1 1s1-.448 1-1-.448-1-1-1-1 .448-1 1zm9-1c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zm4 0c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zm-21.268 2.768c-.472-.473-.732-1.1-.732-1.768s.26-1.295.732-1.768l8.379-8.378c.195-.195.195-.512 0-.707s-.512-.195-.707 0l-8.379 8.378c-.661.661-1.025 1.54-1.025 2.475s.364 1.813 1.025 2.475l8.378 8.379c.195.195.512.195.707 0s.195-.512 0-.707zm11.25-9.993c-.195-.195-.512-.195-.707 0l-6.596 6.596c-.898.898-.898 2.36 0 3.258l6.596 6.596c.195.195.512.195.707 0s.195-.512 0-.707l-6.596-6.596c-.508-.508-.508-1.335 0-1.844l6.596-6.596c.195-.195.195-.512 0-.707z"/></svg>
 );
-
-FiTrChevronDoubleDotsLeft.displayName = 'FiTrChevronDoubleDotsLeft';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsKissBeam: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width={size} height={size} viewBox="0 0 24 24" {...props}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Zm2.473-7c.325,.318,.527,.761,.527,1.25,0,.965-.785,1.75-1.75,1.75h-2.25v-1h2.25c.413,0,.75-.336,.75-.75s-.337-.75-.75-.75h-1.25v-1h1.25c.413,0,.75-.336,.75-.75s-.337-.75-.75-.75h-2.25v-1h2.25c.965,0,1.75,.785,1.75,1.75,0,.489-.202,.932-.527,1.25Zm-4.473-5h-1c0-1.43-.785-3-1.5-3s-1.5,1.57-1.5,3h-1c0-1.888,1.069-4,2.5-4s2.5,2.112,2.5,4Zm9,0h-1c0-1.43-.785-3-1.5-3s-1.5,1.57-1.5,3h-1c0-1.888,1.069-4,2.5-4s2.5,2.112,2.5,4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsKissBeam = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Zm2.473-7c.325,.318,.527,.761,.527,1.25,0,.965-.785,1.75-1.75,1.75h-2.25v-1h2.25c.413,0,.75-.336,.75-.75s-.337-.75-.75-.75h-1.25v-1h1.25c.413,0,.75-.336,.75-.75s-.337-.75-.75-.75h-2.25v-1h2.25c.965,0,1.75,.785,1.75,1.75,0,.489-.202,.932-.527,1.25Zm-4.473-5h-1c0-1.43-.785-3-1.5-3s-1.5,1.57-1.5,3h-1c0-1.888,1.069-4,2.5-4s2.5,2.112,2.5,4Zm9,0h-1c0-1.43-.785-3-1.5-3s-1.5,1.57-1.5,3h-1c0-1.888,1.069-4,2.5-4s2.5,2.112,2.5,4Z"/></svg>
+
 );
-
-FiTsKissBeam.displayName = 'FiTsKissBeam';

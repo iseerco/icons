@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RewindButtonCircle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RewindButtonCircle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm4.925-15.104c-.664-.333-1.446-.266-2.042,.176l-1.883,1.527c-.015-.726-.424-1.376-1.075-1.704-.663-.333-1.446-.265-2.076,.203l-4.105,3.332c-.501,.372-.789,.944-.789,1.569s.288,1.196,.755,1.541l4.173,3.386c.597,.442,1.378,.509,2.042,.176,.651-.328,1.06-.978,1.075-1.704l1.883,1.528c.345,.256,.752,.386,1.162,.386,.299,0,.6-.069,.88-.21,.663-.334,1.075-1.002,1.075-1.745v-6.717c0-.743-.412-1.411-1.075-1.745Zm-5.925,8.363l-4.03-3.249,4.03-3.27v6.519Zm5,0l-4.016-3.259,4.016-3.259v6.519Z"/>
 </svg>
-);
 
-RewindButtonCircle.displayName = 'RewindButtonCircle';
+);

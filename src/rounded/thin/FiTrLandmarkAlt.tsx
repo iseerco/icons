@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrLandmarkAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,23.5c0,.276-.224,.5-.5,.5H.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5H23.5c.276,0,.5,.224,.5,.5ZM3,19v-7H1.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h1.5C3,6.205,6.769,2.274,11.5,2.014V.5c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v1.514c4.731,.26,8.5,4.191,8.5,8.986h1.5c.276,0,.5,.224,.5,.5s-.224,.5-.5,.5h-1.5v7h1.5c.276,0,.5,.224,.5,.5s-.224,.5-.5,.5H1.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h1.5Zm6-7v7h6v-7h-6Zm11,0h-4v7h4v-7Zm-16-1H20c0-4.411-3.589-8-8-8S4,6.589,4,11Zm0,8h4v-7H4v7Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrLandmarkAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,23.5c0,.276-.224,.5-.5,.5H.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5H23.5c.276,0,.5,.224,.5,.5ZM3,19v-7H1.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h1.5C3,6.205,6.769,2.274,11.5,2.014V.5c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v1.514c4.731,.26,8.5,4.191,8.5,8.986h1.5c.276,0,.5,.224,.5,.5s-.224,.5-.5,.5h-1.5v7h1.5c.276,0,.5,.224,.5,.5s-.224,.5-.5,.5H1.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h1.5Zm6-7v7h6v-7h-6Zm11,0h-4v7h4v-7Zm-16-1H20c0-4.411-3.589-8-8-8S4,6.589,4,11Zm0,8h4v-7H4v7Z"/></svg>
+
 );
-
-FiTrLandmarkAlt.displayName = 'FiTrLandmarkAlt';

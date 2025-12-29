@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrHexagon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M.01,12.01c0-.73,.18-1.47,.54-2.13L4.03,3.39c.79-1.47,2.31-2.38,3.98-2.38h8c1.67,0,3.2,.92,3.99,2.39l3.46,6.48c.71,1.33,.71,2.92,0,4.26l-3.46,6.48c-.79,1.47-2.31,2.39-3.99,2.39H8.01c-1.67,0-3.19-.91-3.98-2.38L.55,14.15C.19,13.48,.01,12.75,.01,12.01Zm22.98,0c0-.57-.14-1.14-.42-1.66l-3.46-6.48c-.61-1.15-1.8-1.86-3.1-1.86H8.01c-1.3,0-2.49,.71-3.1,1.85L1.43,10.35c-.56,1.04-.56,2.29,0,3.33l3.48,6.48c.61,1.14,1.8,1.85,3.1,1.85h8c1.3,0,2.49-.71,3.1-1.86h0l3.46-6.48c.28-.52,.42-1.09,.42-1.66Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrHexagon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M.01,12.01c0-.73,.18-1.47,.54-2.13L4.03,3.39c.79-1.47,2.31-2.38,3.98-2.38h8c1.67,0,3.2,.92,3.99,2.39l3.46,6.48c.71,1.33,.71,2.92,0,4.26l-3.46,6.48c-.79,1.47-2.31,2.39-3.99,2.39H8.01c-1.67,0-3.19-.91-3.98-2.38L.55,14.15C.19,13.48,.01,12.75,.01,12.01Zm22.98,0c0-.57-.14-1.14-.42-1.66l-3.46-6.48c-.61-1.15-1.8-1.86-3.1-1.86H8.01c-1.3,0-2.49,.71-3.1,1.85L1.43,10.35c-.56,1.04-.56,2.29,0,3.33l3.48,6.48c.61,1.14,1.8,1.85,3.1,1.85h8c1.3,0,2.49-.71,3.1-1.86h0l3.46-6.48c.28-.52,.42-1.09,.42-1.66Z"/></svg>
+
 );
-
-FiTrHexagon.displayName = 'FiTrHexagon';

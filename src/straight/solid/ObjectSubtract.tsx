@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ObjectSubtract: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M4,16H0v-4H2v2h2v2Zm6-2H6v2h4v-2Zm6-2h-2v2h-2v2h4v-4Zm0-6h-2v4h2V6Zm0-3c0-1.65-1.35-3-3-3h-1V2h1c.55,0,1,.45,1,1v1h2v-1ZM10,0H6V2h4V0ZM2,3c0-.55,.45-1,1-1h1V0h-1C1.35,0,0,1.35,0,3v1H2v-1Zm0,3H0v4H2V6Zm22,5v13H8v-6h10V8h3c1.65,0,3,1.35,3,3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ObjectSubtract = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M4,16H0v-4H2v2h2v2Zm6-2H6v2h4v-2Zm6-2h-2v2h-2v2h4v-4Zm0-6h-2v4h2V6Zm0-3c0-1.65-1.35-3-3-3h-1V2h1c.55,0,1,.45,1,1v1h2v-1ZM10,0H6V2h4V0ZM2,3c0-.55,.45-1,1-1h1V0h-1C1.35,0,0,1.35,0,3v1H2v-1Zm0,3H0v4H2V6Zm22,5v13H8v-6h10V8h3c1.65,0,3,1.35,3,3Z"/></svg>
+
 );
-
-ObjectSubtract.displayName = 'ObjectSubtract';

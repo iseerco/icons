@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Ban: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Ban = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M469.333,256c0.1,117.726-95.256,213.243-212.982,213.343c-49.313,0.042-97.116-17.016-135.263-48.266l299.989-299.989   C452.315,159.106,469.373,206.795,469.333,256z M256,42.667c49.205-0.039,96.894,17.019,134.912,48.256L90.923,390.912   c-74.604-91.07-61.256-225.375,29.814-299.98C158.884,59.682,206.687,42.625,256,42.667z"/>
 </g>
@@ -27,6 +29,5 @@ export const Ban: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-Ban.displayName = 'Ban';
+);

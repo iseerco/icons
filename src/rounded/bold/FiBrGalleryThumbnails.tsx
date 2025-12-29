@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrGalleryThumbnails: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19.5,16H4.5c-2.48,0-4.5-2.02-4.5-4.5V4.5C0,2.02,2.02,0,4.5,0h15c2.48,0,4.5,2.02,4.5,4.5v7c0,2.48-2.02,4.5-4.5,4.5ZM4.5,3c-.83,0-1.5,.67-1.5,1.5v7c0,.83,.67,1.5,1.5,1.5h15c.83,0,1.5-.67,1.5-1.5V4.5c0-.83-.67-1.5-1.5-1.5H4.5Zm-.5,21H2c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h2c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2Zm18,0h-2c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h2c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2Zm-9,0h-2c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h2c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrGalleryThumbnails = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19.5,16H4.5c-2.48,0-4.5-2.02-4.5-4.5V4.5C0,2.02,2.02,0,4.5,0h15c2.48,0,4.5,2.02,4.5,4.5v7c0,2.48-2.02,4.5-4.5,4.5ZM4.5,3c-.83,0-1.5,.67-1.5,1.5v7c0,.83,.67,1.5,1.5,1.5h15c.83,0,1.5-.67,1.5-1.5V4.5c0-.83-.67-1.5-1.5-1.5H4.5Zm-.5,21H2c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h2c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2Zm18,0h-2c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h2c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2Zm-9,0h-2c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h2c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2Z"/></svg>
+
 );
-
-FiBrGalleryThumbnails.displayName = 'FiBrGalleryThumbnails';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDoNotDisturb: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDoNotDisturb = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M12.721,24H0V11.5c0-1.93,1.57-3.5,3.5-3.5h6c1.5,0,1.5-.252,1.5-1,0-2.206-1.794-4-4-4-1.858,0-3.411,1.28-3.858,3H.08C.568,2.613,3.481,0,7,0c3.86,0,7,3.14,7,7v4.079c-1.255,.727-2.296,1.781-3,3.051v-3.279c-.439,.093-.931,.149-1.5,.149H3.5c-.276,0-.5,.224-.5,.5v9.5h7.587c.471,1.162,1.208,2.185,2.134,3Zm11.279-6c0,3.309-2.691,6-6,6s-6-2.691-6-6,2.691-6,6-6,6,2.691,6,6Zm-6-3c-.267,0-.521,.046-.767,.112l3.656,3.655c.066-.246,.112-.5,.112-.767,0-1.654-1.346-3-3-3Zm0,6c.267,0,.521-.046,.767-.112l-3.656-3.655c-.066,.246-.112,.5-.112,.767,0,1.654,1.346,3,3,3Z"/>
 </svg>
-);
 
-FiBsDoNotDisturb.displayName = 'FiBsDoNotDisturb';
+);

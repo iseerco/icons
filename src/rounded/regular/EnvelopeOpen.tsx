@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EnvelopeOpen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.459,8.1,15.535,1.464A5.026,5.026,0,0,0,8.48,1.449L1.54,8.1A5.028,5.028,0,0,0,0,11.708V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V11.708A5.025,5.025,0,0,0,22.459,8.1ZM9.879,2.878a3.013,3.013,0,0,1,4.258.016l6.747,6.464-6.763,6.764a3.074,3.074,0,0,1-4.242,0L3.115,9.358ZM22,19a3,3,0,0,1-3,3H5a3,3,0,0,1-3-3V11.708a3.014,3.014,0,0,1,.059-.578l6.406,6.406a5.024,5.024,0,0,0,7.07,0l6.406-6.406a3.014,3.014,0,0,1,.059.578Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EnvelopeOpen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.459,8.1,15.535,1.464A5.026,5.026,0,0,0,8.48,1.449L1.54,8.1A5.028,5.028,0,0,0,0,11.708V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V11.708A5.025,5.025,0,0,0,22.459,8.1ZM9.879,2.878a3.013,3.013,0,0,1,4.258.016l6.747,6.464-6.763,6.764a3.074,3.074,0,0,1-4.242,0L3.115,9.358ZM22,19a3,3,0,0,1-3,3H5a3,3,0,0,1-3-3V11.708a3.014,3.014,0,0,1,.059-.578l6.406,6.406a5.024,5.024,0,0,0,7.07,0l6.406-6.406a3.014,3.014,0,0,1,.059.578Z"/></svg>
+
 );
-
-EnvelopeOpen.displayName = 'EnvelopeOpen';

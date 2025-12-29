@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Damage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Damage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16.077,17.282l1.292-1.526,6.631,5.704V3c0-1.654-1.346-3-3-3h-12.759l3.099,6h7.66v2h-3.301l1.675,3.014-1.748.972-2.214-3.986h-3.29L5.99,0h-2.99C1.346,0,0,1.346,0,3v18.765l6-2.991v-4.778l2,.005v3.773l3.21-1.608.894,1.789L0,24h23.907l-7.83-6.718Z"/>
 </svg>
-);
 
-Damage.displayName = 'Damage';
+);

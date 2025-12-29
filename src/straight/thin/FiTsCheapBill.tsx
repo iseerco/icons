@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCheapBill: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCheapBill = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,3.5c-1.654,0-3,1.346-3,3s1.346,3,3,3,3-1.346,3-3-1.346-3-3-3Zm0,5c-1.103,0-2-.897-2-2s.897-2,2-2,2,.897,2,2-.897,2-2,2Zm10,4.5V2.5c0-1.378-1.122-2.5-2.5-2.5H4.5c-1.378,0-2.5,1.122-2.5,2.5v10.5h9.499l-.015,9.708-3.596-3.596-.707.707,3.742,3.742c.293.293.678.439,1.062.439s.765-.145,1.055-.435l3.801-3.715-.699-.715-3.658,3.575.015-9.71h9.501ZM3,2.5c0-.827.673-1.5,1.5-1.5h15c.827,0,1.5.673,1.5,1.5v9.5H3V2.5Zm4,6.5c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm0-5c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm12,5c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm0-5c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/>
 </svg>
-);
 
-FiTsCheapBill.displayName = 'FiTsCheapBill';
+);

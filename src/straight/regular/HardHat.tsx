@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HardHat: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HardHat = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,16h-1v-3.448c0-4.461-2.828-8.427-7-10.021v-1.531h-8v1.531C3.828,4.125,1,8.091,1,12.552v3.448H0v2h1.477c.995,1.341,4.278,5,10.523,5s9.528-3.659,10.523-5h1.477v-2Zm-3-3.448v3.448h-5V4.707c3.009,1.457,5,4.479,5,7.845ZM14,3v13h-4V3h4ZM3,12.552c0-3.366,1.99-6.387,5-7.845v11.293H3v-3.448Zm9,8.448c-3.939,0-6.478-1.687-7.858-3h15.7c-1.389,1.312-3.931,3-7.842,3Z"/>
 </svg>
-);
 
-HardHat.displayName = 'HardHat';
+);

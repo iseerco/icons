@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SourceData: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SourceData = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,20h2v2c0,1.105-.895,2-2,2H3c-1.105,0-2-.895-2-2v-2h2v-11h6v2h-4v9h3.5l1,1h5l1-1h3.5v-9h-4v-2h6v11Zm-13.207-5.345l2.881,2.881c.366.365.846.549,1.326.549s.96-.184,1.326-.549l2.881-2.881-1.414-1.414-1.793,1.792V7h-2v8.034l-1.793-1.792-1.414,1.414Zm9.207-10.655h-2v2h2v-2Zm-4-3h-2v2h2V1Zm6-1h-2v2h2V0ZM7,0h-2v2h2V0Zm0,6h2v-2h-2v2Zm-2.5,1L2.083,0H0l2.417,7h2.083ZM24,0h-2.083l-2.417,7h2.083l2.417-7Z"/>
 </svg>
-);
 
-SourceData.displayName = 'SourceData';
+);

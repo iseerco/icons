@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DocumentGear: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DocumentGear = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22.5,18c0-.46-.089-.895-.218-1.312l1.417-.816-.999-1.732-1.41,.813c-.605-.652-1.393-1.126-2.289-1.331v-1.621h-2v1.621c-.896,.205-1.685,.678-2.289,1.331l-1.41-.813-.999,1.732,1.417,.816c-.129,.418-.218,.853-.218,1.312s.089,.895,.218,1.312l-1.417,.816,.999,1.732,1.41-.813c.605,.652,1.393,1.126,2.289,1.331v1.621h2v-1.621c.896-.205,1.685-.678,2.289-1.331l1.41,.813,.999-1.732-1.417-.816c.129-.418,.218-.853,.218-1.312Zm-4.5,1.5c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5,.673,1.5,1.5-.673,1.5-1.5,1.5ZM12.829,2c-.413-1.164-1.525-2-2.829-2h-2c-1.304,0-2.416,.836-2.829,2H0V21c0,1.654,1.346,3,3,3H12.721c-1.665-1.466-2.721-3.607-2.721-6,0-.339,.028-.672,.069-1H4v-2h6.587c.294-.726,.691-1.398,1.173-2H4v-2H14.13c1.147-.636,2.466-1,3.87-1V2h-5.171Zm1.171,7H4v-2H14v2Z"/>
 </svg>
-);
 
-DocumentGear.displayName = 'DocumentGear';
+);

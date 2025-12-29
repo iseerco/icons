@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const OliveOil: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19.211,12.32c4.205-2.912.264-9.264-4.211-6.77V3a3,3,0,0,0-3-3H8A1,1,0,0,0,8,2H9V8c0,.661-1.212,1.68-2.281,2.579C4.976,12.044,3,13.7,3,16c.089,3.525,3.167,8.02,6.732,8h4.536a5.059,5.059,0,0,0,3.758-1.7C20.506,19.8,22.573,15.281,19.211,12.32ZM17,7a2.009,2.009,0,0,1,.654,3.895A11.634,11.634,0,0,1,15.1,8.354,2.023,2.023,0,0,1,17,7ZM11,8V2h1a1,1,0,0,1,1,1V8c-.041,1.955,2.447,3.563,4.031,5H6.969C8.554,11.563,11.041,9.955,11,8Zm5.536,12.967A3.061,3.061,0,0,1,14.268,22H9.732c-2.519.07-5.6-4.759-4.474-7H18.742C19.634,17.2,17.948,19.345,16.536,20.967Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const OliveOil = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19.211,12.32c4.205-2.912.264-9.264-4.211-6.77V3a3,3,0,0,0-3-3H8A1,1,0,0,0,8,2H9V8c0,.661-1.212,1.68-2.281,2.579C4.976,12.044,3,13.7,3,16c.089,3.525,3.167,8.02,6.732,8h4.536a5.059,5.059,0,0,0,3.758-1.7C20.506,19.8,22.573,15.281,19.211,12.32ZM17,7a2.009,2.009,0,0,1,.654,3.895A11.634,11.634,0,0,1,15.1,8.354,2.023,2.023,0,0,1,17,7ZM11,8V2h1a1,1,0,0,1,1,1V8c-.041,1.955,2.447,3.563,4.031,5H6.969C8.554,11.563,11.041,9.955,11,8Zm5.536,12.967A3.061,3.061,0,0,1,14.268,22H9.732c-2.519.07-5.6-4.759-4.474-7H18.742C19.634,17.2,17.948,19.345,16.536,20.967Z"/></svg>
+
 );
-
-OliveOil.displayName = 'OliveOil';

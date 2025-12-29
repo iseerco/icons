@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Mouse: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15.5,3H13V0H11V3H8.5A4.505,4.505,0,0,0,4,7.5V16a8,8,0,0,0,16,0V7.5A4.505,4.505,0,0,0,15.5,3ZM13,11H11V7h2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Mouse = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15.5,3H13V0H11V3H8.5A4.505,4.505,0,0,0,4,7.5V16a8,8,0,0,0,16,0V7.5A4.505,4.505,0,0,0,15.5,3ZM13,11H11V7h2Z"/></svg>
+
 );
-
-Mouse.displayName = 'Mouse';

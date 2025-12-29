@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsPercent10: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsPercent10 = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.5,8c-1.378,0-2.5,1.122-2.5,2.5v3c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-3c0-1.378-1.122-2.5-2.5-2.5Zm1.5,5.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3Zm8,1.49c0,.547-.443.99-.99.99s-.99-.443-.99-.99.443-.99.99-.99.99.443.99.99Zm-5.981-6c0-.558.448-1.01,1-1.01s1,.452,1,1.01-.448,1.01-1,1.01-1-.452-1-1.01ZM11.984,0C5.367,0-.016,5.383-.016,12s5.383,12,12,12h.016c6.617,0,12-5.383,12-12S18.617,0,11.984,0Zm.016,23h-.016C5.918,23,.984,18.065.984,12S5.918,1,12,1s11,4.935,11,11-4.935,11-11,11Zm-5.889-15h.889v8h-1v-6.425l-1.354,1.436-.728-.687,2.193-2.325Zm13.889,0l-4.806,8h-1.194l4.806-8h1.194Z"/>
 </svg>
-);
 
-FiTsPercent10.displayName = 'FiTsPercent10';
+);

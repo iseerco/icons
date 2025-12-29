@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsDiamondExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m23.27,10.231L13.764.726c-.942-.943-2.585-.943-3.527,0L.73,10.231c-.471.471-.73,1.097-.73,1.764s.259,1.292.73,1.763l9.506,9.506c.471.472,1.097.731,1.764.731s1.292-.26,1.764-.731l9.506-9.506c.471-.471.73-1.097.73-1.763s-.259-1.293-.73-1.764Zm-.707,2.819l-9.506,9.506c-.564.564-1.549.564-2.113,0L1.437,13.051c-.282-.282-.437-.657-.437-1.056s.155-.774.437-1.057L10.943,1.433c.282-.282.658-.438,1.057-.438s.774.155,1.057.438l9.506,9.506c.282.282.438.657.438,1.057s-.155.773-.438,1.056Zm-10.062,1.026h-1V6h1v8.077Zm.5,2.923c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsDiamondExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.27,10.231L13.764.726c-.942-.943-2.585-.943-3.527,0L.73,10.231c-.471.471-.73,1.097-.73,1.764s.259,1.292.73,1.763l9.506,9.506c.471.472,1.097.731,1.764.731s1.292-.26,1.764-.731l9.506-9.506c.471-.471.73-1.097.73-1.763s-.259-1.293-.73-1.764Zm-.707,2.819l-9.506,9.506c-.564.564-1.549.564-2.113,0L1.437,13.051c-.282-.282-.437-.657-.437-1.056s.155-.774.437-1.057L10.943,1.433c.282-.282.658-.438,1.057-.438s.774.155,1.057.438l9.506,9.506c.282.282.438.657.438,1.057s-.155.773-.438,1.056Zm-10.062,1.026h-1V6h1v8.077Zm.5,2.923c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/></svg>
+
 );
-
-FiTsDiamondExclamation.displayName = 'FiTsDiamondExclamation';

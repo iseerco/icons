@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CreditCardXmark: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m18 12c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm2.707 7.293c.391.391.391 1.023 0 1.414s-1.023.391-1.414 0l-1.293-1.293-1.293 1.293c-.391.391-1.023.391-1.414 0s-.391-1.023 0-1.414l1.293-1.293-1.293-1.293c-.391-.391-.391-1.023 0-1.414s1.023-.391 1.414 0l1.293 1.293 1.293-1.293c.391-.391 1.023-.391 1.414 0s.391 1.023 0 1.414l-1.293 1.293zm3.293-15.293v1h-24v-1c0-2.209 1.791-4 4-4h16c2.209 0 4 1.791 4 4zm-6 6c2.393 0 4.534 1.056 6 2.721v-5.721h-24v7c0 2.209 1.791 4 4 4h6c0-4.418 3.582-8 8-8zm-12.5 4c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CreditCardXmark = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18 12c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm2.707 7.293c.391.391.391 1.023 0 1.414s-1.023.391-1.414 0l-1.293-1.293-1.293 1.293c-.391.391-1.023.391-1.414 0s-.391-1.023 0-1.414l1.293-1.293-1.293-1.293c-.391-.391-.391-1.023 0-1.414s1.023-.391 1.414 0l1.293 1.293 1.293-1.293c.391-.391 1.023-.391 1.414 0s.391 1.023 0 1.414l-1.293 1.293zm3.293-15.293v1h-24v-1c0-2.209 1.791-4 4-4h16c2.209 0 4 1.791 4 4zm-6 6c2.393 0 4.534 1.056 6 2.721v-5.721h-24v7c0 2.209 1.791 4 4 4h6c0-4.418 3.582-8 8-8zm-12.5 4c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/></svg>
 );
-
-CreditCardXmark.displayName = 'CreditCardXmark';

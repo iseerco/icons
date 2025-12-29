@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PanFood: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PanFood = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.627,6.444l1.056-1.642c.509-.791.397-1.83-.268-2.496l-1.72-1.72c-.665-.665-1.704-.777-2.496-.268l-1.642,1.056c-1.663-.873-3.551-1.373-5.556-1.373C5.383,0,0,5.383,0,12c0,2.005.501,3.893,1.373,5.556l-1.056,1.642c-.509.791-.397,1.83.268,2.496l1.72,1.72c.665.665,1.704.777,2.496.268l1.642-1.056c1.663.873,3.551,1.373,5.556,1.373,6.617,0,12-5.383,12-12,0-2.005-.501-3.893-1.373-5.556Zm-6.127.556c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5.672-1.5,1.5-1.5Zm-7.5-2h4c0,2.209-1.791,4-4,4v-4Zm-4,5.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm5,7.5c-2.209,0-4-1.791-4-4h4v4Zm1.5-5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm2,6c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm4.328-2.5l-2.828-2.828,2.828-2.828c1.562,1.562,1.562,4.095,0,5.657Z"/>
 </svg>
-);
 
-PanFood.displayName = 'PanFood';
+);

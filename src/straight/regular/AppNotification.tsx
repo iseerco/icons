@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AppNotification: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AppNotification = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M6.019,14.032c-.636,0-1.272,.388-1.414,1.159l-1.105,4.809h1.227l.242-1h2.035l.225,1h1.292l-1.085-4.775c-.134-.797-.775-1.193-1.417-1.193Zm-.748,3.718l.552-2.279c-.038-.236,.421-.251,.385-.004l.514,2.283h-1.451Zm10.478,.22h.717c1.096,0,1.985-.889,1.985-1.985s-.889-1.985-1.985-1.985h-1.967v6h1.25v-2.03Zm.002-2.72h.716c.406,0,.735,.329,.735,.735s-.329,.735-.735,.735l-.715,.003v-1.473Zm-4.285-1.25h-1.967v6h1.25v-2.03h.717c1.096,0,1.985-.889,1.985-1.985s-.889-1.985-1.985-1.985Zm0,2.72l-.715,.003v-1.473h.716c.406,0,.735,.329,.735,.735s-.329,.735-.735,.735ZM20,0c-2.206,0-4,1.794-4,4s1.794,4,4,4,4-1.794,4-4S22.206,0,20,0Zm0,6c-1.103,0-2-.897-2-2s.897-2,2-2,2,.897,2,2-.897,2-2,2Zm0,4c.702,0,1.374-.127,2-.349v14.349H0V5c0-1.654,1.346-3,3-3H14.349c-.222,.626-.349,1.298-.349,2H3c-.552,0-1,.449-1,1V22H20V10Z"/>
 </svg>
-);
 
-AppNotification.displayName = 'AppNotification';
+);

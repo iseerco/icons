@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowTurnLeftUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowTurnLeftUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M21,22H13c-1.654,0-3-1.346-3-3V2.388c.037,.03,.084,.043,.119,.077l5.177,5.134c.195,.193,.45,.29,.704,.29,.257,0,.515-.099,.71-.296,.389-.392,.386-1.025-.006-1.414L11.53,1.048c-1.352-1.352-3.711-1.349-5.057-.003L1.296,6.179c-.392,.389-.395,1.022-.006,1.414,.389,.393,1.022,.395,1.414,.006L7.884,2.462c.033-.033,.08-.046,.116-.075V19c0,2.757,2.243,5,5,5h8c.552,0,1-.448,1-1s-.448-1-1-1Z"/>
 </svg>
-);
 
-ArrowTurnLeftUp.displayName = 'ArrowTurnLeftUp';
+);

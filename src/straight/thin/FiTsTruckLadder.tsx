@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTruckLadder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTruckLadder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M14,8h-2V3h2v-1H0v1H2v5H0v1H14v-1Zm-3,0h-2V3h2v5Zm-3,0h-2V3h2v5ZM3,3h2v5H3V3ZM24,12.149c0-.484-.077-.963-.23-1.423l-1.339-4.017c-.342-1.022-1.295-1.709-2.372-1.709h-4.059v6H0v9c0,1.654,1.346,3,3,3,1.044,0,1.962-.537,2.5-1.348,.538,.811,1.456,1.348,2.5,1.348,1.654,0,3-1.346,3-3v-1h5v1c0,1.654,1.346,3,3,3s3-1.346,3-3v-1h2v-6.851Zm-7-6.149h3.059c.646,0,1.219,.412,1.423,1.026l1.325,3.974h-5.807V6ZM1,12h15v6H1v-6Zm2,10c-1.103,0-2-.897-2-2v-1H5v1c0,1.103-.897,2-2,2Zm7-2c0,1.103-.897,2-2,2s-2-.897-2-2v-1h4v1Zm11,0c0,1.103-.897,2-2,2s-2-.897-2-2v-1h4v1Zm2-2h-6v-6h6v6Z"/>
 </svg>
-);
 
-FiTsTruckLadder.displayName = 'FiTsTruckLadder';
+);

@@ -1,13 +1,14 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrQueueAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrQueueAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20,5c1.378,0,2.5-1.122,2.5-2.5s-1.122-2.5-2.5-2.5-2.5,1.122-2.5,2.5,1.122,2.5,2.5,2.5Zm0-4c.827,0,1.5.673,1.5,1.5s-.673,1.5-1.5,1.5-1.5-.673-1.5-1.5.673-1.5,1.5-1.5Z"/>
   <path d="m16,5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5c-1.378,0-2.5,1.122-2.5,2.5s1.122,2.5,2.5,2.5Z"/>
   <path d="m12,5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5c-1.378,0-2.5,1.122-2.5,2.5s1.122,2.5,2.5,2.5Z"/>
@@ -19,6 +20,5 @@ export const FiTrQueueAlt: React.FC<IconProps> = ({
   <path d="m6.917,6.048c-1.69.283-2.917,1.735-2.917,3.452v2c0,1.36.791,2.589,2,3.163v5.666c0,.276.224.5.5.5s.5-.224.5-.5v-6c0-.212-.134-.401-.333-.472-.997-.352-1.667-1.299-1.667-2.357v-2c0-1.226.876-2.263,2.083-2.465.272-.046.456-.303.411-.576-.046-.273-.307-.462-.576-.411Z"/>
   <path d="m2.917,6.048c-1.69.283-2.917,1.735-2.917,3.452v1.671c0,1.36.791,2.589,2,3.163v4.666c0,.276.224.5.5.5s.5-.224.5-.5v-5c0-.212-.134-.401-.333-.472-.997-.352-1.667-1.299-1.667-2.357v-1.671c0-1.226.876-2.263,2.083-2.465.272-.046.456-.303.411-.576-.046-.273-.304-.462-.576-.411Z"/>
 </svg>
-);
 
-FiTrQueueAlt.displayName = 'FiTrQueueAlt';
+);

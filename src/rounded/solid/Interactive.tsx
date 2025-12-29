@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Interactive: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 511.738 511.738" style="enable-background:new 0 0 511.738 511.738;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Interactive = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M505.749,475.591l-22.976-22.976l-36.907-36.843l59.499-59.499c8.325-8.338,8.314-21.845-0.024-30.17   c-2.197-2.193-4.846-3.881-7.763-4.945L306.24,251.741c-22.161-8.01-46.619,3.462-54.629,25.623   c-3.385,9.366-3.387,19.622-0.006,28.99l69.611,191.339c2.484,6.85,8.292,11.958,15.403,13.547   c1.521,0.331,3.073,0.495,4.629,0.491c5.658-0.001,11.083-2.25,15.083-6.251l59.435-59.605l36.843,36.843l22.976,22.976   c8.475,8.185,21.98,7.95,30.165-0.525c7.984-8.267,7.984-21.373,0-29.641L505.749,475.591z"/>
 	<path d="M213.333,426.674C95.513,426.674,0,331.161,0,213.341S95.513,0.007,213.333,0.007S426.667,95.52,426.667,213.341   c0,11.782-9.551,21.333-21.333,21.333S384,225.123,384,213.341c0-94.257-76.41-170.667-170.667-170.667   S42.667,119.084,42.667,213.341s76.41,170.667,170.667,170.667c11.782,0,21.333,9.551,21.333,21.333   S225.115,426.674,213.333,426.674z"/>
@@ -29,6 +31,5 @@ export const Interactive: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-Interactive.displayName = 'Interactive';
+);

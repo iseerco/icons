@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const QuickBox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m8 14h-8v-2h8zm-2 2h-6v2h6zm-6 6h4v-2h-4zm23.97-16.576-2.368 16.576h-15.602v-2h13.867l1.571-11h-5.785l-.286 2h-6.021l.286-2h-5.194l-.146 1h-2.021l.729-4.995c.244-1.713 1.734-3.005 3.465-3.005h14.535c1.772-.041 3.261 1.676 2.97 3.424zm-14.051 1.576.429-3h-4.144c-.594 0-1.104.443-1.188 1.03l-.287 1.97h5.189zm4.428-3h-1.979l-.714 5h1.979zm7.377 3 .266-1.859c.099-.583-.398-1.156-.989-1.141h-4.633l-.429 3zm-7.836 9-.286 2h4.398l.286-2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const QuickBox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m8 14h-8v-2h8zm-2 2h-6v2h6zm-6 6h4v-2h-4zm23.97-16.576-2.368 16.576h-15.602v-2h13.867l1.571-11h-5.785l-.286 2h-6.021l.286-2h-5.194l-.146 1h-2.021l.729-4.995c.244-1.713 1.734-3.005 3.465-3.005h14.535c1.772-.041 3.261 1.676 2.97 3.424zm-14.051 1.576.429-3h-4.144c-.594 0-1.104.443-1.188 1.03l-.287 1.97h5.189zm4.428-3h-1.979l-.714 5h1.979zm7.377 3 .266-1.859c.099-.583-.398-1.156-.989-1.141h-4.633l-.429 3zm-7.836 9-.286 2h4.398l.286-2z"/></svg>
 );
-
-QuickBox.displayName = 'QuickBox';

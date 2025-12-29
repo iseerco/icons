@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTrafficLightStop: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16.5,0H7.5c-1.93,0-3.5,1.57-3.5,3.5V24H20V3.5c0-1.93-1.57-3.5-3.5-3.5Zm-3.218,15.25c1.297,.512,2.218,1.771,2.218,3.25,0,1.933-1.567,3.5-3.5,3.5s-3.5-1.567-3.5-3.5c0-1.479,.921-2.738,2.218-3.25-1.297-.512-2.218-1.771-2.218-3.25s.922-2.738,2.219-3.25c-1.297-.513-2.219-1.772-2.219-3.25,0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5c0,1.477-.923,2.737-2.219,3.25,1.298,.512,2.219,1.771,2.219,3.25s-.921,2.738-2.218,3.25Zm-2.782-3.25c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm0,6.5c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTrafficLightStop = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M16.5,0H7.5c-1.93,0-3.5,1.57-3.5,3.5V24H20V3.5c0-1.93-1.57-3.5-3.5-3.5Zm-3.218,15.25c1.297,.512,2.218,1.771,2.218,3.25,0,1.933-1.567,3.5-3.5,3.5s-3.5-1.567-3.5-3.5c0-1.479,.921-2.738,2.218-3.25-1.297-.512-2.218-1.771-2.218-3.25s.922-2.738,2.219-3.25c-1.297-.513-2.219-1.772-2.219-3.25,0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5c0,1.477-.923,2.737-2.219,3.25,1.298,.512,2.219,1.771,2.219,3.25s-.921,2.738-2.218,3.25Zm-2.782-3.25c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm0,6.5c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Z"/></svg>
+
 );
-
-FiBsTrafficLightStop.displayName = 'FiBsTrafficLightStop';

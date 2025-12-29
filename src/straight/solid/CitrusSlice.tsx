@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CitrusSlice: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CitrusSlice = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.979.793l-.707-.707-8.914,8.914h11.544c.059.475.098.954.098,1.44,0,.188-.018.373-.027.56h-9.559l6.874,6.874c-.215.255-.437.506-.676.745-.236.237-.485.456-.738.669l-6.874-6.874v9.558c-.189.009-.376.028-.566.028-.484,0-.961-.04-1.434-.099v-11.544L.086,19.272l.707.707c1.241,1.24,4.207,4.021,9.641,4.021,3.475,0,6.948-1.322,9.593-3.967,2.562-2.562,3.974-5.969,3.974-9.593,0-5.44-2.909-8.534-4.021-9.647Z"/>
 </svg>
-);
 
-CitrusSlice.displayName = 'CitrusSlice';
+);

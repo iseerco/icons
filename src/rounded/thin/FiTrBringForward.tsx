@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrBringForward: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M11.5,16H4.5c-2.48,0-4.5-2.02-4.5-4.5V4.5C0,2.02,2.02,0,4.5,0h7c2.48,0,4.5,2.02,4.5,4.5v7c0,2.48-2.02,4.5-4.5,4.5ZM4.5,1c-1.93,0-3.5,1.57-3.5,3.5v7c0,1.93,1.57,3.5,3.5,3.5h7c1.93,0,3.5-1.57,3.5-3.5V4.5c0-1.93-1.57-3.5-3.5-3.5H4.5ZM24,19.5v-7c0-2.48-2.02-4.5-4.5-4.5h-1c-.28,0-.5,.22-.5,.5s.22,.5,.5,.5h1c1.93,0,3.5,1.57,3.5,3.5v7c0,1.93-1.57,3.5-3.5,3.5h-7c-1.93,0-3.5-1.57-3.5-3.5v-1c0-.28-.22-.5-.5-.5s-.5,.22-.5,.5v1c0,2.48,2.02,4.5,4.5,4.5h7c2.48,0,4.5-2.02,4.5-4.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrBringForward = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M11.5,16H4.5c-2.48,0-4.5-2.02-4.5-4.5V4.5C0,2.02,2.02,0,4.5,0h7c2.48,0,4.5,2.02,4.5,4.5v7c0,2.48-2.02,4.5-4.5,4.5ZM4.5,1c-1.93,0-3.5,1.57-3.5,3.5v7c0,1.93,1.57,3.5,3.5,3.5h7c1.93,0,3.5-1.57,3.5-3.5V4.5c0-1.93-1.57-3.5-3.5-3.5H4.5ZM24,19.5v-7c0-2.48-2.02-4.5-4.5-4.5h-1c-.28,0-.5,.22-.5,.5s.22,.5,.5,.5h1c1.93,0,3.5,1.57,3.5,3.5v7c0,1.93-1.57,3.5-3.5,3.5h-7c-1.93,0-3.5-1.57-3.5-3.5v-1c0-.28-.22-.5-.5-.5s-.5,.22-.5,.5v1c0,2.48,2.02,4.5,4.5,4.5h7c2.48,0,4.5-2.02,4.5-4.5Z"/></svg>
+
 );
-
-FiTrBringForward.displayName = 'FiTrBringForward';

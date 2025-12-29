@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsOmega: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsOmega = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,21h6v3h-9v-5.414l.907-.391c3.094-1.331,5.093-4.156,5.093-7.195,0-4.411-4.037-8-9-8S3,6.589,3,11c0,3.039,1.999,5.864,5.093,7.195l.907.391v5.414H0v-3h6v-.483C2.325,18.564,0,14.925,0,11,0,4.935,5.383,0,12,0s12,4.935,12,11c0,3.925-2.324,7.564-6,9.517v.483Z"/>
 </svg>
-);
 
-FiBsOmega.displayName = 'FiBsOmega';
+);

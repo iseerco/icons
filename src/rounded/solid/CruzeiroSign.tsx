@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CruzeiroSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21.91,18.59c-1.73,3.34-5.13,5.41-8.89,5.41h-1c-.28,0-1.47-.12-1.47-.12-4.82-.72-8.53-4.87-8.53-9.88v-4C2.02,4.49,6.51,0,12.02,0h1c3.82,0,7.26,2.13,8.96,5.55,.25,.5,.04,1.09-.45,1.34-.49,.25-1.1,.04-1.34-.45-1.36-2.74-4.11-4.45-7.17-4.45h-1c-4.41,0-8,3.59-8,8v4c0,3.71,2.55,6.83,5.98,7.73V12c0-.55,.45-1,1-1s1,.45,1,1v.54c1.06-.95,2.46-1.54,4-1.54h1c.55,0,1,.45,1,1s-.45,1-1,1h-1c-2.21,0-4,1.79-4,4v5s.01,0,.02,0h1c3.01,0,5.73-1.66,7.11-4.33,.25-.49,.86-.68,1.35-.43,.49,.25,.68,.86,.43,1.35Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CruzeiroSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21.91,18.59c-1.73,3.34-5.13,5.41-8.89,5.41h-1c-.28,0-1.47-.12-1.47-.12-4.82-.72-8.53-4.87-8.53-9.88v-4C2.02,4.49,6.51,0,12.02,0h1c3.82,0,7.26,2.13,8.96,5.55,.25,.5,.04,1.09-.45,1.34-.49,.25-1.1,.04-1.34-.45-1.36-2.74-4.11-4.45-7.17-4.45h-1c-4.41,0-8,3.59-8,8v4c0,3.71,2.55,6.83,5.98,7.73V12c0-.55,.45-1,1-1s1,.45,1,1v.54c1.06-.95,2.46-1.54,4-1.54h1c.55,0,1,.45,1,1s-.45,1-1,1h-1c-2.21,0-4,1.79-4,4v5s.01,0,.02,0h1c3.01,0,5.73-1.66,7.11-4.33,.25-.49,.86-.68,1.35-.43,.49,.25,.68,.86,.43,1.35Z"/></svg>
+
 );
-
-CruzeiroSign.displayName = 'CruzeiroSign';

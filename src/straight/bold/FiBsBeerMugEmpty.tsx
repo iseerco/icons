@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBeerMugEmpty: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBeerMugEmpty = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,10.5c0-1.93-1.57-3.5-3.5-3.5h-1.5v-3h1V1H0v3h1v15.5c0,1.93,1.57,3.5,3.5,3.5h11c1.93,0,3.5-1.57,3.5-3.5v-1.5h5v-7.5Zm-8.5,9.5H4.5c-.276,0-.5-.225-.5-.5V4h12v15.5c0,.275-.224.5-.5.5Zm5.5-5h-2v-5h1.5c.276,0,.5.225.5.5v4.5ZM6,6h3v12h-3V6Zm5,0h3v12h-3V6Z"/>
 </svg>
-);
 
-FiBsBeerMugEmpty.displayName = 'FiBsBeerMugEmpty';
+);

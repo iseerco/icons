@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsArrowUpToArc: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsArrowUpToArc = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.147,7.47l6.205,6.176-.705.709-6.134-6.104v15.75h-1v-15.75l-6.162,6.105-.704-.711,6.234-6.177c.602-.602,1.659-.604,2.265.002Zm-1.147-7.47C5.383,0,0,5.383,0,12h1C1,5.935,5.935,1,12,1s11,4.935,11,11h1C24,5.383,18.617,0,12,0Z"/>
 </svg>
-);
 
-FiTsArrowUpToArc.displayName = 'FiTsArrowUpToArc';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BookCircleArrowUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m12,18c0,3.314,2.686,6,6,6s6-2.686,6-6c0-3.314-2.686-6-6-6s-6,2.686-6,6Zm6.744-2.687l2.687,2.687h-2.431s0,3,0,3h-2v-3s-2.454,0-2.454,0l2.687-2.687c.417-.417,1.093-.417,1.51,0Zm-16.743,2.687c-.738-.001-1.451.271-2,.765V3C0,1.343,1.343,0,3,0h1v18h-2Zm8,0h-4V0h12c1.105,0,2,.895,2,2v8.252c-.639-.165-1.309-.252-2-.252-4.418,0-8,3.582-8,8Zm2.709,6H2c-1.105,0-2-.895-2-2s.895-2,2-2h8.252c.405,1.573,1.276,2.958,2.457,4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BookCircleArrowUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12,18c0,3.314,2.686,6,6,6s6-2.686,6-6c0-3.314-2.686-6-6-6s-6,2.686-6,6Zm6.744-2.687l2.687,2.687h-2.431s0,3,0,3h-2v-3s-2.454,0-2.454,0l2.687-2.687c.417-.417,1.093-.417,1.51,0Zm-16.743,2.687c-.738-.001-1.451.271-2,.765V3C0,1.343,1.343,0,3,0h1v18h-2Zm8,0h-4V0h12c1.105,0,2,.895,2,2v8.252c-.639-.165-1.309-.252-2-.252-4.418,0-8,3.582-8,8Zm2.709,6H2c-1.105,0-2-.895-2-2s.895-2,2-2h8.252c.405,1.573,1.276,2.958,2.457,4Z"/></svg>
+
 );
-
-BookCircleArrowUp.displayName = 'BookCircleArrowUp';

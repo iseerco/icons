@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChairOffice: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,19V10c0-1.654-1.346-3-3-3h-1V3c0-1.654-1.346-3-3-3H8c-1.654,0-3,1.346-3,3V7h-1c-1.654,0-3,1.346-3,3v9H11v3H6v2h12v-2h-5v-3h10ZM3,14.184v-4.184c0-.552,.449-1,1-1h1v3h14v-3h1c.551,0,1,.448,1,1v4.184c-.314-.112-.648-.184-1-.184H4c-.352,0-.686,.072-1,.184Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChairOffice = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,19V10c0-1.654-1.346-3-3-3h-1V3c0-1.654-1.346-3-3-3H8c-1.654,0-3,1.346-3,3V7h-1c-1.654,0-3,1.346-3,3v9H11v3H6v2h12v-2h-5v-3h10ZM3,14.184v-4.184c0-.552,.449-1,1-1h1v3h14v-3h1c.551,0,1,.448,1,1v4.184c-.314-.112-.648-.184-1-.184H4c-.352,0-.686,.072-1,.184Z"/></svg>
+
 );
-
-ChairOffice.displayName = 'ChairOffice';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TurnRight: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TurnRight = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,9c0,.956-.372,1.854-1.048,2.53l-5.131,5.174c-.195.197-.453.296-.71.296-.254,0-.509-.097-.704-.29-.392-.389-.395-1.021-.006-1.414l5.134-5.177c.037-.037.065-.079.098-.119H5c-1.654,0-3,1.346-3,3v8c0,.553-.448,1-1,1s-1-.447-1-1v-8c0-2.757,2.243-5,5-5h16.633c-.032-.039-.059-.08-.095-.116l-5.137-5.18c-.389-.392-.386-1.025.006-1.414.393-.388,1.026-.386,1.414.006l5.134,5.177c.673.673,1.045,1.571,1.045,2.527Z"/>
 </svg>
-);
 
-TurnRight.displayName = 'TurnRight';
+);

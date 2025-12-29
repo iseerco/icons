@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrArrowDownToDottedLine: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13.5,22.5c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5,.67-1.5,1.5-1.5,1.5,.67,1.5,1.5Zm3.5-1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm5,0c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm-15,0c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm-5,0c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm14.96-9.58l-3.46,3.33V1.5c0-.83-.67-1.5-1.5-1.5s-1.5,.67-1.5,1.5V14.75l-3.46-3.33c-.6-.58-1.55-.56-2.12,.04-.57,.6-.56,1.55,.04,2.12l4.56,4.39c.66,.66,1.54,1.03,2.48,1.03s1.81-.36,2.45-1.01l4.59-4.41c.6-.57,.62-1.52,.04-2.12s-1.53-.62-2.12-.04Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrArrowDownToDottedLine = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M13.5,22.5c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5,.67-1.5,1.5-1.5,1.5,.67,1.5,1.5Zm3.5-1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm5,0c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm-15,0c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm-5,0c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm14.96-9.58l-3.46,3.33V1.5c0-.83-.67-1.5-1.5-1.5s-1.5,.67-1.5,1.5V14.75l-3.46-3.33c-.6-.58-1.55-.56-2.12,.04-.57,.6-.56,1.55,.04,2.12l4.56,4.39c.66,.66,1.54,1.03,2.48,1.03s1.81-.36,2.45-1.01l4.59-4.41c.6-.57,.62-1.52,.04-2.12s-1.53-.62-2.12-.04Z"/></svg>
+
 );
-
-FiBrArrowDownToDottedLine.displayName = 'FiBrArrowDownToDottedLine';

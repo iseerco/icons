@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrAngleSquareDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19.5,0H4.5C2.019,0,0,2.019,0,4.5v15c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5V4.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,19.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v15Z"/><path d="M16.649,11.119l-2.882,2.831c-.188,.188-.475,.448-.774,.715-.566,.502-1.42,.502-1.986,0-.3-.267-.587-.527-.777-.718l-2.879-2.828c-.197-.193-.514-.191-.707,.006s-.191,.514,.006,.707l2.876,2.825c.197,.197,.5,.474,.817,.756,.473,.419,1.064,.628,1.657,.628s1.185-.209,1.657-.628c.317-.282,.62-.559,.814-.753l2.879-2.828c.197-.193,.199-.51,.006-.707-.192-.196-.509-.199-.707-.006Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrAngleSquareDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19.5,0H4.5C2.019,0,0,2.019,0,4.5v15c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5V4.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,19.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v15Z"/><path d="M16.649,11.119l-2.882,2.831c-.188,.188-.475,.448-.774,.715-.566,.502-1.42,.502-1.986,0-.3-.267-.587-.527-.777-.718l-2.879-2.828c-.197-.193-.514-.191-.707,.006s-.191,.514,.006,.707l2.876,2.825c.197,.197,.5,.474,.817,.756,.473,.419,1.064,.628,1.657,.628s1.185-.209,1.657-.628c.317-.282,.62-.559,.814-.753l2.879-2.828c.197-.193,.199-.51,.006-.707-.192-.196-.509-.199-.707-.006Z"/></svg>
+
 );
-
-FiTrAngleSquareDown.displayName = 'FiTrAngleSquareDown';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsVault: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,4.5c0-1.38-1.12-2.5-2.5-2.5H2.5C1.12,2,0,3.12,0,4.5V22H2v2h1v-2H21v2h1v-2h2V4.5Zm-1,16.5H1v-3h3v-1H1V7h3v-1H1v-1.5c0-.83,.67-1.5,1.5-1.5H21.5c.83,0,1.5,.67,1.5,1.5V21ZM13,6c-3.31,0-6,2.69-6,6s2.69,6,6,6,6-2.69,6-6-2.69-6-6-6Zm0,11c-2.76,0-5-2.24-5-5s2.24-5,5-5c2.59,0,4.72,1.98,4.98,4.5h-3.98v1h3.98c-.25,2.52-2.39,4.5-4.98,4.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsVault = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,4.5c0-1.38-1.12-2.5-2.5-2.5H2.5C1.12,2,0,3.12,0,4.5V22H2v2h1v-2H21v2h1v-2h2V4.5Zm-1,16.5H1v-3h3v-1H1V7h3v-1H1v-1.5c0-.83,.67-1.5,1.5-1.5H21.5c.83,0,1.5,.67,1.5,1.5V21ZM13,6c-3.31,0-6,2.69-6,6s2.69,6,6,6,6-2.69,6-6-2.69-6-6-6Zm0,11c-2.76,0-5-2.24-5-5s2.24-5,5-5c2.59,0,4.72,1.98,4.98,4.5h-3.98v1h3.98c-.25,2.52-2.39,4.5-4.98,4.5Z"/></svg>
+
 );
-
-FiTsVault.displayName = 'FiTsVault';

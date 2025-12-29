@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LessThan: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LessThan = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,24c-.13,0-.263-.025-.39-.079L2.149,15.265C.842,14.711.03,13.46.03,12s.812-2.711,2.119-3.265L22.61.079c.507-.216,1.096.022,1.311.531s-.022,1.096-.531,1.311L2.929,10.577c-.662.28-.898.919-.898,1.423s.236,1.143.898,1.423l20.461,8.656c.509.215.746.802.531,1.311-.161.382-.531.61-.921.61Z"/>
 </svg>
-);
 
-LessThan.displayName = 'LessThan';
+);

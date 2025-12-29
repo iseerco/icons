@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsVoicemail: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m18.5,6c-3.032,0-5.5,2.467-5.5,5.5,0,1.858.927,3.504,2.342,4.5h-6.683c1.415-.996,2.341-2.642,2.341-4.5,0-3.033-2.467-5.5-5.5-5.5S0,8.467,0,11.5s2.467,5.5,5.5,5.5h13c3.032,0,5.5-2.467,5.5-5.5s-2.468-5.5-5.5-5.5ZM1,11.5c0-2.481,2.019-4.5,4.5-4.5s4.5,2.019,4.5,4.5-2.019,4.5-4.5,4.5S1,13.981,1,11.5Zm17.5,4.5c-2.481,0-4.5-2.019-4.5-4.5s2.019-4.5,4.5-4.5,4.5,2.019,4.5,4.5-2.019,4.5-4.5,4.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsVoicemail = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18.5,6c-3.032,0-5.5,2.467-5.5,5.5,0,1.858.927,3.504,2.342,4.5h-6.683c1.415-.996,2.341-2.642,2.341-4.5,0-3.033-2.467-5.5-5.5-5.5S0,8.467,0,11.5s2.467,5.5,5.5,5.5h13c3.032,0,5.5-2.467,5.5-5.5s-2.468-5.5-5.5-5.5ZM1,11.5c0-2.481,2.019-4.5,4.5-4.5s4.5,2.019,4.5,4.5-2.019,4.5-4.5,4.5S1,13.981,1,11.5Zm17.5,4.5c-2.481,0-4.5-2.019-4.5-4.5s2.019-4.5,4.5-4.5,4.5,2.019,4.5,4.5-2.019,4.5-4.5,4.5Z"/></svg>
+
 );
-
-FiTsVoicemail.displayName = 'FiTsVoicemail';

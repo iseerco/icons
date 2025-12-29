@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Flute: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Flute = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.799,4.384L19.617.208l-.705.639c-.018.017-1.842,1.666-3.96,1.575l-.432-.013L-.021,16.95l7.07,7.071,14.541-14.541-.013-.432c-.064-2.125,1.559-3.942,1.572-3.958l.648-.706Zm-4.299-1.47l1.586,1.586c-.394.571-.889,1.434-1.203,2.469l-2.851-2.851c1.035-.314,1.897-.81,2.468-1.203ZM2.808,16.95L14.922,4.836l4.242,4.243-12.114,12.114-4.242-4.243Zm13.399-7.743l-1.5,1.5-1.414-1.414,1.5-1.5,1.414,1.414Zm-3.914,1.086l1.414,1.414-1.5,1.5-1.414-1.414,1.5-1.5Zm-2.5,2.5l1.414,1.414-1.5,1.5-1.414-1.414,1.5-1.5Zm-2.5,2.5l1.414,1.414-1.5,1.5-1.414-1.414,1.5-1.5Z"/>
 </svg>
-);
 
-Flute.displayName = 'Flute';
+);

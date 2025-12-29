@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsReflectHorizontalAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsReflectHorizontalAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M15.654,10.524c-.422,.382-.654,.906-.654,1.477,0,.557,.239,1.091,.652,1.462l8.348,7.638V2.89l-8.346,7.635Zm7.346,8.307l-6.677-6.109c-.206-.185-.323-.447-.323-.721,0-.288,.112-.542,.327-.736l6.673-6.105v13.672ZM0,2.89V21.101l8.345-7.635c.417-.374,.655-.908,.655-1.465,0-.57-.232-1.095-.652-1.475L0,2.89ZM7.673,12.725L1,18.831V5.159l6.675,6.107c.212,.192,.325,.446,.325,.734,0,.273-.118,.536-.327,.724ZM11.5,0h1V24h-1V0Z"/>
 </svg>
-);
 
-FiTsReflectHorizontalAlt.displayName = 'FiTsReflectHorizontalAlt';
+);

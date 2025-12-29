@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDress: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDress = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M16.569,9.877l.423-4.228,.008-5.649h-3V2.281c-1.403,.548-2,1.719-2,1.719,0,0-.597-1.171-2-1.719V0h-3V5.5l.431,4.377L.581,15.84c1.753,4.808,6.258,8.195,11.419,8.16,5.161,.034,9.666-3.352,11.419-8.16l-6.85-5.963Zm-2.627-3.877l-.3,3h-3.285l-.3-3h3.885Zm-1.943,15c-3.19,0-6.118-1.694-7.728-4.396l5.289-4.604h4.877l5.29,4.604c-1.61,2.702-4.538,4.396-7.729,4.396Z"/>
 </svg>
-);
 
-FiBsDress.displayName = 'FiBsDress';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CameraViewfinder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CameraViewfinder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m7,24h-2c-2.757,0-5-2.243-5-5v-2c0-.553.447-1,1-1s1,.447,1,1v2c0,1.654,1.346,3,3,3h2c.553,0,1,.447,1,1s-.447,1-1,1Zm17-5v-2c0-.553-.447-1-1-1s-1,.447-1,1v2c0,1.654-1.346,3-3,3h-2c-.553,0-1,.447-1,1s.447,1,1,1h2c2.757,0,5-2.243,5-5Zm0-12v-2c0-2.757-2.243-5-5-5h-2c-.553,0-1,.447-1,1s.447,1,1,1h2c1.654,0,3,1.346,3,3v2c0,.553.447,1,1,1s1-.447,1-1Zm-22,0v-2c0-1.654,1.346-3,3-3h2c.553,0,1-.447,1-1s-.447-1-1-1h-2C2.243,0,0,2.243,0,5v2c0,.553.447,1,1,1s1-.447,1-1Zm16,3v4c0,1.654-1.346,3-3,3h-6c-1.654,0-3-1.346-3-3v-4c0-1.639,1.321-2.974,2.953-2.999l.696-1.083c.368-.574.997-.918,1.682-.918h1.338c.685,0,1.313.344,1.683.919l.695,1.082c1.633.025,2.953,1.36,2.953,2.999Zm-4,2c0-1.105-.895-2-2-2s-2,.895-2,2,.895,2,2,2,2-.895,2-2Z"/>
 </svg>
-);
 
-CameraViewfinder.displayName = 'CameraViewfinder';
+);

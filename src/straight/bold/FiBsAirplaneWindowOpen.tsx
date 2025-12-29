@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsAirplaneWindowOpen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsAirplaneWindowOpen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M12,0C7.038,0,3,4.037,3,9v6c0,4.963,4.038,9,9,9s9-4.037,9-9v-6C21,4.037,16.962,0,12,0Zm0,21c-3.309,0-6-2.691-6-6v-6c0-.341,.035-.674,.09-1h11.819c.055,.326,.09,.659,.09,1v4.512c-.297-.224-.641-.39-1.02-.464-.106-1.699-1.504-3.048-3.23-3.048-1.795,0-3.25,1.455-3.25,3.25,0,.391,.08,.762,.207,1.109-.952,.063-1.707,.847-1.707,1.814,0,1.009,.818,1.826,1.826,1.826h5.674c.27,0,.526-.054,.769-.133-1.019,1.865-2.998,3.133-5.269,3.133Z"/>
 </svg>
-);
 
-FiBsAirplaneWindowOpen.displayName = 'FiBsAirplaneWindowOpen';
+);

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChevronDoubleDotsDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m10.5 11.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5zm1.5-3.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm0-5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm9.813 9.773-9.813 9.227-9.813-9.227-1.373 1.455 9.7 9.156c.397.397.925.616 1.487.616s1.09-.219 1.466-.596l9.721-9.177-1.373-1.455zm-9.813 5.727c.563 0 1.091-.22 1.465-.595l7.092-6.677-1.371-1.456-7.186 6.728-7.186-6.728-1.371 1.456 7.069 6.654c.396.398.925.618 1.488.618z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChevronDoubleDotsDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m10.5 11.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5zm1.5-3.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm0-5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm9.813 9.773-9.813 9.227-9.813-9.227-1.373 1.455 9.7 9.156c.397.397.925.616 1.487.616s1.09-.219 1.466-.596l9.721-9.177-1.373-1.455zm-9.813 5.727c.563 0 1.091-.22 1.465-.595l7.092-6.677-1.371-1.456-7.186 6.728-7.186-6.728-1.371 1.456 7.069 6.654c.396.398.925.618 1.488.618z"/></svg>
 );
-
-ChevronDoubleDotsDown.displayName = 'ChevronDoubleDotsDown';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrMicrowave: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrMicrowave = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.5,2H5.5C2.467,2,0,4.467,0,7.5v8c0,2.132,1.222,3.98,3,4.893v1.107c0,.828.671,1.5,1.5,1.5s1.5-.672,1.5-1.5v-.5h12v.5c0,.828.671,1.5,1.5,1.5s1.5-.672,1.5-1.5v-1.107c1.778-.912,3-2.761,3-4.893V7.5c0-3.033-2.467-5.5-5.5-5.5Zm2.5,13.5c0,1.379-1.122,2.5-2.5,2.5H5.5c-1.378,0-2.5-1.121-2.5-2.5V7.5c0-1.378,1.122-2.5,2.5-2.5h13c1.378,0,2.5,1.122,2.5,2.5v8Zm-7-7.5v7c0,.552-.448,1-1,1h-7c-.552,0-1-.448-1-1v-7c0-.552.448-1,1-1h7c.552,0,1,.448,1,1Zm5,.5v6c0,.828-.671,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-6c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5Z"/>
 </svg>
-);
 
-FiBrMicrowave.displayName = 'FiBrMicrowave';
+);

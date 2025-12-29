@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrPriorityArrow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrPriorityArrow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,10.5v3c0,.828-.672,1.5-1.5,1.5h-3c-.828,0-1.5-.672-1.5-1.5v-3c0-.828.672-1.5,1.5-1.5h3c.828,0,1.5.672,1.5,1.5Zm-1.5-9.5h-3c-.828,0-1.5.672-1.5,1.5v3c0,.828.672,1.5,1.5,1.5h3c.828,0,1.5-.672,1.5-1.5v-3c0-.828-.672-1.5-1.5-1.5Zm0,16h-3c-.828,0-1.5.672-1.5,1.5v3c0,.828.672,1.5,1.5,1.5h3c.828,0,1.5-.672,1.5-1.5v-3c0-.828-.672-1.5-1.5-1.5ZM13.489,1.127c-.549-.549-1.488-.16-1.488.616v1.257h-3.001C4.038,3,0,7.038,0,12s4.038,9,9,9h5.5c.829,0,1.5-.672,1.5-1.5s-.671-1.5-1.5-1.5h-5.5c-3.309,0-6-2.691-6-6s2.691-6,6-6h3.001v1.257c0,.776.939,1.165,1.488.616l2.757-2.757c.34-.34.34-.892,0-1.232l-2.757-2.757Z"/>
 </svg>
-);
 
-FiBrPriorityArrow.displayName = 'FiBrPriorityArrow';
+);

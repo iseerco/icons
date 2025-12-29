@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Dashboard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 1a11.995 11.995 0 0 0 -6.888 21.818l.259.182h13.258l.259-.182a11.995 11.995 0 0 0 -6.888-21.818zm5.988 20h-11.976a10 10 0 1 1 11.976 0zm2.012-8a7.939 7.939 0 0 1 -2.406 5.715l-1.4-1.43a5.945 5.945 0 0 0 1.595-5.833l1.575-1.575a7.968 7.968 0 0 1 .636 3.123zm-14 0a5.951 5.951 0 0 0 1.8 4.285l-1.4 1.43a8 8 0 0 1 8.717-13.08l-1.569 1.575a5.977 5.977 0 0 0 -7.548 5.79zm7.926-.512a2.033 2.033 0 1 1 -1.414-1.414l4.281-4.281 1.414 1.414z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Dashboard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 1a11.995 11.995 0 0 0 -6.888 21.818l.259.182h13.258l.259-.182a11.995 11.995 0 0 0 -6.888-21.818zm5.988 20h-11.976a10 10 0 1 1 11.976 0zm2.012-8a7.939 7.939 0 0 1 -2.406 5.715l-1.4-1.43a5.945 5.945 0 0 0 1.595-5.833l1.575-1.575a7.968 7.968 0 0 1 .636 3.123zm-14 0a5.951 5.951 0 0 0 1.8 4.285l-1.4 1.43a8 8 0 0 1 8.717-13.08l-1.569 1.575a5.977 5.977 0 0 0 -7.548 5.79zm7.926-.512a2.033 2.033 0 1 1 -1.414-1.414l4.281-4.281 1.414 1.414z"/></svg>
 );
-
-Dashboard.displayName = 'Dashboard';

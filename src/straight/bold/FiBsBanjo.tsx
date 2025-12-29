@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBanjo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20.56,6.985l3.44-3.425-3.56-3.56-3.44,3.425v1.454l-4.506,4.506c-1.282-.874-2.829-1.385-4.494-1.385C3.589,8,0,11.589,0,16s3.589,8,8,8,8-3.589,8-8c0-1.665-.511-3.212-1.385-4.494l4.521-4.521h1.424Zm-12.56,14.015c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Zm-1.939-7.061l4,4-2.121,2.121-4-4,2.121-2.121Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBanjo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.56,6.985l3.44-3.425-3.56-3.56-3.44,3.425v1.454l-4.506,4.506c-1.282-.874-2.829-1.385-4.494-1.385C3.589,8,0,11.589,0,16s3.589,8,8,8,8-3.589,8-8c0-1.665-.511-3.212-1.385-4.494l4.521-4.521h1.424Zm-12.56,14.015c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Zm-1.939-7.061l4,4-2.121,2.121-4-4,2.121-2.121Z"/></svg>
+
 );
-
-FiBsBanjo.displayName = 'FiBsBanjo';

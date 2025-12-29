@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Transcript: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20 12-3.886-3h-1.114c-1.105 0-2-.895-2-2v-2c0-1.105.895-2 2-2h1.114l3.886-3zm4-6c0-1.105-.895-2-2-2v4c1.105 0 2-.895 2-2zm-2 4c.732 0 1.409-.212 2-.556v11.556c0 1.657-1.343 3-3 3h-14v-7h-7v-17h16.727l-1.295 1h-.432c-2.206 0-4 1.794-4 4h-7v2h7c0 .732.212 1.409.556 2h-7.556v2h11.432l2.591 2h-14.023v2h18zm-2 7h-10v2h10zm-15 6.414v-4.414h-4.414z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Transcript = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20 12-3.886-3h-1.114c-1.105 0-2-.895-2-2v-2c0-1.105.895-2 2-2h1.114l3.886-3zm4-6c0-1.105-.895-2-2-2v4c1.105 0 2-.895 2-2zm-2 4c.732 0 1.409-.212 2-.556v11.556c0 1.657-1.343 3-3 3h-14v-7h-7v-17h16.727l-1.295 1h-.432c-2.206 0-4 1.794-4 4h-7v2h7c0 .732.212 1.409.556 2h-7.556v2h11.432l2.591 2h-14.023v2h18zm-2 7h-10v2h10zm-15 6.414v-4.414h-4.414z"/></svg>
 );
-
-Transcript.displayName = 'Transcript';

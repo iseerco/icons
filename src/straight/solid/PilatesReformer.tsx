@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PilatesReformer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22 2v2.101l-6.391 5.899h-6.609c-1.095 0-1.985.885-1.998 1.977l-3.102-3.384c.059-.189.1-.385.1-.593 0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2c.148 0 .292-.019.431-.049l2.795 3.049h-5.226v9h2v-3h20v3h2v-20zm-5 11v-1.562l5-4.615v6.178h-5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PilatesReformer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22 2v2.101l-6.391 5.899h-6.609c-1.095 0-1.985.885-1.998 1.977l-3.102-3.384c.059-.189.1-.385.1-.593 0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2c.148 0 .292-.019.431-.049l2.795 3.049h-5.226v9h2v-3h20v3h2v-20zm-5 11v-1.562l5-4.615v6.178h-5z"/></svg>
 );
-
-PilatesReformer.displayName = 'PilatesReformer';

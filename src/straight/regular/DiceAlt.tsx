@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DiceAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,9H12a3,3,0,0,0-3,3V24H24V12A3,3,0,0,0,21,9Zm1,13H11V12a1,1,0,0,1,1-1h9a1,1,0,0,1,1,1Zm-7-8a1,1,0,1,1-1-1A1,1,0,0,1,15,14Zm5,5a1,1,0,1,1-1-1A1,1,0,0,1,20,19ZM8.657,6.707a1,1,0,1,1,1.414,0A1,1,0,0,1,8.657,6.707Zm-1.95,1.95a1,1,0,1,1-1.414,0A1,1,0,0,1,6.707,8.657ZM2.293,10.071,7,14.779v2.828L.879,11.485a3,3,0,0,1,0-4.243L7.243.879a3,3,0,0,1,4.242,0L17.606,7H14.778L10.071,2.293a1,1,0,0,0-1.414,0L2.293,8.657a1,1,0,0,0,0,1.414Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DiceAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,9H12a3,3,0,0,0-3,3V24H24V12A3,3,0,0,0,21,9Zm1,13H11V12a1,1,0,0,1,1-1h9a1,1,0,0,1,1,1Zm-7-8a1,1,0,1,1-1-1A1,1,0,0,1,15,14Zm5,5a1,1,0,1,1-1-1A1,1,0,0,1,20,19ZM8.657,6.707a1,1,0,1,1,1.414,0A1,1,0,0,1,8.657,6.707Zm-1.95,1.95a1,1,0,1,1-1.414,0A1,1,0,0,1,6.707,8.657ZM2.293,10.071,7,14.779v2.828L.879,11.485a3,3,0,0,1,0-4.243L7.243.879a3,3,0,0,1,4.242,0L17.606,7H14.778L10.071,2.293a1,1,0,0,0-1.414,0L2.293,8.657a1,1,0,0,0,0,1.414Z"/></svg>
+
 );
-
-DiceAlt.displayName = 'DiceAlt';

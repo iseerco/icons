@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChatbotSpeechBubble: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChatbotSpeechBubble = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22,9v-3c0-1.654-1.346-3-3-3h-6V0h-2v3h-6c-1.654,0-3,1.346-3,3v3H0v6h2v6h12.697l3.963,2.642c.36.24.775.361,1.191.361.348,0,.696-.084,1.015-.255.699-.375,1.134-1.1,1.134-1.894v-6.855h2v-6h-2Zm-2,12.855c0,.022,0,.089-.078.13-.08.043-.136.004-.152-.007l-4.467-2.978H4V6c0-.551.448-1,1-1h14c.552,0,1,.449,1,1v15.855ZM7,9.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm7,0c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm2.336,3.752l1.33,1.493c-.103.092-2.559,2.254-5.666,2.254s-5.563-2.162-5.666-2.254l1.33-1.493c.02.018,2.005,1.748,4.336,1.748s4.316-1.73,4.336-1.748Z"/>
 </svg>
-);
 
-ChatbotSpeechBubble.displayName = 'ChatbotSpeechBubble';
+);

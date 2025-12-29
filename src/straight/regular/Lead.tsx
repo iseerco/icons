@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Lead: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Lead = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,12c3.309,0,6-2.691,6-6S11.309,0,8,0,2,2.691,2,6s2.691,6,6,6Zm0-10c2.206,0,4,1.794,4,4s-1.794,4-4,4-4-1.794-4-4,1.794-4,4-4Zm-3,12h6v2h-6c-1.654,0-3,1.346-3,3v5H0v-5c0-2.757,2.243-5,5-5Zm13-2c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm1,9.858v-1.858h-2v1.858c-1.399-.364-2.494-1.459-2.858-2.858h1.858v-2h-1.858c.364-1.399,1.459-2.494,2.858-2.858v1.858h2v-1.858c1.399.364,2.494,1.459,2.858,2.858h-1.858v2h1.858c-.364,1.399-1.459,2.494-2.858,2.858Z"/>
 </svg>
-);
 
-Lead.displayName = 'Lead';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MillSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,9v12h-2V9c0-2.21-1.79-4-4-4-.74,0-1.43,.22-2.03,.57l-1.97,5.43v10h-2v-4.5l-2.73,7.5h-2.13l4.86-13.35v-1.65c0-2.21-1.79-4-4-4s-4,1.79-4,4v12H1V3H3v1.54c1.06-.95,2.46-1.54,4-1.54,2.09,0,3.92,1.07,5,2.69,.36-.54,.81-1.02,1.32-1.42L14.87,0h2.13l-1.13,3.11c.37-.07,.74-.11,1.13-.11,3.31,0,6,2.69,6,6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MillSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,9v12h-2V9c0-2.21-1.79-4-4-4-.74,0-1.43,.22-2.03,.57l-1.97,5.43v10h-2v-4.5l-2.73,7.5h-2.13l4.86-13.35v-1.65c0-2.21-1.79-4-4-4s-4,1.79-4,4v12H1V3H3v1.54c1.06-.95,2.46-1.54,4-1.54,2.09,0,3.92,1.07,5,2.69,.36-.54,.81-1.02,1.32-1.42L14.87,0h2.13l-1.13,3.11c.37-.07,.74-.11,1.13-.11,3.31,0,6,2.69,6,6Z"/></svg>
+
 );
-
-MillSign.displayName = 'MillSign';

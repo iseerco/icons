@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Revenue: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Revenue = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16,11.026V3h2v6c-.941.599-1.5,1.192-2,2.026Zm5.685,5.242l-3.041-.507c-.373-.062-.644-.382-.644-.76,0-.551.448-1,1-1h2c.552,0,1,.449,1,1h2c0-1.654-1.346-3-3-3v-2h-2v2c-1.654,0-3,1.346-3,3,0,1.36.974,2.51,2.315,2.733l3.041.507c.373.062.644.382.644.76,0,.551-.448,1-1,1h-2c-.552,0-1-.449-1-1h-2c0,1.654,1.346,3,3,3v2h2v-2c1.654,0,3-1.346,3-3,0-1.36-.974-2.51-2.315-2.733Zm-15.685,7.733h2v-15h-2v15Zm-5,0h2v-12H1v12Zm10,0h2V6h-2v18ZM23,0h-2v8h2V0Z"/>
 </svg>
-);
 
-Revenue.displayName = 'Revenue';
+);

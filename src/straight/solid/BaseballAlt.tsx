@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BaseballAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.187,9.657a31.182,31.182,0,0,1-5.358,4.3c-.364.231-.775.482-1.2.74-.445.272-.932.572-1.379.856L8.48,11.778c.339-.525.709-1.13,1.039-1.671l.455-.743a31.369,31.369,0,0,1,4.5-5.685L16.946,1.21A4.132,4.132,0,1,1,22.79,7.054ZM7.23,13.356,2.5,18.086,1.457,17.043.043,18.457l5.5,5.5,1.414-1.414L5.914,21.5l4.73-4.73ZM20.5,16.979a3.5,3.5,0,1,0,3.5,3.5A3.5,3.5,0,0,0,20.5,16.979Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BaseballAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.187,9.657a31.182,31.182,0,0,1-5.358,4.3c-.364.231-.775.482-1.2.74-.445.272-.932.572-1.379.856L8.48,11.778c.339-.525.709-1.13,1.039-1.671l.455-.743a31.369,31.369,0,0,1,4.5-5.685L16.946,1.21A4.132,4.132,0,1,1,22.79,7.054ZM7.23,13.356,2.5,18.086,1.457,17.043.043,18.457l5.5,5.5,1.414-1.414L5.914,21.5l4.73-4.73ZM20.5,16.979a3.5,3.5,0,1,0,3.5,3.5A3.5,3.5,0,0,0,20.5,16.979Z"/></svg>
+
 );
-
-BaseballAlt.displayName = 'BaseballAlt';

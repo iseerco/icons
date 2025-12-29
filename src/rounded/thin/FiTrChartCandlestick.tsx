@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrChartCandlestick: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,23.5c0,.28-.22,.5-.5,.5H4.5c-2.48,0-4.5-2.02-4.5-4.5V.5C0,.22,.22,0,.5,0s.5,.22,.5,.5V19.5c0,1.93,1.57,3.5,3.5,3.5H23.5c.28,0,.5,.22,.5,.5ZM15,11.5V4.5c0-.83,.67-1.5,1.5-1.5h.5V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5V3h.5c.83,0,1.5,.67,1.5,1.5v7c0,.83-.67,1.5-1.5,1.5h-.5v2.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-2.5h-.5c-.83,0-1.5-.67-1.5-1.5Zm1,0c0,.28,.22,.5,.5,.5h2c.28,0,.5-.22,.5-.5V4.5c0-.28-.22-.5-.5-.5h-2c-.28,0-.5,.22-.5,.5v7Zm-10,3V4.5c0-.83,.67-1.5,1.5-1.5h.5V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5V3h.5c.83,0,1.5,.67,1.5,1.5V14.5c0,.83-.67,1.5-1.5,1.5h-.5v2.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-2.5h-.5c-.83,0-1.5-.67-1.5-1.5Zm1,0c0,.28,.22,.5,.5,.5h2c.28,0,.5-.22,.5-.5V4.5c0-.28-.22-.5-.5-.5h-2c-.28,0-.5,.22-.5,.5V14.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrChartCandlestick = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,23.5c0,.28-.22,.5-.5,.5H4.5c-2.48,0-4.5-2.02-4.5-4.5V.5C0,.22,.22,0,.5,0s.5,.22,.5,.5V19.5c0,1.93,1.57,3.5,3.5,3.5H23.5c.28,0,.5,.22,.5,.5ZM15,11.5V4.5c0-.83,.67-1.5,1.5-1.5h.5V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5V3h.5c.83,0,1.5,.67,1.5,1.5v7c0,.83-.67,1.5-1.5,1.5h-.5v2.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-2.5h-.5c-.83,0-1.5-.67-1.5-1.5Zm1,0c0,.28,.22,.5,.5,.5h2c.28,0,.5-.22,.5-.5V4.5c0-.28-.22-.5-.5-.5h-2c-.28,0-.5,.22-.5,.5v7Zm-10,3V4.5c0-.83,.67-1.5,1.5-1.5h.5V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5V3h.5c.83,0,1.5,.67,1.5,1.5V14.5c0,.83-.67,1.5-1.5,1.5h-.5v2.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-2.5h-.5c-.83,0-1.5-.67-1.5-1.5Zm1,0c0,.28,.22,.5,.5,.5h2c.28,0,.5-.22,.5-.5V4.5c0-.28-.22-.5-.5-.5h-2c-.28,0-.5,.22-.5,.5V14.5Z"/></svg>
+
 );
-
-FiTrChartCandlestick.displayName = 'FiTrChartCandlestick';

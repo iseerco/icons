@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrAppsSort: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrAppsSort = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M121.752,0C56.95,0,4.418,52.532,4.418,117.333S56.95,234.667,121.752,234.667s117.333-52.532,117.333-117.333   C239.014,52.561,186.524,0.071,121.752,0z M121.752,170.667c-29.455,0-53.333-23.878-53.333-53.333S92.296,64,121.752,64   s53.333,23.878,53.333,53.333S151.207,170.667,121.752,170.667z"/>
 	<path d="M121.752,277.333c-64.801,0-117.333,52.532-117.333,117.333S56.95,512,121.752,512s117.333-52.532,117.333-117.333   C239.014,329.895,186.524,277.404,121.752,277.333z M121.752,448c-29.455,0-53.333-23.878-53.333-53.333   s23.878-53.333,53.333-53.333s53.333,23.878,53.333,53.333S151.207,448,121.752,448z"/>
@@ -29,6 +31,5 @@ export const FiBrAppsSort: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrAppsSort.displayName = 'FiBrAppsSort';
+);

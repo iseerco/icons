@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GolfHole: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GolfHole = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,18c0,3.42-5.159,6-12,6S0,21.42,0,18c0-2.626,2.999-4.789,7.825-5.645,.553-.093,1.063,.267,1.159,.811,.097,.543-.266,1.062-.81,1.159-3.578,.634-6.175,2.179-6.175,3.675,0,1.892,4.106,4,10,4s10-2.108,10-4c0-1.496-2.597-3.041-6.175-3.675-.544-.097-.906-.616-.81-1.159,.096-.544,.606-.907,1.159-.811,4.826,.855,7.825,3.018,7.825,5.645Zm-13,0V2.692c0-1.387,.732-2.048,1.17-2.318,.727-.449,1.726-.497,2.487-.117,.039,.019,5.301,3.562,5.301,3.562,.729,.538,1.102,1.356,1.034,2.214-.066,.857-.562,1.607-1.323,2.006l-6.669,3.271v6.689c0,.552-.447,1-1,1s-1-.448-1-1Zm2-8.917l5.765-2.828c.183-.096,.226-.278,.233-.377,.008-.1-.007-.288-.193-.426l-5.079-3.422c-.055-.019-.127-.031-.204-.031-.102,0-.212,.021-.3,.076-.147,.091-.222,.298-.222,.617v6.392Z"/>
 </svg>
-);
 
-GolfHole.displayName = 'GolfHole';
+);

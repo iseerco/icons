@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FolderMusic: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FolderMusic = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.311,12.464c.438,.38,.689,.93,.689,1.51v6.525c0,1.381-1.119,2.5-2.5,2.5s-2.5-1.119-2.5-2.5,1.119-2.5,2.5-2.5c.171,0,.338,.018,.5,.05v-4.076l-5,.715v6.811c0,1.381-1.119,2.5-2.5,2.5s-2.5-1.119-2.5-2.5,1.119-2.5,2.5-2.5c.171,0,.338,.018,.5,.05v-4.361c0-.989,.738-1.84,1.717-1.98l5-.714c.576-.083,1.156,.089,1.594,.469Zm-2.311-10.464H12.236L8.236,0H3C1.346,0,0,1.346,0,3v3H24v-1c0-1.654-1.346-3-3-3ZM0,22H10.051c-.019-.166-.051-.329-.051-.5,0-1.953,1.258-3.602,3-4.224v-2.587c0-1.978,1.477-3.681,3.435-3.96l4.999-.714c.897-.126,1.796,.061,2.566,.507v-2.522H0v14Z"/>
 </svg>
-);
 
-FolderMusic.displayName = 'FolderMusic';
+);

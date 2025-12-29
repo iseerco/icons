@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBarberPole: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBarberPole = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.5,18h-.5V6h.5c.829,0,1.5-.671,1.5-1.5s-.671-1.5-1.5-1.5h-1.312c-1.039-1.79-2.973-3-5.188-3s-4.149,1.21-5.188,3h-1.312c-.829,0-1.5.671-1.5,1.5s.671,1.5,1.5,1.5h.5v12h-.5c-.829,0-1.5.671-1.5,1.5s.671,1.5,1.5,1.5h1.312c1.039,1.79,2.973,3,5.188,3s4.149-1.21,5.188-3h1.312c.829,0,1.5-.671,1.5-1.5s-.671-1.5-1.5-1.5ZM9,7.621l6,6v2.758l-6-6v-2.758Zm6,1.758l-3.379-3.379h3.379v3.379Zm-6,5.242l3.379,3.379h-3.379v-3.379Z"/>
 </svg>
-);
 
-FiBrBarberPole.displayName = 'FiBrBarberPole';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Banjo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21.051,6l2.949-2.942-3.051-3.058-2.949,2.942v1.644l-5.097,5.097c-1.355-1.054-3.057-1.683-4.903-1.683C3.589,8,0,11.589,0,16s3.589,8,8,8,8-3.589,8-8c0-1.846-.629-3.548-1.683-4.903l5.097-5.097h1.637Zm-13.051,16c-3.309,0-6-2.691-6-6s2.691-6,6-6,6,2.691,6,6-2.691,6-6,6Zm-2.293-7.707l4,4-1.414,1.414-4-4,1.414-1.414Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Banjo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21.051,6l2.949-2.942-3.051-3.058-2.949,2.942v1.644l-5.097,5.097c-1.355-1.054-3.057-1.683-4.903-1.683C3.589,8,0,11.589,0,16s3.589,8,8,8,8-3.589,8-8c0-1.846-.629-3.548-1.683-4.903l5.097-5.097h1.637Zm-13.051,16c-3.309,0-6-2.691-6-6s2.691-6,6-6,6,2.691,6,6-2.691,6-6,6Zm-2.293-7.707l4,4-1.414,1.414-4-4,1.414-1.414Z"/></svg>
+
 );
-
-Banjo.displayName = 'Banjo';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShirtRunning: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShirtRunning = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.333,8.801c-1.396-.494-2.333-1.82-2.333-3.301V0h-2v4c0,2.206-1.794,4-4,4s-4-1.794-4-4V0h-2v5.5c0,1.481-.938,2.808-2.333,3.301l-.667.236v14.963h18v-14.963l-.667-.236Zm-12.887-.899c1.101,1.283,2.734,2.098,4.554,2.098s3.453-.814,4.554-2.098c.517,1.063,1.37,1.948,2.446,2.498v.087l-14,10.062v-10.149c1.076-.55,1.929-1.436,2.446-2.498Zm-1.037,14.098l12.591-9.049v9.049H6.409Z"/>
 </svg>
-);
 
-ShirtRunning.displayName = 'ShirtRunning';
+);

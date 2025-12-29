@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const KitchenSet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const KitchenSet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,13h-4v-2h-5v2h-4v2h1v6.5c0,1.379,1.121,2.5,2.5,2.5h6c1.379,0,2.5-1.121,2.5-2.5v-6.5h1v-2Zm-3,8.5c0,.275-.225,.5-.5,.5h-6c-.275,0-.5-.225-.5-.5v-6.5h7v6.5ZM0,21H10c0,1.657-1.343,3-3,3H3c-1.657,0-3-1.343-3-3Zm0-4H10c0,1.657-1.343,3-3,3H3c-1.657,0-3-1.343-3-3Zm6.5-4c3.243,0,5.931-2.39,6.415-5.5h8.085v-2H12.915c-.484-3.11-3.172-5.5-6.415-5.5C2.916,0,0,2.916,0,6.5s2.916,6.5,6.5,6.5Zm0-11c2.481,0,4.5,2.019,4.5,4.5s-2.019,4.5-4.5,4.5S2,8.981,2,6.5,4.019,2,6.5,2Z"/>
 </svg>
-);
 
-KitchenSet.displayName = 'KitchenSet';
+);

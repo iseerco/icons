@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Replace: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M8,0H3C1.35,0,0,1.35,0,3V11H11V3c0-1.65-1.35-3-3-3Zm1,9H2V3c0-.55,.45-1,1-1h5c.55,0,1,.45,1,1v6Zm12,4h-5c-1.65,0-3,1.35-3,3v8h11v-8c0-1.65-1.35-3-3-3Zm1,9h-7v-6c0-.55,.45-1,1-1h5c.55,0,1,.45,1,1v6ZM13.59,6.41c-.78-.78-.78-2.05,0-2.83L16.88,.29l1.41,1.41-2.29,2.29h3c2.21,0,4,1.79,4,4v3h-2v-3c0-1.1-.9-2-2-2h-3l2.29,2.29-1.41,1.41-3.29-3.29Zm-3.17,11.17c.78,.78,.78,2.05,0,2.83l-3.29,3.29-1.41-1.41,2.29-2.29h-3c-2.21,0-4-1.79-4-4v-3H3v3c0,1.1,.9,2,2,2h3l-2.29-2.29,1.41-1.41,3.29,3.29Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Replace = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M8,0H3C1.35,0,0,1.35,0,3V11H11V3c0-1.65-1.35-3-3-3Zm1,9H2V3c0-.55,.45-1,1-1h5c.55,0,1,.45,1,1v6Zm12,4h-5c-1.65,0-3,1.35-3,3v8h11v-8c0-1.65-1.35-3-3-3Zm1,9h-7v-6c0-.55,.45-1,1-1h5c.55,0,1,.45,1,1v6ZM13.59,6.41c-.78-.78-.78-2.05,0-2.83L16.88,.29l1.41,1.41-2.29,2.29h3c2.21,0,4,1.79,4,4v3h-2v-3c0-1.1-.9-2-2-2h-3l2.29,2.29-1.41,1.41-3.29-3.29Zm-3.17,11.17c.78,.78,.78,2.05,0,2.83l-3.29,3.29-1.41-1.41,2.29-2.29h-3c-2.21,0-4-1.79-4-4v-3H3v3c0,1.1,.9,2,2,2h3l-2.29-2.29,1.41-1.41,3.29,3.29Z"/></svg>
+
 );
-
-Replace.displayName = 'Replace';

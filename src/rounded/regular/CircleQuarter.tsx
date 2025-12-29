@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CircleQuarter: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,13H3.04c-.93,0-1.8-.42-2.38-1.15-.58-.73-.8-1.68-.59-2.6H.08C1.12,4.72,4.72,1.12,9.26,.08c.92-.21,1.86,0,2.6,.59,.73,.58,1.15,1.45,1.15,2.38V12c0,.55-.45,1-1,1ZM2.03,9.7h0c-.07,.32,0,.65,.2,.9,.12,.15,.38,.39,.81,.39h7.96V3.04c0-.44-.25-.7-.39-.81-.26-.2-.58-.28-.9-.2-3.79,.87-6.81,3.88-7.68,7.68Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CircleQuarter = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,13H3.04c-.93,0-1.8-.42-2.38-1.15-.58-.73-.8-1.68-.59-2.6H.08C1.12,4.72,4.72,1.12,9.26,.08c.92-.21,1.86,0,2.6,.59,.73,.58,1.15,1.45,1.15,2.38V12c0,.55-.45,1-1,1ZM2.03,9.7h0c-.07,.32,0,.65,.2,.9,.12,.15,.38,.39,.81,.39h7.96V3.04c0-.44-.25-.7-.39-.81-.26-.2-.58-.28-.9-.2-3.79,.87-6.81,3.88-7.68,7.68Z"/></svg>
+
 );
-
-CircleQuarter.displayName = 'CircleQuarter';

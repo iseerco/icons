@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsXRay: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m24,1V0H0v1h2v22H0v1h24v-1h-2V1h2Zm-3,22H3V1h18v22ZM6,7h5.5v2h-4.5v1h4.5v2h-3.5v1h3.5v2h-2.94c-.843.014-1.567.52-1.892,1.32-.342.846-.153,1.801.48,2.435l1.245,1.245h7.213l1.245-1.245c.634-.634.822-1.589.48-2.435-.324-.801-1.049-1.307-1.933-1.32h-2.899v-2h3.5v-1h-3.5v-2h4.5v-1h-4.5v-2h5.5v-1h-5.5v-2h-1v2h-5.5v1Zm9.425,9c.44.007.807.268.979.695.146.359.164.928-.26,1.353l-.952.952h-6.385l-.952-.952c-.424-.425-.405-.993-.26-1.353.173-.428.539-.688,1.005-.695h6.824Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsXRay = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24,1V0H0v1h2v22H0v1h24v-1h-2V1h2Zm-3,22H3V1h18v22ZM6,7h5.5v2h-4.5v1h4.5v2h-3.5v1h3.5v2h-2.94c-.843.014-1.567.52-1.892,1.32-.342.846-.153,1.801.48,2.435l1.245,1.245h7.213l1.245-1.245c.634-.634.822-1.589.48-2.435-.324-.801-1.049-1.307-1.933-1.32h-2.899v-2h3.5v-1h-3.5v-2h4.5v-1h-4.5v-2h5.5v-1h-5.5v-2h-1v2h-5.5v1Zm9.425,9c.44.007.807.268.979.695.146.359.164.928-.26,1.353l-.952.952h-6.385l-.952-.952c-.424-.425-.405-.993-.26-1.353.173-.428.539-.688,1.005-.695h6.824Z"/></svg>
+
 );
-
-FiTsXRay.displayName = 'FiTsXRay';

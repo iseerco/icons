@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DryerAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DryerAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.876,15.483c-.492.892-.517,1.169-.505,1.247.1.522.783.858.79.862l-.828,1.82c-.166-.075-1.635-.775-1.927-2.31-.167-.881.283-1.796.718-2.585.492-.892.517-1.169.505-1.247-.1-.522-.783-.858-.79-.862l.828-1.82c.166.075,1.635.775,1.927,2.31.167.881-.283,1.796-.718,2.585Zm4.718-2.585c-.292-1.535-1.761-2.235-1.927-2.31l-.828,1.82c.007.003.69.34.79.862.012.078-.013.355-.505,1.247-.435.789-.885,1.705-.718,2.585.292,1.535,1.761,2.235,1.927,2.31l.828-1.82c-.007-.003-.69-.34-.79-.862-.012-.078.013-.355.505-1.247.435-.789.885-1.705.718-2.585Zm6.406-9.897v21H2V3c0-1.654,1.346-3,3-3h14c1.654,0,3,1.346,3,3Zm-12,1.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5,1.5Zm-3.5,1.5c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5,1.5.672,1.5,1.5,1.5Zm11.5,9c0-3.309-2.691-6-6-6s-6,2.691-6,6,2.691,6,6,6,6-2.691,6-6Z"/>
 </svg>
-);
 
-DryerAlt.displayName = 'DryerAlt';
+);

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Onigiri: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m15.948 18v5h-8v-5c0-1.103.897-2 2-2h4c1.102 0 2 .897 2 2zm7.2-2.805s-6.999-11.761-6.999-11.761c-.922-1.547-2.45-2.434-4.193-2.434-1.757 0-3.293.887-4.213 2.434l-7 11.762c-.946 1.59-.991 3.518-.121 5.155.883 1.658 2.502 2.648 4.331 2.648h.996v-5c0-2.206 1.794-4 4-4h4c2.206 0 4 1.794 4 4v5h.991c1.785 0 3.701-1.249 4.555-2.97.774-1.56.661-3.141-.346-4.835z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Onigiri = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15.948 18v5h-8v-5c0-1.103.897-2 2-2h4c1.102 0 2 .897 2 2zm7.2-2.805s-6.999-11.761-6.999-11.761c-.922-1.547-2.45-2.434-4.193-2.434-1.757 0-3.293.887-4.213 2.434l-7 11.762c-.946 1.59-.991 3.518-.121 5.155.883 1.658 2.502 2.648 4.331 2.648h.996v-5c0-2.206 1.794-4 4-4h4c2.206 0 4 1.794 4 4v5h.991c1.785 0 3.701-1.249 4.555-2.97.774-1.56.661-3.141-.346-4.835z"/></svg>
 );
-
-Onigiri.displayName = 'Onigiri';

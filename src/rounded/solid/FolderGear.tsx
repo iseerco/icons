@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FolderGear: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FolderGear = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.332,19.63l-.55-.317c.129-.418,.218-.853,.218-1.312s-.089-.895-.218-1.312l.55-.317c.479-.276,.643-.887,.367-1.366-.276-.478-.887-.643-1.365-.367l-.544,.314c-.605-.652-1.393-1.126-2.289-1.331v-.621c0-.552-.448-1-1-1h0c-.552,0-1,.448-1,1v.621c-.896,.205-1.685,.678-2.289,1.331l-.544-.314c-.478-.276-1.09-.111-1.365,.367-.276,.479-.112,1.09,.367,1.366l.55,.317c-.129,.418-.218,.853-.218,1.312s.089,.895,.218,1.312l-.55,.317c-.479,.276-.643,.887-.367,1.366,.276,.478,.887,.643,1.365,.367l.544-.314c.605,.652,1.393,1.126,2.289,1.331v.621c0,.552,.448,1,1,1h0c.552,0,1-.448,1-1v-.621c.896-.205,1.685-.678,2.289-1.331l.544,.314c.478,.276,1.09,.111,1.365-.367,.276-.479,.112-1.09-.367-1.366Zm-4.832-.13c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5,.673,1.5,1.5-.673,1.5-1.5,1.5Zm5.399-13.5H0v-1C0,2.243,2.243,0,5,0h2.528c.463,0,.927,.109,1.341,.316l3.156,1.578c.138,.069,.292,.105,.446,.105h6.528c2.414,0,4.434,1.721,4.899,4ZM11.579,22H5c-2.757,0-5-2.243-5-5V8H24v4.201c-1.434-1.361-3.367-2.201-5.5-2.201-4.418,0-8,3.582-8,8,0,1.459,.397,2.822,1.079,4Z"/>
 </svg>
-);
 
-FolderGear.displayName = 'FolderGear';
+);

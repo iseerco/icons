@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const StarShooting: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m23.963,1.45l-10.564,10.564-1.414-1.414L22.549.036l1.414,1.414Zm-10,2l-1.414-1.414-5.564,5.564,1.414,1.414,5.564-5.564Zm1.022,12.15l1.414,1.414,5.564-5.564-1.414-1.414-5.564,5.564Zm-8.487-4.081h-.97l-1.178,4.5H0v.922l3.323,1.848-1.304,4.076.721.543,3.275-2.532,3.261,2.521.75-.523-1.326-4.029,3.3-1.909v-.917h-4.326l-1.176-4.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const StarShooting = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.963,1.45l-10.564,10.564-1.414-1.414L22.549.036l1.414,1.414Zm-10,2l-1.414-1.414-5.564,5.564,1.414,1.414,5.564-5.564Zm1.022,12.15l1.414,1.414,5.564-5.564-1.414-1.414-5.564,5.564Zm-8.487-4.081h-.97l-1.178,4.5H0v.922l3.323,1.848-1.304,4.076.721.543,3.275-2.532,3.261,2.521.75-.523-1.326-4.029,3.3-1.909v-.917h-4.326l-1.176-4.5Z"/></svg>
+
 );
-
-StarShooting.displayName = 'StarShooting';

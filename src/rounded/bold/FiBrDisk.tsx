@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrDisk: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrDisk = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M483.883,92.438l-64.32-64.299C401.607,10.062,377.159-0.072,351.68,0H96C43.005,0.059,0.059,43.005,0,96v320   c0.059,52.995,43.005,95.941,96,96h320c52.995-0.059,95.941-43.005,96-96V160.32C512.073,134.845,501.948,110.4,483.883,92.438z    M448,416c0,17.673-14.327,32-32,32H96c-17.673,0-32-14.327-32-32V96c0-17.673,14.327-32,32-32h32   c0,47.128,38.205,85.333,85.333,85.333h64c46.29-0.092,84.065-37.072,85.141-83.349c4.44,1.55,8.478,4.071,11.819,7.381   l64.341,64.341c6.015,5.986,9.387,14.128,9.365,22.613V416z"/>
 	<circle cx="256" cy="298.667" r="85.333"/>
@@ -28,6 +30,5 @@ export const FiBrDisk: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrDisk.displayName = 'FiBrDisk';
+);

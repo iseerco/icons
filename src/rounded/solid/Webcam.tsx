@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Webcam: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Webcam = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15,10c0,1.654-1.346,3-3,3s-3-1.346-3-3,1.346-3,3-3,3,1.346,3,3Zm7,0c0,5.514-4.486,10-10,10S2,15.514,2,10,6.486,0,12,0s10,4.486,10,10Zm-5,0c0-2.757-2.243-5-5-5s-5,2.243-5,5,2.243,5,5,5,5-2.243,5-5Zm1.429,10.128c-1.86,1.185-4.066,1.872-6.429,1.872s-4.571-.688-6.431-1.873c-.095.143-.185.288-.27.438-.407.72-.401,1.578.017,2.293.417.715,1.159,1.142,1.986,1.142h9.394c.826,0,1.569-.427,1.988-1.142.416-.711.424-1.563.021-2.278-.087-.154-.179-.305-.276-.451Z"/>
 </svg>
-);
 
-Webcam.displayName = 'Webcam';
+);

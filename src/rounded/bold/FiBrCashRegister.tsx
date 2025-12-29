@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCashRegister: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.5,9H8v-3h2c1.657,0,3-1.343,3-3s-1.343-3-3-3H3C1.343,0,0,1.343,0,3s1.343,3,3,3h2v3.023c-2.799,.254-5,2.613-5,5.477v4c0,3.032,2.468,5.5,5.5,5.5h13c3.032,0,5.5-2.468,5.5-5.5v-4c0-3.033-2.468-5.5-5.5-5.5ZM3,14.5c0-1.379,1.121-2.5,2.5-2.5h13c1.379,0,2.5,1.121,2.5,2.5v4c0,.171-.017,.338-.05,.5H3.05c-.033-.162-.05-.329-.05-.5v-4Zm2,1c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm5.5,0c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm5.5,0c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCashRegister = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.5,9H8v-3h2c1.657,0,3-1.343,3-3s-1.343-3-3-3H3C1.343,0,0,1.343,0,3s1.343,3,3,3h2v3.023c-2.799,.254-5,2.613-5,5.477v4c0,3.032,2.468,5.5,5.5,5.5h13c3.032,0,5.5-2.468,5.5-5.5v-4c0-3.033-2.468-5.5-5.5-5.5ZM3,14.5c0-1.379,1.121-2.5,2.5-2.5h13c1.379,0,2.5,1.121,2.5,2.5v4c0,.171-.017,.338-.05,.5H3.05c-.033-.162-.05-.329-.05-.5v-4Zm2,1c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm5.5,0c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm5.5,0c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Z"/></svg>
+
 );
-
-FiBrCashRegister.displayName = 'FiBrCashRegister';

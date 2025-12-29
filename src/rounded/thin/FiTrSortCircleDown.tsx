@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrSortCircleDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrSortCircleDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.136,13H6.864c-.566,0-1.07.339-1.284.863-.214.525-.091,1.12.314,1.516l4.603,4.499c.415.415.96.621,1.504.621s1.086-.206,1.497-.617l4.607-4.503c.405-.396.528-.99.314-1.516-.214-.524-.718-.863-1.284-.863Zm-8.508,3.653l2.92-2.653h2.533l-4.177,3.901-1.277-1.248Zm-2.122-2.412c.023-.057.117-.241.358-.241h3.197l-2.15,1.953-1.318-1.289c-.173-.169-.11-.366-.088-.423Zm10.9.423l-4.611,4.507c-.438.438-1.152.438-1.595-.004l-.58-.567,4.925-4.6h1.591c.241,0,.335.185.358.241.022.057.085.254-.088.423Zm-3.904-10.542c-.826-.826-2.175-.828-3.001-.004l-4.606,4.503c-.405.396-.528.99-.314,1.516.214.524.718.863,1.284.863h10.271c.566,0,1.07-.339,1.284-.863.214-.525.091-1.12-.314-1.516l-4.604-4.499Zm3.992,5.637c-.023.057-.117.241-.358.241H6.864c-.241,0-.335-.185-.358-.241-.022-.057-.085-.254.088-.423l4.61-4.507c.219-.219.506-.328.794-.328s.579.11.801.332l4.607,4.503c.173.169.11.366.088.423ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z"/>
 </svg>
-);
 
-FiTrSortCircleDown.displayName = 'FiTrSortCircleDown';
+);

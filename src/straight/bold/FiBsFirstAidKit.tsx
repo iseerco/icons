@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsFirstAidKit: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20.5 5h-3.5v-5h-10v5h-3.5c-1.93 0-3.5 1.57-3.5 3.5v15.5h24v-15.5c0-1.93-1.57-3.5-3.5-3.5zm-10.5-2h4v2h-4zm11 18h-18v-12.5c0-.276.224-.5.5-.5h17c.276 0 .5.224.5.5zm-9-12c-3.038 0-5.5 2.462-5.5 5.5s2.462 5.5 5.5 5.5 5.5-2.462 5.5-5.5-2.462-5.5-5.5-5.5zm3.5 6.5h-2.5v2.5h-2v-2.5h-2.5v-2h2.5v-2.5h2v2.5h2.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsFirstAidKit = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.5 5h-3.5v-5h-10v5h-3.5c-1.93 0-3.5 1.57-3.5 3.5v15.5h24v-15.5c0-1.93-1.57-3.5-3.5-3.5zm-10.5-2h4v2h-4zm11 18h-18v-12.5c0-.276.224-.5.5-.5h17c.276 0 .5.224.5.5zm-9-12c-3.038 0-5.5 2.462-5.5 5.5s2.462 5.5 5.5 5.5 5.5-2.462 5.5-5.5-2.462-5.5-5.5-5.5zm3.5 6.5h-2.5v2.5h-2v-2.5h-2.5v-2h2.5v-2.5h2v2.5h2.5z"/></svg>
 );
-
-FiBsFirstAidKit.displayName = 'FiBsFirstAidKit';

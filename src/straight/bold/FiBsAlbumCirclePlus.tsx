@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsAlbumCirclePlus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,18h3v3h-3v3h-3v-3h-3v-3h3v-3h3v3ZM20.5,0H3.5C1.57,0,0,1.57,0,3.5V24H13v-3H3V3.5c0-.28,.22-.5,.5-.5H20.5c.28,0,.5,.22,.5,.5V13h3V3.5c0-1.93-1.57-3.5-3.5-3.5ZM12,10.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm3.86,2.5h3.06c.05-.33,.08-.66,.08-1,0-3.86-3.14-7-7-7s-7,3.14-7,7,3.14,7,7,7c.34,0,.67-.03,1-.08v-3.06c-.32,.08-.65,.14-1,.14-2.21,0-4-1.79-4-4s1.79-4,4-4,4,1.79,4,4c0,.35-.06,.68-.14,1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsAlbumCirclePlus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,18h3v3h-3v3h-3v-3h-3v-3h3v-3h3v3ZM20.5,0H3.5C1.57,0,0,1.57,0,3.5V24H13v-3H3V3.5c0-.28,.22-.5,.5-.5H20.5c.28,0,.5,.22,.5,.5V13h3V3.5c0-1.93-1.57-3.5-3.5-3.5ZM12,10.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5,1.5-.67,1.5-1.5-.67-1.5-1.5-1.5Zm3.86,2.5h3.06c.05-.33,.08-.66,.08-1,0-3.86-3.14-7-7-7s-7,3.14-7,7,3.14,7,7,7c.34,0,.67-.03,1-.08v-3.06c-.32,.08-.65,.14-1,.14-2.21,0-4-1.79-4-4s1.79-4,4-4,4,1.79,4,4c0,.35-.06,.68-.14,1Z"/></svg>
+
 );
-
-FiBsAlbumCirclePlus.displayName = 'FiBsAlbumCirclePlus';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShieldCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M11.948,24.009l-.354-.157C11.2,23.679,2,19.524,2,12V5.476A2.983,2.983,0,0,1,4.051,2.644L12,.009l7.949,2.635A2.983,2.983,0,0,1,22,5.476V12c0,8.577-9.288,11.755-9.684,11.887ZM12,2.106,4.684,4.532A.992.992,0,0,0,4,5.476V12c0,5.494,6.44,9.058,8.047,9.861C13.651,21.216,20,18.263,20,12V5.476a.992.992,0,0,0-.684-.944Z"/><path d="M11.111,14.542h-.033a1.872,1.872,0,0,1-1.345-.6l-2.306-2.4L8.868,10.16,11.112,12.5l5.181-5.181,1.414,1.414-5.261,5.261A1.873,1.873,0,0,1,11.111,14.542Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShieldCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><path d="M11.948,24.009l-.354-.157C11.2,23.679,2,19.524,2,12V5.476A2.983,2.983,0,0,1,4.051,2.644L12,.009l7.949,2.635A2.983,2.983,0,0,1,22,5.476V12c0,8.577-9.288,11.755-9.684,11.887ZM12,2.106,4.684,4.532A.992.992,0,0,0,4,5.476V12c0,5.494,6.44,9.058,8.047,9.861C13.651,21.216,20,18.263,20,12V5.476a.992.992,0,0,0-.684-.944Z"/><path d="M11.111,14.542h-.033a1.872,1.872,0,0,1-1.345-.6l-2.306-2.4L8.868,10.16,11.112,12.5l5.181-5.181,1.414,1.414-5.261,5.261A1.873,1.873,0,0,1,11.111,14.542Z"/></g></svg>
+
 );
-
-ShieldCheck.displayName = 'ShieldCheck';

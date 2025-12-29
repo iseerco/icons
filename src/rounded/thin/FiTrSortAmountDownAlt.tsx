@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrSortAmountDownAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,.5c0,.276-.224,.5-.5,.5H9.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h14c.276,0,.5,.224,.5,.5Zm-3.5,4.5H9.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h11c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-3,5H9.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h8c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-3,5h-5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h5c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-5.354,4.561l-3.146,3.146V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5V22.707l-3.146-3.146c-.195-.195-.512-.195-.707,0s-.195,.512,0,.707l3.293,3.293c.292,.292,.676,.438,1.061,.438s.768-.146,1.061-.438l3.293-3.293c.195-.195,.195-.512,0-.707s-.512-.195-.707,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrSortAmountDownAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,.5c0,.276-.224,.5-.5,.5H9.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h14c.276,0,.5,.224,.5,.5Zm-3.5,4.5H9.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h11c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-3,5H9.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h8c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-3,5h-5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h5c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5Zm-5.354,4.561l-3.146,3.146V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5V22.707l-3.146-3.146c-.195-.195-.512-.195-.707,0s-.195,.512,0,.707l3.293,3.293c.292,.292,.676,.438,1.061,.438s.768-.146,1.061-.438l3.293-3.293c.195-.195,.195-.512,0-.707s-.512-.195-.707,0Z"/></svg>
+
 );
-
-FiTrSortAmountDownAlt.displayName = 'FiTrSortAmountDownAlt';

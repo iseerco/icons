@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrSchoolBus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrSchoolBus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.5,12h-2.5v-6.5c0-1.93-1.57-3.5-3.5-3.5H3.5c-1.93,0-3.5,1.57-3.5,3.5v11c0,1.274.961,2.316,2.193,2.469-.124.329-.193.675-.193,1.031,0,1.654,1.346,3,3,3s3-1.346,3-3c0-.344-.064-.68-.18-1h8.359c-.116.32-.18.655-.18,1,0,1.654,1.346,3,3,3s3-1.346,3-3c0-.356-.069-.702-.193-1.031,1.233-.153,2.193-1.195,2.193-2.469v-1c0-1.93-1.57-3.5-3.5-3.5Zm-19.5,0v-5h3v5H1Zm4-5h3v5h-3v-5Zm4,0h4v11h-4V7Zm5,0h3v5h-3v-5ZM3.5,3h11c1.379,0,2.5,1.121,2.5,2.5v.5H1v-.5c0-1.379,1.122-2.5,2.5-2.5Zm-2.5,13.5v-3.5h7v5H2.5c-.827,0-1.5-.673-1.5-1.5Zm6,3.5c0,1.103-.897,2-2,2s-2-.897-2-2c0-.354.119-.691.304-1h3.392c.185.309.304.646.304,1Zm12,2c-1.103,0-2-.897-2-2,0-.355.119-.691.304-1h3.392c.185.309.304.645.304,1,0,1.103-.897,2-2,2Zm4-5.5c0,.827-.673,1.5-1.5,1.5h-7.5v-5h6.5c1.379,0,2.5,1.121,2.5,2.5v1Z"/>
 </svg>
-);
 
-FiTrSchoolBus.displayName = 'FiTrSchoolBus';
+);

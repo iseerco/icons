@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsHandCleaning: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m14 12.5v11.5s-3.403 0-3.403 0l-3.01-3.01c-.859-.859-.773-2.305.257-3.047.808-.582 1.943-.411 2.647.294l.51.51v-6.247c0-.829.671-1.5 1.5-1.5.828 0 1.5.672 1.5 1.5zm8 1c0-.828-.672-1.5-1.5-1.5-.829 0-1.5.671-1.5 1.5v10.5s3 0 3 0zm-5.5-3.5c-.829 0-1.5.671-1.5 1.5v5.5h3s0-5.5 0-5.5c0-.828-.672-1.5-1.5-1.5zm-6.5 2-2-1-1-2-1 2-2 1 2 1 1 2 1-2zm12-10-1-2-1 2-2 1 2 1 1 2 1-2 2-1zm-16.965 18h-2.035v-12.5c0-.276.224-.5.5-.5h12c.276 0 .5.224.5.5v.55c.165-.024.329-.05.5-.05.981 0 1.865.406 2.5 1.056v-1.556c0-1.93-1.57-3.5-3.5-3.5h-12c-1.93 0-3.5 1.57-3.5 3.5v15.5h6.769l-.596-.596c-.653-.652-1.042-1.502-1.138-2.404z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsHandCleaning = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14 12.5v11.5s-3.403 0-3.403 0l-3.01-3.01c-.859-.859-.773-2.305.257-3.047.808-.582 1.943-.411 2.647.294l.51.51v-6.247c0-.829.671-1.5 1.5-1.5.828 0 1.5.672 1.5 1.5zm8 1c0-.828-.672-1.5-1.5-1.5-.829 0-1.5.671-1.5 1.5v10.5s3 0 3 0zm-5.5-3.5c-.829 0-1.5.671-1.5 1.5v5.5h3s0-5.5 0-5.5c0-.828-.672-1.5-1.5-1.5zm-6.5 2-2-1-1-2-1 2-2 1 2 1 1 2 1-2zm12-10-1-2-1 2-2 1 2 1 1 2 1-2 2-1zm-16.965 18h-2.035v-12.5c0-.276.224-.5.5-.5h12c.276 0 .5.224.5.5v.55c.165-.024.329-.05.5-.05.981 0 1.865.406 2.5 1.056v-1.556c0-1.93-1.57-3.5-3.5-3.5h-12c-1.93 0-3.5 1.57-3.5 3.5v15.5h6.769l-.596-.596c-.653-.652-1.042-1.502-1.138-2.404z"/></svg>
 );
-
-FiBsHandCleaning.displayName = 'FiBsHandCleaning';

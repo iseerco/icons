@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMenuBurger: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><rect y="10.5" width={size} height={size}/><rect y="3.5" width={size} height={size}/><rect y="17.5" width={size} height={size}/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMenuBurger = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><rect y="10.5" width="24" height="3"/><rect y="3.5" width="24" height="3"/><rect y="17.5" width="24" height="3"/></svg>
+
 );
-
-FiBsMenuBurger.displayName = 'FiBsMenuBurger';

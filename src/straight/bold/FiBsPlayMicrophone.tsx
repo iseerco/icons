@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPlayMicrophone: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPlayMicrophone = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,13v.5c0,.933-.13,1.846-.366,2.727l-2.735-1.538c.062-.39,.101-.786,.101-1.188v-.5h3Zm-11-5v3h3v.934l2.832,1.593c.11-.496,.168-1.007,.168-1.526V7c0-3.86-3.141-7-7-7S5,3.14,5,7v5c0,3.86,3.141,7,7,7v-3c-2.206,0-4-1.794-4-4v-1h3v-3h-3v-1c0-2.206,1.794-4,4-4s4,1.794,4,4v1h-3ZM3,13.5v-.5H0v.5c0,5.79,4.71,10.5,10.5,10.5h1.5v-3h-1.5c-4.136,0-7.5-3.364-7.5-7.5Zm11,10.522l9.708-5.459-9.708-5.459v10.919Z"/>
 </svg>
-);
 
-FiBsPlayMicrophone.displayName = 'FiBsPlayMicrophone';
+);

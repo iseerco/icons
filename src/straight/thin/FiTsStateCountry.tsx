@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsStateCountry: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsStateCountry = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m0,16.037v1.963h1v5H0v1h12v-1h-1v-5h1v-1.963l-6-2-6,2Zm2,1.963h2v5h-2v-5Zm5,0v5h-2v-5h2Zm3,5h-2v-5h2v5Zm1-6H1v-.242l5-1.666,5,1.666v.242Zm13-13v-1.963L18,.037l-6,2v1.963h1v5h-1v1h12v-1h-1v-5h1Zm-11-1.242l5-1.667,5,1.667v.242h-10v-.242Zm6,1.242v5h-2v-5h2Zm-5,0h2v5h-2v-5Zm8,5h-2v-5h2v5Zm0,11l2,2v1.414l-2.414-2.414h-5.586v-5l-9-7.231v-4.769H2.293L0,1.707V.293l2.707,2.707h5.293v5.287l9,7.23v4.482h5Z"/>
 </svg>
-);
 
-FiTsStateCountry.displayName = 'FiTsStateCountry';
+);

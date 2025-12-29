@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCodePullRequestClosed: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M5,6.663v10.674c1.182,.562,2,1.767,2,3.163,0,1.933-1.567,3.5-3.5,3.5s-3.5-1.567-3.5-3.5c0-1.396,.818-2.601,2-3.163V6.663C.818,6.101,0,4.896,0,3.5,0,1.567,1.567,0,3.5,0s3.5,1.567,3.5,3.5c0,1.396-.818,2.601-2,3.163Zm16,10.674v-7.337h-3v7.337c-1.182,.562-2,1.767-2,3.163,0,1.933,1.567,3.5,3.5,3.5s3.5-1.567,3.5-3.5c0-1.396-.818-2.601-2-3.163Zm2.811-15.026L21.689,.189l-2.189,2.189L17.311,.189l-2.121,2.121,2.189,2.189-2.189,2.189,2.121,2.121,2.189-2.189,2.189,2.189,2.121-2.121-2.189-2.189,2.189-2.189Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCodePullRequestClosed = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M5,6.663v10.674c1.182,.562,2,1.767,2,3.163,0,1.933-1.567,3.5-3.5,3.5s-3.5-1.567-3.5-3.5c0-1.396,.818-2.601,2-3.163V6.663C.818,6.101,0,4.896,0,3.5,0,1.567,1.567,0,3.5,0s3.5,1.567,3.5,3.5c0,1.396-.818,2.601-2,3.163Zm16,10.674v-7.337h-3v7.337c-1.182,.562-2,1.767-2,3.163,0,1.933,1.567,3.5,3.5,3.5s3.5-1.567,3.5-3.5c0-1.396-.818-2.601-2-3.163Zm2.811-15.026L21.689,.189l-2.189,2.189L17.311,.189l-2.121,2.121,2.189,2.189-2.189,2.189,2.121,2.121,2.189-2.189,2.189,2.189,2.121-2.121-2.189-2.189,2.189-2.189Z"/></svg>
+
 );
-
-FiBsCodePullRequestClosed.displayName = 'FiBsCodePullRequestClosed';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MapMarkerHome: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,.007A10,10,0,0,0,4.937,17.085L12,23.993l7.071-6.916A10,10,0,0,0,12,.007Zm5.665,15.648L12,21.2,6.343,15.663a8,8,0,1,1,11.322-.008ZM16.018,7.423l-2.5-1.91a2.507,2.507,0,0,0-3.035,0l-2.5,1.91A2.513,2.513,0,0,0,7,9.409V14H17V9.409A2.515,2.515,0,0,0,16.018,7.423ZM15,12H13V10H11v2H9V9.409a.5.5,0,0,1,.2-.4L11.7,7.1a.5.5,0,0,1,.608,0l2.5,1.91a.5.5,0,0,1,.2.4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MapMarkerHome = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,.007A10,10,0,0,0,4.937,17.085L12,23.993l7.071-6.916A10,10,0,0,0,12,.007Zm5.665,15.648L12,21.2,6.343,15.663a8,8,0,1,1,11.322-.008ZM16.018,7.423l-2.5-1.91a2.507,2.507,0,0,0-3.035,0l-2.5,1.91A2.513,2.513,0,0,0,7,9.409V14H17V9.409A2.515,2.515,0,0,0,16.018,7.423ZM15,12H13V10H11v2H9V9.409a.5.5,0,0,1,.2-.4L11.7,7.1a.5.5,0,0,1,.608,0l2.5,1.91a.5.5,0,0,1,.2.4Z"/></svg>
+
 );
-
-MapMarkerHome.displayName = 'MapMarkerHome';

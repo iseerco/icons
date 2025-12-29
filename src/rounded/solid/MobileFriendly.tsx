@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MobileFriendly: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20.5 9h-3c-1.93 0-3.5 1.57-3.5 3.5v8c0 1.93 1.57 3.5 3.5 3.5h3c1.93 0 3.5-1.57 3.5-3.5v-8c0-1.93-1.57-3.5-3.5-3.5zm.5 9h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c.552 0 1 .447 1 1s-.448 1-1 1zm0-4h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c.552 0 1 .447 1 1s-.448 1-1 1zm-12 0h3v4h-9.5c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5h4.726c.589 0 1.147.259 1.527.708zm8-14h-10c-2.757 0-5 2.243-5 5v6.11c.323-.067.656-.11 1-.11h4.226c.983 0 1.92.359 2.646 1h2.218c.193-1.146.723-2.171 1.468-3h-6.558c-.552 0-1-.447-1-1s.448-1 1-1h13c.702 0 1.373.128 2 .35v-2.35c0-2.757-2.243-5-5-5zm0 5h-10c-.552 0-1-.447-1-1s.448-1 1-1h10c.552 0 1 .447 1 1s-.448 1-1 1z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MobileFriendly = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.5 9h-3c-1.93 0-3.5 1.57-3.5 3.5v8c0 1.93 1.57 3.5 3.5 3.5h3c1.93 0 3.5-1.57 3.5-3.5v-8c0-1.93-1.57-3.5-3.5-3.5zm.5 9h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c.552 0 1 .447 1 1s-.448 1-1 1zm0-4h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c.552 0 1 .447 1 1s-.448 1-1 1zm-12 0h3v4h-9.5c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5h4.726c.589 0 1.147.259 1.527.708zm8-14h-10c-2.757 0-5 2.243-5 5v6.11c.323-.067.656-.11 1-.11h4.226c.983 0 1.92.359 2.646 1h2.218c.193-1.146.723-2.171 1.468-3h-6.558c-.552 0-1-.447-1-1s.448-1 1-1h13c.702 0 1.373.128 2 .35v-2.35c0-2.757-2.243-5-5-5zm0 5h-10c-.552 0-1-.447-1-1s.448-1 1-1h10c.552 0 1 .447 1 1s-.448 1-1 1z"/></svg>
 );
-
-MobileFriendly.displayName = 'MobileFriendly';

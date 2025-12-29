@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LaptopArrowDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LaptopArrowDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22,15V3h-7v2h5v10h-4.914l-1,1h-4.172l-1-1h-4.914V5h5v-2H2v12H0v3c0,1.654,1.346,3,3,3h18c1.654,0,3-1.346,3-3v-3h-2Zm0,3c0,.552-.448,1-1,1H3c-.551,0-1-.448-1-1v-1h6.086l1,1h5.828l1-1h6.086v1Zm-11-8.914V0h2v9.086l2.293-2.293,1.414,1.414-3.293,3.293c-.39.39-.902.585-1.414.585s-1.024-.195-1.414-.585l-3.293-3.293,1.414-1.414,2.293,2.293Z"/>
 </svg>
-);
 
-LaptopArrowDown.displayName = 'LaptopArrowDown';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RingDiamond: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RingDiamond = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m14.902,6.48l2.609-3.479-3.001-3.001h-5.019l-3.001,3.001,2.609,3.479c-3.543,1.21-6.098,4.572-6.098,8.52,0,4.962,4.038,9,9,9s9-4.038,9-9c0-3.948-2.555-7.31-6.098-8.52Zm-5.772-3.291l1.189-1.189h3.362l1.189,1.189-2.131,2.842c-.244-.02-.49-.031-.739-.031s-.495.011-.739.031l-2.131-2.842Zm2.87,18.811c-3.86,0-7-3.14-7-7s3.14-7,7-7,7,3.14,7,7-3.14,7-7,7Z"/>
 </svg>
-);
 
-RingDiamond.displayName = 'RingDiamond';
+);

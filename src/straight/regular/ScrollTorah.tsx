@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ScrollTorah: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m18,0v2H6V0H0v24h6v-2h12v2h6V0h-6Zm0,14.891l-1.758-2.887,1.758-2.884v5.771Zm-7.545-.386l-1.526-2.502,1.521-2.498h3.099l1.521,2.498-1.526,2.502h-3.09Zm2.481,1l-.935,1.534-.935-1.534h1.871Zm-6.935-6.385l1.758,2.884-1.758,2.887v-5.771Zm1.406.385h1.874l-.936,1.537-.937-1.537Zm.938,3.459l.94,1.541h-1.878l.939-1.541Zm2.716-4.459l.94-1.544.94,1.544h-1.881Zm3.661,1h1.874l-.937,1.537-.936-1.537Zm.936,3.459l.939,1.541h-1.878l.94-1.541Zm2.344-8.964v4.505h-3.889l-2.111-3.467-2.111,3.467h-3.889v-4.505h12ZM2,22V2h2v20h-2Zm4-2v-4.495h3.893l2.107,3.455,2.107-3.455h3.893v4.495H6Zm16,2h-2V2h2v20Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ScrollTorah = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18,0v2H6V0H0v24h6v-2h12v2h6V0h-6Zm0,14.891l-1.758-2.887,1.758-2.884v5.771Zm-7.545-.386l-1.526-2.502,1.521-2.498h3.099l1.521,2.498-1.526,2.502h-3.09Zm2.481,1l-.935,1.534-.935-1.534h1.871Zm-6.935-6.385l1.758,2.884-1.758,2.887v-5.771Zm1.406.385h1.874l-.936,1.537-.937-1.537Zm.938,3.459l.94,1.541h-1.878l.939-1.541Zm2.716-4.459l.94-1.544.94,1.544h-1.881Zm3.661,1h1.874l-.937,1.537-.936-1.537Zm.936,3.459l.939,1.541h-1.878l.94-1.541Zm2.344-8.964v4.505h-3.889l-2.111-3.467-2.111,3.467h-3.889v-4.505h12ZM2,22V2h2v20h-2Zm4-2v-4.495h3.893l2.107,3.455,2.107-3.455h3.893v4.495H6Zm16,2h-2V2h2v20Z"/></svg>
+
 );
-
-ScrollTorah.displayName = 'ScrollTorah';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrYen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrYen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.804.103c-.22-.167-.533-.125-.701.093l-11.103,14.482L.897.196C.729-.022.417-.064.196.103-.023.271-.065.585.103.804l10.883,14.196h-5.486c-.276,0-.5.224-.5.5s.224.5.5.5h6v3h-6c-.276,0-.5.224-.5.5s.224.5.5.5h6v3.5c0,.276.224.5.5.5s.5-.224.5-.5v-3.5h6c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-6v-3h6c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-5.486L23.897.804c.168-.219.126-.533-.093-.701Z"/>
 </svg>
-);
 
-FiTrYen.displayName = 'FiTrYen';
+);

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBuildingFlag: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m15 3.5c0-.275-.225-.5-.5-.5h-11c-.275 0-.5.225-.5.5v17.5h10v3h-13v-20.5c0-1.93 1.57-3.5 3.5-3.5h11c1.93 0 3.5 1.57 3.5 3.5v4.5h-3zm3 6.5h-3v14h3v-7l6-3.5zm-10-5h-3v3h3zm0 5h-3v3h3zm-3 8h3v-3h-3zm5-10h3v-3h-3zm0 5h3v-3h-3zm0 5h3v-3h-3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBuildingFlag = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15 3.5c0-.275-.225-.5-.5-.5h-11c-.275 0-.5.225-.5.5v17.5h10v3h-13v-20.5c0-1.93 1.57-3.5 3.5-3.5h11c1.93 0 3.5 1.57 3.5 3.5v4.5h-3zm3 6.5h-3v14h3v-7l6-3.5zm-10-5h-3v3h3zm0 5h-3v3h3zm-3 8h3v-3h-3zm5-10h3v-3h-3zm0 5h3v-3h-3zm0 5h3v-3h-3z"/></svg>
 );
-
-FiBsBuildingFlag.displayName = 'FiBsBuildingFlag';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LeaderSpeech: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LeaderSpeech = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm-1,11.5h7v-6.018l5.675-6.721L22.103.026l-5.088,5.974h-5.028L7,0l-1.572,1.235,5.572,6.747v6.018Zm13,4h-2v6H2v-6H0v-2h2v-3.914l1.574-1.574c-.044-.164-.074-.334-.074-.512,0-1.105.895-2,2-2s2,.895,2,2-.895,2-2,2c-.178,0-.347-.031-.512-.074l-.988.988v3.086h20v2Z"/>
 </svg>
-);
 
-LeaderSpeech.displayName = 'LeaderSpeech';
+);

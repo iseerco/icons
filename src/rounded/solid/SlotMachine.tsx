@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SlotMachine: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SlotMachine = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23,3.723v5.277c0,2.209-1.791,4-4,4h-1v2h-5v-6h5v2h1c1.105,0,2-.895,2-2V3.723c-.727-.423-1.169-1.28-.938-2.224,.176-.72,.781-1.301,1.506-1.453,1.294-.271,2.433,.709,2.433,1.955,0,.738-.405,1.376-1,1.723ZM9,0C4.725,0,1.145,2.998,.232,7H17.768C16.855,2.998,13.275,0,9,0ZM4,24H14c2.209,0,4-1.791,4-4v-3H0v3c0,2.209,1.791,4,4,4Zm7-9v-6H7v6h4Zm-6-6H0v6H5v-6Z"/>
 </svg>
-);
 
-SlotMachine.displayName = 'SlotMachine';
+);

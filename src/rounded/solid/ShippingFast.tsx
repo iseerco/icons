@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShippingFast: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShippingFast = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m4.5,11H1c-.553,0-1-.448-1-1s.447-1,1-1h3.5c.553,0,1,.448,1,1s-.447,1-1,1ZM10.154,2c0-.552-.447-1-1-1H1c-.553,0-1,.448-1,1s.447,1,1,1h8.154c.553,0,1-.448,1-1Zm-2,4c0-.552-.447-1-1-1H1c-.553,0-1,.448-1,1s.447,1,1,1h6.154c.553,0,1-.448,1-1Zm6.903,14c-.034.162-.058.328-.058.5,0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5c0-.172-.024-.338-.058-.5h-4.885Zm-.058-2V6c0-2.009-1.185-3.741-2.895-4.536.032.174.049.353.049.536,0,1.382-.939,2.547-2.212,2.894.136.342.212.715.212,1.106,0,1.597-1.254,2.905-2.828,2.995.112.314.174.653.174,1.005,0,1.654-1.346,3-3,3H1c-.351,0-.687-.061-1-.172v1.172c0,2.209,1.791,4,4,4h11Zm-10.942,2c-.034.162-.058.328-.058.5,0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5c0-.172-.024-.338-.058-.5h-4.885Zm12.942-2h3c2.209,0,4-1.791,4-4v-1h-7v5Zm2-13h-2v6h7v-1c0-2.761-2.239-5-5-5Z"/>
 </svg>
-);
 
-ShippingFast.displayName = 'ShippingFast';
+);

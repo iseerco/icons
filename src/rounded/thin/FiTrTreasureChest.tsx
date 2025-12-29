@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrTreasureChest: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.5,0H6.5C2.916,0,0,2.916,0,6.5v13c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5V6.5c0-3.584-2.916-6.5-6.5-6.5Zm5.5,6.5v2.5h-3V1.607c1.778,.912,3,2.761,3,4.893ZM17.5,1c.521,0,1.022,.077,1.5,.213v7.787h-4c0-1.654-1.346-3-3-3s-3,1.346-3,3H5V1.213c.478-.136,.979-.213,1.5-.213h11Zm-7.5,8c0-1.103,.897-2,2-2s2,.897,2,2v2c0,1.103-.897,2-2,2s-2-.897-2-2v-2ZM4,1.607v7.393H1v-2.5c0-2.132,1.222-3.98,3-4.893ZM20,22.949V12.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v10.5H5V12.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v10.449c-1.692-.245-3-1.691-3-3.449V10H9v1c0,1.654,1.346,3,3,3s3-1.346,3-3v-1h8v9.5c0,1.758-1.308,3.204-3,3.449Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrTreasureChest = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17.5,0H6.5C2.916,0,0,2.916,0,6.5v13c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5V6.5c0-3.584-2.916-6.5-6.5-6.5Zm5.5,6.5v2.5h-3V1.607c1.778,.912,3,2.761,3,4.893ZM17.5,1c.521,0,1.022,.077,1.5,.213v7.787h-4c0-1.654-1.346-3-3-3s-3,1.346-3,3H5V1.213c.478-.136,.979-.213,1.5-.213h11Zm-7.5,8c0-1.103,.897-2,2-2s2,.897,2,2v2c0,1.103-.897,2-2,2s-2-.897-2-2v-2ZM4,1.607v7.393H1v-2.5c0-2.132,1.222-3.98,3-4.893ZM20,22.949V12.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v10.5H5V12.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v10.449c-1.692-.245-3-1.691-3-3.449V10H9v1c0,1.654,1.346,3,3,3s3-1.346,3-3v-1h8v9.5c0,1.758-1.308,3.204-3,3.449Z"/></svg>
+
 );
-
-FiTrTreasureChest.displayName = 'FiTrTreasureChest';

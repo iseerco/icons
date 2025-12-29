@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CocktailAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,0V1A5.53,5.53,0,0,0,1.807,5.085L11,13.443V22H6v2H18V22H13V13.443l9.193-8.358A5.53,5.53,0,0,0,24,1V0ZM20.848,3.605,12,11.648,5.786,6h8.972l2-2H3.586l-.434-.395A3.527,3.527,0,0,1,2.146,2H21.854A3.527,3.527,0,0,1,20.848,3.605Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CocktailAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M0,0V1A5.53,5.53,0,0,0,1.807,5.085L11,13.443V22H6v2H18V22H13V13.443l9.193-8.358A5.53,5.53,0,0,0,24,1V0ZM20.848,3.605,12,11.648,5.786,6h8.972l2-2H3.586l-.434-.395A3.527,3.527,0,0,1,2.146,2H21.854A3.527,3.527,0,0,1,20.848,3.605Z"/></svg>
+
 );
-
-CocktailAlt.displayName = 'CocktailAlt';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GifSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GifSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,2H5C2.243,2,0,4.243,0,7v10c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5ZM7,15c.552,0,1-.449,1-1-.553,0-1-.448-1-1s.447-1,1-1c1.299,0,2,1.03,2,2,0,1.654-1.346,3-3,3s-3-1.346-3-3v-4c0-1.654,1.346-3,3-3s3,1.346,3,3c0,.552-.447,1-1,1s-1-.448-1-1-.448-1-1-1-1,.449-1,1v4c0,.551.448,1,1,1Zm6,1c0,.552-.447,1-1,1s-1-.448-1-1v-8c0-.552.447-1,1-1s1,.448,1,1v8Zm6-7h-2c-.552,0-1,.449-1,1v1h2c.553,0,1,.448,1,1s-.447,1-1,1h-2v3c0,.552-.447,1-1,1s-1-.448-1-1v-6c0-1.654,1.346-3,3-3h2c.553,0,1,.448,1,1s-.447,1-1,1Z"/>
 </svg>
-);
 
-GifSquare.displayName = 'GifSquare';
+);

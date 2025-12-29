@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSnap: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSnap = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.354,5.854l-.707-.707,3-3,.707.707-3,3Zm-7-.707l-3-3-.707.707,3,3,.707-.707ZM10,0h-1v5h1V0Zm6.736,12.884l4.488-4.63c.883-.882,1.028-2.269.339-3.226-.426-.591-1.081-.963-1.799-1.021-.722-.057-1.422.201-1.933.712l-8.688,8.827-.249-2.184c-.022-.653-.297-1.259-.774-1.705-.478-.447-1.104-.688-1.753-.658-1.35.045-2.412,1.18-2.368,2.513v9.455s-3.103,3.032-3.103,3.032h1.414l2.688-2.618v-9.885c-.025-.799.604-1.471,1.402-1.498.391-.016.755.125,1.036.389.283.264.445.622.461,1.048l.489,4.304,10.154-10.316c.302-.301.723-.458,1.142-.419.432.035.811.251,1.069.609.405.562.304,1.394-.241,1.939l-5.055,5.215,4.898,7.343-3.92,3.889h1.414l3.793-3.761-4.906-7.355Z"/>
 </svg>
-);
 
-FiTsSnap.displayName = 'FiTsSnap';
+);

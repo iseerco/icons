@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Fee: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Fee = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m7,6.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm-1.5,5.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm14.5-5.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Zm-4,3.5c0,2.206-1.794,4-4,4s-4-1.794-4-4,1.794-4,4-4,4,1.794,4,4Zm-2,0c0-1.103-.897-2-2-2s-2,.897-2,2,.897,2,2,2,2-.897,2-2Zm5-8H5C2.243,2,0,4.243,0,7v6c0,2.757,2.243,5,5,5h7c.553,0,1-.447,1-1s-.447-1-1-1h-7c-1.654,0-3-1.346-3-3v-6c0-1.654,1.346-3,3-3h14c1.654,0,3,1.346,3,3v5c0,.552.447,1,1,1s1-.448,1-1v-5c0-2.757-2.243-5-5-5Zm3.5,19c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm-4.5-4.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Zm4.291-1.341c-.466-.301-1.084-.165-1.382.3l-4.5,7c-.299.465-.164,1.084.3,1.382.168.108.354.159.54.159.329,0,.651-.162.842-.459l4.5-7c.299-.465.164-1.084-.3-1.382Z"/>
 </svg>
-);
 
-Fee.displayName = 'Fee';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsReservationTable: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsReservationTable = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.311,10.987l-.5-3h6.583l.5,3h-6.583Zm.833,5h6.583l-.5-3h-6.583l.5,3Zm-5.997-5.853l-1.565,8.866h1.119l.5,3H.007L3.026,4.892c.295-1.675,1.745-2.892,3.446-2.892h11.029c1.701,0,3.15,1.216,3.447,2.891l3.02,17.109H7.242l-2.094-11.866Zm2.141-5.134l2.47,14h10.633l-2.397-13.587c-.042-.239-.25-.413-.493-.413H7.288Z"/>
 </svg>
-);
 
-FiBsReservationTable.displayName = 'FiBsReservationTable';
+);

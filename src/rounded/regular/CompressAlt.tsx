@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CompressAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7.293,2.091,5.4,3.985,1.707.293A1,1,0,0,0,.293,1.707L3.985,5.4,2.091,7.293A1,1,0,0,0,2.8,9H7.564A1.436,1.436,0,0,0,9,7.564V2.8A1,1,0,0,0,7.293,2.091Z"/><path d="M20.015,18.6l1.894-1.894A1,1,0,0,0,21.2,15H16.436A1.436,1.436,0,0,0,15,16.436V21.2a1,1,0,0,0,1.707.708L18.6,20.015l3.692,3.692a1,1,0,0,0,1.414-1.414Z"/><path d="M16.436,9H21.2a1,1,0,0,0,.708-1.707L20.015,5.4l3.692-3.692A1,1,0,0,0,22.293.293L18.6,3.985,16.707,2.091A1,1,0,0,0,15,2.8V7.564A1.436,1.436,0,0,0,16.436,9Z"/><path d="M7.564,15H2.8a1,1,0,0,0-.708,1.707L3.985,18.6.293,22.293a1,1,0,1,0,1.414,1.414L5.4,20.015l1.894,1.894A1,1,0,0,0,9,21.2V16.436A1.436,1.436,0,0,0,7.564,15Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CompressAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M7.293,2.091,5.4,3.985,1.707.293A1,1,0,0,0,.293,1.707L3.985,5.4,2.091,7.293A1,1,0,0,0,2.8,9H7.564A1.436,1.436,0,0,0,9,7.564V2.8A1,1,0,0,0,7.293,2.091Z"/><path d="M20.015,18.6l1.894-1.894A1,1,0,0,0,21.2,15H16.436A1.436,1.436,0,0,0,15,16.436V21.2a1,1,0,0,0,1.707.708L18.6,20.015l3.692,3.692a1,1,0,0,0,1.414-1.414Z"/><path d="M16.436,9H21.2a1,1,0,0,0,.708-1.707L20.015,5.4l3.692-3.692A1,1,0,0,0,22.293.293L18.6,3.985,16.707,2.091A1,1,0,0,0,15,2.8V7.564A1.436,1.436,0,0,0,16.436,9Z"/><path d="M7.564,15H2.8a1,1,0,0,0-.708,1.707L3.985,18.6.293,22.293a1,1,0,1,0,1.414,1.414L5.4,20.015l1.894,1.894A1,1,0,0,0,9,21.2V16.436A1.436,1.436,0,0,0,7.564,15Z"/></svg>
+
 );
-
-CompressAlt.displayName = 'CompressAlt';

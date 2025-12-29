@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BoothCurtain: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BoothCurtain = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,4v6h-4v-6h4Zm9,20h7v-8h-4c-1.426,1.762-3,4.489-3,8ZM24,3v11h-4c-3.11-1.398-7.638-4.65-8-12v22H0V3C0,1.346,1.346,0,3,0h18c1.654,0,3,1.346,3,3Zm-16,14h-4v2h4v-2Zm2-5V2H3c-.552,0-1,.448-1,1v9h8Zm10-3.5c-1.407-1.14-2.788-3.124-3.023-6.5h-2.018c.302,5.11,2.904,7.643,5.041,8.877v-2.377Z"/>
 </svg>
-);
 
-BoothCurtain.displayName = 'BoothCurtain';
+);

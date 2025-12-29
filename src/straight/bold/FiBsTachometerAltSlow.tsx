@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTachometerAltSlow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,1A11.945,11.945,0,0,0,5.141,22.728L5.528,23H18.472l.387-.272A11.945,11.945,0,0,0,12,1Zm5.5,19H6.5A8.95,8.95,0,1,1,17.5,20ZM14,13a2,2,0,0,1-4,.073L6.465,9.535,8.586,7.414l3.594,3.594A2,2,0,0,1,14,13Zm5,0a7.013,7.013,0,0,1-2.981,5.728l-1.725-2.456a3.965,3.965,0,0,0,.7-5.9L10.816,6.108A6.962,6.962,0,0,1,19,13ZM9.706,16.272,7.981,18.728A7.013,7.013,0,0,1,5,13a6.926,6.926,0,0,1,.122-1.272S9.39,16.05,9.706,16.272Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTachometerAltSlow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,1A11.945,11.945,0,0,0,5.141,22.728L5.528,23H18.472l.387-.272A11.945,11.945,0,0,0,12,1Zm5.5,19H6.5A8.95,8.95,0,1,1,17.5,20ZM14,13a2,2,0,0,1-4,.073L6.465,9.535,8.586,7.414l3.594,3.594A2,2,0,0,1,14,13Zm5,0a7.013,7.013,0,0,1-2.981,5.728l-1.725-2.456a3.965,3.965,0,0,0,.7-5.9L10.816,6.108A6.962,6.962,0,0,1,19,13ZM9.706,16.272,7.981,18.728A7.013,7.013,0,0,1,5,13a6.926,6.926,0,0,1,.122-1.272S9.39,16.05,9.706,16.272Z"/></svg>
+
 );
-
-FiBsTachometerAltSlow.displayName = 'FiBsTachometerAltSlow';

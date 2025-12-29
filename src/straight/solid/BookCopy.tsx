@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BookCopy: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m2,20h14s0,4,0,4H2c-1.105,0-2-.895-2-2,0-1.105.895-2,2-2Zm8-6h14s0,4,0,4h-14c-1.105,0-2-.895-2-2,0-1.105.895-2,2-2ZM11,0h11c1.105,0,2,.895,2,2v10s-14,0-14,0c-.738-.001-1.451.271-2,.765V3C8,1.343,9.343,0,11,0Zm-5,16V6h-3C1.343,6,0,7.343,0,9v9.765c.549-.494,1.262-.766,2-.765h4.535c-.34-.588-.535-1.271-.535-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BookCopy = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m2,20h14s0,4,0,4H2c-1.105,0-2-.895-2-2,0-1.105.895-2,2-2Zm8-6h14s0,4,0,4h-14c-1.105,0-2-.895-2-2,0-1.105.895-2,2-2ZM11,0h11c1.105,0,2,.895,2,2v10s-14,0-14,0c-.738-.001-1.451.271-2,.765V3C8,1.343,9.343,0,11,0Zm-5,16V6h-3C1.343,6,0,7.343,0,9v9.765c.549-.494,1.262-.766,2-.765h4.535c-.34-.588-.535-1.271-.535-2Z"/></svg>
+
 );
-
-BookCopy.displayName = 'BookCopy';

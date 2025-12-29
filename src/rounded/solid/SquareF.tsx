@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SquareF: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m19,0H5C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5Zm-1,6c0,.552-.447,1-1,1h-7c-1.103,0-2,.897-2,2v2h6c.553,0,1,.448,1,1s-.447,1-1,1h-6v5c0,.552-.447,1-1,1s-1-.448-1-1v-9c0-2.206,1.794-4,4-4h7c.553,0,1,.448,1,1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SquareF = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19,0H5C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5Zm-1,6c0,.552-.447,1-1,1h-7c-1.103,0-2,.897-2,2v2h6c.553,0,1,.448,1,1s-.447,1-1,1h-6v5c0,.552-.447,1-1,1s-1-.448-1-1v-9c0-2.206,1.794-4,4-4h7c.553,0,1,.448,1,1Z"/></svg>
+
 );
-
-SquareF.displayName = 'SquareF';

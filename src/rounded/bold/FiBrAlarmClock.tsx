@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrAlarmClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m13.5 2.115v-.615a1.5 1.5 0 0 0 -3 0v.615a10.968 10.968 0 0 0 -7.214 17.572 3.526 3.526 0 0 0 -1.286 2.813 1.5 1.5 0 0 0 3 0 .641.641 0 0 1 .455-.68 10.917 10.917 0 0 0 13.087 0 .641.641 0 0 1 .458.68 1.5 1.5 0 0 0 3 0 3.526 3.526 0 0 0 -1.286-2.813 10.968 10.968 0 0 0 -7.214-17.572zm-9.5 10.885a8 8 0 1 1 8 8 8.009 8.009 0 0 1 -8-8z"/><path d="m19.5 0a1.5 1.5 0 0 0 0 3 1.361 1.361 0 0 1 1.459 1.5 1.5 1.5 0 0 0 3 0 4.333 4.333 0 0 0 -4.459-4.5z"/><path d="m3.041 4.5a1.361 1.361 0 0 1 1.459-1.5 1.5 1.5 0 0 0 0-3 4.333 4.333 0 0 0 -4.459 4.5 1.5 1.5 0 0 0 3 0z"/><path d="m13.53 12.379v-3.879a1.5 1.5 0 0 0 -1.5-1.5 1.5 1.5 0 0 0 -1.5 1.5v4.293a2 2 0 0 0 .586 1.414l1.793 1.793a1.5 1.5 0 0 0 2.121-2.121z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrAlarmClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m13.5 2.115v-.615a1.5 1.5 0 0 0 -3 0v.615a10.968 10.968 0 0 0 -7.214 17.572 3.526 3.526 0 0 0 -1.286 2.813 1.5 1.5 0 0 0 3 0 .641.641 0 0 1 .455-.68 10.917 10.917 0 0 0 13.087 0 .641.641 0 0 1 .458.68 1.5 1.5 0 0 0 3 0 3.526 3.526 0 0 0 -1.286-2.813 10.968 10.968 0 0 0 -7.214-17.572zm-9.5 10.885a8 8 0 1 1 8 8 8.009 8.009 0 0 1 -8-8z"/><path d="m19.5 0a1.5 1.5 0 0 0 0 3 1.361 1.361 0 0 1 1.459 1.5 1.5 1.5 0 0 0 3 0 4.333 4.333 0 0 0 -4.459-4.5z"/><path d="m3.041 4.5a1.361 1.361 0 0 1 1.459-1.5 1.5 1.5 0 0 0 0-3 4.333 4.333 0 0 0 -4.459 4.5 1.5 1.5 0 0 0 3 0z"/><path d="m13.53 12.379v-3.879a1.5 1.5 0 0 0 -1.5-1.5 1.5 1.5 0 0 0 -1.5 1.5v4.293a2 2 0 0 0 .586 1.414l1.793 1.793a1.5 1.5 0 0 0 2.121-2.121z"/></svg>
 );
-
-FiBrAlarmClock.displayName = 'FiBrAlarmClock';

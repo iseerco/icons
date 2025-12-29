@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PoliceBox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m3.535,5c.668-1.262,1.907-2.188,3.407-2.375l4.059-.507v-1.117c0-.552.447-1,1-1s1,.448,1,1v1.117l4.059.507c1.5.188,2.739,1.113,3.407,2.375H3.535Zm19.465,18c0,.552-.447,1-1,1H2c-.553,0-1-.448-1-1s.447-1,1-1h1V7.09c0-.031.008-.059.008-.09h17.983c0,.031.008.059.008.09v14.91h1c.553,0,1,.448,1,1ZM5,11c0,.552.447,1,1,1s1-.448,1-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1Zm4,4c0-.552-.447-1-1-1h-2c-.553,0-1,.448-1,1v2c0,.552.447,1,1,1h2c.553,0,1-.448,1-1v-2Zm2-5c0-.552-.447-1-1-1s-1,.448-1,1v1c0,.552.447,1,1,1s1-.448,1-1v-1Zm4,0c0-.552-.447-1-1-1s-1,.448-1,1v1c0,.552.447,1,1,1s1-.448,1-1v-1Zm4,0c0-.552-.447-1-1-1s-1,.448-1,1v1c0,.552.447,1,1,1s1-.448,1-1v-1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PoliceBox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m3.535,5c.668-1.262,1.907-2.188,3.407-2.375l4.059-.507v-1.117c0-.552.447-1,1-1s1,.448,1,1v1.117l4.059.507c1.5.188,2.739,1.113,3.407,2.375H3.535Zm19.465,18c0,.552-.447,1-1,1H2c-.553,0-1-.448-1-1s.447-1,1-1h1V7.09c0-.031.008-.059.008-.09h17.983c0,.031.008.059.008.09v14.91h1c.553,0,1,.448,1,1ZM5,11c0,.552.447,1,1,1s1-.448,1-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1Zm4,4c0-.552-.447-1-1-1h-2c-.553,0-1,.448-1,1v2c0,.552.447,1,1,1h2c.553,0,1-.448,1-1v-2Zm2-5c0-.552-.447-1-1-1s-1,.448-1,1v1c0,.552.447,1,1,1s1-.448,1-1v-1Zm4,0c0-.552-.447-1-1-1s-1,.448-1,1v1c0,.552.447,1,1,1s1-.448,1-1v-1Zm4,0c0-.552-.447-1-1-1s-1,.448-1,1v1c0,.552.447,1,1,1s1-.448,1-1v-1Z"/></svg>
+
 );
-
-PoliceBox.displayName = 'PoliceBox';

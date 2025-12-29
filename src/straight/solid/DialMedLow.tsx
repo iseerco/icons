@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DialMedLow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DialMedLow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.5,2.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5ZM3,13c0-.828-.672-1.5-1.5-1.5S0,12.172,0,13s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Zm21,0c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5.672,1.5,1.5,1.5,1.5-.672,1.5-1.5ZM6,5.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5Zm15,15c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5Zm-16.5-1.5c-.828,0-1.5.672-1.5,1.5,0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5c0-.828-.672-1.5-1.5-1.5Zm15-15c-.828,0-1.5.672-1.5,1.5,0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5c0-.828-.672-1.5-1.5-1.5Zm-7.5,2c-1.57,0-3.021.52-4.19,1.396l4.897,4.897-1.414,1.414-4.897-4.897c-.876,1.169-1.396,2.62-1.396,4.19,0,3.86,3.141,7,7,7s7-3.14,7-7-3.141-7-7-7Z"/>
 </svg>
-);
 
-DialMedLow.displayName = 'DialMedLow';
+);

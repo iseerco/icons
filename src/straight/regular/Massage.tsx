@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Massage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Massage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,9c-2.2,0-4.264.596-6.039,1.634-.306-3.14-1.8-6.22-4.254-8.674l-.707-.707-.707.707c-2.454,2.454-3.949,5.535-4.254,8.674-1.775-1.038-3.838-1.634-6.039-1.634H0v1c0,6.28,4.849,11.448,11,11.958l1,.042,1-.042c6.151-.51,11-5.678,11-11.958v-1h-1Zm-11-4.868c2.025,2.337,3.083,5.103,3.017,7.916-1.283,1.145-2.319,2.562-3.017,4.158-.698-1.597-1.734-3.013-3.017-4.158-.065-2.813.992-5.579,3.017-7.916ZM2.055,11.055c4.673.493,8.397,4.217,8.89,8.89-4.673-.493-8.397-4.217-8.89-8.89Zm11,8.89c.493-4.673,4.217-8.397,8.89-8.89-.493,4.673-4.217,8.397-8.89,8.89Z"/>
 </svg>
-);
 
-Massage.displayName = 'Massage';
+);

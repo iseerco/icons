@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UserBasket: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UserBasket = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M19.144,15l2.276-4.553-1.789-.895-2.724,5.447h-5.764l.944,6.435c.214,1.462,1.49,2.565,2.968,2.565h4.944c1.478,0,2.753-1.103,2.967-2.563l.946-6.437h-4.769Zm-11.144-3c-3.309,0-6-2.691-6-6S4.691,0,8,0s6,2.691,6,6-2.691,6-6,6Zm3.081,12H0v-5c0-2.761,2.239-5,5-5h3.976l1.134,7.725c.125,.852,.476,1.622,.972,2.275Z"/>
 </svg>
-);
 
-UserBasket.displayName = 'UserBasket';
+);

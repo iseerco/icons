@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Condition: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Condition = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.84,13l-5.84-4.492V0h-2v8.508l-5.84,4.492H0v11h2v-9h3.16l6.84,5.262,6.84-5.262h3.16v9h2v-11h-5.16Zm-1.797-4.457l2.043-2.043-2.043-2.043,1.414-1.414,2.043,2.043,2.043-2.043,1.414,1.414-2.043,2.043,2.043,2.043-1.414,1.414-2.043-2.043-2.043,2.043-1.414-1.414Zm-13.624,1.371L.082,6.576l1.414-1.414,1.923,1.924,3.643-3.644,1.414,1.414-5.057,5.058Z"/>
 </svg>
-);
 
-Condition.displayName = 'Condition';
+);

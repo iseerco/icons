@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowUpFromSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M5.279,6.693c-.383-.398-.371-1.031,.027-1.414L9.893,.865c1.105-1.106,3.095-1.12,4.229,.014l4.572,4.4c.398,.383,.41,1.016,.027,1.414-.196,.204-.458,.307-.721,.307-.25,0-.5-.093-.693-.279L13,2.575v13.425c0,.552-.448,1-1,1s-1-.448-1-1V2.575L6.693,6.721c-.397,.383-1.029,.371-1.414-.027Zm15.471,1.307c-.472,0-.742,.227-.75,.234-1.174,1.032-3.051,.919-4.21-.197l-.79-.76v8.724c0,1.654-1.346,3-3,3s-3-1.345-3-3V7.276l-.79,.76c-1.16,1.116-3.036,1.229-4.21,.197-.008-.007-.278-.234-.75-.234-.69,0-1.25,.56-1.25,1.25v9.75c0,2.761,2.239,5,5,5h10c2.761,0,5-2.239,5-5V9.25c0-.69-.56-1.25-1.25-1.25Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowUpFromSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M5.279,6.693c-.383-.398-.371-1.031,.027-1.414L9.893,.865c1.105-1.106,3.095-1.12,4.229,.014l4.572,4.4c.398,.383,.41,1.016,.027,1.414-.196,.204-.458,.307-.721,.307-.25,0-.5-.093-.693-.279L13,2.575v13.425c0,.552-.448,1-1,1s-1-.448-1-1V2.575L6.693,6.721c-.397,.383-1.029,.371-1.414-.027Zm15.471,1.307c-.472,0-.742,.227-.75,.234-1.174,1.032-3.051,.919-4.21-.197l-.79-.76v8.724c0,1.654-1.346,3-3,3s-3-1.345-3-3V7.276l-.79,.76c-1.16,1.116-3.036,1.229-4.21,.197-.008-.007-.278-.234-.75-.234-.69,0-1.25,.56-1.25,1.25v9.75c0,2.761,2.239,5,5,5h10c2.761,0,5-2.239,5-5V9.25c0-.69-.56-1.25-1.25-1.25Z"/></svg>
+
 );
-
-ArrowUpFromSquare.displayName = 'ArrowUpFromSquare';

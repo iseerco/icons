@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChartSetTheory: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChartSetTheory = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M255.521,207.607c42.886-32.391,98.351-43.105,150.216-29.016c0.361-4.245,0.764-8.278,0.764-12.502   c0.01-83.618-67.768-151.412-151.386-151.422c-83.618-0.01-151.412,67.768-151.423,151.386v0.036c0,4.245,0.403,8.49,0.785,12.736   C156.565,164.497,212.352,175.128,255.521,207.607z"/>
 	<path d="M239.559,295.142c10.578,1.268,21.272,1.225,31.839-0.127c-4.155-9.913-9.508-19.28-15.941-27.891   C249.036,275.781,243.697,285.19,239.559,295.142z"/>
@@ -19,6 +21,5 @@ export const ChartSetTheory: React.FC<IconProps> = ({
 	<path d="M286.404,237.365c11.017,13.757,19.852,29.127,26.193,45.572c28.462-14.05,50.866-37.94,63.062-67.244   C344.261,211.804,312.523,219.51,286.404,237.365z"/>
 </g>
 </svg>
-);
 
-ChartSetTheory.displayName = 'ChartSetTheory';
+);

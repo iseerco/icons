@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CardinalCompass: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CardinalCompass = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M12,24c-.511,0-.971-.311-1.16-.786l-2.021-8.032L.786,13.16c-.474-.19-.786-.649-.786-1.16s.311-.971,.786-1.16l8.032-2.021L10.84,.786c.19-.474,.649-.786,1.16-.786s.971,.311,1.16,.786l2.021,8.032,8.032,2.021c.475,.19,.786,.649,.786,1.16s-.311,.971-.786,1.16l-8.032,2.021-2.021,8.032c-.19,.475-.649,.786-1.16,.786ZM5.231,7.658l1.939-.488,.491-1.933-1.843-1.132c-.489-.21-1.06-.101-1.437,.277-.377,.377-.487,.946-.277,1.437l1.126,1.839Zm11.598-.488l1.898,.482,1.168-1.834c.21-.491,.1-1.06-.277-1.437s-.947-.486-1.437-.277l-1.844,1.108,.492,1.957ZM7.17,16.829l-1.949-.495-1.117,1.847c-.21,.49-.1,1.06,.277,1.437,.377,.378,.947,.486,1.437,.277l1.833-1.15-.482-1.916Zm11.578-.483l-1.919,.483-.488,1.921,1.84,1.145c.166,.07,.341,.105,.514,.105,.339,0,.673-.133,.923-.382,.377-.377,.487-.947,.277-1.437l-1.146-1.835Z"/>
 </svg>
-);
 
-CardinalCompass.displayName = 'CardinalCompass';
+);

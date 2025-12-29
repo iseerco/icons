@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Speaker: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,12a3,3,0,1,0,3,3A3,3,0,0,0,12,12Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,12,16Z"/><path d="M16,0H8A5.006,5.006,0,0,0,3,5V19a5.006,5.006,0,0,0,5,5h8a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,16,0ZM12,4.5A1.5,1.5,0,1,1,10.5,6,1.5,1.5,0,0,1,12,4.5ZM12,20a5,5,0,1,1,5-5A5.006,5.006,0,0,1,12,20Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Speaker = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,12a3,3,0,1,0,3,3A3,3,0,0,0,12,12Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,12,16Z"/><path d="M16,0H8A5.006,5.006,0,0,0,3,5V19a5.006,5.006,0,0,0,5,5h8a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,16,0ZM12,4.5A1.5,1.5,0,1,1,10.5,6,1.5,1.5,0,0,1,12,4.5ZM12,20a5,5,0,1,1,5-5A5.006,5.006,0,0,1,12,20Z"/></svg>
+
 );
-
-Speaker.displayName = 'Speaker';

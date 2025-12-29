@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsLaptopArrowDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsLaptopArrowDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m7.538,8h3V0h3v8h2.999l-3.793,3.707c-.391.391-1.024.391-1.414,0l-3.793-3.707Zm14.462,8V3h-6v3h3v10h-3.308l-.923,1h-5.538l-.923-1h-3.308V6h3v-3H2v13H0v2c0,1.657,1.343,3,3,3h18c1.657,0,3-1.343,3-3v-2h-2Z"/>
 </svg>
-);
 
-FiBsLaptopArrowDown.displayName = 'FiBsLaptopArrowDown';
+);

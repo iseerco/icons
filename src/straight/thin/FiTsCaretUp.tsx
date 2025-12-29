@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCaretUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCaretUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.25,15H4.695l5.806-6.346c.381-.426.946-.653,1.508-.654.549.011,1.073.251,1.438.658l5.803,6.342Zm-12.285-1h10.015l-4.273-4.67c-.188-.209-.441-.325-.717-.33-.296.013-.558.114-.748.326l-4.277,4.674Z"/>
 </svg>
-);
 
-FiTsCaretUp.displayName = 'FiTsCaretUp';
+);

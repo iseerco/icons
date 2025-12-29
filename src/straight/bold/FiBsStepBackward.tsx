@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsStepBackward: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21,.063L6,10.19V0h-3v24h3v-10.19l15,10.127V.063Zm-3,18.229l-9.319-6.292,9.319-6.292v12.583Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsStepBackward = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21,.063L6,10.19V0h-3v24h3v-10.19l15,10.127V.063Zm-3,18.229l-9.319-6.292,9.319-6.292v12.583Z"/></svg>
+
 );
-
-FiBsStepBackward.displayName = 'FiBsStepBackward';

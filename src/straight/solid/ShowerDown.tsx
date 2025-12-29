@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShowerDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShowerDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.414,20.586c.781.781.781,2.047,0,2.828-.391.391-.902.586-1.414.586-.512,0-1.024-.195-1.414-.586-.781-.781-.781-2.047,0-2.828l1.414-1.586,1.414,1.586Zm-3-6l-1.414-1.586-1.414,1.586c-.781.781-.781,2.047,0,2.828.391.391.902.586,1.414.586.512,0,1.024-.195,1.414-.586.781-.781.781-2.047,0-2.828Zm-4.429,4.414l-1.414,1.586c-.781.781-.781,2.047,0,2.828.391.391.902.586,1.414.586.512,0,1.024-.195,1.414-.586.781-.781.781-2.047,0-2.828l-1.414-1.586Zm10.444-4.414l-1.414-1.586-1.414,1.586c-.781.781-.781,2.047,0,2.828.391.391.902.586,1.414.586.512,0,1.024-.195,1.414-.586.781-.781.781-2.047,0-2.828Zm-3.429-12.538V0h-2v2.048C5.01,2.621.202,8.395,0,8.642v3.358h24v-3.358c-.202-.247-5.01-6.022-11-6.594Zm4.985,16.952l-1.414,1.586c-.781.781-.781,2.047,0,2.828.391.391.902.586,1.414.586.512,0,1.024-.195,1.414-.586.781-.781.781-2.047,0-2.828l-1.414-1.586Z"/>
 </svg>
-);
 
-ShowerDown.displayName = 'ShowerDown';
+);

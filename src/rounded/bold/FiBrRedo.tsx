@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrRedo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M1.5,23.449a1.5,1.5,0,0,1-1.5-1.5v-6a9.511,9.511,0,0,1,9.5-9.5h3.664V4.768A2.214,2.214,0,0,1,17,3.261l6.217,6.695a2.941,2.941,0,0,1,0,3.985L17,20.636a2.214,2.214,0,0,1-3.837-1.507v-1.68H7.5a4.5,4.5,0,0,0-4.5,4.5A1.5,1.5,0,0,1,1.5,23.449Zm6-9h7.164a1.5,1.5,0,0,1,1.5,1.5v1.179L21.019,11.9,16.164,6.747v1.2a1.5,1.5,0,0,1-1.5,1.5H9.5a6.508,6.508,0,0,0-6.5,6.5v0A7.458,7.458,0,0,1,7.5,14.449ZM14.8,5.3l.008.008Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrRedo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M1.5,23.449a1.5,1.5,0,0,1-1.5-1.5v-6a9.511,9.511,0,0,1,9.5-9.5h3.664V4.768A2.214,2.214,0,0,1,17,3.261l6.217,6.695a2.941,2.941,0,0,1,0,3.985L17,20.636a2.214,2.214,0,0,1-3.837-1.507v-1.68H7.5a4.5,4.5,0,0,0-4.5,4.5A1.5,1.5,0,0,1,1.5,23.449Zm6-9h7.164a1.5,1.5,0,0,1,1.5,1.5v1.179L21.019,11.9,16.164,6.747v1.2a1.5,1.5,0,0,1-1.5,1.5H9.5a6.508,6.508,0,0,0-6.5,6.5v0A7.458,7.458,0,0,1,7.5,14.449ZM14.8,5.3l.008.008Z"/></svg>
+
 );
-
-FiBrRedo.displayName = 'FiBrRedo';

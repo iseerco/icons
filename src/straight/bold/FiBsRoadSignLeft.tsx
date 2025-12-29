@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsRoadSignLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsRoadSignLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16.018,13.511v.86l-3.011,3.013v-3.872c0-.276-.226-.502-.502-.502h-2.506v2.542l-3.17-3.243c-.458-.458-.458-1.198,0-1.656l3.17-3.243v2.589h2.506c1.936,0,3.512,1.575,3.513,3.511Zm6.914,1.064l-8.356,8.357c-.688.688-1.603,1.067-2.576,1.067s-1.889-.379-2.576-1.067L1.067,14.575c-1.42-1.421-1.42-3.732,0-5.153L9.422,1.065c1.419-1.42,3.732-1.421,5.153,0l8.356,8.357c1.421,1.42,1.421,3.732,0,5.153Zm-2.121-3.032L12.455,3.186c-.249-.248-.664-.247-.911,0L3.188,11.543c-.251.251-.251.66,0,.911l8.356,8.358c.164.164.355.188.455.188s.291-.024.455-.188l8.356-8.357c.251-.251.251-.66,0-.911Z"/>
 </svg>
-);
 
-FiBsRoadSignLeft.displayName = 'FiBsRoadSignLeft';
+);

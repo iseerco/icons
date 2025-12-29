@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BuildingFoundation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19 0v5.135l-6-3.135v-2h-2v2l-6 3.135v-5.135h-2v19.642l8.272 4.358h1.456l8.272-4.358v-19.642zm-.548 7.105-5.452 2.849v-5.698zm-7.452 11.349-5.452-2.849 5.452-2.849v5.699zm2-5.699 5.452 2.849-5.452 2.849v-5.699zm-2-8.5v5.699l-5.452-2.849 5.452-2.849zm-6 4.819 4.363 2.28-4.363 2.28zm14 4.56-4.363-2.28 4.363-2.28z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BuildingFoundation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19 0v5.135l-6-3.135v-2h-2v2l-6 3.135v-5.135h-2v19.642l8.272 4.358h1.456l8.272-4.358v-19.642zm-.548 7.105-5.452 2.849v-5.698zm-7.452 11.349-5.452-2.849 5.452-2.849v5.699zm2-5.699 5.452 2.849-5.452 2.849v-5.699zm-2-8.5v5.699l-5.452-2.849 5.452-2.849zm-6 4.819 4.363 2.28-4.363 2.28zm14 4.56-4.363-2.28 4.363-2.28z"/></svg>
 );
-
-BuildingFoundation.displayName = 'BuildingFoundation';

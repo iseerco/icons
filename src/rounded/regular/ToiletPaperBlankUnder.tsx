@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ToiletPaperBlankUnder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ToiletPaperBlankUnder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.259,18.858c-.227-.09-.297-.172-.269-1.293.005-.183.01-9.065.01-9.065,0-4.767-2.196-8.5-5-8.5H5C2.196,0,0,3.733,0,8.5s2.196,8.5,5,8.5h3v2c0,2.757,2.243,5,5,5h8.347c1.463,0,2.653-1.19,2.653-2.654,0-1.088-.684-2.065-1.741-2.488Zm-2.259-10.358c0,3.831-1.581,6.5-3,6.5s-3-2.669-3-6.5,1.581-6.5,3-6.5,3,2.669,3,6.5Zm-18,0c0-3.831,1.581-6.5,3-6.5h8.745c-1.073,1.547-1.745,3.866-1.745,6.5s.671,4.953,1.745,6.5H5c-1.419,0-3-2.669-3-6.5Zm19.347,13.5h-8.347c-1.654,0-3-1.346-3-3v-2h7c1.135,0,2.17-.612,3-1.655,0,0-.005,2.003-.009,2.17-.028,1.083-.066,2.566,1.525,3.202.233.093.483.308.483.63,0,.36-.293.654-.653.654Zm-4.347-15c.552,0,1,.672,1,1.5s-.448,1.5-1,1.5-1-.672-1-1.5.448-1.5,1-1.5Z"/>
 </svg>
-);
 
-ToiletPaperBlankUnder.displayName = 'ToiletPaperBlankUnder';
+);

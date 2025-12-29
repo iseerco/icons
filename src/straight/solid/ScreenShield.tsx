@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ScreenShield: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m13 20v2h5v2h-12v-2h5v-2h-11v-4h24v4zm-.44-7.546c1.042-.419 4.44-2.07 4.44-5.723v-3.477c0-.814-.52-1.534-1.293-1.791l-3.707-1.228-3.707 1.229c-.773.256-1.293.976-1.293 1.791v3.477c.188 3.674 3.451 5.171 4.957 5.965zm-7.56-5.723v-3.477c0-.436.076-.858.211-1.254h-2.211c-1.654 0-3 1.346-3 3v9h10.111c-1.571-.857-5.111-3.237-5.111-7.269zm16-4.731h-2.211c.135.397.211.818.211 1.254v3.477c0 4.247-3.262 6.414-5.006 7.269h10.006v-9c0-1.654-1.346-3-3-3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ScreenShield = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m13 20v2h5v2h-12v-2h5v-2h-11v-4h24v4zm-.44-7.546c1.042-.419 4.44-2.07 4.44-5.723v-3.477c0-.814-.52-1.534-1.293-1.791l-3.707-1.228-3.707 1.229c-.773.256-1.293.976-1.293 1.791v3.477c.188 3.674 3.451 5.171 4.957 5.965zm-7.56-5.723v-3.477c0-.436.076-.858.211-1.254h-2.211c-1.654 0-3 1.346-3 3v9h10.111c-1.571-.857-5.111-3.237-5.111-7.269zm16-4.731h-2.211c.135.397.211.818.211 1.254v3.477c0 4.247-3.262 6.414-5.006 7.269h10.006v-9c0-1.654-1.346-3-3-3z"/></svg>
 );
-
-ScreenShield.displayName = 'ScreenShield';

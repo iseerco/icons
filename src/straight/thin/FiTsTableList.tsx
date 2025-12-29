@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTableList: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTableList = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.5,2H2.5c-1.379,0-2.5,1.122-2.5,2.5v16.5h24V4.5c0-1.378-1.121-2.5-2.5-2.5Zm1.5,2.5v3.5H7V3h14.5c.827,0,1.5.673,1.5,1.5ZM7,9h16v5H7v-5Zm-1,5H1v-5h5v5ZM2.5,3h3.5v5H1v-3.5c0-.827.673-1.5,1.5-1.5Zm-1.5,12h5v5H1v-5Zm6,5v-5h16v5H7Z"/>
 </svg>
-);
 
-FiTsTableList.displayName = 'FiTsTableList';
+);

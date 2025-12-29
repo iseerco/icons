@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Subfolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Subfolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,6v3.026c-.584-.442-1.257-.773-2-.924v-2.101c0-.551-.449-1-1-1H11.764L7.764,3H3c-.551,0-1,.449-1,1V21h3v2H0V4C0,2.346,1.346,1,3,1h5.236l4,2h8.764c1.654,0,3,1.346,3,3Zm0,7v10H7V11c0-1.654,1.346-3,3-3h3.236l4,2h3.764c1.654,0,3,1.346,3,3Zm-2,0c0-.551-.449-1-1-1h-4.236l-4-2h-2.764c-.551,0-1,.449-1,1v10h13V13Z"/>
 </svg>
-);
 
-Subfolder.displayName = 'Subfolder';
+);

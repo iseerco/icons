@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LimitHand: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LimitHand = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,24h12l-6-10.286-6,10.286Zm7-1h-2v-2h2v2Zm0-3h-2v-3h2v3Zm5-15.5v15.53l-4.684-8.03h-2.632l-7,12h-1.684L.646,16.412c-.713-.715-.88-1.87-.276-2.68.63-.845,1.741-1.031,2.584-.561.201.131.353.245.441.333l2.605,2.65V3.5c0-.911.812-1.632,1.752-1.479.737.12,1.248.813,1.248,1.56v6.42h2V1.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5v8.5h2V2.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5v7.5h2v-5.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5Z"/>
 </svg>
-);
 
-LimitHand.displayName = 'LimitHand';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UpRightFromSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UpRightFromSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,13h1v6c0,2.761-2.239,5-5,5H5c-2.761,0-5-2.239-5-5V5C0,2.239,2.239,0,5,0h6v1c0,1.657,1.343,3,3,3h1.758L7.086,12.672c-1.171,1.171-1.172,3.071,0,4.242h0c1.171,1.172,3.071,1.172,4.243,0l8.672-8.672v1.758c0,1.657,1.343,3,3,3Zm-2-13h-7c-.552,0-1,.448-1,1h0c0,.552.448,1,1,1h6.586l-12.086,12.086c-.391.39-.391,1.024,0,1.414.391.39,1.024.39,1.414,0L22,3.414v6.586c0,.552.448,1,1,1h0c.552,0,1-.448,1-1V3c0-1.657-1.343-3-3-3Z"/>
 </svg>
-);
 
-UpRightFromSquare.displayName = 'UpRightFromSquare';
+);

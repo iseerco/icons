@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrSink: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrSink = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,13h-1v-1.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v1.5h-6.5V4.254c0-1.794,1.46-3.254,3.254-3.254,1.805,0,3.141,1.131,3.246,2.718v.782c0,.276.224.5.5.5s.5-.224.5-.5v-.815c-.143-2.135-1.928-3.685-4.246-3.685-2.346,0-4.254,1.908-4.254,4.254v8.746h-6.5v-1.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v1.5h-1c-1.654,0-3,1.346-3,3,0,4.411,3.589,8,8,8h8c4.411,0,8-3.589,8-8,0-1.654-1.346-3-3-3Zm-5,10h-8c-3.859,0-7-3.14-7-7,0-1.103.897-2,2-2h18c1.103,0,2,.897,2,2,0,3.86-3.141,7-7,7Z"/>
 </svg>
-);
 
-FiTrSink.displayName = 'FiTrSink';
+);

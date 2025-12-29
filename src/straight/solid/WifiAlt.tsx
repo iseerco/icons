@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const WifiAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16.636 23a1 1 0 1 1 1 1 1 1 0 0 1 -1-1zm4.535-3.536a5 5 0 0 0 -7.07 0l1.414 1.414a3.074 3.074 0 0 1 4.242 0zm2.829-2.828a9.012 9.012 0 0 0 -12.729 0l1.415 1.414a7.011 7.011 0 0 1 9.9 0zm-15.558 0 1.415-1.414a11.014 11.014 0 0 1 14.143-1.18v-.042c0-3.741-2.622-5.968-6.21-6.791a8 8 0 0 0 -15.79 1.791 7.912 7.912 0 0 0 .9 3.671 5.49 5.49 0 0 0 2.6 10.329h9.177z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const WifiAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m16.636 23a1 1 0 1 1 1 1 1 1 0 0 1 -1-1zm4.535-3.536a5 5 0 0 0 -7.07 0l1.414 1.414a3.074 3.074 0 0 1 4.242 0zm2.829-2.828a9.012 9.012 0 0 0 -12.729 0l1.415 1.414a7.011 7.011 0 0 1 9.9 0zm-15.558 0 1.415-1.414a11.014 11.014 0 0 1 14.143-1.18v-.042c0-3.741-2.622-5.968-6.21-6.791a8 8 0 0 0 -15.79 1.791 7.912 7.912 0 0 0 .9 3.671 5.49 5.49 0 0 0 2.6 10.329h9.177z"/></svg>
 );
-
-WifiAlt.displayName = 'WifiAlt';

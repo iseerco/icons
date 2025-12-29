@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBranching: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBranching = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M6,12c0,1.657-1.343,3-3,3s-3-1.343-3-3,1.343-3,3-3,3,1.343,3,3Zm15-3c-1.657,0-3,1.343-3,3s1.343,3,3,3,3-1.343,3-3-1.343-3-3-3Zm0,9c-1.657,0-3,1.343-3,3s1.343,3,3,3,3-1.343,3-3-1.343-3-3-3Zm0-12c1.657,0,3-1.343,3-3s-1.343-3-3-3-3,1.343-3,3,1.343,3,3,3Zm-6.5-1.5h1c.828,0,1.5-.671,1.5-1.5s-.672-1.5-1.5-1.5h-1c-1.93,0-3.5,1.57-3.5,3.5v5.5h-2.5c-.828,0-1.5,.671-1.5,1.5s.672,1.5,1.5,1.5h2.5v5.5c0,1.93,1.57,3.5,3.5,3.5h1c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5h-1c-.275,0-.5-.225-.5-.5v-5.5h1.5c.828,0,1.5-.671,1.5-1.5s-.672-1.5-1.5-1.5h-1.5V5c0-.276,.225-.5,.5-.5Z"/>
 </svg>
-);
 
-FiBrBranching.displayName = 'FiBrBranching';
+);

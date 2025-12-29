@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Towel: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23 5h-1v-1.5c0-1.929-1.569-3.5-3.499-3.5h-13.501c-1.654 0-3 1.346-3 3v2h-1c-.552 0-1 .448-1 1s.448 1 1 1h1v3c0 2.206 1.794 4 4 4h1v6c0 2.206 1.794 4 4 4h7c2.206 0 4-1.794 4-4v-10c0-.552-.448-1-1-1s-1 .448-1 1v8h-11v-4h4c2.206 0 4-1.794 4-4v-3h6c.552 0 1-.448 1-1s-.448-1-1-1zm-3 15c0 1.103-.897 2-2 2h-7c-1.103 0-2-.897-2-2zm-5-10c0 1.103-.897 2-2 2h-7c-1.103 0-2-.897-2-2v-7c0-.551.449-1 1-1h10.338c-.216.455-.338.963-.338 1.5zm2-6.5c0-.827.673-1.5 1.5-1.5s1.5.673 1.5 1.5v1.5h-3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Towel = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23 5h-1v-1.5c0-1.929-1.569-3.5-3.499-3.5h-13.501c-1.654 0-3 1.346-3 3v2h-1c-.552 0-1 .448-1 1s.448 1 1 1h1v3c0 2.206 1.794 4 4 4h1v6c0 2.206 1.794 4 4 4h7c2.206 0 4-1.794 4-4v-10c0-.552-.448-1-1-1s-1 .448-1 1v8h-11v-4h4c2.206 0 4-1.794 4-4v-3h6c.552 0 1-.448 1-1s-.448-1-1-1zm-3 15c0 1.103-.897 2-2 2h-7c-1.103 0-2-.897-2-2zm-5-10c0 1.103-.897 2-2 2h-7c-1.103 0-2-.897-2-2v-7c0-.551.449-1 1-1h10.338c-.216.455-.338.963-.338 1.5zm2-6.5c0-.827.673-1.5 1.5-1.5s1.5.673 1.5 1.5v1.5h-3z"/></svg>
 );
-
-Towel.displayName = 'Towel';

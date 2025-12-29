@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LaptopBinary: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LaptopBinary = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M16.5,14c1.381,0,2.5-1.119,2.5-2.5v-3c0-1.381-1.119-2.5-2.5-2.5s-2.5,1.119-2.5,2.5v3c0,1.381,1.119,2.5,2.5,2.5Zm-.9-5.5c0-.496,.404-.9,.9-.9s.9,.404,.9,.9v3c0,.496-.404,.9-.9,.9s-.9-.404-.9-.9v-3Zm-4.4,4.7V6.8c0-.442,.358-.8,.8-.8s.8,.358,.8,.8v6.4c0,.442-.358,.8-.8,.8s-.8-.358-.8-.8Zm-1.2-1.7v-3c0-1.381-1.119-2.5-2.5-2.5s-2.5,1.119-2.5,2.5v3c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5Zm-1.6,0c0,.496-.404,.9-.9,.9s-.9-.404-.9-.9v-3c0-.496,.404-.9,.9-.9s.9,.404,.9,.9v3Zm13.6,3.684v-7.184c0-2.757-2.243-5-5-5H7c-2.757,0-5,2.243-5,5v7.184c-1.161,.414-2,1.514-2,2.816,0,1.654,1.346,3,3,3H21c1.654,0,3-1.346,3-3,0-1.302-.839-2.402-2-2.816ZM4,8c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v7h-4.5c-.265,0-.52,.105-.707,.293l-.707,.707h-4.172l-.707-.707c-.188-.188-.442-.293-.707-.293H4v-7Zm17,11H3c-.551,0-1-.449-1-1s.449-1,1-1h5.086l.707,.707c.188,.188,.442,.293,.707,.293h5c.265,0,.52-.105,.707-.293l.707-.707h5.086c.551,0,1,.449,1,1s-.449,1-1,1Z"/>
 </svg>
-);
 
-LaptopBinary.displayName = 'LaptopBinary';
+);

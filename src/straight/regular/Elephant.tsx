@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Elephant: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Elephant = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.995,17v2.899c0,1.523-1.084,2.84-2.522,3.063-.157.024-.314.036-.471.036-.711,0-1.399-.249-1.941-.713-.665-.57-1.047-1.404-1.046-2.288v-.998h-1.995v4h-6.002l.009-4h-4.019l-.01,4H0v-14C0,5.691,2.691,3,6,3h1.532c1.099-1.227,2.695-2,4.468-2,2.508,0,4.764,1.609,5.618,3.958,1.488,1.012,2.397,2.7,2.396,4.494v10.547c0,.299.127.579.348.768.22.188.507.264.804.219.465-.072.829-.55.829-1.087v-2.899h2Zm-5.98,0v-7.498c0-1.284-.648-2.396-1.735-3.025l-.348-.201-.111-.386c-.495-1.702-2.065-2.891-3.82-2.891-2.206,0-4,1.794-4,4s1.794,4,4,4v2c-3.309,0-6-2.691-6-6,0-.701.121-1.374.343-2h-.343c-2.206,0-4,1.794-4,4v12h2.002l.01-4h8.021l-.01,4h1.997v-4h3.995Z"/>
 </svg>
-);
 
-Elephant.displayName = 'Elephant';
+);

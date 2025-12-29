@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsArrowComparison: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsArrowComparison = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.839,10.041l2.121,2.121-8.96,8.959-5-5-5.439,5.439,2.439,2.439H1.091c-.603,0-1.091-.488-1.091-1.091v-5.909l2.439,2.439,7.561-7.561,5,5,6.839-6.838Zm1.07-10.041h-5.909l2.439,2.439-5.439,5.439-5-5L.056,11.823l2.121,2.121,6.823-6.823,5,5,7.561-7.561,2.439,2.439V1.091c0-.602-.488-1.091-1.091-1.091Z"/>
 </svg>
-);
 
-FiBsArrowComparison.displayName = 'FiBsArrowComparison';
+);

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsHalfLoading: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m11.5 0h1v4h-1zm0 24h1v-4h-1zm8.5-12.5v1h4v-1zm-1.337 4.952 3.458 2.009.502-.864-3.458-2.009zm-.204-14.576-.865-.502-2.01 3.458.865.502zm4.172 4.515-.504-.864-3.455 2.014.504.864zm-7.022 12.774 2.014 3.456.863-.504-2.014-3.456z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsHalfLoading = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m11.5 0h1v4h-1zm0 24h1v-4h-1zm8.5-12.5v1h4v-1zm-1.337 4.952 3.458 2.009.502-.864-3.458-2.009zm-.204-14.576-.865-.502-2.01 3.458.865.502zm4.172 4.515-.504-.864-3.455 2.014.504.864zm-7.022 12.774 2.014 3.456.863-.504-2.014-3.456z"/></svg>
 );
-
-FiTsHalfLoading.displayName = 'FiTsHalfLoading';

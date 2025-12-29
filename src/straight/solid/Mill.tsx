@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Mill: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Mill = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20.713,21.416l.287,2.584h-7v-2c0-1.105-.895-2-2-2s-2,.895-2,2v2H3l.287-2.584,1.55,1.55,7.163-7.163,7.163,7.163,1.55-1.55Zm-5.072-9.749l-.53,.53-1.697-1.697,1.735-1.736,.53,.53,5.958-5.958-2.475-2.475-5.958,5.958,.53,.53-1.735,1.736-1.735-1.736,.53-.53L4.837,.863,2.363,3.337l5.958,5.958,.53-.53,1.735,1.736-1.697,1.697-.53-.53-5.996,5.997,2.475,2.475,5.996-5.996-.53-.53,1.697-1.697,1.697,1.697-.53,.53,5.996,5.996,2.475-2.475-5.996-5.997Zm-.836-9.274L12-.02l-2.805,2.412,2.805,2.805,2.805-2.805Zm4.97,10.579l-.494-4.449-1.977,1.977,2.472,2.472Zm-15.549,0l2.472-2.472-1.977-1.977-.494,4.449Z"/>
 </svg>
-);
 
-Mill.displayName = 'Mill';
+);

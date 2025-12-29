@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsNfcSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,20.88V4.5c0-1.93-1.57-3.5-3.5-3.5H4.5c-.4,0-.8,.07-1.18,.2L2.16,.04,.04,2.16,21.84,23.96l2.12-2.12-.96-.96Zm-3.5-16.88c.28,0,.5,.22,.5,.5v13.38l-2-2V6h-2.55l-3,3h2.55v3.88l-4.63-4.63,2.25-2.25h-4.5l-2-2h13.38ZM9,13.95v1.05h1.05l3,3H6v-7.05l3,3Zm6.05,6.05l3,3H1V5.95l3,3v11.05H15.05Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsNfcSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,20.88V4.5c0-1.93-1.57-3.5-3.5-3.5H4.5c-.4,0-.8,.07-1.18,.2L2.16,.04,.04,2.16,21.84,23.96l2.12-2.12-.96-.96Zm-3.5-16.88c.28,0,.5,.22,.5,.5v13.38l-2-2V6h-2.55l-3,3h2.55v3.88l-4.63-4.63,2.25-2.25h-4.5l-2-2h13.38ZM9,13.95v1.05h1.05l3,3H6v-7.05l3,3Zm6.05,6.05l3,3H1V5.95l3,3v11.05H15.05Z"/></svg>
+
 );
-
-FiBsNfcSlash.displayName = 'FiBsNfcSlash';

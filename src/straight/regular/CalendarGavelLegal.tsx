@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CalendarGavelLegal: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CalendarGavelLegal = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.183,16.904l.537.537,1.414-1.414-5.312-5.312-1.414,1.414.537.537-4.369,4.369-.537-.537-1.414,1.414,5.312,5.312,1.414-1.414-.537-.537,1.523-1.523,4.225,4.226,1.414-1.414-4.225-4.226,1.432-1.432Zm-7.193,1.546l4.369-4.369,1.409,1.409-4.369,4.369-1.409-1.409ZM21,2h-3V0h-2v2h-8V0h-2v2h-3c-1.654,0-3,1.346-3,3v19h13.883l-2-2H2v-12h20v2.065l2,2V5c0-1.654-1.346-3-3-3Zm1,6H2v-3c0-.551.448-1,1-1h18c.552,0,1,.449,1,1v3Z"/>
 </svg>
-);
 
-CalendarGavelLegal.displayName = 'CalendarGavelLegal';
+);

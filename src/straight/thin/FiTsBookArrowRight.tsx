@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsBookArrowRight: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19,19H5V1h13.5c.275,0,.5,.224,.5,.5v2.5h1V1.5c0-.827-.673-1.5-1.5-1.5H2.5C1.121,0,0,1.122,0,2.5V21.5c0,1.378,1.121,2.5,2.5,2.5H20v-7h-1v2ZM2.5,1h1.5V19h-1.5c-.562,0-1.082,.187-1.5,.501V2.5c0-.827,.673-1.5,1.5-1.5Zm0,22c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5H19v3H2.5ZM23.423,11.894l-2.871,2.871-.707-.707,2.871-2.871c.057-.057,.106-.12,.146-.187H12v-1h10.862c-.04-.067-.089-.129-.146-.187l-2.909-2.909,.707-.707,2.909,2.909c.769,.769,.769,2.019,0,2.787Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsBookArrowRight = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19,19H5V1h13.5c.275,0,.5,.224,.5,.5v2.5h1V1.5c0-.827-.673-1.5-1.5-1.5H2.5C1.121,0,0,1.122,0,2.5V21.5c0,1.378,1.121,2.5,2.5,2.5H20v-7h-1v2ZM2.5,1h1.5V19h-1.5c-.562,0-1.082,.187-1.5,.501V2.5c0-.827,.673-1.5,1.5-1.5Zm0,22c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5H19v3H2.5ZM23.423,11.894l-2.871,2.871-.707-.707,2.871-2.871c.057-.057,.106-.12,.146-.187H12v-1h10.862c-.04-.067-.089-.129-.146-.187l-2.909-2.909,.707-.707,2.909,2.909c.769,.769,.769,2.019,0,2.787Z"/></svg>
+
 );
-
-FiTsBookArrowRight.displayName = 'FiTsBookArrowRight';

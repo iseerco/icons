@@ -13,49 +13,59 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./straight/regular": {
+      "types": "./dist/straight/regular/index.d.ts",
       "import": "./dist/straight/regular/index.mjs",
       "require": "./dist/straight/regular/index.js"
     },
     "./straight/thin": {
+      "types": "./dist/straight/thin/index.d.ts",
       "import": "./dist/straight/thin/index.mjs",
       "require": "./dist/straight/thin/index.js"
     },
     "./straight/bold": {
+      "types": "./dist/straight/bold/index.d.ts",
       "import": "./dist/straight/bold/index.mjs",
       "require": "./dist/straight/bold/index.js"
     },
     "./straight/solid": {
+      "types": "./dist/straight/solid/index.d.ts",
       "import": "./dist/straight/solid/index.mjs",
       "require": "./dist/straight/solid/index.js"
     },
     "./rounded/regular": {
+      "types": "./dist/rounded/regular/index.d.ts",
       "import": "./dist/rounded/regular/index.mjs",
       "require": "./dist/rounded/regular/index.js"
     },
     "./rounded/thin": {
+      "types": "./dist/rounded/thin/index.d.ts",
       "import": "./dist/rounded/thin/index.mjs",
       "require": "./dist/rounded/thin/index.js"
     },
     "./rounded/bold": {
+      "types": "./dist/rounded/bold/index.d.ts",
       "import": "./dist/rounded/bold/index.mjs",
       "require": "./dist/rounded/bold/index.js"
     },
     "./rounded/solid": {
+      "types": "./dist/rounded/solid/index.d.ts",
       "import": "./dist/rounded/solid/index.mjs",
       "require": "./dist/rounded/solid/index.js"
     },
     "./duotone/chubby": {
+      "types": "./dist/duotone/chubby/index.d.ts",
       "import": "./dist/duotone/chubby/index.mjs",
       "require": "./dist/duotone/chubby/index.js"
     }
   },
   "files": [
     "dist",
+    "src",
     "README.md",
     "LICENSE"
   ],

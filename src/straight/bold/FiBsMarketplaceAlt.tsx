@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMarketplaceAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMarketplaceAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.5,11c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5.672-1.5,1.5-1.5ZM11.737,3h-1.737V0h2.158c1.194,0,2.213.836,2.449,2h9.436l-2.511,8h-6.479c-1.222,0-2.258-.874-2.464-2.077l-.852-4.923Zm3.391,2l.346,2h3.855l.628-2h-4.829Zm-2.128,7.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5,1.5ZM3,5h5v-3H3c-1.654,0-3,1.346-3,3v14h10.5v2h-4v3h11v-3h-4v-2h10.5v-3H3V5Z"/>
 </svg>
-);
 
-FiBsMarketplaceAlt.displayName = 'FiBsMarketplaceAlt';
+);

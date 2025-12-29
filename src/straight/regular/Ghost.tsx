@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Ghost: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m10,10.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm5.5-1.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm6.5,1v14h-2c0-1.103-.897-2-2-2s-2,.897-2,2h-2c0-1.103-.897-2-2-2s-2,.897-2,2h-2c0-1.103-.897-2-2-2s-2,.897-2,2h-2v-14C2,4.486,6.486,0,12,0s10,4.486,10,10Zm-2,0c0-4.411-3.589-8-8-8S4,5.589,4,10v10.537c.589-.341,1.272-.537,2-.537,1.194,0,2.266.526,3,1.357.734-.832,1.806-1.357,3-1.357s2.266.526,3,1.357c.734-.832,1.806-1.357,3-1.357.728,0,1.411.195,2,.537v-10.537Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Ghost = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m10,10.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm5.5-1.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm6.5,1v14h-2c0-1.103-.897-2-2-2s-2,.897-2,2h-2c0-1.103-.897-2-2-2s-2,.897-2,2h-2c0-1.103-.897-2-2-2s-2,.897-2,2h-2v-14C2,4.486,6.486,0,12,0s10,4.486,10,10Zm-2,0c0-4.411-3.589-8-8-8S4,5.589,4,10v10.537c.589-.341,1.272-.537,2-.537,1.194,0,2.266.526,3,1.357.734-.832,1.806-1.357,3-1.357s2.266.526,3,1.357c.734-.832,1.806-1.357,3-1.357.728,0,1.411.195,2,.537v-10.537Z"/></svg>
+
 );
-
-Ghost.displayName = 'Ghost';

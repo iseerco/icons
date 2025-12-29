@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShieldExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m13 15h-2v-10h2zm-.207 8.708c2.16-.868 9.207-4.28 9.207-11.717v-6.524a2.992 2.992 0 0 0 -2.054-2.842l-7.946-2.635-7.946 2.635a2.992 2.992 0 0 0 -2.054 2.842v6.524c0 6.563 7.005 10.576 9.153 11.651l.8.4zm6.523-19.185a1 1 0 0 1 .684.944v6.524c0 6.183-6.087 9.112-7.953 9.862-1.888-.945-8.047-4.446-8.047-9.862v-6.524a1 1 0 0 1 .684-.944l7.316-2.423zm-6.316 12.477h-2v2h2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShieldExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m13 15h-2v-10h2zm-.207 8.708c2.16-.868 9.207-4.28 9.207-11.717v-6.524a2.992 2.992 0 0 0 -2.054-2.842l-7.946-2.635-7.946 2.635a2.992 2.992 0 0 0 -2.054 2.842v6.524c0 6.563 7.005 10.576 9.153 11.651l.8.4zm6.523-19.185a1 1 0 0 1 .684.944v6.524c0 6.183-6.087 9.112-7.953 9.862-1.888-.945-8.047-4.446-8.047-9.862v-6.524a1 1 0 0 1 .684-.944l7.316-2.423zm-6.316 12.477h-2v2h2z"/></svg>
 );
-
-ShieldExclamation.displayName = 'ShieldExclamation';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsPodiumStar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,10H3v-3.5c0-1.93,1.57-3.5,3.5-3.5h1.551c.232,1.14,1.242,2,2.449,2h3c1.379,0,2.5-1.121,2.5-2.5s-1.121-2.5-2.5-2.5h-3c-1.208,0-2.217,.86-2.449,2h-1.551c-2.481,0-4.5,2.019-4.5,4.5v3.5H0v1H2.071l2,13h15.857l2-13h2.071v-1ZM10.5,1h3c.827,0,1.5,.673,1.5,1.5s-.673,1.5-1.5,1.5h-3c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5Zm8.571,22H4.929l-1.846-12H20.917l-1.846,12Zm-10.24-1.775l.634,.49,2.535-1.645,2.535,1.645,.634-.49-.808-2.699,2.138-1.722v-.804h-3.045l-1.052-3h-.804l-1.052,3h-3.046v.804l2.139,1.722-.808,2.699Zm.508-4.225h1.916l.745-2.125,.745,2.125h1.916l-1.45,1.168,.556,1.856-1.767-1.146-1.767,1.146,.556-1.856-1.45-1.168Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsPodiumStar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,10H3v-3.5c0-1.93,1.57-3.5,3.5-3.5h1.551c.232,1.14,1.242,2,2.449,2h3c1.379,0,2.5-1.121,2.5-2.5s-1.121-2.5-2.5-2.5h-3c-1.208,0-2.217,.86-2.449,2h-1.551c-2.481,0-4.5,2.019-4.5,4.5v3.5H0v1H2.071l2,13h15.857l2-13h2.071v-1ZM10.5,1h3c.827,0,1.5,.673,1.5,1.5s-.673,1.5-1.5,1.5h-3c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5Zm8.571,22H4.929l-1.846-12H20.917l-1.846,12Zm-10.24-1.775l.634,.49,2.535-1.645,2.535,1.645,.634-.49-.808-2.699,2.138-1.722v-.804h-3.045l-1.052-3h-.804l-1.052,3h-3.046v.804l2.139,1.722-.808,2.699Zm.508-4.225h1.916l.745-2.125,.745,2.125h1.916l-1.45,1.168,.556,1.856-1.767-1.146-1.767,1.146,.556-1.856-1.45-1.168Z"/></svg>
+
 );
-
-FiTsPodiumStar.displayName = 'FiTsPodiumStar';

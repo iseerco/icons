@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsForwardFast: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsForwardFast = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23-.013v9.967c-.024-.018-.047-.036-.072-.053L10,.007v7.28L0,.04v23.941l10-7.266v7.298l12.915-9.905c.029-.021.057-.042.085-.064v9.943h1V-.013h-1Zm-.68,13.317l-11.32,8.682v-7.233L1,22.019V1.999l10,7.247V2.032l11.334,8.673c.417.298.666.781.666,1.295s-.249.996-.68,1.305Z"/>
 </svg>
-);
 
-FiTsForwardFast.displayName = 'FiTsForwardFast';
+);

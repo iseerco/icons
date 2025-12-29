@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GridAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m7 0h4v5h-4zm-7 11h5v-4h-5zm11 0v-4h-4v4zm-6 6v-4h-5v4zm12-6v-4h-4v4zm2-6h5v-2a3 3 0 0 0 -3-3h-2zm-8 8h-4v4h4zm2-13v5h4v-5zm11 13h-5v4h5zm-13 11v-5h-4v5zm-6-19v-5h-2a3 3 0 0 0 -3 3v2zm0 14h-5v5h5zm14-12v4h5v-4zm-2 12h-4v5h4zm-4-6v4h4v-4zm6 6v5h5v-5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GridAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m7 0h4v5h-4zm-7 11h5v-4h-5zm11 0v-4h-4v4zm-6 6v-4h-5v4zm12-6v-4h-4v4zm2-6h5v-2a3 3 0 0 0 -3-3h-2zm-8 8h-4v4h4zm2-13v5h4v-5zm11 13h-5v4h5zm-13 11v-5h-4v5zm-6-19v-5h-2a3 3 0 0 0 -3 3v2zm0 14h-5v5h5zm14-12v4h5v-4zm-2 12h-4v5h4zm-4-6v4h4v-4zm6 6v5h5v-5z"/></svg>
 );
-
-GridAlt.displayName = 'GridAlt';

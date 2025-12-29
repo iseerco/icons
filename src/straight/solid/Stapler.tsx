@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Stapler: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20.863 7.488-16.296-4.474c-1.606-.435-3.383.64-3.744 2.265l-.823 3.367 17 4.796v4.539h-17v2h24v-8.481c0-1.904-1.291-3.554-3.137-4.012zm-.363 9.512c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm-5.5-2h-13v-3.786z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Stapler = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.863 7.488-16.296-4.474c-1.606-.435-3.383.64-3.744 2.265l-.823 3.367 17 4.796v4.539h-17v2h24v-8.481c0-1.904-1.291-3.554-3.137-4.012zm-.363 9.512c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm-5.5-2h-13v-3.786z"/></svg>
 );
-
-Stapler.displayName = 'Stapler';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Pi: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m24,2V0H6.5c-1.842,0-3.348.578-4.478,1.718C-.006,3.765,0,6.878,0,7.009l2-.016c0-.024.01-2.431,1.451-3.876.75-.752,1.748-1.118,3.049-1.118h.5v13.869c0,4.083-2.656,6.632-2.68,6.655l1.36,1.466c.136-.126,3.32-3.139,3.32-8.121V2h7v18c0,2.206,1.794,4,4,4s4-1.794,4-4h-2c0,1.103-.897,2-2,2s-2-.897-2-2V2h6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Pi = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24,2V0H6.5c-1.842,0-3.348.578-4.478,1.718C-.006,3.765,0,6.878,0,7.009l2-.016c0-.024.01-2.431,1.451-3.876.75-.752,1.748-1.118,3.049-1.118h.5v13.869c0,4.083-2.656,6.632-2.68,6.655l1.36,1.466c.136-.126,3.32-3.139,3.32-8.121V2h7v18c0,2.206,1.794,4,4,4s4-1.794,4-4h-2c0,1.103-.897,2-2,2s-2-.897-2-2V2h6Z"/></svg>
+
 );
-
-Pi.displayName = 'Pi';

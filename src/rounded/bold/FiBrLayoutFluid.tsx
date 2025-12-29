@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrLayoutFluid: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrLayoutFluid = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M42.667,0h234.667C300.897,0,320,19.103,320,42.667V192c0,23.564-19.103,42.667-42.667,42.667H42.667   C19.103,234.667,0,215.564,0,192V42.667C0,19.103,19.103,0,42.667,0z"/>
 	<path d="M405.333,0h64C492.898,0,512,19.103,512,42.667V192c0,23.564-19.102,42.667-42.667,42.667h-64   c-23.564,0-42.667-19.103-42.667-42.667V42.667C362.667,19.103,381.769,0,405.333,0z"/>
@@ -30,6 +32,5 @@ export const FiBrLayoutFluid: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrLayoutFluid.displayName = 'FiBrLayoutFluid';
+);

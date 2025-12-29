@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPolishBottle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPolishBottle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M19.075,10.129c-.661-.718-1.6-1.129-2.575-1.129h-.5V0H8V9h-.5c-2.004-.035-3.697,1.809-3.485,3.817l1.129,11.183h13.713l1.132-11.21c.08-.973-.252-1.942-.913-2.661ZM11,3h2v6h-2V3Zm5.144,18H7.856l-.854-8.458c.024-.364,.137-.488,.498-.542h9c.349,.047,.47,.183,.501,.515l-.857,8.485Zm-7.144-6h6v3h-6v-3Z"/>
 </svg>
-);
 
-FiBsPolishBottle.displayName = 'FiBsPolishBottle';
+);

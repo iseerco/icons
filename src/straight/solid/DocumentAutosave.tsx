@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DocumentAutosave: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m17.5 11c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5 6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5zm0 11c-1.37 0-2.581-.627-3.402-1.598l-1.098 1.098v-3c0-.276.224-.5.5-.5h3l-1 1h.013c.457.603 1.174 1 1.987 1s1.531-.397 1.987-1h2.236c-.621 1.742-2.271 3-4.224 3zm4.5-5.5c0 .276-.224.5-.5.5h-3l1-1h-.013c-.457-.603-1.174-1-1.987-1s-1.531.397-1.987 1h-2.236c.621-1.742 2.271-3 4.224-3 1.37 0 2.581.627 3.402 1.598l1.098-1.098v3zm-7-15.914v4.414h4.414zm-2.972 23.414h-12.028v-21c0-1.657 1.343-3 3-3h10v7h7v2.375c-.791-.243-1.63-.375-2.5-.375-4.694 0-8.5 3.806-8.5 8.5 0 2.609 1.178 4.941 3.028 6.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DocumentAutosave = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17.5 11c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5 6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5zm0 11c-1.37 0-2.581-.627-3.402-1.598l-1.098 1.098v-3c0-.276.224-.5.5-.5h3l-1 1h.013c.457.603 1.174 1 1.987 1s1.531-.397 1.987-1h2.236c-.621 1.742-2.271 3-4.224 3zm4.5-5.5c0 .276-.224.5-.5.5h-3l1-1h-.013c-.457-.603-1.174-1-1.987-1s-1.531.397-1.987 1h-2.236c.621-1.742 2.271-3 4.224-3 1.37 0 2.581.627 3.402 1.598l1.098-1.098v3zm-7-15.914v4.414h4.414zm-2.972 23.414h-12.028v-21c0-1.657 1.343-3 3-3h10v7h7v2.375c-.791-.243-1.63-.375-2.5-.375-4.694 0-8.5 3.806-8.5 8.5 0 2.609 1.178 4.941 3.028 6.5z"/></svg>
 );
-
-DocumentAutosave.displayName = 'DocumentAutosave';

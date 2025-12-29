@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Overview: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Overview = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,16c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm-1.5-11.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm0,5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5ZM19,0H5C2.243,0,0,2.243,0,5v13c0,2.757,2.243,5,5,5h3c.552,0,1-.447,1-1s-.448-1-1-1h-3c-1.654,0-3-1.346-3-3V5c0-1.654,1.346-3,3-3h14c1.654,0,3,1.346,3,3v9c0,.553.448,1,1,1s1-.447,1-1V5c0-2.757-2.243-5-5-5Zm-8,7h7c.552,0,1-.448,1-1s-.448-1-1-1h-7c-.552,0-1,.448-1,1s.448,1,1,1Zm0,5h7c.552,0,1-.448,1-1s-.448-1-1-1h-7c-.552,0-1,.448-1,1s.448,1,1,1Zm12.705,6.549c.391.578.391,1.324,0,1.902-.896,1.325-2.959,3.549-6.705,3.549s-5.809-2.224-6.706-3.549c-.391-.579-.391-1.325,0-1.902.896-1.325,2.958-3.549,6.705-3.549s5.809,2.224,6.705,3.549Zm-1.775.951c-.73-1.006-2.263-2.5-4.93-2.5s-4.201,1.495-4.93,2.5c.729,1.006,2.263,2.5,4.93,2.5s4.2-1.494,4.93-2.5Zm-4.93-1.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Z"/>
 </svg>
-);
 
-Overview.displayName = 'Overview';
+);

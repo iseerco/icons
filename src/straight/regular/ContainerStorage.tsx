@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ContainerStorage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ContainerStorage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,5v-2H0v2h1v14H0v2h24v-2h-1V5h1Zm-3,14H3V5h18v14Zm-3-2h-2V7h2v10Zm-5,0h-2V7h2v10Zm-7,0V7h2v10h-2Z"/>
 </svg>
-);
 
-ContainerStorage.displayName = 'ContainerStorage';
+);

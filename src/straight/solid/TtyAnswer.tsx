@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TtyAnswer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TtyAnswer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,2h-2V0h2v2Zm-4-2h-2v2h2V0Zm-4,0h-2v2h2V0Zm-4,0h-2v2h2V0Zm12,4h-2v2h2v-2Zm-4,0h-6v2h6v-2Zm-2.387,8.848l-4.133,4.133c-2.96-1.282-5.08-3.407-6.453-6.469l4.125-4.125L4.887.122,1.717,3.292c-1.107,1.104-1.717,2.599-1.717,4.208,0,7.248,9.252,16.5,16.5,16.5,1.608,0,3.103-.609,4.207-1.715l3.171-3.171-6.265-6.265Z"/>
 </svg>
-);
 
-TtyAnswer.displayName = 'TtyAnswer';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ScannerGun: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ScannerGun = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17,1c0-.552.447-1,1-1h5c.553,0,1,.448,1,1s-.447,1-1,1h-5c-.553,0-1-.448-1-1Zm6,3h-5c-.553,0-1,.448-1,1s.447,1,1,1h5c.553,0,1-.448,1-1s-.447-1-1-1Zm0,15h-5c-.553,0-1,.448-1,1s.447,1,1,1h5c.553,0,1-.448,1-1s-.447-1-1-1Zm0-8h-5c-.553,0-1,.448-1,1s.447,1,1,1h5c.553,0,1-.448,1-1s-.447-1-1-1Zm-.5-4h-4c-.828,0-1.5.671-1.5,1.5s.672,1.5,1.5,1.5h4c.828,0,1.5-.671,1.5-1.5s-.672-1.5-1.5-1.5Zm0,8h-4c-.828,0-1.5.671-1.5,1.5s.672,1.5,1.5,1.5h4c.828,0,1.5-.671,1.5-1.5s-.672-1.5-1.5-1.5Zm.5,7h-5c-.553,0-1,.448-1,1s.447,1,1,1h5c.553,0,1-.448,1-1s-.447-1-1-1ZM15,6v4c0,1.654-1.346,3-3,3h-2.281l-.672,2.001c.531.024.953.462.953.999,0,.552-.447,1-1,1h-.625l-1.523,4.532c-.461,1.48-1.846,2.44-3.337,2.44-.344,0-.693-.051-1.038-.158-1.842-.573-2.876-2.539-2.304-4.381l2.377-7.076c-1.521-.858-2.551-2.49-2.551-4.358C0,5.243,2.243,3,5,3h7c1.654,0,3,1.346,3,3Zm-7.391,7h-2.609c-.184,0-.365-.01-.544-.03l-2.379,7.078c-.238.768.205,1.61.994,1.856.787.246,1.633-.197,1.878-.987l2.66-7.917Zm5.391-7c0-.551-.448-1-1-1h-7c-1.654,0-3,1.346-3,3s1.346,3,3,3h7c.552,0,1-.449,1-1v-4Z"/>
 </svg>
-);
 
-ScannerGun.displayName = 'ScannerGun';
+);

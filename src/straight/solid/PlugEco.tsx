@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PlugEco: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 5v-2h-4v-3h-2v1h-4.5c-1.93 0-3.5 1.57-3.5 3.5v.5h-6c-2.206 0-4 1.794-4 4v11c0 1.859 1.279 3.411 3 3.858v-2.136c-.595-.347-1-.985-1-1.722v-11c0-1.103.897-2 2-2h6v.5c0 1.93 1.57 3.5 3.5 3.5h4.5v1h2v-3h4v-2h-4v-2zm-3 9c-1.654 0-3 1.346-3 3v4c0 1.654 1.346 3 3 3s3-1.346 3-3v-4c0-1.654-1.346-3-3-3zm1 7c0 .552-.448 1-1 1s-1-.448-1-1v-4c0-.552.448-1 1-1s1 .448 1 1zm-9-4v4c0 .552.448 1 1 1s1-.448 1-1h2c0 1.654-1.346 3-3 3s-3-1.346-3-3v-4c0-1.654 1.346-3 3-3s3 1.346 3 3h-2c0-.552-.448-1-1-1s-1 .448-1 1zm-8-3h5v2h-3v2h2v2h-2v2h3v2h-5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PlugEco = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 5v-2h-4v-3h-2v1h-4.5c-1.93 0-3.5 1.57-3.5 3.5v.5h-6c-2.206 0-4 1.794-4 4v11c0 1.859 1.279 3.411 3 3.858v-2.136c-.595-.347-1-.985-1-1.722v-11c0-1.103.897-2 2-2h6v.5c0 1.93 1.57 3.5 3.5 3.5h4.5v1h2v-3h4v-2h-4v-2zm-3 9c-1.654 0-3 1.346-3 3v4c0 1.654 1.346 3 3 3s3-1.346 3-3v-4c0-1.654-1.346-3-3-3zm1 7c0 .552-.448 1-1 1s-1-.448-1-1v-4c0-.552.448-1 1-1s1 .448 1 1zm-9-4v4c0 .552.448 1 1 1s1-.448 1-1h2c0 1.654-1.346 3-3 3s-3-1.346-3-3v-4c0-1.654 1.346-3 3-3s3 1.346 3 3h-2c0-.552-.448-1-1-1s-1 .448-1 1zm-8-3h5v2h-3v2h2v2h-2v2h3v2h-5z"/></svg>
 );
-
-PlugEco.displayName = 'PlugEco';

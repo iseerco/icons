@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsSmartHomeAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsSmartHomeAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.657,7.407L14.157.756c-1.271-.992-3.044-.992-4.313,0L1.343,7.407c-.854.668-1.343,1.673-1.343,2.757v13.823h24v-13.823c0-1.084-.49-2.089-1.343-2.757Zm-1.657,13.58H3v-10.823c0-.155.07-.299.192-.394L11.692,3.119c.182-.143.435-.143.616,0l8.5,6.651c.122.095.192.238.192.394v10.823Zm-7.5-6.987h-3v-6.5h3v6.5Zm4.5-1c0,3.309-2.691,6-6,6s-6-2.691-6-6c0-2.215,1.21-4.149,3-5.188v5.188c0,1.654,1.346,3,3,3s3-1.346,3-3v-5.188c1.79,1.039,3,2.973,3,5.188Z"/>
 </svg>
-);
 
-FiBsSmartHomeAlt.displayName = 'FiBsSmartHomeAlt';
+);

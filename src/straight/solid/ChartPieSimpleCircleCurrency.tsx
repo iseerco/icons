@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChartPieSimpleCircleCurrency: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChartPieSimpleCircleCurrency = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M10,18c0,2.324,.997,4.41,2.58,5.872-.517,.076-1.042,.128-1.58,.128C4.935,24,0,19.065,0,13S4.935,2,11,2h1V12.732c-1.239,1.407-2,3.246-2,5.268Zm14,0c0,3.314-2.686,6-6,6s-6-2.686-6-6,2.686-6,6-6,6,2.686,6,6Zm-3.4-1.469l1.216-1.216-1.132-1.131-1.216,1.216c-.436-.247-.932-.4-1.469-.4s-1.033,.153-1.469,.4l-1.216-1.216-1.132,1.131,1.216,1.216c-.247,.436-.4,.932-.4,1.469s.153,1.033,.4,1.469l-1.216,1.216,1.132,1.131,1.216-1.216c.436,.247,.932,.4,1.469,.4s1.033-.153,1.469-.4l1.216,1.216,1.132-1.131-1.216-1.216c.247-.436,.4-.932,.4-1.469s-.153-1.033-.4-1.469ZM15,0h-1V10h10v-1C24,4.038,19.962,0,15,0Zm3,16.6c-.772,0-1.4,.628-1.4,1.4s.628,1.4,1.4,1.4,1.4-.628,1.4-1.4-.628-1.4-1.4-1.4Z"/>
 </svg>
-);
 
-ChartPieSimpleCircleCurrency.displayName = 'ChartPieSimpleCircleCurrency';
+);

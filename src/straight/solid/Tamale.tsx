@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Tamale: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Tamale = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8.183,14h2.817v9.988c-1.211-.028-2.329-.106-3.332-.207l.515-9.781Zm9.637,0l.501,9.53c2-.302,3.214-.644,3.304-.669l.812-.232-.959-8.629h-3.659ZM1.562,22.629l.812.232c.09.026,1.303.367,3.304.669l.501-9.53h-3.659l-.959,8.629Zm11.438-8.629v9.988c1.211-.028,2.329-.106,3.332-.207l-.515-9.781h-2.817Zm8.256-2l1.181-10.629-.812-.232c-.09-.026-1.303-.367-3.304-.669l-.501,9.53h-2.003L16.332.219c-1.003-.102-2.121-.179-3.332-.207v9.988h-2V.012c-1.211.028-2.329.106-3.332.207l.515,9.781h-2.003L5.679.47c-2,.302-3.214.644-3.304.669l-.812.232,1.181,10.629h18.512Z"/>
 </svg>
-);
 
-Tamale.displayName = 'Tamale';
+);

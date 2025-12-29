@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const QuranUser: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m8.947 3c0-1.657 1.367-3 3.054-3s2.946 1.343 2.946 3-1.26 3-2.946 3-3.054-1.343-3.054-3zm.053 8c0-.552.449-1 1-1h4c.552 0 1 .448 1 1v3.146l2-1v-2.146c0-1.654-1.346-3-3-3h-4c-1.654 0-3 1.346-3 3v2.146l2 1zm8.025 6.606 4.422-2.211-.895-1.789-8.553 4.276-8.552-4.277-.895 1.789 4.422 2.211-4.975 4.902v1.493h9.001v-2h-5.637l3.503-3.449 3.134 1.567 3.134-1.567 3.503 3.449h-5.638v2h9v-1.496l-4.975-4.898z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const QuranUser = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m8.947 3c0-1.657 1.367-3 3.054-3s2.946 1.343 2.946 3-1.26 3-2.946 3-3.054-1.343-3.054-3zm.053 8c0-.552.449-1 1-1h4c.552 0 1 .448 1 1v3.146l2-1v-2.146c0-1.654-1.346-3-3-3h-4c-1.654 0-3 1.346-3 3v2.146l2 1zm8.025 6.606 4.422-2.211-.895-1.789-8.553 4.276-8.552-4.277-.895 1.789 4.422 2.211-4.975 4.902v1.493h9.001v-2h-5.637l3.503-3.449 3.134 1.567 3.134-1.567 3.503 3.449h-5.638v2h9v-1.496l-4.975-4.898z"/></svg>
 );
-
-QuranUser.displayName = 'QuranUser';

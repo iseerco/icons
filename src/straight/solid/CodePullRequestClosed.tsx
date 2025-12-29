@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CodePullRequestClosed: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M8,4C8,1.794,6.206,0,4,0S0,1.794,0,4c0,1.858,1.279,3.411,3,3.858v8.284c-1.721,.447-3,2-3,3.858,0,2.206,1.794,4,4,4s4-1.794,4-4c0-1.858-1.279-3.411-3-3.858V7.858c1.721-.447,3-2,3-3.858Zm13,12.142v-7.142h-2v7.142c-1.721,.447-3,2-3,3.858,0,2.206,1.794,4,4,4s4-1.794,4-4c0-1.858-1.279-3.411-3-3.858Zm-4.964-9.593l2.55-2.549-2.55-2.549L17.45,.037l2.55,2.549L22.55,.037l1.414,1.414-2.55,2.549,2.55,2.549-1.414,1.414-2.55-2.549-2.55,2.549-1.414-1.414Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CodePullRequestClosed = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M8,4C8,1.794,6.206,0,4,0S0,1.794,0,4c0,1.858,1.279,3.411,3,3.858v8.284c-1.721,.447-3,2-3,3.858,0,2.206,1.794,4,4,4s4-1.794,4-4c0-1.858-1.279-3.411-3-3.858V7.858c1.721-.447,3-2,3-3.858Zm13,12.142v-7.142h-2v7.142c-1.721,.447-3,2-3,3.858,0,2.206,1.794,4,4,4s4-1.794,4-4c0-1.858-1.279-3.411-3-3.858Zm-4.964-9.593l2.55-2.549-2.55-2.549L17.45,.037l2.55,2.549L22.55,.037l1.414,1.414-2.55,2.549,2.55,2.549-1.414,1.414-2.55-2.549-2.55,2.549-1.414-1.414Z"/></svg>
+
 );
-
-CodePullRequestClosed.displayName = 'CodePullRequestClosed';

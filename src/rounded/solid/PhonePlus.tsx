@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PhonePlus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m14,5c0-.552.447-1,1-1h3V1c0-.552.447-1,1-1s1,.448,1,1v3h3c.553,0,1,.448,1,1s-.447,1-1,1h-3v3c0,.552-.447,1-1,1s-1-.448-1-1v-3h-3c-.553,0-1-.448-1-1Zm6.656,9.856c-1.195-1.142-3.089-1.141-4.282.007l-1.905,1.606c-3.198-1.357-5.474-3.638-6.932-6.947l1.601-1.897c1.146-1.192,1.147-3.085.006-4.281,0,0-1.852-2.407-1.883-2.438-1.206-1.208-3.172-1.207-4.327-.047l-1.149,1.003C.634,3.012,0,4.565,0,6.238c0,7.636,10.126,17.762,17.762,17.762,1.673,0,3.227-.633,4.421-1.833l.912-1.05c1.205-1.207,1.205-3.17,0-4.376-.03-.031-2.438-1.883-2.438-1.883Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PhonePlus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14,5c0-.552.447-1,1-1h3V1c0-.552.447-1,1-1s1,.448,1,1v3h3c.553,0,1,.448,1,1s-.447,1-1,1h-3v3c0,.552-.447,1-1,1s-1-.448-1-1v-3h-3c-.553,0-1-.448-1-1Zm6.656,9.856c-1.195-1.142-3.089-1.141-4.282.007l-1.905,1.606c-3.198-1.357-5.474-3.638-6.932-6.947l1.601-1.897c1.146-1.192,1.147-3.085.006-4.281,0,0-1.852-2.407-1.883-2.438-1.206-1.208-3.172-1.207-4.327-.047l-1.149,1.003C.634,3.012,0,4.565,0,6.238c0,7.636,10.126,17.762,17.762,17.762,1.673,0,3.227-.633,4.421-1.833l.912-1.05c1.205-1.207,1.205-3.17,0-4.376-.03-.031-2.438-1.883-2.438-1.883Z"/></svg>
+
 );
-
-PhonePlus.displayName = 'PhonePlus';

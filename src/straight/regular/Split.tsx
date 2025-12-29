@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Split: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.41,17.59c.78,.78,.78,2.05,0,2.83l-3.55,3.55-1.41-1.41,2.55-2.55h-7.08c-.88,0-1.71-.38-2.28-1.05l-5.1-5.95H0v-2H6.54l5.1-5.95c.57-.67,1.4-1.05,2.28-1.05h7.08l-2.55-2.55L19.86,.03l3.55,3.55c.78,.78,.78,2.05,0,2.83l-3.55,3.55-1.41-1.41,2.55-2.55h-7.08c-.29,0-.57,.13-.76,.35l-4.84,5.65,4.84,5.65c.19,.22,.47,.35,.76,.35h7.08l-2.55-2.55,1.41-1.41,3.55,3.55Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Split = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.41,17.59c.78,.78,.78,2.05,0,2.83l-3.55,3.55-1.41-1.41,2.55-2.55h-7.08c-.88,0-1.71-.38-2.28-1.05l-5.1-5.95H0v-2H6.54l5.1-5.95c.57-.67,1.4-1.05,2.28-1.05h7.08l-2.55-2.55L19.86,.03l3.55,3.55c.78,.78,.78,2.05,0,2.83l-3.55,3.55-1.41-1.41,2.55-2.55h-7.08c-.29,0-.57,.13-.76,.35l-4.84,5.65,4.84,5.65c.19,.22,.47,.35,.76,.35h7.08l-2.55-2.55,1.41-1.41,3.55,3.55Z"/></svg>
+
 );
-
-Split.displayName = 'Split';

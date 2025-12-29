@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Function: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Function = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13,12c0,.553-.448,1-1,1h-1.627l-.91,6.675c-.336,2.466-2.465,4.325-4.954,4.325h-.508c-.552,0-1-.447-1-1s.448-1,1-1h.508c1.493,0,2.771-1.115,2.973-2.595l.874-6.405h-1.354c-.552,0-1-.447-1-1s.448-1,1-1h1.627l.91-6.675c.336-2.466,2.465-4.325,4.954-4.325h.508c.552,0,1,.447,1,1s-.448,1-1,1h-.508c-1.493,0-2.771,1.115-2.973,2.595l-.874,6.405h1.354c.552,0,1,.447,1,1Zm5.229,7.5l2.085-2.919c.321-.449.217-1.074-.233-1.395-.45-.322-1.074-.218-1.395.232l-1.686,2.36-1.686-2.36c-.321-.45-.947-.555-1.395-.232-.45.32-.554.945-.233,1.395l2.085,2.919-2.085,2.919c-.321.449-.217,1.074.233,1.395.176.126.379.187.58.187.312,0,.62-.146.815-.419l1.686-2.36,1.686,2.36c.195.273.503.419.815.419.201,0,.404-.061.58-.187.45-.32.554-.945.233-1.395l-2.085-2.919Z"/>
 </svg>
-);
 
-Function.displayName = 'Function';
+);

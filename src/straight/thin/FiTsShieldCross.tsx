@@ -1,16 +1,16 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsShieldCross: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsShieldCross = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <polygon points="12.5 3 11.5 3 11.5 8 6 8 6 9 11.5 9 11.5 20.497 12.5 20.497 12.5 9 18 9 18 8 12.5 8 12.5 3"/>
   <path d="m20.287,2.747L12-.004,3.713,2.747c-1.025.34-1.713,1.295-1.713,2.376v6.744c0,6.618,7.16,10.717,9.354,11.815l.626.313.65-.262c2.198-.886,9.37-4.359,9.37-11.867v-6.744c0-1.081-.688-2.036-1.713-2.376Zm.713,9.12c0,6.88-6.692,10.112-8.743,10.938l-.232.093-.224-.112c-2.065-1.034-8.801-4.876-8.801-10.92v-6.744c0-.648.413-1.221,1.028-1.426l7.972-2.646,7.972,2.646c.615.204,1.028.777,1.028,1.426v6.744Z"/>
 </svg>
-);
 
-FiTsShieldCross.displayName = 'FiTsShieldCross';
+);

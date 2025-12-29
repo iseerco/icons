@@ -1,16 +1,16 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AgeRestrictionSix: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AgeRestrictionSix = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <circle cx="8.5" cy="13.75" r="1.5"/>
   <path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm-3.5,17.25c-1.93,0-3.5-1.57-3.5-3.5v-3c0-2.206,1.794-4,4-4h1c.552,0,1,.447,1,1s-.448,1-1,1h-1c-1.049,0-1.902.815-1.984,1.842.452-.214.952-.342,1.484-.342,1.93,0,3.5,1.57,3.5,3.5s-1.57,3.5-3.5,3.5Zm9.5-4.25h-1v1c0,.553-.448,1-1,1s-1-.447-1-1v-1h-1c-.552,0-1-.447-1-1s.448-1,1-1h1v-1c0-.553.448-1,1-1s1,.447,1,1v1h1c.552,0,1,.447,1,1s-.448,1-1,1Z"/>
 </svg>
-);
 
-AgeRestrictionSix.displayName = 'AgeRestrictionSix';
+);

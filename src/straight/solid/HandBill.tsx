@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HandBill: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HandBill = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12.433,14.7l-3.92,4.317c-.569.626-1.375.983-2.221.983H0v-9.962l3.412-2.991c.737-.673,1.699-1.047,2.698-1.047h1.89v4.073l-3.365,3.331,1.404,1.404,3.275-3.243c.728-.603,1.772-.752,2.586-.272,1.254.739,1.457,2.39.533,3.407Zm11.567-10.7v3.984l-.005.015c-.352,0-.713.045-1.08.141-1.33.36-2.42,1.43-2.77,2.77-.711,2.661,1.292,5.075,3.85,5.081l.005.012v3.996h-13.678l3.592-3.956c.047-.052.092-.105.136-.158.17.642.753,1.114,1.45,1.114.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5c-.21,0-.41.043-.591.121.11-.5.129-1.022.049-1.543-.191-1.26-.937-2.356-2.044-3.008-.885-.521-1.923-.674-2.914-.479v-5.091h14Zm-7,4.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5,1.5.67,1.5,1.5,1.5,1.5-.67,1.5-1.5Zm5,3.5c0,1.105.895,2,2,2v-4c-1.105,0-2,.895-2,2Z"/>
 </svg>
-);
 
-HandBill.displayName = 'HandBill';
+);

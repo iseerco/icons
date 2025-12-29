@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SimCards: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SimCards = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.07,3.707l-2.829-2.828c-.566-.566-1.32-.879-2.121-.879h-7.171c-1.654,0-3,1.346-3,3v17h16V5.828c0-.802-.312-1.555-.878-2.121Zm-12.07,6.793c0-.828.672-1.5,1.5-1.5h3.5v3h-5v-1.5Zm3,6.5h-1.5c-.828,0-1.5-.672-1.5-1.5v-1.5h3v3Zm7-1.5c0,.828-.672,1.5-1.5,1.5h-3.5v-3h5v1.5Zm0-3.5h-3v-3h1.5c.828,0,1.5.672,1.5,1.5v1.5ZM3.949,22h14v2H1.949v-14.172c0-.801.312-1.555.879-2.121l1.121-1.121v15.414Z"/>
 </svg>
-);
 
-SimCards.displayName = 'SimCards';
+);

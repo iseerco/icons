@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MapMarkerSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.778,17.364l.293-.286c1.889-1.889,2.929-4.4,2.929-7.071s-1.04-5.182-2.929-7.071C17.182,1.046,14.671,.006,12,.006S6.818,1.046,4.93,2.935c-.097,.097-.192,.197-.284,.297L1.457,.043,.043,1.457,22.543,23.957l1.414-1.414-5.179-5.179ZM6.343,4.35c1.511-1.511,3.521-2.343,5.657-2.343s4.145,.832,5.656,2.343,2.343,3.52,2.343,5.657-.832,4.146-2.335,5.649l-.301,.294L6.061,4.647c.091-.101,.185-.2,.282-.297Zm8.161,14.397l1.414,1.414-3.918,3.833-7.063-6.908c-2.782-2.782-3.608-6.792-2.403-10.308l1.624,1.624c-.524,2.555,.218,5.295,2.185,7.263l5.657,5.532,2.504-2.449Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MapMarkerSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.778,17.364l.293-.286c1.889-1.889,2.929-4.4,2.929-7.071s-1.04-5.182-2.929-7.071C17.182,1.046,14.671,.006,12,.006S6.818,1.046,4.93,2.935c-.097,.097-.192,.197-.284,.297L1.457,.043,.043,1.457,22.543,23.957l1.414-1.414-5.179-5.179ZM6.343,4.35c1.511-1.511,3.521-2.343,5.657-2.343s4.145,.832,5.656,2.343,2.343,3.52,2.343,5.657-.832,4.146-2.335,5.649l-.301,.294L6.061,4.647c.091-.101,.185-.2,.282-.297Zm8.161,14.397l1.414,1.414-3.918,3.833-7.063-6.908c-2.782-2.782-3.608-6.792-2.403-10.308l1.624,1.624c-.524,2.555,.218,5.295,2.185,7.263l5.657,5.532,2.504-2.449Z"/></svg>
+
 );
-
-MapMarkerSlash.displayName = 'MapMarkerSlash';

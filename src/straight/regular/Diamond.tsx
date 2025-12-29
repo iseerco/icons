@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Diamond: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.359 9.8a3.016 3.016 0 0 0 .082-3.6l-3.531-4.943a3 3 0 0 0 -2.441-1.257h-10.938a3 3 0 0 0 -2.441 1.257l-3.531 4.943a3.018 3.018 0 0 0 .085 3.6l11.356 14.308zm-16.106-.8 2.8 9.432-7.491-9.432zm14.185 0-7.486 9.432 2.795-9.432zm-6.777 0-2.661 8.979-2.661-8.979zm-5.335-2 1.428-5h2.492l1.428 5zm8.957-4.581 3.272 4.581h-4.8l-1.429-5h2.143a1 1 0 0 1 .814.419zm-12.566 0a1 1 0 0 1 .814-.419h2.143l-1.428 5h-4.8z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Diamond = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.359 9.8a3.016 3.016 0 0 0 .082-3.6l-3.531-4.943a3 3 0 0 0 -2.441-1.257h-10.938a3 3 0 0 0 -2.441 1.257l-3.531 4.943a3.018 3.018 0 0 0 .085 3.6l11.356 14.308zm-16.106-.8 2.8 9.432-7.491-9.432zm14.185 0-7.486 9.432 2.795-9.432zm-6.777 0-2.661 8.979-2.661-8.979zm-5.335-2 1.428-5h2.492l1.428 5zm8.957-4.581 3.272 4.581h-4.8l-1.429-5h2.143a1 1 0 0 1 .814.419zm-12.566 0a1 1 0 0 1 .814-.419h2.143l-1.428 5h-4.8z"/></svg>
 );
-
-Diamond.displayName = 'Diamond';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrAnglesUpDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrAnglesUpDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m2.145,9.352c-.194-.196-.192-.513.004-.707L10.105.779c.503-.502,1.175-.779,1.891-.779h.005c.714.001,1.386.279,1.891.781l7.96,7.863c.196.194.198.51.004.707-.098.099-.227.148-.355.148-.127,0-.254-.048-.352-.145L13.188,1.491c-.318-.316-.739-.49-1.188-.491h-.003c-.449,0-.87.173-1.186.488l-7.959,7.867c-.196.194-.513.193-.707-.004Zm19.004,5.293l-7.962,7.865c-.317.315-.738.489-1.188.49h-.003c-.449,0-.87-.174-1.188-.49l-7.957-7.865c-.196-.195-.513-.191-.707.004-.194.196-.192.513.004.707l7.955,7.863c.505.504,1.177.781,1.893.781h.005c.714,0,1.386-.278,1.89-.78l7.961-7.864c.196-.193.198-.511.004-.707-.193-.195-.51-.199-.707-.004Z"/>
 </svg>
-);
 
-FiTrAnglesUpDown.displayName = 'FiTrAnglesUpDown';
+);

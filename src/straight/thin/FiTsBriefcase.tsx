@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsBriefcase: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsBriefcase = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.5,4h-3.5V1.5c0-.827-.673-1.5-1.5-1.5H7.5c-.827,0-1.5.673-1.5,1.5v2.5h-3.5c-1.379,0-2.5,1.121-2.5,2.5v17.5h24V6.5c0-1.379-1.121-2.5-2.5-2.5ZM7,1.5c0-.275.225-.5.5-.5h9c.275,0,.5.225.5.5v2.5H7V1.5Zm-4.5,3.5h19c.827,0,1.5.673,1.5,1.5v5.5H1v-5.5c0-.827.673-1.5,1.5-1.5Zm-1.5,18v-10h10.5v2h1v-2h10.5v10H1Z"/>
 </svg>
-);
 
-FiTsBriefcase.displayName = 'FiTsBriefcase';
+);

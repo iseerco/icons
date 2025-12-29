@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsAlarmExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22,13c0-5.004-3.695-9.162-8.5-9.888V0h-3V3.112C5.695,3.838,2,7.996,2,13c0,2.432,.873,4.664,2.322,6.399l-2.416,2.575,2.188,2.053,2.473-2.635c1.565,1.017,3.432,1.609,5.433,1.609s3.868-.592,5.433-1.609l2.473,2.635,2.188-2.053-2.416-2.575c1.449-1.735,2.322-3.967,2.322-6.399Zm-17,0c0-3.859,3.141-7,7-7s7,3.141,7,7-3.141,7-7,7-7-3.141-7-7ZM2.511,5.674L.017,4.011C1.219,2.419,2.726,1.068,4.456,.056l1.598,2.53c-1.377,.788-2.578,1.84-3.543,3.088Zm15.435-3.088L19.544,.056c1.73,1.012,3.238,2.363,4.439,3.955l-2.494,1.662c-.965-1.248-2.167-2.3-3.543-3.088Zm-7.446,5.414h3v5h-3v-5Zm0,7h3v3h-3v-3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsAlarmExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22,13c0-5.004-3.695-9.162-8.5-9.888V0h-3V3.112C5.695,3.838,2,7.996,2,13c0,2.432,.873,4.664,2.322,6.399l-2.416,2.575,2.188,2.053,2.473-2.635c1.565,1.017,3.432,1.609,5.433,1.609s3.868-.592,5.433-1.609l2.473,2.635,2.188-2.053-2.416-2.575c1.449-1.735,2.322-3.967,2.322-6.399Zm-17,0c0-3.859,3.141-7,7-7s7,3.141,7,7-3.141,7-7,7-7-3.141-7-7ZM2.511,5.674L.017,4.011C1.219,2.419,2.726,1.068,4.456,.056l1.598,2.53c-1.377,.788-2.578,1.84-3.543,3.088Zm15.435-3.088L19.544,.056c1.73,1.012,3.238,2.363,4.439,3.955l-2.494,1.662c-.965-1.248-2.167-2.3-3.543-3.088Zm-7.446,5.414h3v5h-3v-5Zm0,7h3v3h-3v-3Z"/></svg>
+
 );
-
-FiBsAlarmExclamation.displayName = 'FiBsAlarmExclamation';

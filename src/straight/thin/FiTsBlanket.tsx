@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsBlanket: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsBlanket = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m4.5,16h19.5V0H5.5C2.467,0,0,2.468,0,5.5v14c0,2.481,2.019,4.5,4.5,4.5h17c1.378,0,2.5-1.121,2.5-2.5s-1.122-2.5-2.5-2.5H4.5v1h17c.827,0,1.5.673,1.5,1.5s-.673,1.5-1.5,1.5H4.5c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5Zm-3.5.675V5.5C1,3.019,3.019,1,5.5,1h17.5v14H4.5c-1.412,0-2.674.653-3.5,1.675Z"/>
 </svg>
-);
 
-FiTsBlanket.displayName = 'FiTsBlanket';
+);

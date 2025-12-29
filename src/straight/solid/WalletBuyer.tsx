@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const WalletBuyer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const WalletBuyer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,13c1.379,0,2.5,1.121,2.5,2.5s-1.121,2.5-2.5,2.5-2.5-1.121-2.5-2.5,1.121-2.5,2.5-2.5Zm2,6h-4c-1.654,0-3,1.346-3,3v2h10v-2c0-1.654-1.346-3-3-3Zm2.5-3.5h.5V4H3c-.551,0-1-.449-1-1s.449-1,1-1h21V0H3C1.346,0,0,1.346,0,3v14c0,1.654,1.346,3,3,3h9.424c.498-1.135,1.407-2.046,2.537-2.555-.286-.591-.46-1.246-.46-1.945,0-2.481,2.019-4.5,4.5-4.5s4.5,2.019,4.5,4.5Z"/>
 </svg>
-);
 
-WalletBuyer.displayName = 'WalletBuyer';
+);

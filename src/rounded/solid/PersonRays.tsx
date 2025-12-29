@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PersonRays: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PersonRays = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M9.5,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm7.5,7.5v3c0,1.474-.81,2.75-2,3.444v6.556c0,.553-.447,1-1,1s-1-.447-1-1v-6h-2v6c0,.553-.448,1-1,1s-1-.447-1-1v-6.556c-1.19-.694-2-1.97-2-3.444v-3c0-2.206,1.794-4,4-4h2c2.206,0,4,1.794,4,4ZM4.293,18.293L.293,22.293c-.391,.391-.391,1.023,0,1.414s1.023,.391,1.414,0l4-4c.391-.391,.391-1.023,0-1.414s-1.023-.391-1.414,0ZM18.95,6.05c.256,0,.512-.098,.707-.293L23.707,1.707c.391-.391,.391-1.023,0-1.414s-1.023-.391-1.414,0l-4.05,4.05c-.391,.391-.391,1.023,0,1.414,.195,.195,.451,.293,.707,.293Zm.757,12.243c-.391-.391-1.023-.391-1.414,0s-.391,1.023,0,1.414l4,4c.391,.391,1.023,.391,1.414,0s.391-1.023,0-1.414l-4-4ZM1.707,.293C1.316-.098,.684-.098,.293,.293S-.098,1.316,.293,1.707L4.293,5.707c.391,.391,1.023,.391,1.414,0s.391-1.023,0-1.414L1.707,.293Z"/>
 </svg>
-);
 
-PersonRays.displayName = 'PersonRays';
+);

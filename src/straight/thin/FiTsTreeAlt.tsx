@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTreeAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTreeAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.452,21l-4.135-6h2.799l-4.287-6h3.197L13.641.856c-.374-.536-.987-.856-1.641-.856s-1.268.32-1.648.867l-5.378,8.133h3.197l-4.287,6h2.799l-4.135,6h8.952v3h1v-3h8.952Zm-17-1l4.135-6h-2.759l4.287-6h-3.28L11.179,1.429c.379-.545,1.27-.534,1.635-.011l4.352,6.582h-3.28l4.287,6h-2.759l4.135,6h-7.048v-10h-1v10h-7.048Z"/>
 </svg>
-);
 
-FiTsTreeAlt.displayName = 'FiTsTreeAlt';
+);

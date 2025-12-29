@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPlugCirclePlus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPlugCirclePlus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M18,12c-3.314,0-6,2.686-6,6s2.686,6,6,6,6-2.686,6-6-2.686-6-6-6Zm4,7h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2Zm-11.541-3.65c-.292,.831-.459,1.72-.459,2.65v6h-3v-5.519c-3.352-.257-6-3.065-6-6.481v-4H0v-3H4V0h3V5h3V0h3V5h4v3h-1v2.262c-1.112,.287-2.131,.801-3,1.498v-3.76H4v4c0,1.93,1.57,3.5,3.5,3.5h2c.335,0,.652-.062,.959-.15Z"/>
 </svg>
-);
 
-FiBsPlugCirclePlus.displayName = 'FiBsPlugCirclePlus';
+);

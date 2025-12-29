@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Swing: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Swing = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M4,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm13.5,2.5c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm6.5,3h-3.339l1.5,10h-2.641l-.438,1.37,2.701,4.63h-2.315l-2.549-4.37-1.324,4.37h-2.087l1.805-6h-1.972l1.5-10h-5.654l-1.24,7h4.055v1.712l-2.086,4.694-1.827-.812,1.597-3.594H4.373l2.276,7h-2.104l-2.174-6.688c-.354-1.088-.435-2.258-.236-3.385l1.05-5.927H0V2H2V6H22V2h2v6Zm-16.847,0h-1.976l-1.072,6.275c-.042,.24-.061,.482-.068,.725h1.877l1.24-7Zm11.486,0h-1.778l-1.2,8h4.178l-1.2-8Z"/>
 </svg>
-);
 
-Swing.displayName = 'Swing';
+);

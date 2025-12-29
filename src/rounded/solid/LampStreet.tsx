@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LampStreet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LampStreet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.936,13.788c-.744-3.637-3.833-6.351-7.522-6.74C15.826,3.005,12.378,0,8.25,0,3.701,0,0,3.701,0,8.253l.038,14.75c0,.551.449.997,1,.997h.003c.552,0,.998-.45.997-1.003l-.038-14.747c0-3.446,2.804-6.25,6.25-6.25,3.036,0,5.586,2.145,6.139,5.071-3.609.463-6.605,3.151-7.333,6.732-.062.309-.21,1.383.501,2.251.354.432,1.045.946,2.33.946h3.112v.5c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5v-.5h3.108c1.047,0,1.838-.318,2.349-.945.682-.836.562-1.864.479-2.267Z"/>
 </svg>
-);
 
-LampStreet.displayName = 'LampStreet';
+);

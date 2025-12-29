@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBadge: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20 8a8 8 0 1 0 -14 5.274v7.873a2.847 2.847 0 0 0 4.63 2.226l1.37-1.1 1.369 1.1a2.85 2.85 0 0 0 4.631-2.226v-7.873a7.957 7.957 0 0 0 2-5.274zm-8-5a5 5 0 1 1 -5 5 5.006 5.006 0 0 1 5-5zm0 15.436-3 2.4v-5.425a7.935 7.935 0 0 0 6 0v5.424z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBadge = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20 8a8 8 0 1 0 -14 5.274v7.873a2.847 2.847 0 0 0 4.63 2.226l1.37-1.1 1.369 1.1a2.85 2.85 0 0 0 4.631-2.226v-7.873a7.957 7.957 0 0 0 2-5.274zm-8-5a5 5 0 1 1 -5 5 5.006 5.006 0 0 1 5-5zm0 15.436-3 2.4v-5.425a7.935 7.935 0 0 0 6 0v5.424z"/></svg>
 );
-
-FiBsBadge.displayName = 'FiBsBadge';

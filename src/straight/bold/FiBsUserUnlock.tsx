@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsUserUnlock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsUserUnlock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,0C4.691,0,2,2.691,2,6s2.691,6,6,6,6-2.691,6-6S11.309,0,8,0Zm0,9c-1.654,0-3-1.346-3-3s1.346-3,3-3,3,1.346,3,3-1.346,3-3,3Zm9,6v-1.5c0-.827.673-1.5,1.5-1.5.651,0,1.201.419,1.408,1h3.042c-.252-2.244-2.139-4-4.449-4-2.481,0-4.5,2.019-4.5,4.5v1.5h-1v6c0,1.654,1.346,3,3,3h5c1.654,0,3-1.346,3-3v-6h-7Zm3,6h-3v-3h3v3Zm-15-7h6v3h-6c-1.103,0-2,.897-2,2v5H0v-5c0-2.757,2.243-5,5-5Z"/>
 </svg>
-);
 
-FiBsUserUnlock.displayName = 'FiBsUserUnlock';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBatteryThreeQuarters: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,8h-2v-.5c0-1.93-1.57-3.5-3.5-3.5H0V20H18.5c1.93,0,3.5-1.57,3.5-3.5v-.5h2V8Zm-5,8.5c0,.276-.225,.5-.5,.5H3V7h15.5c.275,0,.5,.224,.5,.5v9ZM5,9H14v6H5v-6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBatteryThreeQuarters = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,8h-2v-.5c0-1.93-1.57-3.5-3.5-3.5H0V20H18.5c1.93,0,3.5-1.57,3.5-3.5v-.5h2V8Zm-5,8.5c0,.276-.225,.5-.5,.5H3V7h15.5c.275,0,.5,.224,.5,.5v9ZM5,9H14v6H5v-6Z"/></svg>
+
 );
-
-FiBsBatteryThreeQuarters.displayName = 'FiBsBatteryThreeQuarters';

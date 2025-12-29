@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Archway: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,3.303V1H0V3.303l2,3v14.697H0v2H8V15c0-2.206,1.794-4,4-4s4,1.794,4,4v8h8v-2h-2V6.303l2-3Zm-2.202-.303l-1.333,2H3.535l-1.333-2H21.798Zm-3.798,18v-6c0-3.309-2.691-6-6-6s-6,2.691-6,6v6h-2V7H20v14h-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Archway = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,3.303V1H0V3.303l2,3v14.697H0v2H8V15c0-2.206,1.794-4,4-4s4,1.794,4,4v8h8v-2h-2V6.303l2-3Zm-2.202-.303l-1.333,2H3.535l-1.333-2H21.798Zm-3.798,18v-6c0-3.309-2.691-6-6-6s-6,2.691-6,6v6h-2V7H20v14h-2Z"/></svg>
+
 );
-
-Archway.displayName = 'Archway';

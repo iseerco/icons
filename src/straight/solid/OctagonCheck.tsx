@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const OctagonCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const OctagonCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.121,6.151L17.849.879c-.567-.567-1.32-.879-2.121-.879h-7.456c-.801,0-1.554.312-2.121.879L.879,6.151c-.567.567-.879,1.32-.879,2.121v7.456c0,.801.312,1.554.879,2.121l5.272,5.272c.567.567,1.32.879,2.121.879h7.456c.801,0,1.554-.312,2.121-.879l5.272-5.272c.567-.567.879-1.32.879-2.121v-7.456c0-.801-.312-1.554-.879-2.121Zm-10.848,8.741c-.392.392-.914.608-1.468.608s-1.076-.216-1.468-.609l-3.614-3.614,1.414-1.414,3.615,3.614c.025.025.082.024.108,0l6.059-6.059,1.414,1.414-6.059,6.059Z"/>
 </svg>
-);
 
-OctagonCheck.displayName = 'OctagonCheck';
+);

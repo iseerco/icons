@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrEditAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,15H18a3,3,0,0,0-3,3v3H4.5A1.5,1.5,0,0,1,3,19.5V4.5A1.5,1.5,0,0,1,4.5,3h10A1.5,1.5,0,0,0,16,1.5h0A1.5,1.5,0,0,0,14.5,0H4.5A4.5,4.5,0,0,0,0,4.5v15A4.5,4.5,0,0,0,4.5,24H16.485a4.5,4.5,0,0,0,3.181-1.318l3.016-3.016A4.5,4.5,0,0,0,24,16.485V11.506a1.5,1.5,0,0,0-1.5-1.5h0a1.5,1.5,0,0,0-1.5,1.5Z"/><path d="M20.963,1a2.956,2.956,0,0,0-2.113.98l-8.136,9.093a4.982,4.982,0,0,1,4.008,3.356l8.4-8.4a2.947,2.947,0,0,0,0-4.163A2.985,2.985,0,0,0,20.963,1Z"/><path d="M9.288,13.067c-2.317.446-3.465,3.026-3.963,4.634A1,1,0,0,0,6.281,19H10a3,3,0,0,0,2.988-3.274A3.107,3.107,0,0,0,9.288,13.067Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrEditAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,15H18a3,3,0,0,0-3,3v3H4.5A1.5,1.5,0,0,1,3,19.5V4.5A1.5,1.5,0,0,1,4.5,3h10A1.5,1.5,0,0,0,16,1.5h0A1.5,1.5,0,0,0,14.5,0H4.5A4.5,4.5,0,0,0,0,4.5v15A4.5,4.5,0,0,0,4.5,24H16.485a4.5,4.5,0,0,0,3.181-1.318l3.016-3.016A4.5,4.5,0,0,0,24,16.485V11.506a1.5,1.5,0,0,0-1.5-1.5h0a1.5,1.5,0,0,0-1.5,1.5Z"/><path d="M20.963,1a2.956,2.956,0,0,0-2.113.98l-8.136,9.093a4.982,4.982,0,0,1,4.008,3.356l8.4-8.4a2.947,2.947,0,0,0,0-4.163A2.985,2.985,0,0,0,20.963,1Z"/><path d="M9.288,13.067c-2.317.446-3.465,3.026-3.963,4.634A1,1,0,0,0,6.281,19H10a3,3,0,0,0,2.988-3.274A3.107,3.107,0,0,0,9.288,13.067Z"/></svg>
+
 );
-
-FiBrEditAlt.displayName = 'FiBrEditAlt';

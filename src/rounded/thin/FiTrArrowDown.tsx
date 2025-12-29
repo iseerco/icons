@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrArrowDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrArrowDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.807,19.315l-4.043,3.948c-.472.477-1.137.725-1.764.737-.676,0-1.284-.247-1.766-.721l-4.081-3.918c-.199-.191-.205-.508-.014-.707.191-.2.508-.204.707-.015l4.086,3.923c.166.164.361.282.567.353V.5c0-.276.224-.5.5-.5s.5.224.5.5v22.409c.204-.073.396-.192.559-.356l4.049-3.954c.199-.192.516-.188.707.009.193.197.189.514-.008.707Z"/>
 </svg>
-);
 
-FiTrArrowDown.displayName = 'FiTrArrowDown';
+);

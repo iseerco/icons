@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsLandmarkAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,23v1H0v-1H24Zm-1-3H1v-1H3v-7H1v-1H3C3,6.205,6.769,2.274,11.5,2.014V0h1V2.014c4.731,.26,8.5,4.191,8.5,8.986h2v1h-2v7h2v1Zm-3-8h-4v7h4v-7Zm-11,0v7h6v-7h-6Zm-5-1H20c0-4.411-3.589-8-8-8S4,6.589,4,11Zm0,8h4v-7H4v7Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsLandmarkAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,23v1H0v-1H24Zm-1-3H1v-1H3v-7H1v-1H3C3,6.205,6.769,2.274,11.5,2.014V0h1V2.014c4.731,.26,8.5,4.191,8.5,8.986h2v1h-2v7h2v1Zm-3-8h-4v7h4v-7Zm-11,0v7h6v-7h-6Zm-5-1H20c0-4.411-3.589-8-8-8S4,6.589,4,11Zm0,8h4v-7H4v7Z"/></svg>
+
 );
-
-FiTsLandmarkAlt.displayName = 'FiTsLandmarkAlt';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UserTime: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m17 10a7 7 0 1 0 7 7 7.008 7.008 0 0 0 -7-7zm2.707 9.707a1 1 0 0 1 -1.414 0l-2-2a1 1 0 0 1 -.293-.707v-3a1 1 0 0 1 2 0v2.586l1.707 1.707a1 1 0 0 1 0 1.414zm-11.233-8.707a5.5 5.5 0 1 1 5.5-5.5 5.506 5.506 0 0 1 -5.5 5.5zm2.882 13h-10.356a1 1 0 0 1 -1-1.011 10.275 10.275 0 0 1 6.553-9.6 6.685 6.685 0 0 1 2.394-.384 9.087 9.087 0 0 0 -.424.995 8.853 8.853 0 0 0 -.523 3 8.983 8.983 0 0 0 3.356 7z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UserTime = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17 10a7 7 0 1 0 7 7 7.008 7.008 0 0 0 -7-7zm2.707 9.707a1 1 0 0 1 -1.414 0l-2-2a1 1 0 0 1 -.293-.707v-3a1 1 0 0 1 2 0v2.586l1.707 1.707a1 1 0 0 1 0 1.414zm-11.233-8.707a5.5 5.5 0 1 1 5.5-5.5 5.506 5.506 0 0 1 -5.5 5.5zm2.882 13h-10.356a1 1 0 0 1 -1-1.011 10.275 10.275 0 0 1 6.553-9.6 6.685 6.685 0 0 1 2.394-.384 9.087 9.087 0 0 0 -.424.995 8.853 8.853 0 0 0 -.523 3 8.983 8.983 0 0 0 3.356 7z"/></svg>
 );
-
-UserTime.displayName = 'UserTime';

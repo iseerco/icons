@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VectorCircle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VectorCircle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15,1.935V0h-6v1.935c-3.39,1.008-6.057,3.674-7.065,7.065H0v6h1.935c1.008,3.39,3.674,6.057,7.065,7.065v1.935h6v-1.935c3.39-1.008,6.057-3.674,7.065-7.065h1.935v-6h-1.935c-1.008-3.39-3.674-6.057-7.065-7.065Zm0,18.021v-1.956h-6v1.956c-2.284-.86-4.096-2.672-4.956-4.956h1.956v-6h-1.956c.86-2.284,2.672-4.096,4.956-4.956v1.956h6v-1.956c2.284.86,4.096,2.672,4.956,4.956h-1.956v6h1.956c-.86,2.284-2.672,4.096-4.956,4.956Z"/>
 </svg>
-);
 
-VectorCircle.displayName = 'VectorCircle';
+);

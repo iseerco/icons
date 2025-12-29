@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PenClip: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15.15,2.85l5.14,5.14L7.45,20.81c-.83,.83-2.96,1.18-4.16,1.31l-1.84,1.84L.04,22.54l1.79-1.79c.13-1.18,.47-3.39,1.32-4.23L14.6,5.13l-.87-.87c-.39-.39-1.03-.39-1.41,0l-4.85,4.85-1.41-1.41L10.9,2.85c1.17-1.17,3.07-1.17,4.24,0ZM22.89,.68c-1.18-.97-3-.84-4.13,.3l-1.33,1.33,4.27,4.27,1.42-1.42c.6-.6,.92-1.44,.88-2.29-.04-.85-.45-1.65-1.11-2.19Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PenClip = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15.15,2.85l5.14,5.14L7.45,20.81c-.83,.83-2.96,1.18-4.16,1.31l-1.84,1.84L.04,22.54l1.79-1.79c.13-1.18,.47-3.39,1.32-4.23L14.6,5.13l-.87-.87c-.39-.39-1.03-.39-1.41,0l-4.85,4.85-1.41-1.41L10.9,2.85c1.17-1.17,3.07-1.17,4.24,0ZM22.89,.68c-1.18-.97-3-.84-4.13,.3l-1.33,1.33,4.27,4.27,1.42-1.42c.6-.6,.92-1.44,.88-2.29-.04-.85-.45-1.65-1.11-2.19Z"/></svg>
+
 );
-
-PenClip.displayName = 'PenClip';

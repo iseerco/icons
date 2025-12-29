@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Thumbtack: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7.535,17.9,1.707,23.707.293,22.293l5.828-5.809Zm6.3,2.765a7.478,7.478,0,0,0,1.942-7.146l-.312-1.276,3.62-3.64.57.571a2.578,2.578,0,0,0,3.293.346,2.5,2.5,0,0,0,.318-3.805L18.344.788A2.581,2.581,0,0,0,15.051.442a2.5,2.5,0,0,0-.319,3.806l.647.646-3.621,3.64L10.49,8.223a7.479,7.479,0,0,0-7.154,1.941l-.353.354,10.5,10.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Thumbtack = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M7.535,17.9,1.707,23.707.293,22.293l5.828-5.809Zm6.3,2.765a7.478,7.478,0,0,0,1.942-7.146l-.312-1.276,3.62-3.64.57.571a2.578,2.578,0,0,0,3.293.346,2.5,2.5,0,0,0,.318-3.805L18.344.788A2.581,2.581,0,0,0,15.051.442a2.5,2.5,0,0,0-.319,3.806l.647.646-3.621,3.64L10.49,8.223a7.479,7.479,0,0,0-7.154,1.941l-.353.354,10.5,10.5Z"/></svg>
+
 );
-
-Thumbtack.displayName = 'Thumbtack';

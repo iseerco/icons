@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PhoneSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.957,1.457l-22.5,22.5L.043,22.543l4.782-4.782C1.791,14.5,0,10.741,0,7.5A5.9,5.9,0,0,1,1.716,3.292L4.887.122l6.265,6.265L7.028,10.511a13.47,13.47,0,0,0,1.93,3.117L22.543.043ZM13.48,16.98a13,13,0,0,1-1.461-.76L7.783,20.456C10.7,22.694,13.835,24,16.5,24a5.889,5.889,0,0,0,4.207-1.716l3.171-3.171-6.265-6.265Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PhoneSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.957,1.457l-22.5,22.5L.043,22.543l4.782-4.782C1.791,14.5,0,10.741,0,7.5A5.9,5.9,0,0,1,1.716,3.292L4.887.122l6.265,6.265L7.028,10.511a13.47,13.47,0,0,0,1.93,3.117L22.543.043ZM13.48,16.98a13,13,0,0,1-1.461-.76L7.783,20.456C10.7,22.694,13.835,24,16.5,24a5.889,5.889,0,0,0,4.207-1.716l3.171-3.171-6.265-6.265Z"/></svg>
+
 );
-
-PhoneSlash.displayName = 'PhoneSlash';

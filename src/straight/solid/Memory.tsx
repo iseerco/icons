@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Memory: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M.04,18H24v4h-5v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H0v-1.5H.04v-2.5Zm23.96-2H.04v-4s2-.58,2-2.5S.04,7,.04,7v-2.38c.19-1.47,1.44-2.62,2.96-2.62H21c1.65,0,3,1.35,3,3v2s-2,.58-2,2.5,1.95,2.48,1.99,2.5v4ZM8,5h-2V13h2V5Zm5,0h-2V13h2V5Zm5,0h-2V13h2V5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Memory = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M.04,18H24v4h-5v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H0v-1.5H.04v-2.5Zm23.96-2H.04v-4s2-.58,2-2.5S.04,7,.04,7v-2.38c.19-1.47,1.44-2.62,2.96-2.62H21c1.65,0,3,1.35,3,3v2s-2,.58-2,2.5,1.95,2.48,1.99,2.5v4ZM8,5h-2V13h2V5Zm5,0h-2V13h2V5Zm5,0h-2V13h2V5Z"/></svg>
+
 );
-
-Memory.displayName = 'Memory';

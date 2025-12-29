@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrQueue: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrQueue = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m2,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm5,7v5.5c0,1.302-.839,2.402-2,2.816v4.684c0,.829-.671,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-4.684c-1.161-.414-2-1.514-2-2.816v-5.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5Zm-4,5.5h1v-5.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v5.5ZM12.5,5c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm2.5,4.5v5.5c0,1.302-.839,2.402-2,2.816v4.684c0,.829-.671,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-4.684c-1.161-.414-2-1.514-2-2.816v-5.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5Zm-4,5.5h1v-5.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v5.5Zm9.5-10c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm2.5,4.5v5.5c0,1.302-.839,2.402-2,2.816v4.684c0,.829-.671,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-4.684c-1.161-.414-2-1.514-2-2.816v-5.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5Zm-4,5.5h1v-5.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5v5.5Z"/>
 </svg>
-);
 
-FiBrQueue.displayName = 'FiBrQueue';
+);

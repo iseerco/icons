@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsPenSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsPenSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m11.785,15.458l.707.707-7.834,7.835H0v-4.657l7.834-7.835.707.707-7.542,7.542v3.243h3.244l7.542-7.542Zm2.897-1.483l9.271,9.271-.707.707L.046.754.753.047l9.271,9.271L18.377.965c1.284-1.283,3.374-1.283,4.658,0,1.284,1.284,1.284,3.373,0,4.657l-8.353,8.353Zm1.538-9.439l3.243,3.243,2.864-2.864c.894-.895.894-2.349,0-3.243-.894-.895-2.349-.895-3.244,0l-2.864,2.864Zm-5.489,5.489l3.243,3.243,4.782-4.782-3.243-3.243-4.782,4.782Z"/>
 </svg>
-);
 
-FiTsPenSlash.displayName = 'FiTsPenSlash';
+);

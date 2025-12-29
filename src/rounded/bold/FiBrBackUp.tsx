@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBackUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBackUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M15.8,15.3c-0.5-0.1-0.9-0.2-1.4-0.4c-0.4-0.2-0.9-0.1-1.2,0.1c-1.2,0.6-2.9,1-4.6,1C5,16,3.2,14.9,3,14.5V13   c1.6,0.7,3.5,1,5.5,1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5C5,11,3.2,9.9,3,9.5V8c1.2,0.5,2.7,0.8,4.4,1c0,0,0.1,0,0.1,0   C8.3,9,8.9,8.4,9,7.6C9,6.7,8.4,6,7.6,6C4.7,5.8,3.2,4.9,3,4.5C3.2,4.1,5.1,3,8.5,3C9.3,3,10,2.3,10,1.5S9.3,0,8.5,0   C4.3,0,0,1.5,0,4.5v15c0,3,4.3,4.5,8.5,4.5s8.5-1.5,8.5-4.5v-2.7C17,16.1,16.5,15.5,15.8,15.3z M8.5,21C5,21,3.2,19.9,3,19.5V18   c3.1,1.3,7.9,1.3,10.9-0.1c0,0,0,0,0.1,0l0,1.5C13.8,19.9,12,21,8.5,21z"/>
 	<g>
@@ -16,6 +18,5 @@ export const FiBrBackUp: React.FC<IconProps> = ({
 	</g>
 </g>
 </svg>
-);
 
-FiBrBackUp.displayName = 'FiBrBackUp';
+);

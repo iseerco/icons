@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const WalletArrow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const WalletArrow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.5,14.5c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5.672-1.5,1.5-1.5Zm3.5-6.5v14H3.5c-.827,0-1.5-.673-1.5-1.5v-10.684c.314.112.648.184,1,.184h13v-2H3c-.552,0-1-.449-1-1s.448-1,1-1h10v-2H3c-1.483,0-3,1-3,3v13.5c0,1.93,1.57,3.5,3.5,3.5h20.5V8h-2Zm-4-5.059v7.059h2V2.973l1.764,1.764,1.414-1.414-2.707-2.708c-.821-.819-2.154-.818-2.974,0l-2.69,2.691,1.414,1.414,1.779-1.779Z"/>
 </svg>
-);
 
-WalletArrow.displayName = 'WalletArrow';
+);

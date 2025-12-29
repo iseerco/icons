@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTextHeight: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,3V24h-3V3H3.5c-.28,0-.5,.22-.5,.5v2.5H0V3.5C0,1.57,1.57,0,3.5,0h14c1.93,0,3.5,1.57,3.5,3.5v2.5h-3V3.5c0-.28-.22-.5-.5-.5h-5.5Zm9,9h2.5l-3.4-3.7c-.35-.4-.97-.4-1.33,0l-3.27,3.7h2.5v8h-2.5l3.27,3.7c.35,.4,.97,.4,1.33,0l3.4-3.7h-2.5V12Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTextHeight = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,3V24h-3V3H3.5c-.28,0-.5,.22-.5,.5v2.5H0V3.5C0,1.57,1.57,0,3.5,0h14c1.93,0,3.5,1.57,3.5,3.5v2.5h-3V3.5c0-.28-.22-.5-.5-.5h-5.5Zm9,9h2.5l-3.4-3.7c-.35-.4-.97-.4-1.33,0l-3.27,3.7h2.5v8h-2.5l3.27,3.7c.35,.4,.97,.4,1.33,0l3.4-3.7h-2.5V12Z"/></svg>
+
 );
-
-FiBsTextHeight.displayName = 'FiBsTextHeight';

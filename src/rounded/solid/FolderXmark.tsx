@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FolderXmark: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,7v-1C0,3.24,2.24,1,5,1h2.53c.46,0,.93,.11,1.34,.32l3.16,1.58c.14,.07,.29,.11,.45,.11h6.53c2.41,0,4.43,1.72,4.9,4H0Zm24,2v9c0,2.76-2.24,5-5,5H5c-2.76,0-5-2.24-5-5V9H24Zm-10.59,7l1.79-1.79c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-1.79,1.79-1.79-1.79c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l1.79,1.79-1.79,1.79c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29l1.79-1.79,1.79,1.79c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29c.39-.39,.39-1.02,0-1.41l-1.79-1.79Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FolderXmark = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M0,7v-1C0,3.24,2.24,1,5,1h2.53c.46,0,.93,.11,1.34,.32l3.16,1.58c.14,.07,.29,.11,.45,.11h6.53c2.41,0,4.43,1.72,4.9,4H0Zm24,2v9c0,2.76-2.24,5-5,5H5c-2.76,0-5-2.24-5-5V9H24Zm-10.59,7l1.79-1.79c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-1.79,1.79-1.79-1.79c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l1.79,1.79-1.79,1.79c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29l1.79-1.79,1.79,1.79c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29c.39-.39,.39-1.02,0-1.41l-1.79-1.79Z"/></svg>
+
 );
-
-FolderXmark.displayName = 'FolderXmark';

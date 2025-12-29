@@ -1,0 +1,11 @@
+import * as React from 'react';
+
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Eyelashes2 = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 10h-12s.352 1.721 1.648 3.144l-1.228 1.988 1.701 1.051 1.123-1.818c.508.259 1.087.458 1.756.557v2.078h2v-2.078c.669-.099 1.248-.298 1.756-.557l1.123 1.818 1.701-1.051-1.228-1.989c1.296-1.423 1.648-3.144 1.648-3.144z"/><path d="m12 10h-12s.352 1.721 1.648 3.144l-1.228 1.988 1.701 1.051 1.123-1.818c.508.259 1.087.458 1.756.557v2.078h2v-2.078c.669-.099 1.248-.298 1.756-.557l1.123 1.818 1.701-1.051-1.228-1.989c1.296-1.423 1.648-3.144 1.648-3.144z"/></svg>
+);

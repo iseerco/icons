@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrMoneyBillTransfer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrMoneyBillTransfer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,12c0,2.206,1.794,4,4,4s4-1.794,4-4-1.794-4-4-4-4,1.794-4,4Zm7,0c0,1.654-1.346,3-3,3s-3-1.346-3-3,1.346-3,3-3,3,1.346,3,3ZM4,7c.552,0,1,.448,1,1s-.448,1-1,1-1-.448-1-1,.448-1,1-1Zm17,9c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1ZM0,15.5v-7c0-2.481,2.019-4.5,4.5-4.5h18.155l-2.578-2.578c-.195-.195-.195-.512,0-.707s.512-.195.707,0l2.784,2.784c.223.223.421.501.421,1.001s-.198.778-.421,1.001l-2.784,2.784c-.098.098-.226.146-.354.146s-.256-.049-.354-.146c-.195-.195-.195-.512,0-.707l2.578-2.578H4.5c-1.93,0-3.5,1.57-3.5,3.5v7c0,.276-.224.5-.5.5s-.5-.224-.5-.5Zm24-7v7c0,2.481-2.019,4.5-4.5,4.5H1.345l2.578,2.578c.195.195.195.512,0,.707-.098.098-.226.146-.354.146s-.256-.049-.354-.146l-2.784-2.784c-.223-.223-.421-.501-.421-1.001s.198-.778.421-1.001l2.784-2.784c.195-.195.512-.195.707,0s.195.512,0,.707l-2.578,2.578h18.155c1.93,0,3.5-1.57,3.5-3.5v-7c0-.276.224-.5.5-.5s.5.224.5.5Z"/>
 </svg>
-);
 
-FiTrMoneyBillTransfer.displayName = 'FiTrMoneyBillTransfer';
+);

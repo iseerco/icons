@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HomeControlApp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23 10c-.553 0-1-.448-1-1 0-3.86-3.141-7-7-7-.553 0-1-.448-1-1s.447-1 1-1c4.963 0 9 4.038 9 9 0 .552-.447 1-1 1zm-3-1c0-2.757-2.243-5-5-5-.553 0-1 .448-1 1s.447 1 1 1c1.654 0 3 1.346 3 3 0 .552.447 1 1 1s1-.448 1-1zm-12.5 1h1c.276 0 .5-.224.5-.5v-1c0-.276-.224-.5-.5-.5h-1c-.276 0-.5.224-.5.5v1c0 .276.224.5.5.5zm8.5 8v1c0 2.757-2.243 5-5 5h-6c-2.757 0-5-2.243-5-5v-1zm-6 3c0-.552-.448-1-1-1h-2c-.552 0-1 .448-1 1s.448 1 1 1h2c.552 0 1-.448 1-1zm4-12c0 .552.448 1 1 1s1-.448 1-1-.448-1-1-1-1 .448-1 1zm1 3h-9.476c-.842 0-1.524-.682-1.524-1.524v-3.281c0-.507.252-.98.672-1.263l2.476-1.671c.515-.348 1.19-.348 1.705 0l3.148 2.09v-5.351c0-.552-.448-1-1-1h-6.001c-2.761 0-5 2.239-5 5v11h16v-4.184c-.314.112-.647.184-1 .184z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HomeControlApp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23 10c-.553 0-1-.448-1-1 0-3.86-3.141-7-7-7-.553 0-1-.448-1-1s.447-1 1-1c4.963 0 9 4.038 9 9 0 .552-.447 1-1 1zm-3-1c0-2.757-2.243-5-5-5-.553 0-1 .448-1 1s.447 1 1 1c1.654 0 3 1.346 3 3 0 .552.447 1 1 1s1-.448 1-1zm-12.5 1h1c.276 0 .5-.224.5-.5v-1c0-.276-.224-.5-.5-.5h-1c-.276 0-.5.224-.5.5v1c0 .276.224.5.5.5zm8.5 8v1c0 2.757-2.243 5-5 5h-6c-2.757 0-5-2.243-5-5v-1zm-6 3c0-.552-.448-1-1-1h-2c-.552 0-1 .448-1 1s.448 1 1 1h2c.552 0 1-.448 1-1zm4-12c0 .552.448 1 1 1s1-.448 1-1-.448-1-1-1-1 .448-1 1zm1 3h-9.476c-.842 0-1.524-.682-1.524-1.524v-3.281c0-.507.252-.98.672-1.263l2.476-1.671c.515-.348 1.19-.348 1.705 0l3.148 2.09v-5.351c0-.552-.448-1-1-1h-6.001c-2.761 0-5 2.239-5 5v11h16v-4.184c-.314.112-.647.184-1 .184z"/></svg>
 );
-
-HomeControlApp.displayName = 'HomeControlApp';

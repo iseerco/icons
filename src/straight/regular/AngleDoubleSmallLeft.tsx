@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AngleDoubleSmallLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M11.189,6.707,9.775,5.293,4.482,10.586a2,2,0,0,0,0,2.828l5.293,5.293,1.414-1.414L5.9,12Z"/><path d="M18.189,6.707,16.775,5.293l-6,6a1,1,0,0,0,0,1.414l6,6,1.414-1.414L12.9,12Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AngleDoubleSmallLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><path d="M11.189,6.707,9.775,5.293,4.482,10.586a2,2,0,0,0,0,2.828l5.293,5.293,1.414-1.414L5.9,12Z"/><path d="M18.189,6.707,16.775,5.293l-6,6a1,1,0,0,0,0,1.414l6,6,1.414-1.414L12.9,12Z"/></g></svg>
+
 );
-
-AngleDoubleSmallLeft.displayName = 'AngleDoubleSmallLeft';

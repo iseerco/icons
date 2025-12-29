@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsAviFile: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m11.257 13c-.936 0-1.442.837-1.546 1.416l-1.211 6.583h1.017s.368-1.999.368-1.999h2.736l.363 2h1.016s-1.188-6.538-1.188-6.538c-.12-.668-.62-1.462-1.555-1.462zm-1.188 5 .626-3.403c.002-.011.133-.597.562-.597.444 0 .559.573.571.638l.611 3.362zm7.259 1.362 1.156-6.362h1.016s-1.188 6.538-1.188 6.538c-.12.668-.62 1.462-1.555 1.462s-1.442-.837-1.546-1.416l-1.211-6.583h1.017s1.178 6.402 1.178 6.402c.002.011.133.597.562.597.444 0 .559-.573.571-.638zm3.672-6.362h1v8h-1zm-6.293-13h-10.207c-1.379 0-2.5 1.122-2.5 2.5v21.5h20v-1h-19v-20.5c0-.827.673-1.5 1.5-1.5h9.5v7h7v3h1v-3.707zm.293 1.707 5.293 5.293h-5.293z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsAviFile = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m11.257 13c-.936 0-1.442.837-1.546 1.416l-1.211 6.583h1.017s.368-1.999.368-1.999h2.736l.363 2h1.016s-1.188-6.538-1.188-6.538c-.12-.668-.62-1.462-1.555-1.462zm-1.188 5 .626-3.403c.002-.011.133-.597.562-.597.444 0 .559.573.571.638l.611 3.362zm7.259 1.362 1.156-6.362h1.016s-1.188 6.538-1.188 6.538c-.12.668-.62 1.462-1.555 1.462s-1.442-.837-1.546-1.416l-1.211-6.583h1.017s1.178 6.402 1.178 6.402c.002.011.133.597.562.597.444 0 .559-.573.571-.638zm3.672-6.362h1v8h-1zm-6.293-13h-10.207c-1.379 0-2.5 1.122-2.5 2.5v21.5h20v-1h-19v-20.5c0-.827.673-1.5 1.5-1.5h9.5v7h7v3h1v-3.707zm.293 1.707 5.293 5.293h-5.293z"/></svg>
 );
-
-FiTsAviFile.displayName = 'FiTsAviFile';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const IpAddress: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const IpAddress = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15.4,8.5c0,.497-.403.9-.9.9h-.9v-1.801h.9c.497,0,.9.403.9.9Zm6.6,1.5c0,2.671-1.04,5.182-2.93,7.071l-7.07,6.917-7.063-6.909c-3.907-3.907-3.907-10.25-.008-14.149,1.889-1.889,4.4-2.929,7.071-2.929s5.182,1.041,7.07,2.929c1.89,1.889,2.93,4.4,2.93,7.071Zm-11.5-4h-1.6v8h1.6V6Zm6.5,2.5c0-1.381-1.119-2.5-2.5-2.5h-2.5v8h1.6v-3h.9c1.381,0,2.5-1.119,2.5-2.5Z"/>
 </svg>
-);
 
-IpAddress.displayName = 'IpAddress';
+);

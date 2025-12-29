@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsOrderHistory: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsOrderHistory = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M19,10c2.761,0,5-2.239,5-5S21.761,0,19,0s-5,2.239-5,5,2.239,5,5,5Zm-1-8h2v2.586l1.707,1.707-1.414,1.414-2.293-2.293V2Zm1,20c0,1.105-.895,2-2,2s-2-.895-2-2,.895-2,2-2,2,.895,2,2Zm3.244-10.8l-1.873,6.8H7.405c-1.748,0-3.239-1.306-3.47-3.039L2.398,3.434c-.032-.247-.246-.434-.496-.434H0V0H1.902c1.747,0,3.238,1.306,3.47,3.037l.262,1.963h6.366c0,1.075,.25,2.09,.683,3H6.034l.876,6.566c.032,.248,.245,.434,.495,.434h10.685l.823-3.004c.029,0,.058,.004,.087,.004,1.172,0,2.274-.292,3.244-.8Zm-13.244,10.8c0,1.105-.895,2-2,2s-2-.895-2-2,.895-2,2-2,2,.895,2,2Z"/>
 </svg>
-);
 
-FiBsOrderHistory.displayName = 'FiBsOrderHistory';
+);

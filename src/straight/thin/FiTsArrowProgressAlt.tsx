@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsArrowProgressAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsArrowProgressAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,12H4c-2.206,0-4-1.794-4-4s1.794-4,4-4h18.687l-2.973-2.677.669-.743,3.123,2.811c.314.282.495.686.495,1.109s-.181.827-.495,1.109l-3.122,2.811-.669-.743,2.973-2.677H4c-1.654,0-3,1.346-3,3s1.346,3,3,3h14c2.206,0,4,1.794,4,4h-1c0-1.654-1.346-3-3-3Zm-4.617,3.58l-.669.743,2.973,2.677H7v1h8.682l-3.011,2.623.657.754,3.176-2.768c.314-.282.495-.687.495-1.109s-.181-.827-.495-1.109l-3.123-2.811Zm-13.383,1.42h5v5H0v-5Zm1,4h3v-3H1v3Zm18-4h5v5h-5v-5Zm1,4h3v-3h-3v3Z"/>
 </svg>
-);
 
-FiTsArrowProgressAlt.displayName = 'FiTsArrowProgressAlt';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Tram: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,2a2,2,0,0,1,4,0A2,2,0,0,1,13,2ZM10,5V9H9v7h6V9H12V3c0-.017,0-.035,0-.052A2,2,0,1,0,10,5Zm9,4H17v7h7V14A5.006,5.006,0,0,0,19,9ZM7,9H5a5.006,5.006,0,0,0-5,5v2H7ZM0,19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V18H0ZM20,2.545a1,1,0,0,0,.18-.016l3-.545A1,1,0,0,0,22.821.016l-3,.546A1,1,0,0,0,20,2.545ZM1,6a1.012,1.012,0,0,0,.18-.016l4-.727a1,1,0,0,0-.358-1.968l-4,.727A1,1,0,0,0,1,6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Tram = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M13,2a2,2,0,0,1,4,0A2,2,0,0,1,13,2ZM10,5V9H9v7h6V9H12V3c0-.017,0-.035,0-.052A2,2,0,1,0,10,5Zm9,4H17v7h7V14A5.006,5.006,0,0,0,19,9ZM7,9H5a5.006,5.006,0,0,0-5,5v2H7ZM0,19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V18H0ZM20,2.545a1,1,0,0,0,.18-.016l3-.545A1,1,0,0,0,22.821.016l-3,.546A1,1,0,0,0,20,2.545ZM1,6a1.012,1.012,0,0,0,.18-.016l4-.727a1,1,0,0,0-.358-1.968l-4,.727A1,1,0,0,0,1,6Z"/></svg>
+
 );
-
-Tram.displayName = 'Tram';

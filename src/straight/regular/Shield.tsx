@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Shield: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M19.949,2.644,12,.009,4.051,2.644A2.982,2.982,0,0,0,2,5.476V12c0,7.524,9.2,11.679,9.594,11.852l.354.157.368-.122C12.711,23.755,22,20.577,22,12V5.476A2.983,2.983,0,0,0,19.949,2.644ZM20,12c0,6.263-6.349,9.216-7.953,9.861C10.44,21.058,4,17.494,4,12V5.476a.994.994,0,0,1,.684-.944L12,2.106l7.316,2.426A.992.992,0,0,1,20,5.476Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Shield = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><path d="M19.949,2.644,12,.009,4.051,2.644A2.982,2.982,0,0,0,2,5.476V12c0,7.524,9.2,11.679,9.594,11.852l.354.157.368-.122C12.711,23.755,22,20.577,22,12V5.476A2.983,2.983,0,0,0,19.949,2.644ZM20,12c0,6.263-6.349,9.216-7.953,9.861C10.44,21.058,4,17.494,4,12V5.476a.994.994,0,0,1,.684-.944L12,2.106l7.316,2.426A.992.992,0,0,1,20,5.476Z"/></g></svg>
+
 );
-
-Shield.displayName = 'Shield';

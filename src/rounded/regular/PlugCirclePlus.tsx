@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PlugCirclePlus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PlugCirclePlus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20.5,17c0,.553-.447,1-1,1h-1.5v1.5c0,.553-.447,1-1,1s-1-.447-1-1v-1.5h-1.5c-.553,0-1-.447-1-1s.447-1,1-1h1.5v-1.5c0-.553,.447-1,1-1s1,.447,1,1v1.5h1.5c.553,0,1,.447,1,1Zm3.5,0c0,3.859-3.141,7-7,7s-7-3.141-7-7,3.141-7,7-7,7,3.141,7,7Zm-2,0c0-2.757-2.243-5-5-5s-5,2.243-5,5,2.243,5,5,5,5-2.243,5-5Zm-14.711-.05c-2.445-.348-4.289-2.476-4.289-4.95v-4h13c.553,0,1-.447,1-1s-.447-1-1-1h-3V1c0-.553-.447-1-1-1s-1,.447-1,1V6H6V1c0-.553-.447-1-1-1s-1,.447-1,1V6H1c-.553,0-1,.447-1,1s.447,1,1,1v4c0,3.464,2.583,6.443,6,6.922v4.078c0,.553,.447,1,1,1s1-.447,1-1v-4.078c0-.985-.735-1.833-1.711-1.972Z"/>
 </svg>
-);
 
-PlugCirclePlus.displayName = 'PlugCirclePlus';
+);

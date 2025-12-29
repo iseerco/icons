@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BubbleDiscussion: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BubbleDiscussion = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M15.364,2.637C13.519,.792,10.962-.167,8.349,.023,3.823,.343,0,4.589,0,9.296v5.038c0,2.021,1.642,3.666,3.661,3.666h4.477c5.187,0,9.509-3.667,9.839-8.349,.185-2.613-.768-5.17-2.613-7.015ZM4.5,10.5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm4.5,0c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm4.5,0c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm10.5,5.5v5c0,1.657-1.343,3-3,3h-5c-2.955,0-5.535-1.615-6.92-4.004-.009-.013-.016-.024-.024-.037,5.816-.416,10.532-4.727,10.916-10.167,.017-.239,.011-.477,.012-.715,.004,.001,.008,.002,.012,.003,2.389,1.385,4.004,3.965,4.004,6.92Z"/>
 </svg>
-);
 
-BubbleDiscussion.displayName = 'BubbleDiscussion';
+);

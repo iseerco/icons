@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowUpSmallBig: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7.37,.59l4.5,4.5-1.41,1.41-3.5-3.5V24h-2V3L1.46,6.5,.04,5.09,4.54,.59c.78-.78,2.05-.78,2.83,0Zm8.59,.41V9h8V1H15.96Zm-2,22h10V13H13.96v10Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowUpSmallBig = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M7.37,.59l4.5,4.5-1.41,1.41-3.5-3.5V24h-2V3L1.46,6.5,.04,5.09,4.54,.59c.78-.78,2.05-.78,2.83,0Zm8.59,.41V9h8V1H15.96Zm-2,22h10V13H13.96v10Z"/></svg>
+
 );
-
-ArrowUpSmallBig.displayName = 'ArrowUpSmallBig';

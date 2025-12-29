@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTextBox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTextBox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,5v-2.5c0-1.379-1.121-2.5-2.5-2.5h-2.5v2H5V0h-2.5C1.121,0,0,1.121,0,2.5v2.5h2v14H0v5h5v-2h14v2h5v-5h-2V5h2Zm-4-4h1.5c.827,0,1.5.673,1.5,1.5v1.5h-3V1ZM1,2.5c0-.827.673-1.5,1.5-1.5h1.5v3H1v-1.5Zm3,20.5H1v-3h3v3Zm19,0h-3v-3h3v3Zm-2-4h-2v2H5v-2h-2V5h2v-2h14v2h2v14Zm-13-11h8v1h-3.5v8h-1v-8h-3.5v-1Z"/>
 </svg>
-);
 
-FiTsTextBox.displayName = 'FiTsTextBox';
+);

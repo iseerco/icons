@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrMobileHand: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrMobileHand = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M18.5,0h-4c-3.032,0-5.5,2.467-5.5,5.5v2c0,.829,.672,1.5,1.5,1.5s1.5-.671,1.5-1.5v-2c0-1.378,1.121-2.5,2.5-2.5h4c1.379,0,2.5,1.122,2.5,2.5v10.5h-5.3c.607-1.407,.181-3.157-1.005-4.133-1.375-1.167-3.426-1.146-4.774,.05l-3.915,3.47c-.62,.549-.677,1.498-.128,2.118,.55,.62,1.496,.677,2.118,.127l3.915-3.47c.236-.208,.598-.213,.842-.008,.309,.376,.32,.514,.026,.962l-3.643,4.741c-.534,.694-.898,1.517-1.054,2.38-.146,.815,.396,1.595,1.212,1.741,.796,.149,1.599-.392,1.741-1.212,.08-.577,.466-1.089,.824-1.53,.761,.482,1.659,.765,2.628,.765h4.513c2.658,0,4.81-2.08,4.97-4.698,.02-.098,.03-.199,.03-.302V5.5c0-3.033-2.468-5.5-5.5-5.5Zm-1.501,20.008h-1c-.552,0-1-.448-1-1s.448-1,1-1h1c.552,0,1,.448,1,1s-.448,1-1,1ZM6.561,10.061l-1.364,1.364c-1.416,1.417-2.196,3.3-2.196,5.303v5.772c0,.829-.672,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-5.772c0-2.805,1.092-5.441,3.075-7.425l1.364-1.364c.586-.585,1.535-.585,2.121,0s.586,1.536,0,2.122Z"/>
 </svg>
-);
 
-FiBrMobileHand.displayName = 'FiBrMobileHand';
+);

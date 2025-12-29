@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Subscript: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m15.808,0l-6.574,9,6.574,9h-2.48l-5.334-7.309-5.359,7.309H.154l6.599-9L.135,0h2.48l5.378,7.309L13.327,0h2.48Zm6.68,13l-2.972,3.07,1.441,1.387,1.043-1.064v7.607h2v-11h-1.513Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Subscript = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15.808,0l-6.574,9,6.574,9h-2.48l-5.334-7.309-5.359,7.309H.154l6.599-9L.135,0h2.48l5.378,7.309L13.327,0h2.48Zm6.68,13l-2.972,3.07,1.441,1.387,1.043-1.064v7.607h2v-11h-1.513Z"/></svg>
+
 );
-
-Subscript.displayName = 'Subscript';

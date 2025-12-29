@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDogBowlEmpty: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDogBowlEmpty = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22.274,6.873c-.303-1.665-1.751-2.873-3.443-2.873H5.169c-1.692,0-3.14,1.208-3.443,2.874L.024,16.231l-.024,3.769H24v-3.5l-1.726-9.627Zm-1.274,10.127H3v-.365l1.677-9.224c.043-.238,.25-.411,.492-.411h13.662c.242,0,.449,.173,.492,.41l1.677,9.225v.365Zm-4.528-5c.325,.318,.528,.76,.528,1.25,0,.966-.784,1.75-1.75,1.75-.881,0-1.603-.653-1.725-1.5h-3.05c-.122,.847-.844,1.5-1.725,1.5-.966,0-1.75-.784-1.75-1.75,0-.49,.203-.932,.528-1.25-.325-.318-.528-.76-.528-1.25,0-.966,.784-1.75,1.75-1.75,.881,0,1.603,.653,1.725,1.5h3.05c.122-.847,.844-1.5,1.725-1.5,.966,0,1.75,.784,1.75,1.75,0,.49-.203,.932-.528,1.25Z"/>
 </svg>
-);
 
-FiBsDogBowlEmpty.displayName = 'FiBsDogBowlEmpty';
+);

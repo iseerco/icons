@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RankingStars: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RankingStars = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m9.825,10.926l-.48-.362.869-2.717-2.212-1.231v-.615h2.899l.784-3h.648l.784,3h2.883v.611l-2.197,1.273.884,2.686-.504.349-2.173-1.68-2.183,1.687Zm7.999-3l-.48-.362.869-2.717-2.212-1.231v-.615h2.899l.784-3h.648l.784,3h2.883v.611l-2.197,1.273.884,2.686-.504.349-2.173-1.68-2.183,1.687ZM1.824,13.926l-.48-.362.869-2.717-2.212-1.231v-.615h2.899l.784-3h.648l.784,3h2.883v.611l-2.197,1.273.884,2.686-.504.349-2.173-1.68-2.183,1.687Zm22.176,10.074h-6.5v-12c0-1.105.895-2,2-2h2.5c1.105,0,2,.895,2,2v12ZM4.5,16h-2.5c-1.105,0-2,.895-2,2v6h6.5v-6c0-1.105-.895-2-2-2Zm9-3h-3c-1.105,0-2,.895-2,2v9h7v-9c0-1.105-.895-2-2-2Z"/>
 </svg>
-);
 
-RankingStars.displayName = 'RankingStars';
+);

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCommentClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m18.5 11c3.033 0 5.5-2.467 5.5-5.5s-2.467-5.5-5.5-5.5-5.5 2.467-5.5 5.5 2.467 5.5 5.5 5.5zm0-10c2.481 0 4.5 2.019 4.5 4.5s-2.019 4.5-4.5 4.5-4.5-2.019-4.5-4.5 2.019-4.5 4.5-4.5zm1.3 6.507-1.8-1.8v-2.707h1v2.293l1.507 1.507zm-7.8 2.493c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-4 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm15 1.49c.36-.271.694-.573 1-.903v9.413h-7.032l-3.985 3.295c-.56.497-1.418.488-1.979-.011l-3.897-3.284h-7.107v-17.5c0-1.378 1.122-2.5 2.5-2.5h10.913c-.33.306-.632.64-.903 1h-10.01c-.827 0-1.5.673-1.5 1.5v16.5h6.471l4.187 3.527c.198.175.485.178.675.008l4.276-3.536h6.391v-7.51z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCommentClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18.5 11c3.033 0 5.5-2.467 5.5-5.5s-2.467-5.5-5.5-5.5-5.5 2.467-5.5 5.5 2.467 5.5 5.5 5.5zm0-10c2.481 0 4.5 2.019 4.5 4.5s-2.019 4.5-4.5 4.5-4.5-2.019-4.5-4.5 2.019-4.5 4.5-4.5zm1.3 6.507-1.8-1.8v-2.707h1v2.293l1.507 1.507zm-7.8 2.493c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-4 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm15 1.49c.36-.271.694-.573 1-.903v9.413h-7.032l-3.985 3.295c-.56.497-1.418.488-1.979-.011l-3.897-3.284h-7.107v-17.5c0-1.378 1.122-2.5 2.5-2.5h10.913c-.33.306-.632.64-.903 1h-10.01c-.827 0-1.5.673-1.5 1.5v16.5h6.471l4.187 3.527c.198.175.485.178.675.008l4.276-3.536h6.391v-7.51z"/></svg>
 );
-
-FiTsCommentClock.displayName = 'FiTsCommentClock';

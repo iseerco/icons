@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrUserMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrUserMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,12c3.309,0,6-2.691,6-6S11.309,0,8,0,2,2.691,2,6s2.691,6,6,6Zm0-9c1.654,0,3,1.346,3,3s-1.346,3-3,3-3-1.346-3-3,1.346-3,3-3Zm8,19v.5c0,.829-.672,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-.5c0-2.757-2.243-5-5-5s-5,2.243-5,5v.5c0,.829-.672,1.5-1.5,1.5s-1.5-.671-1.5-1.5v-.5c0-4.411,3.589-8,8-8s8,3.589,8,8Zm8-10.5c0,.829-.672,1.5-1.5,1.5h-6c-.828,0-1.5-.671-1.5-1.5s.672-1.5,1.5-1.5h6c.828,0,1.5.671,1.5,1.5Z"/>
 </svg>
-);
 
-FiBrUserMinus.displayName = 'FiBrUserMinus';
+);

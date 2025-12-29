@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AppNotification: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AppNotification = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22,11v8c0,2.757-2.243,5-5,5H5c-2.757,0-5-2.243-5-5V7C0,4.243,2.243,2,5,2H13c.553,0,1,.448,1,1s-.447,1-1,1H5c-1.654,0-3,1.346-3,3v12c0,1.654,1.346,3,3,3h12c1.654,0,3-1.346,3-3V11c0-.552,.447-1,1-1s1,.448,1,1Zm2-7c0,2.206-1.794,4-4,4s-4-1.794-4-4S17.794,0,20,0s4,1.794,4,4Zm-2,0c0-1.103-.897-2-2-2s-2,.897-2,2,.897,2,2,2,2-.897,2-2ZM7.436,15.225l.918,4.042c.085,.376-.2,.734-.586,.734-.3,.022-.58-.172-.645-.469l-.12-.531h-2.035l-.131,.541c-.065,.269-.306,.459-.584,.459-.386,0-.672-.359-.585-.735l.936-4.074c.142-.77,.778-1.159,1.414-1.159,.641,0,1.283,.395,1.417,1.193Zm-.713,2.525l-.514-2.283c.035-.247-.424-.232-.385,.004l-.552,2.279h1.451Zm6.728-1.693c-.038,1.076-.955,1.913-2.031,1.913h-.669v1.405c0,.345-.28,.625-.625,.625s-.625-.28-.625-.625v-4.75c0-.345,.28-.625,.625-.625h1.342c1.12,0,2.024,.928,1.984,2.057Zm-1.248-.072c0-.406-.329-.735-.735-.735h-.716v1.473l.715-.003c.406,0,.735-.329,.735-.735Zm2.298,3.39v-4.75c0-.345,.28-.625,.625-.625h1.342c1.12,0,2.024,.928,1.984,2.057-.038,1.076-.955,1.913-2.031,1.913h-.669v1.405c0,.345-.28,.625-.625,.625s-.625-.28-.625-.625Zm1.252-2.652l.715-.003c.406,0,.735-.329,.735-.735s-.329-.735-.735-.735h-.716v1.473Z"/>
 </svg>
-);
 
-AppNotification.displayName = 'AppNotification';
+);

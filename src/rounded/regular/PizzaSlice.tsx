@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PizzaSlice: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.2.8A2.716,2.716,0,0,0,20.3.176L3.155,6.929a4.976,4.976,0,0,0-3,5.824,15.855,15.855,0,0,0,11.094,11.1h0a4.983,4.983,0,0,0,5.825-3.009L23.832,3.672A2.71,2.71,0,0,0,23.2.8ZM11.746,21.911A13.8,13.8,0,0,1,2.09,12.254a2.949,2.949,0,0,1,1.265-3.18A11.987,11.987,0,0,0,14.924,20.646,2.947,2.947,0,0,1,11.746,21.911Zm4.027-3.227c-6.191-.1-10.355-4.265-10.456-10.457L21.01,2.047a.717.717,0,0,1,.771.17.7.7,0,0,1,.181.747L21.3,4.645c-5.758-1.98-8.942,6.209-3.413,8.668Zm2.847-7.232a2.654,2.654,0,0,1,1.943-4.935Z"/><path d="M11,9a2,2,0,0,0,0,4A2,2,0,0,0,11,9Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PizzaSlice = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.2.8A2.716,2.716,0,0,0,20.3.176L3.155,6.929a4.976,4.976,0,0,0-3,5.824,15.855,15.855,0,0,0,11.094,11.1h0a4.983,4.983,0,0,0,5.825-3.009L23.832,3.672A2.71,2.71,0,0,0,23.2.8ZM11.746,21.911A13.8,13.8,0,0,1,2.09,12.254a2.949,2.949,0,0,1,1.265-3.18A11.987,11.987,0,0,0,14.924,20.646,2.947,2.947,0,0,1,11.746,21.911Zm4.027-3.227c-6.191-.1-10.355-4.265-10.456-10.457L21.01,2.047a.717.717,0,0,1,.771.17.7.7,0,0,1,.181.747L21.3,4.645c-5.758-1.98-8.942,6.209-3.413,8.668Zm2.847-7.232a2.654,2.654,0,0,1,1.943-4.935Z"/><path d="M11,9a2,2,0,0,0,0,4A2,2,0,0,0,11,9Z"/></svg>
+
 );
-
-PizzaSlice.displayName = 'PizzaSlice';

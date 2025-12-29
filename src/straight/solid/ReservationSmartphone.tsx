@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ReservationSmartphone: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ReservationSmartphone = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12.107,11c-.996,0-1.92-.681-2.08-1.664-.204-1.253.758-2.336,1.973-2.336h8.817c-.886-1.076-1.752-2.111-1.784-2.145-.861-.922-.813-2.373.109-3.235.923-.863,2.372-.819,3.23.098l1.628,1.821v16.462h-4l-3.538-9h-4.355ZM0,18v3c0,1.657,1.343,3,3,3h10c1.657,0,3-1.343,3-3v-3H0Zm10,4h-4v-2h4v2Zm6-17V0H0v16h16v-3h-4c-2.209,0-4-1.791-4-4h0c0-2.209,1.791-4,4-4h4Z"/>
 </svg>
-);
 
-ReservationSmartphone.displayName = 'ReservationSmartphone';
+);

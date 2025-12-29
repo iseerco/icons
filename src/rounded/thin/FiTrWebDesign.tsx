@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrWebDesign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrWebDesign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m4.5,15h8c.827,0,1.5-.673,1.5-1.5v-1c0-.827-.673-1.5-1.5-1.5H4.5c-.827,0-1.5.673-1.5,1.5v1c0,.827.673,1.5,1.5,1.5Zm-.5-2.5c0-.276.224-.5.5-.5h8c.276,0,.5.224.5.5v1c0,.276-.224.5-.5.5H4.5c-.276,0-.5-.224-.5-.5v-1Zm12.5,7.5h3c.827,0,1.5-.673,1.5-1.5v-6c0-.827-.673-1.5-1.5-1.5h-3c-.827,0-1.5.673-1.5,1.5v6c0,.827.673,1.5,1.5,1.5Zm-.5-7.5c0-.276.224-.5.5-.5h3c.276,0,.5.224.5.5v6c0,.276-.224.5-.5.5h-3c-.276,0-.5-.224-.5-.5v-6Zm-11.5,7.5h8c.827,0,1.5-.673,1.5-1.5v-1c0-.827-.673-1.5-1.5-1.5H4.5c-.827,0-1.5.673-1.5,1.5v1c0,.827.673,1.5,1.5,1.5Zm-.5-2.5c0-.276.224-.5.5-.5h8c.276,0,.5.224.5.5v1c0,.276-.224.5-.5.5H4.5c-.276,0-.5-.224-.5-.5v-1ZM19.5,1H4.5C2.019,1,0,3.019,0,5.5v13c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5V5.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,17.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-9.5h22v9.5Zm0-10.5H1v-2.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v2.5Zm-12-3c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm-6,0c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm3,0c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/>
 </svg>
-);
 
-FiTrWebDesign.displayName = 'FiTrWebDesign';
+);

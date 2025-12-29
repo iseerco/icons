@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ExternalWorld: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ExternalWorld = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m6.049,14H1.046c-.03-.329-.046-.663-.046-1,0-4.689,2.934-8.692,7.066-10.275.134.726.464,1.385.934,1.917v.258c-1.435,1.956-3,4.836-3,8.1,0,.338.018.671.049,1Zm2.212-4.383h0c-.39.39-.39,1.023,0,1.414l2.428,2.429c.361.36.836.54,1.311.54s.949-.18,1.312-.541l2.427-2.428c.39-.391.39-1.024,0-1.414h0c-.391-.391-1.024-.39-1.414,0l-1.324,1.325V3.732c.732-.423,1.171-1.296.937-2.242-.177-.716-.781-1.293-1.503-1.444-1.294-.272-2.434.708-2.434,1.954,0,.74.402,1.386,1,1.732v7.21l-1.324-1.325c-.39-.391-1.024-.391-1.414,0Zm-1.835,6.383H1.414c1.272,4.497,5.332,7.822,10.195,7.992l-.276-.247c-.179-.161-3.674-3.337-4.907-7.745Zm6.241,7.745l-.276.247c4.863-.17,8.923-3.495,10.195-7.992h-5.012c-1.233,4.408-4.727,7.584-4.907,7.745Zm-4.145-7.745c.852,2.518,2.54,4.574,3.478,5.582.939-1.008,2.627-3.064,3.478-5.582h-6.956ZM15.934,2.725c-.134.726-.464,1.385-.934,1.917v.258c1.435,1.956,3,4.836,3,8.1,0,.338-.018.671-.049,1h5.003c.03-.329.046-.663.046-1,0-4.689-2.934-8.692-7.066-10.275Z"/>
 </svg>
-);
 
-ExternalWorld.displayName = 'ExternalWorld';
+);

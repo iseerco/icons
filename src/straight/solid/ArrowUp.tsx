@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.073,4.769,14.154.85a3.072,3.072,0,0,0-4.242,0L5.992,4.769,7.406,6.183l3.633-3.632L11.065,24l2,0L13.039,2.562l3.62,3.621Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.073,4.769,14.154.85a3.072,3.072,0,0,0-4.242,0L5.992,4.769,7.406,6.183l3.633-3.632L11.065,24l2,0L13.039,2.562l3.62,3.621Z"/></svg>
+
 );
-
-ArrowUp.displayName = 'ArrowUp';

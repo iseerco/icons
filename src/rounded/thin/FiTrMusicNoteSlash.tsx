@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrMusicNoteSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrMusicNoteSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15,18.5c0,3.032-2.468,5.5-5.5,5.5s-5.5-2.468-5.5-5.5,2.468-5.5,5.5-5.5c.276,0,.5.224.5.5s-.224.5-.5.5c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5,4.5-2.019,4.5-4.5c0-.276.224-.5.5-.5s.5.224.5.5Zm8.854,4.646l-8.854-8.854V4c0-1.654,1.346-3,3-3h2.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-2.5c-2.206,0-4,1.794-4,4v9.293L.854.146C.658-.049.342-.049.146.146S-.049.658.146.854l23,23c.098.098.226.146.354.146s.256-.049.354-.146c.195-.195.195-.512,0-.707Z"/>
 </svg>
-);
 
-FiTrMusicNoteSlash.displayName = 'FiTrMusicNoteSlash';
+);

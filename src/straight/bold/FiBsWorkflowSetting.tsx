@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsWorkflowSetting: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsWorkflowSetting = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m9,9h6v6h-6v-6Zm0-2h6V1h-6v6Zm0,16h6v-6h-6v6Zm-4-6.938v2h-1.5c-.276,0-.5-.225-.5-.5v-5.062c0-.276.224-.5.5-.5h3.5v-3h-3.5c-1.93,0-3.5,1.57-3.5,3.5v5.062c0,1.93,1.57,3.5,3.5,3.5h1.5v2l2.78-2.95c.293-.304.293-.796,0-1.1l-2.78-2.95ZM22.5,7c0-.279-.026-.552-.075-.818l1.524-.878-1.498-2.6-1.525.879c-.416-.357-.898-.64-1.425-.827v-1.757h-3v4.5h1.5c.827,0,1.5.673,1.5,1.5s-.673,1.5-1.5,1.5h-1.5v4.5h3v-1.757c.527-.187,1.009-.47,1.425-.827l1.525.879,1.498-2.6-1.524-.878c.049-.265.075-.538.075-.818Z"/>
 </svg>
-);
 
-FiBsWorkflowSetting.displayName = 'FiBsWorkflowSetting';
+);

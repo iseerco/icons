@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrInbox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrInbox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M74.667,117.333h362.667c17.673,0,32,14.327,32,32l0,0c0,17.673-14.327,32-32,32H74.667c-17.673,0-32-14.327-32-32l0,0   C42.667,131.66,56.994,117.333,74.667,117.333z"/>
 	<path d="M74.667,10.667h362.667c17.673,0,32,14.327,32,32l0,0c0,17.673-14.327,32-32,32H74.667c-17.673,0-32-14.327-32-32l0,0   C42.667,24.994,56.994,10.667,74.667,10.667z"/>
@@ -29,6 +31,5 @@ export const FiBrInbox: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrInbox.displayName = 'FiBrInbox';
+);

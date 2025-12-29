@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsEditAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.126,1.861a2.943,2.943,0,0,0-4.276.118l-8.136,9.093a4.982,4.982,0,0,1,4.008,3.356l8.4-8.4A2.947,2.947,0,0,0,23.126,1.861Z"/><path d="M5,19s1-6,5-6h0a3,3,0,0,1,3,3h0a3,3,0,0,1-3,3Z"/><path d="M21,10.979V16H16v5H3V3.409A.41.41,0,0,1,3.409,3H15.253L17.359.646A4.934,4.934,0,0,1,18.07,0H3.409A3.413,3.413,0,0,0,0,3.409V24H18.348L24,18.348V7.979Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsEditAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.126,1.861a2.943,2.943,0,0,0-4.276.118l-8.136,9.093a4.982,4.982,0,0,1,4.008,3.356l8.4-8.4A2.947,2.947,0,0,0,23.126,1.861Z"/><path d="M5,19s1-6,5-6h0a3,3,0,0,1,3,3h0a3,3,0,0,1-3,3Z"/><path d="M21,10.979V16H16v5H3V3.409A.41.41,0,0,1,3.409,3H15.253L17.359.646A4.934,4.934,0,0,1,18.07,0H3.409A3.413,3.413,0,0,0,0,3.409V24H18.348L24,18.348V7.979Z"/></svg>
+
 );
-
-FiBsEditAlt.displayName = 'FiBsEditAlt';

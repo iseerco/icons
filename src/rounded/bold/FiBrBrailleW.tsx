@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBrailleW: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBrailleW = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m7,8c2.206,0,4,1.794,4,4s-1.794,4-4,4-4-1.794-4-4,1.794-4,4-4Zm0,8c2.206,0,4,1.794,4,4s-1.794,4-4,4-4-1.794-4-4,1.794-4,4-4Zm-1.5,4c0,.828.673,1.5,1.5,1.5s1.5-.672,1.5-1.5-.673-1.5-1.5-1.5-1.5.672-1.5,1.5Zm7.5,0c0,2.206,1.794,4,4,4s4-1.794,4-4-1.794-4-4-4-4,1.794-4,4Zm8-8c0-2.206-1.794-4-4-4s-4,1.794-4,4,1.794,4,4,4,4-1.794,4-4Zm0-8c0-2.206-1.794-4-4-4s-4,1.794-4,4,1.794,4,4,4,4-1.794,4-4Zm-14,4c-2.206,0-4-1.794-4-4S4.794,0,7,0s4,1.794,4,4-1.794,4-4,4Zm1.5-4c0-.828-.673-1.5-1.5-1.5s-1.5.672-1.5,1.5.673,1.5,1.5,1.5,1.5-.672,1.5-1.5Z"/>
 </svg>
-);
 
-FiBrBrailleW.displayName = 'FiBrBrailleW';
+);

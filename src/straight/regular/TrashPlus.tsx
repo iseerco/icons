@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrashPlus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrashPlus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,4h-6v-2c0-1.103-.897-2-2-2h-6c-1.103,0-2,.897-2,2v2H1v2h1.643l1.704,15.331c.169,1.521,1.45,2.669,2.981,2.669h9.305c1.53,0,2.812-1.147,2.982-2.669l1.703-15.331h1.682v-2Zm-14-2h6v2h-6v-2Zm8.627,19.109c-.057.508-.484.891-.994.891H7.328c-.51,0-.938-.383-.993-.89l-1.679-15.11h14.65l-1.678,15.109Zm-6.627-6.109h-3v-2h3v-3h2v3h3v2h-3v3h-2v-3Z"/>
 </svg>
-);
 
-TrashPlus.displayName = 'TrashPlus';
+);

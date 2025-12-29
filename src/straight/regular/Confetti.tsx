@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Confetti: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><polygon points="4 24 5.333 21.333 8 20 5.333 18.667 4 16 2.667 18.667 0 20 2.667 21.333 4 24"/><polygon points="21.333 21.333 24 20 21.333 18.667 20 16 18.667 18.667 16 20 18.667 21.333 20 24 21.333 21.333"/><polygon points="13.333 2.667 12 0 10.667 2.667 8 4 10.667 5.333 12 8 13.333 5.333 16 4 13.333 2.667"/><circle cx="5" cy="13" r="1"/><circle cx="1" cy="9" r="1"/><circle cx="5" cy="5" r="1"/><circle cx="1" cy="1" r="1"/><circle cx="23" cy="13" r="1"/><circle cx="19" cy="9" r="1"/><circle cx="23" cy="5" r="1"/><circle cx="19" cy="1" r="1"/><circle cx="14" cy="23" r="1"/><circle cx="10" cy="19" r="1"/><circle cx="14" cy="15" r="1"/><circle cx="10" cy="11" r="1"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Confetti = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><polygon points="4 24 5.333 21.333 8 20 5.333 18.667 4 16 2.667 18.667 0 20 2.667 21.333 4 24"/><polygon points="21.333 21.333 24 20 21.333 18.667 20 16 18.667 18.667 16 20 18.667 21.333 20 24 21.333 21.333"/><polygon points="13.333 2.667 12 0 10.667 2.667 8 4 10.667 5.333 12 8 13.333 5.333 16 4 13.333 2.667"/><circle cx="5" cy="13" r="1"/><circle cx="1" cy="9" r="1"/><circle cx="5" cy="5" r="1"/><circle cx="1" cy="1" r="1"/><circle cx="23" cy="13" r="1"/><circle cx="19" cy="9" r="1"/><circle cx="23" cy="5" r="1"/><circle cx="19" cy="1" r="1"/><circle cx="14" cy="23" r="1"/><circle cx="10" cy="19" r="1"/><circle cx="14" cy="15" r="1"/><circle cx="10" cy="11" r="1"/></svg>
+
 );
-
-Confetti.displayName = 'Confetti';

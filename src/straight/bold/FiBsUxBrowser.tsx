@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsUxBrowser: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsUxBrowser = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.5,1H3.5C1.57,1,0,2.57,0,4.5v18.5h24V4.5c0-1.93-1.57-3.5-3.5-3.5Zm-11,2c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5.672-1.5,1.5-1.5Zm-5,0c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5.672-1.5,1.5-1.5Zm16.5,17H3v-12h18v12ZM4.5,14.5v-4.5h2.5v4.333c0,.643.357,1.167,1,1.167s1-.523,1-1.167v-4.333h2.5v4.5c0,1.93-1.57,3.5-3.5,3.5s-3.5-1.57-3.5-3.5Zm8,3.5l2.214-4-.005-.01-2.209-3.99h2.572l.922,1.667.005.009.005-.009.922-1.667h2.572l-2.209,3.99-.005.01,2.214,4h-2.572l-.928-1.676-.928,1.676h-2.572Z"/>
 </svg>
-);
 
-FiBsUxBrowser.displayName = 'FiBsUxBrowser';
+);

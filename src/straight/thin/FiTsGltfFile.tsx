@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsGltfFile: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m2 2.5c0-.827.673-1.5 1.5-1.5h9.5v7h7v3h1v-3.707l-7.293-7.293h-10.207c-1.378 0-2.5 1.121-2.5 2.5v21.5h20v-1h-19zm12-.793 5.293 5.293h-5.293zm6 12.293v2.5h3v1h-3v3.5h-1v-8h4v1zm-2 0h-1.999l.016 6.999-1 .002-.016-7.001h-2.001v-1h5zm-7-1v7h3v1h-4v-8zm-6 2.5v3c0 .827.673 1.5 1.5 1.5s1.5-.673 1.5-1.5v-.5h-1.5v-1h2.5v1.5c0 1.379-1.122 2.5-2.5 2.5s-2.5-1.121-2.5-2.5v-3c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5h-1c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5 1.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsGltfFile = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m2 2.5c0-.827.673-1.5 1.5-1.5h9.5v7h7v3h1v-3.707l-7.293-7.293h-10.207c-1.378 0-2.5 1.121-2.5 2.5v21.5h20v-1h-19zm12-.793 5.293 5.293h-5.293zm6 12.293v2.5h3v1h-3v3.5h-1v-8h4v1zm-2 0h-1.999l.016 6.999-1 .002-.016-7.001h-2.001v-1h5zm-7-1v7h3v1h-4v-8zm-6 2.5v3c0 .827.673 1.5 1.5 1.5s1.5-.673 1.5-1.5v-.5h-1.5v-1h2.5v1.5c0 1.379-1.122 2.5-2.5 2.5s-2.5-1.121-2.5-2.5v-3c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5h-1c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5 1.5z"/></svg>
 );
-
-FiTsGltfFile.displayName = 'FiTsGltfFile';

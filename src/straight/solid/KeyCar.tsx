@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const KeyCar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const KeyCar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.427,6.304c-.845-1.341-1.731-2.478-2.632-3.38-.814-.814-1.774-1.587-2.852-2.298-1.636-1.076-3.785-.745-5.004,.771l-4.307,5.36c-.901,1.12-.813,2.733,.204,3.75l4.669,4.669c1.005,1.005,2.605,1.099,3.719,.229l5.329-4.158c1.524-1.188,1.9-3.315,.875-4.943Zm-4.884,2.153l-3-3,1.414-1.414,3,3-1.414,1.414Zm-11.043,3.544l4.268,4.269-.74,.73h-3.029v2.001h-2s0,1.999,0,1.999h-2v1.999c0,.552-.448,1-1,1H0s0-4.499,0-4.499l7.5-7.499Z"/>
 </svg>
-);
 
-KeyCar.displayName = 'KeyCar';
+);

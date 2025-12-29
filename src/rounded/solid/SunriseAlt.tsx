@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SunriseAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,24H1a1,1,0,0,1,0-2H5.079a6.821,6.821,0,0,1,.428-1.607L1.982,18.349a1,1,0,1,1,1-1.731l3.529,2.046a7.062,7.062,0,0,1,1.151-1.148L5.618,13.984a1,1,0,0,1,1.731-1l2.044,3.527A6.915,6.915,0,0,1,11,16.072V12a1,1,0,0,1,2,0v4.072a6.915,6.915,0,0,1,1.607.437l2.044-3.528a1,1,0,0,1,1.731,1l-2.047,3.531a7.062,7.062,0,0,1,1.151,1.148l3.529-2.046a1,1,0,0,1,1,1.731L18.5,20.391a6.852,6.852,0,0,1,.436,1.617L23,22A1,1,0,0,1,23,24ZM15.705,3.292l-3-3a1,1,0,0,0-1.414,0l-3,3A1,1,0,0,0,9.705,4.707L11,3.414V8a1,1,0,0,0,2,0V3.414l1.3,1.293A1,1,0,0,0,15.71,3.292h-.005Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SunriseAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,24H1a1,1,0,0,1,0-2H5.079a6.821,6.821,0,0,1,.428-1.607L1.982,18.349a1,1,0,1,1,1-1.731l3.529,2.046a7.062,7.062,0,0,1,1.151-1.148L5.618,13.984a1,1,0,0,1,1.731-1l2.044,3.527A6.915,6.915,0,0,1,11,16.072V12a1,1,0,0,1,2,0v4.072a6.915,6.915,0,0,1,1.607.437l2.044-3.528a1,1,0,0,1,1.731,1l-2.047,3.531a7.062,7.062,0,0,1,1.151,1.148l3.529-2.046a1,1,0,0,1,1,1.731L18.5,20.391a6.852,6.852,0,0,1,.436,1.617L23,22A1,1,0,0,1,23,24ZM15.705,3.292l-3-3a1,1,0,0,0-1.414,0l-3,3A1,1,0,0,0,9.705,4.707L11,3.414V8a1,1,0,0,0,2,0V3.414l1.3,1.293A1,1,0,0,0,15.71,3.292h-.005Z"/></svg>
+
 );
-
-SunriseAlt.displayName = 'SunriseAlt';

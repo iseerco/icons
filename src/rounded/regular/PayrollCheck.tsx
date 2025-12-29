@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PayrollCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PayrollCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20,14c0,1.654-1.346,3-3,3,0,.552-.447,1-1,1s-1-.448-1-1h-.268c-1.067,0-2.063-.574-2.598-1.499-.277-.478-.113-1.089,.364-1.366,.479-.277,1.09-.113,1.366,.365,.179,.308,.511,.5,.867,.5h2.268c.552,0,1-.449,1-1,0-.378-.271-.698-.644-.76l-3.041-.507c-1.342-.223-2.315-1.373-2.315-2.733,0-1.654,1.346-3,3-3,0-.552,.447-1,1-1s1,.448,1,1h0s.268,0,.268,0c1.067,0,2.063,.574,2.598,1.499,.277,.478,.113,1.089-.364,1.366-.481,.276-1.092,.112-1.366-.365-.179-.308-.511-.5-.867-.5h-2.268c-.552,0-1,.448-1,1,0,.378,.271,.698,.644,.76l3.041,.507c1.342,.223,2.315,1.373,2.315,2.733Zm4-7v10c0,2.757-2.243,5-5,5H5c-2.757,0-5-2.243-5-5V7C0,4.243,2.243,2,5,2h14c2.757,0,5,2.243,5,5Zm-2,0c0-1.654-1.346-3-3-3H5c-1.654,0-3,1.346-3,3v10c0,1.654,1.346,3,3,3h14c1.654,0,3-1.346,3-3V7Zm-13,0H5c-.553,0-1,.448-1,1s.447,1,1,1h4c.553,0,1-.448,1-1s-.447-1-1-1Zm0,4H5c-.553,0-1,.448-1,1s.447,1,1,1h4c.553,0,1-.448,1-1s-.447-1-1-1Zm0,4H5c-.553,0-1,.448-1,1s.447,1,1,1h4c.553,0,1-.448,1-1s-.447-1-1-1Z"/>
 </svg>
-);
 
-PayrollCheck.displayName = 'PayrollCheck';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsArrowsSplitRightAndLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsArrowsSplitRightAndLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.561,6.561l-4.5,4.5-.707-.707,4.354-4.354h-6.707c-1.93,0-3.5,1.57-3.5,3.5v14.5h-1V9.5c0-1.93-1.57-3.5-3.5-3.5H1.293l4.354,4.354-.707,.707L.439,6.561c-.585-.585-.585-1.536,0-2.121L4.939-.061l.707,.707L1.293,5h6.707c1.752,0,3.257,1.016,4,2.482,.743-1.465,2.248-2.482,4-2.482h6.707L18.354,.646l.707-.707,4.5,4.5c.585,.585,.585,1.536,0,2.121Z"/>
 </svg>
-);
 
-FiTsArrowsSplitRightAndLeft.displayName = 'FiTsArrowsSplitRightAndLeft';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TirePressureWarning: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,13H11V3h2Zm0,2H11v2h2Zm11-3a12.978,12.978,0,0,0-2.623-7.943A6.662,6.662,0,0,1,20,0H18a8.642,8.642,0,0,0,1.785,5.268C23.734,10.412,21.965,17.286,17.7,20H6.3C2.014,17.268.279,10.4,4.215,5.268A8.642,8.642,0,0,0,6,0H4A6.662,6.662,0,0,1,2.623,4.057C-1.957,10.044-.1,18.092,5,21.53V24H7V22H9v2h2V22h2v2h2V22h2v2h2V21.53A11.918,11.918,0,0,0,24,12Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TirePressureWarning = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M13,13H11V3h2Zm0,2H11v2h2Zm11-3a12.978,12.978,0,0,0-2.623-7.943A6.662,6.662,0,0,1,20,0H18a8.642,8.642,0,0,0,1.785,5.268C23.734,10.412,21.965,17.286,17.7,20H6.3C2.014,17.268.279,10.4,4.215,5.268A8.642,8.642,0,0,0,6,0H4A6.662,6.662,0,0,1,2.623,4.057C-1.957,10.044-.1,18.092,5,21.53V24H7V22H9v2h2V22h2v2h2V22h2v2h2V21.53A11.918,11.918,0,0,0,24,12Z"/></svg>
+
 );
-
-TirePressureWarning.displayName = 'TirePressureWarning';

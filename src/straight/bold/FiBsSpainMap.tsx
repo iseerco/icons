@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsSpainMap: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsSpainMap = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M21,6v-1l-1.899-.875-3.642,.167-.52-1.01s-3.169-.85-4.438-1.096c-.213,.379-1,1-1,1l-2.5-.5-2-.5-1.5-1-1,1.5L0,3.678l.5,3.007,2,1,2.5-.5,.816,1.048-1.816,1.952v2l-1,.5,1.5,3-1,3,3.5,3.5,2.5-2.185h4l1.5-1.5,1.5-.5,1.951-3.002-1.384-1.652,2.033-3.403,2.4-.442,2.5-1.5v-2h-3Zm-7.601,7.638l1.328,1.586-.17,.262-1.177,.392-1.122,1.122h-3.884l-1.236,1.08-.205-.205,.807-2.42-.739-1.478v-2.612l2.754-2.96-1.947-2.499,2.464,.493s1.141-.901,1.167-.922c.478,.118,.985,.247,1.445,.366l.79,1.534,3.724-.17-3.998,6.432Zm7.601,1.548l2.917,2.363-3,2.5-2.049-2.102,2.132-2.761Zm-3,5l.524,1.159-1.524,1.341-1-1,2-1.5Zm4.5-8.5l1.5,1.59-.5,.91-2-1,1-1.5Z"/>
 </svg>
-);
 
-FiBsSpainMap.displayName = 'FiBsSpainMap';
+);

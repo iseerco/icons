@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCursorTextAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 6v-4a2 2 0 0 0 -2-2h-4v1h-12v-1h-4a2 2 0 0 0 -2 2v4h1v12h-1v6h6v-1h12v1h6v-6h-1v-12zm-4 12h-2v2h-12v-2h-2v-12h2v-2h12v2h2z"/><path d="m12 6.635a3.48 3.48 0 0 0 -2-.635h-2v3h2a.5.5 0 0 1 .5.5v1.5h-1.5v3h1.5v.5a.5.5 0 0 1 -.5.5h-2v3h2a3.48 3.48 0 0 0 2-.635 3.48 3.48 0 0 0 2 .635h2v-3h-2a.5.5 0 0 1 -.5-.5v-.5h1.5v-3h-1.5v-1.5a.5.5 0 0 1 .5-.5h2v-3h-2a3.48 3.48 0 0 0 -2 .635z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCursorTextAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 6v-4a2 2 0 0 0 -2-2h-4v1h-12v-1h-4a2 2 0 0 0 -2 2v4h1v12h-1v6h6v-1h12v1h6v-6h-1v-12zm-4 12h-2v2h-12v-2h-2v-12h2v-2h12v2h2z"/><path d="m12 6.635a3.48 3.48 0 0 0 -2-.635h-2v3h2a.5.5 0 0 1 .5.5v1.5h-1.5v3h1.5v.5a.5.5 0 0 1 -.5.5h-2v3h2a3.48 3.48 0 0 0 2-.635 3.48 3.48 0 0 0 2 .635h2v-3h-2a.5.5 0 0 1 -.5-.5v-.5h1.5v-3h-1.5v-1.5a.5.5 0 0 1 .5-.5h2v-3h-2a3.48 3.48 0 0 0 -2 .635z"/></svg>
 );
-
-FiBsCursorTextAlt.displayName = 'FiBsCursorTextAlt';

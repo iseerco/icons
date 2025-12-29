@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Duplicate: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Duplicate = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M256,448c-82.436-0.094-149.239-66.898-149.333-149.333v-192c0-4.267,0.277-8.533,0.64-12.629   C68.139,110.864,42.731,149.371,42.667,192v213.333C42.737,464.214,90.452,511.93,149.333,512h128   c42.629-0.064,81.136-25.473,97.963-64.64c-4.267,0.363-8.363,0.64-12.629,0.64H256z"/>
 	<path d="M451.307,69.803l-48.725-50.325C397.217,14.045,390.924,9.616,384,6.4v78.933h78.08   C459.281,79.65,455.65,74.415,451.307,69.803z"/>
@@ -30,6 +32,5 @@ export const Duplicate: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-Duplicate.displayName = 'Duplicate';
+);

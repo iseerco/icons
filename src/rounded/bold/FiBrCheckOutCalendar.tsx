@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCheckOutCalendar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCheckOutCalendar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,7.5v11c0,3.033-2.467,5.5-5.5,5.5H5.5c-1.342,0-2.634-.489-3.638-1.375-.621-.548-.68-1.496-.132-2.117.549-.622,1.497-.68,2.117-.132.456.403,1.043.625,1.653.625h13c1.378,0,2.5-1.122,2.5-2.5v-9.5H1.5c-.829,0-1.5-.671-1.5-1.5C0,4.467,2.467,2,5.5,2h.5v-.5c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5v.5h6v-.5c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5v.5h.5c3.033,0,5.5,2.467,5.5,5.5ZM4.999,17.563v-1.563h5.501c.829,0,1.5-.671,1.5-1.5s-.671-1.5-1.5-1.5h-5.501v-1.563c0-.863-1.043-1.295-1.653-.685L.283,13.815c-.378.378-.378.991,0,1.369l3.063,3.063c.61.61,1.653.178,1.653-.685Z"/>
 </svg>
-);
 
-FiBrCheckOutCalendar.displayName = 'FiBrCheckOutCalendar';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsStarOctogram: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,4.243l1.393,1.393.879.879h3.213V9.728l.879.879L19.757,12l-1.393,1.393-.879.879v3.213H14.272l-.879.879L12,19.757l-1.393-1.393-.879-.879H6.515V14.272l-.879-.879L4.243,12l1.393-1.393.879-.879V6.515H9.728l.879-.879L12,4.243M12,0,8.485,3.515H3.515v4.97L0,12l3.515,3.515v4.97h4.97L12,24l3.515-3.515h4.97v-4.97L24,12,20.485,8.485V3.515h-4.97L12,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsStarOctogram = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,4.243l1.393,1.393.879.879h3.213V9.728l.879.879L19.757,12l-1.393,1.393-.879.879v3.213H14.272l-.879.879L12,19.757l-1.393-1.393-.879-.879H6.515V14.272l-.879-.879L4.243,12l1.393-1.393.879-.879V6.515H9.728l.879-.879L12,4.243M12,0,8.485,3.515H3.515v4.97L0,12l3.515,3.515v4.97h4.97L12,24l3.515-3.515h4.97v-4.97L24,12,20.485,8.485V3.515h-4.97L12,0Z"/></svg>
+
 );
-
-FiBsStarOctogram.displayName = 'FiBsStarOctogram';

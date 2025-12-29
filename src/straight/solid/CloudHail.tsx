@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CloudHail: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,15a1,1,0,0,1-2,0A1,1,0,0,1,13,15Zm-2,3a1,1,0,0,0,0,2A1,1,0,0,0,11,18Zm5-4a1,1,0,0,0,0,2A1,1,0,0,0,16,14Zm-1,4a1,1,0,0,0,0,2A1,1,0,0,0,15,18ZM8,14a1,1,0,0,0,0,2A1,1,0,0,0,8,14ZM7,18a1,1,0,0,0,0,2A1,1,0,0,0,7,18Zm3,4a1,1,0,0,0,0,2A1,1,0,0,0,10,22Zm4,0a1,1,0,0,0,0,2A1,1,0,0,0,14,22ZM6,22a1,1,0,0,0,0,2A1,1,0,0,0,6,22ZM17.441,5.059C13.527-4.12-.042.313,2.265,10.05-1.445,12.585-.3,18.711,4,19.792l.114.012a3.008,3.008,0,0,1,1.272-3.332A3.006,3.006,0,0,1,10,12.766a3.026,3.026,0,0,1,4,0,3,3,0,1,1,3.614,4.762,2.962,2.962,0,0,1,.253,2.323l.133,0C26.22,18.075,25.826,6.193,17.441,5.059Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CloudHail = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M13,15a1,1,0,0,1-2,0A1,1,0,0,1,13,15Zm-2,3a1,1,0,0,0,0,2A1,1,0,0,0,11,18Zm5-4a1,1,0,0,0,0,2A1,1,0,0,0,16,14Zm-1,4a1,1,0,0,0,0,2A1,1,0,0,0,15,18ZM8,14a1,1,0,0,0,0,2A1,1,0,0,0,8,14ZM7,18a1,1,0,0,0,0,2A1,1,0,0,0,7,18Zm3,4a1,1,0,0,0,0,2A1,1,0,0,0,10,22Zm4,0a1,1,0,0,0,0,2A1,1,0,0,0,14,22ZM6,22a1,1,0,0,0,0,2A1,1,0,0,0,6,22ZM17.441,5.059C13.527-4.12-.042.313,2.265,10.05-1.445,12.585-.3,18.711,4,19.792l.114.012a3.008,3.008,0,0,1,1.272-3.332A3.006,3.006,0,0,1,10,12.766a3.026,3.026,0,0,1,4,0,3,3,0,1,1,3.614,4.762,2.962,2.962,0,0,1,.253,2.323l.133,0C26.22,18.075,25.826,6.193,17.441,5.059Z"/></svg>
+
 );
-
-CloudHail.displayName = 'CloudHail';

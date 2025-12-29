@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrCommentAltMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m17,10c0,.276-.224.5-.5.5H7.5c-.276,0-.5-.224-.5-.5s.224-.5.5-.5h9c.276,0,.5.224.5.5Zm7-6.5v13c0,1.93-1.57,3.5-3.5,3.5h-3.532l-3.985,3.295c-.275.245-.626.368-.978.368-.356,0-.716-.126-1.001-.379l-3.898-3.284h-3.605c-1.93,0-3.5-1.57-3.5-3.5V3.5C0,1.57,1.57,0,3.5,0h17c1.93,0,3.5,1.57,3.5,3.5Zm-1,0c0-1.378-1.121-2.5-2.5-2.5H3.5c-1.379,0-2.5,1.122-2.5,2.5v13c0,1.378,1.121,2.5,2.5,2.5h3.788c.118,0,.232.042.322.118l4.048,3.41c.2.178.485.176.674.008l4.138-3.421c.09-.074.202-.115.318-.115h3.712c1.379,0,2.5-1.122,2.5-2.5V3.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrCommentAltMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17,10c0,.276-.224.5-.5.5H7.5c-.276,0-.5-.224-.5-.5s.224-.5.5-.5h9c.276,0,.5.224.5.5Zm7-6.5v13c0,1.93-1.57,3.5-3.5,3.5h-3.532l-3.985,3.295c-.275.245-.626.368-.978.368-.356,0-.716-.126-1.001-.379l-3.898-3.284h-3.605c-1.93,0-3.5-1.57-3.5-3.5V3.5C0,1.57,1.57,0,3.5,0h17c1.93,0,3.5,1.57,3.5,3.5Zm-1,0c0-1.378-1.121-2.5-2.5-2.5H3.5c-1.379,0-2.5,1.122-2.5,2.5v13c0,1.378,1.121,2.5,2.5,2.5h3.788c.118,0,.232.042.322.118l4.048,3.41c.2.178.485.176.674.008l4.138-3.421c.09-.074.202-.115.318-.115h3.712c1.379,0,2.5-1.122,2.5-2.5V3.5Z"/></svg>
+
 );
-
-FiTrCommentAltMinus.displayName = 'FiTrCommentAltMinus';

@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrUserAdd: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.016 512.016" style="enable-background:new 0 0 512.016 512.016;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrUserAdd = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M158.992,299.058C68.075,307.276-1.191,384.099,0.016,475.378v4.629c0,17.673,14.327,32,32,32l0,0   c17.673,0,32-14.327,32-32v-5.909c-0.962-56.045,40.398-103.838,96-110.933c58.693-5.82,110.992,37.042,116.812,95.735   c0.344,3.47,0.518,6.954,0.521,10.441v10.667c0,17.673,14.327,32,32,32l0,0c17.673,0,32-14.327,32-32v-10.667   c-0.104-94.363-76.685-170.774-171.047-170.67C166.528,298.675,162.756,298.804,158.992,299.058z"/>
 	<path d="M170.682,256.008c70.692,0,128-57.308,128-128s-57.308-128-128-128s-128,57.308-128,128   C42.753,198.671,100.019,255.937,170.682,256.008z M170.682,64.008c35.346,0,64,28.654,64,64s-28.654,64-64,64s-64-28.654-64-64   S135.336,64.008,170.682,64.008z"/>
@@ -29,6 +31,5 @@ export const FiBrUserAdd: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrUserAdd.displayName = 'FiBrUserAdd';
+);

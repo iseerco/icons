@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsFileExport: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M3,21H20v3H0V3C0,1.35,1.35,0,3,0H14.38l5.62,5.66v2.34H12s0-5,0-5H3V21Zm20.71-7.21l-3.71-3.79v3H12v3h8v3l3.71-3.79c.39-.39,.39-1.02,0-1.41Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsFileExport = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M3,21H20v3H0V3C0,1.35,1.35,0,3,0H14.38l5.62,5.66v2.34H12s0-5,0-5H3V21Zm20.71-7.21l-3.71-3.79v3H12v3h8v3l3.71-3.79c.39-.39,.39-1.02,0-1.41Z"/></svg>
+
 );
-
-FiBsFileExport.displayName = 'FiBsFileExport';

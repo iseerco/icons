@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EarthAmericas: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10,0-1.494.33-2.912.92-4.187l2.08,2.187h3l1,1v2l2,2v4h2l3-6.5-4-2.5h-2.5l-1.5-1.5,1.5-1.5,2,1,1-1-1.5-2.5s.738-1.148,1.616-2.48c3.272.2,6.125,1.98,7.801,4.586l-2.417,1.394,1,4,2.896,1.438c-.699,4.835-4.871,8.562-9.896,8.562Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EarthAmericas = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10,0-1.494.33-2.912.92-4.187l2.08,2.187h3l1,1v2l2,2v4h2l3-6.5-4-2.5h-2.5l-1.5-1.5,1.5-1.5,2,1,1-1-1.5-2.5s.738-1.148,1.616-2.48c3.272.2,6.125,1.98,7.801,4.586l-2.417,1.394,1,4,2.896,1.438c-.699,4.835-4.871,8.562-9.896,8.562Z"/></svg>
+
 );
-
-EarthAmericas.displayName = 'EarthAmericas';

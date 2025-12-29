@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsFilterSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15.836,15.129l6.164-6.342V4.5c0-1.378-1.122-2.5-2.5-2.5H4.5c-.494,0-.966,.155-1.371,.422L.764,.057,.057,.764,23.237,23.944l.707-.707L15.836,15.129ZM4.5,3h15c.827,0,1.5,.673,1.5,1.5v3.88l-5.871,6.041L3.856,3.149c.2-.095,.418-.149,.644-.149Zm9.5,14.536l1,1v5.496l-6-4.532v-3.561L2,8.787v-3.251l1,1v1.845l7,7.151v3.402l4,3.066v-4.464Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsFilterSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15.836,15.129l6.164-6.342V4.5c0-1.378-1.122-2.5-2.5-2.5H4.5c-.494,0-.966,.155-1.371,.422L.764,.057,.057,.764,23.237,23.944l.707-.707L15.836,15.129ZM4.5,3h15c.827,0,1.5,.673,1.5,1.5v3.88l-5.871,6.041L3.856,3.149c.2-.095,.418-.149,.644-.149Zm9.5,14.536l1,1v5.496l-6-4.532v-3.561L2,8.787v-3.251l1,1v1.845l7,7.151v3.402l4,3.066v-4.464Z"/></svg>
+
 );
-
-FiTsFilterSlash.displayName = 'FiTsFilterSlash';

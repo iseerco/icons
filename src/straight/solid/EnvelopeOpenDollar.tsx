@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EnvelopeOpenDollar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.583,10.488c.263,.541,.417,1.134,.417,1.744v11.769H0V12.231c.001-.609,.156-1.201,.419-1.742l8.046,8.046c.975,.975,2.255,1.462,3.536,1.462s2.561-.487,3.536-1.462l8.047-8.048Zm-2.583-7.488v7.243l-6.878,6.879c-1.17,1.168-3.073,1.168-4.243,0L3,10.243V3c0-1.654,1.346-3,3-3h12c1.654,0,3,1.346,3,3Zm-11,3c0-.551,.449-1,1-1h2c.551,0,1,.449,1,1h2c0-1.654-1.346-3-3-3v-1h-2v1c-1.654,0-3,1.346-3,3,0,1.36,.974,2.51,2.315,2.733l3.042,.507c.373,.062,.644,.382,.644,.76,0,.551-.449,1-1,1h-2c-.551,0-1-.449-1-1h-2c0,1.654,1.346,3,3,3v1h2v-1c1.654,0,3-1.346,3-3,0-1.36-.974-2.51-2.315-2.733l-3.042-.507c-.373-.062-.644-.382-.644-.76Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EnvelopeOpenDollar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.583,10.488c.263,.541,.417,1.134,.417,1.744v11.769H0V12.231c.001-.609,.156-1.201,.419-1.742l8.046,8.046c.975,.975,2.255,1.462,3.536,1.462s2.561-.487,3.536-1.462l8.047-8.048Zm-2.583-7.488v7.243l-6.878,6.879c-1.17,1.168-3.073,1.168-4.243,0L3,10.243V3c0-1.654,1.346-3,3-3h12c1.654,0,3,1.346,3,3Zm-11,3c0-.551,.449-1,1-1h2c.551,0,1,.449,1,1h2c0-1.654-1.346-3-3-3v-1h-2v1c-1.654,0-3,1.346-3,3,0,1.36,.974,2.51,2.315,2.733l3.042,.507c.373,.062,.644,.382,.644,.76,0,.551-.449,1-1,1h-2c-.551,0-1-.449-1-1h-2c0,1.654,1.346,3,3,3v1h2v-1c1.654,0,3-1.346,3-3,0-1.36-.974-2.51-2.315-2.733l-3.042-.507c-.373-.062-.644-.382-.644-.76Z"/></svg>
+
 );
-
-EnvelopeOpenDollar.displayName = 'EnvelopeOpenDollar';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MinusHexagon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m23.637,10.55l-4.252-7.962c-.522-.979-1.536-1.587-2.646-1.587H7.282c-1.108,0-2.122.606-2.644,1.582L.366,10.549c-.489.911-.489,2,0,2.911l4.271,7.96c.524.975,1.537,1.58,2.644,1.58h9.457c1.11,0,2.124-.608,2.646-1.587l4.252-7.963c.485-.908.485-1.993,0-2.9Zm-6.637,2.45H7v-2h10v2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MinusHexagon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.637,10.55l-4.252-7.962c-.522-.979-1.536-1.587-2.646-1.587H7.282c-1.108,0-2.122.606-2.644,1.582L.366,10.549c-.489.911-.489,2,0,2.911l4.271,7.96c.524.975,1.537,1.58,2.644,1.58h9.457c1.11,0,2.124-.608,2.646-1.587l4.252-7.963c.485-.908.485-1.993,0-2.9Zm-6.637,2.45H7v-2h10v2Z"/></svg>
+
 );
-
-MinusHexagon.displayName = 'MinusHexagon';

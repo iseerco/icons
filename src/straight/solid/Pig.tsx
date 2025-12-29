@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Pig: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Pig = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,10h-1.717c-.305-1.372-.925-2.616-1.819-3.616-.936-1.047-2.128-1.773-3.465-2.13V1c-1.867-.106-3.434,1.246-3.876,3h-5.624c-1.995,0-3.822.734-5.225,1.947-.183-.548-.275-1.198-.275-1.947H0c0,1.431.277,2.634.826,3.594C-.011,8.859-.5,10.373-.5,12c0,2.85,1.551,5.5,4,6.92v3.08h5v-2h4v2h5v-2.586c2.02-.82,3.599-2.44,4.407-4.414h2.093v-5Zm-7.5,2c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Z"/>
 </svg>
-);
 
-Pig.displayName = 'Pig';
+);

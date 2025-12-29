@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsDiamondTurnRight: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.239,9.217L13.84,.767c-.982-.988-2.697-.988-3.68,0L1.761,9.217c-1.013,1.017-1.013,2.673,0,3.691l10.239,10.301,10.239-10.301c1.013-1.019,1.013-2.675,0-3.691Zm-.709,2.986l-9.53,9.588L2.47,12.203c-.626-.629-.626-1.652,0-2.281L10.869,1.472c.303-.304,.704-.472,1.131-.472s.828,.168,1.131,.472l8.399,8.45c.626,.629,.626,1.652,0,2.281Zm-4.919-3.623c.518,.518,.518,1.358,0,1.876l-2.897,2.897-.707-.707,2.628-2.628h-5.135c-.827,0-1.5,.673-1.5,1.5v4.482l-1-1v-3.482c0-1.379,1.121-2.5,2.5-2.5h5.135l-2.628-2.628,.707-.707,2.897,2.897Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsDiamondTurnRight = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.239,9.217L13.84,.767c-.982-.988-2.697-.988-3.68,0L1.761,9.217c-1.013,1.017-1.013,2.673,0,3.691l10.239,10.301,10.239-10.301c1.013-1.019,1.013-2.675,0-3.691Zm-.709,2.986l-9.53,9.588L2.47,12.203c-.626-.629-.626-1.652,0-2.281L10.869,1.472c.303-.304,.704-.472,1.131-.472s.828,.168,1.131,.472l8.399,8.45c.626,.629,.626,1.652,0,2.281Zm-4.919-3.623c.518,.518,.518,1.358,0,1.876l-2.897,2.897-.707-.707,2.628-2.628h-5.135c-.827,0-1.5,.673-1.5,1.5v4.482l-1-1v-3.482c0-1.379,1.121-2.5,2.5-2.5h5.135l-2.628-2.628,.707-.707,2.897,2.897Z"/></svg>
+
 );
-
-FiTsDiamondTurnRight.displayName = 'FiTsDiamondTurnRight';

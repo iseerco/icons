@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrTimeAdd: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.5 17.5h-2v-2a1.5 1.5 0 0 0 -3 0v2h-2a1.5 1.5 0 0 0 0 3h2v2a1.5 1.5 0 0 0 3 0v-2h2a1.5 1.5 0 0 0 0-3z"/><path d="m11.57 20.99a9 9 0 1 1 9.42-9.42 1.5 1.5 0 0 0 3-.14 12 12 0 1 0 -12.56 12.556h.071a1.5 1.5 0 0 0 .069-3z"/><path d="m12 6a1.5 1.5 0 0 0 -1.5 1.5v3.555l-2.4 1.5a1.5 1.5 0 0 0 -.475 2.068 1.5 1.5 0 0 0 2.068.475l2.869-1.8a2 2 0 0 0 .938-1.7v-4.098a1.5 1.5 0 0 0 -1.5-1.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrTimeAdd = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22.5 17.5h-2v-2a1.5 1.5 0 0 0 -3 0v2h-2a1.5 1.5 0 0 0 0 3h2v2a1.5 1.5 0 0 0 3 0v-2h2a1.5 1.5 0 0 0 0-3z"/><path d="m11.57 20.99a9 9 0 1 1 9.42-9.42 1.5 1.5 0 0 0 3-.14 12 12 0 1 0 -12.56 12.556h.071a1.5 1.5 0 0 0 .069-3z"/><path d="m12 6a1.5 1.5 0 0 0 -1.5 1.5v3.555l-2.4 1.5a1.5 1.5 0 0 0 -.475 2.068 1.5 1.5 0 0 0 2.068.475l2.869-1.8a2 2 0 0 0 .938-1.7v-4.098a1.5 1.5 0 0 0 -1.5-1.5z"/></svg>
 );
-
-FiBrTimeAdd.displayName = 'FiBrTimeAdd';

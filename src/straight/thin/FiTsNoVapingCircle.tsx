@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsNoVapingCircle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 0c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm11 12c0 2.853-1.101 5.447-2.889 7.404l-3.111-3.111v-11.293h-1v-1h-2v1h-1v3h-3.5c-.235 0-.466.038-.69.103l-4.214-4.214c1.957-1.788 4.551-2.889 7.404-2.889 6.065 0 11 4.935 11 11zm-7-4h-2v-2h2zm0 1v6.293l-6.293-6.293zm-15 3c0-2.853 1.101-5.447 2.889-7.404l15.515 15.515c-1.957 1.788-4.551 2.889-7.404 2.889-6.065 0-11-4.935-11-11zm14.464 7h-8.464v-8.464l1 1v6.464h6.464z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsNoVapingCircle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 0c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm11 12c0 2.853-1.101 5.447-2.889 7.404l-3.111-3.111v-11.293h-1v-1h-2v1h-1v3h-3.5c-.235 0-.466.038-.69.103l-4.214-4.214c1.957-1.788 4.551-2.889 7.404-2.889 6.065 0 11 4.935 11 11zm-7-4h-2v-2h2zm0 1v6.293l-6.293-6.293zm-15 3c0-2.853 1.101-5.447 2.889-7.404l15.515 15.515c-1.957 1.788-4.551 2.889-7.404 2.889-6.065 0-11-4.935-11-11zm14.464 7h-8.464v-8.464l1 1v6.464h6.464z"/></svg>
 );
-
-FiTsNoVapingCircle.displayName = 'FiTsNoVapingCircle';

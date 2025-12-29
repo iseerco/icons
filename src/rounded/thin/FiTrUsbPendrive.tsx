@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrUsbPendrive: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrUsbPendrive = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M14,5.5v-1c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v1c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5Zm-4.5,.5c.276,0,.5-.224,.5-.5v-1c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1c0,.276,.224,.5,.5,.5Zm11.5,5.5v3.5c0,4.962-4.037,9-9,9S3,19.962,3,15v-3.5c0-1.391,.822-2.585,2-3.149V2.5c0-1.378,1.121-2.5,2.5-2.5h9c1.379,0,2.5,1.122,2.5,2.5v5.851c1.178,.564,2,1.758,2,3.149Zm-15-3.449c.165-.024,.329-.051,.5-.051h11c.171,0,.335,.027,.5,.051V2.5c0-.827-.673-1.5-1.5-1.5H7.5c-.827,0-1.5,.673-1.5,1.5v5.551Zm14,3.449c0-1.378-1.121-2.5-2.5-2.5H6.5c-1.379,0-2.5,1.122-2.5,2.5v3.5c0,4.411,3.589,8,8,8s8-3.589,8-8v-3.5Z"/>
 </svg>
-);
 
-FiTrUsbPendrive.displayName = 'FiTrUsbPendrive';
+);

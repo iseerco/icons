@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrLightCeiling: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrLightCeiling = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.743,13.985c-1.485-4.251-5.577-7.333-10.243-7.887V1.5c0-.829-.672-1.5-1.5-1.5s-1.5.671-1.5,1.5v4.598C5.834,6.652,1.742,9.735.257,13.985c-.484,1.387-.268,2.928.58,4.123.854,1.202,2.188,1.892,3.663,1.892h3.5c0,2.209,1.791,4,4,4s4-1.791,4-4h3.5c1.475,0,2.81-.689,3.663-1.892.848-1.195,1.064-2.736.58-4.123Zm-3.026,2.387c-.283.399-.727.628-1.217.628H4.5c-.49,0-.934-.229-1.217-.628-.291-.41-.361-.919-.194-1.397,1.229-3.518,4.894-5.975,8.911-5.975s7.682,2.457,8.911,5.975c.167.479.097.988-.194,1.397Z"/>
 </svg>
-);
 
-FiBrLightCeiling.displayName = 'FiBrLightCeiling';
+);

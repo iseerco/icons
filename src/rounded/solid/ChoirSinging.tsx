@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChoirSinging: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChoirSinging = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <circle cx="12" cy="2.5" r="2.5"/>
 <circle cx="18" cy="2.5" r="2.5"/>
 <circle cx="6" cy="2.5" r="2.5"/>
@@ -16,6 +18,5 @@ export const ChoirSinging: React.FC<IconProps> = ({
 <path d="M23.2,22.8c-0.7,0.8-1.6,1.2-2.7,1.2h-0.8c1-1.2,1.4-2.8,1.2-4.3c-0.3-2.2-1.6-9.7-1.6-9.7C18.9,8.3,18.1,7,17.1,6  c2.6,0,4.6,1.7,5.3,4.4c0.3,1.2,1,5.8,1.6,9.5C24.1,21,23.9,22,23.2,22.8z"/>
 <path d="M4.2,24H3.5c-1,0-2-0.4-2.7-1.2C0.2,22-0.1,21,0,20c0.6-3.7,1.3-8.3,1.6-9.5C2.3,7.7,4.2,6.1,6.9,6c-1,1-1.8,2.3-2.2,3.9  c0,0-1.3,7.6-1.6,9.7C2.8,21.2,3.2,22.8,4.2,24z"/>
 </svg>
-);
 
-ChoirSinging.displayName = 'ChoirSinging';
+);

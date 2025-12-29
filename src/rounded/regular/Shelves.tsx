@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Shelves: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Shelves = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,0h-5c-1.654,0-3,1.346-3,3v4H2V1c0-.553-.448-1-1-1S0,.447,0,1v22c0,.553.448,1,1,1s1-.447,1-1v-2h20v2c0,.553.448,1,1,1s1-.447,1-1V1c0-.553-.448-1-1-1Zm-6,3c0-.552.449-1,1-1h4v5h-5V3ZM2,15c0-.552.449-1,1-1h3c.551,0,1,.448,1,1v4H2v-4Zm12,4h-5v-4c0-.552.449-1,1-1h3c.551,0,1,.448,1,1v4Zm2,0v-4c0-1.654-1.346-3-3-3h-3c-.768,0-1.469.29-2,.766-.531-.476-1.232-.766-2-.766h-3c-.351,0-.687.061-1,.172v-3.172h20v10h-6Z"/>
 </svg>
-);
 
-Shelves.displayName = 'Shelves';
+);

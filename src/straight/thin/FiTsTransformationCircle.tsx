@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTransformationCircle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTransformationCircle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,5.707v4.293h1v-4.583c0-.781-.636-1.417-1.417-1.417h-4.583v1h4.293l-4.156,4.156c-1.502-1.336-3.473-2.156-5.637-2.156C3.813,7,0,10.813,0,15.5s3.813,8.5,8.5,8.5,8.5-3.813,8.5-8.5c0-2.164-.82-4.135-2.156-5.637l4.156-4.156Zm-10.5,17.293c-4.136,0-7.5-3.364-7.5-7.5s3.364-7.5,7.5-7.5,7.5,3.364,7.5,7.5-3.364,7.5-7.5,7.5Zm15.5-14.5c0,3.453-2.074,6.427-5.038,7.755.018-.25.038-.5.038-.755,0-.122-.01-.241-.016-.362,2.386-1.255,4.016-3.755,4.016-6.638,0-4.142-3.358-7.5-7.5-7.5-2.884,0-5.383,1.629-6.638,4.016-.12-.005-.24-.016-.362-.016-.255,0-.505.02-.755.038C9.073,2.074,12.046,0,15.5,0c4.687,0,8.5,3.813,8.5,8.5Z"/>
 </svg>
-);
 
-FiTsTransformationCircle.displayName = 'FiTsTransformationCircle';
+);

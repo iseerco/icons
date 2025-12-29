@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsUserCircleDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m17.5 0c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5 6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5zm.707 10.707c-.39.39-1.024.39-1.414 0l-3.793-3.707h3v-4h3v4h3zm-5.207 11.293v2h-3v-2c0-.552-.449-1-1-1h-5c-.551 0-1 .448-1 1v2h-3v-2c0-2.206 1.794-4 4-4h5c2.206 0 4 1.794 4 4zm-10.5-10c0-2.209 1.791-4 4-4s4 1.791 4 4-1.791 4-4 4-4-1.791-4-4z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsUserCircleDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17.5 0c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5 6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5zm.707 10.707c-.39.39-1.024.39-1.414 0l-3.793-3.707h3v-4h3v4h3zm-5.207 11.293v2h-3v-2c0-.552-.449-1-1-1h-5c-.551 0-1 .448-1 1v2h-3v-2c0-2.206 1.794-4 4-4h5c2.206 0 4 1.794 4 4zm-10.5-10c0-2.209 1.791-4 4-4s4 1.791 4 4-1.791 4-4 4-4-1.791-4-4z"/></svg>
 );
-
-FiBsUserCircleDown.displayName = 'FiBsUserCircleDown';

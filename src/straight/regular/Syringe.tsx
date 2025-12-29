@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Syringe: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.535 7.324 1.43-1.4-5.75-5.873-1.43 1.4 2.256 2.3-2.179 2.041-.912-.913a3 3 0 0 0 -4.243 0l-8.707 8.707v6l-2.957 2.957 1.414 1.414 2.957-2.957h6l8.707-8.707a3 3 0 0 0 0-4.243l-.844-.843 2.163-2.023zm-4.828 3.555-8.121 8.121h-4.586v-3.711l1.918 1.918 1.414-1.414-2.355-2.355 1.586-1.586 2.355 2.355 1.414-1.414-2.355-2.355 1.586-1.586 2.355 2.355 1.414-1.414-2.355-2.355 1.144-1.145a1 1 0 0 1 1.415 0l3.171 3.171a1 1 0 0 1 0 1.415z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Syringe = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22.535 7.324 1.43-1.4-5.75-5.873-1.43 1.4 2.256 2.3-2.179 2.041-.912-.913a3 3 0 0 0 -4.243 0l-8.707 8.707v6l-2.957 2.957 1.414 1.414 2.957-2.957h6l8.707-8.707a3 3 0 0 0 0-4.243l-.844-.843 2.163-2.023zm-4.828 3.555-8.121 8.121h-4.586v-3.711l1.918 1.918 1.414-1.414-2.355-2.355 1.586-1.586 2.355 2.355 1.414-1.414-2.355-2.355 1.586-1.586 2.355 2.355 1.414-1.414-2.355-2.355 1.144-1.145a1 1 0 0 1 1.415 0l3.171 3.171a1 1 0 0 1 0 1.415z"/></svg>
 );
-
-Syringe.displayName = 'Syringe';

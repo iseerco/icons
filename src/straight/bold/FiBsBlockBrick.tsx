@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBlockBrick: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.5,0H3.5C1.57,0,0,1.57,0,3.5V24H24V3.5c0-1.93-1.57-3.5-3.5-3.5Zm0,3c.276,0,.5,.225,.5,.5v3.5h-7V3h6.5ZM9,14v-4h6v4h-6Zm-6,0v-4h3v4H3Zm15-4h3v4h-3v-4ZM3.5,3h7.5V7H3V3.5c0-.275,.224-.5,.5-.5Zm-.5,18v-4h7v4H3Zm10,0v-4h8v4H13Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBlockBrick = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.5,0H3.5C1.57,0,0,1.57,0,3.5V24H24V3.5c0-1.93-1.57-3.5-3.5-3.5Zm0,3c.276,0,.5,.225,.5,.5v3.5h-7V3h6.5ZM9,14v-4h6v4h-6Zm-6,0v-4h3v4H3Zm15-4h3v4h-3v-4ZM3.5,3h7.5V7H3V3.5c0-.275,.224-.5,.5-.5Zm-.5,18v-4h7v4H3Zm10,0v-4h8v4H13Z"/></svg>
+
 );
-
-FiBsBlockBrick.displayName = 'FiBsBlockBrick';

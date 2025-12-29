@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Dropdown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
-  <path d="M19,4H5C2.243,4,0,6.243,0,9v6c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5v-6c0-2.757-2.243-5-5-5Zm1.141,7.941l-2.209,2.173c-.515,.515-1.349,.515-1.864,0l-2.209-2.173c-.537-.528-.163-1.441,.59-1.441h5.102c.753,0,1.127,.913,.59,1.441Z"/>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DropDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
+  <path d="m20,0H4C1.791,0,0,1.791,0,4v4h22c1.105,0,2-.895,2-2v-2c0-2.209-1.791-4-4-4Zm1.467,3.814l-2.435,2.23c-.301.301-.788.301-1.089,0l-2.435-2.23c-.485-.485-.141-1.314.544-1.314h4.87c.686,0,1.029.829.544,1.314ZM4,24h8c2.209,0,4-1.791,4-4v-10H0v10c0,2.209,1.791,4,4,4Zm0-12h8c.552,0,1,.448,1,1h0c0,.552-.448,1-1,1H4c-.552,0-1-.448-1-1h0c0-.552.448-1,1-1Zm0,4h8c.552,0,1,.448,1,1h0c0,.552-.448,1-1,1H4c-.552,0-1-.448-1-1h0c0-.552.448-1,1-1Zm0,4h8c.552,0,1,.448,1,1h0c0,.552-.448,1-1,1H4c-.552,0-1-.448-1-1h0c0-.552.448-1,1-1Z"/>
 </svg>
-);
 
-Dropdown.displayName = 'Dropdown';
+);

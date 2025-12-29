@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCalculatorBill: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCalculatorBill = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,6h-3v14.5c0,1.93-1.57,3.5-3.5,3.5h-3.5v-3h3.5c.276,0,.5-.224.5-.5V6h-10v-2c0-.551-.449-1-1-1s-1,.449-1,1v4h-3v-4C3,1.794,4.794,0,7,0h13.5c1.93,0,3.5,1.57,3.5,3.5v2.5Zm-12,6v12H0v-12c0-1.105.895-2,2-2h8c1.105,0,2,.895,2,2Zm-7,6h-3v3h3v-3Zm5,0h-3v3h3v-3Zm0-5H2v3h8v-3Z"/>
 </svg>
-);
 
-FiBsCalculatorBill.displayName = 'FiBsCalculatorBill';
+);

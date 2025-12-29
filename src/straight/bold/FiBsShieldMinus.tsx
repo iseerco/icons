@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsShieldMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsShieldMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.679,2.59L12,.045l-7.679,2.545c-1.388.461-2.321,1.752-2.321,3.212v6.162c0,6.516,6.851,10.449,8.951,11.499l.985.494,1.021-.412c2.122-.854,9.043-4.211,9.043-11.581v-6.162c0-1.46-.933-2.751-2.321-3.212Zm-.679,9.374c0,5.258-5.029,7.895-6.932,8.702-1.926-.999-7.068-4.1-7.068-8.702v-6.162c0-.165.107-.312.266-.364l6.734-2.232,6.734,2.232c.161.054.266.196.266.364v6.162Zm-11-1.964h8v3h-8v-3Z"/>
 </svg>
-);
 
-FiBsShieldMinus.displayName = 'FiBsShieldMinus';
+);

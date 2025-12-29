@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrVihara: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrVihara = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.173,16.464c-1.655-1.217-3.158-3.731-3.173-3.756v-2.708c.834,0,1.573-.532,1.839-1.324.264-.788-.002-1.653-.663-2.153-1.943-1.471-3.167-3.835-3.176-3.854.022.032.01.009,0-.007v-1.162c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5,1.5v.5h-6v-.5c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5,1.5v1.275c-.012.022-1.225,2.266-3.217,3.738-.67.495-.944,1.359-.683,2.152.263.799,1.003,1.335,1.842,1.335h.058v2.611c-.015.025-1.579,2.645-3.213,3.859-.675.502-.951,1.377-.687,2.178.268.809,1.018,1.352,1.867,1.352h.033v2.5c0,.829.671,1.5,1.5,1.5s1.5-.671,1.5-1.5v-2.5h2v2.5c0,.829.671,1.5,1.5,1.5s1.5-.671,1.5-1.5v-2.5h4v2.5c0,.829.671,1.5,1.5,1.5s1.5-.671,1.5-1.5v-2.5h2v2.5c0,.829.671,1.5,1.5,1.5s1.5-.671,1.5-1.5v-2.5c.852,0,1.603-.545,1.869-1.356.264-.804-.016-1.68-.696-2.18ZM8.159,5h7.738c.324.527.812,1.247,1.457,2H6.646c.669-.756,1.177-1.478,1.513-2Zm8.841,5v2H7v-2h10Zm-12.475,7c.631-.741,1.15-1.477,1.496-2h11.888c.349.522.875,1.258,1.514,2H4.525Z"/>
 </svg>
-);
 
-FiBrVihara.displayName = 'FiBrVihara';
+);

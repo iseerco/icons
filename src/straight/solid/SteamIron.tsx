@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SteamIron: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SteamIron = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M18,4h-5v2h5c2.206,0,4,1.794,4,4v1H10.5C4.71,11,0,15.71,0,21.5v2.5H24V10c0-3.309-2.691-6-6-6ZM3.107,8h.343l2,2.667,2-2.667h.55c1.654,0,3-1.346,3-3,0-1.434-1.01-2.635-2.356-2.931-.555-1.233-1.798-2.069-3.194-2.069-1.407,0-2.658,.849-3.207,2.097-.59,.153-1.125,.485-1.529,.96C.143,3.729-.103,4.617,.041,5.497c.232,1.427,1.551,2.503,3.066,2.503Z"/>
 </svg>
-);
 
-SteamIron.displayName = 'SteamIron';
+);

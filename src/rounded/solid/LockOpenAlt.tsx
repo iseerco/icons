@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LockOpenAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LockOpenAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24.008,4.891c-.306-2.788-2.674-4.891-5.508-4.891-3.033,0-5.5,2.468-5.5,5.5v2.5H5c-2.757,0-5,2.243-5,5v6c0,2.757,2.243,5,5,5h8c2.757,0,5-2.243,5-5v-6c0-2.046-1.236-3.809-3-4.582v-2.918c0-1.93,1.57-3.5,3.5-3.5,1.782,0,3.328,1.365,3.52,3.109.06.549.564.944,1.103.885.549-.061.945-.555.885-1.104Zm-14.008,12.109c0,.553-.448,1-1,1s-1-.447-1-1v-2c0-.553.448-1,1-1s1,.447,1,1v2Z"/>
 </svg>
-);
 
-LockOpenAlt.displayName = 'LockOpenAlt';
+);

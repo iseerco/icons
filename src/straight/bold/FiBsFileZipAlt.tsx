@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsFileZipAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsFileZipAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M15.563,4.471l2.121,2.121-2.287,2.287-2.121-2.121,2.287-2.287Zm-6.942,0l-2.121,2.121,2.287,2.287,2.121-2.121-2.287-2.287Zm13.379-.971V24H2V3.5C2,1.57,3.57,0,5.5,0h13c1.93,0,3.5,1.57,3.5,3.5Zm-3,17.5V5.275l-.104,.104-2.121-2.121,.259-.259H7.15l.259,.259-2.121,2.121-.288-.288v15.908h14ZM10.5,13l-1,5v1h5v-1l-1-5h-3Zm.316-2h2.367l.908-.908-2.092-2.092-2.092,2.092,.908,.908Z"/>
 </svg>
-);
 
-FiBsFileZipAlt.displayName = 'FiBsFileZipAlt';
+);

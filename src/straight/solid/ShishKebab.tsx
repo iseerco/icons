@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShishKebab: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShishKebab = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.985,3.651c-.104-1.181-.726-2.253-1.708-2.943-1.342-.939-3.215-.939-4.555,0-1.505,1.056-2.108,2.987-1.469,4.697.158.422.101.826-.155,1.082l-1.516,1.516-1.285-1.285c-.926-.926-2.44-.926-3.366,0l-1.213,1.213c-.929.929-.929,2.436,0,3.366l1.285,1.285-1.441,1.441-1.284-1.285c-.926-.926-2.44-.926-3.366,0l-1.213,1.213c-.929.929-.929,2.436,0,3.366l1.284,1.285L.062,22.523l1.414,1.414,3.922-3.922,1.287,1.287c.929.93,2.436.93,3.366,0l1.213-1.213c.929-.929.929-2.436,0-3.366l-1.287-1.287,1.441-1.441,1.287,1.287c.929.93,2.436.93,3.366,0l1.213-1.213c.929-.929.929-2.436,0-3.366l-1.287-1.287,1.516-1.516c.813-.813,1.049-2.039.614-3.197-.271-.724-.146-1.734.744-2.358.654-.459,1.604-.458,2.258,0,.505.354.812.879.863,1.479.052.591-.159,1.17-.578,1.589l1.414,1.414c.838-.838,1.26-1.996,1.157-3.177Z"/>
 </svg>
-);
 
-ShishKebab.displayName = 'ShishKebab';
+);

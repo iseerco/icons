@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BoxCircleCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BoxCircleCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,0H3C1.346,0,0,1.346,0,3v5h1v16h10.344c-.705-.57-1.322-1.245-1.828-2H3v-14h18v.936c.728.362,1.4.819,2,1.356v-2.292h1V3c0-1.654-1.346-3-3-3Zm1,6H2v-3c0-.551.449-1,1-1h18c.551,0,1,.449,1,1v3Zm-2.411,8.693l1.402,1.426-3.457,3.399c-.321.321-.745.482-1.17.482s-.854-.162-1.18-.487l-1.846-1.789,1.392-1.437,1.63,1.58,3.229-3.174Zm-2.589-4.693c-3.86,0-7,3.14-7,7s3.14,7,7,7,7-3.14,7-7-3.14-7-7-7Zm0,12c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Z"/>
 </svg>
-);
 
-BoxCircleCheck.displayName = 'BoxCircleCheck';
+);

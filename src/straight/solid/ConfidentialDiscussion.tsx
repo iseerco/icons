@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ConfidentialDiscussion: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ConfidentialDiscussion = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M8,10c0,1.657,1.343,3,3,3h4c1.657,0,3-1.343,3-3V5h-2V3c0-1.657-1.343-3-3-3h0c-1.657,0-3,1.343-3,3v2h-2v5Zm6,0h-2v-2h2v2Zm-2-7s.035-1.003,1-1.003,1,1.003,1,1.003v2h-2V3Zm12,3.997v14.855c0,.794-.435,1.52-1.135,1.894-.318,.17-.666,.254-1.013,.254-.417,0-.832-.121-1.192-.361l-2.922-1.642H6v-2h14V3.997h1c1.657,0,3,1.343,3,3ZM6.262,17.997l-2.987,1.677c-.318,.214-.708,.325-1.108,.325-.349,0-.706-.084-1.031-.258-.7-.375-1.135-1.1-1.135-1.894V3.997C0,2.34,1.343,1,3,1h5.607c-.313,.61-.517,1.281-.582,1.997h-2.025v7.003c0,2.761,2.239,5,5,5h4c1.131,0,2.162-.39,3-1.023v4.019H6.262Z"/>
 </svg>
-);
 
-ConfidentialDiscussion.displayName = 'ConfidentialDiscussion';
+);

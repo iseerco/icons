@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FaceAwesome: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16.54,14.72c-.31-.04-.64-.05-1.01-.05-1.68,0-3.09,1.12-3.57,2.65,.01,0,.02,0,.04,0,1.93,0,3.62-1.05,4.54-2.6Z"/><path d="M12,0C5.38,0,0,5.38,0,12s5.38,12,12,12,12-5.38,12-12S18.62,0,12,0ZM5,9.5c0-1.65,1.35-3,3-3s3,1.35,3,3v1.5h-2v-1.05c-.08,.02-.16,.05-.25,.05-.69,0-1.25-.56-1.25-1.25,0-.04,.02-.07,.02-.11-.31,.17-.52,.49-.52,.86v1.5h-2v-1.5Zm7,9.59c-3.6,0-6.56-2.7-7-6.18h14c-.44,3.48-3.4,6.18-7,6.18Zm7-8.09h-2v-1.05c-.08,.02-.16,.05-.25,.05-.69,0-1.25-.56-1.25-1.25,0-.04,.02-.07,.02-.11-.31,.17-.52,.49-.52,.86v1.5h-2v-1.5c0-1.65,1.35-3,3-3s3,1.35,3,3v1.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FaceAwesome = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M16.54,14.72c-.31-.04-.64-.05-1.01-.05-1.68,0-3.09,1.12-3.57,2.65,.01,0,.02,0,.04,0,1.93,0,3.62-1.05,4.54-2.6Z"/><path d="M12,0C5.38,0,0,5.38,0,12s5.38,12,12,12,12-5.38,12-12S18.62,0,12,0ZM5,9.5c0-1.65,1.35-3,3-3s3,1.35,3,3v1.5h-2v-1.05c-.08,.02-.16,.05-.25,.05-.69,0-1.25-.56-1.25-1.25,0-.04,.02-.07,.02-.11-.31,.17-.52,.49-.52,.86v1.5h-2v-1.5Zm7,9.59c-3.6,0-6.56-2.7-7-6.18h14c-.44,3.48-3.4,6.18-7,6.18Zm7-8.09h-2v-1.05c-.08,.02-.16,.05-.25,.05-.69,0-1.25-.56-1.25-1.25,0-.04,.02-.07,.02-.11-.31,.17-.52,.49-.52,.86v1.5h-2v-1.5c0-1.65,1.35-3,3-3s3,1.35,3,3v1.5Z"/></svg>
+
 );
-
-FaceAwesome.displayName = 'FaceAwesome';

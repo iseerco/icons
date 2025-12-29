@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTs5gLock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19 8v-1c0-3.86-3.141-7-7-7s-7 3.14-7 7v1h-3v13.5c0 1.379 1.121 2.5 2.5 2.5h15c1.379 0 2.5-1.121 2.5-2.5v-13.5zm-13-1c0-3.309 2.691-6 6-6s6 2.691 6 6v1h-12zm15 14.5c0 .827-.673 1.5-1.5 1.5h-15c-.827 0-1.5-.673-1.5-1.5v-12.5h18zm-8-3.992v-3c0-1.379 1.121-2.5 2.5-2.5s2.5 1.122 2.5 2.5h-1c0-.827-.673-1.501-1.5-1.501s-1.5.674-1.5 1.501v3c0 .827.673 1.5 1.5 1.5s1.5-.673 1.5-1.5v-.5h-1.5v-1h2.5v1.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5zm-4.5 2.492h-2.5v-1h2.5c.827 0 1.5-.673 1.5-1.5s-.673-1.5-1.5-1.5h-2.5v-4h4.5v1h-3.5v2h1.5c1.379 0 2.5 1.121 2.5 2.5s-1.121 2.5-2.5 2.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTs5gLock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19 8v-1c0-3.86-3.141-7-7-7s-7 3.14-7 7v1h-3v13.5c0 1.379 1.121 2.5 2.5 2.5h15c1.379 0 2.5-1.121 2.5-2.5v-13.5zm-13-1c0-3.309 2.691-6 6-6s6 2.691 6 6v1h-12zm15 14.5c0 .827-.673 1.5-1.5 1.5h-15c-.827 0-1.5-.673-1.5-1.5v-12.5h18zm-8-3.992v-3c0-1.379 1.121-2.5 2.5-2.5s2.5 1.122 2.5 2.5h-1c0-.827-.673-1.501-1.5-1.501s-1.5.674-1.5 1.501v3c0 .827.673 1.5 1.5 1.5s1.5-.673 1.5-1.5v-.5h-1.5v-1h2.5v1.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5zm-4.5 2.492h-2.5v-1h2.5c.827 0 1.5-.673 1.5-1.5s-.673-1.5-1.5-1.5h-2.5v-4h4.5v1h-3.5v2h1.5c1.379 0 2.5 1.121 2.5 2.5s-1.121 2.5-2.5 2.5z"/></svg>
 );
-
-FiTs5gLock.displayName = 'FiTs5gLock';

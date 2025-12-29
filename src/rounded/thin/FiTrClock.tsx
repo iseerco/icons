@@ -1,16 +1,16 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12ZM12,1C5.935,1,1,5.935,1,12s4.935,11,11,11,11-4.935,11-11S18.065,1,12,1Z"/>
   <path d="M8,15.5c-.161,0-.319-.078-.416-.223-.153-.229-.091-.54,.139-.693l4.277-2.852V5.5c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v6.5c0,.167-.084,.323-.223,.416l-4.5,3c-.085,.057-.182,.084-.277,.084Z"/>
 </svg>
-);
 
-FiTrClock.displayName = 'FiTrClock';
+);

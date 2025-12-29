@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrFilePsd: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrFilePsd = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M136.043,111.68c10.243,0.028,18.643-8.108,18.944-18.347c-0.312-10.23-8.709-18.353-18.944-18.325h-17.899l0.128,36.757   L136.043,111.68z"/>
 	<path d="M367.36,158.677c20.715-0.363,29.995-20.8,29.995-40.896s-8.043-41.109-30.656-41.109h-17.493l0.171,82.176   C355.883,158.805,363.2,158.741,367.36,158.677z"/>
@@ -29,6 +31,5 @@ export const FiBrFilePsd: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrFilePsd.displayName = 'FiBrFilePsd';
+);

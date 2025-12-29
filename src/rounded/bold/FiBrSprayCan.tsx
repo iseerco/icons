@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrSprayCan: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrSprayCan = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13,7.023V3c0-1.657-1.343-3-3-3h-1c-1.657,0-3,1.343-3,3v4.023c-2.799.254-5,2.613-5,5.477v6c0,3.033,2.468,5.5,5.5,5.5h6c3.032,0,5.5-2.467,5.5-5.5v-6c0-2.864-2.201-5.224-5-5.477Zm2,11.477c0,1.378-1.121,2.5-2.5,2.5h-6c-1.379,0-2.5-1.122-2.5-2.5v-6c0-1.378,1.121-2.5,2.5-2.5h6c1.379,0,2.5,1.122,2.5,2.5v6Zm4-14c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm1-3c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm3,6c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm-10,8c0,1.933-1.567,3.5-3.5,3.5s-3.5-1.567-3.5-3.5,1.567-3.5,3.5-3.5,3.5,1.567,3.5,3.5Z"/>
 </svg>
-);
 
-FiBrSprayCan.displayName = 'FiBrSprayCan';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CheapStack: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CheapStack = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24.008,19.906l-3.603,3.517c-.384.384-.893.577-1.402.577-.513,0-1.026-.195-1.417-.586l-3.567-3.567,1.414-1.414,2.567,2.567V0h2v21.024l2.611-2.549,1.396,1.432ZM6.5,2C2.91,2,0,3.343,0,5s2.91,3,6.5,3,6.5-1.343,6.5-3-2.91-3-6.5-3Zm0,12c-3.792,0-6.5-1.529-6.5-3.5v2c0,1.995,2.794,3.5,6.5,3.5s6.5-1.505,6.5-3.5v-2c0,1.971-2.708,3.5-6.5,3.5Zm0-4c-3.792,0-6.5-1.529-6.5-3.5v2c0,1.995,2.794,3.5,6.5,3.5s6.5-1.505,6.5-3.5v-2c0,1.971-2.708,3.5-6.5,3.5Zm0,12c-3.792,0-6.5-1.529-6.5-3.5v2c0,1.995,2.794,3.5,6.5,3.5s6.5-1.505,6.5-3.5v-2c0,1.971-2.708,3.5-6.5,3.5Zm0-4c-3.792,0-6.5-1.529-6.5-3.5v2c0,1.995,2.794,3.5,6.5,3.5s6.5-1.505,6.5-3.5v-2c0,1.971-2.708,3.5-6.5,3.5Z"/>
 </svg>
-);
 
-CheapStack.displayName = 'CheapStack';
+);

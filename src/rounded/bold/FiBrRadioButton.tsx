@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrRadioButton: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrRadioButton = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M5.5,11C2.467,11,0,8.532,0,5.5S2.467,0,5.5,0s5.5,2.468,5.5,5.5-2.467,5.5-5.5,5.5Zm0,13c-3.033,0-5.5-2.468-5.5-5.5s2.467-5.5,5.5-5.5,5.5,2.468,5.5,5.5-2.467,5.5-5.5,5.5Zm0-8c-1.378,0-2.5,1.121-2.5,2.5s1.122,2.5,2.5,2.5,2.5-1.121,2.5-2.5-1.122-2.5-2.5-2.5ZM24,5.5c0-.828-.672-1.5-1.5-1.5h-7c-.828,0-1.5,.672-1.5,1.5s.672,1.5,1.5,1.5h7c.828,0,1.5-.672,1.5-1.5Zm0,13c0-.828-.672-1.5-1.5-1.5h-7c-.828,0-1.5,.672-1.5,1.5s.672,1.5,1.5,1.5h7c.828,0,1.5-.672,1.5-1.5Z"/>
 </svg>
-);
 
-FiBrRadioButton.displayName = 'FiBrRadioButton';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GlassWhiskeyRocks: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m7,16h3.385l2.388,2.389c.407.407.942.61,1.478.61s1.07-.204,1.478-.611l2.66-2.661c.395-.395.612-.919.612-1.478s-.218-1.083-.612-1.477l-2.66-2.662c-.745-.744-1.913-.8-2.731-.182-.038-1.07-.918-1.929-1.996-1.929h-4c-1.103,0-2,.897-2,2v4c0,1.103.897,2,2,2Zm7.313-4.474l2.66,2.661v.126l-2.66,2.661c-.035.035-.092.035-.127,0l-1.672-1.672c.302-.35.485-.805.485-1.302v-1.287l1.187-1.187c.036-.035.093-.033.127,0Zm-7.313-1.526h4v4s-4,0-4,0v-4ZM.018,1l1.799,19.279c.145,1.551,1.429,2.721,2.987,2.721h14.271c1.549,0,2.832-1.162,2.985-2.701l1.931-19.299H.018Zm20.052,19.1c-.051.513-.479.9-.995.9H4.804c-.52,0-.947-.39-.995-.907L2.213,3h19.566l-1.71,17.1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GlassWhiskeyRocks = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m7,16h3.385l2.388,2.389c.407.407.942.61,1.478.61s1.07-.204,1.478-.611l2.66-2.661c.395-.395.612-.919.612-1.478s-.218-1.083-.612-1.477l-2.66-2.662c-.745-.744-1.913-.8-2.731-.182-.038-1.07-.918-1.929-1.996-1.929h-4c-1.103,0-2,.897-2,2v4c0,1.103.897,2,2,2Zm7.313-4.474l2.66,2.661v.126l-2.66,2.661c-.035.035-.092.035-.127,0l-1.672-1.672c.302-.35.485-.805.485-1.302v-1.287l1.187-1.187c.036-.035.093-.033.127,0Zm-7.313-1.526h4v4s-4,0-4,0v-4ZM.018,1l1.799,19.279c.145,1.551,1.429,2.721,2.987,2.721h14.271c1.549,0,2.832-1.162,2.985-2.701l1.931-19.299H.018Zm20.052,19.1c-.051.513-.479.9-.995.9H4.804c-.52,0-.947-.39-.995-.907L2.213,3h19.566l-1.71,17.1Z"/></svg>
+
 );
-
-GlassWhiskeyRocks.displayName = 'GlassWhiskeyRocks';

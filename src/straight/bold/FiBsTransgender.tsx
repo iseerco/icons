@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTransgender: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTransgender = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,6V1c0-.552-.448-1-1-1h-5l1.939,1.939-4.893,4.893c-.893-.529-1.935-.833-3.046-.833s-2.153.304-3.046.833l-1.242-1.242,1.689-1.689-2.121-2.121-1.689,1.689-1.53-1.53,1.939-1.939H1C.448,0,0,.448,0,1v5l1.939-1.939,1.53,1.53-1.846,1.846,2.121,2.121,1.846-1.846,1.242,1.242c-.529.893-.833,1.935-.833,3.046,0,2.791,1.915,5.143,4.5,5.81v1.19h-2.5v3h2.5v2h3v-2h2.5v-3h-2.5v-1.19c2.585-.668,4.5-3.019,4.5-5.81,0-1.111-.304-2.153-.833-3.046l4.893-4.893,1.939,1.939Zm-12,9c-1.654,0-3-1.346-3-3s1.346-3,3-3,3,1.346,3,3-1.346,3-3,3Z"/>
 </svg>
-);
 
-FiBsTransgender.displayName = 'FiBsTransgender';
+);

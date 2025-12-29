@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrInteractive: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.34 512.34" style="enable-background:new 0 0 512.34 512.34;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrInteractive = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M64,213.333c0.584-82.472,67.915-148.856,150.388-148.271c72.918,0.517,134.8,53.62,146.38,125.615l65.899,23.936   c0-0.427,0-0.853,0-1.28C426.667,95.513,331.154,0,213.333,0S0,95.513,0,213.333s95.513,213.333,213.333,213.333   c0.448,0,0.853,0,1.301,0l-23.936-65.899C117.881,349.602,64.086,287.002,64,213.333z"/>
 	<path d="M289.429,172.267c3.648,0,7.253,0.619,10.88,0.96c-22.045-48.128-78.932-69.273-127.06-47.228   s-69.273,78.932-47.228,127.06c9.521,20.785,26.157,37.483,46.907,47.08c-5.821-64.539,41.78-121.578,106.32-127.398   C282.633,172.435,286.03,172.277,289.429,172.267L289.429,172.267z"/>
@@ -29,6 +31,5 @@ export const FiBrInteractive: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrInteractive.displayName = 'FiBrInteractive';
+);

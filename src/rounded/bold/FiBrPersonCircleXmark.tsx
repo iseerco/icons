@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrPersonCircleXmark: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrPersonCircleXmark = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m3,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm8,11v-3c0-2.481-2.019-4.5-4.5-4.5h-2c-2.481,0-4.5,2.019-4.5,4.5v3c0,1.557.795,2.932,2,3.74v5.26c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5v-4.5h1v4.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5v-5.26c1.205-.808,2-2.183,2-3.74Zm-8-3c0-.827.673-1.5,1.5-1.5h2c.827,0,1.5.673,1.5,1.5v3c0,.827-.673,1.5-1.5,1.5h-2c-.827,0-1.5-.673-1.5-1.5v-3Zm15,1.5c-3.314,0-6,2.686-6,6s2.686,6,6,6,6-2.686,6-6-2.686-6-6-6Zm2.707,7.293c.391.391.391,1.023,0,1.414-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-1.293-1.293-1.293,1.293c-.195.195-.451.293-.707.293s-.512-.098-.707-.293c-.391-.391-.391-1.023,0-1.414l1.293-1.293-1.293-1.293c-.391-.391-.391-1.023,0-1.414s1.023-.391,1.414,0l1.293,1.293,1.293-1.293c.391-.391,1.023-.391,1.414,0s.391,1.023,0,1.414l-1.293,1.293,1.293,1.293Z"/>
 </svg>
-);
 
-FiBrPersonCircleXmark.displayName = 'FiBrPersonCircleXmark';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsHumidity: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width={size} height={size} viewBox="0 0 24 24" {...props}><path d="M12,24c-2.671,0-5.182-1.04-7.071-2.929-3.899-3.899-3.899-10.243,0-14.142L12,.013l7.067,6.912c3.903,3.903,3.903,10.247,.004,14.146h0c-1.889,1.889-4.4,2.929-7.071,2.929Zm0-22.588L5.632,7.64c-3.505,3.505-3.505,9.215,.004,12.724,1.7,1.699,3.96,2.636,6.364,2.636s4.664-.937,6.364-2.636h0c3.509-3.509,3.509-9.219,0-12.728L12,1.412Zm-3,8.588c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm6,6c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm-5.949,2h1.149l4.8-8h-1.149l-4.8,8Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsHumidity = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,24c-2.671,0-5.182-1.04-7.071-2.929-3.899-3.899-3.899-10.243,0-14.142L12,.013l7.067,6.912c3.903,3.903,3.903,10.247,.004,14.146h0c-1.889,1.889-4.4,2.929-7.071,2.929Zm0-22.588L5.632,7.64c-3.505,3.505-3.505,9.215,.004,12.724,1.7,1.699,3.96,2.636,6.364,2.636s4.664-.937,6.364-2.636h0c3.509-3.509,3.509-9.219,0-12.728L12,1.412Zm-3,8.588c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm6,6c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm-5.949,2h1.149l4.8-8h-1.149l-4.8,8Z"/></svg>
+
 );
-
-FiTsHumidity.displayName = 'FiTsHumidity';

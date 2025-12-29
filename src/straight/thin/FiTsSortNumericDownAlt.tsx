@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSortNumericDownAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19,0c-1.654,0-3,1.346-3,3s1.346,3,3,3c.744,0,1.425-.273,1.95-.723-.29,2.227-1.833,3.723-3.95,3.723v1c2.897,0,5-2.313,5-5.5v-1.5c0-1.654-1.346-3-3-3Zm0,5c-1.103,0-2-.897-2-2s.897-2,2-2,2,.897,2,2-.897,2-2,2Zm1.921,9l.079,.5v9.5h-1V15.649l-2.142,2.199-.717-.697,3.068-3.151h.711Zm-9.304,4.117l.707,.707-4.717,4.717c-.295,.296-.688,.459-1.106,.459s-.812-.163-1.107-.459L.676,18.824l.707-.707,4.617,4.616V0h1V22.734l4.617-4.617Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSortNumericDownAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19,0c-1.654,0-3,1.346-3,3s1.346,3,3,3c.744,0,1.425-.273,1.95-.723-.29,2.227-1.833,3.723-3.95,3.723v1c2.897,0,5-2.313,5-5.5v-1.5c0-1.654-1.346-3-3-3Zm0,5c-1.103,0-2-.897-2-2s.897-2,2-2,2,.897,2,2-.897,2-2,2Zm1.921,9l.079,.5v9.5h-1V15.649l-2.142,2.199-.717-.697,3.068-3.151h.711Zm-9.304,4.117l.707,.707-4.717,4.717c-.295,.296-.688,.459-1.106,.459s-.812-.163-1.107-.459L.676,18.824l.707-.707,4.617,4.616V0h1V22.734l4.617-4.617Z"/></svg>
+
 );
-
-FiTsSortNumericDownAlt.displayName = 'FiTsSortNumericDownAlt';

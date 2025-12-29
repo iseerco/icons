@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Mercury: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Mercury = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20,10c0-3.007-1.668-5.631-4.126-6.997.623-.346,1.203-.777,1.725-1.289.394-.387.4-1.02.014-1.414-.388-.393-1.021-.402-1.415-.014-1.127,1.105-2.619,1.714-4.198,1.714s-3.071-.608-4.198-1.714c-.395-.388-1.026-.378-1.415.014-.386.395-.38,1.027.014,1.414.522.512,1.102.943,1.725,1.289-2.458,1.367-4.126,3.991-4.126,6.997,0,4.073,3.059,7.444,7,7.938v2.062h-1c-.552,0-1,.447-1,1s.448,1,1,1h1v1c0,.553.448,1,1,1s1-.447,1-1v-1h1c.552,0,1-.447,1-1s-.448-1-1-1h-1v-2.062c3.941-.494,7-3.865,7-7.938Zm-14,0c0-3.309,2.691-6,6-6s6,2.691,6,6-2.691,6-6,6-6-2.691-6-6Z"/>
 </svg>
-);
 
-Mercury.displayName = 'Mercury';
+);

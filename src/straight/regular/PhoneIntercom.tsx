@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PhoneIntercom: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21 2h-13.184c-.414-1.161-1.514-2-2.816-2h-2c-1.654 0-3 1.346-3 3v21h24v-19c0-1.654-1.346-3-3-3zm-19 1c0-.552.449-1 1-1h2c.551 0 1 .448 1 1v15h-4zm20 19h-20v-2h6v-16h13c.551 0 1 .448 1 1zm-3-4.5c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm-5 0c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm-3-3.5h1.5v-.5c0-.828.672-1.5 1.5-1.5h2c.828 0 1.5.672 1.5 1.5v.5h1.5v-7h-8zm4-6c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PhoneIntercom = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21 2h-13.184c-.414-1.161-1.514-2-2.816-2h-2c-1.654 0-3 1.346-3 3v21h24v-19c0-1.654-1.346-3-3-3zm-19 1c0-.552.449-1 1-1h2c.551 0 1 .448 1 1v15h-4zm20 19h-20v-2h6v-16h13c.551 0 1 .448 1 1zm-3-4.5c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm-5 0c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm-3-3.5h1.5v-.5c0-.828.672-1.5 1.5-1.5h2c.828 0 1.5.672 1.5 1.5v.5h1.5v-7h-8zm4-6c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>
 );
-
-PhoneIntercom.displayName = 'PhoneIntercom';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSubtitles: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSubtitles = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M21.5,1.987H2.5C1.121,1.987,0,3.108,0,4.487V21.987H24V4.487c0-1.379-1.121-2.5-2.5-2.5Zm1.5,19H1V4.487c0-.827,.673-1.5,1.5-1.5H21.5c.827,0,1.5,.673,1.5,1.5V20.987ZM9,12h11v1H9v-1Zm8,4h3v1h-3v-1Zm-10-3h-3v-1h3v1Zm-3,3H15v1H4v-1Z"/>
 </svg>
-);
 
-FiTsSubtitles.displayName = 'FiTsSubtitles';
+);

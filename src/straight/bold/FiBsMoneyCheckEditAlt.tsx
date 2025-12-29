@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMoneyCheckEditAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M5,14.5v-1h-1v-3h1v-1c0-1.93,1.57-3.5,3.5-3.5h2c1.93,0,3.5,1.57,3.5,3.5v.5h-3v-.5c0-.276-.225-.5-.5-.5h-2c-.275,0-.5,.224-.5,.5v1h2v3h-2v1c0,.276,.225,.5,.5,.5h2c.275,0,.5-.224,.5-.5v-.5h3v.5c0,1.93-1.57,3.5-3.5,3.5h-2c-1.93,0-3.5-1.57-3.5-3.5Zm11-7.5v3h3v-3h-3Zm4.275,6.639l-7.275,7.275v3.086h3.086l7.275-7.275c.852-.852,.852-2.234,0-3.086s-2.234-.852-3.086,0Zm.225-12.639H3.5C1.57,1,0,2.57,0,4.5V23H11v-3H3V4.5c0-.276,.225-.5,.5-.5H20.5c.275,0,.5,.224,.5,.5v6.585c1.017-.201,2.091-.015,3,.542V4.5c0-1.93-1.57-3.5-3.5-3.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMoneyCheckEditAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M5,14.5v-1h-1v-3h1v-1c0-1.93,1.57-3.5,3.5-3.5h2c1.93,0,3.5,1.57,3.5,3.5v.5h-3v-.5c0-.276-.225-.5-.5-.5h-2c-.275,0-.5,.224-.5,.5v1h2v3h-2v1c0,.276,.225,.5,.5,.5h2c.275,0,.5-.224,.5-.5v-.5h3v.5c0,1.93-1.57,3.5-3.5,3.5h-2c-1.93,0-3.5-1.57-3.5-3.5Zm11-7.5v3h3v-3h-3Zm4.275,6.639l-7.275,7.275v3.086h3.086l7.275-7.275c.852-.852,.852-2.234,0-3.086s-2.234-.852-3.086,0Zm.225-12.639H3.5C1.57,1,0,2.57,0,4.5V23H11v-3H3V4.5c0-.276,.225-.5,.5-.5H20.5c.275,0,.5,.224,.5,.5v6.585c1.017-.201,2.091-.015,3,.542V4.5c0-1.93-1.57-3.5-3.5-3.5Z"/></svg>
+
 );
-
-FiBsMoneyCheckEditAlt.displayName = 'FiBsMoneyCheckEditAlt';

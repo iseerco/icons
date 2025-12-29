@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RunningTrack: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RunningTrack = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16,4h-8C3.589,4,0,7.589,0,12s3.589,8,8,8h8c4.411,0,8-3.589,8-8s-3.589-8-8-8Zm-3,4v-2h2v2h-2Zm3,2c1.103,0,2,.897,2,2s-.897,2-2,2h-8c-1.103,0-2-.897-2-2s.897-2,2-2h8Zm0,8h-8c-3.309,0-6-2.691-6-6s2.691-6,6-6h3v2h-3c-2.206,0-4,1.794-4,4s1.794,4,4,4h8c2.206,0,4-1.794,4-4,0-1.858-1.28-3.411-3-3.858v-2.052c2.833.478,5,2.942,5,5.91,0,3.309-2.691,6-6,6Z"/>
 </svg>
-);
 
-RunningTrack.displayName = 'RunningTrack';
+);

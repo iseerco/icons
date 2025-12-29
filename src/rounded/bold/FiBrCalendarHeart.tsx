@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCalendarHeart: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCalendarHeart = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16.449,13.475c0,1.843-2.314,4.113-3.629,5.197-.531.438-1.289.438-1.82,0-1.315-1.084-3.551-3.354-3.551-5.197,0-1.367,1.007-2.475,2.25-2.475s2.25,1.108,2.25,2.475c0-1.367,1.007-2.475,2.25-2.475s2.25,1.108,2.25,2.475Zm7.551-5.975v11c0,3.033-2.467,5.5-5.5,5.5H5.5c-3.033,0-5.5-2.467-5.5-5.5V7.5C0,4.467,2.467,2,5.5,2h.5v-.5c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5v.5h6v-.5c0-.829.671-1.5,1.5-1.5s1.5.671,1.5,1.5v.5h.5c3.033,0,5.5,2.467,5.5,5.5Zm-3,11v-9.5H3v9.5c0,1.378,1.122,2.5,2.5,2.5h13c1.378,0,2.5-1.122,2.5-2.5Z"/>
 </svg>
-);
 
-FiBrCalendarHeart.displayName = 'FiBrCalendarHeart';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsHouseCrackAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsHouseCrackAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.968,7.866L13.658.572c-.977-.765-2.34-.765-3.317,0L1.032,7.866c-.656.514-1.032,1.287-1.032,2.121v14.013h24v-14.013c0-.834-.376-1.607-1.032-2.121Zm.032,15.134h-6.793l-6-6,4.5-4.5-4.354-4.354-.707.707,3.646,3.646-4.5,4.5,6,6H1v-13.013c0-.524.236-1.01.649-1.333L10.958,1.359c.613-.48,1.47-.481,2.083,0l9.311,7.294c.412.322.648.808.648,1.333v13.013Z"/>
 </svg>
-);
 
-FiTsHouseCrackAlt.displayName = 'FiTsHouseCrackAlt';
+);

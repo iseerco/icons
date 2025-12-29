@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrIgloo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0C5.383,0,0,5.383,0,12v6.5c0,3.033,2.468,5.5,5.5,5.5h2c1.379,0,2.5-1.122,2.5-2.5v-3.5c0-1.103,.897-2,2-2s2,.897,2,2v3.5c0,1.378,1.121,2.5,2.5,2.5h2c3.032,0,5.5-2.467,5.5-5.5v-6.5C24,5.383,18.617,0,12,0Zm5,10h3.776c.147,.643,.224,1.313,.224,2v2h-4v-4Zm2.48-3h-5.98V3.126c2.486,.419,4.628,1.86,5.98,3.874ZM10.5,3.126v3.874H4.52c1.351-2.015,3.494-3.456,5.98-3.874Zm-3.5,10.874H3v-2c0-.687,.078-1.357,.224-2h3.776v4Zm0,7h-1.5c-1.379,0-2.5-1.122-2.5-2.5v-1.5H7v4Zm5-8c-.711,0-1.387,.149-2,.418v-3.418h4v3.418c-.613-.269-1.289-.418-2-.418Zm6.5,8h-1.5v-4h4v1.5c0,1.378-1.121,2.5-2.5,2.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrIgloo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,0C5.383,0,0,5.383,0,12v6.5c0,3.033,2.468,5.5,5.5,5.5h2c1.379,0,2.5-1.122,2.5-2.5v-3.5c0-1.103,.897-2,2-2s2,.897,2,2v3.5c0,1.378,1.121,2.5,2.5,2.5h2c3.032,0,5.5-2.467,5.5-5.5v-6.5C24,5.383,18.617,0,12,0Zm5,10h3.776c.147,.643,.224,1.313,.224,2v2h-4v-4Zm2.48-3h-5.98V3.126c2.486,.419,4.628,1.86,5.98,3.874ZM10.5,3.126v3.874H4.52c1.351-2.015,3.494-3.456,5.98-3.874Zm-3.5,10.874H3v-2c0-.687,.078-1.357,.224-2h3.776v4Zm0,7h-1.5c-1.379,0-2.5-1.122-2.5-2.5v-1.5H7v4Zm5-8c-.711,0-1.387,.149-2,.418v-3.418h4v3.418c-.613-.269-1.289-.418-2-.418Zm6.5,8h-1.5v-4h4v1.5c0,1.378-1.121,2.5-2.5,2.5Z"/></svg>
+
 );
-
-FiBrIgloo.displayName = 'FiBrIgloo';

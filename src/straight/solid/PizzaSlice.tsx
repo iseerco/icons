@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PizzaSlice: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16.9,20.958,15.676,24H15A15.017,15.017,0,0,1,0,9V8.324L3.042,7.1C3.454,15.459,8.541,20.546,16.9,20.958ZM23.832,3.673,17.687,18.989c-8.074-.115-12.561-4.6-12.676-12.675L20.3.181a2.734,2.734,0,0,1,3.536,3.492ZM13,11a2,2,0,0,0-4,0A2,2,0,0,0,13,11Zm5.784-.117,1.846-4.6A2.487,2.487,0,1,0,18.784,10.883Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PizzaSlice = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M16.9,20.958,15.676,24H15A15.017,15.017,0,0,1,0,9V8.324L3.042,7.1C3.454,15.459,8.541,20.546,16.9,20.958ZM23.832,3.673,17.687,18.989c-8.074-.115-12.561-4.6-12.676-12.675L20.3.181a2.734,2.734,0,0,1,3.536,3.492ZM13,11a2,2,0,0,0-4,0A2,2,0,0,0,13,11Zm5.784-.117,1.846-4.6A2.487,2.487,0,1,0,18.784,10.883Z"/></svg>
+
 );
-
-PizzaSlice.displayName = 'PizzaSlice';

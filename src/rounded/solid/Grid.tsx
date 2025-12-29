@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Grid: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Grid = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M42.667,373.333H96c23.564,0,42.667,19.102,42.667,42.667v53.333C138.667,492.898,119.564,512,96,512H42.667   C19.103,512,0,492.898,0,469.333V416C0,392.436,19.103,373.333,42.667,373.333z"/>
 	<path d="M493.184,380.629c-7.039-4.768-15.349-7.31-23.851-7.296H416c-23.564,0-42.667,19.102-42.667,42.667v53.333   C373.333,492.898,392.436,512,416,512h53.333C492.898,512,512,492.898,512,469.333V416   C511.998,401.815,504.946,388.559,493.184,380.629z"/>
@@ -35,6 +37,5 @@ export const Grid: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-Grid.displayName = 'Grid';
+);

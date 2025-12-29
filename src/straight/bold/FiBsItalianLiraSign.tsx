@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsItalianLiraSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22,21v3H2v-3c1.68,0,3-1.32,3-3v-1H2v-3h3v-2H2v-3h3v-.82C5,3.67,8.67,0,13.19,0c4.24,0,7.58,3.15,7.72,3.28l-2.07,2.17s-2.62-2.45-5.64-2.45c-2.86,0-5.18,2.32-5.18,5.18v.82h10v3H8v2h10v3H8v1c0,1.09-.29,2.12-.81,3h14.8Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsItalianLiraSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22,21v3H2v-3c1.68,0,3-1.32,3-3v-1H2v-3h3v-2H2v-3h3v-.82C5,3.67,8.67,0,13.19,0c4.24,0,7.58,3.15,7.72,3.28l-2.07,2.17s-2.62-2.45-5.64-2.45c-2.86,0-5.18,2.32-5.18,5.18v.82h10v3H8v2h10v3H8v1c0,1.09-.29,2.12-.81,3h14.8Z"/></svg>
+
 );
-
-FiBsItalianLiraSign.displayName = 'FiBsItalianLiraSign';

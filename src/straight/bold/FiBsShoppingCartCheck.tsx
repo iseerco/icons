@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsShoppingCartCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/><path d="M18.112,15H7.217a.329.329,0,0,1-.325-.3L6.036,8H11V5H5.653L5.391,2.939A3.327,3.327,0,0,0,2.087,0H0V3H2.087a.329.329,0,0,1,.325.3l1.5,11.76A3.327,3.327,0,0,0,7.217,18H20.4l1.65-6H18.938Z"/><path d="M17.069,10.042h.04a2.407,2.407,0,0,0,1.691-.7l5.261-5.261L21.939,1.96l-4.82,4.821-1.89-1.968-2.163,2.08,2.3,2.4A2.4,2.4,0,0,0,17.069,10.042Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsShoppingCartCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/><path d="M18.112,15H7.217a.329.329,0,0,1-.325-.3L6.036,8H11V5H5.653L5.391,2.939A3.327,3.327,0,0,0,2.087,0H0V3H2.087a.329.329,0,0,1,.325.3l1.5,11.76A3.327,3.327,0,0,0,7.217,18H20.4l1.65-6H18.938Z"/><path d="M17.069,10.042h.04a2.407,2.407,0,0,0,1.691-.7l5.261-5.261L21.939,1.96l-4.82,4.821-1.89-1.968-2.163,2.08,2.3,2.4A2.4,2.4,0,0,0,17.069,10.042Z"/></svg>
+
 );
-
-FiBsShoppingCartCheck.displayName = 'FiBsShoppingCartCheck';

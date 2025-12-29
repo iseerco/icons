@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Resources: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,3H13a1,1,0,0,0-1,1V7.27L9.6,3.11a2,2,0,0,0-3.47,0h0L.13,13.5a1,1,0,0,0,0,1A1,1,0,0,0,1,15H5.29A6.91,6.91,0,0,0,5,17a7,7,0,0,0,14,0,6.91,6.91,0,0,0-.29-2H23a1,1,0,0,0,1-1V4A1,1,0,0,0,23,3ZM2.73,13,7.86,4.11,11.29,10a7,7,0,0,0-5,3ZM12,22a5,5,0,1,1,5-5A5,5,0,0,1,12,22Zm10-9H17.74A7.07,7.07,0,0,0,14,10.29V5h8Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Resources = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,3H13a1,1,0,0,0-1,1V7.27L9.6,3.11a2,2,0,0,0-3.47,0h0L.13,13.5a1,1,0,0,0,0,1A1,1,0,0,0,1,15H5.29A6.91,6.91,0,0,0,5,17a7,7,0,0,0,14,0,6.91,6.91,0,0,0-.29-2H23a1,1,0,0,0,1-1V4A1,1,0,0,0,23,3ZM2.73,13,7.86,4.11,11.29,10a7,7,0,0,0-5,3ZM12,22a5,5,0,1,1,5-5A5,5,0,0,1,12,22Zm10-9H17.74A7.07,7.07,0,0,0,14,10.29V5h8Z"/></svg>
+
 );
-
-Resources.displayName = 'Resources';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FloorAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FloorAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,10.75v13.25H8v-2h14v-13.883c1.151.329,2,1.378,2,2.633Zm-6-6.633v13.883H4v2h16V6.75c0-1.255-.849-2.304-2-2.633Zm-9.615,9.296l-2.194-2.195-4.782,4.782h4.389l2.587-2.587Zm-2.42-9.122L0,10.33v4.25L8.127,6.453l-2.162-2.163Zm10.036-1.291c0-.463-.114-.897-.303-1.289L7.604,9.804l2.194,2.195,6.201-6.201v-2.797ZM7.39,0H3C1.346,0,0,1.346,0,3v4.483L7.39,0Zm1.236,16h7.374v-7.374l-7.374,7.374Zm-1.256-13.132l2.171,2.172L14.282.299c-.39-.186-.821-.299-1.282-.299h-2.798l-2.832,2.868Z"/>
 </svg>
-);
 
-FloorAlt.displayName = 'FloorAlt';
+);

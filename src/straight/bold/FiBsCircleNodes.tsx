@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCircleNodes: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCircleNodes = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20,10c.016,0,.031-.002,.047-.002l-1.183,4.731c-.852-.464-1.827-.729-2.864-.729-.016,0-.031,.002-.047,.002l1.183-4.731c.852,.465,1.827,.729,2.864,.729Zm-10.706,1.818c-.479,.897-1.181,1.656-2.029,2.209l3.441,3.155c.479-.897,1.181-1.657,2.029-2.209l-3.442-3.154Zm5.616-4.656c-.524-.84-.843-1.816-.895-2.863l-4.925,1.539c.524,.84,.843,1.816,.895,2.863l4.925-1.539ZM20,0c-2.209,0-4,1.791-4,4s1.791,4,4,4,4-1.791,4-4S22.209,0,20,0Zm-4,16c-2.209,0-4,1.791-4,4s1.791,4,4,4,4-1.791,4-4-1.791-4-4-4ZM4,5C1.791,5,0,6.791,0,9s1.791,4,4,4,4-1.791,4-4-1.791-4-4-4Z"/>
 </svg>
-);
 
-FiBsCircleNodes.displayName = 'FiBsCircleNodes';
+);

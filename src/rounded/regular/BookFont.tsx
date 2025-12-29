@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BookFont: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17,0H7C4.24,0,2,2.24,2,5v15c0,2.21,1.79,4,4,4h11c2.76,0,5-2.24,5-5V5c0-2.76-2.24-5-5-5Zm3,5v11H8V2h9c1.65,0,3,1.35,3,3ZM6,2.18v13.82c-.73,0-1.41,.21-2,.56V5c0-1.3,.84-2.4,2-2.82Zm11,19.82H6c-1.1,0-2-.9-2-2s.9-2,2-2h14v1c0,1.65-1.35,3-3,3Zm-6.21-8h0c.42,0,.8-.27,.94-.66l.48-1.34h3.59l.48,1.34c.14,.4,.52,.66,.94,.66,.69,0,1.17-.68,.94-1.34l-2.74-7.69c-.22-.6-.77-.99-1.41-.99s-1.19,.39-1.41,1l-2.74,7.69c-.23,.65,.25,1.34,.94,1.34Zm4.3-4h-2.16l1.08-3.03,1.08,3.03Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BookFont = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17,0H7C4.24,0,2,2.24,2,5v15c0,2.21,1.79,4,4,4h11c2.76,0,5-2.24,5-5V5c0-2.76-2.24-5-5-5Zm3,5v11H8V2h9c1.65,0,3,1.35,3,3ZM6,2.18v13.82c-.73,0-1.41,.21-2,.56V5c0-1.3,.84-2.4,2-2.82Zm11,19.82H6c-1.1,0-2-.9-2-2s.9-2,2-2h14v1c0,1.65-1.35,3-3,3Zm-6.21-8h0c.42,0,.8-.27,.94-.66l.48-1.34h3.59l.48,1.34c.14,.4,.52,.66,.94,.66,.69,0,1.17-.68,.94-1.34l-2.74-7.69c-.22-.6-.77-.99-1.41-.99s-1.19,.39-1.41,1l-2.74,7.69c-.23,.65,.25,1.34,.94,1.34Zm4.3-4h-2.16l1.08-3.03,1.08,3.03Z"/></svg>
+
 );
-
-BookFont.displayName = 'BookFont';

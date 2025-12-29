@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsChartMixedUpCircleDollar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsChartMixedUpCircleDollar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M6,11l3-3V24h-3V11ZM1,24h3V13l-3,3v8ZM22.886,0h-5.909l2.44,2.44-3.939,3.939L9.478,.379,.023,9.833l2.121,2.121,7.333-7.333,6,6,6.06-6.06,2.439,2.439V1.091c0-.602-.488-1.091-1.091-1.091Zm1.091,18c0,3.314-2.686,6-6,6s-6-2.686-6-6,2.686-6,6-6,6,2.686,6,6Zm-2.678,1.626c0-1.033-.734-1.929-1.747-2.131l-2.792-.559c-.267-.054-.461-.291-.461-.562,0-.316,.257-.574,.573-.574h2.127c.316,0,.585,.211,.671,.5h1.62c-.102-1.175-1.09-2.1-2.291-2.1h-.2v-1.2h-1.6v1.2h-.327c-1.198,0-2.173,.975-2.173,2.173,0,1.033,.734,1.929,1.747,2.131l2.791,.559c.268,.054,.462,.291,.462,.563,0,.316-.258,.574-.574,.574h-2.126c-.316,0-.585-.211-.671-.5h-1.62c.102,1.175,1.09,2.1,2.291,2.1h.2v1.127c.261,.043,.526,.073,.8,.073s.539-.03,.8-.072v-1.128h.326c1.199,0,2.174-.975,2.174-2.173Z"/>
 </svg>
-);
 
-FiBsChartMixedUpCircleDollar.displayName = 'FiBsChartMixedUpCircleDollar';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrBatteryExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m3,9.5v5c0,1.379,1.121,2.5,2.5,2.5.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5c-3.032,0-5.5-2.468-5.5-5.5v-5c0-3.032,2.468-5.5,5.5-5.5.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5c-1.379,0-2.5,1.121-2.5,2.5Zm20-1.5h-1.208c-.655-2.306-2.78-4-5.292-4h-1c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h1c1.379,0,2.5,1.121,2.5,2.5v5c0,1.379-1.121,2.5-2.5,2.5h-1c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h1c2.512,0,4.637-1.694,5.292-4h1.208c.552,0,1-.448,1-1v-6c0-.552-.448-1-1-1Zm-12.5,9c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm0-13c-.828,0-1.5.672-1.5,1.5v8c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5V5.5c0-.828-.672-1.5-1.5-1.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrBatteryExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m3,9.5v5c0,1.379,1.121,2.5,2.5,2.5.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5c-3.032,0-5.5-2.468-5.5-5.5v-5c0-3.032,2.468-5.5,5.5-5.5.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5c-1.379,0-2.5,1.121-2.5,2.5Zm20-1.5h-1.208c-.655-2.306-2.78-4-5.292-4h-1c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h1c1.379,0,2.5,1.121,2.5,2.5v5c0,1.379-1.121,2.5-2.5,2.5h-1c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h1c2.512,0,4.637-1.694,5.292-4h1.208c.552,0,1-.448,1-1v-6c0-.552-.448-1-1-1Zm-12.5,9c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm0-13c-.828,0-1.5.672-1.5,1.5v8c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5V5.5c0-.828-.672-1.5-1.5-1.5Z"/></svg>
+
 );
-
-FiBrBatteryExclamation.displayName = 'FiBrBatteryExclamation';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrRoadBarrier: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrRoadBarrier = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22.5,2c-.829,0-1.5,.671-1.5,1.5v.5H3v-.5c0-.829-.671-1.5-1.5-1.5s-1.5,.671-1.5,1.5V20.5c0,.828,.671,1.5,1.5,1.5s1.5-.672,1.5-1.5v-4.5H21v4.5c0,.828,.671,1.5,1.5,1.5s1.5-.672,1.5-1.5V3.5c0-.829-.671-1.5-1.5-1.5ZM11.121,13l6-6h2.758l-6,6h-2.758Zm-7,0l6-6h2.758l-6,6h-2.758Zm1.758-6l-2.879,2.879v-2.879h2.879Zm12.242,6l2.879-2.879v2.879h-2.879Z"/>
 </svg>
-);
 
-FiBrRoadBarrier.displayName = 'FiBrRoadBarrier';
+);

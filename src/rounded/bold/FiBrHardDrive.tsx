@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrHardDrive: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.225 5.167c-.175-2.897-2.587-5.167-5.49-5.167h-9.47c-2.903 0-5.314 2.27-5.49 5.167l-.775 12.833v2c0 2.209 1.791 4 4 4h14c2.209 0 4-1.791 4-4v-1.5zm-18.162 11.833.706-11.651c.08-1.317 1.176-2.349 2.496-2.349h9.47c1.319 0 2.416 1.032 2.496 2.349l.709 11.651zm10.437 5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrHardDrive = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22.225 5.167c-.175-2.897-2.587-5.167-5.49-5.167h-9.47c-2.903 0-5.314 2.27-5.49 5.167l-.775 12.833v2c0 2.209 1.791 4 4 4h14c2.209 0 4-1.791 4-4v-1.5zm-18.162 11.833.706-11.651c.08-1.317 1.176-2.349 2.496-2.349h9.47c1.319 0 2.416 1.032 2.496 2.349l.709 11.651zm10.437 5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
 );
-
-FiBrHardDrive.displayName = 'FiBrHardDrive';

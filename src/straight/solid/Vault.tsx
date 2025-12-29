@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Vault: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M14,11v2h2.86c-.45,1.72-2,3-3.86,3-2.21,0-4-1.79-4-4s1.79-4,4-4c1.86,0,3.41,1.28,3.86,3h-2.86Zm10,11h-2v2h-2v-2H4v2H2v-2H0v-4H3v-2H0v-7H3v-2H0v-2c0-1.65,1.35-3,3-3H21c1.65,0,3,1.35,3,3V22Zm-5-10c0-3.31-2.69-6-6-6s-6,2.69-6,6,2.69,6,6,6,6-2.69,6-6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Vault = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M14,11v2h2.86c-.45,1.72-2,3-3.86,3-2.21,0-4-1.79-4-4s1.79-4,4-4c1.86,0,3.41,1.28,3.86,3h-2.86Zm10,11h-2v2h-2v-2H4v2H2v-2H0v-4H3v-2H0v-7H3v-2H0v-2c0-1.65,1.35-3,3-3H21c1.65,0,3,1.35,3,3V22Zm-5-10c0-3.31-2.69-6-6-6s-6,2.69-6,6,2.69,6,6,6,6-2.69,6-6Z"/></svg>
+
 );
-
-Vault.displayName = 'Vault';

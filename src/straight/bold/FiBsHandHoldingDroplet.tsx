@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsHandHoldingDroplet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsHandHoldingDroplet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.733,9.014c-.766-.698-1.752-1.055-2.795-1.01-1.037.049-1.993.498-2.692,1.266l-2.438,2.68c-.647-.59-1.507-.949-2.449-.949H3.5c-1.93,0-3.5,1.57-3.5,3.5v6c0,1.93,1.57,3.5,3.5,3.5h11.181l8.333-9.531c1.411-1.581,1.284-4.028-.281-5.455Zm-1.967,3.469l-7.447,8.518H3.5c-.276,0-.5-.225-.5-.5v-6c0-.275.224-.5.5-.5h8.858c.354,0,.642.288.642.643,0,.317-.237.591-.551.635l-5.161.737.424,2.971,5.16-.737c1.619-.231,2.876-1.53,3.094-3.115l3.498-3.844c.159-.175.376-.277.612-.288.233-.017.46.07.635.229.356.325.385.881.054,1.252ZM4.979,5.625c0-2.25,3.51-5.625,3.51-5.625,0,0,3.51,3.375,3.51,5.625,0,1.864-1.572,3.375-3.51,3.375s-3.51-1.511-3.51-3.375Z"/>
 </svg>
-);
 
-FiBsHandHoldingDroplet.displayName = 'FiBsHandHoldingDroplet';
+);

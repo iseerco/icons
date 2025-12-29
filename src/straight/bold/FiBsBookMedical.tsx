@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBookMedical: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20.5,0H5C2.794,0,1,1.794,1,4v16c0,2.206,1.794,4,4,4h18V2.5c0-1.378-1.121-2.5-2.5-2.5Zm-.5,16h-10V3h10v13ZM5,3h2v13h-2c-.345,0-.68.044-1,.127V4c0-.551.448-1,1-1Zm0,18c-.552,0-1-.449-1-1s.448-1,1-1h15v2H5Zm6-12.5h2.5v-2.5h3v2.5h2.5v3h-2.5v2.5h-3v-2.5h-2.5v-3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBookMedical = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20.5,0H5C2.794,0,1,1.794,1,4v16c0,2.206,1.794,4,4,4h18V2.5c0-1.378-1.121-2.5-2.5-2.5Zm-.5,16h-10V3h10v13ZM5,3h2v13h-2c-.345,0-.68.044-1,.127V4c0-.551.448-1,1-1Zm0,18c-.552,0-1-.449-1-1s.448-1,1-1h15v2H5Zm6-12.5h2.5v-2.5h3v2.5h2.5v3h-2.5v2.5h-3v-2.5h-2.5v-3Z"/></svg>
+
 );
-
-FiBsBookMedical.displayName = 'FiBsBookMedical';

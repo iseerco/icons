@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrReflectVertical: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M10.52,8.34c.38,.42,.91,.66,1.48,.66s1.1-.24,1.48-.66l5.12-5.83c.41-.45,.51-1.06,.27-1.62s-.77-.9-1.37-.9H6.5c-.6,0-1.13,.34-1.37,.9s-.14,1.17,.26,1.61l5.13,5.84ZM6.04,1.3c.03-.07,.16-.3,.46-.3h11c.3,0,.43,.23,.46,.3,.03,.07,.12,.32-.1,.55l-5.13,5.83c-.38,.42-1.09,.42-1.46,0L6.13,1.84c-.2-.22-.12-.47-.09-.54Zm7.43,14.36c-.75-.84-2.2-.84-2.95,0l-5.12,5.83c-.41,.45-.51,1.06-.27,1.62s.77,.9,1.37,.9h11c.6,0,1.13-.34,1.37-.9s.14-1.17-.26-1.61l-5.13-5.84Zm10.52-3.66c0,.28-.22,.5-.5,.5H.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5H23.5c.28,0,.5,.22,.5,.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrReflectVertical = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M10.52,8.34c.38,.42,.91,.66,1.48,.66s1.1-.24,1.48-.66l5.12-5.83c.41-.45,.51-1.06,.27-1.62s-.77-.9-1.37-.9H6.5c-.6,0-1.13,.34-1.37,.9s-.14,1.17,.26,1.61l5.13,5.84ZM6.04,1.3c.03-.07,.16-.3,.46-.3h11c.3,0,.43,.23,.46,.3,.03,.07,.12,.32-.1,.55l-5.13,5.83c-.38,.42-1.09,.42-1.46,0L6.13,1.84c-.2-.22-.12-.47-.09-.54Zm7.43,14.36c-.75-.84-2.2-.84-2.95,0l-5.12,5.83c-.41,.45-.51,1.06-.27,1.62s.77,.9,1.37,.9h11c.6,0,1.13-.34,1.37-.9s.14-1.17-.26-1.61l-5.13-5.84Zm10.52-3.66c0,.28-.22,.5-.5,.5H.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5H23.5c.28,0,.5,.22,.5,.5Z"/></svg>
+
 );
-
-FiTrReflectVertical.displayName = 'FiTrReflectVertical';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPptFile: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPptFile = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m4.257,5.723l-.005-1.473h.715c.413,0,.762.336.762.735s-.349.735-.762.735l-.71.003Zm6.188-.003c.413,0,.762-.336.762-.735s-.349-.735-.762-.735h-.715l.005,1.473.71-.003Zm13.555-2.72v14.496l-6.504,6.504H0V3C0,1.346,1.346,0,3,0h18c1.654,0,3,1.346,3,3Zm-10.385,1.25h1.375v4.819h1.25v-4.819h1.375v-1.25h-4v1.25Zm-5.137,4.819h1.25v-2.096l.717-.003c1.109,0,2.012-.891,2.012-1.985s-.902-1.985-2.012-1.985h-1.967v6.069Zm-5.479,0h1.25v-2.096l.717-.003c1.109,0,2.012-.891,2.012-1.985s-.902-1.985-2.012-1.985h-1.967v6.069Zm18,1.931H3v10h12v-6h6v-4Z"/>
 </svg>
-);
 
-FiBsPptFile.displayName = 'FiBsPptFile';
+);

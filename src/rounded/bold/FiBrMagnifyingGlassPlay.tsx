@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrMagnifyingGlassPlay: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.56 21.438-5.519-5.513c1.225-1.66 1.959-3.703 1.959-5.919 0-5.514-4.486-10-10-10s-10 4.486-10 10 4.486 10 10 10c2.217 0 4.26-.734 5.92-1.959l5.52 5.515c.586.585 1.536.585 2.121 0 .585-.587.585-1.536 0-2.122zm-13.56-4.433c-3.86 0-7-3.141-7-7s3.14-6.999 7-6.999 7 3.141 7 7-3.14 7-7 7zm2.992-6.138s-4.508 2.469-4.508 2.469c-.664.374-1.484-.107-1.484-.868v-4.937c0-.762.82-1.241 1.484-.868l4.508 2.47c.677.38.677 1.355 0 1.735z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrMagnifyingGlassPlay = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.56 21.438-5.519-5.513c1.225-1.66 1.959-3.703 1.959-5.919 0-5.514-4.486-10-10-10s-10 4.486-10 10 4.486 10 10 10c2.217 0 4.26-.734 5.92-1.959l5.52 5.515c.586.585 1.536.585 2.121 0 .585-.587.585-1.536 0-2.122zm-13.56-4.433c-3.86 0-7-3.141-7-7s3.14-6.999 7-6.999 7 3.141 7 7-3.14 7-7 7zm2.992-6.138s-4.508 2.469-4.508 2.469c-.664.374-1.484-.107-1.484-.868v-4.937c0-.762.82-1.241 1.484-.868l4.508 2.47c.677.38.677 1.355 0 1.735z"/></svg>
 );
-
-FiBrMagnifyingGlassPlay.displayName = 'FiBrMagnifyingGlassPlay';

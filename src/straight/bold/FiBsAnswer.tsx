@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsAnswer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsAnswer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.5,0H3.5C1.57,0,0,1.57,0,3.5v16.5h6.74l3.599,3.03c.479.426,1.08.636,1.675.636.582,0,1.158-.202,1.606-.601l3.708-3.065h6.672V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,17h-4.752l-4.244,3.511-4.168-3.511H3V3.5c0-.275.225-.5.5-.5h17c.275,0,.5.225.5.5v13.5ZM12.876,5.18c-1.313-.55-2.651.221-2.937,1.458l-1.939,8.362h2.053l.232-1h3.43l.232,1h2.053l-1.922-8.291c-.154-.662-.575-1.266-1.202-1.528Zm-2.127,6.82l1.138-4.91c.012-.053.059-.09.113-.09s.101.037.113.09l1.138,4.91h-2.503Z"/>
 </svg>
-);
 
-FiBsAnswer.displayName = 'FiBsAnswer';
+);

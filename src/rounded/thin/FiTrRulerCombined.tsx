@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrRulerCombined: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.5,14H10V3.5c0-1.93-1.57-3.5-3.5-3.5H3.5C1.57,0,0,1.57,0,3.5V19.5c0,2.481,2.019,4.5,4.5,4.5H20.5c1.93,0,3.5-1.57,3.5-3.5v-3c0-1.93-1.57-3.5-3.5-3.5Zm2.5,6.5c0,1.379-1.121,2.5-2.5,2.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V3.5c0-1.379,1.122-2.5,2.5-2.5h3c1.378,0,2.5,1.121,2.5,2.5v.5h-2.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h2.5v4h-2.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h2.5v4h-2.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h2.5v2.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-2.5h4v2.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-2.5h4v2.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-2.5h.5c1.379,0,2.5,1.121,2.5,2.5v3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrRulerCombined = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.5,14H10V3.5c0-1.93-1.57-3.5-3.5-3.5H3.5C1.57,0,0,1.57,0,3.5V19.5c0,2.481,2.019,4.5,4.5,4.5H20.5c1.93,0,3.5-1.57,3.5-3.5v-3c0-1.93-1.57-3.5-3.5-3.5Zm2.5,6.5c0,1.379-1.121,2.5-2.5,2.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V3.5c0-1.379,1.122-2.5,2.5-2.5h3c1.378,0,2.5,1.121,2.5,2.5v.5h-2.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h2.5v4h-2.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h2.5v4h-2.5c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h2.5v2.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-2.5h4v2.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-2.5h4v2.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-2.5h.5c1.379,0,2.5,1.121,2.5,2.5v3Z"/></svg>
+
 );
-
-FiTrRulerCombined.displayName = 'FiTrRulerCombined';

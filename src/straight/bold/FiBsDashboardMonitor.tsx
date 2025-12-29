@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDashboardMonitor: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDashboardMonitor = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,19V3.5c0-1.93-1.57-3.5-3.5-3.5H3.5C1.57,0,0,1.57,0,3.5v15.5H10.5v2H6v3h12v-3h-4.5v-2h10.5ZM3,3.5c0-.276,.225-.5,.5-.5H20.5c.275,0,.5,.224,.5,.5v12.5H3V3.5Zm10,6c0,.741-.215,1.425-.566,2.02l-2.434-2.434v-3.445c1.722,.446,3,1.997,3,3.859Zm-5,.414l3.02,3.02c-.595,.351-1.28,.566-2.02,.566-2.209,0-4-1.791-4-4,0-1.862,1.278-3.413,3-3.859v4.273Zm7-4.914h4v3h-4v-3Zm0,5h4v3h-4v-3Z"/>
 </svg>
-);
 
-FiBsDashboardMonitor.displayName = 'FiBsDashboardMonitor';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsIdBadge: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsIdBadge = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.5,4h-6.5v-1c0-1.654-1.346-3-3-3s-3,1.346-3,3v1H2.5c-1.379,0-2.5,1.121-2.5,2.5v17.5h24V6.5c0-1.379-1.121-2.5-2.5-2.5Zm-11.5-1c0-1.103.897-2,2-2s2,.897,2,2v4h-4V3Zm13,20H1V6.5c0-.827.673-1.5,1.5-1.5h6.5v3h6v-3h6.5c.827,0,1.5.673,1.5,1.5v16.5Zm-19-3h7v-9h-7v9Zm1-8h5v7h-5v-7Zm8,3h7v1h-7v-1Zm0-4h7v1h-7v-1Zm0,8h5v1h-5v-1Z"/>
 </svg>
-);
 
-FiTsIdBadge.displayName = 'FiTsIdBadge';
+);

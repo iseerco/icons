@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RoadSignLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RoadSignLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13,10h-4.086l2.293-2.293-1.414-1.414-3.302,3.301c-.773.775-.773,2.037,0,2.812l3.301,3.301,1.414-1.414-2.304-2.293h4.097c.552,0,1,.448,1,1v4.5l2-2v-2.5c0-1.654-1.346-3-3-3Zm10.052-.297L14.297.948c-1.223-1.222-3.368-1.222-4.591,0L.951,9.702c-.613.613-.951,1.429-.951,2.296s.338,1.683.951,2.295l8.755,8.756c.633.633,1.464.949,2.295.949s1.663-.316,2.296-.949l8.755-8.755c.613-.613.951-1.429.951-2.296s-.338-1.683-.951-2.295Zm-1.414,3.177l-8.755,8.755c-.484.486-1.274.487-1.763,0L2.365,12.879c-.235-.235-.365-.548-.365-.881s.13-.646.365-.881L11.12,2.362c.233-.233.547-.362.881-.362s.648.129.882.362l8.755,8.755c.235.235.365.548.365.881s-.13.646-.365.881Z"/>
 </svg>
-);
 
-RoadSignLeft.displayName = 'RoadSignLeft';
+);

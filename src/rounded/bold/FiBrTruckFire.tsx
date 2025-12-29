@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrTruckFire: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrTruckFire = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22.773,9.077c-.561-1.681-2.043-2.846-3.773-3.037v-.539c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5v.5h-2V3h8.5c.829,0,1.5-.671,1.5-1.5s-.671-1.5-1.5-1.5H1.5C.671,0,0,.671,0,1.5s.671,1.5,1.5,1.5h1.5v3.051c-1.692,.245-3,1.691-3,3.449v11c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5v-.5h1v.5c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5v-.5h6v.5c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5v-.851c1.178-.564,2-1.758,2-3.149v-2.526c0-.808-.129-1.606-.385-2.372l-.841-2.525Zm-2.846,.949l.841,2.525c.041,.122,.062,.248,.092,.372h-2.861v-3.923h.504c.646,0,1.219,.412,1.423,1.025ZM11,6h-1V3h1v3ZM7,3v3h-1V3h1Zm-3.5,6H15v3H3v-2.5c0-.276,.224-.5,.5-.5Zm-.5,8v-2H15v2H3Z"/>
 </svg>
-);
 
-FiBrTruckFire.displayName = 'FiBrTruckFire';
+);

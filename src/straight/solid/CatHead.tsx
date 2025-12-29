@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CatHead: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CatHead = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.937,1.621L22.653.009l-4.134,3.134c-2.078-1.483-4.213-2.166-6.538-2.143-2.277.042-4.616.808-6.529,2.122L1.399.048l-.33,1.538c-.043.204-1.07,5.077-1.07,11.914,0,5.79,4.71,10.5,10.5,10.5h3c5.79,0,10.5-4.71,10.5-10.5s-1.02-11.633-1.063-11.879ZM6,10.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5Zm10,8.5c-1.994,0-3.246-.831-4-1.877-.754,1.046-2.006,1.877-4,1.877v-2c2.03,0,2.686-1.292,2.898-2.206-.908-.362-1.398-1.12-1.398-1.606,0-.656.889-1.188,2.5-1.188s2.5.532,2.5,1.188c0,.486-.49,1.244-1.398,1.606.212.914.869,2.206,2.898,2.206v2Zm.5-7c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Z"/>
 </svg>
-);
 
-CatHead.displayName = 'CatHead';
+);

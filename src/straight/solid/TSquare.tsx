@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.29 4.813c-1.283-.388-3.685-1.342-5.351-3.37-.752-.917-1.87-1.443-3.066-1.443h-5.746c-1.196 0-2.314.526-3.066 1.442-1.666 2.03-4.067 2.984-5.351 3.371l-.71.215v3.972h6v-4.707c.564-.453 1.111-.977 1.607-1.582.114-.138.249-.252.393-.352v21.641h8v-5h-4v-2h4v-3h-4v-2h4v-3h-4v-2h4v-4.641c.144.101.279.214.393.353.497.604 1.043 1.128 1.607 1.581v4.707h6v-3.972z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.29 4.813c-1.283-.388-3.685-1.342-5.351-3.37-.752-.917-1.87-1.443-3.066-1.443h-5.746c-1.196 0-2.314.526-3.066 1.442-1.666 2.03-4.067 2.984-5.351 3.371l-.71.215v3.972h6v-4.707c.564-.453 1.111-.977 1.607-1.582.114-.138.249-.252.393-.352v21.641h8v-5h-4v-2h4v-3h-4v-2h4v-3h-4v-2h4v-4.641c.144.101.279.214.393.353.497.604 1.043 1.128 1.607 1.581v4.707h6v-3.972z"/></svg>
 );
-
-TSquare.displayName = 'TSquare';

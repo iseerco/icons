@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsHandBandageWound: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsHandBandageWound = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.5,2c-.828,0-1.5.672-1.5,1.5v6.5h-2V1.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5v8.5h-2V1.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5v8.5h-2.013V3.58c0-.747-.511-1.44-1.248-1.56-.94-.153-1.739.568-1.739,1.479v12.269l-2.64-2.296c-.866-.722-2.153-.604-2.874.261-.722.866-.605,2.153.261,2.874l4.518,4.053,3.653,3.338h15.082V3.5c0-.828-.672-1.5-1.5-1.5Zm-9.206,11l-4.306,3.936v-3.936h4.306Zm-3.759,7.5l8.206-7.5h3.26v.112l-8.63,7.888h-2.288l-.547-.5Zm7.282.5l4.183-3.823v3.823h-4.183Z"/>
 </svg>
-);
 
-FiBsHandBandageWound.displayName = 'FiBsHandBandageWound';
+);

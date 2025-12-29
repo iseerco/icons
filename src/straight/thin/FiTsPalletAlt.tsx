@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsPalletAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsPalletAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m0,17h24v4h-1v-3h-10.5v3h-1v-3H1v3H0v-4Zm12-2H0V5.5c0-1.379,1.122-2.5,2.5-2.5h7c1.378,0,2.5,1.121,2.5,2.5v9.5Zm-1-9.5c0-.827-.673-1.5-1.5-1.5H2.5c-.827,0-1.5.673-1.5,1.5v8.5h10V5.5Zm13,2v7.5h-10v-7.5c0-1.379,1.121-2.5,2.5-2.5h5c1.379,0,2.5,1.121,2.5,2.5Zm-1,0c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5.673-1.5,1.5v6.5h8v-6.5Z"/>
 </svg>
-);
 
-FiTsPalletAlt.displayName = 'FiTsPalletAlt';
+);

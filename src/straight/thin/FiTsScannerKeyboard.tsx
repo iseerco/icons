@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsScannerKeyboard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsScannerKeyboard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13,4h-2V0h2v4Zm1,.052c.732.082,1.417.32,2,.711V0h-2v4.052ZM9,0h-1v4h1V0Zm9,14h1V0h-1v14ZM22,0v14h2V0h-2Zm-2,14h1V0h-1v14Zm-4-5.499v13c0,1.378-1.122,2.5-2.5,2.5H2.5c-1.378,0-2.5-1.123-2.5-2.501v-13c0-1.378,1.122-2.5,2.5-2.5h11c1.378,0,2.5,1.123,2.5,2.501Zm-1,0c0-.827-.673-1.5-1.5-1.5H2.5c-.827,0-1.5.672-1.5,1.499v13c0,.827.673,1.5,1.5,1.5h11c.827,0,1.5-.672,1.5-1.499v-13ZM3,17.001h1v-2h-1v2Zm3,0h1v-2h-1v2Zm3,0h1v-2h-1v2Zm-6,4h1v-2h-1v2Zm3,0h1v-2h-1v2Zm3,0h1v-2h-1v2Zm3-4h1v-2h-1v2Zm0,4h1v-2h-1v2ZM3,9.001h10v4H3v-4Zm1,3h8v-2H4v2Z"/>
 </svg>
-);
 
-FiTsScannerKeyboard.displayName = 'FiTsScannerKeyboard';
+);

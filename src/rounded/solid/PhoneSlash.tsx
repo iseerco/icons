@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PhoneSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.707,1.711l-22,22A1,1,0,0,1,.293,22.293l5.043-5.041C1.147,12.594-2.236,6.317,1.784,1.868l1.15-1A3.081,3.081,0,0,1,7.26.911c.031.03,1.884,2.437,1.884,2.437a3.1,3.1,0,0,1-.007,4.281l-1.6,1.9A14.2,14.2,0,0,0,9.65,12.938L22.293.3A1,1,0,0,1,23.707,1.711ZM20.656,14.858a3.1,3.1,0,0,0-4.281.006L14.469,16.47c-.4-.17-.785-.359-1.157-.562a.983.983,0,0,0-1.162.178L9.089,19.147a1,1,0,0,0,.1,1.509c4.408,2.976,9.111,5.042,12.99,1.51l.91-1.048a3.1,3.1,0,0,0,0-4.377C23.062,16.709,20.656,14.858,20.656,14.858Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PhoneSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.707,1.711l-22,22A1,1,0,0,1,.293,22.293l5.043-5.041C1.147,12.594-2.236,6.317,1.784,1.868l1.15-1A3.081,3.081,0,0,1,7.26.911c.031.03,1.884,2.437,1.884,2.437a3.1,3.1,0,0,1-.007,4.281l-1.6,1.9A14.2,14.2,0,0,0,9.65,12.938L22.293.3A1,1,0,0,1,23.707,1.711ZM20.656,14.858a3.1,3.1,0,0,0-4.281.006L14.469,16.47c-.4-.17-.785-.359-1.157-.562a.983.983,0,0,0-1.162.178L9.089,19.147a1,1,0,0,0,.1,1.509c4.408,2.976,9.111,5.042,12.99,1.51l.91-1.048a3.1,3.1,0,0,0,0-4.377C23.062,16.709,20.656,14.858,20.656,14.858Z"/></svg>
+
 );
-
-PhoneSlash.displayName = 'PhoneSlash';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrDropdown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
-  <path d="M18.5,4H5.5C2.467,4,0,6.468,0,9.5v5c0,3.032,2.467,5.5,5.5,5.5h13c3.033,0,5.5-2.468,5.5-5.5v-5c0-3.032-2.467-5.5-5.5-5.5Zm2.5,10.5c0,1.379-1.122,2.5-2.5,2.5H5.5c-1.378,0-2.5-1.121-2.5-2.5v-5c0-1.379,1.122-2.5,2.5-2.5h13c1.378,0,2.5,1.121,2.5,2.5v5Zm-2.224-2.726l-1.953,1.92c-.455,.455-1.193,.455-1.648,0l-1.953-1.92c-.474-.467-.144-1.274,.522-1.274h4.51c.666,0,.996,.807,.522,1.274Z"/>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrDropDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
+  <path d="m20,0H4C1.791,0,0,1.791,0,4v15c0,2.757,2.243,5,5,5h6c2.757,0,5-2.243,5-5v-11h5c1.657,0,3-1.343,3-3v-1c0-2.209-1.791-4-4-4Zm-7,19c0,1.103-.897,2-2,2h-6c-1.103,0-2-.897-2-2v-11h10v11Zm7.991-15.224l-2.435,2.23c-.301.301-.788.301-1.089,0l-2.435-2.23c-.485-.485-.141-1.314.544-1.314h4.87c.686,0,1.029.829.544,1.314Zm-15.991,12.724c0-.828.671-1.5,1.5-1.5h3c.829,0,1.5.672,1.5,1.5s-.671,1.5-1.5,1.5h-3c-.829,0-1.5-.672-1.5-1.5Zm0-5c0-.828.671-1.5,1.5-1.5h3c.829,0,1.5.672,1.5,1.5s-.671,1.5-1.5,1.5h-3c-.829,0-1.5-.672-1.5-1.5Z"/>
 </svg>
-);
 
-FiBrDropdown.displayName = 'FiBrDropdown';
+);

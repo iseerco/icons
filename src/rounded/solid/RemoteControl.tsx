@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RemoteControl: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RemoteControl = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23,8c-.552,0-1-.448-1-1,0-2.757-2.243-5-5-5-.552,0-1-.448-1-1s.448-1,1-1c3.86,0,7,3.14,7,7,0,.552-.448,1-1,1Zm-3-1c0-1.654-1.346-3-3-3-.552,0-1,.448-1,1s.448,1,1,1,1,.449,1,1,.448,1,1,1,1-.448,1-1Zm-2.233,8.203l-7.553,7.557c-1.648,1.651-4.322,1.654-5.973,.005l-3.003-2.999c-1.649-1.647-1.652-4.319-.005-5.97l7.552-7.556c1.647-1.651,4.321-1.654,5.972-.006l3.004,2.998c1.65,1.647,1.653,4.32,.006,5.971Zm-7.767-5.703c0,.828,.672,1.5,1.5,1.5s1.5-.672,1.5-1.5-.672-1.5-1.5-1.5-1.5,.672-1.5,1.5Zm0,3c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5,.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Zm3,3c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5,.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Zm3-3c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5,.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Z"/>
 </svg>
-);
 
-RemoteControl.displayName = 'RemoteControl';
+);

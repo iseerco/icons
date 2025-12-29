@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrashCanCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrashCanCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17,4v-2c0-1.103-.897-2-2-2h-6c-1.103,0-2,.897-2,2v2H2v2h2v15c0,1.654,1.346,3,3,3h10c1.654,0,3-1.346,3-3V6h2v-2h-5Zm-8-2h6v2h-6v-2Zm2.908,14.42c-.386.387-.896.58-1.406.58s-1.025-.195-1.416-.586l-2.345-2.259,1.389-1.439,2.357,2.271,5.132-5.021,1.402,1.426-5.113,5.027Z"/>
 </svg>
-);
 
-TrashCanCheck.displayName = 'TrashCanCheck';
+);

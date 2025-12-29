@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrSquarePollHorizontal: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19.5,0H4.5C2.02,0,0,2.02,0,4.5v15c0,2.48,2.02,4.5,4.5,4.5h15c2.48,0,4.5-2.02,4.5-4.5V4.5c0-2.48-2.02-4.5-4.5-4.5Zm3.5,19.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v15Zm-4-6c0,.28-.22,.5-.5,.5H8.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h10c.28,0,.5,.22,.5,.5Zm0,4c0,.28-.22,.5-.5,.5h-7c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h7c.28,0,.5,.22,.5,.5Zm0-8c0,.28-.22,.5-.5,.5H5.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h13c.28,0,.5,.22,.5,.5Zm0-4c0,.28-.22,.5-.5,.5h-3c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h3c.28,0,.5,.22,.5,.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrSquarePollHorizontal = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19.5,0H4.5C2.02,0,0,2.02,0,4.5v15c0,2.48,2.02,4.5,4.5,4.5h15c2.48,0,4.5-2.02,4.5-4.5V4.5c0-2.48-2.02-4.5-4.5-4.5Zm3.5,19.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v15Zm-4-6c0,.28-.22,.5-.5,.5H8.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h10c.28,0,.5,.22,.5,.5Zm0,4c0,.28-.22,.5-.5,.5h-7c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h7c.28,0,.5,.22,.5,.5Zm0-8c0,.28-.22,.5-.5,.5H5.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h13c.28,0,.5,.22,.5,.5Zm0-4c0,.28-.22,.5-.5,.5h-3c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5h3c.28,0,.5,.22,.5,.5Z"/></svg>
+
 );
-
-FiTrSquarePollHorizontal.displayName = 'FiTrSquarePollHorizontal';

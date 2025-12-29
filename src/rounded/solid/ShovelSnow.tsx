@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShovelSnow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShovelSnow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.706,4.292L19.695.281c-.391-.391-1.024-.391-1.414,0-.391.391-.391,1.024,0,1.414l1.305,1.305-8.337,8.302-1.508-1.508c-1.562-1.562-4.095-1.562-5.657,0l-3.206,3.206c-1.172,1.172-1.172,3.071,0,4.243l5.879,5.879c1.172,1.172,3.071,1.172,4.243,0l3.206-3.206c1.562-1.562,1.562-4.095,0-5.657l-1.543-1.543,8.337-8.302,1.292,1.292c.39.391,1.024.391,1.414,0,.39-.391.39-1.024,0-1.414ZM2.293,15.707c-.391-.391-.391-1.024,0-1.414l2-2c.39-.391,1.024-.391,1.414,0,.39.391.39,1.024,0,1.414l-2,2c-.391.391-1.024.391-1.414,0Zm4.414,3c-.391.391-1.024.391-1.414,0-.391-.391-.391-1.024,0-1.414l2-2c.39-.391,1.024-.391,1.414,0,.39.391.39,1.024,0,1.414l-2,2Zm5,1l-2,2c-.391.39-1.024.39-1.414,0h0c-.391-.391-.391-1.024,0-1.414l2-2c.39-.39,1.023-.391,1.414,0h0c.391.391.391,1.024,0,1.414Z"/>
 </svg>
-);
 
-ShovelSnow.displayName = 'ShovelSnow';
+);

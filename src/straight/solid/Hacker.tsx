@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Hacker: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m7.536 7h-2.536c0-3.86 3.14-7 7-7s7 3.14 7 7h-2.565c-.252-2.244-2.139-4-4.449-4s-4.197 1.756-4.449 4zm2 0h4.899c-.232-1.14-1.242-2-2.449-2s-2.217.86-2.449 2zm7.464 5 7 12h-14zm1 9h-2v2h2zm0-5h-2v4h2zm4.438 1.352.643-8.352h-5.514l4.872 8.352zm-6.003-8.352h-15.515l.769 10h-1.689v2c0 1.654 1.346 3 3 3h4.685z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Hacker = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m7.536 7h-2.536c0-3.86 3.14-7 7-7s7 3.14 7 7h-2.565c-.252-2.244-2.139-4-4.449-4s-4.197 1.756-4.449 4zm2 0h4.899c-.232-1.14-1.242-2-2.449-2s-2.217.86-2.449 2zm7.464 5 7 12h-14zm1 9h-2v2h2zm0-5h-2v4h2zm4.438 1.352.643-8.352h-5.514l4.872 8.352zm-6.003-8.352h-15.515l.769 10h-1.689v2c0 1.654 1.346 3 3 3h4.685z"/></svg>
 );
-
-Hacker.displayName = 'Hacker';

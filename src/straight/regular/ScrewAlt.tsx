@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ScrewAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ScrewAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,18.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5ZM9,6.914v14.058l-3,3-3-3V6.914L0,3.914V0h12v3.914l-3,3Zm-4,9.255l2-2.073v-2.682l-2,2v2.755Zm2-9.169h-2v3.586l2-2v-1.586ZM2,3.086l1.914,1.914h4.172l1.914-1.914v-1.086H2v1.086Zm5,17.058v-3.167l-2,2.073v1.094l1,1,1-1Zm16.842-1.644l-3.175,5.5h-6.351l-3.175-5.5,3.175-5.5h6.351l3.175,5.5Zm-2.309,0l-2.021-3.5h-4.042l-2.021,3.5,2.021,3.5h4.042l2.021-3.5Z"/>
 </svg>
-);
 
-ScrewAlt.displayName = 'ScrewAlt';
+);

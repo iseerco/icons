@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSupplier: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSupplier = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m9,12c3.309,0,6-2.691,6-6S12.309,0,9,0,3,2.691,3,6s2.691,6,6,6Zm0-11c2.757,0,5,2.243,5,5s-2.243,5-5,5-5-2.243-5-5S6.243,1,9,1Zm13,13h-7c-1.103,0-2,.897-2,2v8h11v-8c0-1.103-.897-2-2-2Zm1,9h-9v-7c0-.552.449-1,1-1h7c.551,0,1,.448,1,1v7Zm-6-6h3v1h-3v-1Zm-8,1.247l2-2.25v1.506l-2,2.25-4.219-4.747c-2.104.114-3.781,1.862-3.781,3.994v5H0v-5c0-2.757,2.243-5,5-5h.225l3.775,4.247Z"/>
 </svg>
-);
 
-FiTsSupplier.displayName = 'FiTsSupplier';
+);

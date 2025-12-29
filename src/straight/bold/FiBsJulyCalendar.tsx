@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsJulyCalendar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 5v9h-3v-4h-18v11h3.4v.7c0 .847.255 1.633.68 2.3h-7.08v-19c0-1.654 1.346-3 3-3h3v-2h3v2h6v-2h3v2h3c1.654 0 3 1.346 3 3zm-2.4 11h-1.6v8h4v-1.6h-2.4zm-10.2 5.7c0 .386-.314.7-.7.7s-.7-.314-.7-.7v-.7h-1.6v.7c0 1.269 1.031 2.3 2.3 2.3s2.3-1.031 2.3-2.3v-5.7h-1.6zm5.8 0c0 .386-.314.7-.7.7s-.7-.314-.7-.7v-5.7h-1.6v5.7c0 1.269 1.031 2.3 2.3 2.3s2.3-1.031 2.3-2.3v-5.7h-1.6z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsJulyCalendar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 5v9h-3v-4h-18v11h3.4v.7c0 .847.255 1.633.68 2.3h-7.08v-19c0-1.654 1.346-3 3-3h3v-2h3v2h6v-2h3v2h3c1.654 0 3 1.346 3 3zm-2.4 11h-1.6v8h4v-1.6h-2.4zm-10.2 5.7c0 .386-.314.7-.7.7s-.7-.314-.7-.7v-.7h-1.6v.7c0 1.269 1.031 2.3 2.3 2.3s2.3-1.031 2.3-2.3v-5.7h-1.6zm5.8 0c0 .386-.314.7-.7.7s-.7-.314-.7-.7v-5.7h-1.6v5.7c0 1.269 1.031 2.3 2.3 2.3s2.3-1.031 2.3-2.3v-5.7h-1.6z"/></svg>
 );
-
-FiBsJulyCalendar.displayName = 'FiBsJulyCalendar';

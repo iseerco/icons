@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrTimeFast: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m9.5 24h-8a1.5 1.5 0 0 1 0-3h8a1.5 1.5 0 0 1 0 3z"/><path d="m7.5 19h-6a1.5 1.5 0 0 1 0-3h6a1.5 1.5 0 0 1 0 3z"/><path d="m5.5 14h-4a1.5 1.5 0 0 1 0-3h4a1.5 1.5 0 0 1 0 3z"/><path d="m14.5 23.722a1.5 1.5 0 0 1 -.354-2.958 9.022 9.022 0 1 0 -10.303-12.622 1.5 1.5 0 0 1 -2.711-1.284 12.023 12.023 0 1 1 13.723 16.821 1.513 1.513 0 0 1 -.355.043z"/><path d="m12.5 6a1.5 1.5 0 0 0 -1.5 1.5v4.293a2 2 0 0 0 .586 1.414l1.793 1.793a1.5 1.5 0 0 0 2.121-2.121l-1.5-1.5v-3.879a1.5 1.5 0 0 0 -1.5-1.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrTimeFast = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m9.5 24h-8a1.5 1.5 0 0 1 0-3h8a1.5 1.5 0 0 1 0 3z"/><path d="m7.5 19h-6a1.5 1.5 0 0 1 0-3h6a1.5 1.5 0 0 1 0 3z"/><path d="m5.5 14h-4a1.5 1.5 0 0 1 0-3h4a1.5 1.5 0 0 1 0 3z"/><path d="m14.5 23.722a1.5 1.5 0 0 1 -.354-2.958 9.022 9.022 0 1 0 -10.303-12.622 1.5 1.5 0 0 1 -2.711-1.284 12.023 12.023 0 1 1 13.723 16.821 1.513 1.513 0 0 1 -.355.043z"/><path d="m12.5 6a1.5 1.5 0 0 0 -1.5 1.5v4.293a2 2 0 0 0 .586 1.414l1.793 1.793a1.5 1.5 0 0 0 2.121-2.121l-1.5-1.5v-3.879a1.5 1.5 0 0 0 -1.5-1.5z"/></svg>
 );
-
-FiBrTimeFast.displayName = 'FiBrTimeFast';

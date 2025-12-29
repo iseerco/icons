@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Dropdown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
-  <path d="M21,4H3c-1.654,0-3,1.346-3,3v13H24V7c0-1.654-1.346-3-3-3Zm-3.645,10.138c-.447,.447-1.172,.447-1.619,0l-3.191-3.138h8l-3.191,3.138Z"/>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DropDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
+  <path d="m0,10v14h16v-14H0Zm13,12H3v-2h10v2Zm0-4H3v-2h10v2Zm0-4H3v-2h10v2ZM21,0H3C1.343,0,0,1.343,0,3v5h24V3c0-1.657-1.343-3-3-3Zm-1.846,5.71c-.386.386-1.012.386-1.398,0l-2.756-2.71h6.909l-2.756,2.71Z"/>
 </svg>
-);
 
-Dropdown.displayName = 'Dropdown';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrLariSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,23.5c0,.28-.22,.5-.5,.5H1.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5H7.42c-3.79-1.74-6.42-5.57-6.42-10C1,7.97,4.39,3.72,9,2.42V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5v1.68c.65-.12,1.32-.18,2-.18s1.35,.06,2,.18V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5v1.92c4.61,1.31,8,5.56,8,10.58,0,.28-.22,.5-.5,.5s-.5-.22-.5-.5c0-4.47-2.95-8.26-7-9.54V11.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5V3.2c-.65-.13-1.32-.2-2-.2s-1.35,.07-2,.2V11.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5V3.46c-4.05,1.28-7,5.07-7,9.54,0,5.51,4.49,10,10,10h10.5c.28,0,.5,.22,.5,.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrLariSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,23.5c0,.28-.22,.5-.5,.5H1.5c-.28,0-.5-.22-.5-.5s.22-.5,.5-.5H7.42c-3.79-1.74-6.42-5.57-6.42-10C1,7.97,4.39,3.72,9,2.42V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5v1.68c.65-.12,1.32-.18,2-.18s1.35,.06,2,.18V.5c0-.28,.22-.5,.5-.5s.5,.22,.5,.5v1.92c4.61,1.31,8,5.56,8,10.58,0,.28-.22,.5-.5,.5s-.5-.22-.5-.5c0-4.47-2.95-8.26-7-9.54V11.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5V3.2c-.65-.13-1.32-.2-2-.2s-1.35,.07-2,.2V11.5c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5V3.46c-4.05,1.28-7,5.07-7,9.54,0,5.51,4.49,10,10,10h10.5c.28,0,.5,.22,.5,.5Z"/></svg>
+
 );
-
-FiTrLariSign.displayName = 'FiTrLariSign';

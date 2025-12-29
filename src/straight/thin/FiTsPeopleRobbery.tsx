@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsPeopleRobbery: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsPeopleRobbery = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23,0h-1V3.793l-2.207,2.207h-5.586l-2.207-2.207V0h-1V4.207l3,3V24h1v-7h4v7h1V7.207l3-3V0ZM15,16V7h4v9h-4ZM3.5,5c1.378,0,2.5-1.121,2.5-2.5S4.878,0,3.5,0,1,1.121,1,2.5s1.122,2.5,2.5,2.5ZM3.5,1c.827,0,1.5,.673,1.5,1.5s-.673,1.5-1.5,1.5-1.5-.673-1.5-1.5,.673-1.5,1.5-1.5Zm2.212,6.36c-.416-.804-1.246-1.36-2.212-1.36-1.378,0-2.5,1.121-2.5,2.5v8.5H3v7h1v-7h2v-7.385l2.23,3.385h3.77v-1h-3.23l-3.058-4.64Zm-.712,1.14v7.5H2v-7.5c0-.827,.673-1.5,1.5-1.5,.435,0,.825,.189,1.099,.487h0c.205,.279,.431,.647,.402,1.013Zm12-3.5c1.379,0,2.5-1.121,2.5-2.5s-1.121-2.5-2.5-2.5-2.5,1.121-2.5,2.5,1.121,2.5,2.5,2.5Zm0-4c.827,0,1.5,.673,1.5,1.5s-.673,1.5-1.5,1.5-1.5-.673-1.5-1.5,.673-1.5,1.5-1.5Z"/>
 </svg>
-);
 
-FiTsPeopleRobbery.displayName = 'FiTsPeopleRobbery';
+);

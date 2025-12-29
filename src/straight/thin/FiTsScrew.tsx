@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsScrew: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsScrew = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,0H6v2.707l3,3v15.269l3,3,3-3V5.707l3-3V0Zm-4,8.598l-4,4.146v-1.719l4-4v1.573Zm-4,5.586l4-4.146v1.56l-4,4.146v-1.56Zm0,3l4-4.146v1.578l-4,4.146v-1.578Zm0-7.573v-3.611h3.611l-3.611,3.611Zm2,12.951l-2-2v-.36l4-4.146v1.559l-2.31,2.384h1.39l.92-.948v1.51l-2,2ZM17,2.293l-2.707,2.707h-4.586l-2.707-2.707v-1.293h10v1.293Z"/>
 </svg>
-);
 
-FiTsScrew.displayName = 'FiTsScrew';
+);

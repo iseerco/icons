@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PencilLightbulb: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PencilLightbulb = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M15,17v3.953l-3,3-3-3v-3.953h6ZM12,0C7.589,0,4,3.589,4,8c0,2.836,1.525,5.486,3.98,6.914,.041,.024,.073,.059,.112,.086h2.908v-5.184c-1.161-.414-2-1.514-2-2.816h2c0,.551,.448,1,1,1s1-.449,1-1h2c0,1.302-.839,2.402-2,2.816v5.184h2.908c.039-.027,.07-.062,.112-.086,2.455-1.428,3.98-4.078,3.98-6.914C20,3.589,16.411,0,12,0Z"/>
 </svg>
-);
 
-PencilLightbulb.displayName = 'PencilLightbulb';
+);

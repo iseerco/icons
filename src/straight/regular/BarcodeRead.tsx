@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BarcodeRead: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M4,6h2v12h-2V6Zm4,12h2V6h-2v12ZM20,6h-2v12h2V6Zm-9,12h3V6h-3v12Zm-9,1v-3H0v3c0,1.654,1.346,3,3,3h3v-2H3c-.551,0-1-.449-1-1Zm20,0c0,.551-.449,1-1,1h-3v2h3c1.654,0,3-1.346,3-3v-3h-2v3Zm-1-17h-3v2h3c.551,0,1,.449,1,1v3h2v-3c0-1.654-1.346-3-3-3ZM0,5v3H2v-3c0-.551,.449-1,1-1h3V2H3C1.346,2,0,3.346,0,5Z"/><polygon points="16 6 15 6 15 18 16 18 16 6 16 6"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BarcodeRead = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M4,6h2v12h-2V6Zm4,12h2V6h-2v12ZM20,6h-2v12h2V6Zm-9,12h3V6h-3v12Zm-9,1v-3H0v3c0,1.654,1.346,3,3,3h3v-2H3c-.551,0-1-.449-1-1Zm20,0c0,.551-.449,1-1,1h-3v2h3c1.654,0,3-1.346,3-3v-3h-2v3Zm-1-17h-3v2h3c.551,0,1,.449,1,1v3h2v-3c0-1.654-1.346-3-3-3ZM0,5v3H2v-3c0-.551,.449-1,1-1h3V2H3C1.346,2,0,3.346,0,5Z"/><polygon points="16 6 15 6 15 18 16 18 16 6 16 6"/></svg>
+
 );
-
-BarcodeRead.displayName = 'BarcodeRead';

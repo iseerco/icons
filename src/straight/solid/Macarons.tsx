@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Macarons: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19.949 17h1.051v2h-18v-2h1.051c.252-2.244 2.139-4 4.449-4h7c2.31 0 4.197 1.756 4.449 4zm-11.449 7h7c1.953 0 3.602-1.258 4.224-3h-15.448c.621 1.742 2.271 3 4.224 3zm11.449-20c-.252-2.244-2.139-4-4.449-4h-7c-2.31 0-4.197 1.756-4.449 4h-1.051v2h18v-2zm-11.449 7h7c1.953 0 3.602-1.258 4.224-3h-15.448c.621 1.742 2.271 3 4.224 3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Macarons = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19.949 17h1.051v2h-18v-2h1.051c.252-2.244 2.139-4 4.449-4h7c2.31 0 4.197 1.756 4.449 4zm-11.449 7h7c1.953 0 3.602-1.258 4.224-3h-15.448c.621 1.742 2.271 3 4.224 3zm11.449-20c-.252-2.244-2.139-4-4.449-4h-7c-2.31 0-4.197 1.756-4.449 4h-1.051v2h18v-2zm-11.449 7h7c1.953 0 3.602-1.258 4.224-3h-15.448c.621 1.742 2.271 3 4.224 3z"/></svg>
 );
-
-Macarons.displayName = 'Macarons';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsGraphicStyle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,7.26v12.04l-5-5-4,4L5,9.29,1,13.29V2.5c0-.83,.67-1.5,1.5-1.5h14.28l.5-1H2.5C1.12,0,0,1.12,0,2.5V24H24V6.76l-1,.5Zm0,15.74H1V14.71l4-4,9,9,4-4,5,5v2.29ZM18,6.02l1.5,3,1.5-3,3-1.5-3-1.5L19.5,.03l-1.5,3-3,1.5,3,1.5Zm.75-2.25l.75-1.5,.75,1.5,1.5,.75-1.5,.75-.75,1.5-.75-1.5-1.5-.75,1.5-.75Zm-11.75,.23c.55,0,1,.45,1,1s-.45,1-1,1-1-.45-1-1,.45-1,1-1Zm7.6,2.98l-1.17,2.35-2.35,1.17,2.35,1.17,1.17,2.35,1.17-2.35,2.35-1.17-2.35-1.17-1.17-2.35Zm.43,3.95l-.43,.85-.43-.85-.85-.43,.85-.43,.43-.85,.43,.85,.85,.43-.85,.43Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsGraphicStyle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,7.26v12.04l-5-5-4,4L5,9.29,1,13.29V2.5c0-.83,.67-1.5,1.5-1.5h14.28l.5-1H2.5C1.12,0,0,1.12,0,2.5V24H24V6.76l-1,.5Zm0,15.74H1V14.71l4-4,9,9,4-4,5,5v2.29ZM18,6.02l1.5,3,1.5-3,3-1.5-3-1.5L19.5,.03l-1.5,3-3,1.5,3,1.5Zm.75-2.25l.75-1.5,.75,1.5,1.5,.75-1.5,.75-.75,1.5-.75-1.5-1.5-.75,1.5-.75Zm-11.75,.23c.55,0,1,.45,1,1s-.45,1-1,1-1-.45-1-1,.45-1,1-1Zm7.6,2.98l-1.17,2.35-2.35,1.17,2.35,1.17,1.17,2.35,1.17-2.35,2.35-1.17-2.35-1.17-1.17-2.35Zm.43,3.95l-.43,.85-.43-.85-.85-.43,.85-.43,.43-.85,.43,.85,.85,.43-.85,.43Z"/></svg>
+
 );
-
-FiTsGraphicStyle.displayName = 'FiTsGraphicStyle';

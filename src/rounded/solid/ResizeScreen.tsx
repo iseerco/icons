@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ResizeScreen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m15.42 0h-6.84c-1.425 0-2.58 1.155-2.58 2.58v6.84c0 1.425 1.155 2.58 2.58 2.58h6.84c1.425 0 2.58-1.155 2.58-2.58v-6.84c0-1.425-1.155-2.58-2.58-2.58zm.58 9.123c0 .484-.393.877-.877.877h-2.773c-.756 0-1.135-.914-.6-1.449l.693-.693-2.301-2.301-.693.693c-.535.535-1.449.156-1.449-.6v-2.773c0-.484.393-.877.877-.877h2.773c.756 0 1.135.914.6 1.449l-.693.693 2.301 2.301.693-.693c.535-.535 1.449-.156 1.449.6zm4-7.022v7.899c0 2.209-1.791 4-4 4h-8c-2.209 0-4-1.791-4-4v-7.899c-2.279.465-4 2.485-4 4.899v8c0 2.761 2.239 5 5 5h6v2h-4c-.553 0-1 .447-1 1s.447 1 1 1h10c.553 0 1-.447 1-1s-.447-1-1-1h-4v-2h6c2.761 0 5-2.239 5-5v-8c0-2.414-1.721-4.434-4-4.899z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ResizeScreen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15.42 0h-6.84c-1.425 0-2.58 1.155-2.58 2.58v6.84c0 1.425 1.155 2.58 2.58 2.58h6.84c1.425 0 2.58-1.155 2.58-2.58v-6.84c0-1.425-1.155-2.58-2.58-2.58zm.58 9.123c0 .484-.393.877-.877.877h-2.773c-.756 0-1.135-.914-.6-1.449l.693-.693-2.301-2.301-.693.693c-.535.535-1.449.156-1.449-.6v-2.773c0-.484.393-.877.877-.877h2.773c.756 0 1.135.914.6 1.449l-.693.693 2.301 2.301.693-.693c.535-.535 1.449-.156 1.449.6zm4-7.022v7.899c0 2.209-1.791 4-4 4h-8c-2.209 0-4-1.791-4-4v-7.899c-2.279.465-4 2.485-4 4.899v8c0 2.761 2.239 5 5 5h6v2h-4c-.553 0-1 .447-1 1s.447 1 1 1h10c.553 0 1-.447 1-1s-.447-1-1-1h-4v-2h6c2.761 0 5-2.239 5-5v-8c0-2.414-1.721-4.434-4-4.899z"/></svg>
 );
-
-ResizeScreen.displayName = 'ResizeScreen';

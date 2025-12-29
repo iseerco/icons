@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DiaryBookmarks: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DiaryBookmarks = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22,8v1h.5c.828,0,1.5.672,1.5,1.5v2c0,.828-.672,1.5-1.5,1.5h-.5v2h-14V0h9c2.05,0,3.812,1.234,4.584,3h.916c.828,0,1.5.672,1.5,1.5v2c0,.828-.672,1.5-1.5,1.5h-.5ZM5,16h1V.1C3.672.575,2,2.624,2,5v12.025c.699-.527,1.525-.86,2.395-.964.199-.041.402-.061.605-.061Zm-3,5c0,1.657,1.343,3,3,3h12c2.761,0,5-2.239,5-5v-1H5c-1.657,0-3,1.343-3,3Z"/>
 </svg>
-);
 
-DiaryBookmarks.displayName = 'DiaryBookmarks';
+);

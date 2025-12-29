@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowTrendDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,8c-.553,0-1,.447-1,1v5.586l-6.563-6.562c-1.344-1.344-3.531-1.344-4.875,0l-2.577,2.577c-.543,.543-1.428,.543-1.971,0L1.707,6.293c-.391-.391-1.023-.391-1.414,0s-.391,1.023,0,1.414l4.308,4.308c1.322,1.322,3.477,1.322,4.799,0l2.577-2.577c.564-.564,1.482-.564,2.047,0l6.562,6.562h-5.586c-.553,0-1,.447-1,1s.447,1,1,1h6c1.654,0,3-1.346,3-3v-6c0-.553-.447-1-1-1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowTrendDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,8c-.553,0-1,.447-1,1v5.586l-6.563-6.562c-1.344-1.344-3.531-1.344-4.875,0l-2.577,2.577c-.543,.543-1.428,.543-1.971,0L1.707,6.293c-.391-.391-1.023-.391-1.414,0s-.391,1.023,0,1.414l4.308,4.308c1.322,1.322,3.477,1.322,4.799,0l2.577-2.577c.564-.564,1.482-.564,2.047,0l6.562,6.562h-5.586c-.553,0-1,.447-1,1s.447,1,1,1h6c1.654,0,3-1.346,3-3v-6c0-.553-.447-1-1-1Z"/></svg>
+
 );
-
-ArrowTrendDown.displayName = 'ArrowTrendDown';

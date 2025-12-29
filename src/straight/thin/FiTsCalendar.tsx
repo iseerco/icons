@@ -1,23 +1,23 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCalendar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCalendar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M21.5,2h-3.5V0h-1V2H7V0h-1V2H2.5C1.122,2,0,3.122,0,4.5V24H24V4.5c0-1.378-1.122-2.5-2.5-2.5ZM2.5,3H21.5c.827,0,1.5,.673,1.5,1.5v3.5H1v-3.5c0-.827,.673-1.5,1.5-1.5ZM1,23V9H23v14H1Z"/>
-  <rect x="9" y="13" width={size} height={size}/>
-  <rect x="13" y="13" width={size} height={size}/>
-  <rect x="17" y="13" width={size} height={size}/>
-  <rect x="9" y="18" width={size} height={size}/>
-  <rect x="5" y="13" width={size} height={size}/>
-  <rect x="5" y="18" width={size} height={size}/>
-  <rect x="13" y="18" width={size} height={size}/>
-  <rect x="17" y="18" width={size} height={size}/>
+  <rect x="9" y="13" width="2" height="1"/>
+  <rect x="13" y="13" width="2" height="1"/>
+  <rect x="17" y="13" width="2" height="1"/>
+  <rect x="9" y="18" width="2" height="1"/>
+  <rect x="5" y="13" width="2" height="1"/>
+  <rect x="5" y="18" width="2" height="1"/>
+  <rect x="13" y="18" width="2" height="1"/>
+  <rect x="17" y="18" width="2" height="1"/>
 </svg>
-);
 
-FiTsCalendar.displayName = 'FiTsCalendar';
+);

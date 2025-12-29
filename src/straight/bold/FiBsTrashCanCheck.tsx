@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTrashCanCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTrashCanCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m6.783,13.853l2.084-2.158,2.182,2.107,4.076-3.996,2.1,2.143-4.416,4.33c-.48.48-1.116.722-1.753.722-.641,0-1.283-.243-1.771-.732l-2.501-2.415Zm16.217-7.853h-2v15.5c0,1.379-1.121,2.5-2.5,2.5H5.5c-1.379,0-2.5-1.121-2.5-2.5V6H1v-3h5v-.5c0-1.379,1.121-2.5,2.5-2.5h7c1.379,0,2.5,1.121,2.5,2.5v.5h5v3Zm-5,0H6v15h12V6Z"/>
 </svg>
-);
 
-FiBsTrashCanCheck.displayName = 'FiBsTrashCanCheck';
+);

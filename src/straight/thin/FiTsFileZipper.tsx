@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsFileZipper: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m8,4h-1v-2h1v2Zm0,1h-1v2h1v-2Zm0,3h-1v2h1v-2Zm.057,3l1.443,5.5v1.5h-4l.018-1.63,1.448-5.37h1.091Zm.443,5.565l-.992-3.735-1.008,3.736v.434h2v-.435Zm13.5-9.272v16.707H2V2.5c0-1.378,1.121-2.5,2.5-2.5h10.207l7.293,7.293Zm-7-.293h5.293L15,1.707v5.293Zm6,16v-15h-7V1H4.5c-.827,0-1.5.673-1.5,1.5v20.5h18Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsFileZipper = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m8,4h-1v-2h1v2Zm0,1h-1v2h1v-2Zm0,3h-1v2h1v-2Zm.057,3l1.443,5.5v1.5h-4l.018-1.63,1.448-5.37h1.091Zm.443,5.565l-.992-3.735-1.008,3.736v.434h2v-.435Zm13.5-9.272v16.707H2V2.5c0-1.378,1.121-2.5,2.5-2.5h10.207l7.293,7.293Zm-7-.293h5.293L15,1.707v5.293Zm6,16v-15h-7V1H4.5c-.827,0-1.5.673-1.5,1.5v20.5h18Z"/></svg>
+
 );
-
-FiTsFileZipper.displayName = 'FiTsFileZipper';

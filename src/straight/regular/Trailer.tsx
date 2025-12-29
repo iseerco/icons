@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Trailer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,19H22V3a3,3,0,0,0-3-3H3A3,3,0,0,0,0,3V18a3,3,0,0,0,3,3H4.127a4.014,4.014,0,0,0,7.746,0H24ZM3,2H19a1,1,0,0,1,1,1v9H18V4H16v8H14V4H12v8H10V4H8v8H6V4H4v8H2V3A1,1,0,0,1,3,2ZM8,22a2,2,0,0,1,0-4A2,2,0,0,1,8,22Zm0-6a4.006,4.006,0,0,0-3.873,3H3a1,1,0,0,1-1-1V14H20v5H11.873A4.006,4.006,0,0,0,8,16Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Trailer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,19H22V3a3,3,0,0,0-3-3H3A3,3,0,0,0,0,3V18a3,3,0,0,0,3,3H4.127a4.014,4.014,0,0,0,7.746,0H24ZM3,2H19a1,1,0,0,1,1,1v9H18V4H16v8H14V4H12v8H10V4H8v8H6V4H4v8H2V3A1,1,0,0,1,3,2ZM8,22a2,2,0,0,1,0-4A2,2,0,0,1,8,22Zm0-6a4.006,4.006,0,0,0-3.873,3H3a1,1,0,0,1-1-1V14H20v5H11.873A4.006,4.006,0,0,0,8,16Z"/></svg>
+
 );
-
-Trailer.displayName = 'Trailer';

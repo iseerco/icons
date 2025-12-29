@@ -1,18 +1,19 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChartPieAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChartPieAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M257.209,65.285l-0.276-21.258h-21.258c-1.485-0.014-2.97-0.014-4.455,0C102.431,45.257-0.977,150.659,0.253,279.448   c1.23,128.79,106.632,232.197,235.421,230.967c128.729-0.141,233.052-104.455,233.205-233.183v-21.258H256.933L257.209,65.285z"/>
 	<path d="M299.854,1.574L299.854,1.574l0,211.925h211.904C511.211,96.692,416.661,2.133,299.854,1.574z"/>
 </g>
 </svg>
-);
 
-ChartPieAlt.displayName = 'ChartPieAlt';
+);

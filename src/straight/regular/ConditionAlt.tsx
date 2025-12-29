@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ConditionAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ConditionAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.824,11l-4.842-3.502.008-.641c1.449-.428,2.51-1.771,2.51-3.357,0-1.93-1.57-3.5-3.5-3.5s-3.5,1.57-3.5,3.5c0,1.578,1.051,2.916,2.49,3.351l-.008.633-4.808,3.516H0v4h2v-2h4.174l5.793,4.236,5.858-4.236h4.176v2h2v-4h-6.176Zm-7.324-7.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5-.673,1.5-1.5,1.5-1.5-.673-1.5-1.5Zm1.473,11.264l-3.779-2.764,3.779-2.764,3.82,2.764-3.82,2.764Zm11.984,3.693l-2.043,2.043,2.043,2.043-1.414,1.414-2.043-2.043-2.043,2.043-1.414-1.414,2.043-2.043-2.043-2.043,1.414-1.414,2.043,2.043,2.043-2.043,1.414,1.414Zm-16.895-1.015l1.414,1.414-5.057,5.058L.082,20.576l1.414-1.414,1.923,1.924,3.643-3.644Z"/>
 </svg>
-);
 
-ConditionAlt.displayName = 'ConditionAlt';
+);

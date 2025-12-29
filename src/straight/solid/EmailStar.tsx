@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EmailStar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19.826 4.363h4.174v1l-3.054 2.083 1.271 3.982-.818.571-3.382-2.338-3.331 2.338-.787-.593 1.181-4.022-3.079-2.016v-1.006h4.2l1.285-4.363h1.059l1.283 4.363zm1.58 10.072-2.82-1.949-3.05 3.05c-.945.944-2.201 1.464-3.536 1.464s-2.591-.52-3.536-1.464l-8.464-8.465v16.929h24v-11.378zm-7.284-.314.025-.025-2.557-1.924 1.153-3.927-2.742-1.795v-3.45h-7.001c-1.147 0-2.135.655-2.639 1.603l9.517 9.518c1.134 1.133 3.109 1.133 4.243 0z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EmailStar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19.826 4.363h4.174v1l-3.054 2.083 1.271 3.982-.818.571-3.382-2.338-3.331 2.338-.787-.593 1.181-4.022-3.079-2.016v-1.006h4.2l1.285-4.363h1.059l1.283 4.363zm1.58 10.072-2.82-1.949-3.05 3.05c-.945.944-2.201 1.464-3.536 1.464s-2.591-.52-3.536-1.464l-8.464-8.465v16.929h24v-11.378zm-7.284-.314.025-.025-2.557-1.924 1.153-3.927-2.742-1.795v-3.45h-7.001c-1.147 0-2.135.655-2.639 1.603l9.517 9.518c1.134 1.133 3.109 1.133 4.243 0z"/></svg>
 );
-
-EmailStar.displayName = 'EmailStar';

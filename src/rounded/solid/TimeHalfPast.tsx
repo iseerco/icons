@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TimeHalfPast: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m14.181.207a1 1 0 0 0 -1.181.983v2.879a8 8 0 1 0 0 15.862v2.879a1 1 0 0 0 1.181.983 11.991 11.991 0 0 0 0-23.586zm-1.181 13.516v2.277a1 1 0 0 1 -2 0v-2.277a1.984 1.984 0 0 1 0-3.446v-3.277a1 1 0 0 1 2 0v3.277a1.984 1.984 0 0 1 0 3.446zm-10.014-8.755a1 1 0 1 1 -1.17.8 1 1 0 0 1 1.17-.8zm-1.6 3.987a1 1 0 1 1 -1.17.8 1 1 0 0 1 1.167-.8zm8.742 12.868a1 1 0 1 1 -1.17.794 1 1 0 0 1 1.167-.794zm-4.12-19.923a1 1 0 1 1 -1.17.8 1 1 0 0 1 1.17-.8zm4.174-1.691a1 1 0 1 1 -1.182.771 1 1 0 0 1 1.182-.771zm-9.948 13.837a1 1 0 1 1 .8 1.17 1 1 0 0 1 -.8-1.17zm1.681 3.963a1 1 0 1 1 .8 1.17 1 1 0 0 1 -.8-1.17zm3.052 2.991a1 1 0 1 1 .8 1.17 1 1 0 0 1 -.8-1.17z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TimeHalfPast = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14.181.207a1 1 0 0 0 -1.181.983v2.879a8 8 0 1 0 0 15.862v2.879a1 1 0 0 0 1.181.983 11.991 11.991 0 0 0 0-23.586zm-1.181 13.516v2.277a1 1 0 0 1 -2 0v-2.277a1.984 1.984 0 0 1 0-3.446v-3.277a1 1 0 0 1 2 0v3.277a1.984 1.984 0 0 1 0 3.446zm-10.014-8.755a1 1 0 1 1 -1.17.8 1 1 0 0 1 1.17-.8zm-1.6 3.987a1 1 0 1 1 -1.17.8 1 1 0 0 1 1.167-.8zm8.742 12.868a1 1 0 1 1 -1.17.794 1 1 0 0 1 1.167-.794zm-4.12-19.923a1 1 0 1 1 -1.17.8 1 1 0 0 1 1.17-.8zm4.174-1.691a1 1 0 1 1 -1.182.771 1 1 0 0 1 1.182-.771zm-9.948 13.837a1 1 0 1 1 .8 1.17 1 1 0 0 1 -.8-1.17zm1.681 3.963a1 1 0 1 1 .8 1.17 1 1 0 0 1 -.8-1.17zm3.052 2.991a1 1 0 1 1 .8 1.17 1 1 0 0 1 -.8-1.17z"/></svg>
 );
-
-TimeHalfPast.displayName = 'TimeHalfPast';

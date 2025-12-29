@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCandleHolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m5.588,3.588c0-.659.59-1.845,1.186-2.877.548-.948,1.905-.948,2.453,0,.596,1.032,1.186,2.218,1.186,2.877,0,1.332-1.08,2.412-2.412,2.412s-2.412-1.08-2.412-2.412Zm18.412,15.912c0,2.481-2.019,4.5-4.5,4.5H1.5c-.829,0-1.5-.671-1.5-1.5s.671-1.5,1.5-1.5h.5v-9.5c0-2.481,2.019-4.5,4.5-4.5h3c2.481,0,4.5,2.019,4.5,4.5v9.5h5.5c.827,0,1.5-.673,1.5-1.5s-.673-1.5-1.5-1.5c-.37,0-.725.136-1,.382-.617.553-1.566.5-2.118-.117-.553-.617-.5-1.565.117-2.118.826-.739,1.892-1.146,3-1.146,2.481,0,4.5,2.019,4.5,4.5Zm-19,1.5h6v-9.5c0-.827-.673-1.5-1.5-1.5h-3c-.827,0-1.5.673-1.5,1.5v9.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCandleHolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m5.588,3.588c0-.659.59-1.845,1.186-2.877.548-.948,1.905-.948,2.453,0,.596,1.032,1.186,2.218,1.186,2.877,0,1.332-1.08,2.412-2.412,2.412s-2.412-1.08-2.412-2.412Zm18.412,15.912c0,2.481-2.019,4.5-4.5,4.5H1.5c-.829,0-1.5-.671-1.5-1.5s.671-1.5,1.5-1.5h.5v-9.5c0-2.481,2.019-4.5,4.5-4.5h3c2.481,0,4.5,2.019,4.5,4.5v9.5h5.5c.827,0,1.5-.673,1.5-1.5s-.673-1.5-1.5-1.5c-.37,0-.725.136-1,.382-.617.553-1.566.5-2.118-.117-.553-.617-.5-1.565.117-2.118.826-.739,1.892-1.146,3-1.146,2.481,0,4.5,2.019,4.5,4.5Zm-19,1.5h6v-9.5c0-.827-.673-1.5-1.5-1.5h-3c-.827,0-1.5.673-1.5,1.5v9.5Z"/></svg>
+
 );
-
-FiBrCandleHolder.displayName = 'FiBrCandleHolder';

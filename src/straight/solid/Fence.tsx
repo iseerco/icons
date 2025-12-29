@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Fence: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,7v2H0v-2H1V3.086L4,.086l3,3v3.914h2V3.086L12,.086l3,3v3.914h2V3.086L20,.086l3,3v3.914h1ZM9,24h6v-4h-6v4Zm-8,0H7v-4H1v4Zm16,0h6v-4h-6v4Zm6-13h-6v5h-2v-5h-6v5h-2v-5H1v5H0v2H24v-2h-1v-5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Fence = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,7v2H0v-2H1V3.086L4,.086l3,3v3.914h2V3.086L12,.086l3,3v3.914h2V3.086L20,.086l3,3v3.914h1ZM9,24h6v-4h-6v4Zm-8,0H7v-4H1v4Zm16,0h6v-4h-6v4Zm6-13h-6v5h-2v-5h-6v5h-2v-5H1v5H0v2H24v-2h-1v-5Z"/></svg>
+
 );
-
-Fence.displayName = 'Fence';

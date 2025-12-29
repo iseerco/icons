@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const NfcSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7,11.24v5.76h5.76l2,2H5V9.24l2,2ZM3,21V7.24L1,5.24V23H18.76l-2-2H3Zm20.96,1.54l-1.41,1.41L.04,1.46,1.46,.04l1.27,1.27c.4-.19,.83-.31,1.28-.31H20c1.65,0,3,1.35,3,3V21.59l.96,.96ZM4.41,3l2,2h3.82l-1.91,1.91,1.18,1.18,3.09-3.09h6.41v12.59l2,2V4c0-.55-.45-1-1-1H4.41Zm12.59,4h-3.59l-2.41,2.41v.17l6,6V7Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const NfcSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M7,11.24v5.76h5.76l2,2H5V9.24l2,2ZM3,21V7.24L1,5.24V23H18.76l-2-2H3Zm20.96,1.54l-1.41,1.41L.04,1.46,1.46,.04l1.27,1.27c.4-.19,.83-.31,1.28-.31H20c1.65,0,3,1.35,3,3V21.59l.96,.96ZM4.41,3l2,2h3.82l-1.91,1.91,1.18,1.18,3.09-3.09h6.41v12.59l2,2V4c0-.55-.45-1-1-1H4.41Zm12.59,4h-3.59l-2.41,2.41v.17l6,6V7Z"/></svg>
+
 );
-
-NfcSlash.displayName = 'NfcSlash';

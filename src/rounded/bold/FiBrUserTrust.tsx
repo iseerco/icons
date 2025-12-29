@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrUserTrust: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrUserTrust = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M18,12c-3.314,0-6,2.686-6,6s2.686,6,6,6,6-2.686,6-6-2.686-6-6-6Zm3.683,5.712l-2.703,2.614c-.452,.446-1.052,.671-1.653,.671s-1.203-.225-1.663-.674l-1.354-1.332c-.395-.387-.4-1.02-.014-1.414,.386-.395,1.019-.401,1.414-.014l1.354,1.331c.144,.142,.38,.139,.522-.002l2.713-2.624c.397-.381,1.031-.37,1.414,.029,.382,.398,.369,1.031-.029,1.414Zm-12.683-5.712c-3.309,0-6-2.691-6-6S5.691,0,9,0s6,2.691,6,6-2.691,6-6,6Zm0-9c-1.654,0-3,1.346-3,3s1.346,3,3,3,3-1.346,3-3-1.346-3-3-3ZM1.501,24c-.033,0-.067,0-.101-.003-.826-.056-1.452-.77-1.397-1.597,.296-4.456,3.883-8.058,8.343-8.377,.827-.059,1.544,.562,1.604,1.389s-.562,1.544-1.389,1.604c-2.975,.213-5.367,2.613-5.564,5.584-.053,.793-.712,1.4-1.495,1.4Z"/>
 </svg>
-);
 
-FiBrUserTrust.displayName = 'FiBrUserTrust';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrCommand: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrCommand = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20,16h-3v-8h3c2.206,0,4-1.794,4-4s-1.794-4-4-4-4,1.794-4,4v3h-8v-3C8,1.794,6.206,0,4,0S0,1.794,0,4s1.794,4,4,4h3v8h-3c-2.206,0-4,1.794-4,4s1.794,4,4,4,4-1.794,4-4v-3h8v3c0,2.206,1.794,4,4,4s4-1.794,4-4-1.794-4-4-4Zm-3-12c0-1.654,1.346-3,3-3s3,1.346,3,3-1.346,3-3,3h-3v-3ZM1,4c0-1.654,1.346-3,3-3s3,1.346,3,3v3h-3c-1.654,0-3-1.346-3-3Zm6,16c0,1.654-1.346,3-3,3s-3-1.346-3-3,1.346-3,3-3h3v3Zm1-12h8v8h-8v-8Zm12,15c-1.654,0-3-1.346-3-3v-3h3c1.654,0,3,1.346,3,3s-1.346,3-3,3Z"/>
 </svg>
-);
 
-FiTrCommand.displayName = 'FiTrCommand';
+);

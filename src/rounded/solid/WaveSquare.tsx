@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const WaveSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m17.5,22h-3c-1.93,0-3.5-1.57-3.5-3.5V5.5c0-.827-.673-1.5-1.5-1.5h-3c-.827,0-1.5.673-1.5,1.5v6.5c0,.552-.448,1-1,1H1c-.552,0-1-.448-1-1s.448-1,1-1h2v-5.5c0-1.93,1.57-3.5,3.5-3.5h3c1.93,0,3.5,1.57,3.5,3.5v13c0,.827.673,1.5,1.5,1.5h3c.827,0,1.5-.673,1.5-1.5v-6.5c0-.552.448-1,1-1h3c.552,0,1,.448,1,1s-.448,1-1,1h-2v5.5c0,1.93-1.57,3.5-3.5,3.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const WaveSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17.5,22h-3c-1.93,0-3.5-1.57-3.5-3.5V5.5c0-.827-.673-1.5-1.5-1.5h-3c-.827,0-1.5.673-1.5,1.5v6.5c0,.552-.448,1-1,1H1c-.552,0-1-.448-1-1s.448-1,1-1h2v-5.5c0-1.93,1.57-3.5,3.5-3.5h3c1.93,0,3.5,1.57,3.5,3.5v13c0,.827.673,1.5,1.5,1.5h3c.827,0,1.5-.673,1.5-1.5v-6.5c0-.552.448-1,1-1h3c.552,0,1,.448,1,1s-.448,1-1,1h-2v5.5c0,1.93-1.57,3.5-3.5,3.5Z"/></svg>
+
 );
-
-WaveSquare.displayName = 'WaveSquare';

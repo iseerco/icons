@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsModelCubeSpace: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsModelCubeSpace = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,10.849l-4.004-2.288,4.004-2.288,4.004,2.288-4.004,2.288Zm-5-.554v4.576l4,2.286v-4.576l-4-2.286Zm10,0l-4,2.286v4.576l4-2.286v-4.576Zm5.5-4.307v12.025l-10.5,6.001L1.5,18.013V5.987L12-.014l10.5,6.001Zm-3,10.285v-7.406l-2.5,1.428v-1.165l-.996-.569,2.477-1.415-6.481-3.704-6.481,3.704,2.477,1.415-.996.569v1.165l-2.5-1.428v7.406l6.5,3.715v-2.831l1,.571,1-.571v2.831l6.5-3.715Z"/>
 </svg>
-);
 
-FiBsModelCubeSpace.displayName = 'FiBsModelCubeSpace';
+);

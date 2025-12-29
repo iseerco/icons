@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsAlignSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m24.003,23.296l-.707.707L-.003.704.704-.003l4.003,4.003h19.293v1H5.707l4,4h14.293v1h-13.293l4,4h9.293v1h-8.293l4,4h4.293v1h-3.293l3.296,3.296ZM0,19v1h16.5l-1-1H0Zm0-4h11.5l-1-1H0v1Zm0-5h6.5l-1-1H0v1Zm0-6v1h1.5l-1-1h-.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsAlignSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24.003,23.296l-.707.707L-.003.704.704-.003l4.003,4.003h19.293v1H5.707l4,4h14.293v1h-13.293l4,4h9.293v1h-8.293l4,4h4.293v1h-3.293l3.296,3.296ZM0,19v1h16.5l-1-1H0Zm0-4h11.5l-1-1H0v1Zm0-5h6.5l-1-1H0v1Zm0-6v1h1.5l-1-1h-.5Z"/></svg>
+
 );
-
-FiTsAlignSlash.displayName = 'FiTsAlignSlash';

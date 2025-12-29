@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTachometerFast: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width={size} height={size} viewBox="0 0 24 24" {...props}><path d="M18.355,7.352l-.711-.703-4.603,4.645c-.304-.186-.66-.293-1.042-.293-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2c0-.359-.096-.697-.263-.989l4.618-4.66Zm-6.355,6.648c-.551,0-1-.448-1-1s.449-1,1-1,1,.448,1,1-.449,1-1,1Zm12-1c0,3.897-1.911,7.568-5.113,9.818l-.319,.225-2.713-2.347,.654-.756,2.117,1.831c2.746-2.078,4.374-5.328,4.374-8.771,0-6.065-4.935-11-11-11S1,6.935,1,13c0,3.442,1.628,6.693,4.374,8.771l2.117-1.831,.654,.756-2.713,2.347-.319-.225C1.911,20.567,0,16.897,0,13,0,6.383,5.383,1,12,1s12,5.383,12,12Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTachometerFast = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.355,7.352l-.711-.703-4.603,4.645c-.304-.186-.66-.293-1.042-.293-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2c0-.359-.096-.697-.263-.989l4.618-4.66Zm-6.355,6.648c-.551,0-1-.448-1-1s.449-1,1-1,1,.448,1,1-.449,1-1,1Zm12-1c0,3.897-1.911,7.568-5.113,9.818l-.319,.225-2.713-2.347,.654-.756,2.117,1.831c2.746-2.078,4.374-5.328,4.374-8.771,0-6.065-4.935-11-11-11S1,6.935,1,13c0,3.442,1.628,6.693,4.374,8.771l2.117-1.831,.654,.756-2.713,2.347-.319-.225C1.911,20.567,0,16.897,0,13,0,6.383,5.383,1,12,1s12,5.383,12,12Z"/></svg>
+
 );
-
-FiTsTachometerFast.displayName = 'FiTsTachometerFast';

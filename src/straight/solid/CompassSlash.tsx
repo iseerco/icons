@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CompassSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CompassSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,12C24,5.383,18.617,0,12,0c-2.857,0-5.584,1.003-7.749,2.837L1.457.043.043,1.457l22.5,22.5,1.414-1.414-2.794-2.794c1.834-2.165,2.837-4.891,2.837-7.749Zm-5.765-6.332l-3.252,7.901-1.532-1.532.974-2.365-2.271,1.068-1.503-1.503,7.584-3.569Zm-6.67,10.14l6.527,6.527c-1.823,1.08-3.904,1.665-6.092,1.665C5.383,24,0,18.617,0,12c0-2.188.585-4.269,1.666-6.092l6.589,6.589-2.493,5.7,5.804-2.389Z"/>
 </svg>
-);
 
-CompassSlash.displayName = 'CompassSlash';
+);

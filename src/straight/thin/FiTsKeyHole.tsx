@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsKeyHole: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsKeyHole = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M19,7c0-3.86-3.141-7-7-7S5,3.14,5,7c0,2.114,.976,4.129,2.624,5.455l-2.5,11.545h13.752l-2.5-11.545c1.648-1.325,2.624-3.34,2.624-5.455Zm-1.364,16H6.364l2.373-10.962c-1.686-1.12-2.745-3.018-2.737-5.038,0-3.309,2.691-6,6-6s6,2.691,6,6c.008,2.02-1.051,3.918-2.737,5.038l2.373,10.962Z"/>
 </svg>
-);
 
-FiTsKeyHole.displayName = 'FiTsKeyHole';
+);

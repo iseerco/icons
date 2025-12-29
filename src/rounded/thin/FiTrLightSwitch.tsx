@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrLightSwitch: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.5,0H6.5C4.019,0,2,2.019,2,4.5v15c0,2.481,2.019,4.5,4.5,4.5h11c2.481,0,4.5-2.019,4.5-4.5V4.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,19.5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5h11c1.93,0,3.5,1.57,3.5,3.5v15ZM15.5,4h-7c-.827,0-1.5,.673-1.5,1.5v13c0,.827,.673,1.5,1.5,1.5h7c.827,0,1.5-.673,1.5-1.5V5.5c0-.827-.673-1.5-1.5-1.5Zm-7,1h7c.275,0,.5,.225,.5,.5v6H8V5.5c0-.275,.225-.5,.5-.5Zm7,14h-7c-.275,0-.5-.225-.5-.5v-6h8v6c0,.275-.225,.5-.5,.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrLightSwitch = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17.5,0H6.5C4.019,0,2,2.019,2,4.5v15c0,2.481,2.019,4.5,4.5,4.5h11c2.481,0,4.5-2.019,4.5-4.5V4.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,19.5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5h11c1.93,0,3.5,1.57,3.5,3.5v15ZM15.5,4h-7c-.827,0-1.5,.673-1.5,1.5v13c0,.827,.673,1.5,1.5,1.5h7c.827,0,1.5-.673,1.5-1.5V5.5c0-.827-.673-1.5-1.5-1.5Zm-7,1h7c.275,0,.5,.225,.5,.5v6H8V5.5c0-.275,.225-.5,.5-.5Zm7,14h-7c-.275,0-.5-.225-.5-.5v-6h8v6c0,.275-.225,.5-.5,.5Z"/></svg>
+
 );
-
-FiTrLightSwitch.displayName = 'FiTrLightSwitch';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BasketShoppingSimple: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.94,8C20.44,3.51,16.62,0,12,0S3.56,3.51,3.06,8H-.02l1.92,13.42c.21,1.47,1.49,2.58,2.97,2.58h14.27c1.48,0,2.76-1.11,2.97-2.58l1.92-13.42h-3.08ZM12,2c3.52,0,6.43,2.61,6.92,6H5.08c.49-3.39,3.4-6,6.92-6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BasketShoppingSimple = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.94,8C20.44,3.51,16.62,0,12,0S3.56,3.51,3.06,8H-.02l1.92,13.42c.21,1.47,1.49,2.58,2.97,2.58h14.27c1.48,0,2.76-1.11,2.97-2.58l1.92-13.42h-3.08ZM12,2c3.52,0,6.43,2.61,6.92,6H5.08c.49-3.39,3.4-6,6.92-6Z"/></svg>
+
 );
-
-BasketShoppingSimple.displayName = 'BasketShoppingSimple';

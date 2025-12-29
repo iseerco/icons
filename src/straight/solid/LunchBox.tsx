@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LunchBox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 15v2h-24v-2h1.464l.276-2.351c.178-1.51 1.458-2.649 2.979-2.649h14.561c1.521 0 2.802 1.139 2.979 2.649l.276 2.351h1.464zm-22-11c0-2.442 3.939-4 6-4 1.859 0 3.411 1.28 3.858 3h10.142v2h-10.142c-.447 1.72-1.999 3-3.858 3-2.061 0-6-1.558-6-4zm12.281 17h-4.562l-.499-2h-7.756l.276 2.351c.178 1.51 1.458 2.649 2.979 2.649h14.561c1.521 0 2.802-1.139 2.979-2.649l.276-2.351h-7.756l-.499 2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LunchBox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 15v2h-24v-2h1.464l.276-2.351c.178-1.51 1.458-2.649 2.979-2.649h14.561c1.521 0 2.802 1.139 2.979 2.649l.276 2.351h1.464zm-22-11c0-2.442 3.939-4 6-4 1.859 0 3.411 1.28 3.858 3h10.142v2h-10.142c-.447 1.72-1.999 3-3.858 3-2.061 0-6-1.558-6-4zm12.281 17h-4.562l-.499-2h-7.756l.276 2.351c.178 1.51 1.458 2.649 2.979 2.649h14.561c1.521 0 2.802-1.139 2.979-2.649l.276-2.351h-7.756l-.499 2z"/></svg>
 );
-
-LunchBox.displayName = 'LunchBox';

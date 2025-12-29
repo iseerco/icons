@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Picnic: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.929,8A8.983,8.983,0,0,0,3.071,8H0L1.914,21.425A3.012,3.012,0,0,0,4.879,24H19.121a3.012,3.012,0,0,0,2.965-2.575L24,8ZM12,2a7,7,0,0,1,6.917,6H5.083A7,7,0,0,1,12,2Zm6.2,8L14,14.211,9.793,10ZM20.11,21.142a1.006,1.006,0,0,1-.989.858H4.879a1.006,1.006,0,0,1-.989-.858L2.3,10H6.969L14,17.039,21.024,10H21.7Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Picnic = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.929,8A8.983,8.983,0,0,0,3.071,8H0L1.914,21.425A3.012,3.012,0,0,0,4.879,24H19.121a3.012,3.012,0,0,0,2.965-2.575L24,8ZM12,2a7,7,0,0,1,6.917,6H5.083A7,7,0,0,1,12,2Zm6.2,8L14,14.211,9.793,10ZM20.11,21.142a1.006,1.006,0,0,1-.989.858H4.879a1.006,1.006,0,0,1-.989-.858L2.3,10H6.969L14,17.039,21.024,10H21.7Z"/></svg>
+
 );
-
-Picnic.displayName = 'Picnic';

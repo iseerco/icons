@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsTimelineArrow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.44 10.646-3.585-3.586-.707.707s3.65 3.683 3.682 3.732h-8.83v-4.499h3v-7h-7v7h3v4.5h-9v-4.5h3v-7h-7v7h3v4.5h-3v1h8v4.5h-3v7h7v-7h-3v-4.5h13.83c-.033.049-3.682 3.732-3.682 3.732l.707.707 3.585-3.586c.746-.746.746-1.961 0-2.707zm-12.44-9.646h5v5h-5zm-10 0h5v5h-5zm10 22h-5v-5h5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsTimelineArrow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.44 10.646-3.585-3.586-.707.707s3.65 3.683 3.682 3.732h-8.83v-4.499h3v-7h-7v7h3v4.5h-9v-4.5h3v-7h-7v7h3v4.5h-3v1h8v4.5h-3v7h7v-7h-3v-4.5h13.83c-.033.049-3.682 3.732-3.682 3.732l.707.707 3.585-3.586c.746-.746.746-1.961 0-2.707zm-12.44-9.646h5v5h-5zm-10 0h5v5h-5zm10 22h-5v-5h5z"/></svg>
 );
-
-FiTsTimelineArrow.displayName = 'FiTsTimelineArrow';

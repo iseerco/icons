@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LaptopSignal: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 0v9h-2v-9zm-4 2h-2v7h2zm-4 2h-2v5h2zm6 14h2v3c0 1.654-1.346 3-3 3h-18c-1.654 0-3-1.346-3-3v-3h2v-12h10v2h-8v10h4.914l1 1h4.172l1-1h4.914v-7h2zm0 2h-6.086l-1 1h-5.828l-1-1h-6.086v1c0 .552.449 1 1 1h18c.551 0 1-.448 1-1z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LaptopSignal = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 0v9h-2v-9zm-4 2h-2v7h2zm-4 2h-2v5h2zm6 14h2v3c0 1.654-1.346 3-3 3h-18c-1.654 0-3-1.346-3-3v-3h2v-12h10v2h-8v10h4.914l1 1h4.172l1-1h4.914v-7h2zm0 2h-6.086l-1 1h-5.828l-1-1h-6.086v1c0 .552.449 1 1 1h18c.551 0 1-.448 1-1z"/></svg>
 );
-
-LaptopSignal.displayName = 'LaptopSignal';

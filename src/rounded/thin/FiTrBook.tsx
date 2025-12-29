@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrBook: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrBook = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M17.5,0H6.5C4.019,0,2,2.019,2,4.5V20.5c0,1.93,1.57,3.5,3.5,3.5h12c2.481,0,4.5-2.019,4.5-4.5V4.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,4.5v12.5H7V1h10.5c1.93,0,3.5,1.57,3.5,3.5ZM3,4.5c0-1.758,1.308-3.204,3-3.449v15.949h-.5c-.98,0-1.864,.407-2.5,1.058V4.5Zm14.5,18.5H5.5c-1.378,0-2.5-1.121-2.5-2.5s1.122-2.5,2.5-2.5h15.5v1.5c0,1.93-1.57,3.5-3.5,3.5Z"/>
 </svg>
-);
 
-FiTrBook.displayName = 'FiTrBook';
+);

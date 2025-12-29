@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsScythe: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m14.605,0C4.585,0,.834,7.419.679,7.735L.059,9l1.279-.591c2.021-.935,4.299-1.409,6.768-1.409h12.705l-1.814,6h-6.997v1h6.694l-2.931,9.695.957.289L23.972,0h-9.366Zm-6.5,6c-2.048,0-3.975.31-5.749.922C3.841,4.861,7.562,1,14.605,1h8.019l-1.511,5h-13.008Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsScythe = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14.605,0C4.585,0,.834,7.419.679,7.735L.059,9l1.279-.591c2.021-.935,4.299-1.409,6.768-1.409h12.705l-1.814,6h-6.997v1h6.694l-2.931,9.695.957.289L23.972,0h-9.366Zm-6.5,6c-2.048,0-3.975.31-5.749.922C3.841,4.861,7.562,1,14.605,1h8.019l-1.511,5h-13.008Z"/></svg>
+
 );
-
-FiTsScythe.displayName = 'FiTsScythe';

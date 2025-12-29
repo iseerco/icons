@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ScreenShare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ScreenShare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M8.151,15c.983,0,1.92,.359,2.646,1h2.404c.726-.641,1.664-1,2.646-1h5.151c.344,0,.677,.043,1,.11V7.5c0-2.485-2.015-4.5-4.5-4.5H6.5c-2.485,0-4.5,2.015-4.5,4.5v7.61c.323-.067,.656-.11,1-.11h5.151Zm.186-6.663l2.256-2.256c.775-.775,2.038-.775,2.812,0l2.257,2.257c.391,.391,.391,1.023,0,1.414-.195,.195-.451,.293-.707,.293s-.512-.098-.707-.293l-1.249-1.249v3.497c0,.552-.448,1-1,1s-1-.448-1-1v-3.506l-1.249,1.257c-.391,.391-1.023,.391-1.414,0s-.391-1.023,0-1.414Zm15.663,10.663c0,1.105-.895,2-2,2H2c-1.105,0-2-.895-2-2s.895-2,2-2h6.921c.471,0,.918,.207,1.222,.567l.197,.233h3.319l.198-.234c.304-.359,.751-.566,1.221-.566h6.922c1.105,0,2,.895,2,2Z"/>
 </svg>
-);
 
-ScreenShare.displayName = 'ScreenShare';
+);

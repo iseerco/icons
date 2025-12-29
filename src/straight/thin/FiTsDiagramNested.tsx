@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsDiagramNested: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21.5,13h-6c-1.38,0-2.5,1.12-2.5,2.5v2.5H7.5c-.83,0-1.5-.67-1.5-1.5v-5.5h5V2.5c0-1.38-1.12-2.5-2.5-2.5H2.5C1.12,0,0,1.12,0,2.5V11H5v5.5c0,1.38,1.12,2.5,2.5,2.5h5.5v5h11V15.5c0-1.38-1.12-2.5-2.5-2.5ZM1,2.5c0-.83,.67-1.5,1.5-1.5h6c.83,0,1.5,.67,1.5,1.5v7.5H1V2.5ZM23,23H14v-7.5c0-.83,.67-1.5,1.5-1.5h6c.83,0,1.5,.67,1.5,1.5v7.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsDiagramNested = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21.5,13h-6c-1.38,0-2.5,1.12-2.5,2.5v2.5H7.5c-.83,0-1.5-.67-1.5-1.5v-5.5h5V2.5c0-1.38-1.12-2.5-2.5-2.5H2.5C1.12,0,0,1.12,0,2.5V11H5v5.5c0,1.38,1.12,2.5,2.5,2.5h5.5v5h11V15.5c0-1.38-1.12-2.5-2.5-2.5ZM1,2.5c0-.83,.67-1.5,1.5-1.5h6c.83,0,1.5,.67,1.5,1.5v7.5H1V2.5ZM23,23H14v-7.5c0-.83,.67-1.5,1.5-1.5h6c.83,0,1.5,.67,1.5,1.5v7.5Z"/></svg>
+
 );
-
-FiTsDiagramNested.displayName = 'FiTsDiagramNested';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrFileExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m13,20c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm9-10.034v9.515c0,2.481-2.019,4.5-4.5,4.5H6.5c-2.481,0-4.5-2.019-4.5-4.5V4.481C2,2,4.019-.019,6.5-.019h5.515c1.737,0,3.369.676,4.596,1.904l3.485,3.485c1.228,1.228,1.904,2.86,1.904,4.596Zm-8-3.485c0,.827.673,1.5,1.5,1.5h5.132c-.273-.706-.692-1.353-1.243-1.904l-3.485-3.485c-.551-.551-1.198-.971-1.904-1.243v5.132Zm7,3.485c0-.334-.03-.663-.088-.985h-5.412c-1.378,0-2.5-1.122-2.5-2.5V1.069c-.322-.058-.651-.088-.985-.088h-5.515c-1.93,0-3.5,1.57-3.5,3.5v15c0,1.93,1.57,3.5,3.5,3.5h11c1.93,0,3.5-1.57,3.5-3.5v-9.515Zm-9,7.034c.276,0,.5-.224.5-.5v-6c0-.276-.224-.5-.5-.5s-.5.224-.5.5v6c0,.276.224.5.5.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrFileExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m13,20c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm9-10.034v9.515c0,2.481-2.019,4.5-4.5,4.5H6.5c-2.481,0-4.5-2.019-4.5-4.5V4.481C2,2,4.019-.019,6.5-.019h5.515c1.737,0,3.369.676,4.596,1.904l3.485,3.485c1.228,1.228,1.904,2.86,1.904,4.596Zm-8-3.485c0,.827.673,1.5,1.5,1.5h5.132c-.273-.706-.692-1.353-1.243-1.904l-3.485-3.485c-.551-.551-1.198-.971-1.904-1.243v5.132Zm7,3.485c0-.334-.03-.663-.088-.985h-5.412c-1.378,0-2.5-1.122-2.5-2.5V1.069c-.322-.058-.651-.088-.985-.088h-5.515c-1.93,0-3.5,1.57-3.5,3.5v15c0,1.93,1.57,3.5,3.5,3.5h11c1.93,0,3.5-1.57,3.5-3.5v-9.515Zm-9,7.034c.276,0,.5-.224.5-.5v-6c0-.276-.224-.5-.5-.5s-.5.224-.5.5v6c0,.276.224.5.5.5Z"/></svg>
+
 );
-
-FiTrFileExclamation.displayName = 'FiTrFileExclamation';

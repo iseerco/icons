@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ClipboardCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ClipboardCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15.829,2c-.413-1.164-1.525-2-2.829-2h-2c-1.304,0-2.416.836-2.829,2H3v19c0,1.654,1.346,3,3,3h12c1.654,0,3-1.346,3-3V2h-5.171Zm3.171,19c0,.551-.448,1-1,1H6c-.551,0-1-.449-1-1V4h5v-1c0-.551.449-1,1-1h2c.552,0,1,.449,1,1v1h5v17Zm-8.514-7.014l4.813-4.7,1.4,1.427-4.792,4.707c-.386.386-.895.58-1.405.58s-1.026-.195-1.417-.586l-2.279-2.193,1.387-1.441,2.293,2.207Z"/>
 </svg>
-);
 
-ClipboardCheck.displayName = 'ClipboardCheck';
+);

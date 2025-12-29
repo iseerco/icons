@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrMicroscope: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m24,13c0-4.962-4.037-9-9-9h-.76c-.535-.798-1.319-1.416-2.24-1.743v-.757c0-.829-.672-1.5-1.5-1.5s-1.5.671-1.5,1.5v.757c-1.746.619-3,2.287-3,4.243v7c0,.829.672,1.5,1.5,1.5h6c.828,0,1.5-.671,1.5-1.5v-6.5c3.309,0,6,2.691,6,6,0,2.968-2.166,5.439-5,5.916v-.416c0-.829-.672-1.5-1.5-1.5H6.5c-.828,0-1.5.671-1.5,1.5v.5h-2.5c-.828,0-1.5.671-1.5,1.5s.672,1.5,1.5,1.5h.5v.5c0,.829.672,1.5,1.5,1.5s1.5-.671,1.5-1.5v-.5h9v.5c0,.829.672,1.5,1.5,1.5s1.5-.671,1.5-1.5v-1.015c3.492-1.238,6-4.574,6-8.485Zm-12-1h-3v-5.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v5.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrMicroscope = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24,13c0-4.962-4.037-9-9-9h-.76c-.535-.798-1.319-1.416-2.24-1.743v-.757c0-.829-.672-1.5-1.5-1.5s-1.5.671-1.5,1.5v.757c-1.746.619-3,2.287-3,4.243v7c0,.829.672,1.5,1.5,1.5h6c.828,0,1.5-.671,1.5-1.5v-6.5c3.309,0,6,2.691,6,6,0,2.968-2.166,5.439-5,5.916v-.416c0-.829-.672-1.5-1.5-1.5H6.5c-.828,0-1.5.671-1.5,1.5v.5h-2.5c-.828,0-1.5.671-1.5,1.5s.672,1.5,1.5,1.5h.5v.5c0,.829.672,1.5,1.5,1.5s1.5-.671,1.5-1.5v-.5h9v.5c0,.829.672,1.5,1.5,1.5s1.5-.671,1.5-1.5v-1.015c3.492-1.238,6-4.574,6-8.485Zm-12-1h-3v-5.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v5.5Z"/></svg>
+
 );
-
-FiBrMicroscope.displayName = 'FiBrMicroscope';

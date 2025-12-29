@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsScrew: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsScrew = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,0H6v3l2,1.997v14.977l4,4,4-4V5.022l2-2.022V0Zm-5,12.233l-2,2v-2.819l2-2v2.819Zm0-5.647l-2,2v-3.576l2,.006v1.57Zm-1,13.146l-1-1v-1.671l2-2v3.671l-1,1Z"/>
 </svg>
-);
 
-FiBsScrew.displayName = 'FiBsScrew';
+);

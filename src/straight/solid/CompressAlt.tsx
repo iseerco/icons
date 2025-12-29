@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CompressAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_31_minimize" data-name="31 minimize"><path d="M1.414,0,0,1.414,4.293,5.707,2,8H7A1,1,0,0,0,8,7V2L5.707,4.293Z"/><path d="M22,16H17a1,1,0,0,0-1,1v5l2.293-2.293L22.586,24,24,22.586l-4.293-4.293Z"/><path d="M17,8h5L19.707,5.707,24,1.414,22.586,0,18.293,4.293,16,2V7A1,1,0,0,0,17,8Z"/><path d="M7,16H2l2.293,2.293L0,22.586,1.414,24l4.293-4.293L8,22V17A1,1,0,0,0,7,16Z"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CompressAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_31_minimize" data-name="31 minimize"><path d="M1.414,0,0,1.414,4.293,5.707,2,8H7A1,1,0,0,0,8,7V2L5.707,4.293Z"/><path d="M22,16H17a1,1,0,0,0-1,1v5l2.293-2.293L22.586,24,24,22.586l-4.293-4.293Z"/><path d="M17,8h5L19.707,5.707,24,1.414,22.586,0,18.293,4.293,16,2V7A1,1,0,0,0,17,8Z"/><path d="M7,16H2l2.293,2.293L0,22.586,1.414,24l4.293-4.293L8,22V17A1,1,0,0,0,7,16Z"/></g></svg>
+
 );
-
-CompressAlt.displayName = 'CompressAlt';

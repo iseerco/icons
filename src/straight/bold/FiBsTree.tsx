@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTree: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.907,22l-4.075-6H22l-4.5-6h2.829L14.4,1.254a2.942,2.942,0,0,0-4.81.015L3.671,10H6.5L2,16H5.168L1.093,22H10.5v2h3V22ZM8.794,16h3.993l-2-2.94.041-.06H8l2.25-3h1L9.173,7.231,12,3.06,14.671,7H11.5L16,13H13.168l4.075,6H6.757Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTree = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.907,22l-4.075-6H22l-4.5-6h2.829L14.4,1.254a2.942,2.942,0,0,0-4.81.015L3.671,10H6.5L2,16H5.168L1.093,22H10.5v2h3V22ZM8.794,16h3.993l-2-2.94.041-.06H8l2.25-3h1L9.173,7.231,12,3.06,14.671,7H11.5L16,13H13.168l4.075,6H6.757Z"/></svg>
+
 );
-
-FiBsTree.displayName = 'FiBsTree';

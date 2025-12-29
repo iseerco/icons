@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Backpack: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 13v6a5 5 0 0 1 -3 4.576v-10.576zm-5-2v6.356a8.978 8.978 0 0 0 -14 0v-6.356a6.992 6.992 0 0 1 3-5.736v-1.264a4 4 0 0 1 8 0v1.264a6.992 6.992 0 0 1 3 5.736zm-9-6.7a6.927 6.927 0 0 1 4 0v-.3a2 2 0 0 0 -4 0zm5 4.7h-6v2h6zm-15 10a5 5 0 0 0 3 4.576v-10.576h-3zm12-3a7.008 7.008 0 0 0 -7 7v1h14v-1a7.008 7.008 0 0 0 -7-7z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Backpack = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 13v6a5 5 0 0 1 -3 4.576v-10.576zm-5-2v6.356a8.978 8.978 0 0 0 -14 0v-6.356a6.992 6.992 0 0 1 3-5.736v-1.264a4 4 0 0 1 8 0v1.264a6.992 6.992 0 0 1 3 5.736zm-9-6.7a6.927 6.927 0 0 1 4 0v-.3a2 2 0 0 0 -4 0zm5 4.7h-6v2h6zm-15 10a5 5 0 0 0 3 4.576v-10.576h-3zm12-3a7.008 7.008 0 0 0 -7 7v1h14v-1a7.008 7.008 0 0 0 -7-7z"/></svg>
 );
-
-Backpack.displayName = 'Backpack';

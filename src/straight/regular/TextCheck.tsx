@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TextCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M14.236,14.236,7.118,0,0,14.236H2.236l2-4H10l2,4Zm-9-6L7.118,4.472,9,8.236Z"/><polygon points="12.997 24 7.29 18.293 8.704 16.879 12.997 21.172 22.586 11.583 24 12.997 12.997 24"/></g></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TextCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><g id="_01_align_center" data-name="01 align center"><path d="M14.236,14.236,7.118,0,0,14.236H2.236l2-4H10l2,4Zm-9-6L7.118,4.472,9,8.236Z"/><polygon points="12.997 24 7.29 18.293 8.704 16.879 12.997 21.172 22.586 11.583 24 12.997 12.997 24"/></g></svg>
+
 );
-
-TextCheck.displayName = 'TextCheck';

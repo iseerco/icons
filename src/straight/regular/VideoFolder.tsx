@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VideoFolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 7.59v16.41h-24v-19c0-1.654 1.346-3 3-3h5.236l3.764 1.882v2.118h-.236l-4-2h-4.764c-.551 0-1 .449-1 1v3h10v2h-10v12h20v-12h-2.286zm-11 4.41v2.217l3-2.217v8l-3-2.217v2.217h-9v-8zm-2 2h-5v4h5zm12.708-8.541-9.708 5.459v-10.918zm-7.708 2.041 3.628-2.041-3.628-2.041z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VideoFolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 7.59v16.41h-24v-19c0-1.654 1.346-3 3-3h5.236l3.764 1.882v2.118h-.236l-4-2h-4.764c-.551 0-1 .449-1 1v3h10v2h-10v12h20v-12h-2.286zm-11 4.41v2.217l3-2.217v8l-3-2.217v2.217h-9v-8zm-2 2h-5v4h5zm12.708-8.541-9.708 5.459v-10.918zm-7.708 2.041 3.628-2.041-3.628-2.041z"/></svg>
 );
-
-VideoFolder.displayName = 'VideoFolder';

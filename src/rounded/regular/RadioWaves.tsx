@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RadioWaves: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RadioWaves = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M1,13H23c.552,0,1-.448,1-1s-.448-1-1-1h-6.34C15.643,3.212,14.277,0,12,0s-3.643,3.212-4.66,11H1c-.552,0-1,.448-1,1s.448,1,1,1ZM12,2c.015,0,1.45,.112,2.644,9h-5.289c1.194-8.888,2.629-9,2.644-9Zm11.985,14.174c-.967,5.485-2.218,7.826-4.183,7.826s-3.216-2.341-4.183-7.826c-.096-.544,.267-1.062,.811-1.159,.546-.096,1.063,.268,1.159,.811,1.059,6.006,2.202,6.174,2.213,6.174s1.154-.168,2.213-6.174c.096-.543,.611-.906,1.159-.811,.544,.096,.907,.615,.811,1.159Zm-15.604,0c-.967,5.485-2.218,7.826-4.183,7.826S.982,21.659,.015,16.174c-.096-.544,.267-1.062,.811-1.159,.545-.096,1.063,.268,1.159,.811,1.059,6.006,2.202,6.174,2.213,6.174s1.154-.168,2.213-6.174c.096-.543,.61-.906,1.159-.811,.544,.096,.907,.615,.811,1.159Z"/>
 </svg>
-);
 
-RadioWaves.displayName = 'RadioWaves';
+);

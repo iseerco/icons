@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FolderDirectory: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FolderDirectory = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M0,7v-1C0,3.243,2.243,1,5,1h2.528c.463,0,.927,.109,1.341,.316l3.156,1.578c.138,.069,.293,.105,.447,.105h6.528c2.414,0,4.434,1.721,4.899,4H0Zm0,2v10c0,2.757,2.243,4,5,4h4.919c-.677-1.003-.919-2.176-.919-3,0-1.935,1.304-4.032,3.696-6h-2.696c-.552,0-1-.448-1-1s.448-1,1-1h4c1.103,0,2,.897,2,2v4c0,.553-.448,1-1,1s-1-.447-1-1v-2.482c-1.916,1.565-3,3.162-3,4.482,.006,.496,.177,3,3,3h5c2.757,0,5-2.243,5-5V9H0Z"/>
 </svg>
-);
 
-FolderDirectory.displayName = 'FolderDirectory';
+);

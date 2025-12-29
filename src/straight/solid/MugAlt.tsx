@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MugAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,22H20v2H0ZM24,8c0,2.774-2.185,6-5,6H17.965l-1.137,6H3.172L.065,3.618A3.02,3.02,0,0,1,3,0H17a3,3,0,0,1,2.928,3.653l-.076.4C22.46,4.307,24,5.734,24,8ZM22,8c0-.467,0-1.831-2.521-1.985L18.345,12H19C20.545,12,22,9.746,22,8Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MugAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M0,22H20v2H0ZM24,8c0,2.774-2.185,6-5,6H17.965l-1.137,6H3.172L.065,3.618A3.02,3.02,0,0,1,3,0H17a3,3,0,0,1,2.928,3.653l-.076.4C22.46,4.307,24,5.734,24,8ZM22,8c0-.467,0-1.831-2.521-1.985L18.345,12H19C20.545,12,22,9.746,22,8Z"/></svg>
+
 );
-
-MugAlt.displayName = 'MugAlt';

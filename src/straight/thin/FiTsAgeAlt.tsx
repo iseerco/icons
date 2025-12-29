@@ -1,13 +1,14 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsAgeAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsAgeAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m0,14.5v5.5h2v4h1v-4h2v-1H1v-4.5c0-.827.673-1.5,1.5-1.5h2.5v-1h-2.5c-1.378,0-2.5,1.122-2.5,2.5Z"/>
   <path d="m18.5,5c1.378,0,2.5-1.122,2.5-2.5s-1.122-2.5-2.5-2.5-2.5,1.122-2.5,2.5,1.122,2.5,2.5,2.5Zm0-4c.827,0,1.5.673,1.5,1.5s-.673,1.5-1.5,1.5-1.5-.673-1.5-1.5.673-1.5,1.5-1.5Z"/>
   <path d="m4.5,6c-1.378,0-2.5,1.122-2.5,2.5s1.122,2.5,2.5,2.5,2.5-1.122,2.5-2.5-1.122-2.5-2.5-2.5Zm0,4c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5.673,1.5,1.5-.673,1.5-1.5,1.5Z"/>
@@ -15,6 +16,5 @@ export const FiTsAgeAlt: React.FC<IconProps> = ({
   <path d="m7,11.5v7.5h2v5h1v-5h2v-1h-4v-6.5c0-.827.673-1.5,1.5-1.5h2.5v-1h-2.5c-1.378,0-2.5,1.122-2.5,2.5Z"/>
   <path d="m11.5,3c-1.378,0-2.5,1.122-2.5,2.5s1.122,2.5,2.5,2.5,2.5-1.122,2.5-2.5-1.122-2.5-2.5-2.5Zm0,4c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5.673,1.5,1.5-.673,1.5-1.5,1.5Z"/>
 </svg>
-);
 
-FiTsAgeAlt.displayName = 'FiTsAgeAlt';
+);

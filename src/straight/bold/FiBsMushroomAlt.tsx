@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMushroomAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMushroomAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,7.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm6,5.5h-7.801c.513,2.643.801,6.134.801,7,0,1.203-.487,4-5,4s-5-2.797-5-4c0-.866.289-4.357.801-7H0v-1.5C0,5.159,5.383,0,12,0s12,5.159,12,11.5v1.5Zm-10,7c0-.884-.343-4.66-.865-7h-2.271c-.521,2.34-.865,6.116-.865,7,0,.398,0,1,2,1s2-.602,2-1Zm6.86-10c-.752-3.974-4.439-7-8.86-7-.012,0-.024,0-.036,0,.023.163.036.33.036.5,0,1.933-1.567,3.5-3.5,3.5-1.19,0-2.235-.596-2.864-1.505-1.272,1.203-2.166,2.763-2.496,4.505h5.86c0-1.105.895-2,2-2s2,.895,2,2h7.86Z"/>
 </svg>
-);
 
-FiBsMushroomAlt.displayName = 'FiBsMushroomAlt';
+);

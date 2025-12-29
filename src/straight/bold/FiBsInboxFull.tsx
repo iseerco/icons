@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsInboxFull: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsInboxFull = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.193,3H6.817l.555-3h9.269l.552,3Zm6.807,9.5v8c0,1.93-1.57,3.5-3.5,3.5H3.5c-1.93,0-3.5-1.57-3.5-3.5l.025-8.273L2.287,0h3.051l-2.035,11h5.197v2.5c0,.827.673,1.5,1.5,1.5h4c.827,0,1.5-.673,1.5-1.5v-2.5h5.199L18.674,0h3.047l2.279,12.5Zm-3,1.5h-2.528c-.25,2.247-2.16,4-4.472,4h-4c-2.312,0-4.223-1.753-4.472-4h-2.528v6.5c0,.276.224.5.5.5h17c.276,0,.5-.224.5-.5v-6.5Zm-3.421-9H6.421l-.546,3h12.249l-.546-3Z"/>
 </svg>
-);
 
-FiBsInboxFull.displayName = 'FiBsInboxFull';
+);

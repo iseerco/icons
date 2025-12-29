@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MessageAlert: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MessageAlert = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M7,15h5.935l-1.167,2H7v-2Zm8.268-4H7v2h7.101l1.167-2Zm1.732,1l7,12H10l7-12Zm1,9h-2v2h2v-2Zm0-5h-2v4h2v-4ZM2,22V12C2,6.486,6.486,2,12,2s10,4.486,10,10c0,1.232-.235,2.407-.644,3.498l1.239,2.124c.894-1.678,1.405-3.591,1.405-5.621C24,5.383,18.617,0,12,0S0,5.383,0,12v12H7.685l1.167-2H2ZM7,7v2h10v-2H7Z"/>
 </svg>
-);
 
-MessageAlert.displayName = 'MessageAlert';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Tired: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0A12.013,12.013,0,0,0,0,12c.6,15.9,23.4,15.893,24,0A12.013,12.013,0,0,0,12,0Zm4.375,6.219,1.25,1.562L16.1,9l1.524,1.219-1.25,1.562L12.9,9Zm-10,1.562,1.25-1.562L11.1,9,7.625,11.781l-1.25-1.562L7.9,9ZM11.993,17a21.841,21.841,0,0,0-6,1c.615-2.28,2.671-5,6.007-5s5.385,2.72,6,5A21.923,21.923,0,0,0,11.993,17Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Tired = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,0A12.013,12.013,0,0,0,0,12c.6,15.9,23.4,15.893,24,0A12.013,12.013,0,0,0,12,0Zm4.375,6.219,1.25,1.562L16.1,9l1.524,1.219-1.25,1.562L12.9,9Zm-10,1.562,1.25-1.562L11.1,9,7.625,11.781l-1.25-1.562L7.9,9ZM11.993,17a21.841,21.841,0,0,0-6,1c.615-2.28,2.671-5,6.007-5s5.385,2.72,6,5A21.923,21.923,0,0,0,11.993,17Z"/></svg>
+
 );
-
-Tired.displayName = 'Tired';

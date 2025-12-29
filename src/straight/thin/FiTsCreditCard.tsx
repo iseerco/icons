@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsCreditCard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsCreditCard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.558,3H2.558C1.179,3,.058,4.121.058,5.5v15.5h24V5.5c0-1.379-1.121-2.5-2.5-2.5ZM2.558,4h19c.827,0,1.5.673,1.5,1.5v1.5H1.058v-1.5c0-.827.673-1.5,1.5-1.5Zm20.5,4v2H1.058v-2h22ZM1.058,20v-9h22v9H1.058Zm3.942-6c-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2-.897-2-2-2Zm0,3c-.551,0-1-.448-1-1s.449-1,1-1,1,.448,1,1-.449,1-1,1Z"/>
 </svg>
-);
 
-FiTsCreditCard.displayName = 'FiTsCreditCard';
+);

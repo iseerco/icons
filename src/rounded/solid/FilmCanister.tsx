@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FilmCanister: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m14,22h-1V2h1c.552,0,1-.448,1-1s-.448-1-1-1H1C.448,0,0,.448,0,1s.448,1,1,1h1v20h-1c-.552,0-1,.448-1,1s.448,1,1,1h13c.552,0,1-.448,1-1s-.448-1-1-1Zm6-18h-5v2h2v2h-2v8h2v2h-2v2h5c2.206,0,4-1.794,4-4v-8c0-2.206-1.794-4-4-4Zm0,14h-1v-2h3c0,1.103-.897,2-2,2Zm-1-10v-2h1c1.103,0,2,.897,2,2h-3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FilmCanister = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14,22h-1V2h1c.552,0,1-.448,1-1s-.448-1-1-1H1C.448,0,0,.448,0,1s.448,1,1,1h1v20h-1c-.552,0-1,.448-1,1s.448,1,1,1h13c.552,0,1-.448,1-1s-.448-1-1-1Zm6-18h-5v2h2v2h-2v8h2v2h-2v2h5c2.206,0,4-1.794,4-4v-8c0-2.206-1.794-4-4-4Zm0,14h-1v-2h3c0,1.103-.897,2-2,2Zm-1-10v-2h1c1.103,0,2,.897,2,2h-3Z"/></svg>
+
 );
-
-FilmCanister.displayName = 'FilmCanister';

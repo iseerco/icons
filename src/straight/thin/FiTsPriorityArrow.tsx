@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsPriorityArrow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsPriorityArrow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,15h6v-6h-6v6Zm1-5h4v4h-4v-4Zm-1-9v6h6V1h-6Zm5,5h-4V2h4v4Zm-5,17h6v-6h-6v6Zm1-5h4v4h-4v-4Zm-6.716-11.649l2.351-2.351h-5.635C4.589,4,1,7.589,1,12s3.589,8,8,8h7v1h-7C4.038,21,0,16.963,0,12S4.038,3,9,3h5.57l-2.286-2.286L12.991.007l2.643,2.644c.236.235.366.549.366.882s-.13.647-.366.883l-2.643,2.643-.707-.707Z"/>
 </svg>
-);
 
-FiTsPriorityArrow.displayName = 'FiTsPriorityArrow';
+);

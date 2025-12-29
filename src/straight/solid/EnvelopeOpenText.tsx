@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EnvelopeOpenText: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.583,10.488c.263,.541,.417,1.134,.417,1.744v11.769H0V12.231c.001-.609,.156-1.201,.419-1.742l8.046,8.046c.945,.944,2.2,1.464,3.536,1.464s2.591-.52,3.535-1.464l8.048-8.048Zm-20.583-.245V3c0-1.654,1.346-3,3-3h12c1.654,0,3,1.346,3,3v7.242l-6.879,6.879c-1.133,1.133-3.109,1.133-4.243,0L3,10.243ZM7,6h10v-2H7v2Zm0,4H15v-2H7v2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EnvelopeOpenText = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.583,10.488c.263,.541,.417,1.134,.417,1.744v11.769H0V12.231c.001-.609,.156-1.201,.419-1.742l8.046,8.046c.945,.944,2.2,1.464,3.536,1.464s2.591-.52,3.535-1.464l8.048-8.048Zm-20.583-.245V3c0-1.654,1.346-3,3-3h12c1.654,0,3,1.346,3,3v7.242l-6.879,6.879c-1.133,1.133-3.109,1.133-4.243,0L3,10.243ZM7,6h10v-2H7v2Zm0,4H15v-2H7v2Z"/></svg>
+
 );
-
-EnvelopeOpenText.displayName = 'EnvelopeOpenText';

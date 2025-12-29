@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const NairaSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,11h-1V1c0-.55-.45-1-1-1s-1,.45-1,1V11h-7.45L6.14,1.03C5.59,.19,4.58-.19,3.61,.09c-.96,.28-1.61,1.15-1.61,2.16V11H1c-.55,0-1,.45-1,1s.45,1,1,1h1v10c0,.55,.45,1,1,1s1-.45,1-1V13h7.45l6.41,9.97c.42,.66,1.13,1.03,1.88,1.03,.21,0,.43-.03,.64-.09,.96-.28,1.61-1.15,1.61-2.16V13h1c.55,0,1-.45,1-1s-.45-1-1-1Zm-19,0V2.25s0-.18,.18-.24c.18-.06,.25,.06,.28,.1l5.71,8.89H4Zm16,10.75s0,.18-.18,.24c-.18,.06-.25-.06-.28-.1l-5.71-8.89h6.17v8.75Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const NairaSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,11h-1V1c0-.55-.45-1-1-1s-1,.45-1,1V11h-7.45L6.14,1.03C5.59,.19,4.58-.19,3.61,.09c-.96,.28-1.61,1.15-1.61,2.16V11H1c-.55,0-1,.45-1,1s.45,1,1,1h1v10c0,.55,.45,1,1,1s1-.45,1-1V13h7.45l6.41,9.97c.42,.66,1.13,1.03,1.88,1.03,.21,0,.43-.03,.64-.09,.96-.28,1.61-1.15,1.61-2.16V13h1c.55,0,1-.45,1-1s-.45-1-1-1Zm-19,0V2.25s0-.18,.18-.24c.18-.06,.25,.06,.28,.1l5.71,8.89H4Zm16,10.75s0,.18-.18,.24c-.18,.06-.25-.06-.28-.1l-5.71-8.89h6.17v8.75Z"/></svg>
+
 );
-
-NairaSign.displayName = 'NairaSign';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsScrollTorah: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m19,0v2H5V0H0v24h5v-2h14v2h5V0h-5Zm0,19H5V5h14v14Z"/><path d="m5.626,15.505h4.267l2.107,3.455,2.107-3.455h4.267l-2.132-3.501,2.133-3.499h-4.264l-2.111-3.467-2.111,3.467h-4.264l2.133,3.499-2.132,3.501Zm1.779-1l.939-1.541.94,1.541h-1.878Zm4.595,2.534l-.935-1.534h1.871l-.935,1.534Zm4.595-2.534h-1.878l.94-1.541.939,1.541Zm0-5l-.937,1.537-.936-1.537h1.874Zm-4.594-2.544l.94,1.544h-1.881l.94-1.544Zm-1.549,2.544h3.099l1.521,2.498-1.526,2.502h-3.09l-1.526-2.502,1.521-2.498Zm-3.044,0h1.874l-.936,1.537-.937-1.537Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsScrollTorah = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19,0v2H5V0H0v24h5v-2h14v2h5V0h-5Zm0,19H5V5h14v14Z"/><path d="m5.626,15.505h4.267l2.107,3.455,2.107-3.455h4.267l-2.132-3.501,2.133-3.499h-4.264l-2.111-3.467-2.111,3.467h-4.264l2.133,3.499-2.132,3.501Zm1.779-1l.939-1.541.94,1.541h-1.878Zm4.595,2.534l-.935-1.534h1.871l-.935,1.534Zm4.595-2.534h-1.878l.94-1.541.939,1.541Zm0-5l-.937,1.537-.936-1.537h1.874Zm-4.594-2.544l.94,1.544h-1.881l.94-1.544Zm-1.549,2.544h3.099l1.521,2.498-1.526,2.502h-3.09l-1.526-2.502,1.521-2.498Zm-3.044,0h1.874l-.936,1.537-.937-1.537Z"/></svg>
+
 );
-
-FiBsScrollTorah.displayName = 'FiBsScrollTorah';

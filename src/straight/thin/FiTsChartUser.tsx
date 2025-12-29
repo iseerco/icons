@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsChartUser: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7,14c2.21,0,4-1.79,4-4s-1.79-4-4-4-4,1.79-4,4,1.79,4,4,4Zm0-7c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3Zm7,11.5v5.5h-1v-5.5c0-.83-.67-1.5-1.5-1.5H2.5c-.83,0-1.5,.67-1.5,1.5v5.5H0v-5.5c0-1.38,1.12-2.5,2.5-2.5H11.5c1.38,0,2.5,1.12,2.5,2.5Zm6-11.79l-5.5,5.5-1.54-1.54c.02-.22,.04-.44,.04-.67,0-.26-.02-.51-.05-.75l1.55,1.55,4.79-4.79h-4.29v-1h4.5c.83,0,1.5,.67,1.5,1.5v4.5h-1V6.71Zm4-4.21v15.5H15.9c-.07-.35-.18-.68-.33-1h7.43V2.5c0-.83-.67-1.5-1.5-1.5H7.5c-.83,0-1.5,.67-1.5,1.5v1.59c-.34,.06-.68,.15-1,.26v-1.85c0-1.38,1.12-2.5,2.5-2.5h14c1.38,0,2.5,1.12,2.5,2.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsChartUser = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M7,14c2.21,0,4-1.79,4-4s-1.79-4-4-4-4,1.79-4,4,1.79,4,4,4Zm0-7c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3Zm7,11.5v5.5h-1v-5.5c0-.83-.67-1.5-1.5-1.5H2.5c-.83,0-1.5,.67-1.5,1.5v5.5H0v-5.5c0-1.38,1.12-2.5,2.5-2.5H11.5c1.38,0,2.5,1.12,2.5,2.5Zm6-11.79l-5.5,5.5-1.54-1.54c.02-.22,.04-.44,.04-.67,0-.26-.02-.51-.05-.75l1.55,1.55,4.79-4.79h-4.29v-1h4.5c.83,0,1.5,.67,1.5,1.5v4.5h-1V6.71Zm4-4.21v15.5H15.9c-.07-.35-.18-.68-.33-1h7.43V2.5c0-.83-.67-1.5-1.5-1.5H7.5c-.83,0-1.5,.67-1.5,1.5v1.59c-.34,.06-.68,.15-1,.26v-1.85c0-1.38,1.12-2.5,2.5-2.5h14c1.38,0,2.5,1.12,2.5,2.5Z"/></svg>
+
 );
-
-FiTsChartUser.displayName = 'FiTsChartUser';

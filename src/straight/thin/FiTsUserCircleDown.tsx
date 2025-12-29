@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsUserCircleDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m17.5 0c-3.584 0-6.5 2.916-6.5 6.5s2.916 6.5 6.5 6.5 6.5-2.916 6.5-6.5-2.916-6.5-6.5-6.5zm0 12c-3.033 0-5.5-2.467-5.5-5.5s2.467-5.5 5.5-5.5 5.5 2.467 5.5 5.5-2.467 5.5-5.5 5.5zm.5-6v-3h-1v3h-3.593l3.102 3.588c.267.266.622.413 1 .413h.002c.379 0 .734-.148 1-.416l3.075-3.584h-3.587zm-.208 2.89c-.076.071-.176.111-.283.111-.112 0-.216-.042-.269-.094l-1.648-1.907h3.82zm-5.792 12.11v3h-1v-3c0-1.103-.897-2-2-2h-6c-1.103 0-2 .897-2 2v3h-1v-3c0-1.654 1.346-3 3-3h6c1.654 0 3 1.346 3 3zm-6-5c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-7c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsUserCircleDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17.5 0c-3.584 0-6.5 2.916-6.5 6.5s2.916 6.5 6.5 6.5 6.5-2.916 6.5-6.5-2.916-6.5-6.5-6.5zm0 12c-3.033 0-5.5-2.467-5.5-5.5s2.467-5.5 5.5-5.5 5.5 2.467 5.5 5.5-2.467 5.5-5.5 5.5zm.5-6v-3h-1v3h-3.593l3.102 3.588c.267.266.622.413 1 .413h.002c.379 0 .734-.148 1-.416l3.075-3.584h-3.587zm-.208 2.89c-.076.071-.176.111-.283.111-.112 0-.216-.042-.269-.094l-1.648-1.907h3.82zm-5.792 12.11v3h-1v-3c0-1.103-.897-2-2-2h-6c-1.103 0-2 .897-2 2v3h-1v-3c0-1.654 1.346-3 3-3h6c1.654 0 3 1.346 3 3zm-6-5c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-7c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3z"/></svg>
 );
-
-FiTsUserCircleDown.displayName = 'FiTsUserCircleDown';

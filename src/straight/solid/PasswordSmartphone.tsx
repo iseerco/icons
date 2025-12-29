@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PasswordSmartphone: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PasswordSmartphone = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m5,7v9h19V7H5Zm6.414,5.53l-1.414,1.414-1.03-1.03-1.03,1.03-1.414-1.414,1.03-1.03-1.03-1.03,1.414-1.414,1.03,1.03,1.03-1.03,1.414,1.414-1.03,1.03,1.03,1.03Zm5.559,0l-1.414,1.414-1.03-1.03-1.03,1.03-1.414-1.414,1.03-1.03-1.03-1.03,1.414-1.414,1.03,1.03,1.03-1.03,1.414,1.414-1.03,1.03,1.03,1.03Zm5.558,0l-1.414,1.414-1.03-1.03-1.03,1.03-1.414-1.414,1.03-1.03-1.03-1.03,1.414-1.414,1.03,1.03,1.03-1.03,1.414,1.414-1.03,1.03,1.03,1.03Zm-19.53,3.47H0V0h16v5H3v11Zm-3,2h16v3c0,1.657-1.343,3-3,3H3c-1.657,0-3-1.343-3-3v-3Zm6,4h4v-2h-4v2Z"/>
 </svg>
-);
 
-PasswordSmartphone.displayName = 'PasswordSmartphone';
+);

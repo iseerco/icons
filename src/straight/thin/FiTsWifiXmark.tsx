@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsWifiXmark: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsWifiXmark = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M7,5.869c-2.083,.735-3.998,1.917-5.606,3.525l-.707-.707c1.801-1.801,3.961-3.108,6.313-3.879v1.061Zm10-1.061v1.061c2.083,.735,3.998,1.917,5.606,3.525l.707-.707c-1.801-1.801-3.961-3.108-6.313-3.879Zm-8.347,3.746l3.347-3.347,3.347,3.347,.707-.707-3.347-3.347,3.347-3.347-.707-.707-3.347,3.347L8.653,.446l-.707,.707,3.347,3.347-3.347,3.347,.707,.707Zm5.347,11.446c0,1.103-.897,2-2,2s-2-.897-2-2,.897-2,2-2,2,.897,2,2Zm-1,0c0-.551-.449-1-1-1s-1,.449-1,1,.449,1,1,1,1-.449,1-1Zm-7.364-6.364l.707,.707c1.511-1.511,3.52-2.343,5.657-2.343s4.146,.832,5.657,2.343l.707-.707c-1.7-1.7-3.96-2.636-6.364-2.636s-4.664,.936-6.364,2.636Z"/>
 </svg>
-);
 
-FiTsWifiXmark.displayName = 'FiTsWifiXmark';
+);

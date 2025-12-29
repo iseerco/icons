@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TentArrowDownToLine: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TentArrowDownToLine = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.592,20.125L13.982,6.764,3.475,22H0v2h21.433c.935,0,1.795-.499,2.246-1.302.445-.793.43-1.731-.087-2.573Zm-11.035,1.875l1.443-2.186,1.443,2.186h-2.887Zm9.379-.282c-.048.085-.192.282-.503.282h-3.592l-3.841-5.814-3.841,5.814h-4.255l8.113-11.764,7.908,10.992c.129.212.062.397.01.489ZM3.594,8.418L.295,5.119l1.414-1.414,2.291,2.291V0h2v6.007l2.291-2.302,1.414,1.414-3.299,3.299c-.388.388-.897.581-1.406.581s-1.019-.193-1.406-.581Z"/>
 </svg>
-);
 
-TentArrowDownToLine.displayName = 'TentArrowDownToLine';
+);

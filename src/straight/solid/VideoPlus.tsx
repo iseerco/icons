@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VideoPlus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16,4H3c-1.654,0-3,1.346-3,3v13H19V7c0-1.654-1.346-3-3-3Zm-2.5,9h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2Zm10.5-7.993v13.985l-3-2.236V7.244l3-2.236Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VideoPlus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M16,4H3c-1.654,0-3,1.346-3,3v13H19V7c0-1.654-1.346-3-3-3Zm-2.5,9h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2Zm10.5-7.993v13.985l-3-2.236V7.244l3-2.236Z"/></svg>
+
 );
-
-VideoPlus.displayName = 'VideoPlus';

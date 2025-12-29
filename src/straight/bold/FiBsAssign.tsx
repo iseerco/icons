@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsAssign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsAssign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13,14.436l10,3.5v6.064h-3v-3.936l-7-2.45v6.386h-3l-4.266-3.391c-.866-.722-.983-2.008-.261-2.874.722-.866,2.008-.983,2.874-.261l1.64,1.222v-8.195c0-.911.799-1.632,1.739-1.479.737.12,1.273.812,1.273,1.56v3.855Zm-6-5.436c0-1.105-.895-2-2-2h-3c-1.105,0-2,.895-2,2v1h7v-1Zm-3.5-3c1.105,0,2-.895,2-2s-.895-2-2-2-2,.895-2,2,.895,2,2,2Zm12,1c0-1.105-.895-2-2-2h-3c-1.105,0-2,.895-2,2v1h7v-1Zm-3.5-3c1.105,0,2-.895,2-2s-.895-2-2-2-2,.895-2,2,.895,2,2,2Zm10,3h-3c-1.105,0-2,.895-2,2v1h7v-1c0-1.105-.895-2-2-2Zm-1.5-1c1.105,0,2-.895,2-2s-.895-2-2-2-2,.895-2,2,.895,2,2,2Z"/>
 </svg>
-);
 
-FiBsAssign.displayName = 'FiBsAssign';
+);

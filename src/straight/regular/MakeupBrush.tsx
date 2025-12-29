@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MakeupBrush: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 3.475-3.475-3.475-15.091 13.167-5.434 2.801v1.632a6.407 6.407 0 0 0 6.4 6.4h1.646l2.788-5.436zm-14.05 13.061-2.486-2.486 1.8-1.574 2.256 2.256zm11.315-12.968-8.423 9.654-2.064-2.064 9.654-8.423zm-14.441 18.432h-.424a4.405 4.405 0 0 1 -4.4-4.4v-.413l3.809-1.963 2.969 2.967z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MakeupBrush = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 3.475-3.475-3.475-15.091 13.167-5.434 2.801v1.632a6.407 6.407 0 0 0 6.4 6.4h1.646l2.788-5.436zm-14.05 13.061-2.486-2.486 1.8-1.574 2.256 2.256zm11.315-12.968-8.423 9.654-2.064-2.064 9.654-8.423zm-14.441 18.432h-.424a4.405 4.405 0 0 1 -4.4-4.4v-.413l3.809-1.963 2.969 2.967z"/></svg>
 );
-
-MakeupBrush.displayName = 'MakeupBrush';

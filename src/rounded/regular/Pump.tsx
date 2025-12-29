@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Pump: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Pump = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20,6h-5c-.732,0-1.409.212-2,.556V2h1c.552,0,1-.447,1-1s-.448-1-1-1H5c-.552,0-1,.447-1,1s.448,1,1,1h1v10H2v-1c0-.553-.448-1-1-1s-1,.447-1,1v9c0,.553.448,1,1,1s1-.447,1-1v-1h9v1c0,2.206,1.794,4,4,4h5c2.206,0,4-1.794,4-4v-10c0-2.206-1.794-4-4-4ZM2,14h4v3H2v-3Zm6,3V2h3v15h-3Zm12,5h-5c-1.103,0-2-.897-2-2v-10c0-1.103.897-2,2-2h5c1.103,0,2,.897,2,2h-6c-.552,0-1,.447-1,1s.448,1,1,1h6v2h-6c-.552,0-1,.447-1,1s.448,1,1,1h6v2h-6c-.552,0-1,.447-1,1s.448,1,1,1h6c0,1.103-.897,2-2,2Z"/>
 </svg>
-);
 
-Pump.displayName = 'Pump';
+);

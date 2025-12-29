@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsMagnifyingGlassEye: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsMagnifyingGlassEye = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24.001,23.294l-6.597-6.597c1.607-1.775,2.596-4.12,2.596-6.697C20,4.486,15.514,0,10,0S0,4.486,0,10s4.486,10,10,10c2.577,0,4.922-.989,6.697-2.596l6.597,6.597,.707-.707ZM1,10C1,5.038,5.037,1,10,1s9,4.038,9,9-4.037,9-9,9S1,14.963,1,10Zm15.879,0c-.663-1.242-2.467-4.417-6.879-4.5-4.412,.084-6.214,3.256-6.879,4.5,.663,1.242,2.467,4.417,6.879,4.5,4.412-.084,6.214-3.256,6.879-4.5Zm-6.879,3.5c-3.369,0-5.138-2.44-5.746-3.5,.688-1.212,2.429-3.5,5.746-3.5s5.059,2.288,5.746,3.5c-.688,1.212-2.428,3.5-5.746,3.5Zm0-5.5c-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2-.897-2-2-2Zm0,3c-.552,0-1-.449-1-1s.448-1,1-1,1,.449,1,1-.448,1-1,1Z"/>
 </svg>
-);
 
-FiTsMagnifyingGlassEye.displayName = 'FiTsMagnifyingGlassEye';
+);

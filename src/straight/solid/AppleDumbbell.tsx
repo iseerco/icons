@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AppleDumbbell: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m7 16h2v6h-2v-2h-1v-2h1zm1-4h6v3.995c1.778-1.123 3.025-3.204 2.99-5.54 0-3.37-2.449-6.14-5.571-6.426.122-.093.248-.179.359-.29 1.389-1.39 1.215-3.732 1.215-3.732s-2.342-.174-3.732 1.216c-.293.293-.507.635-.68.985-.261-.877-.591-1.579-.836-2.028l-1.756.959c.245.449.748 1.514.935 2.861h-.811c-3.371 0-6.113 2.896-6.113 6.455 0 3.157 2.159 5.787 5 6.342v-2.797h3zm10 6h-6v-4h-2v10h2v-4h6v4h2v-10h-2zm5 0v-2h-2v6h2v-2h1v-2z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AppleDumbbell = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m7 16h2v6h-2v-2h-1v-2h1zm1-4h6v3.995c1.778-1.123 3.025-3.204 2.99-5.54 0-3.37-2.449-6.14-5.571-6.426.122-.093.248-.179.359-.29 1.389-1.39 1.215-3.732 1.215-3.732s-2.342-.174-3.732 1.216c-.293.293-.507.635-.68.985-.261-.877-.591-1.579-.836-2.028l-1.756.959c.245.449.748 1.514.935 2.861h-.811c-3.371 0-6.113 2.896-6.113 6.455 0 3.157 2.159 5.787 5 6.342v-2.797h3zm10 6h-6v-4h-2v10h2v-4h6v4h2v-10h-2zm5 0v-2h-2v6h2v-2h1v-2z"/></svg>
 );
-
-AppleDumbbell.displayName = 'AppleDumbbell';

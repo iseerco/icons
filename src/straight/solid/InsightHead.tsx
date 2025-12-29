@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const InsightHead: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const InsightHead = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,20.414v3.586h-13v-3h-2.247c-1.5,0-2.778-1.121-2.974-2.606l-.449-3.394H0v-2.212l.724-1.647c1.18-2.706,2.294-5.262,3.476-6.722C6.638,1.163,10.511-.448,14.547.106c4.996.686,8.952,4.84,9.407,9.876.265,2.936-.622,5.793-2.497,8.045-.002.003-.004.006-.006.009l-3.566-3.566c.699-.981,1.115-2.177,1.115-3.471,0-3.309-2.691-6-6-6s-6,2.691-6,6,2.691,6,6,6c1.294,0,2.49-.416,3.471-1.115l4.529,4.529ZM13,7c-2.206,0-4,1.794-4,4s1.794,4,4,4,4-1.794,4-4-1.794-4-4-4Z"/>
 </svg>
-);
 
-InsightHead.displayName = 'InsightHead';
+);

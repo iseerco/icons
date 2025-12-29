@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PlaneClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 13c-3.038 0-5.5 2.462-5.5 5.5s2.462 5.5 5.5 5.5 5.5-2.462 5.5-5.5-2.462-5.5-5.5-5.5zm1.793 8.707-2.793-2.793v-3.914h2v3.086l2.207 2.207zm10.207-9.707v2h-6.01c-1.369-1.819-3.538-3-5.99-3s-4.621 1.181-5.99 3h-2.603l-3.22-5.9c-.535-.936.141-2.1 1.219-2.1.372 0 .729.148.992.411l2.589 2.589h5.174l-2.518-9h2.752c1.099 0 2.108.599 2.634 1.564l3.767 7.436h4.203c1.654 0 3 1.346 3 3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PlaneClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 13c-3.038 0-5.5 2.462-5.5 5.5s2.462 5.5 5.5 5.5 5.5-2.462 5.5-5.5-2.462-5.5-5.5-5.5zm1.793 8.707-2.793-2.793v-3.914h2v3.086l2.207 2.207zm10.207-9.707v2h-6.01c-1.369-1.819-3.538-3-5.99-3s-4.621 1.181-5.99 3h-2.603l-3.22-5.9c-.535-.936.141-2.1 1.219-2.1.372 0 .729.148.992.411l2.589 2.589h5.174l-2.518-9h2.752c1.099 0 2.108.599 2.634 1.564l3.767 7.436h4.203c1.654 0 3 1.346 3 3z"/></svg>
 );
-
-PlaneClock.displayName = 'PlaneClock';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsWebinarPlay: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsWebinarPlay = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,11.279v7.721H13.5v2h4v3H6.5v-3h4v-2H0V5c0-1.654,1.346-3,3-3H11.079c-.523,.904-.875,1.917-1.01,3H3v11H21v-2.587c1.162-.471,2.185-1.208,3-2.134Zm-15.5-.279c1.105,0,2-.895,2-2s-.895-2-2-2-2,.895-2,2,.895,2,2,2Zm-1.5,1c-1.105,0-2,.895-2,2h7c0-1.105-.895-2-2-2h-3Zm5-6c0-3.314,2.686-6,6-6s6,2.686,6,6-2.686,6-6,6-6-2.686-6-6Zm4,3.056l5.5-3.056-5.5-3.056v6.111Z"/>
 </svg>
-);
 
-FiBsWebinarPlay.displayName = 'FiBsWebinarPlay';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CalendarPen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.821,12.879l-6.879,6.878v4.243h4.242l6.879-6.878c.566-.567,.879-1.32,.879-2.122s-.312-1.555-.879-2.121c-1.17-1.17-3.072-1.17-4.242,0Zm2.828,2.828l-6.293,6.293h-1.414v-1.415l6.293-6.292c.391-.39,1.023-.39,1.414,0,.189,.188,.293,.439,.293,.707s-.104,.518-.293,.707Zm-.649-13.707h-3V0h-2V2H8V0h-2V2H3C1.346,2,0,3.346,0,5V24H10v-2H2V10H24V5c0-1.654-1.346-3-3-3Zm1,6H2v-3c0-.551,.448-1,1-1H21c.552,0,1,.449,1,1v3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CalendarPen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.821,12.879l-6.879,6.878v4.243h4.242l6.879-6.878c.566-.567,.879-1.32,.879-2.122s-.312-1.555-.879-2.121c-1.17-1.17-3.072-1.17-4.242,0Zm2.828,2.828l-6.293,6.293h-1.414v-1.415l6.293-6.292c.391-.39,1.023-.39,1.414,0,.189,.188,.293,.439,.293,.707s-.104,.518-.293,.707Zm-.649-13.707h-3V0h-2V2H8V0h-2V2H3C1.346,2,0,3.346,0,5V24H10v-2H2V10H24V5c0-1.654-1.346-3-3-3Zm1,6H2v-3c0-.551,.448-1,1-1H21c.552,0,1,.449,1,1v3Z"/></svg>
+
 );
-
-CalendarPen.displayName = 'CalendarPen';

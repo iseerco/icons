@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrashCanSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrashCanSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10,14.242l8.988,8.987c-.531.473-1.222.77-1.988.77H7c-1.654,0-3-1.346-3-3v-12.757l4,4v6.758h2v-4.758ZM2.586,4L.043,1.457,1.457.043l3.957,3.957h1.586v-2c0-1.103.897-2,2-2h6c1.103,0,2,.897,2,2v2h5v2h-2v12.5h-.086l4.043,4.043-1.414,1.414L4.586,6l-2-2Zm6.414,0h6v-2h-6v2Zm5,8.586l2,2v-5.586h-2v3.586Z"/>
 </svg>
-);
 
-TrashCanSlash.displayName = 'TrashCanSlash';
+);

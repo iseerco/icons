@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Fill: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21.45 13.864-9.258 9.257a3 3 0 0 1 -4.243 0l-7.07-7.071a3 3 0 0 1 0-4.242l6.3-6.3-2.861-2.886 1.422-1.406 8.969 9.08 1.537-1.526-6.125-6.2.015-.016-1.1-1.1 1.415-1.417 13.577 13.576-1.415 1.415zm-2.45 7.636a2.5 2.5 0 0 0 5 0c0-1.381-2.5-4.5-2.5-4.5s-2.5 3.25-2.5 4.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Fill = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21.45 13.864-9.258 9.257a3 3 0 0 1 -4.243 0l-7.07-7.071a3 3 0 0 1 0-4.242l6.3-6.3-2.861-2.886 1.422-1.406 8.969 9.08 1.537-1.526-6.125-6.2.015-.016-1.1-1.1 1.415-1.417 13.577 13.576-1.415 1.415zm-2.45 7.636a2.5 2.5 0 0 0 5 0c0-1.381-2.5-4.5-2.5-4.5s-2.5 3.25-2.5 4.5z"/></svg>
 );
-
-Fill.displayName = 'Fill';

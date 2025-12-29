@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SelfCare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 12c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm0 1c-4.962 0-9 4.037-9 9v1c0 .553.448 1 1 1h16c.552 0 1-.447 1-1v-1c0-4.963-4.038-9-9-9zm1.154 9.298c-.668.567-1.64.567-2.307 0-1.182-1.004-2.846-2.678-2.846-4.138 0-1.193.895-2.16 2-2.16s2 .771 2 1.964c0-1.193.895-1.964 2-1.964s2 .967 2 2.16c0 1.459-1.665 3.133-2.846 4.138z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SelfCare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 12c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm0 1c-4.962 0-9 4.037-9 9v1c0 .553.448 1 1 1h16c.552 0 1-.447 1-1v-1c0-4.963-4.038-9-9-9zm1.154 9.298c-.668.567-1.64.567-2.307 0-1.182-1.004-2.846-2.678-2.846-4.138 0-1.193.895-2.16 2-2.16s2 .771 2 1.964c0-1.193.895-1.964 2-1.964s2 .967 2 2.16c0 1.459-1.665 3.133-2.846 4.138z"/></svg>
 );
-
-SelfCare.displayName = 'SelfCare';

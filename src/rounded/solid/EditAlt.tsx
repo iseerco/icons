@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EditAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Filled" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EditAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M304.661,287.061L499.605,92.117c16.2-16.175,18.966-47.974-9.067-65.344c-23.989-11.806-42.541-1.743-51.179,8.341   L252.309,242.283C274.227,251.016,292.636,266.762,304.661,287.061z"/>
 	<path d="M106.667,405.333h106.667c35.346,0,64-28.654,64-64s-28.654-64-64-64C128,277.333,106.667,405.333,106.667,405.333z"/>
@@ -15,6 +17,5 @@ export const EditAlt: React.FC<IconProps> = ({
 	<path d="M405.333,384C393.551,384,384,393.551,384,405.333V505.6c15.051-5.162,28.744-13.65,40.064-24.832l56.704-56.704   c11.182-11.32,19.67-25.013,24.832-40.064H405.333z"/>
 </g>
 </svg>
-);
 
-EditAlt.displayName = 'EditAlt';
+);

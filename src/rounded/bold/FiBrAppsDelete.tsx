@@ -1,13 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrAppsDelete: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width={size} height={size} {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrAppsDelete = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
 <g>
 	<path d="M309.333,149.333H480c17.673,0,32-14.327,32-32s-14.327-32-32-32H309.333c-17.673,0-32,14.327-32,32   S291.66,149.333,309.333,149.333z"/>
 	<path d="M117.333,0C52.532,0,0,52.532,0,117.333s52.532,117.333,117.333,117.333s117.333-52.532,117.333-117.333   C234.596,52.561,182.106,0.071,117.333,0z M117.333,170.667C87.878,170.667,64,146.789,64,117.333S87.878,64,117.333,64   s53.333,23.878,53.333,53.333S146.789,170.667,117.333,170.667z"/>
@@ -30,6 +32,5 @@ export const FiBrAppsDelete: React.FC<IconProps> = ({
 
 
 </svg>
-);
 
-FiBrAppsDelete.displayName = 'FiBrAppsDelete';
+);

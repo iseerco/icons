@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MessageCircleRefresh: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 0c-6.617 0-12 5.383-12 12v7c0 2.757 2.243 5 5 5h7c6.617 0 12-5.383 12-12s-5.383-12-12-12zm6 9.5c0 .827-.673 1.5-1.5 1.5h-2.5c-.552 0-1-.448-1-1s.448-1 1-1h.644c-.716-.633-1.643-1-2.644-1-2.206 0-4 1.794-4 4s1.794 4 4 4c1.591 0 3.031-.942 3.667-2.4.221-.506.811-.735 1.317-.516.506.221.737.811.516 1.317-.956 2.187-3.114 3.6-5.5 3.6-3.309 0-6-2.691-6-6s2.691-6 6-6c1.496 0 2.914.578 4 1.548v-.548c0-.552.448-1 1-1s1 .448 1 1v2.5z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MessageCircleRefresh = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 0c-6.617 0-12 5.383-12 12v7c0 2.757 2.243 5 5 5h7c6.617 0 12-5.383 12-12s-5.383-12-12-12zm6 9.5c0 .827-.673 1.5-1.5 1.5h-2.5c-.552 0-1-.448-1-1s.448-1 1-1h.644c-.716-.633-1.643-1-2.644-1-2.206 0-4 1.794-4 4s1.794 4 4 4c1.591 0 3.031-.942 3.667-2.4.221-.506.811-.735 1.317-.516.506.221.737.811.516 1.317-.956 2.187-3.114 3.6-5.5 3.6-3.309 0-6-2.691-6-6s2.691-6 6-6c1.496 0 2.914.578 4 1.548v-.548c0-.552.448-1 1-1s1 .448 1 1v2.5z"/></svg>
 );
-
-MessageCircleRefresh.displayName = 'MessageCircleRefresh';

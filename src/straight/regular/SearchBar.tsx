@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SearchBar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m15.326 9.343c-.416-.36-1.007-.444-1.504-.215-.499.228-.822.73-.822 1.279v11.547l3.875-3.519 2.786 5.492 1.783-.904-2.76-5.441 5.271-.788-8.63-7.452zm-.326 2.361 4.352 3.757-2.604.389-1.748 1.587v-5.734zm-10 1.296v-8h2v8zm19-10v11.19l-2-1.727v-9.463c0-.551-.449-1-1-1h-18c-.551 0-1 .449-1 1v13h9v2h-11v-15c0-1.654 1.346-3 3-3h18c1.654 0 3 1.346 3 3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SearchBar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15.326 9.343c-.416-.36-1.007-.444-1.504-.215-.499.228-.822.73-.822 1.279v11.547l3.875-3.519 2.786 5.492 1.783-.904-2.76-5.441 5.271-.788-8.63-7.452zm-.326 2.361 4.352 3.757-2.604.389-1.748 1.587v-5.734zm-10 1.296v-8h2v8zm19-10v11.19l-2-1.727v-9.463c0-.551-.449-1-1-1h-18c-.551 0-1 .449-1 1v13h9v2h-11v-15c0-1.654 1.346-3 3-3h18c1.654 0 3 1.346 3 3z"/></svg>
 );
-
-SearchBar.displayName = 'SearchBar';

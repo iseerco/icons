@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CloudMoon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.5,24h-9a4.513,4.513,0,0,1-2.448-8.273C6.262,8.64,16.227,6.348,18.653,13,25.812,13.414,25.675,23.784,18.5,24ZM3.355,17.391A6.443,6.443,0,0,1,5,14.807a8.01,8.01,0,0,1,5.389-7.361h0a8.521,8.521,0,0,1,4.282-4.4l1.869-.8-1.778-.988C4.283-4.3-5.326,9.47,3.355,17.391Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CloudMoon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.5,24h-9a4.513,4.513,0,0,1-2.448-8.273C6.262,8.64,16.227,6.348,18.653,13,25.812,13.414,25.675,23.784,18.5,24ZM3.355,17.391A6.443,6.443,0,0,1,5,14.807a8.01,8.01,0,0,1,5.389-7.361h0a8.521,8.521,0,0,1,4.282-4.4l1.869-.8-1.778-.988C4.283-4.3-5.326,9.47,3.355,17.391Z"/></svg>
+
 );
-
-CloudMoon.displayName = 'CloudMoon';

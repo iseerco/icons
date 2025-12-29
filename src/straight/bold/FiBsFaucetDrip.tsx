@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsFaucetDrip: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsFaucetDrip = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m14.5,8h-3.5v-2h4v-3H4v3h4v2H0v3h8v3H0v3h14.5c.275,0,.5.225.5.5v2.5h9v-2.5c0-5.238-4.262-9.5-9.5-9.5Zm3.465,9c-.244-1.694-1.705-3-3.465-3h-3.5v-3h3.5c3.416,0,6.225,2.648,6.481,6h-3.017Z"/>
 </svg>
-);
 
-FiBsFaucetDrip.displayName = 'FiBsFaucetDrip';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Mailbox: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18,3H6C2.691,3,0,5.691,0,9v9c0,1.654,1.346,3,3,3H21c1.654,0,3-1.346,3-3V9c0-3.309-2.691-6-6-6ZM2,18V9c0-2.206,1.794-4,4-4s4,1.794,4,4v9c0,.552-.449,1-1,1H3c-.551,0-1-.448-1-1Zm20,0c0,.552-.448,1-1,1H11.828c.111-.313,.172-.649,.172-1V9c0-1.535-.58-2.938-1.532-4h7.532c2.206,0,4,1.794,4,4v9Zm-2-8v2c0,.552-.447,1-1,1s-1-.448-1-1v-1h-3c-.553,0-1-.448-1-1s.447-1,1-1h4c.553,0,1,.448,1,1Zm-12,0c0,.552-.448,1-1,1h-2c-.552,0-1-.448-1-1s.448-1,1-1h2c.552,0,1,.448,1,1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Mailbox = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18,3H6C2.691,3,0,5.691,0,9v9c0,1.654,1.346,3,3,3H21c1.654,0,3-1.346,3-3V9c0-3.309-2.691-6-6-6ZM2,18V9c0-2.206,1.794-4,4-4s4,1.794,4,4v9c0,.552-.449,1-1,1H3c-.551,0-1-.448-1-1Zm20,0c0,.552-.448,1-1,1H11.828c.111-.313,.172-.649,.172-1V9c0-1.535-.58-2.938-1.532-4h7.532c2.206,0,4,1.794,4,4v9Zm-2-8v2c0,.552-.447,1-1,1s-1-.448-1-1v-1h-3c-.553,0-1-.448-1-1s.447-1,1-1h4c.553,0,1,.448,1,1Zm-12,0c0,.552-.448,1-1,1h-2c-.552,0-1-.448-1-1s.448-1,1-1h2c.552,0,1,.448,1,1Z"/></svg>
+
 );
-
-Mailbox.displayName = 'Mailbox';

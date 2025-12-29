@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HatWitch: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m22.323,22l-5.103-14.845.803-1.155h4.392s1.355-1.454,1.355-1.454L18.894,0h-6.128c-2.139,0-4.041,1.36-4.731,3.384L1.677,22H0v2h24v-2h-1.677Zm-12.323,0v-2h4v2h-4Zm-2-4v4H3.791L9.927,4.031c.415-1.215,1.556-2.031,2.839-2.031h5.34l2.145,2h-3.273l-1.98,2.845,5.21,15.155h-4.207v-4h-8Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HatWitch = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22.323,22l-5.103-14.845.803-1.155h4.392s1.355-1.454,1.355-1.454L18.894,0h-6.128c-2.139,0-4.041,1.36-4.731,3.384L1.677,22H0v2h24v-2h-1.677Zm-12.323,0v-2h4v2h-4Zm-2-4v4H3.791L9.927,4.031c.415-1.215,1.556-2.031,2.839-2.031h5.34l2.145,2h-3.273l-1.98,2.845,5.21,15.155h-4.207v-4h-8Z"/></svg>
+
 );
-
-HatWitch.displayName = 'HatWitch';

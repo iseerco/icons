@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMarker: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,.021A10.077,10.077,0,0,0,1.935,10.087c0,5.274,8.166,12.329,9.1,13.117l.967.817.967-.817c.932-.788,9.1-7.843,9.1-13.117A10.077,10.077,0,0,0,12,.021Zm0,20.043c-3.065-2.792-7.067-7.328-7.067-9.977a7.067,7.067,0,1,1,14.134,0C19.067,12.731,15.064,17.269,12,20.064Z"/><circle cx="12" cy="10.002" r="2.997"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMarker = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,.021A10.077,10.077,0,0,0,1.935,10.087c0,5.274,8.166,12.329,9.1,13.117l.967.817.967-.817c.932-.788,9.1-7.843,9.1-13.117A10.077,10.077,0,0,0,12,.021Zm0,20.043c-3.065-2.792-7.067-7.328-7.067-9.977a7.067,7.067,0,1,1,14.134,0C19.067,12.731,15.064,17.269,12,20.064Z"/><circle cx="12" cy="10.002" r="2.997"/></svg>
+
 );
-
-FiBsMarker.displayName = 'FiBsMarker';

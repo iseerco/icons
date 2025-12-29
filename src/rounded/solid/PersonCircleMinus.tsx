@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PersonCircleMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PersonCircleMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18,12c-3.314,0-6,2.686-6,6s2.686,6,6,6,6-2.686,6-6-2.686-6-6-6Zm2.5,7h-5c-.553,0-1-.447-1-1s.447-1,1-1h5c.553,0,1,.447,1,1s-.447,1-1,1ZM4.5,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm7.5,7.5c0-2.206-1.794-4-4-4h-2c-2.206,0-4,1.794-4,4v3c0,1.478.805,2.771,2,3.463v6.537c0,.553.447,1,1,1s1-.447,1-1v-6h2v6c0,.553.447,1,1,1s1-.447,1-1v-5c0-2.029.755-3.881,2-5.291v-2.709Z"/>
 </svg>
-);
 
-PersonCircleMinus.displayName = 'PersonCircleMinus';
+);

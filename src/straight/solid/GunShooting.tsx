@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GunShooting: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GunShooting = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,9.5l-3,1.5,3,3-3-.5,1,4-4-4V5.5L22,1.5l-1,4,3-.5-3,3,3,1.5ZM14,5h-2v1H2C2,7.105,1.105,8,0,8h0v4H16V6h-2v-1ZM1.646,14L.044,19.206l-.044,1.794H5l1.518-5h1.906c.883,0,1.662-.579,1.916-1.425l.172-.575H1.646Z"/>
 </svg>
-);
 
-GunShooting.displayName = 'GunShooting';
+);

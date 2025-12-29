@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LeaderAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LeaderAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,3.668v.647l-2.837.841-.831,2.844h-.647l-.842-2.843-2.843-.842v-.647l2.844-.831.841-2.837h.647l.829,2.839,2.839.829Zm-19.5,1.332c1.381,0,2.5-1.119,2.5-2.5S5.881,0,4.5,0s-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm7.5,15v-5h-4v-7l7.024-4.148-1.049-1.703-6.542,3.852H3c-1.654,0-3,1.346-3,3v8h2v7h2v-7h6v3.051c-1.14.232-2,1.242-2,2.449v1.5h16v-4h-12Zm-1-8.441l6.455-4.044-.222-.749-1.591-.471-4.642,2.916v2.349Z"/>
 </svg>
-);
 
-LeaderAlt.displayName = 'LeaderAlt';
+);

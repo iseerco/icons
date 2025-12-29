@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SnowmanAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SnowmanAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,4c0-2.209,1.791-4,4-4s4,1.791,4,4-1.791,4-4,4-4-1.791-4-4Zm4,15c-2.91,0-5.438-1.666-6.681-4.094-.21.67-.319,1.375-.319,2.094,0,3.86,3.14,7,7,7s7-3.14,7-7c0-.713-.11-1.418-.32-2.091-1.243,2.427-3.771,4.091-6.68,4.091Zm11-12h-1v-1c0-.552-.448-1-1-1s-1,.448-1,1v1.511l-2.804,2.181c-.195-.562-.481-1.089-.848-1.561-1.094,1.151-2.639,1.87-4.348,1.87s-3.254-.719-4.348-1.87c-.367.472-.653.999-.848,1.561l-2.804-2.181v-1.511c0-.552-.448-1-1-1s-1,.448-1,1v1h-1c-.552,0-1,.448-1,1s.448,1,1,1h1.657l3.867,3.008c.257,2.796,2.615,4.992,5.476,4.992s5.219-2.197,5.476-4.992l3.867-3.008h1.657c.552,0,1-.448,1-1s-.448-1-1-1Z"/>
 </svg>
-);
 
-SnowmanAlt.displayName = 'SnowmanAlt';
+);

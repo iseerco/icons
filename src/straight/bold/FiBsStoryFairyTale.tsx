@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsStoryFairyTale: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsStoryFairyTale = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,5.41v16.408l-12,2.182L0,21.818V5.41c0-.943.376-1.819,1.059-2.469.533-.507,1.22-.823,1.941-.909v17.282l7.5,1.364v-9.678h3v9.678l7.5-1.364V2.045c.645.078,1.263.321,1.775.748.778.65,1.225,1.604,1.225,2.617Zm-17,2.59c0-2.757,2.243-5,5-5s5,2.243,5,5v1h3v-1C20,3.589,16.411,0,12,0S4,3.589,4,8v1h3v-1Zm9,1v-1c0-2.206-1.794-4-4-4s-4,1.794-4,4v1h3v-1c0-.551.448-1,1-1s1,.449,1,1v1h3Zm1.303,9h.404l.519-1.778,1.773-.525v-.404l-1.774-.518-.518-1.774h-.404l-.525,1.773-1.778.519v.404l1.777.526.526,1.777Zm-11-2h.404l.519-1.778,1.773-.525v-.404l-1.774-.518-.518-1.774h-.404l-.525,1.773-1.778.519v.404l1.777.526.526,1.777Z"/>
 </svg>
-);
 
-FiBsStoryFairyTale.displayName = 'FiBsStoryFairyTale';
+);

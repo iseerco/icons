@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PersonMilitaryPointing: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PersonMilitaryPointing = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M8,5h8c0,2.209-1.791,4-4,4s-4-1.791-4-4Zm.115-2h7.997l.319-.826c.27-.787-.287-1.615-1.118-1.661L9.311,.003c-1.131-.063-1.987,1.008-1.675,2.097l.479,.9Zm15.733,17.471l-3.119-4.999c-.98-1.571-2.367-2.769-3.971-3.534l-7.055,8.062h7.296v-5.622c.798,.566,1.493,1.289,2.032,2.153l3.119,4.999c.294,.472,.916,.609,1.378,.319,.469-.293,.611-.909,.319-1.378Zm-16.849-.471h.046l7.668-8.764c-.664-.145-1.346-.236-2.046-.236H1c-.553,0-1,.448-1,1s.447,1,1,1H7v7Zm1.833,4h6c1.105,0,2-.895,2-2H6.833c0,1.105,.895,2,2,2Z"/>
 </svg>
-);
 
-PersonMilitaryPointing.displayName = 'PersonMilitaryPointing';
+);

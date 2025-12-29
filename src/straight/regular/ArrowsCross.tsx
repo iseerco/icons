@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowsCross: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M9.162,10.576L.043,1.457,1.457,.043,10.576,9.162l-1.414,1.414Zm12.838,10.01l-7.162-7.162-1.414,1.414,7.162,7.162h-4.586v2h6c1.103,0,2-.897,2-2v-6h-2v4.586ZM22,0h-6V2h4.586L.043,22.543l1.414,1.414L22,3.414v4.586h2V2c0-1.103-.897-2-2-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowsCross = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M9.162,10.576L.043,1.457,1.457,.043,10.576,9.162l-1.414,1.414Zm12.838,10.01l-7.162-7.162-1.414,1.414,7.162,7.162h-4.586v2h6c1.103,0,2-.897,2-2v-6h-2v4.586ZM22,0h-6V2h4.586L.043,22.543l1.414,1.414L22,3.414v4.586h2V2c0-1.103-.897-2-2-2Z"/></svg>
+
 );
-
-ArrowsCross.displayName = 'ArrowsCross';

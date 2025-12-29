@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBanBug: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M8.09,13h-2.09v-2h.09l2,2Zm.01,.01c-.06,.37-.1,.72-.1,.99-1.1,0-2,.9-2,2v2h2v-2h.55c.69,1.19,1.97,2,3.45,2,.33,0,.65-.05,.96-.13l-4.86-4.86Zm15.9-1.01c0,6.62-5.38,12-12,12S0,18.62,0,12,5.38,0,12,0s12,5.38,12,12ZM12,3c-1.94,0-3.73,.62-5.21,1.67l2.78,2.78c.52-.96,1.28-1.45,2.42-1.45,1.35,0,2.15,.67,2.68,2h1.32v-2h2v2c0,1.1-.9,2-2,2h-.74c.08,.3,.16,.64,.24,1h2.5v2h-2.1c.05,.33,.08,.62,.09,.87l.14,.14c.99,.07,1.78,.86,1.85,1.85l1.34,1.34c1.05-1.47,1.67-3.27,1.67-5.21,0-4.96-4.04-9-9-9Zm0,18c1.94,0,3.73-.62,5.21-1.67L4.67,6.79c-1.05,1.47-1.67,3.27-1.67,5.21,0,4.96,4.04,9,9,9Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBanBug = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M8.09,13h-2.09v-2h.09l2,2Zm.01,.01c-.06,.37-.1,.72-.1,.99-1.1,0-2,.9-2,2v2h2v-2h.55c.69,1.19,1.97,2,3.45,2,.33,0,.65-.05,.96-.13l-4.86-4.86Zm15.9-1.01c0,6.62-5.38,12-12,12S0,18.62,0,12,5.38,0,12,0s12,5.38,12,12ZM12,3c-1.94,0-3.73,.62-5.21,1.67l2.78,2.78c.52-.96,1.28-1.45,2.42-1.45,1.35,0,2.15,.67,2.68,2h1.32v-2h2v2c0,1.1-.9,2-2,2h-.74c.08,.3,.16,.64,.24,1h2.5v2h-2.1c.05,.33,.08,.62,.09,.87l.14,.14c.99,.07,1.78,.86,1.85,1.85l1.34,1.34c1.05-1.47,1.67-3.27,1.67-5.21,0-4.96-4.04-9-9-9Zm0,18c1.94,0,3.73-.62,5.21-1.67L4.67,6.79c-1.05,1.47-1.67,3.27-1.67,5.21,0,4.96,4.04,9,9,9Z"/></svg>
+
 );
-
-FiBsBanBug.displayName = 'FiBsBanBug';

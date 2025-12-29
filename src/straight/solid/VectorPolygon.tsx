@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const VectorPolygon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const VectorPolygon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16,10.037l3.46-4.037h4.54V0h-6v2H6V0H0v6h2v12H0v6h6v-2h12v2h6v-6h-4.54l-3.46-4.037v-3.926Zm-10,9.963v-2h-2V6h2v-2h12v.63l-3.746,4.37h-4.254v6h4.254l3.746,4.37v.63H6Z"/>
 </svg>
-);
 
-VectorPolygon.displayName = 'VectorPolygon';
+);

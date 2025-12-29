@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsAngle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsAngle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.441,16.205l.949-.353c.398,1.652.61,3.375.61,5.148h-1c0-1.65-.196-3.255-.559-4.795Zm.383-2.277c-.633-1.857-1.502-3.605-2.581-5.202l-.76.684c1.001,1.498,1.808,3.134,2.399,4.869l.942-.35ZM2.083,23c-.383,0-.729-.196-.924-.525-.196-.33-.203-.728-.02-1.063L12.518.521l-.878-.479L.262,20.933c-.354.649-.339,1.417.038,2.053.377.635,1.044,1.015,1.784,1.015h21.917v-1H2.083Zm14.204-15.204l.756-.68c-1.125-1.378-2.407-2.621-3.828-3.692l-.494.907c1.321,1.011,2.517,2.177,3.567,3.466Z"/>
 </svg>
-);
 
-FiTsAngle.displayName = 'FiTsAngle';
+);

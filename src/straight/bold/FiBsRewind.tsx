@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsRewind: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,23.8l-8-5.714V23.8L1.82,14.393a3.278,3.278,0,0,1,0-5.335l.043-.029L15,.317V5.911L23,.2ZM3.551,11.509a.268.268,0,0,0-.1.217.271.271,0,0,0,.116.226L12,17.975V12.26l8,5.714V6.026L12,11.74V5.906Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsRewind = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,23.8l-8-5.714V23.8L1.82,14.393a3.278,3.278,0,0,1,0-5.335l.043-.029L15,.317V5.911L23,.2ZM3.551,11.509a.268.268,0,0,0-.1.217.271.271,0,0,0,.116.226L12,17.975V12.26l8,5.714V6.026L12,11.74V5.906Z"/></svg>
+
 );
-
-FiBsRewind.displayName = 'FiBsRewind';

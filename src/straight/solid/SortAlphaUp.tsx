@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SortAlphaUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15,14h7v2.362l-4.698,5.638h4.698v2h-7v-2.362l4.698-5.638h-4.698v-2ZM22,3.5v6.5h-2v-3h-3v3h-2V3.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5Zm-2,0c0-.827-.673-1.5-1.5-1.5s-1.5,.673-1.5,1.5v1.5h3v-1.5ZM6,0C5.488,0,4.976,.196,4.586,.586L.086,5.086l1.414,1.414,3.5-3.5V24h2V3l3.5,3.5,1.414-1.414L7.414,.586C7.024,.196,6.512,0,6,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SortAlphaUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15,14h7v2.362l-4.698,5.638h4.698v2h-7v-2.362l4.698-5.638h-4.698v-2ZM22,3.5v6.5h-2v-3h-3v3h-2V3.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5Zm-2,0c0-.827-.673-1.5-1.5-1.5s-1.5,.673-1.5,1.5v1.5h3v-1.5ZM6,0C5.488,0,4.976,.196,4.586,.586L.086,5.086l1.414,1.414,3.5-3.5V24h2V3l3.5,3.5,1.414-1.414L7.414,.586C7.024,.196,6.512,0,6,0Z"/></svg>
+
 );
-
-SortAlphaUp.displayName = 'SortAlphaUp';

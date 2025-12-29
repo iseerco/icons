@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FaceHushed: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0ZM5.845,9.145l-1.689-1.07c.912-1.439,2.279-2.577,3.953-3.29l.783,1.84c-1.299,.554-2.353,1.426-3.047,2.521Zm2.655,3.855c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm3.5,7c-1.105,0-2-.895-2-2s.895-2,2-2,2,.895,2,2-.895,2-2,2Zm3.5-7c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm2.596-3.948c-.695-1.052-1.729-1.891-2.988-2.428l.785-1.84c1.62,.69,2.959,1.785,3.871,3.164l-1.668,1.104Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FaceHushed = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0ZM5.845,9.145l-1.689-1.07c.912-1.439,2.279-2.577,3.953-3.29l.783,1.84c-1.299,.554-2.353,1.426-3.047,2.521Zm2.655,3.855c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm3.5,7c-1.105,0-2-.895-2-2s.895-2,2-2,2,.895,2,2-.895,2-2,2Zm3.5-7c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5,.672,1.5,1.5-.672,1.5-1.5,1.5Zm2.596-3.948c-.695-1.052-1.729-1.891-2.988-2.428l.785-1.84c1.62,.69,2.959,1.785,3.871,3.164l-1.668,1.104Z"/></svg>
+
 );
-
-FaceHushed.displayName = 'FaceHushed';

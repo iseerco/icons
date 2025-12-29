@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ClipboardQuestion: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ClipboardQuestion = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M16,2h-.171c-.413-1.164-1.525-2-2.829-2h-2c-1.304,0-2.416,.836-2.829,2h-.171c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h8c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-2.5,16.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-.013c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5v.013Zm-.03-4.823c-.281,.13-.47,.472-.47,.852v.472c0,.552-.448,1-1,1s-1-.448-1-1v-.472c0-1.162,.64-2.208,1.629-2.666,.548-.254,1.038-.919,.816-1.778-.126-.49-.54-.903-1.029-1.03-.484-.126-.957-.034-1.333,.258-.371,.287-.583,.719-.583,1.187,0,.552-.448,1-1,1s-1-.448-1-1c0-1.091,.495-2.1,1.359-2.769,.863-.669,1.979-.892,3.058-.613,1.19,.307,2.158,1.275,2.465,2.466,.429,1.66-.376,3.381-1.913,4.092Z"/>
 </svg>
-);
 
-ClipboardQuestion.displayName = 'ClipboardQuestion';
+);

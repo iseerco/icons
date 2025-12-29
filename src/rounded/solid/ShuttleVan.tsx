@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShuttleVan: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15,2h1.4a5.005,5.005,0,0,1,4.57,2.97L23.205,10H15ZM8,2v8h5V2ZM6,10V2H5A5.006,5.006,0,0,0,0,7v3ZM0,12v2a4,4,0,0,0,4,4H20a4,4,0,0,0,4-4v-.727A7,7,0,0,0,23.884,12Zm7.942,8c.587,3.954-5.472,3.952-4.884,0Zm13,0c.587,3.954-5.472,3.952-4.884,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShuttleVan = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15,2h1.4a5.005,5.005,0,0,1,4.57,2.97L23.205,10H15ZM8,2v8h5V2ZM6,10V2H5A5.006,5.006,0,0,0,0,7v3ZM0,12v2a4,4,0,0,0,4,4H20a4,4,0,0,0,4-4v-.727A7,7,0,0,0,23.884,12Zm7.942,8c.587,3.954-5.472,3.952-4.884,0Zm13,0c.587,3.954-5.472,3.952-4.884,0Z"/></svg>
+
 );
-
-ShuttleVan.displayName = 'ShuttleVan';

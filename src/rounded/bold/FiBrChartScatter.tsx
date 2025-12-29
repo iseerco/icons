@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrChartScatter: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.5,24H3.5c-1.93,0-3.5-1.57-3.5-3.5V1.5C.033-.472,2.967-.471,3,1.5V20.5c0,.275,.224,.5,.5,.5H22.5c1.972,.034,1.971,2.967,0,3ZM14,12.5c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm6-6c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm-9,11c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm9-1c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0ZM9,4.5c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm-4,7c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrChartScatter = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.5,24H3.5c-1.93,0-3.5-1.57-3.5-3.5V1.5C.033-.472,2.967-.471,3,1.5V20.5c0,.275,.224,.5,.5,.5H22.5c1.972,.034,1.971,2.967,0,3ZM14,12.5c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm6-6c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm-9,11c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm9-1c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0ZM9,4.5c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Zm-4,7c.034,1.972,2.967,1.971,3,0-.034-1.972-2.967-1.971-3,0Z"/></svg>
+
 );
-
-FiBrChartScatter.displayName = 'FiBrChartScatter';

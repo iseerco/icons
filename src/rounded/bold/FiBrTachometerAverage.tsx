@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrTachometerAverage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M14,13a2,2,0,1,1-3.5-1.322V7.5a1.5,1.5,0,0,1,3,0v4.178A1.99,1.99,0,0,1,14,13Zm6-8.944A12,12,0,0,0,3.464,21.429a3.5,3.5,0,0,0,4.751.258L9.456,20.66a1.5,1.5,0,1,0-1.912-2.312L6.3,19.375a.518.518,0,0,1-.7-.056,9,9,0,1,1,12.79.014.524.524,0,0,1-.7.059l-1.283-1.04a1.5,1.5,0,1,0-1.889,2.33l1.283,1.04a3.512,3.512,0,0,0,4.718-.276A12.056,12.056,0,0,0,20,4.056Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrTachometerAverage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M14,13a2,2,0,1,1-3.5-1.322V7.5a1.5,1.5,0,0,1,3,0v4.178A1.99,1.99,0,0,1,14,13Zm6-8.944A12,12,0,0,0,3.464,21.429a3.5,3.5,0,0,0,4.751.258L9.456,20.66a1.5,1.5,0,1,0-1.912-2.312L6.3,19.375a.518.518,0,0,1-.7-.056,9,9,0,1,1,12.79.014.524.524,0,0,1-.7.059l-1.283-1.04a1.5,1.5,0,1,0-1.889,2.33l1.283,1.04a3.512,3.512,0,0,0,4.718-.276A12.056,12.056,0,0,0,20,4.056Z"/></svg>
+
 );
-
-FiBrTachometerAverage.displayName = 'FiBrTachometerAverage';

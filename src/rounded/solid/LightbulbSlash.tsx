@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LightbulbSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.71,22.29l-6.14-6.14c.12-.13,.23-.27,.36-.38,1.95-1.71,3.07-4.17,3.07-6.76s-1.1-5.01-3.01-6.71C16.09,.58,13.52-.23,10.96,.06c-2.38,.27-4.57,1.53-6.05,3.43L1.71,.29C1.32-.1,.68-.1,.29,.29S-.1,1.31,.29,1.7L22.29,23.7c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29c.39-.39,.39-1.02,0-1.41Zm-9.94-4.29H7.56c-.36-.88-.93-1.7-1.7-2.42-2.15-2-3.17-4.83-2.79-7.76,.02-.15,.05-.29,.08-.44l10.61,10.61Zm2.24,2.24v.07c0,2.04-1.66,3.69-3.69,3.69h-.62c-2.04,0-3.69-1.66-3.69-3.69v-.31h7.76l.24,.24Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LightbulbSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.71,22.29l-6.14-6.14c.12-.13,.23-.27,.36-.38,1.95-1.71,3.07-4.17,3.07-6.76s-1.1-5.01-3.01-6.71C16.09,.58,13.52-.23,10.96,.06c-2.38,.27-4.57,1.53-6.05,3.43L1.71,.29C1.32-.1,.68-.1,.29,.29S-.1,1.31,.29,1.7L22.29,23.7c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29c.39-.39,.39-1.02,0-1.41Zm-9.94-4.29H7.56c-.36-.88-.93-1.7-1.7-2.42-2.15-2-3.17-4.83-2.79-7.76,.02-.15,.05-.29,.08-.44l10.61,10.61Zm2.24,2.24v.07c0,2.04-1.66,3.69-3.69,3.69h-.62c-2.04,0-3.69-1.66-3.69-3.69v-.31h7.76l.24,.24Z"/></svg>
+
 );
-
-LightbulbSlash.displayName = 'LightbulbSlash';

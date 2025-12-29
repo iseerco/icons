@@ -1,16 +1,18 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsRunningTrack: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsRunningTrack = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
   
-  <path d="m16,4h-8C3.589,4,0,7.589,0,12s3.589,8,8,8h8c4.411,0,8-3.589,8-8s-3.589-8-8-8Zm0,13h-8c-2.757,0-5-2.243-5-5s2.243-5,5-5h5v2h-5c-1.654,0-3,1.346-3,3s1.346,3,3,3h8c1.654,0,3-1.346,3-3s-1.346-3-3-3v-2c2.757,0,5,2.243,5,5s-2.243,5-5,5Z"/>
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
+  <defs>
+    
+  </defs>
+  <path className="cls-1" d="m16,4h-8C3.589,4,0,7.589,0,12s3.589,8,8,8h8c4.411,0,8-3.589,8-8s-3.589-8-8-8Zm0,13h-8c-2.757,0-5-2.243-5-5s2.243-5,5-5h5v2h-5c-1.654,0-3,1.346-3,3s1.346,3,3,3h8c1.654,0,3-1.346,3-3s-1.346-3-3-3v-2c2.757,0,5,2.243,5,5s-2.243,5-5,5Z"/>
 </svg>
-);
 
-FiBsRunningTrack.displayName = 'FiBsRunningTrack';
+);

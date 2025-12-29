@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrUtensils: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrUtensils = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,.5v7c0,2.312-1.753,4.223-4,4.472v11.528c0,.276-.224.5-.5.5s-.5-.224-.5-.5v-11.528c-2.247-.25-4-2.16-4-4.472V.5c0-.276.224-.5.5-.5s.5.224.5.5v7c0,1.76,1.306,3.221,3,3.464V.5c0-.276.224-.5.5-.5s.5.224.5.5v10.464c1.694-.243,3-1.704,3-3.464V.5c0-.276.224-.5.5-.5s.5.224.5.5Zm9,8.267c0,5.346-4.081,9.383-5,10.225v4.509c0,.276-.224.5-.5.5s-.5-.224-.5-.5V1.874c0-.843.523-1.545,1.333-1.791.799-.239,1.614.048,2.076.739,1.287,1.929,2.591,5.277,2.591,7.944Zm-1,0c0-2.441-1.248-5.63-2.423-7.39-.185-.277-.447-.376-.689-.376-.093,0-.183.015-.265.039-.301.092-.623.358-.623.834v15.701c1.379-1.467,4-4.787,4-8.809Z"/>
 </svg>
-);
 
-FiTrUtensils.displayName = 'FiTrUtensils';
+);

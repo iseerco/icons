@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Subtitles: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M19,2H5A5.006,5.006,0,0,0,0,7V17a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V7A5.006,5.006,0,0,0,19,2ZM5,11H7a1,1,0,0,1,0,2H5a1,1,0,0,1,0-2Zm8,7H5a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Zm6,0H17a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2Zm0-5H11a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Subtitles = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M19,2H5A5.006,5.006,0,0,0,0,7V17a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V7A5.006,5.006,0,0,0,19,2ZM5,11H7a1,1,0,0,1,0,2H5a1,1,0,0,1,0-2Zm8,7H5a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Zm6,0H17a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2Zm0-5H11a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z"/></svg>
+
 );
-
-Subtitles.displayName = 'Subtitles';

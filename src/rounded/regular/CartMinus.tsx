@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CartMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M9,22c0,1.1-.9,2-2,2s-2-.9-2-2,.9-2,2-2,2,.9,2,2Zm8-2c-1.1,0-2,.9-2,2s.9,2,2,2,2-.9,2-2-.9-2-2-2ZM23,3h-6c-.55,0-1,.45-1,1s.45,1,1,1h6c.55,0,1-.45,1-1s-.45-1-1-1Zm-.8,5.02c-.55-.11-1.07,.24-1.18,.78l-.36,1.78c-.28,1.4-1.52,2.41-2.94,2.41H5.42l-.94-8h7.52c.55,0,1-.45,1-1s-.45-1-1-1H4.24l-.04-.35c-.18-1.51-1.46-2.65-2.98-2.65h-.22C.45,0,0,.45,0,1s.45,1,1,1h.22c.51,0,.93,.38,.99,.88l1.38,11.7c.3,2.52,2.43,4.42,4.97,4.42h10.44c.55,0,1-.45,1-1s-.45-1-1-1H8.56c-1.29,0-2.41-.82-2.83-2h11.99c2.38,0,4.44-1.69,4.9-4.02l.36-1.78c.11-.54-.24-1.07-.78-1.18Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CartMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M9,22c0,1.1-.9,2-2,2s-2-.9-2-2,.9-2,2-2,2,.9,2,2Zm8-2c-1.1,0-2,.9-2,2s.9,2,2,2,2-.9,2-2-.9-2-2-2ZM23,3h-6c-.55,0-1,.45-1,1s.45,1,1,1h6c.55,0,1-.45,1-1s-.45-1-1-1Zm-.8,5.02c-.55-.11-1.07,.24-1.18,.78l-.36,1.78c-.28,1.4-1.52,2.41-2.94,2.41H5.42l-.94-8h7.52c.55,0,1-.45,1-1s-.45-1-1-1H4.24l-.04-.35c-.18-1.51-1.46-2.65-2.98-2.65h-.22C.45,0,0,.45,0,1s.45,1,1,1h.22c.51,0,.93,.38,.99,.88l1.38,11.7c.3,2.52,2.43,4.42,4.97,4.42h10.44c.55,0,1-.45,1-1s-.45-1-1-1H8.56c-1.29,0-2.41-.82-2.83-2h11.99c2.38,0,4.44-1.69,4.9-4.02l.36-1.78c.11-.54-.24-1.07-.78-1.18Z"/></svg>
+
 );
-
-CartMinus.displayName = 'CartMinus';

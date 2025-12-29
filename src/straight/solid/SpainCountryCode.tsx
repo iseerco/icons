@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SpainCountryCode: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21 3h-18c-1.654 0-3 1.346-3 3v15h24v-15c0-1.654-1.346-3-3-3zm-10 6.6h-2.4v1.65h2.4v1.6h-2.4v1.551h2.4v1.6h-4v-8.001h4zm5.971 4.34c-.194 1.193-1.234 2.058-2.471 2.058-.996.002-1.939-.446-2.576-1.209l1.12-1.117c.351.418.895.674 1.456.673.547 0 .803-.376.857-.698.085-.524-.548-.796-.621-.825-.524-.212-1.135-.484-1.714-.762-.659-.307-1.07-1.209-.954-2.098.114-.862.688-1.563 1.5-1.831 1.612-.498 2.734.565 2.953.75l-.951 1.232c-.295-.221-.84-.611-1.558-.401-.36.118-.437.385-.436.468.004.351.248.46.352.506.335.153.785.359 1.341.585 1.476.597 1.847 1.769 1.702 2.666z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SpainCountryCode = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21 3h-18c-1.654 0-3 1.346-3 3v15h24v-15c0-1.654-1.346-3-3-3zm-10 6.6h-2.4v1.65h2.4v1.6h-2.4v1.551h2.4v1.6h-4v-8.001h4zm5.971 4.34c-.194 1.193-1.234 2.058-2.471 2.058-.996.002-1.939-.446-2.576-1.209l1.12-1.117c.351.418.895.674 1.456.673.547 0 .803-.376.857-.698.085-.524-.548-.796-.621-.825-.524-.212-1.135-.484-1.714-.762-.659-.307-1.07-1.209-.954-2.098.114-.862.688-1.563 1.5-1.831 1.612-.498 2.734.565 2.953.75l-.951 1.232c-.295-.221-.84-.611-1.558-.401-.36.118-.437.385-.436.468.004.351.248.46.352.506.335.153.785.359 1.341.585 1.476.597 1.847 1.769 1.702 2.666z"/></svg>
 );
-
-SpainCountryCode.displayName = 'SpainCountryCode';

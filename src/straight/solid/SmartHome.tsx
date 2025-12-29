@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SmartHome: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SmartHome = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.812,7.635L13.908.658c-1.123-.881-2.692-.879-3.815,0L1.188,7.635c-.755.591-1.188,1.479-1.188,2.439v13.926h24v-13.926c0-.96-.433-1.849-1.188-2.439Zm-10.812,11.365c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm2.122-4.121c-1.17-1.17-3.073-1.17-4.243,0l-1.414-1.414c1.949-1.949,5.122-1.949,7.071,0l-1.414,1.414Zm2.828-2.829c-2.729-2.729-7.17-2.729-9.899,0l-1.414-1.414c3.509-3.51,9.219-3.51,12.728,0l-1.414,1.414Z"/>
 </svg>
-);
 
-SmartHome.displayName = 'SmartHome';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Mp4File: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Mp4File = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,19h4.414l-4.414,4.414v-4.414Zm-6.533-12.75h-.715l.005,1.473.71-.003c.413,0,.762-.336.762-.735s-.349-.735-.762-.735Zm11.533-3.25v14h-7v7H0V3C0,1.346,1.346,0,3,0h18c1.654,0,3,1.346,3,3Zm-14.69,8.069l-.385-5.31c-.032-.535-.358-.759-.749-.759-.26,0-.501.184-.638.486l-.883,1.942-.883-1.942c-.137-.302-.378-.486-.638-.486-.391,0-.717.224-.749.759l-.385,5.31h1.217l.242-3.339,1.196,2.631,1.196-2.631.242,3.339h1.217Zm5.168-4.084c0-1.094-.902-1.985-2.012-1.985h-1.967v6.069h1.25v-2.096l.717-.003c1.109,0,2.012-.891,2.012-1.985Zm5-1.985h-1.253l-.004,2.723-.969-.002c-.277,0-.501-.221-.499-.499.005-.664.015-1.71.022-2.222h-1.276v2.472c0,.828.671,1.499,1.499,1.5h1.23v2.097h1.25v-6.069Z"/>
 </svg>
-);
 
-Mp4File.displayName = 'Mp4File';
+);

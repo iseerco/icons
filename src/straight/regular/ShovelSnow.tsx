@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShovelSnow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShovelSnow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.543,6.457l1.414-1.414L18.957.043l-1.414,1.414,1.793,1.793-6.758,6.758-2.069-2.069c-1.25-1.251-3.285-1.251-4.535,0L.086,13.827l10.122,10.122,5.888-5.888c1.25-1.25,1.25-3.285,0-4.535l-2.104-2.104,6.758-6.758,1.793,1.793Zm-7.861,10.19l-4.474,4.474-1.457-1.457,3.15-3.15-1.414-1.414-3.15,3.15-1.586-1.586,3.15-3.15-1.414-1.414-3.15,3.15-1.422-1.422,4.474-4.474c.471-.471,1.236-.471,1.707,0l5.587,5.586c.47.471.47,1.236,0,1.707Z"/>
 </svg>
-);
 
-ShovelSnow.displayName = 'ShovelSnow';
+);

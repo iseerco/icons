@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsStarOctogram: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsStarOctogram = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,24l-3.515-3.515H3.515v-4.971l-3.515-3.515,3.515-3.515V3.515h4.971l3.515-3.515,3.515,3.515h4.971v4.971l3.515,3.515-3.515,3.515v4.971h-4.971l-3.515,3.515Zm-7.485-4.515h4.385l3.101,3.101,3.101-3.101h4.385v-4.385l3.101-3.101-3.101-3.101v-4.385h-4.385l-3.101-3.101-3.101,3.101h-4.385v4.385l-3.101,3.101,3.101,3.101v4.385Z"/>
 </svg>
-);
 
-FiTsStarOctogram.displayName = 'FiTsStarOctogram';
+);

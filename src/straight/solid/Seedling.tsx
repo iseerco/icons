@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Seedling: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Seedling = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.97.942l-.055-.957-.959.015c-6.707.104-9.661,4.231-10.956,7.605C10.705,4.231,7.751.104,1.044,0L.085-.015.03.942c-.219,3.798.749,6.791,2.874,8.893,2.632,2.603,6.301,3.085,8.096,3.155v11.01h2v-11.01c1.795-.07,5.463-.552,8.096-3.155,2.125-2.103,3.093-5.095,2.874-8.893Z"/>
 </svg>
-);
 
-Seedling.displayName = 'Seedling';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsDirectionSignalArrow: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsDirectionSignalArrow = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.561,12.561l-3.75,3.75-.707-.707,3.604-3.604h-6.707c-1.93,0-3.5,1.57-3.5,3.5v8.5h-1v-4.5c0-1.93-1.57-3.5-3.5-3.5H1.293l3.604,3.604-.707.707-3.75-3.75c-.585-.585-.585-1.536,0-2.121l3.75-3.75.707.707-3.604,3.604h6.707c1.412,0,2.674.654,3.5,1.675V1.293l-3.604,3.604-.707-.707L10.939.439c.585-.585,1.536-.585,2.121,0l3.75,3.75-.707.707-3.604-3.604v11.382c.826-1.021,2.088-1.675,3.5-1.675h6.707l-3.604-3.604.707-.707,3.75,3.75c.585.585.585,1.536,0,2.121Z"/>
 </svg>
-);
 
-FiTsDirectionSignalArrow.displayName = 'FiTsDirectionSignalArrow';
+);

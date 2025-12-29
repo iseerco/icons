@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Surfing: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20 .01c-3.812 0-8.125 2.038-11.539 5.451a38.467 38.467 0 0 0 -8.138 11.851 3.984 3.984 0 0 0 .851 4.409l1.106 1.105a3.981 3.981 0 0 0 4.4.852 38.333 38.333 0 0 0 11.854-8.139c3.418-3.413 5.456-7.726 5.456-11.539a3.632 3.632 0 0 0 -3.99-3.99zm-2.875 14.115a36.348 36.348 0 0 1 -11.225 7.715 2.006 2.006 0 0 1 -2.026-.3l12.833-12.833a1 1 0 1 0 -1.414-1.414l-12.836 12.836a2.007 2.007 0 0 1 -.3-2.028 36.44 36.44 0 0 1 7.718-11.226c3.588-3.587 7.583-4.865 10.125-4.865 1.451 0 1.99.539 1.99 1.99 0 2.543-1.278 6.538-4.865 10.125z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Surfing = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20 .01c-3.812 0-8.125 2.038-11.539 5.451a38.467 38.467 0 0 0 -8.138 11.851 3.984 3.984 0 0 0 .851 4.409l1.106 1.105a3.981 3.981 0 0 0 4.4.852 38.333 38.333 0 0 0 11.854-8.139c3.418-3.413 5.456-7.726 5.456-11.539a3.632 3.632 0 0 0 -3.99-3.99zm-2.875 14.115a36.348 36.348 0 0 1 -11.225 7.715 2.006 2.006 0 0 1 -2.026-.3l12.833-12.833a1 1 0 1 0 -1.414-1.414l-12.836 12.836a2.007 2.007 0 0 1 -.3-2.028 36.44 36.44 0 0 1 7.718-11.226c3.588-3.587 7.583-4.865 10.125-4.865 1.451 0 1.99.539 1.99 1.99 0 2.543-1.278 6.538-4.865 10.125z"/></svg>
 );
-
-Surfing.displayName = 'Surfing';

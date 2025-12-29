@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AddImage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AddImage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,19c0,.553-.448,1-1,1h-3v3c0,.553-.448,1-1,1s-1-.447-1-1v-3h-3c-.552,0-1-.447-1-1s.448-1,1-1h3v-3c0-.553.448-1,1-1s1,.447,1,1v3h3c.552,0,1,.447,1,1Zm-8-12c.551,0,1-.448,1-1s-.449-1-1-1-1,.448-1,1,.449,1,1,1Zm-11.192,2.151L0,13.959V5C0,2.243,2.243,0,5,0h12c2.757,0,5,2.243,5,5v7h-3c-1.585,0-2.885,1.235-2.992,2.793l-5.642-5.642c-1.533-1.533-4.026-1.533-5.558,0Zm8.192-3.151c0,1.654,1.346,3,3,3s3-1.346,3-3-1.346-3-3-3-3,1.346-3,3Zm-1,13c0-1.463,1.052-2.684,2.44-2.947l-5.488-5.488c-.752-.751-1.976-.752-2.73,0L0,16.787v.213c0,2.757,2.243,5,5,5h7v-3Z"/>
 </svg>
-);
 
-AddImage.displayName = 'AddImage';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HouseChimneyHeart: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HouseChimneyHeart = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22.813,7.635l-.813-.637V2h-2v3.431L13.908.659c-1.123-.881-2.693-.881-3.816,0L1.187,7.635c-.754.592-1.187,1.48-1.187,2.439v13.926h24v-13.926c0-.958-.433-1.847-1.187-2.439Zm-10.263,11.286l-.57.396-.57-.396c-.505-.35-4.93-3.509-4.93-6.491,0-1.892,1.458-3.43,3.25-3.43.89,0,1.675.318,2.25.852.575-.533,1.36-.852,2.25-.852,1.792,0,3.25,1.539,3.25,3.43,0,2.982-4.425,6.141-4.93,6.491Zm2.93-6.491c0,1.239-1.891,3.186-3.499,4.428-1.414-1.1-3.501-3.096-3.501-4.428,0-.789.561-1.43,1.25-1.43.576,0,1.25.316,1.25,1.209h.02v.791h2v-1h-.005c.096-.689.668-1,1.236-1,.689,0,1.25.642,1.25,1.43Z"/>
 </svg>
-);
 
-HouseChimneyHeart.displayName = 'HouseChimneyHeart';
+);

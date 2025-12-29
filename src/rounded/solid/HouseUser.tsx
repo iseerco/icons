@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HouseUser: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HouseUser = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m16,22v2h-8v-2c0-2.206,1.794-4,4-4s4,1.794,4,4Zm-4-14c-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2-.897-2-2-2Zm12,1.685v9.315c0,2.757-2.243,5-5,5h-1v-2c0-3.309-2.691-6-6-6s-6,2.691-6,6v2h-1c-2.757,0-5-2.243-5-5v-9.315c0-1.664.823-3.214,2.203-4.146L9.203.815c1.699-1.146,3.895-1.146,5.594,0l7,4.724c1.38.932,2.203,2.481,2.203,4.146Zm-8,.315c0-2.206-1.794-4-4-4s-4,1.794-4,4,1.794,4,4,4,4-1.794,4-4Z"/>
 </svg>
-);
 
-HouseUser.displayName = 'HouseUser';
+);

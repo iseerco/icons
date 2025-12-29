@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCloudDisabled: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 14.85a8.176 8.176 0 0 0 -6.024-7.85 8.2 8.2 0 0 0 -7.885-6 8.065 8.065 0 0 0 -5.15 1.82l-2.755-2.756-2.122 2.122 21.75 21.75 2.122-2.122-1.806-1.8a8.067 8.067 0 0 0 1.87-5.164zm-13.909-10.85a5.181 5.181 0 0 1 5.13 4.465l.151 1.135 1.138.15a5.172 5.172 0 0 1 4.49 5.1 5.054 5.054 0 0 1 -1 3.024l-12.927-12.923a5.085 5.085 0 0 1 3.018-.951zm3.564 16 2.96 2.96c-.263.025-.528.04-.8.04h-10.015a5.792 5.792 0 0 1 -5.8-5.775 5.953 5.953 0 0 1 2.72-4.925 8.045 8.045 0 0 1 -.69-3.27c0-.211.015-.418.03-.624l4.891 4.894.432.58-2.165.557a3.025 3.025 0 0 0 -2.218 2.788 2.788 2.788 0 0 0 2.8 2.775z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCloudDisabled = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24 14.85a8.176 8.176 0 0 0 -6.024-7.85 8.2 8.2 0 0 0 -7.885-6 8.065 8.065 0 0 0 -5.15 1.82l-2.755-2.756-2.122 2.122 21.75 21.75 2.122-2.122-1.806-1.8a8.067 8.067 0 0 0 1.87-5.164zm-13.909-10.85a5.181 5.181 0 0 1 5.13 4.465l.151 1.135 1.138.15a5.172 5.172 0 0 1 4.49 5.1 5.054 5.054 0 0 1 -1 3.024l-12.927-12.923a5.085 5.085 0 0 1 3.018-.951zm3.564 16 2.96 2.96c-.263.025-.528.04-.8.04h-10.015a5.792 5.792 0 0 1 -5.8-5.775 5.953 5.953 0 0 1 2.72-4.925 8.045 8.045 0 0 1 -.69-3.27c0-.211.015-.418.03-.624l4.891 4.894.432.58-2.165.557a3.025 3.025 0 0 0 -2.218 2.788 2.788 2.788 0 0 0 2.8 2.775z"/></svg>
 );
-
-FiBsCloudDisabled.displayName = 'FiBsCloudDisabled';

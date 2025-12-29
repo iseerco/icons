@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsLightSwitchOn: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.5,0H5.5c-1.93,0-3.5,1.57-3.5,3.5V24H22V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,21H5V3.5c0-.276,.224-.5,.5-.5h13c.276,0,.5,.224,.5,.5V21Zm-12-4.5c0,1.378,1.122,2.5,2.5,2.5h5c1.378,0,2.5-1.122,2.5-2.5V5H7v11.5Zm7-8.5v4h-4v-4h4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsLightSwitchOn = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.5,0H5.5c-1.93,0-3.5,1.57-3.5,3.5V24H22V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,21H5V3.5c0-.276,.224-.5,.5-.5h13c.276,0,.5,.224,.5,.5V21Zm-12-4.5c0,1.378,1.122,2.5,2.5,2.5h5c1.378,0,2.5-1.122,2.5-2.5V5H7v11.5Zm7-8.5v4h-4v-4h4Z"/></svg>
+
 );
-
-FiBsLightSwitchOn.displayName = 'FiBsLightSwitchOn';

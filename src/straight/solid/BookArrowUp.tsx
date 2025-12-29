@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BookArrowUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M4,17.999c-.738-.001-1.451,.271-2,.765V2.999C2,1.342,3.343,0,5,0h1V17.999h-2ZM20,0H8V18h7v-7.008l-2.291,2.302-1.414-1.414,3.298-3.299c.776-.775,2.037-.775,2.812,0l3.299,3.299-1.414,1.414-2.291-2.291v6.996h5V2c0-1.105-.895-2-2-2ZM4,20c-1.105,0-2,.895-2,2s.895,2,2,2H22v-4H4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BookArrowUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M4,17.999c-.738-.001-1.451,.271-2,.765V2.999C2,1.342,3.343,0,5,0h1V17.999h-2ZM20,0H8V18h7v-7.008l-2.291,2.302-1.414-1.414,3.298-3.299c.776-.775,2.037-.775,2.812,0l3.299,3.299-1.414,1.414-2.291-2.291v6.996h5V2c0-1.105-.895-2-2-2ZM4,20c-1.105,0-2,.895-2,2s.895,2,2,2H22v-4H4Z"/></svg>
+
 );
-
-BookArrowUp.displayName = 'BookArrowUp';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HugTree: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m4.5 12c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5zm19.5-10.096v1.993l-6 6.175v13.927h-8v-7h4v-2h-8v9h-6v-8c0-1.654 1.346-3 3-3h7v-4.913l-10-6.086v-2l10 4.783v-4.783h8v6.309l2-1.468v-4.841h1.334l.53 3.472z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HugTree = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m4.5 12c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5zm19.5-10.096v1.993l-6 6.175v13.927h-8v-7h4v-2h-8v9h-6v-8c0-1.654 1.346-3 3-3h7v-4.913l-10-6.086v-2l10 4.783v-4.783h8v6.309l2-1.468v-4.841h1.334l.53 3.472z"/></svg>
 );
-
-HugTree.displayName = 'HugTree';

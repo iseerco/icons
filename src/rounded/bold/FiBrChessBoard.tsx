@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrChessBoard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.5,0H5.5A5.506,5.506,0,0,0,0,5.5v13A5.507,5.507,0,0,0,5.5,24h13A5.507,5.507,0,0,0,24,18.5V5.5A5.506,5.506,0,0,0,18.5,0ZM21,14v4H18v3H14V18H10v3H6V18H3V14H6V10H3V6H6V3h4V6h4V3h4V6h3v4H18v4ZM10,10H6V6h4Zm4,0V6h4v4Zm-4,4v4H6V14Zm4,0h4v4H14Zm-4-4h4v4H10Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrChessBoard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M18.5,0H5.5A5.506,5.506,0,0,0,0,5.5v13A5.507,5.507,0,0,0,5.5,24h13A5.507,5.507,0,0,0,24,18.5V5.5A5.506,5.506,0,0,0,18.5,0ZM21,14v4H18v3H14V18H10v3H6V18H3V14H6V10H3V6H6V3h4V6h4V3h4V6h3v4H18v4ZM10,10H6V6h4Zm4,0V6h4v4Zm-4,4v4H6V14Zm4,0h4v4H14Zm-4-4h4v4H10Z"/></svg>
+
 );
-
-FiBrChessBoard.displayName = 'FiBrChessBoard';

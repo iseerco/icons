@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FilterCheck: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m18 0c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm.619 8.414c-.378.378-.88.586-1.414.586h-.002c-.534 0-1.036-.209-1.413-.587l-2.012-2.012 1.414-1.414 2.013 2.013 3.615-3.615 1.414 1.414zm-3.723 4.959-.895 1.007v9.62l-6-4.5v-5.12l-8.001-8.999v-2.38c0-1.654 1.346-3.001 3-3.001h9.726c-1.667 1.467-2.726 3.61-2.726 6 0 3.311 2.022 6.158 4.895 7.373z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FilterCheck = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18 0c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm.619 8.414c-.378.378-.88.586-1.414.586h-.002c-.534 0-1.036-.209-1.413-.587l-2.012-2.012 1.414-1.414 2.013 2.013 3.615-3.615 1.414 1.414zm-3.723 4.959-.895 1.007v9.62l-6-4.5v-5.12l-8.001-8.999v-2.38c0-1.654 1.346-3.001 3-3.001h9.726c-1.667 1.467-2.726 3.61-2.726 6 0 3.311 2.022 6.158 4.895 7.373z"/></svg>
 );
-
-FilterCheck.displayName = 'FilterCheck';

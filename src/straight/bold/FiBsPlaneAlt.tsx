@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsPlaneAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.957,11.339A4.107,4.107,0,0,0,19.877,8H17.882L14.416,1.778A3.406,3.406,0,0,0,11.423,0H6.41l2.7,8H4.93l-.618-.925A2.4,2.4,0,0,0,2.311,6H0l2.213,6-2.2,6h2.31a2.4,2.4,0,0,0,2-1.075L4.94,16H9.111l-2.7,8h5.013a3.4,3.4,0,0,0,2.986-1.765L17.882,16h2.129a4,4,0,0,0,3.946-4.661Zm-3.184,1.308a1,1,0,0,1-.762.353H16.118l-4.337,7.788a.409.409,0,0,1-.358.212H10.59l2.7-8H6V11h7.291l-2.7-8h.833a.415.415,0,0,1,.365.225L16.118,11h3.759A1.1,1.1,0,0,1,21,11.821,1,1,0,0,1,20.773,12.647Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsPlaneAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.957,11.339A4.107,4.107,0,0,0,19.877,8H17.882L14.416,1.778A3.406,3.406,0,0,0,11.423,0H6.41l2.7,8H4.93l-.618-.925A2.4,2.4,0,0,0,2.311,6H0l2.213,6-2.2,6h2.31a2.4,2.4,0,0,0,2-1.075L4.94,16H9.111l-2.7,8h5.013a3.4,3.4,0,0,0,2.986-1.765L17.882,16h2.129a4,4,0,0,0,3.946-4.661Zm-3.184,1.308a1,1,0,0,1-.762.353H16.118l-4.337,7.788a.409.409,0,0,1-.358.212H10.59l2.7-8H6V11h7.291l-2.7-8h.833a.415.415,0,0,1,.365.225L16.118,11h3.759A1.1,1.1,0,0,1,21,11.821,1,1,0,0,1,20.773,12.647Z"/></svg>
+
 );
-
-FiBsPlaneAlt.displayName = 'FiBsPlaneAlt';

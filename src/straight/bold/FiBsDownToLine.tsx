@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDownToLine: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,24H0v-3H24v3Zm-9.65-5.98l9.69-10.02h-7.04V0H7V8H-.01l9.67,10.01h.01c.62,.64,1.45,.99,2.33,.99h0c.88,0,1.71-.34,2.35-.98Zm-7.3-7.02h2.95V3h4V11h2.96l-4.75,4.91c-.07,.07-.15,.09-.21,.09h0c-.05,0-.13-.01-.2-.08l-4.75-4.92Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDownToLine = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,24H0v-3H24v3Zm-9.65-5.98l9.69-10.02h-7.04V0H7V8H-.01l9.67,10.01h.01c.62,.64,1.45,.99,2.33,.99h0c.88,0,1.71-.34,2.35-.98Zm-7.3-7.02h2.95V3h4V11h2.96l-4.75,4.91c-.07,.07-.15,.09-.21,.09h0c-.05,0-.13-.01-.2-.08l-4.75-4.92Z"/></svg>
+
 );
-
-FiBsDownToLine.displayName = 'FiBsDownToLine';

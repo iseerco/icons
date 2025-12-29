@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PhotoVideo: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,0H11c-1.654,0-3,1.346-3,3V14H24V3c0-1.654-1.346-3-3-3ZM11.5,2c.828,0,1.5,.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5,.672-1.5,1.5-1.5Zm10.5,3.121l-4,4-2.053-2.052-5.947,5.097v-2.633l6.053-5.189,1.947,1.948,4-4v2.828ZM6,16v-6h-2v2H2v-2H0v14H2v-2h2v2H14v-2h2v2h2v-8H6Zm-2,4H2v-2h2v2Zm-2-4v-2h2v2H2Zm12,4v-2h2v2h-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PhotoVideo = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,0H11c-1.654,0-3,1.346-3,3V14H24V3c0-1.654-1.346-3-3-3ZM11.5,2c.828,0,1.5,.672,1.5,1.5s-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5,.672-1.5,1.5-1.5Zm10.5,3.121l-4,4-2.053-2.052-5.947,5.097v-2.633l6.053-5.189,1.947,1.948,4-4v2.828ZM6,16v-6h-2v2H2v-2H0v14H2v-2h2v2H14v-2h2v2h2v-8H6Zm-2,4H2v-2h2v2Zm-2-4v-2h2v2H2Zm12,4v-2h2v2h-2Z"/></svg>
+
 );
-
-PhotoVideo.displayName = 'PhotoVideo';

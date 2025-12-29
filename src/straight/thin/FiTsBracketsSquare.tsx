@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsBracketsSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M2.5,0h3.5V1H2.5c-.83,0-1.5,.67-1.5,1.5V21.5c0,.83,.67,1.5,1.5,1.5h3.5v1H2.5c-1.38,0-2.5-1.12-2.5-2.5V2.5C0,1.12,1.12,0,2.5,0ZM21.5,0h-3.5V1h3.5c.83,0,1.5,.67,1.5,1.5V21.5c0,.83-.67,1.5-1.5,1.5h-3.5v1h3.5c1.38,0,2.5-1.12,2.5-2.5V2.5c0-1.38-1.12-2.5-2.5-2.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsBracketsSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M2.5,0h3.5V1H2.5c-.83,0-1.5,.67-1.5,1.5V21.5c0,.83,.67,1.5,1.5,1.5h3.5v1H2.5c-1.38,0-2.5-1.12-2.5-2.5V2.5C0,1.12,1.12,0,2.5,0ZM21.5,0h-3.5V1h3.5c.83,0,1.5,.67,1.5,1.5V21.5c0,.83-.67,1.5-1.5,1.5h-3.5v1h3.5c1.38,0,2.5-1.12,2.5-2.5V2.5c0-1.38-1.12-2.5-2.5-2.5Z"/></svg>
+
 );
-
-FiTsBracketsSquare.displayName = 'FiTsBracketsSquare';

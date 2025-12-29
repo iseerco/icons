@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CalendarArrowDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m0,8v-3c0-1.654,1.346-3,3-3h3V0h2v2h8V0h2v2h3c1.654,0,3,1.346,3,3v3H0Zm24,2v14H0v-14h24Zm-7.524,7.438l-1.393-1.436-2.083,2.02v-5.023h-2v5.025l-2.08-2.022-1.395,1.434,3.069,2.983c.389.388.899.581,1.409.581.506,0,1.011-.191,1.392-.571l3.08-2.991Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CalendarArrowDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m0,8v-3c0-1.654,1.346-3,3-3h3V0h2v2h8V0h2v2h3c1.654,0,3,1.346,3,3v3H0Zm24,2v14H0v-14h24Zm-7.524,7.438l-1.393-1.436-2.083,2.02v-5.023h-2v5.025l-2.08-2.022-1.395,1.434,3.069,2.983c.389.388.899.581,1.409.581.506,0,1.011-.191,1.392-.571l3.08-2.991Z"/></svg>
+
 );
-
-CalendarArrowDown.displayName = 'CalendarArrowDown';

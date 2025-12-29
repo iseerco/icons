@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Icicles: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Icicles = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8.278,24.078l-3.242-12.082-2.319,6.231L0,1.515V0h24l-.011,1.664-3.293,21.83-3.561-12.099-2.481,6.795-2.611-6.637-3.765,12.524ZM5.345,5.432l3.043,11.336,3.401-11.321,2.795,7.105,2.757-7.547,2.725,9.261,1.85-12.266H2.093l1.382,8.458,1.87-5.026Z"/>
 </svg>
-);
 
-Icicles.displayName = 'Icicles';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSewingMachineAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSewingMachineAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,13V6h-2.531c-.503-1.102-1.411-2.018-2.519-2.5h.05V1h-1V3.172c-.503-.12-1.024-.192-1.574-.158l-9.468,1.413,.052-1.152c-.362-.258-1.274-1.198-3.511-1.274C1.261,2.078,.356,3.015-.011,3.274L.522,15H3v2h1v-2h2.478l.18-3.972,6.341,.906v9.066H0v1H24v-1h-2V13h2Zm-2-6h1v5h-1V7ZM5.522,14H1.478L1.012,3.748c.38-.248,1.292-.748,2.488-.748s2.108,.5,2.488,.748l-.466,10.252Zm15.478,7h-7V11.066l-7.296-1.042,.208-4.58,9.616-1.437c1.158-.072,2.274,.334,3.113,1.126,.876,.828,1.359,1.973,1.359,3.222v12.646Zm-3.5-5c-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2-.897-2-2-2Zm0,3c-.551,0-1-.448-1-1s.449-1,1-1,1,.448,1,1-.449,1-1,1Zm0-8c-1.103,0-2,.897-2,2s.897,2,2,2,2-.897,2-2-.897-2-2-2Zm0,3c-.551,0-1-.448-1-1s.449-1,1-1,1,.448,1,1-.449,1-1,1Z"/>
 </svg>
-);
 
-FiTsSewingMachineAlt.displayName = 'FiTsSewingMachineAlt';
+);

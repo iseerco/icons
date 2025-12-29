@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBookFont: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.5,0H5C2.79,0,1,1.79,1,4V20c0,2.21,1.79,4,4,4H23V2.5c0-1.38-1.12-2.5-2.5-2.5Zm-.5,16H10V3h10v13ZM5,3h2v13h-2c-.35,0-.68,.04-1,.13V4c0-.55,.45-1,1-1Zm0,18c-.55,0-1-.45-1-1s.45-1,1-1h15v2H5Zm8.12-7l.31-.98h3.14l.31,.98h2.12l-2.59-8.01c-.22-.6-.77-.99-1.41-.99s-1.19,.39-1.41,1l-2.59,8h2.12Zm2.82-2.98h-1.89l.95-3.03,.95,3.03Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBookFont = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M20.5,0H5C2.79,0,1,1.79,1,4V20c0,2.21,1.79,4,4,4H23V2.5c0-1.38-1.12-2.5-2.5-2.5Zm-.5,16H10V3h10v13ZM5,3h2v13h-2c-.35,0-.68,.04-1,.13V4c0-.55,.45-1,1-1Zm0,18c-.55,0-1-.45-1-1s.45-1,1-1h15v2H5Zm8.12-7l.31-.98h3.14l.31,.98h2.12l-2.59-8.01c-.22-.6-.77-.99-1.41-.99s-1.19,.39-1.41,1l-2.59,8h2.12Zm2.82-2.98h-1.89l.95-3.03,.95,3.03Z"/></svg>
+
 );
-
-FiBsBookFont.displayName = 'FiBsBookFont';

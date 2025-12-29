@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SignalAltSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m24.004,22.59l-1.413,1.416L.003,1.458,1.416.042l11.584,11.563v-6.105c0-.827.673-1.5,1.5-1.5h1c.827,0,1.5.673,1.5,1.5v10.098l2,1.996V1.5c0-.827.673-1.5,1.5-1.5h1c.827,0,1.5.673,1.5,1.5v20.088l1.004,1.002ZM3.5,17h-1c-.827,0-1.5.673-1.5,1.5v5.5h4v-5.5c0-.827-.673-1.5-1.5-1.5Zm3.5,7h4v-8.739l-4-3.993v12.731Zm6,0h4v-2.749l-4-3.993v6.742Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SignalAltSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24.004,22.59l-1.413,1.416L.003,1.458,1.416.042l11.584,11.563v-6.105c0-.827.673-1.5,1.5-1.5h1c.827,0,1.5.673,1.5,1.5v10.098l2,1.996V1.5c0-.827.673-1.5,1.5-1.5h1c.827,0,1.5.673,1.5,1.5v20.088l1.004,1.002ZM3.5,17h-1c-.827,0-1.5.673-1.5,1.5v5.5h4v-5.5c0-.827-.673-1.5-1.5-1.5Zm3.5,7h4v-8.739l-4-3.993v12.731Zm6,0h4v-2.749l-4-3.993v6.742Z"/></svg>
+
 );
-
-SignalAltSlash.displayName = 'SignalAltSlash';

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTablePivot: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.955,14h-1.955v2.5c0,1.93-1.57,3.5-3.5,3.5h-2.5v2l-2.715-2.792c-.38-.391-.38-1.025,0-1.416l2.715-2.792v2h2.5c.275,0,.5-.225,.5-.5v-2.5h-1.955l2.756-2.711c.386-.386,1.012-.386,1.398,0l2.756,2.711Zm-3.455-12H8V7h13v2.033c.647,.074,1.276,.345,1.771,.839l1.229,1.208V5.5c0-1.93-1.57-3.5-3.5-3.5ZM11.212,19H5V10H0v12H13.371l-1.36-1.398c-.44-.452-.702-1.015-.799-1.602ZM5,2h-1.5C1.57,2,0,3.57,0,5.5v1.5H5V2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTablePivot = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.955,14h-1.955v2.5c0,1.93-1.57,3.5-3.5,3.5h-2.5v2l-2.715-2.792c-.38-.391-.38-1.025,0-1.416l2.715-2.792v2h2.5c.275,0,.5-.225,.5-.5v-2.5h-1.955l2.756-2.711c.386-.386,1.012-.386,1.398,0l2.756,2.711Zm-3.455-12H8V7h13v2.033c.647,.074,1.276,.345,1.771,.839l1.229,1.208V5.5c0-1.93-1.57-3.5-3.5-3.5ZM11.212,19H5V10H0v12H13.371l-1.36-1.398c-.44-.452-.702-1.015-.799-1.602ZM5,2h-1.5C1.57,2,0,3.57,0,5.5v1.5H5V2Z"/></svg>
+
 );
-
-FiBsTablePivot.displayName = 'FiBsTablePivot';

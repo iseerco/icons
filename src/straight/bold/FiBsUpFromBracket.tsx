@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsUpFromBracket: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsUpFromBracket = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M21,15h3v5.5c0,1.93-1.57,3.5-3.5,3.5H3.5c-1.93,0-3.5-1.57-3.5-3.5v-5.5H3v5.5c0,.275,.224,.5,.5,.5H20.5c.275,0,.5-.225,.5-.5v-5.5ZM7,11H-.026L9.657,.971C10.279,.345,11.107,0,11.99,0h.001c.881,0,1.709,.344,2.331,.968l9.704,10.032h-7.038v7H7v-7Zm.041-3h2.948v7h4.012v-7h2.95L12.182,3.07c-.055-.055-.135-.07-.19-.07-.054,0-.132,.014-.202,.081l-4.749,4.919Z"/>
 </svg>
-);
 
-FiBsUpFromBracket.displayName = 'FiBsUpFromBracket';
+);

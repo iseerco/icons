@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FolderMath: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FolderMath = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M13,16h5v2h-5v-2Zm0-1h5v-2h-5v2Zm0-5h5v-2h-5v2Zm-6,1.5h2v-1.5h1.5v-2h-1.5v-1.5h-2v1.5h-1.5v2h1.5v1.5Zm2.293,1.292l-1.293,1.293-1.293-1.293-1.414,1.415,1.293,1.293-1.293,1.293,1.414,1.414,1.293-1.293,1.293,1.293,1.414-1.414-1.293-1.293,1.293-1.293-1.414-1.415Zm14.707-6.792V23H0V4C0,2.346,1.346,1,3,1h5.236l4,2h8.764c1.654,0,3,1.346,3,3Zm-2,0c0-.551-.448-1-1-1H11.764L7.764,3H3c-.552,0-1,.449-1,1V21H22V6Z"/>
 </svg>
-);
 
-FolderMath.displayName = 'FolderMath';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BabyCarriage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.861,8H13V0h2C15.083,0,22.746.1,23.861,8ZM5.5,10,4,8A5.025,5.025,0,0,0,0,6V8A3.015,3.015,0,0,1,2.4,9.2L4,11.333V13a3,3,0,0,0,3,3h4.865L9.257,19.129c-1.322-.618-3.42.917-3.253,2.511a2.492,2.492,0,1,0,4.757-1.191L14,16.562l3.239,3.887A2.492,2.492,0,1,0,22,21.639c.167-1.592-1.931-3.129-3.253-2.51L16.135,16H21a3,3,0,0,0,3-3V10Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BabyCarriage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.861,8H13V0h2C15.083,0,22.746.1,23.861,8ZM5.5,10,4,8A5.025,5.025,0,0,0,0,6V8A3.015,3.015,0,0,1,2.4,9.2L4,11.333V13a3,3,0,0,0,3,3h4.865L9.257,19.129c-1.322-.618-3.42.917-3.253,2.511a2.492,2.492,0,1,0,4.757-1.191L14,16.562l3.239,3.887A2.492,2.492,0,1,0,22,21.639c.167-1.592-1.931-3.129-3.253-2.51L16.135,16H21a3,3,0,0,0,3-3V10Z"/></svg>
+
 );
-
-BabyCarriage.displayName = 'BabyCarriage';

@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrainClock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m6 0h4c.338 0 .669.028 1 .052v5.948h-5zm7 6h8.253c-1.969-2.848-4.861-4.896-8.253-5.662zm-9 0v-6h-4v6zm13.5 12.5c0 3.038-2.462 5.5-5.5 5.5s-5.5-2.462-5.5-5.5 2.462-5.5 5.5-5.5 5.5 2.462 5.5 5.5zm-2.293 1.793-2.207-2.207v-3.086h-2v3.914l2.793 2.793zm7.219-12.293h-22.426v8h4.936c1.031-2.911 3.8-5 7.064-5s6.034 2.089 7.064 5h4.936v-1c0-2.546-.571-4.92-1.574-7z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrainClock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m6 0h4c.338 0 .669.028 1 .052v5.948h-5zm7 6h8.253c-1.969-2.848-4.861-4.896-8.253-5.662zm-9 0v-6h-4v6zm13.5 12.5c0 3.038-2.462 5.5-5.5 5.5s-5.5-2.462-5.5-5.5 2.462-5.5 5.5-5.5 5.5 2.462 5.5 5.5zm-2.293 1.793-2.207-2.207v-3.086h-2v3.914l2.793 2.793zm7.219-12.293h-22.426v8h4.936c1.031-2.911 3.8-5 7.064-5s6.034 2.089 7.064 5h4.936v-1c0-2.546-.571-4.92-1.574-7z"/></svg>
 );
-
-TrainClock.displayName = 'TrainClock';

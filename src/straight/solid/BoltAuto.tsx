@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BoltAuto: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BoltAuto = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15.587,11.823l-8.077,12.177h-3.321l2.023-8h-3.774c-.917,0-1.757-.503-2.191-1.313-.428-.798-.385-1.76.113-2.51L8.437,0h3.321l-2.023,8h3.801c.908,0,1.739.497,2.169,1.298s.385,1.769-.117,2.525Zm5.82,10.177h-4.381l-.565,2h-2.138l2.816-9.745c.371-.75,1.155-1.242,1.998-1.255.887.013,1.67.505,2.042,1.255l2.822,9.745h-2l-.592-2Zm-.592-2l-1.451-4.892c-.042-.051-.118-.097-.222-.107-.057.007-.115.035-.158.073l-1.392,4.925h3.224Z"/>
 </svg>
-);
 
-BoltAuto.displayName = 'BoltAuto';
+);

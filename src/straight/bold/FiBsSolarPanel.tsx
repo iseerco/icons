@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsSolarPanel: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsSolarPanel = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.5,17h10.492l-1.781-13.944c-.222-1.742-1.715-3.056-3.472-3.056H5.261c-1.757,0-3.25,1.313-3.472,3.056L.008,17h10.492v4h-4.5v3h12v-3h-4.5v-4Zm.303-7l.143,4h-3.891l.143-4h3.605Zm-3.498-3l.143-4h3.105l.143,4h-3.391Zm6.643,7l-.143-4h3.269l.511,4h-3.638Zm2.288-10.563l.455,3.563h-2.993l-.143-4h2.185c.251,0,.464.188.496.437Zm-13.975-.437h2.185l-.143,4h-2.993l.455-3.563c.032-.249.245-.437.496-.437Zm-1.335,7h3.269l-.143,4h-3.638l.511-4Z"/>
 </svg>
-);
 
-FiBsSolarPanel.displayName = 'FiBsSolarPanel';
+);

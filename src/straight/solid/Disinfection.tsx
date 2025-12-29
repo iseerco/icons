@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Disinfection: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20 11.5c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm2.5-4.5c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm0 6c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm-12.5-2.779v6.588l2 1.1v6.091h-2v-4.909l-3.928-2.16c-.796-.438-1.403-1.124-1.749-1.931h-1.823c-1.381 0-2.5-1.119-2.5-2.5v-4c0-1.381 1.119-2.5 2.5-2.5h1.5v-2.83c0-1.624 1.216-3.081 2.839-3.165 1.73-.091 3.161 1.285 3.161 2.996h-3v2h3v2.182c.019.022.045.039.063.062l2.393 2.756h2.544v2h-3.456l-1.544-1.779zm-7.043 13.779h2.03l1.027-4.819-1.823-1.003z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Disinfection = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m20 11.5c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm2.5-4.5c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm0 6c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm-12.5-2.779v6.588l2 1.1v6.091h-2v-4.909l-3.928-2.16c-.796-.438-1.403-1.124-1.749-1.931h-1.823c-1.381 0-2.5-1.119-2.5-2.5v-4c0-1.381 1.119-2.5 2.5-2.5h1.5v-2.83c0-1.624 1.216-3.081 2.839-3.165 1.73-.091 3.161 1.285 3.161 2.996h-3v2h3v2.182c.019.022.045.039.063.062l2.393 2.756h2.544v2h-3.456l-1.544-1.779zm-7.043 13.779h2.03l1.027-4.819-1.823-1.003z"/></svg>
 );
-
-Disinfection.displayName = 'Disinfection';

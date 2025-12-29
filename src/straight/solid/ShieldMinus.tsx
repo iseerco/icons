@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShieldMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShieldMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.259,2.412L12,.005l-7.259,2.407c-1.639.544-2.741,2.07-2.741,3.797v5.755c0,6.566,7.005,10.577,9.151,11.648l.806.404.836-.336c2.16-.87,9.207-4.284,9.207-11.717v-5.755c0-1.727-1.102-3.253-2.741-3.797Zm-3.259,10.588h-8v-2h8v2Z"/>
 </svg>
-);
 
-ShieldMinus.displayName = 'ShieldMinus';
+);

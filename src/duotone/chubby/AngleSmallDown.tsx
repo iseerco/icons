@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AngleSmallDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m12 15.115c-.06 0-.118-.005-.177-.016-.134-.024-3.291-.638-4.669-4.907-.17-.525.118-1.089.644-1.259.53-.168 1.089.119 1.259.645.831 2.571 2.401 3.315 2.945 3.5.532-.182 2.108-.923 2.941-3.5.17-.526.729-.813 1.259-.645.525.17.813.733.644 1.259-1.378 4.269-4.535 4.882-4.669 4.907-.059.01-.117.016-.177.016z" opacity=".5"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AngleSmallDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12 15.115c-.06 0-.118-.005-.177-.016-.134-.024-3.291-.638-4.669-4.907-.17-.525.118-1.089.644-1.259.53-.168 1.089.119 1.259.645.831 2.571 2.401 3.315 2.945 3.5.532-.182 2.108-.923 2.941-3.5.17-.526.729-.813 1.259-.645.525.17.813.733.644 1.259-1.378 4.269-4.535 4.882-4.669 4.907-.059.01-.117.016-.177.016z" opacity=".5"/></svg>
 );
-
-AngleSmallDown.displayName = 'AngleSmallDown';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SwordAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SwordAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.554,.45c-.386-.388-.954-.543-1.481-.396-2.544,.688-4.835,1.736-6.811,3.114-1.343,.938-4.43,3.836-6.094,5.5l-3.678,3.676c-.811-1.033-1.345-2.231-1.498-3.467-.067-.548-.564-.947-1.115-.869-.548,.067-.938,.567-.869,1.115,.243,1.964,1.191,3.86,2.668,5.338l1.724,1.724-3.151,3.151-1.543-1.543c-.391-.391-1.023-.391-1.414,0s-.391,1.023,0,1.414l4.5,4.5c.391,.391,1.023,.391,1.414,0s.391-1.023,0-1.414l-1.543-1.543,3.151-3.151,1.725,1.725c1.509,1.501,3.446,2.476,5.462,2.676,.497,0,.928-.371,.991-.877,.068-.548-.321-1.048-.869-1.115-1.241-.154-2.442-.691-3.477-1.507l3.679-3.677c1.701-1.7,4.643-4.83,5.556-6.146,1.349-1.942,2.38-4.213,3.064-6.745,.145-.527-.005-1.096-.391-1.482Z"/>
 </svg>
-);
 
-SwordAlt.displayName = 'SwordAlt';
+);

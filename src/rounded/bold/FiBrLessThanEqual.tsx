@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrLessThanEqual: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrLessThanEqual = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,22.5c0,.828-.671,1.5-1.5,1.5H4.5c-.829,0-1.5-.672-1.5-1.5s.671-1.5,1.5-1.5h15c.829,0,1.5.672,1.5,1.5Zm-.907-6.378l-13.687-5.894c-.396-.17-.426-.601-.426-.729s.031-.559.426-.729l13.687-5.894c.761-.328,1.112-1.21.785-1.971-.329-.763-1.212-1.111-1.971-.785L5.219,6.016c-1.381.596-2.239,1.931-2.239,3.484s.858,2.889,2.239,3.484l13.687,5.894c.193.083.395.122.593.122.581,0,1.134-.339,1.378-.907.328-.761-.024-1.643-.785-1.971Z"/>
 </svg>
-);
 
-FiBrLessThanEqual.displayName = 'FiBrLessThanEqual';
+);

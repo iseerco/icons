@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CommentUser: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,0H3A3,3,0,0,0,0,3V20H6.923l3.748,3.156a2.01,2.01,0,0,0,1.338.509A1.94,1.94,0,0,0,13.3,23.18L17.147,20H24V3A3,3,0,0,0,21,0ZM12,3A3.5,3.5,0,1,1,8.5,6.5,3.5,3.5,0,0,1,12,3Zm6,14H16V15a1,1,0,0,0-1-1H9a1,1,0,0,0-1,1v2H6V15a3,3,0,0,1,3-3h6a3,3,0,0,1,3,3ZM10.5,6.5A1.5,1.5,0,1,1,12,8,1.5,1.5,0,0,1,10.5,6.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CommentUser = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,0H3A3,3,0,0,0,0,3V20H6.923l3.748,3.156a2.01,2.01,0,0,0,1.338.509A1.94,1.94,0,0,0,13.3,23.18L17.147,20H24V3A3,3,0,0,0,21,0ZM12,3A3.5,3.5,0,1,1,8.5,6.5,3.5,3.5,0,0,1,12,3Zm6,14H16V15a1,1,0,0,0-1-1H9a1,1,0,0,0-1,1v2H6V15a3,3,0,0,1,3-3h6a3,3,0,0,1,3,3ZM10.5,6.5A1.5,1.5,0,1,1,12,8,1.5,1.5,0,0,1,10.5,6.5Z"/></svg>
+
 );
-
-CommentUser.displayName = 'CommentUser';

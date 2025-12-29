@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTriangleWarning: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.6,20.48c-.54,.95-1.52,1.52-2.62,1.52h-4.98v-3h4.98L12.02,4.02,3,19.01h5s0,2.99,0,2.99H3.02c-1.1,0-2.08-.57-2.62-1.52-.54-.95-.53-2.07,.02-3.01L9.4,2.48c.54-.92,1.51-1.48,2.6-1.48s2.06,.56,2.6,1.49l8.98,14.98c.56,.95,.56,2.07,.02,3.02Zm-13.1-3.48h3v-7h-3v7Zm0,5h3v-3h-3v3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTriangleWarning = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.6,20.48c-.54,.95-1.52,1.52-2.62,1.52h-4.98v-3h4.98L12.02,4.02,3,19.01h5s0,2.99,0,2.99H3.02c-1.1,0-2.08-.57-2.62-1.52-.54-.95-.53-2.07,.02-3.01L9.4,2.48c.54-.92,1.51-1.48,2.6-1.48s2.06,.56,2.6,1.49l8.98,14.98c.56,.95,.56,2.07,.02,3.02Zm-13.1-3.48h3v-7h-3v7Zm0,5h3v-3h-3v3Z"/></svg>
+
 );
-
-FiBsTriangleWarning.displayName = 'FiBsTriangleWarning';

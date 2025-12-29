@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const TrainStationBuilding: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const TrainStationBuilding = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m1,14h22v10h-7v-4c0-2.206-1.794-4-4-4s-4,1.794-4,4v4H1v-10Zm23-3.544v1.544H0v-1.544l3.049-3.456h3.951c0-2.414,1.721-4.435,4-4.899V0h2v2.101c2.279.465,4,2.485,4,4.899h3.951l3.049,3.456Zm-10-3.456c0-1.105-.895-2-2-2s-2,.895-2,2,.895,2,2,2,2-.895,2-2Z"/>
 </svg>
-);
 
-TrainStationBuilding.displayName = 'TrainStationBuilding';
+);

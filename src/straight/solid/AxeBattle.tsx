@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const AxeBattle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const AxeBattle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m11,3.944v12.103c-2.279.217-4.378,1.177-5.992,2.757l-.7.685-.7-.685C1.349,16.592,0,13.302,0,10.004,0,6.634,1.383,3.187,3.609,1.007l.7-.685.7.685c1.712,1.676,3.809,2.697,5.992,2.938Zm9.391-2.937l-.7-.685-.7.685c-1.712,1.676-3.809,2.697-5.992,2.938v12.103c2.279.217,4.378,1.177,5.992,2.757l.7.685.7-.685c2.26-2.212,3.609-5.502,3.609-8.8,0-3.371-1.383-6.818-3.609-8.997Zm-7.391,2.937v-1.944h-2v1.944c.332.037.665.056,1,.056s.668-.019,1-.056Zm-2,12.103v7.952h2v-7.952c-.33-.031-.664-.048-1-.048s-.67.016-1,.048Z"/>
 </svg>
-);
 
-AxeBattle.displayName = 'AxeBattle';
+);

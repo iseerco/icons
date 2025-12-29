@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ChartArea: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,24H3c-1.654,0-3-1.346-3-3V0H2V21c0,.551,.449,1,1,1H24v2Zm.025-13.218l-2.903-2.903c-1.134-1.134-3.11-1.134-4.243,0l-1.879,1.878-3.879-3.878c-1.133-1.134-3.109-1.134-4.242,0l-2.879,2.878v11.243H23.997l.028-9.218Zm-18.025-1.197l2.293-2.292c.377-.378,1.036-.378,1.413,0l5.293,5.292,3.293-3.292c.377-.378,1.036-.378,1.414,0l2.315,2.315-.019,6.392H6V9.585Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ChartArea = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,24H3c-1.654,0-3-1.346-3-3V0H2V21c0,.551,.449,1,1,1H24v2Zm.025-13.218l-2.903-2.903c-1.134-1.134-3.11-1.134-4.243,0l-1.879,1.878-3.879-3.878c-1.133-1.134-3.109-1.134-4.242,0l-2.879,2.878v11.243H23.997l.028-9.218Zm-18.025-1.197l2.293-2.292c.377-.378,1.036-.378,1.413,0l5.293,5.292,3.293-3.292c.377-.378,1.036-.378,1.414,0l2.315,2.315-.019,6.392H6V9.585Z"/></svg>
+
 );
-
-ChartArea.displayName = 'ChartArea';

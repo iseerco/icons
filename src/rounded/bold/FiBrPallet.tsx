@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrPallet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrPallet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,19.5v1c0,.828-.671,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-1c0-.275-.224-.5-.5-.5h-7v1.5c0,.828-.671,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-1.5H3.5c-.276,0-.5.225-.5.5v1c0,.828-.671,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-1c0-1.93,1.57-3.5,3.5-3.5h17c1.93,0,3.5,1.57,3.5,3.5Z"/>
 </svg>
-);
 
-FiBrPallet.displayName = 'FiBrPallet';
+);

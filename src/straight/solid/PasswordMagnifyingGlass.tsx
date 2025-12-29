@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PasswordMagnifyingGlass: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24.015 22.601-2.848-2.848c.524-.791.833-1.736.833-2.753 0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5c1.017 0 1.962-.309 2.753-.833l2.848 2.848zm-3.015-17.601h-18c-1.654 0-3 1.346-3 3v10h10.08c-.047-.327-.08-.66-.08-1 0-1.037.239-2.014.645-2.898l-1.559-1.559 1.043-1.043-1.043-1.043 1.414-1.414 1.043 1.043 1.043-1.043 1.573 1.573c.869-.389 1.827-.616 2.841-.616 3.866 0 7 3.134 7 7v-9c0-1.654-1.346-3-3-3zm-13.543 7.543-1.414 1.414-1.043-1.043-1.043 1.043-1.414-1.414 1.043-1.043-1.043-1.043 1.414-1.414 1.043 1.043 1.043-1.043 1.414 1.414-1.043 1.043z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PasswordMagnifyingGlass = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m24.015 22.601-2.848-2.848c.524-.791.833-1.736.833-2.753 0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5c1.017 0 1.962-.309 2.753-.833l2.848 2.848zm-3.015-17.601h-18c-1.654 0-3 1.346-3 3v10h10.08c-.047-.327-.08-.66-.08-1 0-1.037.239-2.014.645-2.898l-1.559-1.559 1.043-1.043-1.043-1.043 1.414-1.414 1.043 1.043 1.043-1.043 1.573 1.573c.869-.389 1.827-.616 2.841-.616 3.866 0 7 3.134 7 7v-9c0-1.654-1.346-3-3-3zm-13.543 7.543-1.414 1.414-1.043-1.043-1.043 1.043-1.414-1.414 1.043-1.043-1.043-1.043 1.414-1.414 1.043 1.043 1.043-1.043 1.414 1.414-1.043 1.043z"/></svg>
 );
-
-PasswordMagnifyingGlass.displayName = 'PasswordMagnifyingGlass';

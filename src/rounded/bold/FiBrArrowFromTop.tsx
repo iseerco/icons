@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrArrowFromTop: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M14.074,23.157l4.731-4.732A1.5,1.5,0,1,0,16.684,16.3L13.5,19.553V3.016h4.235a1.5,1.5,0,0,0,0-3H6.264a1.5,1.5,0,0,0,0,3H10.5V19.489L7.314,16.3a1.5,1.5,0,0,0-2.121,2.121l4.732,4.733A2.94,2.94,0,0,0,14.074,23.157Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrArrowFromTop = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M14.074,23.157l4.731-4.732A1.5,1.5,0,1,0,16.684,16.3L13.5,19.553V3.016h4.235a1.5,1.5,0,0,0,0-3H6.264a1.5,1.5,0,0,0,0,3H10.5V19.489L7.314,16.3a1.5,1.5,0,0,0-2.121,2.121l4.732,4.733A2.94,2.94,0,0,0,14.074,23.157Z"/></svg>
+
 );
-
-FiBrArrowFromTop.displayName = 'FiBrArrowFromTop';

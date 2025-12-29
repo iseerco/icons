@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsAsterik: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsAsterik = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15,24h-6v-6.623l-5.637,3.479L.212,15.75l6.076-3.75L.212,8.25,3.363,3.145l5.637,3.479V0h6v6.623l5.637-3.479,3.151,5.106-6.076,3.75,6.076,3.75-3.151,5.106-5.637-3.479v6.623Zm-5-1h4v-7.415l6.311,3.895,2.101-3.404-6.604-4.076,6.604-4.076-2.101-3.404-6.311,3.895V1h-4v7.415l-6.311-3.895-2.101,3.404,6.604,4.076-6.604,4.076,2.101,3.404,6.311-3.895v7.415Z"/>
 </svg>
-);
 
-FiTsAsterik.displayName = 'FiTsAsterik';
+);

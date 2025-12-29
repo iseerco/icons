@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FunnelDollar: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M14,8c0-.379-.271-.698-.645-.761l-3.04-.506c-1.342-.224-2.315-1.374-2.315-2.733,0-1.654,1.346-3,3-3V0h2V1c1.654,0,3,1.346,3,3h-2c0-.552-.448-1-1-1h-2c-.552,0-1,.448-1,1,0,.379,.271,.698,.645,.761l3.04,.506c1.342,.224,2.315,1.374,2.315,2.733,0,1.654-1.346,3-3,3v1h-2v-1c-1.654,0-3-1.346-3-3h2c0,.552,.448,1,1,1h2c.552,0,1-.448,1-1Zm6-5h-2.101c.066,.323,.101,.658,.101,1v4c0,2.046-1.236,3.809-3,4.582v1.418h-6v-1.418c-1.764-.773-3-2.536-3-4.582V4c0-.342,.035-.677,.101-1h-2.101c-1.654,0-3,1.346-3,3v2.414l8,8v3.823l6,3.866v-7.689l8-8v-2.414c0-1.654-1.346-3-3-3Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FunnelDollar = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M14,8c0-.379-.271-.698-.645-.761l-3.04-.506c-1.342-.224-2.315-1.374-2.315-2.733,0-1.654,1.346-3,3-3V0h2V1c1.654,0,3,1.346,3,3h-2c0-.552-.448-1-1-1h-2c-.552,0-1,.448-1,1,0,.379,.271,.698,.645,.761l3.04,.506c1.342,.224,2.315,1.374,2.315,2.733,0,1.654-1.346,3-3,3v1h-2v-1c-1.654,0-3-1.346-3-3h2c0,.552,.448,1,1,1h2c.552,0,1-.448,1-1Zm6-5h-2.101c.066,.323,.101,.658,.101,1v4c0,2.046-1.236,3.809-3,4.582v1.418h-6v-1.418c-1.764-.773-3-2.536-3-4.582V4c0-.342,.035-.677,.101-1h-2.101c-1.654,0-3,1.346-3,3v2.414l8,8v3.823l6,3.866v-7.689l8-8v-2.414c0-1.654-1.346-3-3-3Z"/></svg>
+
 );
-
-FunnelDollar.displayName = 'FunnelDollar';

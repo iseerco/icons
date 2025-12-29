@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ClipboardExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ClipboardExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15.829,2c-.413-1.164-1.525-2-2.829-2h-2c-1.304,0-2.416.836-2.829,2H3v19c0,1.654,1.346,3,3,3h12c1.654,0,3-1.346,3-3V2h-5.171Zm3.171,19c0,.551-.449,1-1,1H6c-.551,0-1-.449-1-1V4h5v-1c0-.551.449-1,1-1h2c.551,0,1,.449,1,1v1h5v17ZM6,13c0,3.309,2.691,6,6,6s6-2.691,6-6-2.691-6-6-6-6,2.691-6,6Zm10,0c0,2.206-1.794,4-4,4s-4-1.794-4-4,1.794-4,4-4,4,1.794,4,4Zm-5-3h2v3h-2v-3Zm0,4h2v2h-2v-2Z"/>
 </svg>
-);
 
-ClipboardExclamation.displayName = 'ClipboardExclamation';
+);

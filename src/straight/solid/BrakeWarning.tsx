@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BrakeWarning: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BrakeWarning = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M3.515,20.485C-1.164,15.807-1.164,8.193,3.515,3.515l1.414,1.414c-3.898,3.899-3.898,10.243,0,14.143l-1.414,1.414ZM20.485,3.515l-1.414,1.414c3.898,3.899,3.898,10.243,0,14.143l1.414,1.414c4.678-4.679,4.678-12.292,0-16.971Zm-.485,8.485c0,4.411-3.589,8-8,8s-8-3.589-8-8S7.589,4,12,4s8,3.589,8,8Zm-9,1h2V6h-2v7Zm2.5,3c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5,.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Z"/>
 </svg>
-);
 
-BrakeWarning.displayName = 'BrakeWarning';
+);

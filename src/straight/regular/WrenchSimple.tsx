@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const WrenchSimple: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16,24h-2v-4.193l.7-.22c3.769-1.184,6.3-4.635,6.3-8.587,0-3.479-1.961-6.568-5-8.066V11H8V2.934c-3.039,1.498-5,4.588-5,8.066,0,3.952,2.531,7.403,6.3,8.587l.7,.22v4.193h-2v-2.751C3.783,19.611,1,15.581,1,11,1,6.17,4.095,1.952,8.7,.505l1.3-.408V9h4V.097l1.3,.408c4.605,1.447,7.7,5.665,7.7,10.495,0,4.581-2.783,8.611-7,10.249v2.751Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const WrenchSimple = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M16,24h-2v-4.193l.7-.22c3.769-1.184,6.3-4.635,6.3-8.587,0-3.479-1.961-6.568-5-8.066V11H8V2.934c-3.039,1.498-5,4.588-5,8.066,0,3.952,2.531,7.403,6.3,8.587l.7,.22v4.193h-2v-2.751C3.783,19.611,1,15.581,1,11,1,6.17,4.095,1.952,8.7,.505l1.3-.408V9h4V.097l1.3,.408c4.605,1.447,7.7,5.665,7.7,10.495,0,4.581-2.783,8.611-7,10.249v2.751Z"/></svg>
+
 );
-
-WrenchSimple.displayName = 'WrenchSimple';

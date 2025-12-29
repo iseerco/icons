@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const OperatingSystemUpgrade: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const OperatingSystemUpgrade = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.5,7c0-.642-.116-1.257-.32-1.83l1.384-.797-.998-1.733-1.385.798c-.803-.941-1.917-1.608-3.182-1.841V0h-2v1.596c-1.265.234-2.378.9-3.182,1.841l-1.385-.798-.998,1.733,1.384.797c-.203.574-.32,1.188-.32,1.83s.116,1.257.32,1.83l-1.384.797.998,1.733,1.385-.798c.803.941,1.917,1.608,3.182,1.841v1.596h2v-1.596c1.265-.234,2.378-.9,3.182-1.841l1.385.798.998-1.733-1.384-.797c.203-.574.32-1.188.32-1.83Zm-5.5,1.5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm9,7.5H3c-1.654,0-3,1.346-3,3v2c0,1.654,1.346,3,3,3h18c1.654,0,3-1.346,3-3v-2c0-1.654-1.346-3-3-3Zm1,5c0,.551-.449,1-1,1h-5v-4h5c.551,0,1,.449,1,1v2Z"/>
 </svg>
-);
 
-OperatingSystemUpgrade.displayName = 'OperatingSystemUpgrade';
+);

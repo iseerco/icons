@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsBalletDance: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsBalletDance = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m14.556,14.848c-.78.485-1.636.948-2.556,1.369v7.783h-3v-6.655c-3.44,1.015-6.281.859-6.885-.564-.608-1.434,1.242-3.715,4.343-5.64C3.284,7.543,1,3.01,1,0h3c0,1.417.865,3.676,2.331,6h4.477c1.487-2.363,2.333-4.635,2.333-6h3c0,2.553-1.595,6.156-4.029,9.401.421.596.822,1.132,1.08,1.396.415-.449,1.415-1.609,1.808-2.751,1.996-.187,3.47.191,3.885,1.168.179.422.138.92-.078,1.46l4.315-1.126.757,2.903s-9.146,2.364-9.322,2.396Zm-6.056-9.848c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Z"/>
 </svg>
-);
 
-FiBsBalletDance.displayName = 'FiBsBalletDance';
+);

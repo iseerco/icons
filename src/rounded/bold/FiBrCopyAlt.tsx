@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCopyAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m18 13.5v-5.929a6.457 6.457 0 0 0 -1.9-4.6l-1.075-1.071a6.457 6.457 0 0 0 -4.6-1.9h-2.925a5.506 5.506 0 0 0 -5.5 5.5v8a5.506 5.506 0 0 0 5.5 5.5h5a5.506 5.506 0 0 0 5.5-5.5zm-13 0v-8a2.5 2.5 0 0 1 2.5-2.5h2.929a3.5 3.5 0 0 1 .571.056v1.944a2 2 0 0 0 2 2h1.944a3.5 3.5 0 0 1 .056.571v5.929a2.5 2.5 0 0 1 -2.5 2.5h-5a2.5 2.5 0 0 1 -2.5-2.5zm18-5v10a5.506 5.506 0 0 1 -5.5 5.5h-8a1.5 1.5 0 0 1 0-3h8a2.5 2.5 0 0 0 2.5-2.5v-10a1.5 1.5 0 0 1 3 0z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCopyAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18 13.5v-5.929a6.457 6.457 0 0 0 -1.9-4.6l-1.075-1.071a6.457 6.457 0 0 0 -4.6-1.9h-2.925a5.506 5.506 0 0 0 -5.5 5.5v8a5.506 5.506 0 0 0 5.5 5.5h5a5.506 5.506 0 0 0 5.5-5.5zm-13 0v-8a2.5 2.5 0 0 1 2.5-2.5h2.929a3.5 3.5 0 0 1 .571.056v1.944a2 2 0 0 0 2 2h1.944a3.5 3.5 0 0 1 .056.571v5.929a2.5 2.5 0 0 1 -2.5 2.5h-5a2.5 2.5 0 0 1 -2.5-2.5zm18-5v10a5.506 5.506 0 0 1 -5.5 5.5h-8a1.5 1.5 0 0 1 0-3h8a2.5 2.5 0 0 0 2.5-2.5v-10a1.5 1.5 0 0 1 3 0z"/></svg>
 );
-
-FiBrCopyAlt.displayName = 'FiBrCopyAlt';

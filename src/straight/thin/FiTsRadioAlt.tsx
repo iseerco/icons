@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsRadioAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsRadioAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.5,6H5.534L21.153.976l-.307-.952L2.214,6.017c-1.245.142-2.214,1.201-2.214,2.483v15.5h24v-15.5c0-1.378-1.121-2.5-2.5-2.5ZM2.5,7h19c.828,0,1.5.672,1.5,1.5v1.5H1v-1.5c0-.828.672-1.5,1.5-1.5Zm-1.5,16v-12h22v12H1Zm2-10h8v1H3v-1Zm0,7h8v1H3v-1Zm0-3.5h8v1H3v-1Zm14-3.5c-2.206,0-4,1.794-4,4s1.794,4,4,4,4-1.794,4-4-1.794-4-4-4Zm0,7c-1.654,0-3-1.346-3-3s1.346-3,3-3,3,1.346,3,3-1.346,3-3,3Z"/>
 </svg>
-);
 
-FiTsRadioAlt.displayName = 'FiTsRadioAlt';
+);

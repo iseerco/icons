@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ShieldMinus: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ShieldMinus = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.574,2.126L12.315.051c-.205-.068-.425-.068-.63,0l-6.259,2.075c-2.049.68-3.426,2.587-3.426,4.746v5.171c0,6.562,7.005,10.576,9.153,11.65,0,0,.467.307.85.307s.791-.24.791-.24c2.16-.868,9.207-4.28,9.207-11.717v-5.171c0-2.159-1.377-4.066-3.426-4.746Zm1.426,9.917c0,6.183-6.087,9.111-7.953,9.861-1.888-.944-8.047-4.445-8.047-9.861v-5.171c0-1.295.826-2.439,2.056-2.848l5.944-1.971,5.944,1.971c1.23.408,2.056,1.553,2.056,2.848v5.171Zm-4-.043c0,.553-.448,1-1,1h-6c-.552,0-1-.447-1-1s.448-1,1-1h6c.552,0,1,.447,1,1Z"/>
 </svg>
-);
 
-ShieldMinus.displayName = 'ShieldMinus';
+);

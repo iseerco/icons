@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsEducationPodcast: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19.5 6c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm-3 7h3v-4h-3zm-1.5-1.812v-5.188c0-1.654 1.346-3 3-3s3 1.346 3 3v5.188c1.79-1.039 3-2.973 3-5.188 0-3.309-2.691-6-6-6s-6 2.691-6 6c0 2.215 1.21 4.149 3 5.188zm6 2.225v5.9l-7.5 1.364v-8.064c-1.365-.931-2.419-2.276-3-3.851v11.915l-7.5-1.364v-13.903c.047-.309.168-.413.482-.402s5.897 1.072 5.897 1.072c.25.046.46.172.641.33-.007-.136-.021-.271-.021-.409 0-.959.178-1.875.487-2.727-.184-.06-.375-.109-.57-.145 0 0-5.898-1.072-5.898-1.072-.992-.128-2.016.073-2.795.737-.778.65-1.225 1.604-1.225 2.617v16.406l12 2.181 12-2.181v-10.538c-.815.926-1.838 1.663-3 2.134z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsEducationPodcast = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19.5 6c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5zm-3 7h3v-4h-3zm-1.5-1.812v-5.188c0-1.654 1.346-3 3-3s3 1.346 3 3v5.188c1.79-1.039 3-2.973 3-5.188 0-3.309-2.691-6-6-6s-6 2.691-6 6c0 2.215 1.21 4.149 3 5.188zm6 2.225v5.9l-7.5 1.364v-8.064c-1.365-.931-2.419-2.276-3-3.851v11.915l-7.5-1.364v-13.903c.047-.309.168-.413.482-.402s5.897 1.072 5.897 1.072c.25.046.46.172.641.33-.007-.136-.021-.271-.021-.409 0-.959.178-1.875.487-2.727-.184-.06-.375-.109-.57-.145 0 0-5.898-1.072-5.898-1.072-.992-.128-2.016.073-2.795.737-.778.65-1.225 1.604-1.225 2.617v16.406l12 2.181 12-2.181v-10.538c-.815.926-1.838 1.663-3 2.134z"/></svg>
 );
-
-FiBsEducationPodcast.displayName = 'FiBsEducationPodcast';

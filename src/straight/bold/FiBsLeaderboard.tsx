@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsLeaderboard: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsLeaderboard = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m20.5,6h-.5v3h.5c.276,0,.5.224.5.5v1.5H3v-1.5c0-.276.224-.5.5-.5h.5v-3h-.5c-1.93,0-3.5,1.57-3.5,3.5v14.5h24v-14.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,8v2h-11v-2h11Zm-14,0v2H3v-2h4Zm-4,5h4v2H3v-2Zm7,2v-2h11v2h-11Zm8-12H6V0l3,3,3-3,3,3,3-3v9Z"/>
 </svg>
-);
 
-FiBsLeaderboard.displayName = 'FiBsLeaderboard';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsGripVertical: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m14,6V0h4.25c.965,0,1.75.785,1.75,1.75v4.25h-6Zm1-5v4h4V1.75c0-.414-.336-.75-.75-.75h-3.25Zm-1,14v-6h6v6h-6Zm1-5v4h4v-4h-4Zm-1,14v-6h6v4.25c0,.965-.785,1.75-1.75,1.75h-4.25Zm1-5v4h3.25c.414,0,.75-.336.75-.75v-3.25h-4ZM4,6V1.75c0-.965.785-1.75,1.75-1.75h4.25v6h-6ZM9,1h-3.25c-.414,0-.75.336-.75.75v3.25h4V1Zm-5,14v-6h6v6h-6Zm1-5v4h4v-4h-4Zm-1,12.25v-4.25h6v6h-4.25c-.965,0-1.75-.785-1.75-1.75Zm1-3.25v3.25c0,.414.336.75.75.75h3.25v-4h-4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsGripVertical = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m14,6V0h4.25c.965,0,1.75.785,1.75,1.75v4.25h-6Zm1-5v4h4V1.75c0-.414-.336-.75-.75-.75h-3.25Zm-1,14v-6h6v6h-6Zm1-5v4h4v-4h-4Zm-1,14v-6h6v4.25c0,.965-.785,1.75-1.75,1.75h-4.25Zm1-5v4h3.25c.414,0,.75-.336.75-.75v-3.25h-4ZM4,6V1.75c0-.965.785-1.75,1.75-1.75h4.25v6h-6ZM9,1h-3.25c-.414,0-.75.336-.75.75v3.25h4V1Zm-5,14v-6h6v6h-6Zm1-5v4h4v-4h-4Zm-1,12.25v-4.25h6v6h-4.25c-.965,0-1.75-.785-1.75-1.75Zm1-3.25v3.25c0,.414.336.75.75.75h3.25v-4h-4Z"/></svg>
+
 );
-
-FiTsGripVertical.displayName = 'FiTsGripVertical';

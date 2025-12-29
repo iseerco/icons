@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrCircleBolt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,24C5.38,24,0,18.62,0,12S5.38,0,12,0s12,5.38,12,12-5.38,12-12,12ZM12,1C5.93,1,1,5.93,1,12s4.93,11,11,11,11-4.93,11-11S18.07,1,12,1Zm.43,17.76l3.39-5.55c.23-.34,.25-.77,.05-1.13-.19-.36-.57-.58-.97-.58h-5.78s-.08-.03-.09-.05c-.01-.01-.02-.04-.02-.06l3.43-5.63c.14-.24,.07-.54-.17-.69-.24-.14-.54-.07-.69,.17,0,0-3.51,5.78-3.52,5.82-.1,.34-.04,.7,.17,.99,.21,.29,.54,.45,.9,.45h5.78s.07,.02,.09,.05,.02,.07-.02,.12l-3.4,5.56c-.14,.24-.07,.54,.17,.69,.08,.05,.17,.07,.26,.07,.17,0,.33-.08,.43-.24Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrCircleBolt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,24C5.38,24,0,18.62,0,12S5.38,0,12,0s12,5.38,12,12-5.38,12-12,12ZM12,1C5.93,1,1,5.93,1,12s4.93,11,11,11,11-4.93,11-11S18.07,1,12,1Zm.43,17.76l3.39-5.55c.23-.34,.25-.77,.05-1.13-.19-.36-.57-.58-.97-.58h-5.78s-.08-.03-.09-.05c-.01-.01-.02-.04-.02-.06l3.43-5.63c.14-.24,.07-.54-.17-.69-.24-.14-.54-.07-.69,.17,0,0-3.51,5.78-3.52,5.82-.1,.34-.04,.7,.17,.99,.21,.29,.54,.45,.9,.45h5.78s.07,.02,.09,.05,.02,.07-.02,.12l-3.4,5.56c-.14,.24-.07,.54,.17,.69,.08,.05,.17,.07,.26,.07,.17,0,.33-.08,.43-.24Z"/></svg>
+
 );
-
-FiTrCircleBolt.displayName = 'FiTrCircleBolt';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const PersonSign: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const PersonSign = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22,0h-5c-1.103,0-2,.897-2,2v3c0,1.103.897,2,2,2h1.5v3h-5l-1.5-2c-.939-1.252-2.435-2-4-2h-2c-2.206,0-4,1.794-4,4v3c0,1.474.81,2.75,2,3.444v6.556c0,.552.447,1,1,1s1-.448,1-1v-6h2v6c0,.552.447,1,1,1s1-.448,1-1v-14.22c.144.129.283.264.4.42l1.8,2.4c.188.251.485.4.8.4h5.5c1.103,0,2-.897,2-2v-3h1.5c1.103,0,2-.897,2-2v-3c0-1.103-.897-2-2-2ZM4.5,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Z"/>
 </svg>
-);
 
-PersonSign.displayName = 'PersonSign';
+);

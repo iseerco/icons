@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Stretcher: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21.394,11h2.606v-2H7.549L1.844.045.156,1.119l6.295,9.881h2.155l4.93,4.607-2.932,2.866c-.465-.296-1.013-.474-1.604-.474-1.654,0-3,1.346-3,3s1.346,3,3,3,3-1.346,3-3c0-.329-.066-.639-.164-.935l3.164-3.089,3.164,3.089c-.098.296-.164.607-.164.935,0,1.654,1.346,3,3,3s3-1.346,3-3-1.346-3-3-3c-.591,0-1.139.178-1.604.474l-2.932-2.866,4.93-4.607Zm-9.86,0h6.932l-3.466,3.239-3.466-3.239Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Stretcher = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21.394,11h2.606v-2H7.549L1.844.045.156,1.119l6.295,9.881h2.155l4.93,4.607-2.932,2.866c-.465-.296-1.013-.474-1.604-.474-1.654,0-3,1.346-3,3s1.346,3,3,3,3-1.346,3-3c0-.329-.066-.639-.164-.935l3.164-3.089,3.164,3.089c-.098.296-.164.607-.164.935,0,1.654,1.346,3,3,3s3-1.346,3-3-1.346-3-3-3c-.591,0-1.139.178-1.604.474l-2.932-2.866,4.93-4.607Zm-9.86,0h6.932l-3.466,3.239-3.466-3.239Z"/></svg>
+
 );
-
-Stretcher.displayName = 'Stretcher';

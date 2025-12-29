@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EcoBattery: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m17 2h-1v-2h-8v2h-1c-1.654 0-3 1.346-3 3v19h16v-19c0-1.654-1.346-3-3-3zm-4 16.149v2.101h-2v-2.101c-2.279-.465-4-2.485-4-4.899.277-4.024 3.957-6.365 5-7.25 1.037.879 4.728 3.233 5 7.25 0 2.415-1.721 4.434-4 4.899zm2-4.899c0 1.302-.839 2.402-2 2.816v-3.816h-2v3.816c-1.161-.414-2-1.514-2-2.816 0-1.708 1.819-3.67 3-4.708 1.181 1.038 3 3 3 4.708z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EcoBattery = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m17 2h-1v-2h-8v2h-1c-1.654 0-3 1.346-3 3v19h16v-19c0-1.654-1.346-3-3-3zm-4 16.149v2.101h-2v-2.101c-2.279-.465-4-2.485-4-4.899.277-4.024 3.957-6.365 5-7.25 1.037.879 4.728 3.233 5 7.25 0 2.415-1.721 4.434-4 4.899zm2-4.899c0 1.302-.839 2.402-2 2.816v-3.816h-2v3.816c-1.161-.414-2-1.514-2-2.816 0-1.708 1.819-3.67 3-4.708 1.181 1.038 3 3 3 4.708z"/></svg>
 );
-
-EcoBattery.displayName = 'EcoBattery';

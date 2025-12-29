@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowsAltV: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,6h5.159L13.076,.445c-.532-.593-1.461-.593-1.993,0L6,6h5v12H6l5.083,5.555c.532,.593,1.461,.593,1.993,0l5.083-5.555h-5.159V6Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowsAltV = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M13,6h5.159L13.076,.445c-.532-.593-1.461-.593-1.993,0L6,6h5v12H6l5.083,5.555c.532,.593,1.461,.593,1.993,0l5.083-5.555h-5.159V6Z"/></svg>
+
 );
-
-ArrowsAltV.displayName = 'ArrowsAltV';

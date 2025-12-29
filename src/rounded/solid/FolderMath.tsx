@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FolderMath: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FolderMath = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M19,3h-6.528c-.154,0-.309-.037-.446-.105l-3.156-1.578c-.414-.207-.878-.316-1.341-.316h-2.528C2.243,1,0,3.243,0,6v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V8c0-2.757-2.243-5-5-5Zm-9.5,15.586c.391,.39,.391,1.024,0,1.414-.391,.39-1.024,.39-1.414,0l-1.086-1.086-1.086,1.086c-.391,.39-1.024,.39-1.414,0-.391-.391-.391-1.024,0-1.414l1.086-1.086-1.086-1.086c-.391-.391-.391-1.024,0-1.414,.391-.391,1.024-.391,1.414,0l1.086,1.086,1.086-1.086c.391-.391,1.024-.391,1.414,0,.391,.39,.391,1.024,0,1.414l-1.086,1.086,1.086,1.086Zm.5-9.586c0,.552-.448,1-1,1h-1v1c0,.552-.448,1-1,1h0c-.552,0-1-.448-1-1v-1h-1c-.552,0-1-.448-1-1h0c0-.552,.448-1,1-1h1v-1c0-.552,.448-1,1-1h0c.552,0,1,.448,1,1v1h1c.552,0,1,.448,1,1h0Zm10,10c0,.552-.448,1-1,1h-4c-.552,0-1-.448-1-1h0c0-.552,.448-1,1-1h4c.552,0,1,.448,1,1h0Zm0-3c0,.552-.448,1-1,1h-4c-.552,0-1-.448-1-1h0c0-.552,.448-1,1-1h4c.552,0,1,.448,1,1h0Zm0-7c0,.552-.448,1-1,1h-4c-.552,0-1-.448-1-1h0c0-.552,.448-1,1-1h4c.552,0,1,.448,1,1h0Z"/>
 </svg>
-);
 
-FolderMath.displayName = 'FolderMath';
+);

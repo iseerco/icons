@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MartiniGlassEmpty: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MartiniGlassEmpty = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m0,0v1c0,1.553.659,3.042,1.808,4.086l9.192,8.357v8.557h-5v2h12v-2h-5v-8.557l9.192-8.357c1.149-1.044,1.808-2.533,1.808-4.086V0H0Zm20.847,3.605l-8.847,8.043L3.153,3.605h0c-.48-.436-.826-.994-1.007-1.605h19.709c-.181.611-.527,1.17-1.007,1.605Z"/>
 </svg>
-);
 
-MartiniGlassEmpty.displayName = 'MartiniGlassEmpty';
+);

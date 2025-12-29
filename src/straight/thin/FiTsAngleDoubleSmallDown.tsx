@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsAngleDoubleSmallDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,19c-.4,0-.777-.156-1.061-.439l-5.281-5.281,.707-.707,5.281,5.281c.189,.188,.518,.188,.707,0l5.281-5.281,.707,.707-5.281,5.281c-.283,.283-.66,.439-1.061,.439Zm.471-7.195l5.871-5.871-.707-.707-5.635,5.635L6.365,5.227l-.707,.707,5.871,5.871c.13,.13,.3,.195,.471,.195s.341-.065,.471-.195Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsAngleDoubleSmallDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M12,19c-.4,0-.777-.156-1.061-.439l-5.281-5.281,.707-.707,5.281,5.281c.189,.188,.518,.188,.707,0l5.281-5.281,.707,.707-5.281,5.281c-.283,.283-.66,.439-1.061,.439Zm.471-7.195l5.871-5.871-.707-.707-5.635,5.635L6.365,5.227l-.707,.707,5.871,5.871c.13,.13,.3,.195,.471,.195s.341-.065,.471-.195Z"/></svg>
+
 );
-
-FiTsAngleDoubleSmallDown.displayName = 'FiTsAngleDoubleSmallDown';

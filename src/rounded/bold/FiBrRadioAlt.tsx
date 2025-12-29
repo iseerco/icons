@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrRadioAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrRadioAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.5,6h-5.667l8.271-3.183c.772-.297,1.158-1.166.861-1.938-.299-.774-1.166-1.161-1.939-.861L3.592,6.342c-2.095.778-3.592,2.796-3.592,5.158v7c0,3.033,2.468,5.5,5.5,5.5h13c3.032,0,5.5-2.467,5.5-5.5v-7c0-3.033-2.468-5.5-5.5-5.5Zm0,15H5.5c-1.379,0-2.5-1.122-2.5-2.5v-6.5h18v6.5c0,1.378-1.121,2.5-2.5,2.5Zm-7.5-4.5c0,.829-.672,1.5-1.5,1.5h-3c-.828,0-1.5-.671-1.5-1.5s.672-1.5,1.5-1.5h3c.828,0,1.5.671,1.5,1.5Zm8,0c0,1.657-1.343,3-3,3s-3-1.343-3-3,1.343-3,3-3,3,1.343,3,3Z"/>
 </svg>
-);
 
-FiBrRadioAlt.displayName = 'FiBrRadioAlt';
+);

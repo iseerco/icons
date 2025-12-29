@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ToDoAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ToDoAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.5,24l-2.5-2.5V2.5c0-1.379,1.121-2.5,2.5-2.5s2.5,1.121,2.5,2.5v19l-2.5,2.5ZM12.829,2c-.413-1.164-1.525-2-2.829-2h-3c-1.304,0-2.416.836-2.829,2H0v19c0,1.654,1.346,3,3,3h11c1.654,0,3-1.346,3-3V2h-4.171Zm-5.641,14.534c-.31.31-.717.465-1.124.465s-.814-.155-1.124-.465l-1.647-1.647,1.414-1.414,1.357,1.357,2.537-2.537,1.414,1.414-2.827,2.827Zm0-6c-.31.31-.717.465-1.124.465s-.814-.155-1.124-.465l-1.647-1.647,1.414-1.414,1.357,1.357,2.537-2.537,1.414,1.414-2.827,2.827Z"/>
 </svg>
-);
 
-ToDoAlt.displayName = 'ToDoAlt';
+);

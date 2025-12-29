@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsDocumentNft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsDocumentNft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20.5,0H3.5C1.57,0,0,1.57,0,3.5V24H17.621l6.379-6.379V3.5c0-1.93-1.57-3.5-3.5-3.5Zm-6.5,4.25v-1.25h3.75v1.25h-1.25v4.75h-1.25V4.25h-1.25Zm-1.5,1.47v1.25h-1.75v2.03h-1.25V3h3v1.25h-1.75v1.47h1.75Zm-5.712,.53V3h1.212v6h-1.327l-1.442-3.25v3.25h-1.231V3h1.327v.008l1.461,3.242Zm-3.789,4.75H21v4h-6v6H3V11Z"/>
 </svg>
-);
 
-FiBsDocumentNft.displayName = 'FiBsDocumentNft';
+);

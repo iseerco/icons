@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsMicrochipAi: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsMicrochipAi = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m24,6v-1h-2v-.5c0-1.379-1.122-2.5-2.5-2.5h-.5V0h-1v2h-2V0h-1v2h-2.5V0h-1v2h-2.5V0h-1v2h-2V0h-1v2h-.5c-1.378,0-2.5,1.121-2.5,2.5v.5H0v1h2v2H0v1h2v2.5H0v1h2v2.5H0v1h2v2H0v1h2v3h3v2h1v-2h2v2h1v-2h2.5v2h1v-2h2.5v2h1v-2h2v2h1v-2h3v-3h2v-1h-2v-2h2v-1h-2v-2.5h2v-1h-2v-2.5h2v-1h-2v-2h2Zm-3,15H3V4.5c0-.827.673-1.5,1.5-1.5h15c.827,0,1.5.673,1.5,1.5v16.5Zm-5-14h1v10h-1V7Zm-6-.017c-.553,0-1.031.39-1.218.995l-2.782,9.021h1.046l.617-2h4.674l.617,2h1.046l-2.782-9.022c-.187-.604-.665-.994-1.218-.994Zm-2.029,7.017l1.766-5.726c.045-.145.143-.29.263-.29s.218.146.263.289l1.766,5.728h-4.057Z"/>
 </svg>
-);
 
-FiTsMicrochipAi.displayName = 'FiTsMicrochipAi';
+);

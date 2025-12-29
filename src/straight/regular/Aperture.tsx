@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Aperture: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Aperture = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,0C5.373,0,0,5.373,0,12s5.373,12,12,12,12-5.373,12-12S18.627,0,12,0Zm1.409,2.1c2.683.38,5.027,1.828,6.586,3.9h-8.963s2.377-3.9,2.377-3.9Zm.783,5.899l2.433,4.005-2.436,3.996h-4.425l-2.318-4.118,2.368-3.884h4.378Zm-3.088-5.957l-4.782,7.844-2.241-3.982c1.658-2.149,4.17-3.607,7.023-3.862ZM2.836,16c-.537-1.226-.836-2.578-.836-4,0-1.472.32-2.87.893-4.13l4.576,8.13H2.836Zm7.755,5.9c-2.683-.38-5.027-1.829-6.586-3.9h8.964l-2.378,3.9Zm2.306.059l4.896-8.031,2.35,3.869c-1.651,2.313-4.262,3.895-7.246,4.162Zm3.634-13.96h4.633c.537,1.226.836,2.579.836,4.001,0,1.337-.264,2.613-.742,3.78l-4.726-7.78Z"/>
 </svg>
-);
 
-Aperture.displayName = 'Aperture';
+);

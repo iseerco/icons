@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsHighDefinition: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsHighDefinition = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10,7h1v10h-1v-4.5h-5v4.5h-1V7h1v4.5h5v-4.5Zm14-2.5v17.5H0V4.5c0-1.378,1.122-2.5,2.5-2.5h19c1.378,0,2.5,1.122,2.5,2.5Zm-1,0c0-.827-.673-1.5-1.5-1.5H2.5c-.827,0-1.5.673-1.5,1.5v16.5h22V4.5Zm-3,6v3c0,1.93-1.57,3.5-3.5,3.5h-3.5V7h3.5c1.93,0,3.5,1.57,3.5,3.5Zm-1,0c0-1.378-1.122-2.5-2.5-2.5h-2.5v8h2.5c1.378,0,2.5-1.122,2.5-2.5v-3Z"/>
 </svg>
-);
 
-FiTsHighDefinition.displayName = 'FiTsHighDefinition';
+);

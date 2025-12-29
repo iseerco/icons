@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsMobileLock: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m5 3h7.5c.519-1.245 1.417-2.289 2.547-3h-13.047v18 3c0 1.657 1.343 3 3 3h9.999c1.657 0 3-1.343 3-3v-3h-12.999zm2.999 17h4v2h-4zm15.001-13v-1.5c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5v1.5h-1v6c0 1.654 1.346 3 3 3h5c1.654 0 3-1.346 3-3v-6zm-6-1.5c0-.827.673-1.5 1.5-1.5s1.5.673 1.5 1.5v1.5h-3zm3 7.5h-3v-3h3z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsMobileLock = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m5 3h7.5c.519-1.245 1.417-2.289 2.547-3h-13.047v18 3c0 1.657 1.343 3 3 3h9.999c1.657 0 3-1.343 3-3v-3h-12.999zm2.999 17h4v2h-4zm15.001-13v-1.5c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5v1.5h-1v6c0 1.654 1.346 3 3 3h5c1.654 0 3-1.346 3-3v-6zm-6-1.5c0-.827.673-1.5 1.5-1.5s1.5.673 1.5 1.5v1.5h-3zm3 7.5h-3v-3h3z"/></svg>
 );
-
-FiBsMobileLock.displayName = 'FiBsMobileLock';

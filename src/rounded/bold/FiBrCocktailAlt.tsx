@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCocktailAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15.108,13.248l7.8-7.207a3.4,3.4,0,0,0,.844-3.762A3.548,3.548,0,0,0,20.441,0H3.559A3.548,3.548,0,0,0,.245,2.279a3.414,3.414,0,0,0,.874,3.789L8.9,13.256a4.6,4.6,0,0,0,1.6.941V21h-3a1.5,1.5,0,0,0,0,3h9a1.5,1.5,0,0,0,0-3h-3V14.2A4.62,4.62,0,0,0,15.108,13.248ZM7.632,8H13.5a1.5,1.5,0,0,0,0-3l-9.1.01L3.126,3.837a.378.378,0,0,1-.087-.464A.56.56,0,0,1,3.559,3H20.441a.56.56,0,0,1,.52.373.4.4,0,0,1-.115.491l-7.764,7.172a1.6,1.6,0,0,1-2.155.008Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCocktailAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M15.108,13.248l7.8-7.207a3.4,3.4,0,0,0,.844-3.762A3.548,3.548,0,0,0,20.441,0H3.559A3.548,3.548,0,0,0,.245,2.279a3.414,3.414,0,0,0,.874,3.789L8.9,13.256a4.6,4.6,0,0,0,1.6.941V21h-3a1.5,1.5,0,0,0,0,3h9a1.5,1.5,0,0,0,0-3h-3V14.2A4.62,4.62,0,0,0,15.108,13.248ZM7.632,8H13.5a1.5,1.5,0,0,0,0-3l-9.1.01L3.126,3.837a.378.378,0,0,1-.087-.464A.56.56,0,0,1,3.559,3H20.441a.56.56,0,0,1,.52.373.4.4,0,0,1-.115.491l-7.764,7.172a1.6,1.6,0,0,1-2.155.008Z"/></svg>
+
 );
-
-FiBrCocktailAlt.displayName = 'FiBrCocktailAlt';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const EditMessage: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EditMessage = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22,9.071l2-2v12.929h-6.853l-3.847,3.18c-.361,.322-.824,.484-1.292,.484-.476,0-.955-.168-1.337-.508l-3.749-3.156H0V3C0,1.346,1.346,0,3,0h13.93l-2,2H3c-.552,0-1,.449-1,1v15H7.653l4.327,3.645,4.448-3.645h5.571V9.071Zm-11-.314L18.879,.879c1.17-1.17,3.072-1.17,4.242,0,.566,.566,.879,1.32,.879,2.121s-.313,1.555-.879,2.122l-7.879,7.878h-4.242v-4.243Zm2,2.243h1.414l7.293-7.293c.189-.189,.293-.44,.293-.707s-.104-.518-.293-.707c-.391-.391-1.023-.39-1.414,0l-7.293,7.292v1.415Z"/>
 </svg>
-);
 
-EditMessage.displayName = 'EditMessage';
+);

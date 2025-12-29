@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SortCircleDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SortCircleDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17.756,14.521l-4.607,4.503c-.635.635-1.663.635-2.298,0l-4.607-4.503c-.569-.556-.175-1.521.62-1.521h10.272c.795,0,1.189.966.62,1.521Zm6.244-2.521c0,6.617-5.383,12-12,12S0,18.617,0,12,5.383,0,12,0s12,5.383,12,12Zm-2,0c0-5.514-4.486-10-10-10S2,6.486,2,12s4.486,10,10,10,10-4.486,10-10Zm-15.925-1.618c-.154-.375-.067-.805.22-1.091l4.183-4.161c.811-.811,2.232-.812,3.047.002l4.181,4.159c.287.286.374.716.22,1.091-.155.374-.52.618-.925.618H7c-.405,0-.77-.244-.925-.618Zm3.348-1.382h5.154l-2.465-2.452c-.08-.08-.146-.078-.223-.002l-2.467,2.454Z"/>
 </svg>
-);
 
-SortCircleDown.displayName = 'SortCircleDown';
+);

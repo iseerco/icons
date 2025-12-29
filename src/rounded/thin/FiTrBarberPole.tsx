@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrBarberPole: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrBarberPole = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.5,18h-.5V6h.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-.59c-.478-2.833-2.942-5-5.91-5s-5.431,2.167-5.91,5h-.59c-.276,0-.5.224-.5.5s.224.5.5.5h.5v12h-.5c-.276,0-.5.224-.5.5s.224.5.5.5h.59c.478,2.833,2.942,5,5.91,5s5.431-2.167,5.91-5h.59c.276,0,.5-.224.5-.5s-.224-.5-.5-.5Zm-3.793,0l-7.707-7.707v-2.586l10,10v.293h-2.293Zm-4,0l-3.707-3.707v-2.586l6.293,6.293h-2.586Zm2.586-12l3.707,3.707v2.593l-6.35-6.3h2.643Zm-4.063,0l7.77,7.708v2.585L7,6.293v-.293h2.23Zm7.77,2.293l-2.293-2.293h2.293v2.293ZM12,1c2.414,0,4.434,1.721,4.899,4H7.101c.465-2.279,2.484-4,4.899-4Zm-5,14.707l2.293,2.293h-2.293v-2.293Zm5,7.293c-2.414,0-4.434-1.721-4.899-4h9.798c-.465,2.279-2.484,4-4.899,4Z"/>
 </svg>
-);
 
-FiTrBarberPole.displayName = 'FiTrBarberPole';
+);

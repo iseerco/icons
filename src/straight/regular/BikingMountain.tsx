@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const BikingMountain: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M5,13a5,5,0,1,0,5,5A5.006,5.006,0,0,0,5,13Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,5,21Zm14-8a5,5,0,1,0,5,5A5.006,5.006,0,0,0,19,13Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,19,21ZM10.017,10.534a.98.98,0,0,1,.3-.716c.168-.16,2.656-2.443,2.656-2.443l4.4,4.337,1.4-1.424-5.076-5-.083-.074A6.436,6.436,0,0,0,9.923,4C8.521,4,5,5.19,5,8a3,3,0,0,0,3,3c.024,0,.045-.005.069-.006a2.985,2.985,0,0,0,.993,1.8L11,14.459V19h2V13.541l-2.636-2.264A.988.988,0,0,1,10.017,10.534ZM7,8C7,6.786,9.172,6,9.923,6a4.194,4.194,0,0,1,1.339.227S8.948,8.359,8.921,8.385C8.539,8.748,8.225,9,8,9A1,1,0,0,1,7,8Zm7-5.5A2.5,2.5,0,1,1,16.5,5,2.5,2.5,0,0,1,14,2.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const BikingMountain = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M5,13a5,5,0,1,0,5,5A5.006,5.006,0,0,0,5,13Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,5,21Zm14-8a5,5,0,1,0,5,5A5.006,5.006,0,0,0,19,13Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,19,21ZM10.017,10.534a.98.98,0,0,1,.3-.716c.168-.16,2.656-2.443,2.656-2.443l4.4,4.337,1.4-1.424-5.076-5-.083-.074A6.436,6.436,0,0,0,9.923,4C8.521,4,5,5.19,5,8a3,3,0,0,0,3,3c.024,0,.045-.005.069-.006a2.985,2.985,0,0,0,.993,1.8L11,14.459V19h2V13.541l-2.636-2.264A.988.988,0,0,1,10.017,10.534ZM7,8C7,6.786,9.172,6,9.923,6a4.194,4.194,0,0,1,1.339.227S8.948,8.359,8.921,8.385C8.539,8.748,8.225,9,8,9A1,1,0,0,1,7,8Zm7-5.5A2.5,2.5,0,1,1,16.5,5,2.5,2.5,0,0,1,14,2.5Z"/></svg>
+
 );
-
-BikingMountain.displayName = 'BikingMountain';

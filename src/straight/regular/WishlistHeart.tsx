@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const WishlistHeart: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const WishlistHeart = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m15,7h-6v-2h6v2Zm0,3h-6v2h6v-2Zm-9.5,4.5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm0-10c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm0,5c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5-.672-1.5-1.5-1.5Zm18.5,7.272c0,3.359-4.908,6.543-5.468,6.895l-.532.335-.532-.335c-.56-.352-5.468-3.535-5.468-6.895,0-2.08,1.57-3.772,3.5-3.772.915,0,1.833.341,2.5,1.064.667-.724,1.585-1.064,2.5-1.064,1.93,0,3.5,1.692,3.5,3.772Zm-2,0c0-.978-.673-1.772-1.5-1.772-.953,0-1.5.729-1.5,2h-2c0-1.271-.547-2-1.5-2-.827,0-1.5.795-1.5,1.772,0,1.681,2.573,3.839,4.002,4.846,1.73-1.206,3.998-3.304,3.998-4.846Zm-13-1.772v2h1.005c-.003-.076-.005-.151-.005-.228,0-.618.093-1.214.266-1.772h-1.266Zm3.364,7H2V3c0-.552.449-1,1-1h13c.551,0,1,.448,1,1v8.21c.343.098.679.23,1,.395.321-.166.657-.297,1-.395V3c0-1.654-1.346-3-3-3H3C1.346,0,0,1.346,0,3v21h14.495c-.688-.551-1.441-1.226-2.131-2Z"/>
 </svg>
-);
 
-WishlistHeart.displayName = 'WishlistHeart';
+);

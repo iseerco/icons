@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsCodeCompare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22,6.625v10.875c0,1.93-1.57,3.5-3.5,3.5h-4.5v3l-3.707-3.793c-.39-.39-.39-1.024,0-1.414l3.707-3.793v3h4.5c.276,0,.5-.224,.5-.5V6.625c-1.182-.562-2-1.767-2-3.163C17,1.529,18.567-.038,20.5-.038s3.5,1.567,3.5,3.5c0,1.396-.818,2.601-2,3.163ZM5,17.337V6.461c0-.276,.224-.5,.5-.5h4.5v3.039l3.707-3.793c.39-.39,.39-1.024,0-1.414L10,0V2.961H5.5c-1.93,0-3.5,1.57-3.5,3.5v10.876c-1.182,.562-2,1.767-2,3.163,0,1.933,1.567,3.5,3.5,3.5s3.5-1.567,3.5-3.5c0-1.396-.818-2.601-2-3.163Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsCodeCompare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22,6.625v10.875c0,1.93-1.57,3.5-3.5,3.5h-4.5v3l-3.707-3.793c-.39-.39-.39-1.024,0-1.414l3.707-3.793v3h4.5c.276,0,.5-.224,.5-.5V6.625c-1.182-.562-2-1.767-2-3.163C17,1.529,18.567-.038,20.5-.038s3.5,1.567,3.5,3.5c0,1.396-.818,2.601-2,3.163ZM5,17.337V6.461c0-.276,.224-.5,.5-.5h4.5v3.039l3.707-3.793c.39-.39,.39-1.024,0-1.414L10,0V2.961H5.5c-1.93,0-3.5,1.57-3.5,3.5v10.876c-1.182,.562-2,1.767-2,3.163,0,1.933,1.567,3.5,3.5,3.5s3.5-1.567,3.5-3.5c0-1.396-.818-2.601-2-3.163Z"/></svg>
+
 );
-
-FiBsCodeCompare.displayName = 'FiBsCodeCompare';

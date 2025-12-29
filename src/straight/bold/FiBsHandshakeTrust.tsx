@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsHandshakeTrust: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsHandshakeTrust = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8,5.443v-3.033c0-.647.414-1.22,1.028-1.424l2.972-.985,2.972.985c.614.203,1.028.777,1.028,1.424v3.033c0,3.026-3.104,4.51-3.999,4.87-.897-.448-4.001-2.207-4.001-4.87Zm1.851,5.951c-.737-.476-1.637-1.171-2.383-2.085-.113.045-1.351.692-1.351.692H0v3h6.883l2.967-1.607Zm8.033-1.393s-1.153-.61-1.222-.64c-.711.919-1.588,1.579-2.349,2.036l2.804,1.605h6.883v-3h-6.117Zm-5.042,2.129l-.929.374-.984-.492c-.131-.065-.303-.158-.492-.265l-1.863,1.973c-.675.675-.767,1.719-.218,2.483.33.457.839.745,1.399.791,0,0,.772.083,1.526-.572l.806-.835,3.423,3.051-3.026,2.362h-.968l-5.125-4H0v3h5.359l5.125,4h3.032l5.125-4h5.359v-3h-5.806l-5.353-4.87Z"/>
 </svg>
-);
 
-FiBsHandshakeTrust.displayName = 'FiBsHandshakeTrust';
+);

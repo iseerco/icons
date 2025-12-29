@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const DialMin: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const DialMin = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.5,2.5c0-.828.672-1.5,1.5-1.5s1.5.672,1.5,1.5-.672,1.5-1.5,1.5-1.5-.672-1.5-1.5ZM3,13c0-.828-.672-1.5-1.5-1.5S0,12.172,0,13s.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Zm21,0c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5.672,1.5,1.5,1.5,1.5-.672,1.5-1.5ZM6,5.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5Zm15,15c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5c0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5Zm-16.5-1.5c-.828,0-1.5.672-1.5,1.5,0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5c0-.828-.672-1.5-1.5-1.5Zm15-15c-.828,0-1.5.672-1.5,1.5,0,.828.672,1.5,1.5,1.5s1.5-.672,1.5-1.5c0-.828-.672-1.5-1.5-1.5Zm-7.5,2c-3.859,0-7,3.14-7,7,0,1.57.526,3.015,1.402,4.184l4.891-4.891c.391-.391,1.023-.391,1.414,0s.391,1.023,0,1.414l-4.891,4.891c1.169.876,2.615,1.402,4.184,1.402,3.859,0,7-3.14,7-7s-3.141-7-7-7Z"/>
 </svg>
-);
 
-DialMin.displayName = 'DialMin';
+);

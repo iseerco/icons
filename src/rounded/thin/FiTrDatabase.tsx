@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrDatabase: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrDatabase = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,5.5v-1c0-1.93-1.57-3.5-3.5-3.5H4.5c-1.93,0-3.5,1.57-3.5,3.5v1c0,1.28.698,2.39,1.726,3-1.028.61-1.726,1.72-1.726,3v1c0,1.28.698,2.39,1.726,3-1.028.61-1.726,1.72-1.726,3v1c0,1.93,1.57,3.5,3.5,3.5h15c1.93,0,3.5-1.57,3.5-3.5v-1c0-1.28-.698-2.39-1.726-3,1.028-.61,1.726-1.72,1.726-3v-1c0-1.28-.698-2.39-1.726-3,1.028-.61,1.726-1.72,1.726-3Zm-1,13v1c0,1.379-1.121,2.5-2.5,2.5H4.5c-1.379,0-2.5-1.121-2.5-2.5v-1c0-1.379,1.121-2.5,2.5-2.5h.5v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h3v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h9.5c1.379,0,2.5,1.121,2.5,2.5Zm0-7v1c0,1.379-1.121,2.5-2.5,2.5H4.5c-1.379,0-2.5-1.121-2.5-2.5v-1c0-1.379,1.121-2.5,2.5-2.5h.5v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h3v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h9.5c1.379,0,2.5,1.121,2.5,2.5Zm-17.5-3.5c-1.379,0-2.5-1.121-2.5-2.5v-1c0-1.379,1.121-2.5,2.5-2.5h.5v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h3v1.5c0,.276.224.5.5.5s.5-.224.5-.5v-1.5h9.5c1.379,0,2.5,1.121,2.5,2.5v1c0,1.379-1.121,2.5-2.5,2.5H4.5Z"/>
 </svg>
-);
 
-FiTrDatabase.displayName = 'FiTrDatabase';
+);

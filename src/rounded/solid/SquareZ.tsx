@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SquareZ: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m19,0H5C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5Zm-1,18c0,.553-.448,1-1,1h-8.868c-.871,0-1.645-.517-1.973-1.316-.324-.79-.14-1.69.471-2.292l9.378-8.246c-.023.02.007-.011-.017-.07-.031-.075-.095-.075-.123-.075H7.023c-.552,0-1-.447-1-1s.448-1,1-1h8.845c.871,0,1.645.517,1.973,1.316.324.79.14,1.69-.471,2.292l-9.372,8.241c.009-.006-.01.023.011.075.031.075.095.075.123.075h8.868c.552,0,1,.447,1,1Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SquareZ = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19,0H5C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5Zm-1,18c0,.553-.448,1-1,1h-8.868c-.871,0-1.645-.517-1.973-1.316-.324-.79-.14-1.69.471-2.292l9.378-8.246c-.023.02.007-.011-.017-.07-.031-.075-.095-.075-.123-.075H7.023c-.552,0-1-.447-1-1s.448-1,1-1h8.845c.871,0,1.645.517,1.973,1.316.324.79.14,1.69-.471,2.292l-9.372,8.241c.009-.006-.01.023.011.075.031.075.095.075.123.075h8.868c.552,0,1,.447,1,1Z"/></svg>
+
 );
-
-SquareZ.displayName = 'SquareZ';

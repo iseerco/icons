@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FitnessWatch: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FitnessWatch = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M17.996,4.022c0-.008,.004-.014,.004-.022V1c0-.552-.447-1-1-1s-1,.448-1,1V3.101c-.323-.066-.658-.101-1-.101h-6c-.346,0-.685,.036-1.011,.103l-.028-2.117c-.007-.552-.481-1.022-1.013-.987-.553,.007-.994,.461-.987,1.013l.039,3s.002,.007,.002,.01c-1.208,.914-2.002,2.348-2.002,3.976v8c0,1.629,.795,3.065,2.004,3.978,0,.008-.004,.014-.004,.022v3c0,.553,.447,1,1,1s1-.447,1-1v-2.101c.323,.066,.658,.101,1,.101h6c.342,0,.677-.035,1-.101v2.101c0,.553,.447,1,1,1s1-.447,1-1v-3c0-.008-.004-.014-.004-.022,1.21-.913,2.004-2.349,2.004-3.978V8c0-1.629-.795-3.065-2.004-3.978Zm.004,11.978c0,1.654-1.346,3-3,3h-6c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3h6c1.654,0,3,1.346,3,3v8Zm-2-4.8c0,1.48-1.65,3.39-2.831,4.375-.68,.567-1.659,.567-2.339,0-1.181-.985-2.831-2.895-2.831-4.375,0-1.215,.895-2.2,2-2.2s2,.985,2,2.2c0-1.215,.895-2.2,2-2.2s2,.985,2,2.2Z"/>
 </svg>
-);
 
-FitnessWatch.displayName = 'FitnessWatch';
+);

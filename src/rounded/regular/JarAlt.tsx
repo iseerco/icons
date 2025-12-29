@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const JarAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const JarAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19,4.812v-1.812c0-1.654-1.346-3-3-3h-8c-1.654,0-3,1.346-3,3v1.812c-1.79,1.039-3,2.973-3,5.188v9c0,2.757,2.243,5,5,5h10c2.757,0,5-2.243,5-5v-9c0-2.215-1.21-4.149-3-5.188Zm-12-1.812c0-.551.448-1,1-1h8c.552,0,1,.449,1,1v1.09c-.326-.055-.659-.09-1-.09h-8c-.341,0-.674.035-1,.09v-1.09Zm-3,8h10v6H4v-6Zm16,8c0,1.654-1.346,3-3,3H7c-1.654,0-3-1.346-3-3h11c.553,0,1-.448,1-1v-8c0-.552-.447-1-1-1H4.142c.447-1.72,1.999-3,3.858-3h8c2.206,0,4,1.794,4,4v9Z"/>
 </svg>
-);
 
-JarAlt.displayName = 'JarAlt';
+);

@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GameBoardAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,0H3A3,3,0,0,0,0,3V24H24V3A3,3,0,0,0,21,0ZM13,13h4.586L13,17.586Zm0,7.414L20.414,13H22v1.586L14.586,22H13ZM22,3v8H13V2h8A1,1,0,0,1,22,3ZM2,9.414,9.414,2H11V3.586L3.586,11H2Zm9-3V11H6.414ZM3,2H6.586L2,6.586V3A1,1,0,0,1,3,2ZM2,13h9v9H2Zm15.414,9L22,17.414V22Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GameBoardAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,0H3A3,3,0,0,0,0,3V24H24V3A3,3,0,0,0,21,0ZM13,13h4.586L13,17.586Zm0,7.414L20.414,13H22v1.586L14.586,22H13ZM22,3v8H13V2h8A1,1,0,0,1,22,3ZM2,9.414,9.414,2H11V3.586L3.586,11H2Zm9-3V11H6.414ZM3,2H6.586L2,6.586V3A1,1,0,0,1,3,2ZM2,13h9v9H2Zm15.414,9L22,17.414V22Z"/></svg>
+
 );
-
-GameBoardAlt.displayName = 'GameBoardAlt';

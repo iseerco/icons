@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CommentSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23,21.586V12c0-6.065-4.935-11-11-11-2.602,0-5.064,.901-7.037,2.549L1.457,.043,.043,1.457,22.543,23.957l1.414-1.414-.957-.957ZM12,3c4.962,0,9,4.037,9,9v7.586L6.385,4.971c1.59-1.274,3.548-1.971,5.615-1.971Zm4.758,18l2,2h-6.758c-6.065,0-11-4.935-11-11,0-1.909,.49-3.739,1.398-5.36l1.485,1.485c-.572,1.196-.883,2.51-.883,3.874,0,4.963,4.038,9,9,9h4.758Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CommentSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23,21.586V12c0-6.065-4.935-11-11-11-2.602,0-5.064,.901-7.037,2.549L1.457,.043,.043,1.457,22.543,23.957l1.414-1.414-.957-.957ZM12,3c4.962,0,9,4.037,9,9v7.586L6.385,4.971c1.59-1.274,3.548-1.971,5.615-1.971Zm4.758,18l2,2h-6.758c-6.065,0-11-4.935-11-11,0-1.909,.49-3.739,1.398-5.36l1.485,1.485c-.572,1.196-.883,2.51-.883,3.874,0,4.963,4.038,9,9,9h4.758Z"/></svg>
+
 );
-
-CommentSlash.displayName = 'CommentSlash';

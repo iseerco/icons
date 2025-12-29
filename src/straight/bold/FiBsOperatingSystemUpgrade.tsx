@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsOperatingSystemUpgrade: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsOperatingSystemUpgrade = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m6.688,11.799l1.485-.857c.644.626,1.44,1.093,2.327,1.345v1.713h3v-1.713c.887-.252,1.683-.719,2.327-1.345l1.485.857,1.5-2.598-1.485-.857c.109-.431.173-.88.173-1.344s-.064-.913-.173-1.344l1.485-.857-1.5-2.598-1.485.857c-.644-.626-1.44-1.093-2.327-1.345V0h-3v1.713c-.887.252-1.683.719-2.327,1.345l-1.485-.857-1.5,2.598,1.485.857c-.109.431-.173.879-.173,1.344s.064.913.173,1.344l-1.485.857,1.5,2.598Zm5.312-7.299c1.378,0,2.5,1.122,2.5,2.5s-1.122,2.5-2.5,2.5-2.5-1.122-2.5-2.5,1.122-2.5,2.5-2.5Zm9,11.5H3c-1.654,0-3,1.346-3,3v2c0,1.654,1.346,3,3,3h18c1.654,0,3-1.346,3-3v-2c0-1.654-1.346-3-3-3Zm-18,3h10v2H3v-2Zm13,2v-2h5l.002,2h-5.002Z"/>
 </svg>
-);
 
-FiBsOperatingSystemUpgrade.displayName = 'FiBsOperatingSystemUpgrade';
+);

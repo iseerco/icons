@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Butter: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Butter = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23,16V7c0-2.757-2.243-5-5-5H6C3.243,2,1,4.243,1,7v9c-.553,0-1,.447-1,1s.447,1,1,1h.051c.252,2.244,2.139,4,4.449,4h13c2.31,0,4.197-1.756,4.449-4h.051c.553,0,1-.447,1-1s-.447-1-1-1Zm-2-9v9h-3V7c0-1.13-.391-2.162-1.026-3h1.026c1.654,0,3,1.346,3,3Zm-15-3h7c1.654,0,3,1.346,3,3v9H3V7c0-1.654,1.346-3,3-3Zm12.5,16H5.5c-1.208,0-2.217-.86-2.449-2h17.899c-.232,1.14-1.242,2-2.449,2Z"/>
 </svg>
-);
 
-Butter.displayName = 'Butter';
+);

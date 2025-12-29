@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const CircleN: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm3-15.75h2v10.201c0,.683-.443,1.274-1.102,1.473-.152.046-.307.067-.458.067-.513,0-1-.252-1.294-.698l-5.146-8.189v8.646h-2V7.548c0-.684.443-1.275,1.103-1.474.666-.2,1.371.053,1.752.631l5.146,8.189V6.25Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const CircleN = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm3-15.75h2v10.201c0,.683-.443,1.274-1.102,1.473-.152.046-.307.067-.458.067-.513,0-1-.252-1.294-.698l-5.146-8.189v8.646h-2V7.548c0-.684.443-1.275,1.103-1.474.666-.2,1.371.053,1.752.631l5.146,8.189V6.25Z"/></svg>
+
 );
-
-CircleN.displayName = 'CircleN';

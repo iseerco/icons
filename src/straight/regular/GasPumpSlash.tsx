@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const GasPumpSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.174,20.76A3,3,0,0,0,24,18V5.414A2.015,2.015,0,0,0,23.414,4L19.707.293,18.293,1.707,20,3.414V6a2,2,0,0,0,2,2V18c.036.9-1.1,1.189-1.666.92L16,14.586V3a3,3,0,0,0-3-3L1.407-.007-.007,1.407l22.6,22.6,1.414-1.414ZM14,12.586,12.414,11H14ZM13,2a1,1,0,0,1,1,1V9H10.414l-7-7Zm1,16.242,2,2V24H0V4.243l2,2V9H4.757l2,2H2V22H14Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const GasPumpSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.174,20.76A3,3,0,0,0,24,18V5.414A2.015,2.015,0,0,0,23.414,4L19.707.293,18.293,1.707,20,3.414V6a2,2,0,0,0,2,2V18c.036.9-1.1,1.189-1.666.92L16,14.586V3a3,3,0,0,0-3-3L1.407-.007-.007,1.407l22.6,22.6,1.414-1.414ZM14,12.586,12.414,11H14ZM13,2a1,1,0,0,1,1,1V9H10.414l-7-7Zm1,16.242,2,2V24H0V4.243l2,2V9H4.757l2,2H2V22H14Z"/></svg>
+
 );
-
-GasPumpSlash.displayName = 'GasPumpSlash';

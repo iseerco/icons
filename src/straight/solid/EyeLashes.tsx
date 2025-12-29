@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Eyelashes: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 10h-12s.352 1.721 1.648 3.144l-1.228 1.988 1.701 1.051 1.123-1.818c.508.259 1.087.458 1.756.557v2.078h2v-2.078c.669-.099 1.248-.298 1.756-.557l1.123 1.818 1.701-1.051-1.228-1.989c1.296-1.423 1.648-3.144 1.648-3.144z"/><path d="m12 10h-12s.352 1.721 1.648 3.144l-1.228 1.988 1.701 1.051 1.123-1.818c.508.259 1.087.458 1.756.557v2.078h2v-2.078c.669-.099 1.248-.298 1.756-.557l1.123 1.818 1.701-1.051-1.228-1.989c1.296-1.423 1.648-3.144 1.648-3.144z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const EyeLashes = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m15 14c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm8.822.818c-.879 1.92-4.327 8.182-11.822 8.182s-10.943-6.26-11.821-8.179c-.238-.522-.238-1.119 0-1.639.412-.902 1.401-2.758 3.099-4.477l-2.684-3.351 1.562-1.25 2.631 3.286c.629-.471 1.325-.902 2.096-1.265l-1.329-3.887 1.893-.647 1.316 3.848c.698-.191 1.442-.325 2.238-.387v-4.052h2v4.052c.796.062 1.54.196 2.238.387l1.315-3.848 1.893.646-1.329 3.887c.771.363 1.467.794 2.096 1.266l2.631-3.286 1.561 1.25-2.683 3.351c1.698 1.718 2.687 3.574 3.099 4.476.238.521.238 1.118 0 1.638zm-6.822-.818c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
 );
-
-Eyelashes.displayName = 'Eyelashes';

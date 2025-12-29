@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrArrowTurnLeftUp: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrArrowTurnLeftUp = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M22,23.5c0,.276-.224,.5-.5,.5H12.5c-2.481,0-4.5-2.019-4.5-4.5V1.25L1.853,7.355c-.196,.194-.512,.192-.708-.002-.194-.196-.193-.513,.002-.708L7.368,.468c.624-.624,1.64-.623,2.265,.001l6.22,6.176c.196,.195,.197,.511,.002,.708-.098,.098-.227,.147-.355,.147-.127,0-.255-.048-.353-.145L9,1.25V19.5c0,1.93,1.57,3.5,3.5,3.5h9c.276,0,.5,.224,.5,.5Z"/>
 </svg>
-);
 
-FiTrArrowTurnLeftUp.displayName = 'FiTrArrowTurnLeftUp';
+);

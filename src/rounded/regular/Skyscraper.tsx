@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Skyscraper: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m18 11.142v-2.142c0-2.206-1.794-4-4-4h-1v-4c0-.552-.448-1-1-1s-1 .448-1 1v4h-1c-2.206 0-4 1.794-4 4v2.142c-1.72.447-3 2-3 3.858v8c0 .552.448 1 1 1s1-.448 1-1v-8c0-1.103.897-2 2-2h10c1.103 0 2 .897 2 2v8c0 .552.448 1 1 1s1-.448 1-1v-8c0-1.858-1.28-3.411-3-3.858zm-10-.142v-2c0-1.103.897-2 2-2h4c1.103 0 2 .897 2 2v2zm5 6v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm0 5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm4-5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm0 5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm-8-5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm0 5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Skyscraper = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m18 11.142v-2.142c0-2.206-1.794-4-4-4h-1v-4c0-.552-.448-1-1-1s-1 .448-1 1v4h-1c-2.206 0-4 1.794-4 4v2.142c-1.72.447-3 2-3 3.858v8c0 .552.448 1 1 1s1-.448 1-1v-8c0-1.103.897-2 2-2h10c1.103 0 2 .897 2 2v8c0 .552.448 1 1 1s1-.448 1-1v-8c0-1.858-1.28-3.411-3-3.858zm-10-.142v-2c0-1.103.897-2 2-2h4c1.103 0 2 .897 2 2v2zm5 6v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm0 5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm4-5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm0 5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm-8-5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1zm0 5v1c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1z"/></svg>
 );
-
-Skyscraper.displayName = 'Skyscraper';

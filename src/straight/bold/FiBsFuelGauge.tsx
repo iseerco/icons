@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsFuelGauge: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsFuelGauge = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10.5,4.082v2.9h3v-2.9c2.212.217,4.326.905,6.227,2.045l-1.462,1.957,2.404,1.795,3.305-4.425-1.207-.897c-3.131-2.327-6.854-3.557-10.767-3.557S4.364,2.229,1.233,4.557L.03,5.451l3.281,4.423,2.391-1.812-1.433-1.932c1.902-1.142,4.017-1.831,6.23-2.048Zm6.403,6.123l-4.561,5.811c-.114-.013-.225-.034-.342-.034-1.657,0-3,1.343-3,3s1.343,3,3,3,3-1.343,3-3c0-.42-.088-.82-.244-1.183l4.552-5.798-2.404-1.795ZM0,15h4v2h-2v1h2v2h-2v1h2v2H0v-8Zm22,2v1h2v2h-2v3h-2v-8h4v2h-2Z"/>
 </svg>
-);
 
-FiBsFuelGauge.displayName = 'FiBsFuelGauge';
+);

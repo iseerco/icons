@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsEnvelopeDownload: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17,8V0h3V8h4l-4.688,4.642a1.222,1.222,0,0,1-1.728,0L13,8Zm4,13H3V11.2l5.239,5.24a5.317,5.317,0,0,0,7.521,0l1.583-1.582a3.192,3.192,0,0,1-1.388-.8l-1.019-1.032-1.3,1.3a2.373,2.373,0,0,1-3.278,0L3,6.96V6.5A.5.5,0,0,1,3.5,6H15V3H3.5A3.5,3.5,0,0,0,0,6.5V24H24V10.6l-3,2.97Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsEnvelopeDownload = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17,8V0h3V8h4l-4.688,4.642a1.222,1.222,0,0,1-1.728,0L13,8Zm4,13H3V11.2l5.239,5.24a5.317,5.317,0,0,0,7.521,0l1.583-1.582a3.192,3.192,0,0,1-1.388-.8l-1.019-1.032-1.3,1.3a2.373,2.373,0,0,1-3.278,0L3,6.96V6.5A.5.5,0,0,1,3.5,6H15V3H3.5A3.5,3.5,0,0,0,0,6.5V24H24V10.6l-3,2.97Z"/></svg>
+
 );
-
-FiBsEnvelopeDownload.displayName = 'FiBsEnvelopeDownload';

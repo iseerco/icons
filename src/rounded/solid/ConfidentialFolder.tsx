@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ConfidentialFolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22 14.556v-1.556c0-2.206-1.794-4-4-4s-4 1.794-4 4v1.556c-1.19.694-2 1.97-2 3.444v2c0 2.206 1.794 4 4 4h4c2.206 0 4-1.794 4-4v-2c0-1.474-.81-2.75-2-3.444zm-4 5.944c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm2-6.5h-4v-1c0-1.103.897-2 2-2s2 .897 2 2zm-2-8.694v1.694h-6c-.201 0-.401-.055-.503-.106l-2.52-1.259c-.829-.416-1.757-.635-2.685-.635h-2.292v-1c0-2.209 1.791-4 4-4h4.778c.815 0 1.595.332 2.16.919l2.222 2.306c.539.559.84 1.305.84 2.081zm-6.46 18.694h-6.54c-2.761 0-5-2.239-5-5v-8c0-2.209 1.791-4 4-4h2.292c.62 0 1.232.144 1.787.422l2.524 1.261c.403.202.912.317 1.397.317h1.54c-.954 1.063-1.54 2.462-1.54 4v.552c-1.255 1.127-2 2.745-2 4.448v2c0 1.538.586 2.937 1.54 4z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ConfidentialFolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m22 14.556v-1.556c0-2.206-1.794-4-4-4s-4 1.794-4 4v1.556c-1.19.694-2 1.97-2 3.444v2c0 2.206 1.794 4 4 4h4c2.206 0 4-1.794 4-4v-2c0-1.474-.81-2.75-2-3.444zm-4 5.944c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm2-6.5h-4v-1c0-1.103.897-2 2-2s2 .897 2 2zm-2-8.694v1.694h-6c-.201 0-.401-.055-.503-.106l-2.52-1.259c-.829-.416-1.757-.635-2.685-.635h-2.292v-1c0-2.209 1.791-4 4-4h4.778c.815 0 1.595.332 2.16.919l2.222 2.306c.539.559.84 1.305.84 2.081zm-6.46 18.694h-6.54c-2.761 0-5-2.239-5-5v-8c0-2.209 1.791-4 4-4h2.292c.62 0 1.232.144 1.787.422l2.524 1.261c.403.202.912.317 1.397.317h1.54c-.954 1.063-1.54 2.462-1.54 4v.552c-1.255 1.127-2 2.745-2 4.448v2c0 1.538.586 2.937 1.54 4z"/></svg>
 );
-
-ConfidentialFolder.displayName = 'ConfidentialFolder';

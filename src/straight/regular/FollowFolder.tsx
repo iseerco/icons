@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FollowFolder: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21,2H12.24L8.24,0H3C1.35,0,0,1.35,0,3V22H13.18c-.6-.6-1.2-1.27-1.73-2H2V8H22v2.26c.75,.24,1.43,.66,2,1.18V5c0-1.65-1.35-3-3-3ZM2,3c0-.55,.45-1,1-1H7.76l4,2h9.24c.55,0,1,.45,1,1v1H2V3ZM20.35,12c-1,0-1.87,.37-2.5,.99-.63-.62-1.5-.99-2.5-.99-1.93,0-3.5,1.66-3.5,3.7,0,3.26,4.87,6.74,5.43,7.12l.57,.4,.57-.4c.56-.39,5.43-3.86,5.43-7.12,0-2.04-1.57-3.7-3.5-3.7Zm-2.5,8.76c-1.74-1.33-4-3.56-4-5.06,0-.94,.67-1.7,1.5-1.7,.75,0,1.5,.45,1.5,1.45v.55h2v-.55c0-1,.75-1.45,1.5-1.45,.83,0,1.5,.76,1.5,1.7,0,1.5-2.26,3.73-4,5.06Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FollowFolder = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21,2H12.24L8.24,0H3C1.35,0,0,1.35,0,3V22H13.18c-.6-.6-1.2-1.27-1.73-2H2V8H22v2.26c.75,.24,1.43,.66,2,1.18V5c0-1.65-1.35-3-3-3ZM2,3c0-.55,.45-1,1-1H7.76l4,2h9.24c.55,0,1,.45,1,1v1H2V3ZM20.35,12c-1,0-1.87,.37-2.5,.99-.63-.62-1.5-.99-2.5-.99-1.93,0-3.5,1.66-3.5,3.7,0,3.26,4.87,6.74,5.43,7.12l.57,.4,.57-.4c.56-.39,5.43-3.86,5.43-7.12,0-2.04-1.57-3.7-3.5-3.7Zm-2.5,8.76c-1.74-1.33-4-3.56-4-5.06,0-.94,.67-1.7,1.5-1.7,.75,0,1.5,.45,1.5,1.45v.55h2v-.55c0-1,.75-1.45,1.5-1.45,.83,0,1.5,.76,1.5,1.7,0,1.5-2.26,3.73-4,5.06Z"/></svg>
+
 );
-
-FollowFolder.displayName = 'FollowFolder';

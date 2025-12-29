@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HandBackPointLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,9.414v7.586c0,2.761-2.238,5-5,5h-4.721c-2.383,0-4.435-1.682-4.903-4.019h0s-1.196-4.981-1.196-4.981H2.5c-1.381,0-2.5-1.119-2.5-2.5s1.119-2.5,2.5-2.5h14.5c.552,0,1-.448,1-1s-.448-1-1-1h-7.34l3.64-2.788c1.985-1.696,4.938-1.588,6.794,.249l2.425,2.4c.945,.942,1.478,2.22,1.481,3.554Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HandBackPointLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,9.414v7.586c0,2.761-2.238,5-5,5h-4.721c-2.383,0-4.435-1.682-4.903-4.019h0s-1.196-4.981-1.196-4.981H2.5c-1.381,0-2.5-1.119-2.5-2.5s1.119-2.5,2.5-2.5h14.5c.552,0,1-.448,1-1s-.448-1-1-1h-7.34l3.64-2.788c1.985-1.696,4.938-1.588,6.794,.249l2.425,2.4c.945,.942,1.478,2.22,1.481,3.554Z"/></svg>
+
 );
-
-HandBackPointLeft.displayName = 'HandBackPointLeft';

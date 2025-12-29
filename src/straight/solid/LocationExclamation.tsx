@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LocationExclamation: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m19.07,2.929c-1.889-1.889-4.399-2.929-7.07-2.929s-5.182,1.04-7.071,2.929c-3.899,3.899-3.899,10.243.008,14.15l7.063,6.907,7.07-6.915c1.89-1.889,2.93-4.4,2.93-7.071s-1.04-5.183-2.93-7.071Zm-6.07,13.071h-2v-2h2v2Zm0-4h-2v-7h2v7Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LocationExclamation = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m19.07,2.929c-1.889-1.889-4.399-2.929-7.07-2.929s-5.182,1.04-7.071,2.929c-3.899,3.899-3.899,10.243.008,14.15l7.063,6.907,7.07-6.915c1.89-1.889,2.93-4.4,2.93-7.071s-1.04-5.183-2.93-7.071Zm-6.07,13.071h-2v-2h2v2Zm0-4h-2v-7h2v7Z"/></svg>
+
 );
-
-LocationExclamation.displayName = 'LocationExclamation';

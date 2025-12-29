@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrCloudDownload: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.976 15.5a7.626 7.626 0 0 1 -.691 2.636 1.5 1.5 0 1 1 -2.717-1.272 4.619 4.619 0 0 0 .417-1.6 5.163 5.163 0 0 0 -4.475-5.512 1.5 1.5 0 0 1 -1.289-1.287 5.12 5.12 0 0 0 -2-3.42 5.2 5.2 0 0 0 -3.908-.988 5.052 5.052 0 0 0 -4.219 4.093 5.118 5.118 0 0 0 .456 3.3 2.484 2.484 0 0 1 -1.012 3.356 2.763 2.763 0 0 0 -1.444 3.156 2.925 2.925 0 0 0 2.875 2.038h2.531a1.5 1.5 0 0 1 0 3h-2.531a5.886 5.886 0 0 1 -5.778-4.281 5.764 5.764 0 0 1 2.5-6.3 8.121 8.121 0 0 1 12.335-9.766 8.214 8.214 0 0 1 2.948 4.34 8.16 8.16 0 0 1 6.002 8.507zm-5.413 3.5h-1.563v-4.5a1.5 1.5 0 0 0 -3 0v4.5h-1.563a.968.968 0 0 0 -.685 1.653l3.063 3.063a.967.967 0 0 0 1.37 0l3.063-3.063a.968.968 0 0 0 -.685-1.653z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrCloudDownload = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m23.976 15.5a7.626 7.626 0 0 1 -.691 2.636 1.5 1.5 0 1 1 -2.717-1.272 4.619 4.619 0 0 0 .417-1.6 5.163 5.163 0 0 0 -4.475-5.512 1.5 1.5 0 0 1 -1.289-1.287 5.12 5.12 0 0 0 -2-3.42 5.2 5.2 0 0 0 -3.908-.988 5.052 5.052 0 0 0 -4.219 4.093 5.118 5.118 0 0 0 .456 3.3 2.484 2.484 0 0 1 -1.012 3.356 2.763 2.763 0 0 0 -1.444 3.156 2.925 2.925 0 0 0 2.875 2.038h2.531a1.5 1.5 0 0 1 0 3h-2.531a5.886 5.886 0 0 1 -5.778-4.281 5.764 5.764 0 0 1 2.5-6.3 8.121 8.121 0 0 1 12.335-9.766 8.214 8.214 0 0 1 2.948 4.34 8.16 8.16 0 0 1 6.002 8.507zm-5.413 3.5h-1.563v-4.5a1.5 1.5 0 0 0 -3 0v4.5h-1.563a.968.968 0 0 0 -.685 1.653l3.063 3.063a.967.967 0 0 0 1.37 0l3.063-3.063a.968.968 0 0 0 -.685-1.653z"/></svg>
 );
-
-FiBrCloudDownload.displayName = 'FiBrCloudDownload';

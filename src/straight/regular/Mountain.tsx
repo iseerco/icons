@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Mountain: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Mountain = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,.01L0,22.079v1.921h24v-1.921L12,.01Zm3.701,10.994l-.78,1.487-1.894-2.854-2.575,4.066-2.05-2.894,3.596-6.614,3.701,6.807ZM2.32,22l5.02-9.232,3.207,4.528,2.521-3.981,2.057,3.099,1.727-3.294,4.829,8.881H2.32Z"/>
 </svg>
-);
 
-Mountain.displayName = 'Mountain';
+);

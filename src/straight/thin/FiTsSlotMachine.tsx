@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsSlotMachine: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsSlotMachine = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M24,1.5c0-.827-.673-1.5-1.5-1.5s-1.5,.673-1.5,1.5c0,.651,.419,1.201,1,1.408v6.592c0,.827-.673,1.5-1.5,1.5h-1.5v-1.5C19,4.262,14.738,0,9.5,0S0,4.262,0,9.5v14.5H19V12h1.5c1.379,0,2.5-1.122,2.5-2.5V2.908c.581-.207,1-.757,1-1.408Zm-12,6.5v7H7v-7h5Zm1,0h4.859c.087,.488,.141,.987,.141,1.5v5.5h-5v-7ZM9.5,1c3.817,0,7.053,2.529,8.124,6H1.376C2.447,3.529,5.683,1,9.5,1ZM1.141,8H6v7H1v-5.5c0-.513,.053-1.012,.141-1.5Zm-.141,15v-7H18v7H1Zm7-13v-1h3l-.036,.879-1.692,4.192-.928-.374,1.493-3.698h-1.837Zm9-1l-.036,.879-1.692,4.192-.928-.374,1.493-3.698h-1.837v-1h3Zm-13.163,1h-1.837v-1h3l-.036,.879-1.692,4.192-.928-.374,1.493-3.698Z"/>
 </svg>
-);
 
-FiTsSlotMachine.displayName = 'FiTsSlotMachine';
+);

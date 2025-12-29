@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ThunderstormMoon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,19a4.788,4.788,0,0,1-4.774,4.992l-2.733,0,1.279-2.568A1.6,1.6,0,0,0,16.4,19H14.274l1.779-3.295-1.76-.949-2.147,3.976-.077.186A1.614,1.614,0,0,0,13.615,21H15.75l-1.492,3L9.5,24a4.5,4.5,0,0,1-1.45-8.74c.785-6.279,9.605-7.146,11.625-1.2A5,5,0,0,1,24,19ZM20,4a1,1,0,0,0,0-2A1,1,0,0,0,20,4Zm2,6a1,1,0,0,0,0-2A1,1,0,0,0,22,10ZM16,7a1,1,0,0,0,0-2A1,1,0,0,0,16,7ZM6.294,13.866a8,8,0,0,1,3.738-4.8,7.069,7.069,0,0,1,3.611-6.575l1.182-.674-1.19-.661A9.183,9.183,0,0,0,3.722,16.567,6.5,6.5,0,0,1,6.294,13.866Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ThunderstormMoon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M24,19a4.788,4.788,0,0,1-4.774,4.992l-2.733,0,1.279-2.568A1.6,1.6,0,0,0,16.4,19H14.274l1.779-3.295-1.76-.949-2.147,3.976-.077.186A1.614,1.614,0,0,0,13.615,21H15.75l-1.492,3L9.5,24a4.5,4.5,0,0,1-1.45-8.74c.785-6.279,9.605-7.146,11.625-1.2A5,5,0,0,1,24,19ZM20,4a1,1,0,0,0,0-2A1,1,0,0,0,20,4Zm2,6a1,1,0,0,0,0-2A1,1,0,0,0,22,10ZM16,7a1,1,0,0,0,0-2A1,1,0,0,0,16,7ZM6.294,13.866a8,8,0,0,1,3.738-4.8,7.069,7.069,0,0,1,3.611-6.575l1.182-.674-1.19-.661A9.183,9.183,0,0,0,3.722,16.567,6.5,6.5,0,0,1,6.294,13.866Z"/></svg>
+
 );
-
-ThunderstormMoon.displayName = 'ThunderstormMoon';

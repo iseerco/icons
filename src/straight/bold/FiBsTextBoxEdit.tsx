@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTextBoxEdit: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTextBoxEdit = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m10,10v7h-3v-7h-2v-3h7v3h-2ZM3,5.5c0-.275.224-.5.5-.5h6.5v-3H3.5c-1.93,0-3.5,1.57-3.5,3.5v16.5h10v-3H3V5.5Zm18-3.449v19.949h3V5.5c0-1.758-1.308-3.204-3-3.449Zm-5.5-1.421c-.567-.397-1.257-.63-2-.63h-1.5v3h1.5c.276,0,.5.225.5.5v17c0,.275-.224.5-.5.5h-1.5v3h1.5c.743,0,1.433-.233,2-.63.567.397,1.257.63,2,.63h1.5v-3h-1.5c-.276,0-.5-.225-.5-.5V3.5c0-.275.224-.5.5-.5h1.5V0h-1.5c-.743,0-1.433.233-2,.63Z"/>
 </svg>
-);
 
-FiBsTextBoxEdit.displayName = 'FiBsTextBoxEdit';
+);

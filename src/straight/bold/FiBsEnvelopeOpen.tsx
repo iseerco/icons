@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsEnvelopeOpen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.655,8.162l-6.894-6.6a5.319,5.319,0,0,0-7.5-.022L1.346,8.162A4.378,4.378,0,0,0,0,11.313V24H24V11.313A4.381,4.381,0,0,0,22.655,8.162ZM10.36,3.679a2.329,2.329,0,0,1,3.3.022l5.923,5.675L13.64,15.321a2.376,2.376,0,0,1-3.28,0L4.415,9.376ZM3,21V12.2l5.239,5.24a5.32,5.32,0,0,0,7.522,0L21,12.2V21Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsEnvelopeOpen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M22.655,8.162l-6.894-6.6a5.319,5.319,0,0,0-7.5-.022L1.346,8.162A4.378,4.378,0,0,0,0,11.313V24H24V11.313A4.381,4.381,0,0,0,22.655,8.162ZM10.36,3.679a2.329,2.329,0,0,1,3.3.022l5.923,5.675L13.64,15.321a2.376,2.376,0,0,1-3.28,0L4.415,9.376ZM3,21V12.2l5.239,5.24a5.32,5.32,0,0,0,7.522,0L21,12.2V21Z"/></svg>
+
 );
-
-FiBsEnvelopeOpen.displayName = 'FiBsEnvelopeOpen';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrMobile4g: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrMobile4g = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M19.5,15c-.276,0-.5,.224-.5,.5v1.5H5V4.5c0-1.93,1.57-3.5,3.5-3.5h7c1.272,0,2.445,.691,3.062,1.805,.134,.242,.439,.326,.68,.195,.242-.134,.329-.438,.195-.68-.793-1.432-2.302-2.32-3.938-2.32h-7c-2.481,0-4.5,2.019-4.5,4.5v15c0,2.481,2.019,4.5,4.5,4.5h7c2.481,0,4.5-2.019,4.5-4.5v-4c0-.276-.224-.5-.5-.5Zm-4,8h-7c-1.93,0-3.5-1.57-3.5-3.5v-1.5h14v1.5c0,1.93-1.57,3.5-3.5,3.5Zm-1.5-2.5c0,.276-.224,.5-.5,.5h-3c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h3c.276,0,.5,.224,.5,.5Zm3-8v-1.492h-2.5c-.827,0-1.5-.673-1.5-1.5V5.5c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v4.008c0,.275,.224,.5,.5,.5h2.5V5.5c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v7c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5Zm7-2.492v.5c0,1.379-1.122,2.5-2.5,2.5s-2.5-1.121-2.5-2.5v-3c0-1.379,1.122-2.5,2.5-2.5s2.5,1.121,2.5,2.5c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5c0-.827-.673-1.5-1.5-1.5s-1.5,.673-1.5,1.5v3c0,.827,.673,1.5,1.5,1.5s1.5-.673,1.5-1.5v-.5h-1.5c-.276,0-.5-.224-.5-.5s.224-.5,.5-.5h1.5c.551,0,1,.448,1,1Z"/>
 </svg>
-);
 
-FiTrMobile4g.displayName = 'FiTrMobile4g';
+);

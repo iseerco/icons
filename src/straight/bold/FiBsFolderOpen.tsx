@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsFolderOpen: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21,10v-3.5c0-1.93-1.57-3.5-3.5-3.5h-7.146L6.354,1h-2.854C1.57,1,0,2.57,0,4.5v18.5h20.1l3.899-13h-2.999ZM3,8h15v2H5.918l-2.918,8.375v-10.375Zm14.867,12H5.611l2.438-7h11.919l-2.101,7Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsFolderOpen = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m21,10v-3.5c0-1.93-1.57-3.5-3.5-3.5h-7.146L6.354,1h-2.854C1.57,1,0,2.57,0,4.5v18.5h20.1l3.899-13h-2.999ZM3,8h15v2H5.918l-2.918,8.375v-10.375Zm14.867,12H5.611l2.438-7h11.919l-2.101,7Z"/></svg>
+
 );
-
-FiBsFolderOpen.displayName = 'FiBsFolderOpen';

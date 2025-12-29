@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Whistle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M10,16a2,2,0,1,1-2-2A2,2,0,0,1,10,16ZM24,8v5.835l-7.215,1.311A1,1,0,0,0,16,16.152a7.9,7.9,0,0,1-.806,3.287A7.956,7.956,0,0,1,9.285,23.9a8.264,8.264,0,0,1-1.279.1,8,8,0,0,1-7.984-8.6A8.152,8.152,0,0,1,8.229,8ZM12,16a4,4,0,1,0-4,4A4,4,0,0,0,12,16ZM11,0H9V5h2Zm5.316,2.062L14.565,1.1,12.148,5.473,13.9,6.44ZM7.875,5.473,5.459,1.1l-1.751.966L6.125,6.44Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Whistle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M10,16a2,2,0,1,1-2-2A2,2,0,0,1,10,16ZM24,8v5.835l-7.215,1.311A1,1,0,0,0,16,16.152a7.9,7.9,0,0,1-.806,3.287A7.956,7.956,0,0,1,9.285,23.9a8.264,8.264,0,0,1-1.279.1,8,8,0,0,1-7.984-8.6A8.152,8.152,0,0,1,8.229,8ZM12,16a4,4,0,1,0-4,4A4,4,0,0,0,12,16ZM11,0H9V5h2Zm5.316,2.062L14.565,1.1,12.148,5.473,13.9,6.44ZM7.875,5.473,5.459,1.1l-1.751.966L6.125,6.44Z"/></svg>
+
 );
-
-Whistle.displayName = 'Whistle';

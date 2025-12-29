@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const HandHoldingDocument: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const HandHoldingDocument = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.018,8.785c-1.167-1.115-3.193-1.022-4.254,.199l-3.217,3.534c-.551-.91-1.551-1.519-2.689-1.519H3c-1.654,0-3,1.346-3,3v7c0,1.654,1.346,3,3,3H13.448l9.787-10.985c1.094-1.225,.996-3.123-.218-4.23Zm-1.275,2.899l-9.19,10.316H3c-.552,0-1-.449-1-1v-7c0-.551,.448-1,1-1H12.857c.63,0,1.143,.512,1.143,1.142,0,.564-.422,1.051-.98,1.131l-5.161,.737,.283,1.979,5.161-.737c1.175-.168,2.129-.988,2.514-2.059l4.427-4.864c.355-.411,1.034-.436,1.427-.067,.407,.372,.44,1.009,.072,1.421ZM4,9H2V3C2,1.346,3.346,0,5,0h6.514l3.486,3.485v5.515h-2V5h-3V2H5c-.552,0-1,.449-1,1v6Z"/>
 </svg>
-);
 
-HandHoldingDocument.displayName = 'HandHoldingDocument';
+);

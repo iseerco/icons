@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrPhotoCapture: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrPhotoCapture = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m12,6c-3.309,0-6,2.691-6,6s2.691,6,6,6,6-2.691,6-6-2.691-6-6-6Zm0,11c-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5-2.243,5-5,5Zm-5,6.5c0,.276-.224.5-.5.5h-2c-2.481,0-4.5-2.019-4.5-4.5v-2c0-.276.224-.5.5-.5s.5.224.5.5v2c0,1.93,1.57,3.5,3.5,3.5h2c.276,0,.5.224.5.5Zm17-6v2c0,2.481-2.019,4.5-4.5,4.5h-2c-.276,0-.5-.224-.5-.5s.224-.5.5-.5h2c1.93,0,3.5-1.57,3.5-3.5v-2c0-.276.224-.5.5-.5s.5.224.5.5Zm0-13v2c0,.276-.224.5-.5.5s-.5-.224-.5-.5v-2c0-1.93-1.57-3.5-3.5-3.5h-2c-.276,0-.5-.224-.5-.5s.224-.5.5-.5h2c2.481,0,4.5,2.019,4.5,4.5ZM0,6.5v-2C0,2.019,2.019,0,4.5,0h2c.276,0,.5.224.5.5s-.224.5-.5.5h-2c-1.93,0-3.5,1.57-3.5,3.5v2c0,.276-.224.5-.5.5s-.5-.224-.5-.5Z"/>
 </svg>
-);
 
-FiTrPhotoCapture.displayName = 'FiTrPhotoCapture';
+);

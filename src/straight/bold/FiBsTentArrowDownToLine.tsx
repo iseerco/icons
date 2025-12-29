@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsTentArrowDownToLine: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsTentArrowDownToLine = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m23.544,19.527L14.004,6.006,3.414,21.019H0v3h21.02c1.083,0,2.082-.58,2.606-1.515.521-.927.501-2.022-.082-2.977Zm-6.286,1.491l-3.258-4.537-3.258,4.537h-3.726l6.979-9.582,6.938,9.582h-3.677ZM0,4.982h3V-.018h3v5h3l-3.793,3.707c-.391.391-1.024.391-1.414,0L0,4.982Z"/>
 </svg>
-);
 
-FiBsTentArrowDownToLine.displayName = 'FiBsTentArrowDownToLine';
+);

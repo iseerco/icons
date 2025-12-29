@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsRampLoading: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.816,12H6.134l-3.855,8.221c-.407,.815-.365,1.765,.114,2.54,.479,.776,1.31,1.239,2.222,1.239h14.771c.912,0,1.742-.463,2.222-1.239,.479-.775,.521-1.725,.118-2.531l-3.909-8.23Zm2.94,10.235c-.296,.479-.809,.765-1.371,.765H4.614c-.562,0-1.075-.286-1.371-.765-.296-.478-.322-1.064-.064-1.578l3.59-7.657h10.415l3.644,7.668c.252,.503,.226,1.089-.07,1.567Zm1.243-19.735v13.646l-1-2.106V2.5c0-.827-.673-1.5-1.5-1.5H4.5c-.827,0-1.5,.673-1.5,1.5V13.972l-1,2.133V2.5C2,1.122,3.121,0,4.5,0h15c1.379,0,2.5,1.122,2.5,2.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsRampLoading = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M17.816,12H6.134l-3.855,8.221c-.407,.815-.365,1.765,.114,2.54,.479,.776,1.31,1.239,2.222,1.239h14.771c.912,0,1.742-.463,2.222-1.239,.479-.775,.521-1.725,.118-2.531l-3.909-8.23Zm2.94,10.235c-.296,.479-.809,.765-1.371,.765H4.614c-.562,0-1.075-.286-1.371-.765-.296-.478-.322-1.064-.064-1.578l3.59-7.657h10.415l3.644,7.668c.252,.503,.226,1.089-.07,1.567Zm1.243-19.735v13.646l-1-2.106V2.5c0-.827-.673-1.5-1.5-1.5H4.5c-.827,0-1.5,.673-1.5,1.5V13.972l-1,2.133V2.5C2,1.122,3.121,0,4.5,0h15c1.379,0,2.5,1.122,2.5,2.5Z"/></svg>
+
 );
-
-FiTsRampLoading.displayName = 'FiTsRampLoading';

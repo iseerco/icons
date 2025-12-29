@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const MeasuringTape: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const MeasuringTape = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m9.5,10c5.247,0,9.5-2.015,9.5-4.5S14.747,1,9.5,1,0,3.015,0,5.5s4.253,4.5,9.5,4.5Zm0-5.5c1.381,0,2.5.448,2.5,1s-1.119,1-2.5,1-2.5-.448-2.5-1,1.119-1,2.5-1Zm14.5,10.5v5c0,1.657-1.343,3-3,3v-5c0-.552-.448-1-1-1s-1,.448-1,1v5h-3v-5c0-.552-.448-1-1-1s-1,.448-1,1v5h-3v-5c0-.552-.448-1-1-1s-1,.448-1,1v4.989c-5.076-.119-9-2.577-9-5.703v-7.983c2.018,1.665,5.412,2.697,9.5,2.697h11.5c1.657,0,3,1.343,3,3Z"/>
 </svg>
-);
 
-MeasuringTape.displayName = 'MeasuringTape';
+);

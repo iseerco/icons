@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsDesktopArrowDown: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsDesktopArrowDown = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8.354,6.561l3.146,3.146V0h1v9.707l3.146-3.146.707.707-3.293,3.293c-.292.292-.677.438-1.061.438s-.769-.146-1.061-.438l-3.293-3.293.707-.707Zm4.146,12.439v3h5.5v1H6v-1h5.5v-3H0V3.5C0,2.122,1.121,1,2.5,1h6.5v1H2.5c-.827,0-1.5.673-1.5,1.5v10.5h22V3.5c0-.827-.673-1.5-1.5-1.5h-6.5v-1h6.5c1.379,0,2.5,1.122,2.5,2.5v15.5h-11.5Zm10.5-1v-3H1v3h22Z"/>
 </svg>
-);
 
-FiTsDesktopArrowDown.displayName = 'FiTsDesktopArrowDown';
+);

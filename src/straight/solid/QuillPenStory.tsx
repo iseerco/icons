@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const QuillPenStory: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const QuillPenStory = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.498,2.671c-3.197,2.27-4.585,5.494-5.148,7.331-.665,1.178-1.1,2.501-1.287,3.998h-2.062v2.298l-3.113,1.125c-1.386.554-2.159,2.064-1.797,3.513l.767,3.063h14.287l.768-3.064c.361-1.448-.412-2.958-1.829-3.525l-3.082-1.113v-2.298h-1.927c.051-.341.112-.677.195-1h-.012c1.59-4.897,5.974-8.919,9.513-9.333-3.154,2.231-5.32,5.233-6.689,7.629,1.939-.285,4.286-.95,6.422-2.467C23.208,5.488,24,.07,24,.07c0,0-5.796-.74-10.502,2.601Z"/>
 </svg>
-);
 
-QuillPenStory.displayName = 'QuillPenStory';
+);

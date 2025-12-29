@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsInsertSquare: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsInsertSquare = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m13.061,5.439l4.79,4.704-.701.714-4.649-4.567v17.71h-1V6.29l-4.65,4.567-.7-.714,4.793-4.707c.58-.581,1.531-.583,2.118.003ZM21.5,0H2.5C1.122,0,0,1.122,0,2.5v21.5h1V2.5c0-.827.673-1.5,1.5-1.5h19c.827,0,1.5.673,1.5,1.5v21.5h1V2.5c0-1.378-1.121-2.5-2.5-2.5Z"/>
 </svg>
-);
 
-FiTsInsertSquare.displayName = 'FiTsInsertSquare';
+);

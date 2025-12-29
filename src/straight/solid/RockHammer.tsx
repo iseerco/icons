@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const RockHammer: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const RockHammer = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M11.534,11.491l-6.194,12.482L.016,21.205,6.196,8.771l5.339,2.72Zm6.26-1.839l.924-1.774c.635-1.223,.156-2.735-1.08-3.379L10.825,1.092C6.037-1.396,2.349,.967,1.067,2.562l-.77,.959,14.128,7.197c1.183,.643,2.776,.14,3.37-1.066Zm6.118,9.76l-2.505,4.588h-7.074l-3.334-3.404v-3.629l3.886-3.967,6.622,.005,2.405,6.407Zm-5.913,.588h-1.659l-1.861-1.9-1.429,1.4,2.449,2.5h2.5v-2Z"/>
 </svg>
-);
 
-RockHammer.displayName = 'RockHammer';
+);

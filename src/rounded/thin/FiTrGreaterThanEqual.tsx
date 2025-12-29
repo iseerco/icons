@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrGreaterThanEqual: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrGreaterThanEqual = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,23.5c0,.276-.224.5-.5.5H3.5c-.276,0-.5-.224-.5-.5s.224-.5.5-.5h17c.276,0,.5.224.5.5Zm-2.201-12.278l-15.5,6.82c-.253.111-.368.406-.257.659.083.188.266.299.458.299.067,0,.136-.014.201-.042l15.487-6.816c1.11-.452,1.838-1.519,1.811-2.654-.026-1.091-.737-2.078-1.795-2.508L3.704.043c-.251-.11-.547,0-.66.252-.113.252,0,.548.252.661l15.516,6.943c.705.286,1.171.919,1.188,1.612.018.723-.46,1.408-1.2,1.709Z"/>
 </svg>
-);
 
-FiTrGreaterThanEqual.displayName = 'FiTrGreaterThanEqual';
+);

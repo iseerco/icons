@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsArrowsRetweet: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.98,16.18l-3.35,3.35c-.3,.3-.7,.47-1.13,.47s-.83-.17-1.13-.47l-3.35-3.35,.71-.71,3.28,3.28V6.5c0-.83-.67-1.5-1.5-1.5H8.5l-1-1h10c1.38,0,2.5,1.12,2.5,2.5v12.25l3.28-3.28,.71,.71Zm-17.48,2.82c-.83,0-1.5-.67-1.5-1.5V5.75l3.3,3.3,.71-.71-3.37-3.37c-.6-.61-1.66-.61-2.27,0L0,8.33l.71,.71,3.29-3.29v11.75c0,1.38,1.12,2.5,2.5,2.5h9.5l-1-1H6.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsArrowsRetweet = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M23.98,16.18l-3.35,3.35c-.3,.3-.7,.47-1.13,.47s-.83-.17-1.13-.47l-3.35-3.35,.71-.71,3.28,3.28V6.5c0-.83-.67-1.5-1.5-1.5H8.5l-1-1h10c1.38,0,2.5,1.12,2.5,2.5v12.25l3.28-3.28,.71,.71Zm-17.48,2.82c-.83,0-1.5-.67-1.5-1.5V5.75l3.3,3.3,.71-.71-3.37-3.37c-.6-.61-1.66-.61-2.27,0L0,8.33l.71,.71,3.29-3.29v11.75c0,1.38,1.12,2.5,2.5,2.5h9.5l-1-1H6.5Z"/></svg>
+
 );
-
-FiTsArrowsRetweet.displayName = 'FiTsArrowsRetweet';

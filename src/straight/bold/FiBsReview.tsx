@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBsReview: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBsReview = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m8.026,12c3.309,0,6-2.691,6-6S11.334,0,8.026,0,2.026,2.691,2.026,6s2.691,6,6,6Zm0-9c1.654,0,3,1.346,3,3s-1.346,3-3,3-3-1.346-3-3,1.346-3,3-3Zm-3,11h4.974v3h-4.974c-1.103,0-2,.897-2,2v5H.026v-5c0-2.757,2.243-5,5-5Zm18.974,3l-3.054,2.083,1.271,3.982-.818.571-3.382-2.338-3.331,2.338-.787-.593,1.181-4.022-3.079-2.016v-1.006h4.2l1.285-4.363h1.059l1.283,4.363h4.174v1Z"/>
 </svg>
-);
 
-FiBsReview.displayName = 'FiBsReview';
+);

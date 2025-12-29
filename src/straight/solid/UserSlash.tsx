@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UserSlash: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M9.776,14l9.958,10H3v-5c0-2.757,2.243-5,5-5h1.776Zm14.181,8.543l-1.414,1.414L.043,1.457,1.457,.043,6.139,4.725C6.726,2.028,9.129,0,12,0c3.309,0,6,2.691,6,6,0,2.871-2.028,5.274-4.725,5.861l2.139,2.139h.586c2.757,0,5,2.243,5,5v.586l2.957,2.957Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UserSlash = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M9.776,14l9.958,10H3v-5c0-2.757,2.243-5,5-5h1.776Zm14.181,8.543l-1.414,1.414L.043,1.457,1.457,.043,6.139,4.725C6.726,2.028,9.129,0,12,0c3.309,0,6,2.691,6,6,0,2.871-2.028,5.274-4.725,5.861l2.139,2.139h.586c2.757,0,5,2.243,5,5v.586l2.957,2.957Z"/></svg>
+
 );
-
-UserSlash.displayName = 'UserSlash';

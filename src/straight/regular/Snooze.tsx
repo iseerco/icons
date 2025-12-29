@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Snooze: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m2.366,22h7.634v2H1.703c-.691,0-1.308-.412-1.572-1.051s-.119-1.366.37-1.854l7.134-8.096H0v-2h8.297c.691,0,1.308.413,1.572,1.051s.119,1.366-.37,1.854l-7.134,8.096Zm17.294-2l3.916-4.531c.415-.415.538-1.034.313-1.576s-.749-.893-1.336-.893h-5.553v2h4.34l-3.916,4.531c-.415.415-.538,1.034-.313,1.576s.749.893,1.336.893h5.553v-2h-4.34Zm-.66-12h-5.38l4.937-5.422c.434-.434.562-1.08.327-1.646-.234-.566-.782-.932-1.395-.932h-6.489v2h5.38l-4.937,5.422c-.434.434-.562,1.08-.327,1.646.234.566.782.932,1.395.932h6.489v-2Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Snooze = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m2.366,22h7.634v2H1.703c-.691,0-1.308-.412-1.572-1.051s-.119-1.366.37-1.854l7.134-8.096H0v-2h8.297c.691,0,1.308.413,1.572,1.051s.119,1.366-.37,1.854l-7.134,8.096Zm17.294-2l3.916-4.531c.415-.415.538-1.034.313-1.576s-.749-.893-1.336-.893h-5.553v2h4.34l-3.916,4.531c-.415.415-.538,1.034-.313,1.576s.749.893,1.336.893h5.553v-2h-4.34Zm-.66-12h-5.38l4.937-5.422c.434-.434.562-1.08.327-1.646-.234-.566-.782-.932-1.395-.932h-6.489v2h5.38l-4.937,5.422c-.434.434-.562,1.08-.327,1.646.234.566.782.932,1.395.932h6.489v-2Z"/></svg>
+
 );
-
-Snooze.displayName = 'Snooze';

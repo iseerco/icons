@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiBrHouseMedical: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21.576,5.327L15.077,.941c-1.869-1.262-4.285-1.261-6.153,0L2.423,5.327C.906,6.352,0,8.056,0,9.886v8.614c0,3.032,2.467,5.5,5.5,5.5h13c3.033,0,5.5-2.468,5.5-5.5V9.886c0-1.83-.906-3.534-2.424-4.559Zm-.576,13.173c0,1.379-1.122,2.5-2.5,2.5H5.5c-1.378,0-2.5-1.121-2.5-2.5V9.886c0-.832,.412-1.606,1.102-2.072L10.602,3.428c.425-.287,.911-.43,1.398-.43s.974,.143,1.398,.43l6.5,4.386c.69,.466,1.102,1.24,1.102,2.072v8.614Zm-4-4.5c0,.828-.671,1.5-1.5,1.5h-2v2c0,.828-.671,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-2h-2c-.829,0-1.5-.672-1.5-1.5s.671-1.5,1.5-1.5h2v-2c0-.828,.671-1.5,1.5-1.5s1.5,.672,1.5,1.5v2h2c.829,0,1.5,.672,1.5,1.5Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiBrHouseMedical = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M21.576,5.327L15.077,.941c-1.869-1.262-4.285-1.261-6.153,0L2.423,5.327C.906,6.352,0,8.056,0,9.886v8.614c0,3.032,2.467,5.5,5.5,5.5h13c3.033,0,5.5-2.468,5.5-5.5V9.886c0-1.83-.906-3.534-2.424-4.559Zm-.576,13.173c0,1.379-1.122,2.5-2.5,2.5H5.5c-1.378,0-2.5-1.121-2.5-2.5V9.886c0-.832,.412-1.606,1.102-2.072L10.602,3.428c.425-.287,.911-.43,1.398-.43s.974,.143,1.398,.43l6.5,4.386c.69,.466,1.102,1.24,1.102,2.072v8.614Zm-4-4.5c0,.828-.671,1.5-1.5,1.5h-2v2c0,.828-.671,1.5-1.5,1.5s-1.5-.672-1.5-1.5v-2h-2c-.829,0-1.5-.672-1.5-1.5s.671-1.5,1.5-1.5h2v-2c0-.828,.671-1.5,1.5-1.5s1.5,.672,1.5,1.5v2h2c.829,0,1.5,.672,1.5,1.5Z"/></svg>
+
 );
-
-FiBrHouseMedical.displayName = 'FiBrHouseMedical';

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const UserCoach: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const UserCoach = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21,23c0,.552-.448,1-1,1H4c-.552,0-1-.448-1-1,0-3.197,1.681-6.003,4.2-7.6l1.591,3.178c.332.521,1.074.569,1.47.094l1.701-2.041,1.701,2.041c.395.474,1.138.427,1.47-.094l1.661-3.182c2.523,1.596,4.207,4.404,4.207,7.604Zm-2-18c.552,0,1-.448,1-1s-.448-1-1-1h-1.815c-1.037-1.791-2.97-3-5.185-3-2.967,0-5.431,2.167-5.91,5h12.91Zm-7,7c2.967,0,5.431-2.167,5.91-5H6.09c.478,2.833,2.942,5,5.91,5Z"/>
 </svg>
-);
 
-UserCoach.displayName = 'UserCoach';
+);

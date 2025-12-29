@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FileZipAlt: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FileZipAlt = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M20.109,2.914l-1.453-1.373,1.321-1.363c-.308-.107-.633-.177-.977-.177H5c-.344,0-.669,.07-.977,.177l1.321,1.363-1.453,1.373-1.436-1.482c-.283,.458-.455,.992-.455,1.569V24H22V3c0-.577-.171-1.111-.455-1.569l-1.436,1.482Zm-8.109,5.674h0s1.455,1.372,1.455,1.372l-.456,1.041h-2l-.456-1.041,1.455-1.373h0ZM4.556,3.618l1.453-1.373,1.331,1.409-1.453,1.373-1.331-1.409Zm1.996,2.114l1.453-1.373,1.331,1.409-1.453,1.373-1.331-1.409Zm1.996,2.114l1.453-1.373,1.331,1.409-1.453,1.373-1.331-1.409Zm5.452,10.154h-4v-1l1-5h2l1,5v1Zm.121-8.745l-1.453-1.373,1.331-1.409,1.453,1.373-1.331,1.409Zm1.996-2.114l-1.453-1.373,1.331-1.409,1.453,1.373-1.331,1.409Zm1.996-2.114l-1.453-1.373,1.331-1.409,1.453,1.373-1.331,1.409Z"/>
 </svg>
-);
 
-FileZipAlt.displayName = 'FileZipAlt';
+);

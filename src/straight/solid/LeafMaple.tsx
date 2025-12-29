@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const LeafMaple: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const LeafMaple = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m19.777,17.359l4.175,2.641h-4.952v3.968l-7.448-2.876-3.775,1.888-.889-4.444,4.901-4.901-1.414-1.414-4.895,4.895-4.46-.892,1.887-3.774L.009,5h3.991V.003l2.63,4.223,3.362-2.262,1.271,3.389L14.911.045l2.409,2.794,5.761-1.92-1.919,5.757,2.833,2.411-5.342,3.652,3.385,1.27-2.261,3.351Zm-14.297-.244L.021,22.575l1.414,1.414,5.453-5.453-1.408-1.42Z"/>
 </svg>
-);
 
-LeafMaple.displayName = 'LeafMaple';
+);

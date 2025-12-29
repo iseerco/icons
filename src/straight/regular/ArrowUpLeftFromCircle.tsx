@@ -1,13 +1,13 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const ArrowUpLeftFromCircle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M2,3.414v6.586H0V2C0,.897,.897,0,2,0H10V2H3.414l12.793,12.793-1.414,1.414L2,3.414Zm12,.586c-1.666,0-3.235,.415-4.618,1.139l1.496,1.496c.96-.409,2.015-.635,3.122-.635,4.411,0,8,3.589,8,8s-3.589,8-8,8-8-3.589-8-8c0-1.107,.227-2.162,.635-3.122l-1.496-1.496c-.724,1.383-1.139,2.952-1.139,4.618,0,5.514,4.486,10,10,10s10-4.486,10-10S19.514,4,14,4Z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const ArrowUpLeftFromCircle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="M2,3.414v6.586H0V2C0,.897,.897,0,2,0H10V2H3.414l12.793,12.793-1.414,1.414L2,3.414Zm12,.586c-1.666,0-3.235,.415-4.618,1.139l1.496,1.496c.96-.409,2.015-.635,3.122-.635,4.411,0,8,3.589,8,8s-3.589,8-8,8-8-3.589-8-8c0-1.107,.227-2.162,.635-3.122l-1.496-1.496c-.724,1.383-1.139,2.952-1.139,4.618,0,5.514,4.486,10,10,10s10-4.486,10-10S19.514,4,14,4Z"/></svg>
+
 );
-
-ArrowUpLeftFromCircle.displayName = 'ArrowUpLeftFromCircle';

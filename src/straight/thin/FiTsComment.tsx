@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTsComment: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTsComment = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="M23.999,11.277C23.605,4.954,18.343,0,12.018,0,5.391,0,0,5.383,0,12s5.391,12,12.018,12h11.982V11.277Zm-1,11.723H12.018c-6.075,0-11.018-4.935-11.018-11S5.942,1,12.018,1c5.798,0,10.623,4.542,10.982,10.309v11.691ZM13,9H7v-1h6v1Zm-6,3h10v1H7v-1Zm0,4h10v1H7v-1Z"/>
 </svg>
-);
 
-FiTsComment.displayName = 'FiTsComment';
+);

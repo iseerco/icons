@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const SdCards: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const SdCards = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m17,0h-4.757c-1.068,0-2.072.416-2.829,1.172l-2.242,2.242c-.745.744-1.172,1.774-1.172,2.828v8.758c0,2.757,2.243,5,5,5h6c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5Zm-4,5c0,.553-.448,1-1,1s-1-.447-1-1v-1c0-.553.448-1,1-1s1,.447,1,1v1Zm3,0c0,.553-.448,1-1,1s-1-.447-1-1v-1c0-.553.448-1,1-1s1,.447,1,1v1Zm3,0c0,.553-.448,1-1,1s-1-.447-1-1v-1c0-.553.448-1,1-1s1,.447,1,1v1Zm-2,18c0,.553-.448,1-1,1h-5c-4.962,0-9-4.037-9-9v-7c0-.553.448-1,1-1s1,.447,1,1v7c0,3.859,3.14,7,7,7h5c.552,0,1,.447,1,1Z"/>
 </svg>
-);
 
-SdCards.displayName = 'SdCards';
+);

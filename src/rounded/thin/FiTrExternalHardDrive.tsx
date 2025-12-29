@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrExternalHardDrive: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrExternalHardDrive = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m11,20c0,.553-.447,1-1,1s-1-.447-1-1,.447-1,1-1,1,.447,1,1Zm2-1c-.553,0-1,.447-1,1s.447,1,1,1,1-.447,1-1-.447-1-1-1Zm11-7v3.5c0,.827-.673,1.5-1.5,1.5h-2c-.827,0-1.5-.673-1.5-1.5v-3.5c0-1.103.897-2,2-2V3.5c0-1.379-1.121-2.5-2.5-2.5h-7c-1.378,0-2.5,1.121-2.5,2.5v.5h3.5c2.481,0,4.5,2.019,4.5,4.5v11c0,2.481-2.019,4.5-4.5,4.5H4.5c-2.481,0-4.5-2.019-4.5-4.5v-11c0-2.481,2.019-4.5,4.5-4.5h3.5v-.5c0-1.93,1.57-3.5,3.5-3.5h7c1.93,0,3.5,1.57,3.5,3.5v6.5c1.103,0,2,.897,2,2Zm-8,7.5v-2.5H1v2.5c0,1.93,1.57,3.5,3.5,3.5h8c1.93,0,3.5-1.57,3.5-3.5Zm-3.5-14.5H4.5c-1.93,0-3.5,1.57-3.5,3.5v7.5h15v-7.5c0-1.93-1.57-3.5-3.5-3.5Zm7.5,7v1h3v-1c0-.552-.448-1-1-1h-1c-.552,0-1,.448-1,1Zm3,3.5v-1.5h-3v1.5c0,.275.225.5.5.5h2c.275,0,.5-.225.5-.5Z"/>
 </svg>
-);
 
-FiTrExternalHardDrive.displayName = 'FiTrExternalHardDrive';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Dog: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Dog = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m21.618,5c-.309,0-.586-.171-.724-.447-.479-.958-1.442-1.553-2.512-1.553h-1.382V0c-1.657,0-3,1.343-3,3v1.668l-1.202,3.331-6.797.004c-.827,0-1.616.249-2.281.713-.482-.332-1.72-1.411-1.72-3.716H0c0,2.962,1.531,4.557,2.413,5.231-.27.545-.412,1.148-.412,1.774l.003,12h4.996v-6.001l6-.003v6h5v-6.395l2.195-6.605h.805c1.654,0,3-1.346,3-3v-3h-2.382Z"/>
 </svg>
-);
 
-Dog.displayName = 'Dog';
+);

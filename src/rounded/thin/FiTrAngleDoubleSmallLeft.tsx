@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const FiTrAngleDoubleSmallLeft: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const FiTrAngleDoubleSmallLeft = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m11.865,18.159c.188.202.178.518-.024.707-.096.09-.219.135-.341.135-.133,0-.267-.053-.365-.159l-4.142-4.429c-.636-.635-.993-1.497-.993-2.412s.357-1.777,1.004-2.424l4.13-4.417c.189-.203.505-.213.707-.024.202.188.212.505.024.707l-4.142,4.429c-.471.471-.723,1.081-.723,1.729s.252,1.258.711,1.717l4.154,4.441Zm.315-6.159l5.687-6.161c.188-.203.175-.52-.028-.707-.202-.188-.52-.174-.707.028l-6,6.5c-.177.192-.177.487,0,.679l6,6.5c.098.106.232.161.367.161.122,0,.243-.044.339-.133.203-.187.215-.503.028-.707l-5.687-6.161Z"/>
 </svg>
-);
 
-FiTrAngleDoubleSmallLeft.displayName = 'FiTrAngleDoubleSmallLeft';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const JugBottle: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const JugBottle = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m18.658,5.966l-5.658-.943v-3.023c.552,0,1-.448,1-1s-.448-1-1-1h-7c-.552,0-1,.448-1,1s.448,1,1,1v3.178l-.755.283c-1.941.728-3.245,2.609-3.245,4.682v8.857c0,2.757,2.243,5,5,5h10c2.757,0,5-2.243,5-5v-9.088c0-1.963-1.406-3.623-3.342-3.945Zm1.342,3.945v5.588c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-6c0-.827.673-1.5,1.5-1.5.013,0,.023-.007.036-.007.858.239,1.464,1.01,1.464,1.919Zm-3,12.088H7c-1.654,0-3-1.346-3-3v-8.857c0-1.244.782-2.373,1.947-2.809l1.404-.526c.39-.146.649-.52.649-.937v-3.871h3v3.871c0,.489.354.906.835.986l3.807.634c-.402.57-.643,1.26-.643,2.009v6c0,1.93,1.57,3.5,3.5,3.5.539,0,1.044-.133,1.5-.351v.351c0,1.654-1.346,3-3,3Z"/>
 </svg>
-);
 
-JugBottle.displayName = 'JugBottle';
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Balloon: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Balloon = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  
+<svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}>
   <path d="m22,9.378C22,4.215,17.514.015,12,.015S2,4.215,2,9.378c0,5.284,3.356,11.122,8.1,12.386-.449.681-.725,1.525-.725,2.236h5.25c0-.711-.276-1.555-.725-2.236,4.745-1.264,8.1-7.103,8.1-12.386Zm-10,10.637c-4.506,0-8-5.718-8-10.637,0-4.061,3.589-7.363,8-7.363s8,3.303,8,7.363c0,4.919-3.494,10.637-8,10.637Zm3-10.015h1.968c-.161,2.324-1.259,4.346-2.295,5.501l-1.424-1.276c.794-.897,1.627-2.446,1.751-4.225Z"/>
 </svg>
-);
 
-Balloon.displayName = 'Balloon';
+);

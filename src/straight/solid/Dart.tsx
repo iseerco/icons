@@ -1,13 +1,11 @@
-import React from 'react';
-import type { IconProps } from '../../types';
+import * as React from 'react';
 
-export const Dart: React.FC<IconProps> = ({ 
-  size = 24, 
-  color = 'currentColor',
-  className = '',
-  ...props 
-}) => (
-  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m13.414 12c-2.294 3.115-5.629 8.457-6.293 9.121a2.965 2.965 0 0 1 -3.407.579l-2.3 2.3-1.414-1.414 2.3-2.3a2.993 2.993 0 0 1 .577-3.4c.664-.664 6.006-4 9.121-6.293zm-1.414-7.414v6l7.293-7.293 1.414 1.414-7.293 7.293h6l4.586-4.586v-4.414a3 3 0 0 0 -3-3h-4.414z"/></svg>
+interface Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+  className?: string;
+}
+
+export const Dart = ({ size = 24, color = 'currentColor', className, ...props }: Props) => (
+  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill={color} className={className}><path d="m13.414 12c-2.294 3.115-5.629 8.457-6.293 9.121a2.965 2.965 0 0 1 -3.407.579l-2.3 2.3-1.414-1.414 2.3-2.3a2.993 2.993 0 0 1 .577-3.4c.664-.664 6.006-4 9.121-6.293zm-1.414-7.414v6l7.293-7.293 1.414 1.414-7.293 7.293h6l4.586-4.586v-4.414a3 3 0 0 0 -3-3h-4.414z"/></svg>
 );
-
-Dart.displayName = 'Dart';
