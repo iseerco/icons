@@ -44,12 +44,9 @@ yarn-error.log*
 # Assets (Excluded as per request to prevent repo bloat)
 icons/
 mic/
+scripts/
 
 # System Files
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-
-# Optional: Ignore generated manifest if it's considered a build artifact
-# but usually docs/icons-manifest.js is needed for the docs site.
-# Keeping it tracked for now.
