@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsTimeForwardTen: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20.471 3.529a11.978 11.978 0 0 0 -18.64 14.812l2.192-2.193a8.984 8.984 0 0 1 7.977-13.148 9.023 9.023 0 0 1 6.353 2.647l-2.353 2.353h5.909a1.09 1.09 0 0 0 1.091-1.091v-5.909z"/><path d="m20 24a4 4 0 0 1 -4-4v-5a4 4 0 0 1 8 0v5a4 4 0 0 1 -4 4zm0-10a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1-1z"/><path d="m14 24h-3v-7.878l-1.689 1.689-2.122-2.121 4.25-4.25a1.5 1.5 0 0 1 2.561 1.06z"/></svg>
+);
+
+FiBsTimeForwardTen.displayName = 'FiBsTimeForwardTen';

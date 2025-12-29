@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsH1: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m13,4h1v16h-1v-7.5H3v7.5h-1V4h1v7.5h10v-7.5Zm8.202,0l-3.56,3.651.716.697,2.642-2.709v14.36h1V4h-.798Z"/></svg>
+);
+
+FiTsH1.displayName = 'FiTsH1';

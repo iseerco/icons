@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Pound: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m21 22h-14.116a6.934 6.934 0 0 0 1.116-4v-4h7a1 1 0 0 0 0-2h-7v-4a6 6 0 0 1 12 0 1 1 0 0 0 2 0 8 8 0 0 0 -16 0v4h-2a1 1 0 0 0 0 2h2v4c0 1.2-.292 4-3 4a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2z"/></svg>
+);
+
+Pound.displayName = 'Pound';

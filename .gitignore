@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output/
+
+# Build Output
+dist/
+build/
+out/
+.next/
+
+# Misc
+.DS_Store
+*.pem
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript
+*.tsbuildinfo
+
+# IDEs and Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+# Assets (Excluded as per request to prevent repo bloat)
+icons/
+mic/
+
+# System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Optional: Ignore generated manifest if it's considered a build artifact
+# but usually docs/icons-manifest.js is needed for the docs site.
+# Keeping it tracked for now.

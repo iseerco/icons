@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const CloudDrizzle: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,24H11V21h2ZM7,21H5v3H7Zm17-9a7,7,0,0,1-7,7H4.782A4.787,4.787,0,0,1,2.3,10.151C-.1.412,13.354-4.2,17.423,5.021A7,7,0,0,1,24,12ZM10,14H8v3h2Zm6,0H14v3h2Zm3,7H17v3h2Z"/></svg>
+);
+
+CloudDrizzle.displayName = 'CloudDrizzle';

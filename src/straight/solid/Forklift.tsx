@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Forklift: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m11,21h6c0,1.657-1.343,3-3,3s-3-1.343-3-3Zm-8,3c1.657,0,3-1.343,3-3H0c0,1.657,1.343,3,3,3Zm18-7V3h-2v11h-10.758l-.638-2.271c-.121-.43-.517-.729-.963-.729H0v8h17v-.5l-.497-2.5h2.497v3h5v-2h-3Zm-11.47-5.812l.228.812h5.95l-1.906-9.589c-.279-1.397-1.517-2.411-2.942-2.411H3C1.346,0,0,1.346,0,3v6h6.642c1.339,0,2.526.9,2.889,2.188Z"/>
+</svg>
+);
+
+Forklift.displayName = 'Forklift';

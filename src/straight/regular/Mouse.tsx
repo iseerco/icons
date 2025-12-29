@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Mouse: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} {...props}><g id="_01_align_center" data-name="01 align center"><path d="M15.5,3H13V0H11V3H8.5A4.505,4.505,0,0,0,4,7.5V16a8,8,0,0,0,16,0V7.5A4.505,4.505,0,0,0,15.5,3ZM18,16A6,6,0,0,1,6,16V7.5A2.5,2.5,0,0,1,8.5,5h7A2.5,2.5,0,0,1,18,7.5Z"/><rect x="11" y="7" width={size} height={size}/></g></svg>
+);
+
+Mouse.displayName = 'Mouse';

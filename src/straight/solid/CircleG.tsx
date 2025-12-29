@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const CircleG: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm5,13.25c0,2.757-2.243,5-5,5s-5-2.243-5-5v-2.5c0-2.757,2.243-5,5-5,1.78,0,3.439.958,4.331,2.5l-1.731,1.001c-.535-.925-1.531-1.5-2.599-1.5-1.654,0-3,1.346-3,3v2.5c0,1.654,1.346,3,3,3,1.396,0,2.571-.957,2.905-2.25h-2.905v-2h5v1.25Z"/></svg>
+);
+
+CircleG.displayName = 'CircleG';

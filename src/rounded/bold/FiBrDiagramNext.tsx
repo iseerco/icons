@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrDiagramNext: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,18v2c0,2.21-1.79,4-4,4H4c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h1.5c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5h-1.5c-.55,0-1,.45-1,1v2c0,.55,.45,1,1,1H20c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1h-1.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5h1.5c2.21,0,4,1.79,4,4ZM20,0H4C1.79,0,0,1.79,0,4v2c0,2.21,1.79,4,4,4h6.5v4h-1.16c-.75,0-1.12,.91-.59,1.43l2.66,2.66c.33,.33,.86,.33,1.19,0l2.66-2.66c.53-.53,.15-1.43-.59-1.43h-1.16v-4h6.5c2.21,0,4-1.79,4-4v-2c0-2.21-1.79-4-4-4Z"/></svg>
+);
+
+FiBrDiagramNext.displayName = 'FiBrDiagramNext';

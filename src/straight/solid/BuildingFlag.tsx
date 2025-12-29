@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const BuildingFlag: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m24 13.5-8.085-4.5h-1.915v15h2v-6.047zm-8-10.5c0-1.654-1.346-3-3-3h-10c-1.654 0-3 1.346-3 3v21h12v-5h-3v-2h3v-2h-3v-2h3v-2h-3v-2h3v-2h-3v-2h3v2h4zm-9 16h-3v-2h3zm0-4h-3v-2h3zm0-4h-3v-2h3zm0-4h-3v-2h3z"/></svg>
+);
+
+BuildingFlag.displayName = 'BuildingFlag';

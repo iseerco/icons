@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsVideoArrowUpRight: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M15,9v5l-1.939-1.939-4.5,4.5-2.121-2.121,4.5-4.5-1.94-1.94h5c.552,0,1,.448,1,1Zm9,9.875l-3-3v5.125H0V6.5c0-1.93,1.57-3.5,3.5-3.5h14c1.93,0,3.5,1.57,3.5,3.5v1.625l3-3v13.75Zm-6-12.375c0-.276-.224-.5-.5-.5H3.5c-.276,0-.5,.224-.5,.5v11.5h15V6.5Z"/></svg>
+);
+
+FiBsVideoArrowUpRight.displayName = 'FiBsVideoArrowUpRight';

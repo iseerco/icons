@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Neuter: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m20,8C20,3.589,16.411,0,12,0S4,3.589,4,8c0,4.073,3.059,7.444,7,7.938v8.062h2v-8.062c3.941-.494,7-3.865,7-7.938Zm-8,6c-3.309,0-6-2.691-6-6s2.691-6,6-6,6,2.691,6,6-2.691,6-6,6Z"/>
+</svg>
+);
+
+Neuter.displayName = 'Neuter';

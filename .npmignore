@@ -1,0 +1,10 @@
+src/
+scripts/
+icons/
+.gitignore
+.git
+tsconfig.json
+tsup.config.ts
+*.md
+!README.md
+node_modules/

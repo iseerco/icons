@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsMultiple: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m24,8.961v15.039H5v-3h16V5.132c1.719.432,3,1.979,3,3.83Zm-5,10.039H0V3.5C0,1.57,1.57,0,3.5,0h12c1.93,0,3.5,1.57,3.5,3.5v15.5Zm-3-15.5c0-.276-.224-.5-.5-.5H3.5c-.276,0-.5.224-.5.5v12.5h13V3.5Zm-5,1.5h-3v3h-3v3h3v3h3v-3h3v-3h-3v-3Z"/>
+</svg>
+);
+
+FiBsMultiple.displayName = 'FiBsMultiple';

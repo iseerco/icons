@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Comments: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M9,18H0V9a9,9,0,1,1,9,9ZM20,9.08h0A11.008,11.008,0,0,1,9.08,20h0A8,8,0,0,0,16,24h8V16A8,8,0,0,0,20,9.08Z"/></svg>
+);
+
+Comments.displayName = 'Comments';

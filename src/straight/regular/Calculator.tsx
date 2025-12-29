@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Calculator: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m1 24h22v-21a3 3 0 0 0 -3-3h-16a3 3 0 0 0 -3 3zm2-21a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v19h-18zm2 7h14v-6h-14zm2-4h10v2h-10zm-2 7h2v2h-2zm4 0h2v2h-2zm6 0v2h-2v-2zm-10 4h2v2h-2zm4 0h2v2h-2zm8-4h2v2h-2zm-4 4h6v2h-6z"/></svg>
+);
+
+Calculator.displayName = 'Calculator';

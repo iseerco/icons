@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsAngleDoubleSmallUp: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M16.928,12.111l-4.928-4.928-4.928,4.928-2.121-2.121,5.281-5.281c.943-.944,2.592-.944,3.535,0l5.281,5.281-2.121,2.121Zm2.121,5.248l-5.867-5.867c-.629-.635-1.738-.631-2.359-.004l-5.871,5.871,2.121,2.121,4.928-4.927,4.928,4.927,2.121-2.121Zm-7.985-3.743l-.007-.007,.007,.007Zm1.877-.004l.007-.007-.007,.007Z"/></svg>
+);
+
+FiBsAngleDoubleSmallUp.displayName = 'FiBsAngleDoubleSmallUp';

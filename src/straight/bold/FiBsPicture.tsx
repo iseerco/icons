@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsPicture: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.591,0H3.409A3.413,3.413,0,0,0,0,3.409V24H24V3.409A3.413,3.413,0,0,0,20.591,0ZM3.409,3H20.591A.41.41,0,0,1,21,3.409V21L10.414,10.414a2,2,0,0,0-2.828,0L3,15V3.409A.41.41,0,0,1,3.409,3Z"/><circle cx="15.5" cy="7.5" r="2.5"/></svg>
+);
+
+FiBsPicture.displayName = 'FiBsPicture';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsReplace: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7.5,0H3.5C1.57,0,0,1.57,0,3.5v7.5H11V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,8H3V3.5c0-.28,.22-.5,.5-.5H7.5c.28,0,.5,.22,.5,.5v4.5Zm12.5,5h-4c-1.93,0-3.5,1.57-3.5,3.5v7.5h11v-7.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,8h-5v-4.5c0-.28,.22-.5,.5-.5h4c.28,0,.5,.22,.5,.5v4.5Zm3-13v3h-3v-3c0-.55-.45-1-1-1h-2v3.56l-4.17-4.27c-.44-.44-.44-1.15,0-1.59L18,.44v3.56h2c2.21,0,4,1.79,4,4Zm-13.83,9.64c.44,.44,.44,1.15,0,1.59l-4.17,4.27v-3.5h-2c-2.21,0-4-1.79-4-4v-3H3v3c0,.55,.45,1,1,1h2v-3.62l4.17,4.27Z"/></svg>
+);
+
+FiBsReplace.displayName = 'FiBsReplace';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Sticker: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m10.157 23.843a11.992 11.992 0 1 1 13.686-13.686 11.914 11.914 0 0 0 -13.686 13.686zm13.843-11.643a10 10 0 0 0 -11.8 11.8z"/></svg>
+);
+
+Sticker.displayName = 'Sticker';

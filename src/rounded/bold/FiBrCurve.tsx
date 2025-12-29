@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrCurve: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m1.5,24c-.829,0-1.5-.672-1.5-1.5C0,10.094,10.093,0,22.5,0c.828,0,1.5.672,1.5,1.5s-.672,1.5-1.5,1.5C11.748,3,3,11.748,3,22.5c0,.828-.671,1.5-1.5,1.5Z"/>
+</svg>
+);
+
+FiBrCurve.displayName = 'FiBrCurve';

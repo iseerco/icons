@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const DiagramCells: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M24,10H0V3C0,1.35,1.35,0,3,0H21c1.65,0,3,1.35,3,3v7ZM2,8H22V3c0-.55-.45-1-1-1H3c-.55,0-1,.45-1,1v5ZM21,24H3c-1.65,0-3-1.35-3-3v-7H24v7c0,1.65-1.35,3-3,3ZM2,16v5c0,.55,.45,1,1,1H21c.55,0,1-.45,1-1v-5H2Z"/></svg>
+);
+
+DiagramCells.displayName = 'DiagramCells';

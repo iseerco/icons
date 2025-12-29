@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrPound: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20.5 21h-12.007a8.213 8.213 0 0 0 .507-3v-4h5.5a1.5 1.5 0 0 0 0-3h-5.5v-3a5.013 5.013 0 0 1 10-.5 1.5 1.5 0 0 0 3 0c0-3.995-3.738-7.5-8-7.5a8.009 8.009 0 0 0 -8 8v3h-1.5a1.5 1.5 0 0 0 0 3h1.5v4c0 2.583-.737 3-2.5 3a1.5 1.5 0 0 0 0 3h17a1.5 1.5 0 0 0 0-3z"/></svg>
+);
+
+FiBrPound.displayName = 'FiBrPound';

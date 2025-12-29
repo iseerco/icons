@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsMessageXmark: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m16.328,6.354l-3.646,3.646,3.646,3.646-.707.707-3.646-3.646-3.646,3.646-.707-.707,3.646-3.646-3.646-3.646.707-.707,3.646,3.646,3.646-3.646.707.707Zm7.672-3.854v17.5h-7.032l-3.985,3.295c-.275.245-.626.368-.979.368-.356,0-.715-.126-1.001-.379l-3.897-3.284H0V2.5C0,1.122,1.122,0,2.5,0h19c1.378,0,2.5,1.122,2.5,2.5Zm-1,0c0-.827-.673-1.5-1.5-1.5H2.5c-.827,0-1.5.673-1.5,1.5v16.5h6.471l4.187,3.527c.198.176.485.178.675.008l4.276-3.536h6.391V2.5Z"/></svg>
+);
+
+FiTsMessageXmark.displayName = 'FiTsMessageXmark';

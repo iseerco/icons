@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Surfing: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20 .01c-3.812 0-8.125 2.038-11.539 5.451a38.467 38.467 0 0 0 -8.138 11.851 3.975 3.975 0 0 0 .708 4.243l14.262-14.262a1 1 0 1 1 1.414 1.414l-14.258 14.258a3.941 3.941 0 0 0 4.236.713 38.333 38.333 0 0 0 11.854-8.139c3.413-3.413 5.451-7.726 5.451-11.539a3.632 3.632 0 0 0 -3.99-3.99z"/></svg>
+);
+
+Surfing.displayName = 'Surfing';

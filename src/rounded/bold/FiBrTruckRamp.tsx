@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrTruckRamp: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M20.5,17a3.432,3.432,0,0,0-.5.036V5.5A2.5,2.5,0,0,1,22.5,3a1.5,1.5,0,0,0,0-3A5.506,5.506,0,0,0,17,5.5V16.377L1.077,21.061a1.5,1.5,0,0,0,.846,2.878l15.235-4.481A3.5,3.5,0,1,0,20.5,17Z"/></svg>
+);
+
+FiBrTruckRamp.displayName = 'FiBrTruckRamp';

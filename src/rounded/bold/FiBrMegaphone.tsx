@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrMegaphone: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16.5 0a1.5 1.5 0 0 0 -1.5 1.5c0 1.317-.344 2.5-4.5 2.5h-6a4.505 4.505 0 0 0 -4.5 4.5v3a4.484 4.484 0 0 0 2.377 3.943l3.178 7.093a2.467 2.467 0 0 0 2.253 1.464 2.19 2.19 0 0 0 2-3.079l-2.257-4.921h2.949c4.156 0 4.5 1.183 4.5 2.5a1.5 1.5 0 0 0 3 0v-17a1.5 1.5 0 0 0 -1.5-1.5zm-1.5 13.711a11.623 11.623 0 0 0 -4.5-.711h-6a1.5 1.5 0 0 1 -1.5-1.5v-3a1.5 1.5 0 0 1 1.5-1.5h6a11.623 11.623 0 0 0 4.5-.711zm8.842 1.96a1.5 1.5 0 0 1 -2.013.671l-1-.5a1.5 1.5 0 0 1 1.342-2.684l1 .5a1.5 1.5 0 0 1 .671 2.013zm-3.684-9.5a1.5 1.5 0 0 1 .671-2.013l1-.5a1.5 1.5 0 0 1 1.342 2.684l-1 .5a1.5 1.5 0 0 1 -2.013-.671zm-.158 3.829a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 0 3h-1a1.5 1.5 0 0 1 -1.5-1.5z"/></svg>
+);
+
+FiBrMegaphone.displayName = 'FiBrMegaphone';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsPeopleArrowsLeftRight: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M6.23,15l2.77,2.84v6.16h-3v-6h-1v6H2v-6H0V9.5c0-1.93,1.57-3.5,3.5-3.5H7.5c.21,0,.42,.03,.62,.06l-2.87,2.94h-1.75c-.28,0-.5,.22-.5,.5v5.5h3.23Zm-.73-10c1.38,0,2.5-1.12,2.5-2.5S6.88,0,5.5,0,3,1.12,3,2.5s1.12,2.5,2.5,2.5Zm13,0c1.38,0,2.5-1.12,2.5-2.5s-1.12-2.5-2.5-2.5-2.5,1.12-2.5,2.5,1.12,2.5,2.5,2.5Zm5.5,4.5c0-1.93-1.57-3.5-3.5-3.5h-4c-.21,0-.42,.03-.62,.06l2.87,2.94h1.75c.28,0,.5,.22,.5,.5v5.5h-3.23l-2.77,2.84v6.16h3v-6h1v6h3v-6h2V9.5Zm-6.29,2.71c.39-.39,.39-1.02,0-1.41l-3.71-3.79v3h-4v-3l-3.71,3.79c-.39,.39-.39,1.02,0,1.41l3.71,3.79v-3h4v3l3.71-3.79Z"/></svg>
+);
+
+FiBsPeopleArrowsLeftRight.displayName = 'FiBsPeopleArrowsLeftRight';

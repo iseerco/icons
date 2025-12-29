@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsSurfing: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m23.021.979a3.384 3.384 0 0 0 -2.732-.979c-1.8.176-8 1.087-12.35 5.44a28.486 28.486 0 0 0 -7.49 12.46l-.3.879 5.071 5.071.879-.294a28.5 28.5 0 0 0 12.457-7.491c4.358-4.358 5.269-10.557 5.444-12.353a3.388 3.388 0 0 0 -.979-2.733zm-6.582 12.96a25.2 25.2 0 0 1 -10.411 6.467l-.157-.156 11.69-11.689-2.122-2.122-11.689 11.69-.156-.156a25.2 25.2 0 0 1 6.467-10.412c3.648-3.649 8.974-4.425 10.52-4.576a.389.389 0 0 1 .319.115.393.393 0 0 1 .116.319c-.152 1.546-.928 6.872-4.577 10.52z"/></svg>
+);
+
+FiBsSurfing.displayName = 'FiBsSurfing';

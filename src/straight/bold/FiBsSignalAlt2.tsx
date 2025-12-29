@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsSignalAlt2: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,6H11A2,2,0,0,0,9,8V24h6V8A2,2,0,0,0,13,6Z"/><path d="M22,0H20a2,2,0,0,0-2,2V24h6V2A2,2,0,0,0,22,0Z"/><path d="M4,12H2a2,2,0,0,0-2,2V24H6V14A2,2,0,0,0,4,12Z"/></svg>
+);
+
+FiBsSignalAlt2.displayName = 'FiBsSignalAlt2';

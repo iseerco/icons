@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsUserInterfaceUi: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m20.5,0H3.5C1.57,0,0,1.57,0,3.5v20.5h24V3.5c0-1.93-1.57-3.5-3.5-3.5Zm.5,21H3V3.5c0-.276.224-.5.5-.5h17c.276,0,.5.224.5.5v17.5Zm-6-14h3v10h-3V7Zm-4,0h3v6c0,2.206-1.794,4-4,4s-4-1.794-4-4v-6h3v6c0,.551.449,1,1,1s1-.449,1-1v-6Z"/>
+</svg>
+);
+
+FiBsUserInterfaceUi.displayName = 'FiBsUserInterfaceUi';

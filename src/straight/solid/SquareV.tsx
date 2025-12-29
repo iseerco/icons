@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const SquareV: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21,0H3C1.346,0,0,1.346,0,3v21h24V3c0-1.654-1.346-3-3-3Zm-6,17c-.673,1.531-1.642,2-3,2-1.358,0-2.327-.469-3-2L5,5h2.149l3.717,11.273c.318.691.549.727,1.135.727.584,0,.816-.037,1.134-.727l3.877-11.273h1.989l-4,12Z"/></svg>
+);
+
+SquareV.displayName = 'SquareV';

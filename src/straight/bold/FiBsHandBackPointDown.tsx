@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsHandBackPointDown: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M7.397,0L2.025,5.153c-1.365,1.365-1.365,3.585,0,4.95l3.975,3.975v5.937c0,2.206,1.794,4,4,4s4-1.794,4-4v-3.829l8-2V.017L7.397,0Zm11.603,11.844l-8,2v6.171c0,.551-.449,1-1,1s-1-.449-1-1V8.014h-3v1.821l-1.854-1.854c-.195-.195-.195-.512-.022-.686L8.603,3l10.397,.012V11.843Z"/></svg>
+);
+
+FiBsHandBackPointDown.displayName = 'FiBsHandBackPointDown';

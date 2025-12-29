@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const K: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M21.781,22.375l-7.543-9.429L21.832,1.555c.306-.459,.182-1.081-.277-1.387-.46-.308-1.081-.182-1.387,.277l-7.703,11.555H4V1c-.006-1.308-1.994-1.307-2,0V12.978c-.005,.015-.005,.028,0,.044v9.978c.006,1.308,1.995,1.307,2,0V14H12.519l7.7,9.625c.346,.433,.978,.499,1.405,.156,.432-.346,.501-.975,.156-1.406Z"/></svg>
+);
+
+K.displayName = 'K';

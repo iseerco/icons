@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const BookmarkSlash: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21,19.586V3c0-1.654-1.346-3-3-3H6.559c-1.393,0-2.566.954-2.903,2.242L1.457.043.043,1.457l22.5,22.5,1.414-1.414-2.957-2.957Zm-10.083-3.661l-7.917,8.075v-15.991l7.917,7.916Z"/></svg>
+);
+
+BookmarkSlash.displayName = 'BookmarkSlash';

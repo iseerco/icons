@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsCircleQuarter: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13,13H0v-1.5C0,5.16,5.16,0,11.5,0h1.5V13ZM3.13,10h6.87V3.13c-3.49,.62-6.24,3.38-6.87,6.87Z"/></svg>
+);
+
+FiBsCircleQuarter.displayName = 'FiBsCircleQuarter';

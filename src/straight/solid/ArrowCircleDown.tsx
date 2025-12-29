@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ArrowCircleDown: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm1.414,17.414a2,2,0,0,1-2.828,0L6.343,13.171l1.414-1.414L11,15V6h2v9l3.243-3.243,1.414,1.414Z"/></svg>
+);
+
+ArrowCircleDown.displayName = 'ArrowCircleDown';

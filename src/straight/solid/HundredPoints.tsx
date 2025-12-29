@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const HundredPoints: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m2.41,7.971l-1.432-1.397,2.514-2.573h1.508v11h-2v-7.634l-.59.604Zm13.59-.471V3.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5v4c0,1.93-1.57,3.5-3.5,3.5s-3.5-1.57-3.5-3.5Zm2,0c0,.827.673,1.5,1.5,1.5s1.5-.673,1.5-1.5V3.5c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5,1.5v4Zm-11,2v-4c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5v4c0,1.93-1.57,3.5-3.5,3.5s-3.5-1.57-3.5-3.5Zm2,0c0,.827.673,1.5,1.5,1.5s1.5-.673,1.5-1.5v-4c0-.827-.673-1.5-1.5-1.5s-1.5.673-1.5,1.5v4Zm14.549,3.977L.049,18.303l.402,1.959,23.5-4.826-.402-1.959Zm.045,5.572l-14.544,2.971.4,1.96,14.544-2.971-.4-1.96Z"/></svg>
+);
+
+HundredPoints.displayName = 'HundredPoints';

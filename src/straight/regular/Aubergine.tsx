@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Aubergine: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M23.372,3.929l-.743-1.858A15.47,15.47,0,0,1,19,2.946V0H17V2.946a15.47,15.47,0,0,1-3.629-.875l-.743,1.858a16.254,16.254,0,0,0,1.8.571,4.98,4.98,0,0,0-1.392,2.872,2.518,2.518,0,0,1-.568,1.322c-1.1,1.271-2.343,1.33-4.821,1.308L7,10A7,7,0,0,0,7,24c10.019,0,16-5.981,16-16a4.98,4.98,0,0,0-1.433-3.5A16.415,16.415,0,0,0,23.372,3.929ZM7,22A5,5,0,0,1,7,12l.64,0c2.466.014,4.6.023,6.345-2a4.535,4.535,0,0,0,1.038-2.379A3,3,0,0,1,17,5.172V8h2V5.172A3,3,0,0,1,21,8C21,16.9,15.9,22,7,22Z"/></svg>
+);
+
+Aubergine.displayName = 'Aubergine';

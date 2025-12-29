@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsSquareBolt: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12.44,19.69l-.89-.46,3.4-6.52c.05-.08,.05-.12,.03-.15-.02-.04-.05-.05-.09-.05h-5.78c-.36,0-.68-.16-.9-.45-.21-.29-.28-.65-.17-.99l3.51-6.84,.89,.46-3.47,6.76s.04,0,.05,.02c.02,.02,.04,.05,.09,.05h5.78c.41,0,.78,.22,.97,.58,.19,.36,.17,.79-.05,1.13l-3.37,6.48ZM24,2.5c0-1.38-1.12-2.5-2.5-2.5H2.5C1.12,0,0,1.12,0,2.5V24H24V2.5ZM1,2.5c0-.83,.67-1.5,1.5-1.5H21.5c.83,0,1.5,.67,1.5,1.5V23H1V2.5Z"/></svg>
+);
+
+FiTsSquareBolt.displayName = 'FiTsSquareBolt';

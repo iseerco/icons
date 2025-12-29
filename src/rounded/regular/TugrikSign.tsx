@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const TugrikSign: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22,1c0,.55-.45,1-1,1H13v7.08l5.66-2.02c.52-.19,1.09,.08,1.28,.61,.19,.52-.08,1.09-.61,1.28l-6.34,2.26v1.88l5.66-2.02c.52-.19,1.09,.09,1.28,.61,.19,.52-.08,1.09-.61,1.28l-6.34,2.26v7.8c0,.55-.45,1-1,1s-1-.45-1-1v-7.08l-5.66,2.02c-.11,.04-.22,.06-.34,.06-.41,0-.8-.25-.94-.66-.19-.52,.08-1.09,.61-1.28l6.34-2.26v-1.88l-5.66,2.02c-.11,.04-.22,.06-.34,.06-.41,0-.8-.25-.94-.66-.19-.52,.08-1.09,.61-1.28l6.34-2.26V2H3c-.55,0-1-.45-1-1s.45-1,1-1H21c.55,0,1,.45,1,1Z"/></svg>
+);
+
+TugrikSign.displayName = 'TugrikSign';

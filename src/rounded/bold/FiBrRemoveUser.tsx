@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrRemoveUser: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m22.5 13h-6a1.5 1.5 0 0 1 0-3h6a1.5 1.5 0 0 1 0 3zm-8.5-7a6 6 0 1 0 -6 6 6.006 6.006 0 0 0 6-6zm-3 0a3 3 0 1 1 -3-3 3 3 0 0 1 3 3zm5 16.5v-.5a8 8 0 0 0 -16 0v.5a1.5 1.5 0 0 0 3 0v-.5a5 5 0 0 1 10 0v.5a1.5 1.5 0 0 0 3 0z"/></svg>
+);
+
+FiBrRemoveUser.displayName = 'FiBrRemoveUser';

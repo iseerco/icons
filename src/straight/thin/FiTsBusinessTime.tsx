@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsBusinessTime: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M17.5,11c-3.584,0-6.5,2.916-6.5,6.5s2.916,6.5,6.5,6.5,6.5-2.916,6.5-6.5-2.916-6.5-6.5-6.5Zm0,12c-3.032,0-5.5-2.467-5.5-5.5s2.468-5.5,5.5-5.5,5.5,2.467,5.5,5.5-2.468,5.5-5.5,5.5Zm.5-5.707l1.854,1.854-.707,.707-2.146-2.146v-3.207h1v2.793Zm3.5-13.293h-3.5V1.5c0-.827-.673-1.5-1.5-1.5H7.5c-.827,0-1.5,.673-1.5,1.5v2.5H2.5c-1.379,0-2.5,1.122-2.5,2.5V24H12.023c-.362-.305-.697-.64-1.004-1H1V13H10.288c.22-.351,.464-.685,.732-1H1V6.5c0-.827,.673-1.5,1.5-1.5H21.5c.827,0,1.5,.673,1.5,1.5v4.52c.36,.306,.695,.642,1,1.004V6.5c0-1.378-1.121-2.5-2.5-2.5Zm-14.5,0V1.5c0-.276,.225-.5,.5-.5h9c.275,0,.5,.224,.5,.5v2.5H7Z"/></svg>
+);
+
+FiTsBusinessTime.displayName = 'FiTsBusinessTime';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsItalic: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width={size} height={size} {...props}><polygon points="21 3 21 0 6 0 6 3 11.713 3 9.259 21 3 21 3 24 18 24 18 21 12.287 21 14.741 3 21 3"/></svg>
+);
+
+FiBsItalic.displayName = 'FiBsItalic';

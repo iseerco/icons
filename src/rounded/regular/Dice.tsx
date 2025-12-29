@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Dice: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m19 24h-14a5.006 5.006 0 0 1 -5-5v-14a5.006 5.006 0 0 1 5-5h14a5.006 5.006 0 0 1 5 5v14a5.006 5.006 0 0 1 -5 5zm-14-22a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-14a3 3 0 0 0 -3-3zm6 10a1 1 0 1 0 1-1 1 1 0 0 0 -1 1zm-5-5a1 1 0 1 0 1-1 1 1 0 0 0 -1 1zm10 0a1 1 0 1 0 1-1 1 1 0 0 0 -1 1zm-10 10a1 1 0 1 0 1-1 1 1 0 0 0 -1 1zm10 0a1 1 0 1 0 1-1 1 1 0 0 0 -1 1z"/></svg>
+);
+
+Dice.displayName = 'Dice';

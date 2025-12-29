@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsNote: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m21.5,0H2.5C1.122,0,0,1.121,0,2.5v21.5h16.707l7.293-7.293V2.5c0-1.379-1.122-2.5-2.5-2.5ZM1,2.5c0-.827.673-1.5,1.5-1.5h19c.827,0,1.5.673,1.5,1.5v13.5h-7v7H1V2.5Zm21.293,14.5l-5.293,5.293v-5.293h5.293ZM4,6c0-.552.448-1,1-1s1,.448,1,1-.448,1-1,1-1-.448-1-1Zm2,6c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm0,6c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/></svg>
+);
+
+FiTsNote.displayName = 'FiTsNote';

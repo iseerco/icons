@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsChartPyramid: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M13.905,1.243a2.088,2.088,0,0,0-3.81,0L0,24H24ZM12,4.346,15.4,12H8.605ZM7.274,15h9.452l2.661,6H4.613Z"/></svg>
+);
+
+FiBsChartPyramid.displayName = 'FiBsChartPyramid';

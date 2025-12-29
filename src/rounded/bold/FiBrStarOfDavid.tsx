@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrStarOfDavid: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m19.979,12l2.811-4.734c.275-.463.281-1.039.014-1.508-.267-.468-.765-.758-1.304-.758h-5.678L13.29.734c-.27-.456-.76-.734-1.29-.734s-1.02.279-1.29.734l-2.533,4.266H2.5c-.539,0-1.037.29-1.304.758-.267.469-.261,1.044.014,1.508l2.811,4.734-2.811,4.734c-.275.463-.281,1.039-.014,1.508.267.468.765.758,1.304.758h5.678l2.533,4.266c.27.456.76.734,1.29.734s1.02-.279,1.29-.734l2.533-4.266h5.678c.539,0,1.037-.29,1.304-.758.267-.469.261-1.044-.014-1.508l-2.811-4.734Zm-2.366,0l-2.969,5h-5.287l-2.969-5,2.969-5h5.287l2.969,5Z"/></svg>
+);
+
+FiBrStarOfDavid.displayName = 'FiBrStarOfDavid';

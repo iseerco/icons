@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsPackage: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m13 7v8h-2v-2.5a5.5 5.5 0 0 0 -11 0v11.5h3v-6h18v6h3v-17zm-10 5.5a2.5 2.5 0 0 1 5 0v2.5h-5zm13 2.5v-5h1v2h3v-2h1v5zm-10.5-8a3.5 3.5 0 1 1 3.5-3.5 3.5 3.5 0 0 1 -3.5 3.5z"/></svg>
+);
+
+FiBsPackage.displayName = 'FiBsPackage';

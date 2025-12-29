@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const RightFromBracket: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="M23.115,9.875L13,.071V7H5v10H13v6.952l10.117-9.824c.57-.567,.883-1.323,.883-2.126,0-.804-.314-1.56-.885-2.126ZM3,22h6v2H3c-1.654,0-3-1.346-3-3V3C0,1.346,1.346,0,3,0h6V2H3c-.551,0-1,.449-1,1V21c0,.552,.449,1,1,1Z"/>
+</svg>
+);
+
+RightFromBracket.displayName = 'RightFromBracket';

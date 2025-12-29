@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Grid: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M6.5,17.5H0V21a3,3,0,0,0,3,3H6.5V17.5Z"/><path d="M24,17.5H17.5V24H21a3,3,0,0,0,3-3V17.5Z"/><path d="M6.5,8.75H0v6.5H6.5V8.75Z"/><path d="M24,8.75H17.5v6.5H24V8.75Z"/><path d="M6.5,0H3A3,3,0,0,0,0,3V6.5H6.5V0Z"/><path d="M15.25,17.5H8.75V24h6.5V17.5Z"/><path d="M15.25,8.75H8.75v6.5h6.5V8.75Z"/><path d="M15.25,0H8.75V6.5h6.5V0Z"/><path d="M21,0H17.5V6.5H24V3a3,3,0,0,0-3-3Z"/></svg>
+);
+
+Grid.displayName = 'Grid';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrMobile: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m16.5 0h-9a5.506 5.506 0 0 0 -5.5 5.5v13a5.506 5.506 0 0 0 5.5 5.5h9a5.506 5.506 0 0 0 5.5-5.5v-13a5.506 5.506 0 0 0 -5.5-5.5zm2.5 18.5a2.5 2.5 0 0 1 -2.5 2.5h-3v-.5a1.5 1.5 0 0 0 -3 0v.5h-3a2.5 2.5 0 0 1 -2.5-2.5v-13a2.5 2.5 0 0 1 2.5-2.5h9a2.5 2.5 0 0 1 2.5 2.5zm-3-2a1.5 1.5 0 0 1 -1.5 1.5h-5a1.5 1.5 0 0 1 0-3h5a1.5 1.5 0 0 1 1.5 1.5zm-4-12.5a4 4 0 0 0 -4 4v3.5a1.5 1.5 0 0 0 2.908.5h2.184a1.5 1.5 0 0 0 2.908-.5v-3.5a4 4 0 0 0 -4-4zm0 3a1 1 0 0 1 1 1v1h-2v-1a1 1 0 0 1 1-1z"/></svg>
+);
+
+FiBrMobile.displayName = 'FiBrMobile';

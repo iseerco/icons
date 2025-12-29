@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const TurnLeft: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m19,8H2.367c.033-.04.061-.082.098-.119L7.599,2.704c.389-.392.387-1.025-.006-1.414-.392-.388-1.024-.387-1.414.006L1.048,6.471c-.676.676-1.048,1.574-1.048,2.529s.372,1.854,1.045,2.527l5.134,5.177c.195.197.452.296.71.296.255,0,.509-.097.704-.29.393-.389.395-1.022.006-1.414l-5.137-5.18c-.036-.036-.063-.078-.095-.116h16.633c1.654,0,3,1.346,3,3v8c0,.552.447,1,1,1s1-.448,1-1v-8c0-2.757-2.243-5-5-5Z"/>
+</svg>
+);
+
+TurnLeft.displayName = 'TurnLeft';

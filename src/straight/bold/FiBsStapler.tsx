@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsStapler: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m20.586 6.908-15.161-3.805c-1.82-.492-3.832.726-4.241 2.566l-1.206 4.932 3.022.755v3.644h12v3h-15v3h24v-9.725c0-2.074-1.406-3.87-3.414-4.367zm-16.489-.527c.13-.322.26-.399.601-.367l15.163 3.805c.67.166 1.139.765 1.139 1.456v1.513l-4.41-1.108.005-.02-12.994-3.246.497-2.032zm13.902 10.119c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5z"/></svg>
+);
+
+FiBsStapler.displayName = 'FiBsStapler';

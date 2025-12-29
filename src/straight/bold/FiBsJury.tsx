@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsJury: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m1.5 2.5c0-1.381 1.119-2.5 2.5-2.5s2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5-2.5-1.119-2.5-2.5zm10.5 2.5c1.381 0 2.5-1.119 2.5-2.5s-1.119-2.5-2.5-2.5-2.5 1.119-2.5 2.5 1.119 2.5 2.5 2.5zm9.5 2h-3c-1.381 0-2.5 1.119-2.5 2.5 0-1.381-1.119-2.5-2.5-2.5h-3c-1.381 0-2.5 1.119-2.5 2.5 0-1.381-1.119-2.5-2.5-2.5h-3c-1.381 0-2.5 1.119-2.5 2.5v.5h24v-.5c0-1.381-1.119-2.5-2.5-2.5zm-1.5-2c1.381 0 2.5-1.119 2.5-2.5s-1.119-2.5-2.5-2.5-2.5 1.119-2.5 2.5 1.119 2.5 2.5 2.5zm-20 7h24v12h-24zm14 9v-6h-4v6zm7-6h-4v6h4zm-18 6h4v-6h-4z"/></svg>
+);
+
+FiBsJury.displayName = 'FiBsJury';

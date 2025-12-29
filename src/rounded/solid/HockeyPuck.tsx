@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const HockeyPuck: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M.051,7.792C.562,3.436,5.721,0,12,0S23.438,3.436,23.949,7.792C23.438,11.821,18.279,15,12,15S.562,11.821.051,7.792ZM12,17c-5.1,0-9.551-1.934-12-4.809V15.5C0,20.187,5.383,24,12,24s12-3.813,12-8.5V12.191C21.551,15.066,17.1,17,12,17Z"/></svg>
+);
+
+HockeyPuck.displayName = 'HockeyPuck';

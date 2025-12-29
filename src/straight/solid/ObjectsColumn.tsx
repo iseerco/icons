@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ObjectsColumn: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m0,3v6h11V0H3C1.346,0,0,1.346,0,3Zm13,21h8c1.654,0,3-1.346,3-3v-6h-11v9ZM21,0h-8v13h11V3c0-1.654-1.346-3-3-3ZM0,21c0,1.654,1.346,3,3,3h8v-13H0v10Z"/>
+</svg>
+);
+
+ObjectsColumn.displayName = 'ObjectsColumn';

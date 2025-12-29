@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Circle6: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M14,14c0,1.103-.897,2-2,2s-2-.897-2-2,.897-2,2-2,2,.897,2,2Zm10-2c0,6.617-5.383,12-12,12S0,18.617,0,12,5.383,0,12,0s12,5.383,12,12Zm-8,2c0-2.206-1.794-4-4-4-.639,0-1.235,.164-1.771,.432,.478-1.629,1.721-2.432,3.771-2.432,.552,0,1-.447,1-1s-.448-1-1-1c-3.813,0-6,2.26-6,6.2v1.8c0,2.206,1.794,4,4,4s4-1.794,4-4Z"/></svg>
+);
+
+Circle6.displayName = 'Circle6';

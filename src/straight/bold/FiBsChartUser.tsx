@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsChartUser: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M3,11.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5-1.57,3.5-3.5,3.5-3.5-1.57-3.5-3.5Zm6.5,5.5H3.5c-1.93,0-3.5,1.57-3.5,3.5v3.5H3v-3.5c0-.28,.22-.5,.5-.5h6c.28,0,.5,.22,.5,.5v3.5h3v-3.5c0-1.93-1.57-3.5-3.5-3.5ZM20.5,0H8.5c-1.93,0-3.5,1.57-3.5,3.5v2.71c.48-.14,.98-.21,1.5-.21s1.02,.08,1.5,.21V3.5c0-.28,.22-.5,.5-.5h12c.28,0,.5,.22,.5,.5V15H10.74s-.08,.08-.11,.12c1.64,.34,3.02,1.43,3.76,2.88h9.61V3.5c0-1.93-1.57-3.5-3.5-3.5Zm-7,12.62l3.36-3.36,2.14,2.1V6c0-.55-.45-1-1-1h-5.5l2.21,2.17-3.33,3.33,2.12,2.12Z"/></svg>
+);
+
+FiBsChartUser.displayName = 'FiBsChartUser';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsWatchCalculator: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m18,3.05V0h-1v3H7V0h-1v3.05c-1.14.232-2,1.242-2,2.45v13c0,1.207.86,2.217,2,2.45v3.05h1v-3h10v3.001h1v-3.05c1.14-.232,2-1.242,2-2.45V5.5c0-1.207-.86-2.217-2-2.45Zm1,15.45c0,.827-.673,1.5-1.5,1.5H6.5c-.827,0-1.5-.674-1.5-1.501V5.499c0-.827.673-1.5,1.5-1.5h11c.827,0,1.5.674,1.5,1.501v13Zm-12-6.5h1v2h-1v-2Zm3,0h1v2h-1v-2Zm3,0h1v2h-1v-2Zm-6,4h1v2h-1v-2Zm3,0h1v2h-1v-2Zm3,0h1v2h-1v-2Zm3-4h1v2h-1v-2Zm0,4h1v2h-1v-2Zm-9-6h10v-4H7v4Zm1-3h8v2h-8v-2Z"/></svg>
+);
+
+FiTsWatchCalculator.displayName = 'FiTsWatchCalculator';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ParagraphLeft: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m9,12h4v4h2V2h2v14h2V2h2V0h-12C5.691,0,3,2.691,3,6s2.691,6,6,6Zm0-10h4v8h-4c-2.206,0-4-1.794-4-4s1.794-4,4-4Zm14,18H4l2.551,2.552-1.414,1.414-3.551-3.552c-.78-.779-.78-2.049,0-2.828l3.551-3.552,1.414,1.414-2.551,2.552h19v2Z"/></svg>
+);
+
+ParagraphLeft.displayName = 'ParagraphLeft';

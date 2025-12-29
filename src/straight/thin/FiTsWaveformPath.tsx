@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsWaveformPath: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m17,7h1v10h-1V7Zm-4,17h1V0h-1v24ZM21,4v16h1V4h-1Zm-12,16h1V4h-1v16Zm-4-3h1V7h-1v10Zm-4-2h1v-6h-1v6Z"/></svg>
+);
+
+FiTsWaveformPath.displayName = 'FiTsWaveformPath';

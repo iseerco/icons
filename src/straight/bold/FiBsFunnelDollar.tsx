@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsFunnelDollar: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M8,9.5v-.5h3v.5c0,.275,.225,.5,.5,.5h1c.275,0,.5-.225,.5-.5,0-.294-.177-.555-.449-.664l-2.216-.887c-1.418-.566-2.335-1.921-2.335-3.449,0-1.582,1.056-2.923,2.5-3.354V0h3V1.146c1.444,.431,2.5,1.772,2.5,3.354v.5h-3v-.5c0-.275-.225-.5-.5-.5h-1c-.275,0-.5,.225-.5,.5,0,.294,.177,.555,.449,.664l2.216,.887c1.418,.566,2.335,1.921,2.335,3.449,0,1.582-1.056,2.923-2.5,3.354v1.146h-3v-1.146c-1.444-.431-2.5-1.772-2.5-3.354Zm11.5-5.5h-1.5v3h1.5c.275,0,.5,.225,.5,.5v.909l-7,7.5v3.2l-2-1.025v-2.175l-7-7.5v-.909c0-.275,.225-.5,.5-.5h1.475v-3h-1.475c-1.93,0-3.5,1.57-3.5,3.5v2.091l7,7.5v2.825l8,4.104v-6.929l7-7.5v-2.091c0-1.93-1.57-3.5-3.5-3.5Z"/></svg>
+);
+
+FiBsFunnelDollar.displayName = 'FiBsFunnelDollar';

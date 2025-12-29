@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrHastag: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M22.5,9a1.5,1.5,0,0,0,0-3H18.872l.613-4.288a1.5,1.5,0,1,0-2.97-.424L15.842,6H9.872l.613-4.288a1.5,1.5,0,1,0-2.97-.424L6.842,6H2.5a1.5,1.5,0,0,0,0,3H6.413l-.857,6H1.5a1.5,1.5,0,0,0,0,3H5.128l-.613,4.288a1.5,1.5,0,0,0,2.97.424L8.158,18h5.97l-.613,4.288a1.5,1.5,0,0,0,2.97.424L17.158,18H21.5a1.5,1.5,0,0,0,0-3H17.587l.857-6Zm-7.944,6H8.587l.857-6h5.969Z"/></svg>
+);
+
+FiBrHastag.displayName = 'FiBrHastag';

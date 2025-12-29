@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTrTestTube: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m18.5,0H5.5c-.276,0-.5.224-.5.5s.224.5.5.5h1.5v18c0,2.757,2.243,5,5,5s5-2.243,5-5V1h1.5c.276,0,.5-.224.5-.5s-.224-.5-.5-.5Zm-6.5,23c-2.206,0-4-1.794-4-4V7h8v12c0,2.206-1.794,4-4,4Zm4-17h-8V1h8v5Z"/>
+</svg>
+);
+
+FiTrTestTube.displayName = 'FiTrTestTube';

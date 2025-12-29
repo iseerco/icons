@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrEarnings: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M18.5,0H13a1.5,1.5,0,0,0,0,3h5.5a2.43,2.43,0,0,1,.344.035l-18.4,18.4a1.5,1.5,0,0,0,2.122,2.122l18.4-18.4A2.43,2.43,0,0,1,21,5.5V11a1.5,1.5,0,0,0,3,0V5.5A5.507,5.507,0,0,0,18.5,0Z"/><path d="M6.5,11A4.5,4.5,0,1,0,2,6.5,4.505,4.505,0,0,0,6.5,11Zm0-6A1.5,1.5,0,1,1,5,6.5,1.5,1.5,0,0,1,6.5,5Z"/><path d="M17.5,13A4.5,4.5,0,1,0,22,17.5,4.505,4.505,0,0,0,17.5,13Zm0,6A1.5,1.5,0,1,1,19,17.5,1.5,1.5,0,0,1,17.5,19Z"/></svg>
+);
+
+FiBrEarnings.displayName = 'FiBrEarnings';

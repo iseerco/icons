@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const StarOctogram: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><title>18-star</title><polygon points="12 0 15.515 3.515 20.485 3.515 20.485 8.485 24 12 20.485 15.515 20.485 20.485 15.515 20.485 12 24 8.485 20.485 3.515 20.485 3.515 15.515 0 12 3.515 8.485 3.515 3.515 8.485 3.515 12 0"/></svg>
+);
+
+StarOctogram.displayName = 'StarOctogram';

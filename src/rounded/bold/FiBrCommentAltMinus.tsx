@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrCommentAltMinus: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m18.5,0H5.5C2.468,0,0,2.467,0,5.5v9c0,3.033,2.468,5.5,5.5,5.5h1.24l3.6,3.031c.479.425,1.079.635,1.674.635.582,0,1.158-.202,1.606-.6l3.708-3.066h1.172c3.032,0,5.5-2.467,5.5-5.5V5.5c0-3.033-2.468-5.5-5.5-5.5Zm2.5,14.5c0,1.378-1.121,2.5-2.5,2.5h-1.712c-.349,0-.687.122-.956.344l-3.828,3.167-3.749-3.158c-.271-.228-.613-.353-.967-.353h-1.788c-1.379,0-2.5-1.122-2.5-2.5V5.5c0-1.378,1.121-2.5,2.5-2.5h13c1.379,0,2.5,1.122,2.5,2.5v9Zm-4-4.5c0,.829-.672,1.5-1.5,1.5h-7c-.828,0-1.5-.671-1.5-1.5s.672-1.5,1.5-1.5h7c.828,0,1.5.671,1.5,1.5Z"/></svg>
+);
+
+FiBrCommentAltMinus.displayName = 'FiBrCommentAltMinus';

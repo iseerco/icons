@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const CirclePhoneHangup: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12Zm0-22C6.486,2,2,6.486,2,12s4.486,10,10,10,10-4.486,10-10S17.514,2,12,2Zm4.293,11.795l1.56,.205c.605,0,1.095-.49,1.095-1.095l.053-1.038c0-.747-.314-1.416-.804-1.906-2.517-2.517-9.681-2.711-12.391,0-.49,.49-.805,1.159-.804,1.906l.053,1.038c0,.605,.49,1.095,1.095,1.095l1.56-.205c.605,0,1.095-.49,1.095-1.095l.148-1.578c2.131-.91,4.16-.868,6.099,0l.148,1.578c0,.605,.49,1.095,1.095,1.095Z"/></svg>
+);
+
+CirclePhoneHangup.displayName = 'CirclePhoneHangup';

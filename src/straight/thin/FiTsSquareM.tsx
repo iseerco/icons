@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiTsSquareM: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20,5.499v14.501h-1V5.499c0-.246-.105-.415-.297-.476-.175-.057-.426-.012-.588.215l-6.115,9.664L5.87,5.216c-.147-.204-.397-.25-.573-.193-.191.061-.297.23-.297.476v14.501h-1V5.499c0-.686.38-1.233.993-1.429.629-.199,1.314.036,1.707.589l5.301,8.374,5.286-8.352c.408-.575,1.094-.812,1.722-.611.612.196.993.743.993,1.429Zm4-2.999v21.5H0V2.5C0,1.122,1.122,0,2.5,0h19c1.378,0,2.5,1.122,2.5,2.5Zm-1,0c0-.827-.673-1.5-1.5-1.5H2.5c-.827,0-1.5.673-1.5,1.5v20.5h22V2.5Z"/></svg>
+);
+
+FiTsSquareM.displayName = 'FiTsSquareM';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const CommentAltMusic: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m20,0H4C1.794,0,0,1.794,0,4v12c0,2.206,1.794,4,4,4h2.923l3.748,3.156c.382.34.862.509,1.338.509.467,0,.931-.163,1.292-.485l3.847-3.18h2.852c2.206,0,4-1.794,4-4V4c0-2.206-1.794-4-4-4Zm-2.001,13.552c-.028,1.357-1.135,2.448-2.499,2.448-1.381,0-2.5-1.119-2.5-2.5s1.119-2.5,2.5-2.5c.171,0,.338.017.5.05v-4.05c0-.552-.449-1-1-1h-3c-.551,0-1,.448-1,1,0,0,0,6.535-.001,6.552-.028,1.357-1.135,2.448-2.499,2.448-1.381,0-2.5-1.119-2.5-2.5s1.119-2.5,2.5-2.5c.171,0,.338.017.5.05v-4.05c0-1.654,1.346-3,3-3h3c1.654,0,3,1.346,3,3,0,0,0,6.535-.001,6.552Z"/></svg>
+);
+
+CommentAltMusic.displayName = 'CommentAltMusic';

@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const ShekelSign: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M3,24c-.553,0-1-.447-1-1V3C2,1.346,3.346,0,5,0h3c4.411,0,8,3.589,8,8v9c-.005,1.308-1.995,1.307-2,0V8c0-3.309-2.691-6-6-6h-3c-.552,0-1,.448-1,1V23c0,.553-.447,1-1,1Zm19-8V1c-.005-1.308-1.995-1.307-2,0v15c0,3.309-2.691,6-6,6h-3c-.552,0-1-.448-1-1V7c-.005-1.308-1.995-1.307-2,0v14c0,1.654,1.346,3,3,3h3c4.411,0,8-3.589,8-8Z"/></svg>
+);
+
+ShekelSign.displayName = 'ShekelSign';

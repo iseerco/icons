@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBrCheeseAlt: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M0,15.5c0,1.58,.27,3.18,.82,4.77,.76,2.23,2.85,3.73,5.21,3.73h12.47c3.03,0,5.5-2.47,5.5-5.5v-7.49c0-2.04-.98-3.99-2.61-5.21L14.02,.93c-1.93-1.29-4.45-1.24-6.28,.13C2.55,4.95,.98,10.11,.8,10.78,.27,12.35,0,13.94,0,15.5ZM17.77,7H6.05c.86-1.18,2-2.42,3.49-3.54,.81-.61,1.95-.62,2.82-.03l5.41,3.57ZM3,15.5c0-1.24,.22-2.52,.65-3.78,0,0,0-.02,0-.03,.35-1.01,1.3-1.69,2.37-1.69h14.83c.1,.32,.15,.66,.15,1.01v7.49c0,1.38-1.12,2.5-2.5,2.5H6.03c-1.07,0-2.02-.68-2.37-1.7-.43-1.28-.66-2.55-.66-3.8Z"/></svg>
+);
+
+FiBrCheeseAlt.displayName = 'FiBrCheeseAlt';

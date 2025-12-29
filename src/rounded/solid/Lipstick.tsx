@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Lipstick: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} id="Layer_1" height={size} viewBox="0 0 24 24" width={size} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" {...props}><path d="m14 24h-4a5.006 5.006 0 0 1 -5-5v-2a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v2a5.006 5.006 0 0 1 -5 5zm3-12v-2a1 1 0 0 0 -1-1h-8a1 1 0 0 0 -1 1v2zm-2-5v-5.586a1.412 1.412 0 0 0 -2.044-1.263l-2.622 1.311a2.412 2.412 0 0 0 -1.334 2.158v3.38z"/></svg>
+);
+
+Lipstick.displayName = 'Lipstick';

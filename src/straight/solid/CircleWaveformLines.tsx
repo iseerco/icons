@@ -1,0 +1,15 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const CircleWaveformLines: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" {...props}>
+  <path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm-5,16h-2v-8h2v8Zm4,3h-2V5h2v14Zm4-2h-2V7h2v10Zm4-2h-2v-5h2v5Z"/>
+</svg>
+);
+
+CircleWaveformLines.displayName = 'CircleWaveformLines';

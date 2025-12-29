@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const Dewpoint: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M10,24A10.048,10.048,0,0,1,0,14C0,8.663,6.5,1.751,6.771,1.459A4.286,4.286,0,0,1,10.006,0h0a4.306,4.306,0,0,1,3.266,1.5c2.771,3.023,11,12.486,3.8,19.573A9.934,9.934,0,0,1,10,24ZM21,6a3,3,0,0,1,0-6A3,3,0,0,1,21,6Zm0-4a1,1,0,0,0,0,2A1,1,0,0,0,21,2Z"/></svg>
+);
+
+Dewpoint.displayName = 'Dewpoint';

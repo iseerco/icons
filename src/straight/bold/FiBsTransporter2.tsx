@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsTransporter2: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="m9.5,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm11.667-.167l-1.167-2.333-1.167,2.333-2.333,1.167,2.333,1.167,1.167,2.333,1.167-2.333,2.333-1.167-2.333-1.167Zm-15.167,14.167l-2-1-1-2-1,2-2,1,2,1,1,2,1-2,2-1Zm-2,7.5h16v-3H4v3Zm12-5v-3h-8v3h8Zm-9-7h-2.94l3.11-4.492c.655-.944,1.73-1.508,2.878-1.508h3.904c1.147,0,2.223.563,2.877,1.506l3.111,4.494h-2.94v2H7v-2Zm3-1h4v-1.998c-.016-.002-.032-.002-.048-.002h-3.904c-.016,0-.032,0-.048.002v1.998Z"/></svg>
+);
+
+FiBsTransporter2.displayName = 'FiBsTransporter2';

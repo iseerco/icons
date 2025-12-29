@@ -1,0 +1,13 @@
+import React from 'react';
+import type { IconProps } from '../../types';
+
+export const FiBsHandLove: React.FC<IconProps> = ({ 
+  size = 24, 
+  color = 'currentColor',
+  className = '',
+  ...props 
+}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={size} height={size} {...props}><path d="M12,13.5v-4c0-.828,.672-1.5,1.5-1.5s1.5,.672,1.5,1.5v4c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5Zm5.5,1.5c.828,0,1.5-.672,1.5-1.5v-4c0-.828-.672-1.5-1.5-1.5s-1.5,.672-1.5,1.5v4c0,.828,.672,1.5,1.5,1.5ZM22.5,2c-.828,0-1.5,.672-1.5,1.5V21H11.025l-1.025-.818V1.58c0-.747-.511-1.44-1.248-1.56-.94-.153-1.752,.568-1.752,1.479v14.901l-3.64-2.928c-.866-.722-2.153-.604-2.874,.261-.722,.866-.605,2.153,.261,2.874l9.228,7.391h14.025V3.5c0-.828-.672-1.5-1.5-1.5Z"/></svg>
+);
+
+FiBsHandLove.displayName = 'FiBsHandLove';
